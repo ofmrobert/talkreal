@@ -17,6 +17,7 @@ meRoutes.get('/', requireUser, async (c) => {
   return c.json({
     id: user.id,
     email: pii.email,
+    displayName: pii.displayName,
     level: user.level,
     plan: user.plan,
     xp: user.xp,

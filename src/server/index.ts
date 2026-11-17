@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 import { serve } from '@hono/node-server'
 import { serveStatic } from '@hono/node-server/serve-static'
 import './db/client'
+import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
 import { authRoutes } from './routes/auth'
 import { meRoutes } from './routes/me'
@@ -46,6 +47,8 @@ app.get(
     onFound: (_path, c) => c.header('Cache-Control', 'no-cache'),
   }),
 )
+
+void startTelegramBot()
 
 serve({ fetch: app.fetch, port: env.port, hostname: '0.0.0.0' }, () => {
   console.log(`Talkreal server listening on port ${env.port}`)

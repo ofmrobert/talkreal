@@ -28,6 +28,27 @@ export async function createUserWithEmail(email: string, locale: string): Promis
   })
 }
 
+export async function findUserIdByTelegramId(telegramId: string): Promise<string | null> {
+  const rows = await db
+    .select({ userId: userPii.userId })
+    .from(userPii)
+    .where(eq(userPii.telegramId, telegramId))
+    .limit(1)
+  return rows[0]?.userId ?? null
+}
+
+export async function createUserWithTelegram(
+  telegramId: string,
+  displayName: string | null,
+  locale: string,
+): Promise<string> {
+  return db.transaction(async (tx) => {
+    const [user] = await tx.insert(users).values({ locale }).returning({ id: users.id })
+    await tx.insert(userPii).values({ userId: user.id, telegramId, displayName })
+    return user.id
+  })
+}
+
 export async function getPii(userId: string) {
   const rows = await db
     .select({ email: userPii.email, displayName: userPii.displayName })

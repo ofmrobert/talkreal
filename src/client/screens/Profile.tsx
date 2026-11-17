@@ -28,7 +28,9 @@ export default function Profile() {
     <div className="flex flex-col gap-5">
       <header className="pt-1">
         <h1 className="text-3xl font-extrabold">{t('profile.title')}</h1>
-        {user?.email && <p className="mt-1 truncate text-base font-bold text-ink/55">{user.email}</p>}
+        {(user?.email ?? user?.displayName) && (
+          <p className="mt-1 truncate text-base font-bold text-ink/55">{user?.email ?? user?.displayName}</p>
+        )}
       </header>
 
       <div className="grid grid-cols-2 gap-3">

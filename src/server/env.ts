@@ -26,6 +26,12 @@ export const env = {
    */
   showCodes: process.env.DEV_SHOW_CODES ? process.env.DEV_SHOW_CODES === '1' : !isProduction,
 
+  telegram: {
+    /** From @BotFather. Empty = Telegram login is switched off. */
+    botToken: process.env.TELEGRAM_BOT_TOKEN ?? '',
+    apiBase: process.env.TELEGRAM_API_BASE ?? 'https://api.telegram.org',
+  },
+
   smtp: {
     host: process.env.SMTP_HOST ?? '',
     port: Number(process.env.SMTP_PORT ?? 465),

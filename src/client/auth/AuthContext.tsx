@@ -5,6 +5,7 @@ import { load, save } from '../lib/storage'
 export interface User {
   id: string
   email: string | null
+  displayName: string | null
   level: string | null
   plan: string
   xp: number

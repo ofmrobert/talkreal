@@ -3,7 +3,14 @@ import { issueCode, verifyCode } from '../auth/codes'
 import { sendLoginCode } from '../auth/email'
 import { endSession, startSession } from '../auth/sessions'
 import { env } from '../env'
-import { createUserWithEmail, findUserIdByEmail, normalizeEmail } from '../pii'
+import { createLogin, pollLogin, telegramAvailable } from '../auth/telegram'
+import {
+  createUserWithEmail,
+  createUserWithTelegram,
+  findUserIdByEmail,
+  findUserIdByTelegramId,
+  normalizeEmail,
+} from '../pii'
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -49,6 +56,30 @@ authRoutes.post('/verify', async (c) => {
   const userId = (await findUserIdByEmail(email)) ?? (await createUserWithEmail(email, readLang(body.lang)))
   await startSession(c, userId)
   return c.json({ ok: true })
+})
+
+/** Which login methods the app should offer right now. */
+authRoutes.get('/providers', (c) => c.json({ email: true, telegram: telegramAvailable() }))
+
+/** Telegram step 1: get a link that opens the bot. */
+authRoutes.post('/telegram/start', (c) => {
+  const login = createLogin()
+  return login ? c.json(login) : c.json({ error: 'telegram_unavailable' }, 503)
+})
+
+/** Telegram step 2: the app checks whether the student has confirmed in Telegram. */
+authRoutes.post('/telegram/poll', async (c) => {
+  const body = await c.req.json().catch(() => ({}))
+  if (typeof body.pollToken !== 'string') return c.json({ status: 'expired' })
+
+  const result = pollLogin(body.pollToken)
+  if (typeof result === 'string') return c.json({ status: result })
+
+  const userId =
+    (await findUserIdByTelegramId(result.telegramId)) ??
+    (await createUserWithTelegram(result.telegramId, result.name, readLang(body.lang)))
+  await startSession(c, userId)
+  return c.json({ status: 'ok' })
 })
 
 authRoutes.post('/logout', async (c) => {

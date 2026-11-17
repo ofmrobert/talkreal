@@ -100,7 +100,11 @@
       "email_failed": "Couldn't send the email. Try again later.",
       "network": "No internet connection.",
       "server_error": "Something went wrong. Try again."
-    }
+    },
+    "telegram": "Log in with Telegram",
+    "telegramWaiting": "Open the bot in Telegram, press Start and confirm the login. Then come back here.",
+    "telegramOpen": "Open Telegram",
+    "telegramCancel": "Cancel"
   },
   "placement": {
     "title": "What's your level?",

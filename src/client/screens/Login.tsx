@@ -1,8 +1,9 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useCallback, useEffect, useState, type FormEvent } from 'react'
 import { Navigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthContext'
 import Chai from '../components/Chai'
+import TelegramLogin from '../components/TelegramLogin'
 import Button from '../components/ui/Button'
 import { api, ApiError } from '../lib/api'
 
@@ -36,6 +37,11 @@ export default function Login() {
     const key = `login.errors.${apiError?.code ?? 'server_error'}`
     setError(i18n.exists(key) ? t(key) : t('login.errors.server_error'))
   }
+
+  const onTelegramError = useCallback(
+    (code: string) => setError(t(`login.errors.${code}`)),
+    [t],
+  )
 
   async function requestCode() {
     setBusy(true)
@@ -108,6 +114,7 @@ export default function Login() {
               className={inputClass}
               required
             />
+            <TelegramLogin onError={onTelegramError} />
           </>
         ) : (
           <>
