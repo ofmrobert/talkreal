@@ -1,37 +1,33 @@
-import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useAuth } from '../auth/AuthContext'
 import InstallGuide, { isStandalone } from '../components/InstallGuide'
+import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
-
-type ServerStatus = 'checking' | 'online' | 'offline'
 
 const LANGUAGES = [
   { code: 'ru', label: 'Русский' },
   { code: 'en', label: 'English' },
 ]
 
-/** Profile tab. The numbers are placeholders until accounts exist. */
+/** Profile tab: the student's numbers, app language, and logout. */
 export default function Profile() {
   const { t, i18n } = useTranslation()
-  const [status, setStatus] = useState<ServerStatus>('checking')
-
-  useEffect(() => {
-    fetch('/api/health')
-      .then((res) => setStatus(res.ok ? 'online' : 'offline'))
-      .catch(() => setStatus('offline'))
-  }, [])
+  const { user, logout } = useAuth()
 
   const stats = [
-    { label: t('profile.streak'), value: '0' },
-    { label: t('profile.xp'), value: '0' },
-    { label: t('profile.level'), value: '—' },
+    { label: t('profile.streak'), value: String(user?.currentStreak ?? 0) },
+    { label: t('profile.xp'), value: String(user?.xp ?? 0) },
+    { label: t('profile.level'), value: user?.level ?? '—' },
+    // Voice minutes are counted from the voice-conversation step onward.
     { label: t('profile.minutes'), value: '0' },
   ]
-  const dot = { checking: 'bg-sun', online: 'bg-mint', offline: 'bg-coral' }[status]
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="pt-1 text-3xl font-extrabold">{t('profile.title')}</h1>
+      <header className="pt-1">
+        <h1 className="text-3xl font-extrabold">{t('profile.title')}</h1>
+        {user?.email && <p className="mt-1 truncate text-base font-bold text-ink/55">{user.email}</p>}
+      </header>
 
       <div className="grid grid-cols-2 gap-3">
         {stats.map((s) => (
@@ -67,10 +63,9 @@ export default function Profile() {
 
       {!isStandalone() && <InstallGuide />}
 
-      <div className="flex items-center justify-center gap-2 text-sm font-semibold text-ink/55">
-        <span className={`h-2.5 w-2.5 rounded-full ${dot}`} />
-        {t(`status.${status}`)}
-      </div>
+      <Button variant="secondary" onClick={logout}>
+        {t('profile.logout')}
+      </Button>
     </div>
   )
 }

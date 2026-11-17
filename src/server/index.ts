@@ -1,6 +1,10 @@
 import { Hono } from 'hono'
 import { serve } from '@hono/node-server'
 import { serveStatic } from '@hono/node-server/serve-static'
+import './db/client'
+import { env } from './env'
+import { authRoutes } from './routes/auth'
+import { meRoutes } from './routes/me'
 
 const CLIENT_DIR = './dist/client'
 
@@ -9,7 +13,14 @@ const NEVER_CACHE = /(?:index\.html|sw\.js|registerSW\.js|manifest\.webmanifest)
 
 const app = new Hono()
 
+app.onError((err, c) => {
+  console.error(err)
+  return c.json({ error: 'server_error' }, 500)
+})
+
 app.get('/api/health', (c) => c.json({ ok: true, time: new Date().toISOString() }))
+app.route('/api/auth', authRoutes)
+app.route('/api/me', meRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
 
 app.use(
@@ -34,7 +45,6 @@ app.get(
   }),
 )
 
-const port = Number(process.env.PORT ?? 8787)
-serve({ fetch: app.fetch, port, hostname: '0.0.0.0' }, () => {
-  console.log(`Talkreal server listening on port ${port}`)
+serve({ fetch: app.fetch, port: env.port, hostname: '0.0.0.0' }, () => {
+  console.log(`Talkreal server listening on port ${env.port}`)
 })

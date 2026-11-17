@@ -13,6 +13,7 @@ ENV NODE_ENV=production
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY --from=build /app/dist ./dist
+COPY drizzle ./drizzle
 ENV PORT=8080
 EXPOSE 8080
 CMD ["node", "dist/server/index.js"]

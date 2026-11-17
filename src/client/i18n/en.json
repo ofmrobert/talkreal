@@ -65,12 +65,8 @@
     "xp": "XP",
     "level": "Level",
     "minutes": "Minutes spoken",
-    "language": "App language"
-  },
-  "status": {
-    "checking": "Checking the server…",
-    "online": "Server is online",
-    "offline": "Can't reach the server"
+    "language": "App language",
+    "logout": "Log out"
   },
   "install": {
     "title": "Install the app on your iPhone",
@@ -79,5 +75,30 @@
     "step2": "Choose “Add to Home Screen”",
     "step3": "Tap “Add”",
     "other": "On Android: browser menu → “Install app”."
+  },
+  "login": {
+    "title": "Log in to Talkreal",
+    "subtitle": "Enter your email and we'll send a code. No password needed.",
+    "emailLabel": "Email",
+    "getCode": "Get the code",
+    "codeTitle": "Enter the code",
+    "codeSubtitle": "We sent 6 digits to",
+    "codeLabel": "Code from the email",
+    "enter": "Log in",
+    "resend": "Send the code again",
+    "resendIn": "Send again in {{seconds}} s",
+    "changeEmail": "Change email",
+    "devCode": "Test mode. Your code:",
+    "errors": {
+      "invalid_email": "Check the email address.",
+      "wrong": "Wrong code. Try again.",
+      "expired": "The code has expired. Request a new one.",
+      "too_many_attempts": "Too many attempts. Request a new code.",
+      "wait": "A code was already sent. Check your email.",
+      "too_many": "Too many requests. Try again later.",
+      "email_failed": "Couldn't send the email. Try again later.",
+      "network": "No internet connection.",
+      "server_error": "Something went wrong. Try again."
+    }
   }
 }
