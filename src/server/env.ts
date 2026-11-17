@@ -42,11 +42,18 @@ export const env = {
     apiBase: process.env.TELEGRAM_API_BASE ?? 'https://api.telegram.org',
   },
 
+  email: {
+    /** The sender shown on login emails, e.g. "Talkreal <login@talk-real.ru>". */
+    from: process.env.EMAIL_FROM ?? process.env.SMTP_FROM ?? '',
+    /** Key for the email service (Resend). Empty = try SMTP instead. */
+    resendKey: process.env.RESEND_API_KEY ?? '',
+    resendBase: process.env.RESEND_API_BASE ?? 'https://api.resend.com',
+  },
+
   smtp: {
     host: process.env.SMTP_HOST ?? '',
     port: Number(process.env.SMTP_PORT ?? 465),
     user: process.env.SMTP_USER ?? '',
     pass: process.env.SMTP_PASS ?? '',
-    from: process.env.SMTP_FROM ?? '',
   },
 }

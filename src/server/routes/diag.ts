@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { env } from '../env'
+import { emailConfigured } from '../auth/email'
 import { geminiProvider } from '../voice/gemini'
 
 /**
@@ -16,6 +17,10 @@ const TARGETS: Record<string, string> = {
   vercel: 'https://vercel.com/robots.txt',
   flyio: 'https://fly.io/robots.txt',
   telegram: 'https://api.telegram.org/',
+  resend: 'https://api.resend.com/domains',
+  brevo: 'https://api.brevo.com/v3/account',
+  unisender: 'https://go1.unisender.ru/ru/transactional/api/v1/system/info.json',
+  relay: env.ai.geminiWsBase.replace(/^ws/, 'http') + '/relay-health',
 }
 
 async function probe(url: string) {
@@ -66,6 +71,18 @@ diagRoutes.get('/voice', async (c) => {
       modelList: { status: modelList.status, sample: 'sample' in modelList ? modelList.sample : modelList.error },
     })
   }
+})
+
+/** What is configured, without revealing any secret values. */
+diagRoutes.get('/config', (c) => {
+  if (!env.showCodes) return c.json({ error: 'not_found' }, 404)
+  return c.json({
+    database: env.databaseUrl ? 'postgresql' : 'embedded (temporary)',
+    email: emailConfigured ? (env.email.resendKey ? 'api' : 'smtp') : 'not configured',
+    emailFrom: env.email.from || null,
+    voice: env.ai.geminiKey ? 'configured' : 'not configured',
+    testMode: env.showCodes,
+  })
 })
 
 diagRoutes.get('/net', async (c) => {
