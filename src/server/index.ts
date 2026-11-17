@@ -6,6 +6,7 @@ import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
 import { authRoutes } from './routes/auth'
 import { courseRoutes } from './routes/course'
+import { diagRoutes } from './routes/diag'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
 
@@ -25,6 +26,7 @@ app.get('/api/health', (c) => c.json({ ok: true, time: new Date().toISOString() 
 app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)
 app.route('/api/placement', placementRoutes)
+app.route('/api/diag', diagRoutes)
 app.route('/api', courseRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
 
