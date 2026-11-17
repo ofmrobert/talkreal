@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './auth/AuthContext'
 import AppLayout from './components/AppLayout'
 import Chai from './components/Chai'
 import Home from './screens/Home'
+import Lesson from './screens/Lesson'
 import Login from './screens/Login'
 import Onboarding from './screens/Onboarding'
 import Placement from './screens/Placement'
@@ -40,6 +41,7 @@ export default function App() {
           <Route element={<RequireUser />}>
             <Route path="/placement" element={<Placement />} />
             <Route element={<RequireLevel />}>
+              <Route path="/lesson/:id" element={<Lesson />} />
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/talk" element={<Talk />} />

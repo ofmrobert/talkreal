@@ -1,4 +1,4 @@
-import { date, index, integer, jsonb, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import { date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
 
 const timestamptz = (name: string) => timestamp(name, { withTimezone: true })
 
@@ -59,6 +59,39 @@ export const placementResults = pgTable(
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [index('placement_results_user_idx').on(t.userId)],
+)
+
+/** One row per lesson a student has completed at least once. */
+export const lessonProgress = pgTable(
+  'lesson_progress',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    lessonId: text('lesson_id').notNull(),
+    completions: integer('completions').notNull().default(1),
+    /** Best result so far, 0–100. */
+    bestAccuracy: integer('best_accuracy').notNull(),
+    firstCompletedAt: timestamptz('first_completed_at').notNull().defaultNow(),
+    lastCompletedAt: timestamptz('last_completed_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.lessonId] })],
+)
+
+/** What a student did on one calendar day (in their own timezone). Drives limits and the daily goal. */
+export const dailyUsage = pgTable(
+  'daily_usage',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    day: date('day').notNull(),
+    lessonsDone: integer('lessons_done').notNull().default(0),
+    xp: integer('xp').notNull().default(0),
+    voiceSeconds: integer('voice_seconds').notNull().default(0),
+    textMessages: integer('text_messages').notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.day] })],
 )
 
 /** Login sessions. Only a hash of the cookie token is stored. */

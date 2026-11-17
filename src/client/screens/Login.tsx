@@ -29,6 +29,12 @@ export default function Login() {
     return () => clearTimeout(timer)
   }, [resendIn])
 
+  // Hooks must all run before the early return below.
+  const onTelegramError = useCallback(
+    (code: string) => setError(t(`login.errors.${code}`)),
+    [t],
+  )
+
   if (user) return <Navigate to="/" replace />
 
   function showError(err: unknown) {
@@ -37,11 +43,6 @@ export default function Login() {
     const key = `login.errors.${apiError?.code ?? 'server_error'}`
     setError(i18n.exists(key) ? t(key) : t('login.errors.server_error'))
   }
-
-  const onTelegramError = useCallback(
-    (code: string) => setError(t(`login.errors.${code}`)),
-    [t],
-  )
 
   async function requestCode() {
     setBusy(true)

@@ -15,6 +15,13 @@
       "when": 1794890377656,
       "tag": "0001_tidy_mulholland_black",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794895100289,
+      "tag": "0002_smooth_bulldozer",
+      "breakpoints": true
     }
   ]
 }

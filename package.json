@@ -9,7 +9,8 @@
     "start": "node dist/server/index.js",
     "typecheck": "tsc --noEmit",
     "icons": "node scripts/make-icons.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "content:check": "tsx scripts/check-content.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.16",

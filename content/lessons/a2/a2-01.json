@@ -1,0 +1,142 @@
+{
+  "id": "a2-01",
+  "level": "A2",
+  "order": 1,
+  "title": { "ru": "Прошедшее время: правильные глаголы", "en": "Past Simple: regular verbs" },
+  "goal": { "ru": "Научитесь рассказывать о том, что вы делали вчера.", "en": "Learn to talk about what you did yesterday." },
+  "theory": [
+    {
+      "title": "Как образуется Past Simple",
+      "body": "Чтобы сказать о законченном действии в прошлом, к правильному глаголу добавляем окончание -ed. Форма одинаковая для всех лиц: I worked, she worked, they worked. Никаких -s в третьем лице, как в настоящем времени.",
+      "examples": [
+        { "en": "I worked yesterday.", "ru": "Я работал вчера." },
+        { "en": "She watched a film last night.", "ru": "Она смотрела фильм вчера вечером." }
+      ],
+      "tip": "Слова-подсказки: yesterday, last week, two days ago, in 2020."
+    },
+    {
+      "title": "Правописание окончания -ed",
+      "body": "Если глагол заканчивается на -e, добавляем только -d: live → lived. Согласная + y меняется на -ied: study → studied. В коротких глаголах последняя согласная удваивается: stop → stopped.",
+      "examples": [
+        { "en": "We lived in Kazan.", "ru": "Мы жили в Казани." },
+        { "en": "He studied English at school.", "ru": "Он учил английский в школе." },
+        { "en": "The bus stopped.", "ru": "Автобус остановился." }
+      ]
+    },
+    {
+      "title": "Отрицание и вопрос: did",
+      "body": "В отрицании и вопросе появляется помощник did, а основной глагол возвращается в начальную форму — без -ed. Это самая частая ошибка: «I didn't worked» — неправильно.",
+      "examples": [
+        { "en": "I didn't work yesterday.", "ru": "Я не работал вчера." },
+        { "en": "Did you watch the match?", "ru": "Ты смотрел матч?" }
+      ],
+      "tip": "Прошедшее время показывает did. Двух показателей прошедшего времени в одном предложении не бывает."
+    }
+  ],
+  "vocab": [
+    { "en": "yesterday", "ru": "вчера", "example": "I called her yesterday." },
+    { "en": "last week", "ru": "на прошлой неделе", "example": "We played tennis last week." },
+    { "en": "ago", "ru": "назад", "example": "He arrived two hours ago." },
+    { "en": "to cook", "ru": "готовить", "example": "She cooked dinner." },
+    { "en": "to visit", "ru": "навещать, посещать", "example": "They visited their parents." },
+    { "en": "to finish", "ru": "заканчивать", "example": "I finished work at six." },
+    { "en": "to decide", "ru": "решать", "example": "We decided to stay at home." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильную форму: «Я работал вчера».",
+      "options": ["I work yesterday.", "I worked yesterday.", "I working yesterday.", "I did worked yesterday."],
+      "answer": 1,
+      "explanation": "В утвердительном предложении о прошлом к глаголу добавляем -ed: worked. Помощник did в утверждении не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ dinner for the whole family last night.",
+      "translation": "Она приготовила ужин для всей семьи вчера вечером.",
+      "options": ["cooks", "cooked", "cooking", "cook"],
+      "answer": 1,
+      "explanation": "Last night указывает на прошлое, поэтому нужен Past Simple: cooked. В прошедшем времени окончание -s для she не используется."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "yesterday", "ru": "вчера" },
+        { "en": "last week", "ru": "на прошлой неделе" },
+        { "en": "two days ago", "ru": "два дня назад" },
+        { "en": "to finish", "ru": "заканчивать" },
+        { "en": "to decide", "ru": "решать" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Мы навестили бабушку на прошлой неделе.",
+      "answer": "We visited our grandmother last week.",
+      "accept": ["We visited grandmother last week.", "Last week we visited our grandmother."],
+      "distractors": ["visit", "ago", "the"],
+      "explanation": "Visit — правильный глагол: visited. Обратите внимание на our: в английском перед словами о родственниках обычно стоит притяжательное местоимение."
+    },
+    {
+      "type": "listen",
+      "audio": "I didn't watch the film.",
+      "question": "Что вы услышали?",
+      "options": ["I didn't watch the film.", "I didn't watched the film.", "I don't watch the film.", "I watched the film."],
+      "answer": 0,
+      "explanation": "После didn't глагол стоит в начальной форме: watch, а не watched."
+    },
+    {
+      "type": "gap",
+      "sentence": "They didn't ___ the meeting on time.",
+      "translation": "Они не закончили встречу вовремя.",
+      "options": ["finished", "finishes", "finish", "finishing"],
+      "answer": 2,
+      "explanation": "После didn't всегда начальная форма глагола. Прошедшее время уже показано в did, поэтому -ed не нужно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно написать прошедшую форму глагола study?",
+      "options": ["studyed", "studied", "studed", "studded"],
+      "answer": 1,
+      "explanation": "Согласная + y: y меняется на i и добавляется -ed. Study → studied, try → tried, carry → carried."
+    },
+    {
+      "type": "translate",
+      "source": "Ты звонил маме вчера?",
+      "answer": "Did you call your mum yesterday?",
+      "accept": ["Did you call your mom yesterday?", "Did you call mum yesterday?", "Did you call mom yesterday?"],
+      "distractors": ["called", "do", "were"],
+      "explanation": "Вопрос в Past Simple начинается с Did, а глагол остаётся в начальной форме: Did you call…?"
+    },
+    {
+      "type": "gap",
+      "sentence": "The train ___ at every station.",
+      "translation": "Поезд останавливался на каждой станции.",
+      "options": ["stoped", "stopped", "stopping", "stops"],
+      "answer": 1,
+      "explanation": "В коротком глаголе с одной гласной перед конечной согласной эта согласная удваивается: stop → stopped, plan → planned."
+    },
+    {
+      "type": "listen",
+      "audio": "We decided to stay at home.",
+      "question": "Что решили эти люди?",
+      "options": ["Остаться дома", "Пойти домой", "Купить дом", "Уехать из дома"],
+      "answer": 0,
+      "explanation": "Decided to stay at home — решили остаться дома. После decide следующий глагол идёт с to: decide to do."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Did she liked the present?", "She didn't liked the present.", "Did she like the present?", "She not liked the present."],
+      "answer": 2,
+      "explanation": "В вопросе и отрицании работает did, а глагол стоит без -ed: Did she like…? She didn't like…"
+    },
+    {
+      "type": "translate",
+      "source": "Я закончил работу два часа назад.",
+      "answer": "I finished work two hours ago.",
+      "accept": ["I finished my work two hours ago.", "I finished working two hours ago."],
+      "distractors": ["finish", "before", "last"],
+      "explanation": "Ago ставится после отрезка времени: two hours ago. Русское «назад» переводится именно так, а не before."
+    }
+  ]
+}

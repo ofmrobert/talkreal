@@ -1,0 +1,95 @@
+import { useTranslation } from 'react-i18next'
+import Chai from '../Chai'
+import { FlameIcon } from '../icons'
+import Button from '../ui/Button'
+import ProgressBar from '../ui/ProgressBar'
+
+export interface LessonResult {
+  xpEarned: number
+  accuracy: number
+  streak: number
+  streakExtended: boolean
+  firstTime: boolean
+  todayXp: number
+  xpGoal: number
+}
+
+interface Props {
+  result: LessonResult
+  seconds: number
+  onContinue: () => void
+}
+
+const CONFETTI = ['#FF6B4A', '#FFC53D', '#2EC4A0', '#7C5CFF', '#FF6B4A', '#FFC53D', '#2EC4A0', '#7C5CFF', '#FF6B4A', '#FFC53D', '#2EC4A0', '#7C5CFF']
+
+function formatTime(seconds: number): string {
+  return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
+}
+
+/** The celebration after a lesson: XP, accuracy, time, streak and the daily goal. */
+export default function LessonSummary({ result, seconds, onContinue }: Props) {
+  const { t } = useTranslation()
+  const headline =
+    result.accuracy === 100 ? t('summary.perfect') : result.accuracy >= 80 ? t('summary.great') : t('summary.done')
+
+  const stats = [
+    { label: t('summary.xp'), value: `+${result.xpEarned}`, color: 'bg-sun/30' },
+    { label: t('summary.accuracy'), value: `${result.accuracy}%`, color: 'bg-mint/20' },
+    { label: t('summary.time'), value: formatTime(seconds), color: 'bg-[#7C5CFF]/15' },
+  ]
+
+  return (
+    <div className="safe-screen relative mx-auto flex h-full max-w-md flex-col overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-0" aria-hidden="true">
+        {CONFETTI.map((color, i) => (
+          <span
+            key={i}
+            className="confetti"
+            style={{ left: `${4 + i * 8}%`, backgroundColor: color, animationDelay: `${(i % 6) * 0.12}s` }}
+          />
+        ))}
+      </div>
+
+      <div className="slide-in flex flex-1 flex-col items-center gap-5 overflow-y-auto pb-2 pt-8 text-center">
+        <Chai size={150} />
+        <div>
+          <h1 className="text-3xl font-extrabold">{headline}</h1>
+          <p className="mt-1 text-lg text-ink/65">
+            {result.firstTime ? t('summary.lessonComplete') : t('summary.practiceComplete')}
+          </p>
+        </div>
+
+        <div className="grid w-full grid-cols-3 gap-3">
+          {stats.map((s) => (
+            <div key={s.label} className={`rounded-2xl p-3 ${s.color}`}>
+              <div className="text-2xl font-extrabold">{s.value}</div>
+              <div className="mt-0.5 text-xs font-bold uppercase tracking-wide text-ink/60">{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {result.streakExtended && (
+          <div className="flex w-full items-center gap-3 rounded-2xl bg-coral p-4 text-left text-white">
+            <FlameIcon width={34} height={34} />
+            <div>
+              <div className="text-xl font-extrabold">{t('summary.streak', { count: result.streak })}</div>
+              <div className="text-sm font-semibold opacity-90">{t('summary.streakHint')}</div>
+            </div>
+          </div>
+        )}
+
+        <div className="w-full rounded-2xl bg-white p-4 text-left">
+          <div className="mb-2 flex items-baseline justify-between">
+            <span className="text-base font-extrabold">{t('home.dailyGoal')}</span>
+            <span className="text-sm font-bold text-ink/55">
+              {Math.min(result.todayXp, result.xpGoal)} / {result.xpGoal} XP
+            </span>
+          </div>
+          <ProgressBar value={result.todayXp / result.xpGoal} />
+        </div>
+      </div>
+
+      <Button onClick={onContinue}>{t('summary.continue')}</Button>
+    </div>
+  )
+}
