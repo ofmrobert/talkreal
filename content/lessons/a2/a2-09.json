@@ -1,0 +1,143 @@
+{
+  "id": "a2-09",
+  "level": "A2",
+  "order": 9,
+  "title": { "ru": "Советы и обязанности: should, must, have to", "en": "Should, must, have to" },
+  "goal": { "ru": "Научитесь давать советы и говорить о том, что нужно, нельзя и не обязательно.", "en": "Learn to give advice and say what is necessary, forbidden or optional." },
+  "theory": [
+    {
+      "title": "Should: совет",
+      "body": "Should + глагол без to означает «следует, стоит». Отрицание — shouldn't. Форма одна для всех лиц: he should, без -s. Вопрос строится без do: Should I…?",
+      "examples": [
+        { "en": "You should see a doctor.", "ru": "Тебе стоит сходить к врачу." },
+        { "en": "You shouldn't work so much.", "ru": "Тебе не следует так много работать." },
+        { "en": "Should I take an umbrella?", "ru": "Мне взять зонт?" }
+      ],
+      "tip": "После should и must никогда нет to: «should to go» и «must to do» — ошибки."
+    },
+    {
+      "title": "Must и have to: обязанность",
+      "body": "Оба означают «должен, нужно». Must чаще встречается в правилах и объявлениях. Have to — самый обычный способ сказать о необходимости в разговоре. Он изменяется как обычный глагол: she has to, do you have to…?, а в прошедшем времени — had to (у must прошедшей формы нет).",
+      "examples": [
+        { "en": "All visitors must show their passports.", "ru": "Все посетители обязаны показать паспорта." },
+        { "en": "I have to finish this report today.", "ru": "Мне нужно закончить этот отчёт сегодня." },
+        { "en": "We had to wait for two hours.", "ru": "Нам пришлось ждать два часа." }
+      ]
+    },
+    {
+      "title": "Mustn't и don't have to: большая разница",
+      "body": "В отрицании значения расходятся. Mustn't — запрет: «нельзя». Don't have to — отсутствие необходимости: «не обязательно, можно не делать». Русское «не должен» покрывает оба смысла, поэтому здесь ошибаются особенно часто.",
+      "examples": [
+        { "en": "You mustn't use your phone during the exam.", "ru": "Нельзя пользоваться телефоном во время экзамена." },
+        { "en": "You don't have to come early.", "ru": "Тебе не обязательно приходить рано." }
+      ],
+      "tip": "Спросите себя: это запрещено или просто не нужно? Запрещено — mustn't, не нужно — don't have to."
+    }
+  ],
+  "vocab": [
+    { "en": "to wear", "ru": "носить (одежду)", "example": "She always wears black." },
+    { "en": "seat belt", "ru": "ремень безопасности", "example": "Please fasten your seat belt." },
+    { "en": "rule", "ru": "правило", "example": "Every office has its own rules." },
+    { "en": "to park", "ru": "парковаться", "example": "Where can I park?" },
+    { "en": "in advance", "ru": "заранее", "example": "Thank you in advance." },
+    { "en": "free", "ru": "бесплатный", "example": "Wi-Fi is free for guests." },
+    { "en": "late", "ru": "поздно, допоздна", "example": "The shop is open late on Fridays." }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "Тебе следует больше спать.",
+      "answer": "You should sleep more.",
+      "accept": ["You should get more sleep."],
+      "distractors": ["to", "sleeping", "are"],
+      "explanation": "После should глагол идёт без to: should sleep. More стоит после глагола, а не перед ним, как русское «больше спать»."
+    },
+    {
+      "type": "choice",
+      "prompt": "На улице висит знак «Парковка запрещена». Как это сказать?",
+      "options": ["You mustn't park here.", "You don't have to park here.", "You shouldn't to park here.", "You haven't to park here."],
+      "answer": 0,
+      "explanation": "Запрет выражается через mustn't. Don't have to park означало бы «парковаться не обязательно» — совсем другой смысл."
+    },
+    {
+      "type": "listen",
+      "audio": "You don't have to book in advance.",
+      "question": "Что это значит?",
+      "options": ["Бронировать заранее не обязательно", "Бронировать заранее запрещено", "Нужно обязательно бронировать заранее", "Бронировать уже поздно"],
+      "answer": 0,
+      "explanation": "Don't have to — «не обязательно»: можно бронировать, а можно и нет. Запрет звучал бы иначе: You mustn't book."
+    },
+    {
+      "type": "gap",
+      "sentence": "My husband ___ to work on Saturdays this month.",
+      "translation": "В этом месяце мужу приходится работать по субботам.",
+      "options": ["have", "has", "must", "should"],
+      "answer": 1,
+      "explanation": "Have to изменяется как обычный глагол: с he / she / it — has to. Must и should не подходят, потому что после них to не ставится."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to wear", "ru": "носить (одежду)" },
+        { "en": "seat belt", "ru": "ремень безопасности" },
+        { "en": "rule", "ru": "правило" },
+        { "en": "to park", "ru": "парковаться" },
+        { "en": "in advance", "ru": "заранее" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["He should try this soup.", "He should to try this soup.", "He shoulds try this soup.", "He should tries this soup."],
+      "answer": 0,
+      "explanation": "Should не меняется по лицам, а глагол после него стоит в начальной форме без to и без -s: he should try."
+    },
+    {
+      "type": "gap",
+      "sentence": "The museum is free today, so we ___ buy tickets.",
+      "translation": "Музей сегодня бесплатный, поэтому нам не нужно покупать билеты.",
+      "options": ["mustn't", "don't have to", "must", "haven't"],
+      "answer": 1,
+      "explanation": "Вход бесплатный, значит, покупать билеты не нужно — don't have to. Mustn't означало бы, что покупать билеты запрещено."
+    },
+    {
+      "type": "translate",
+      "source": "Вчера мне пришлось работать допоздна.",
+      "answer": "I had to work late yesterday.",
+      "accept": ["Yesterday I had to work late.", "I had to work until late yesterday.", "I had to work late last night."],
+      "distractors": ["must", "have", "did"],
+      "explanation": "У must нет прошедшей формы, поэтому «пришлось» — это had to. «Допоздна» — просто late, без предлога."
+    },
+    {
+      "type": "listen",
+      "audio": "Passengers must wear a seat belt at all times.",
+      "question": "Что вы услышали?",
+      "options": ["Passengers must wear a seat belt at all times.", "Passengers mustn't wear a seat belt at all times.", "Passengers should wear a seat belt at all times.", "Passengers must wear a seat belt sometimes."],
+      "answer": 0,
+      "explanation": "Must в объявлениях и правилах означает строгую обязанность. Обратите внимание: в must перед согласной звук t почти не слышен, но это не отрицание."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's very late. I think you ___ take a taxi.",
+      "translation": "Уже очень поздно. Думаю, тебе стоит взять такси.",
+      "options": ["should to", "should", "must to", "have"],
+      "answer": 1,
+      "explanation": "Это совет, поэтому should, и сразу глагол без to. Have без to здесь не работает: обязанность выражает только сочетание have to."
+    },
+    {
+      "type": "translate",
+      "source": "Мне обязательно вставать в шесть завтра?",
+      "answer": "Do I have to get up at six tomorrow?",
+      "accept": ["Do I need to get up at six tomorrow?", "Must I get up at six tomorrow?", "Do I have to wake up at six tomorrow?", "Do I have to get up at 6 tomorrow?", "Do I have to get up at six o'clock tomorrow?"],
+      "distractors": ["am", "has", "having"],
+      "explanation": "Вопрос с have to строится через do, как с обычным глаголом: Do I have to…? Вариант «Have I to…?» в современном английском не используется."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение значит «Галстук носить не обязательно, но можно»?",
+      "options": ["You don't have to wear a tie.", "You mustn't wear a tie.", "You shouldn't wear a tie.", "You can't wear a tie."],
+      "answer": 0,
+      "explanation": "Don't have to оставляет выбор за вами. Mustn't и can't — запрет, shouldn't — совет этого не делать."
+    }
+  ]
+}

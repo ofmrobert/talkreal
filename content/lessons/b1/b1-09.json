@@ -1,0 +1,143 @@
+{
+  "id": "b1-09",
+  "level": "B1",
+  "order": 9,
+  "title": { "ru": "Модальные глаголы предположения: must, might, can't", "en": "Modals of deduction: must, might, can't" },
+  "goal": { "ru": "Научитесь делать выводы и показывать, насколько вы в них уверены.", "en": "Learn to make deductions and show how sure you are." },
+  "theory": [
+    {
+      "title": "Must: я почти уверен, что это так",
+      "body": "Must — это не только «должен» в значении обязанности. Когда мы делаем логический вывод из фактов, must означает «должно быть», «наверняка». После него идёт начальная форма глагола без to. Если действие происходит прямо сейчас, используем must be + глагол с -ing.",
+      "examples": [
+        { "en": "She isn't answering. She must be in a meeting.", "ru": "Она не отвечает. Должно быть, она на совещании." },
+        { "en": "You've been travelling all day. You must be hungry.", "ru": "Ты весь день в дороге. Ты, наверное, голодный." },
+        { "en": "The light is on. They must be working.", "ru": "Свет горит. Должно быть, они работают." }
+      ],
+      "tip": "Русские «должно быть» и «наверняка» — вводные слова, а в английском ту же роль играет сам глагол: He must be at work, а не «He is must be» и не «He must to be»."
+    },
+    {
+      "title": "Can't: я уверен, что это не так",
+      "body": "Противоположность must в значении предположения — can't: «не может быть, чтобы…». Форма mustn't сюда не подходит: она означает запрет («нельзя»).",
+      "examples": [
+        { "en": "He can't be at home. His car isn't there.", "ru": "Не может быть, что он дома. Его машины нет." },
+        { "en": "That can't be right. Let me check the numbers again.", "ru": "Это не может быть правильно. Дай я ещё раз проверю цифры." }
+      ],
+      "tip": "Уверен, что да — must. Уверен, что нет — can't. Mustn't в предположениях не используется."
+    },
+    {
+      "title": "Might: возможно, но я не уверен",
+      "body": "Might (а также may и could) показывает, что это лишь одна из возможностей. Отрицание — might not: «возможно, не…». В русском то же значение передают слова «может быть», «возможно».",
+      "examples": [
+        { "en": "Take a jacket. It might be cold in the evening.", "ru": "Возьми куртку. Вечером может быть холодно." },
+        { "en": "She might not know about the meeting.", "ru": "Возможно, она не знает о встрече." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "must", "ru": "должно быть, наверняка", "example": "You must be Anna's brother." },
+    { "en": "might", "ru": "возможно, может быть", "example": "I might be a bit late." },
+    { "en": "can't", "ru": "не может быть", "example": "It can't be six o'clock already!" },
+    { "en": "stuck in traffic", "ru": "застрявший в пробке", "example": "Sorry, I'm stuck in traffic." },
+    { "en": "to belong to", "ru": "принадлежать", "example": "Who does this laptop belong to?" },
+    { "en": "switched off", "ru": "выключенный", "example": "My phone was switched off during the film." },
+    { "en": "fake", "ru": "поддельный, ненастоящий", "example": "The email looked official, but it was fake." },
+    { "en": "a mistake", "ru": "ошибка", "example": "I think there's a mistake in the bill." }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "Он, должно быть, на работе.",
+      "answer": "He must be at work.",
+      "accept": ["He must be at work now."],
+      "distractors": ["to", "in", "maybe"],
+      "explanation": "Уверенный вывод передаёт must + be, без to. «На работе» — at work, без артикля; предлог in здесь не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "Her phone is switched off and her flight left an hour ago. She ___ be on the plane.",
+      "translation": "Её телефон выключен, а рейс улетел час назад. Она, должно быть, в самолёте.",
+      "options": ["must", "can't", "mustn't", "can"],
+      "answer": 0,
+      "explanation": "Все факты указывают на один вывод, поэтому must — «должно быть». Can в утвердительных предположениях о конкретной ситуации не используется."
+    },
+    {
+      "type": "choice",
+      "prompt": "Часы известной марки продают в переходе за двадцать долларов. Какой вывод логичен?",
+      "options": ["They must be fake.", "They can't be fake.", "They mustn't be real.", "They must to be fake."],
+      "answer": 0,
+      "explanation": "Цена не оставляет сомнений, поэтому must be fake — «наверняка подделка». После must не ставится to, а «не могут быть настоящими» было бы can't be real, но не mustn't."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm not sure where Dima is. He might be stuck in traffic.",
+      "question": "Насколько уверен говорящий?",
+      "options": ["Не уверен: это лишь одно из возможных объяснений", "Совершенно уверен, что Дима в пробке", "Уверен, что Дима не в пробке"],
+      "answer": 0,
+      "explanation": "Might показывает возможность, а не уверенность: «может быть, он стоит в пробке». При полной уверенности прозвучало бы must be."
+    },
+    {
+      "type": "gap",
+      "sentence": "This ___ be Olga's bag. Hers is red, and this one is black.",
+      "translation": "Это не может быть сумка Ольги. У неё красная, а эта чёрная.",
+      "options": ["can't", "mustn't", "must", "might"],
+      "answer": 0,
+      "explanation": "Говорящий уверен, что это не так, — can't. Mustn't означает запрет («нельзя») и в предположениях не используется; это типичная ошибка при переводе «не может быть»."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "stuck in traffic", "ru": "застрявший в пробке" },
+        { "en": "to belong to", "ru": "принадлежать" },
+        { "en": "switched off", "ru": "выключенный" },
+        { "en": "fake", "ru": "поддельный" },
+        { "en": "a mistake", "ru": "ошибка" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Не может быть, чтобы это было правдой».",
+      "options": ["It mustn't be true.", "It can't be true.", "It can't to be true.", "It doesn't must be true."],
+      "answer": 1,
+      "explanation": "Уверенность в том, что что-то неправда, выражает can't + глагол без to. Модальные глаголы не образуют отрицание через doesn't, а mustn't значит «нельзя»."
+    },
+    {
+      "type": "translate",
+      "source": "Эта сумка, возможно, принадлежит Анне.",
+      "answer": "This bag might belong to Anna.",
+      "accept": ["This bag may belong to Anna.", "This bag could belong to Anna.", "Maybe this bag belongs to Anna.", "Perhaps this bag belongs to Anna."],
+      "distractors": ["belongs", "maybe", "can"],
+      "explanation": "«Возможно» удобно передать глаголом might, и после него стоит начальная форма без -s: might belong. Can для предположения о конкретном случае не подходит."
+    },
+    {
+      "type": "listen",
+      "audio": "You have been driving all day. You must be tired.",
+      "question": "Что вы услышали?",
+      "options": ["You have been driving all day. You must be tired.", "You have been driving all day. You must to be tired.", "You have been driving all day. You mustn't be tired.", "You have been driving all day. You might be tired."],
+      "answer": 0,
+      "explanation": "Must be tired — «ты, должно быть, устал»: вывод из того, что человек весь день за рулём. Между must и be нет to."
+    },
+    {
+      "type": "gap",
+      "sentence": "Take an umbrella. It ___ rain later.",
+      "translation": "Возьми зонт. Позже может пойти дождь.",
+      "options": ["might", "must", "can't", "can"],
+      "answer": 0,
+      "explanation": "Дождь возможен, но не гарантирован, — might. Русское «может пойти» хочется перевести как can, но can говорит об общей возможности или умении, а не о прогнозе на конкретный день."
+    },
+    {
+      "type": "choice",
+      "prompt": "Девять вечера, в офисе горит свет и слышны голоса. Что вы скажете о коллегах?",
+      "options": ["They must be working late.", "They must working late.", "They mustn't be working late.", "They must be work late."],
+      "answer": 0,
+      "explanation": "Вывод о действии, которое идёт прямо сейчас, строится как must be + глагол с -ing. Пропустить be или убрать -ing нельзя."
+    },
+    {
+      "type": "translate",
+      "source": "Это, должно быть, какая-то ошибка.",
+      "answer": "This must be some kind of mistake.",
+      "accept": ["It must be some kind of mistake.", "There must be some kind of mistake.", "This must be some mistake.", "It must be some mistake.", "There must be some mistake.", "This must be a mistake.", "It must be a mistake."],
+      "distractors": ["should", "to", "probably"],
+      "explanation": "«Должно быть» в значении вывода — must be; отдельное слово probably вместе с must уже не нужно. Should выражает совет или ожидание, а не логический вывод."
+    }
+  ]
+}

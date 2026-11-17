@@ -1,0 +1,181 @@
+{
+  "id": "b2-05",
+  "level": "B2",
+  "order": 5,
+  "title": { "ru": "Wish и if only: сожаления и досада", "en": "Wish and if only: regrets and annoyance" },
+  "goal": { "ru": "Научитесь выражать сожаление о настоящем и прошлом и говорить о том, что вас раздражает.", "en": "Learn to express regret about the present and the past and to say what annoys you." },
+  "theory": [
+    {
+      "title": "Сожаление о настоящем: wish + Past Simple",
+      "body": "Когда нам не нравится нынешняя ситуация, после wish глагол «отступает» на шаг в прошлое: I wish I knew (но я не знаю). По-русски мы говорим «жаль, что я не знаю», то есть с отрицанием и в настоящем времени, — в английском отрицание исчезает, а время сдвигается. С глаголом be в грамотной речи используют were для всех лиц.",
+      "examples": [
+        { "en": "I wish I had more free time.", "ru": "Жаль, что у меня мало свободного времени." },
+        { "en": "I wish I were ten years younger.", "ru": "Вот бы мне быть на десять лет моложе." }
+      ],
+      "tip": "«Не могу» превращается в could: I wish I could help — жаль, что я не могу помочь."
+    },
+    {
+      "title": "Сожаление о прошлом: wish + Past Perfect",
+      "body": "О том, что уже случилось и чего не изменить, говорим wish + had + третья форма. If only значит то же самое, но звучит эмоциональнее: «ах, если бы только…». Would have после wish не используется.",
+      "examples": [
+        { "en": "I wish I had listened to your advice.", "ru": "Жаль, что я не послушал твоего совета." },
+        { "en": "If only we hadn't signed that contract!", "ru": "Ах, если бы мы только не подписали тот договор!" }
+      ]
+    },
+    {
+      "title": "Досада: wish + would",
+      "body": "Если нас раздражает чужое поведение или ситуация и мы хотим, чтобы она изменилась, используем wish + подлежащее + would. Эта конструкция всегда про кого-то или что-то другое: о себе так не говорят — «I wish I would» неправильно.",
+      "examples": [
+        { "en": "I wish you would answer my messages.", "ru": "Отвечал бы ты уже на мои сообщения!" },
+        { "en": "I wish the neighbours would turn the music down.", "ru": "Сделали бы уже соседи музыку потише!" }
+      ],
+      "tip": "Не путайте wish и hope. О реальном будущем говорим hope: I hope you pass the exam, а не «I wish you will pass»."
+    }
+  ],
+  "vocab": [
+    { "en": "to interrupt", "ru": "перебивать", "example": "Sorry to interrupt, but there's an urgent call for you." },
+    { "en": "to afford", "ru": "позволить себе (по деньгам)", "example": "We can't afford a holiday this year." },
+    { "en": "commute", "ru": "дорога на работу и обратно", "example": "My commute is only fifteen minutes by bike." },
+    { "en": "to take for granted", "ru": "принимать как должное", "example": "We take clean water for granted." },
+    { "en": "to speak up", "ru": "высказаться, не промолчать", "example": "If you disagree, you should speak up." },
+    { "en": "shares", "ru": "акции", "example": "He owns shares in several tech companies." },
+    { "en": "to be stuck", "ru": "застрять", "example": "We were stuck at the airport for six hours." },
+    { "en": "to negotiate", "ru": "вести переговоры, договариваться", "example": "She negotiated a better salary." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "I wish I ___ closer to the office: my commute takes two hours.",
+      "translation": "Жаль, что я живу далеко от офиса: дорога на работу занимает два часа.",
+      "options": ["lived", "live", "would live", "will live"],
+      "answer": 0,
+      "explanation": "Сожаление о настоящем — wish + Past Simple: I wish I lived. Would после wish возможно только про других людей, а не про себя."
+    },
+    {
+      "type": "gap",
+      "sentence": "If only I ___ up at the meeting yesterday!",
+      "translation": "Ах, если бы я только высказался вчера на совещании!",
+      "options": ["had spoken", "would speak", "have spoken", "speak"],
+      "answer": 0,
+      "explanation": "Yesterday — прошлое, которого не изменить, поэтому после if only нужен Past Perfect: had spoken. Present Perfect (have spoken) сожаления не выражает."
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега постоянно вас перебивает, и вас это раздражает. Что вы скажете?",
+      "options": [
+        "I wish you would stop interrupting me.",
+        "I wish you stop interrupting me.",
+        "I wish you will stop interrupting me.",
+        "I want that you stop interrupting me."
+      ],
+      "answer": 0,
+      "explanation": "Досаду на чужое поведение выражает wish + would. Настоящее и будущее время после wish не ставятся, а «I want that you…» — калька с русского «хочу, чтобы ты»."
+    },
+    {
+      "type": "translate",
+      "source": "Жаль, что я не могу позволить себе эту квартиру.",
+      "answer": "I wish I could afford this flat.",
+      "accept": [
+        "I wish I could afford this apartment.",
+        "If only I could afford this flat.",
+        "If only I could afford this apartment."
+      ],
+      "distractors": ["can", "would", "myself", "to"],
+      "explanation": "Русское «жаль, что не могу» превращается в I wish I could: отрицание исчезает, а can сдвигается в прошедшее время. После afford слово myself не нужно — «себе» уже заложено в самом глаголе."
+    },
+    {
+      "type": "listen",
+      "audio": "I wish I hadn't sold my shares last spring.",
+      "question": "Что говорящий сделал прошлой весной?",
+      "options": [
+        "Продал акции и теперь жалеет об этом",
+        "Не продал акции и теперь жалеет об этом",
+        "Купил акции и доволен этим",
+        "Собирался продать акции, но не успел"
+      ],
+      "answer": 0,
+      "explanation": "После wish реальность противоположна сказанному: hadn't sold значит, что на самом деле продал. Past Perfect показывает, что сожаление относится к прошлому."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "I wish I were better at negotiating.",
+        "I wish I would be better at negotiating.",
+        "I wish I am better at negotiating.",
+        "I wish I will be better at negotiating."
+      ],
+      "answer": 0,
+      "explanation": "Сожаление о настоящем требует прошедшего времени, а для be — формы were во всех лицах. Wish + would о самом себе не употребляется."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to interrupt", "ru": "перебивать" },
+        { "en": "to afford", "ru": "позволить себе (по деньгам)" },
+        { "en": "commute", "ru": "дорога на работу и обратно" },
+        { "en": "shares", "ru": "акции" },
+        { "en": "to speak up", "ru": "высказаться, не промолчать" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Жаль, что мы не забронировали отель раньше.",
+      "answer": "I wish we had booked the hotel earlier.",
+      "accept": [
+        "I wish we'd booked the hotel earlier.",
+        "I wish we had booked a hotel earlier.",
+        "I wish we'd booked a hotel earlier.",
+        "If only we had booked the hotel earlier.",
+        "If only we had booked a hotel earlier."
+      ],
+      "distractors": ["would", "didn't", "book", "have"],
+      "explanation": "Сожаление о прошлом — wish + Past Perfect: had booked. В русском есть «не», а в английском глагол остаётся утвердительным: мы желаем обратного тому, что было."
+    },
+    {
+      "type": "gap",
+      "sentence": "I wish it ___ raining — we've been stuck indoors all weekend.",
+      "translation": "Когда же этот дождь прекратится — мы все выходные сидим в четырёх стенах.",
+      "options": ["would stop", "will stop", "stops", "is stopping"],
+      "answer": 0,
+      "explanation": "Нас раздражает ситуация, и мы хотим перемены прямо сейчас — это wish + would. Will после wish не ставится: будущее время здесь заменяет would."
+    },
+    {
+      "type": "listen",
+      "audio": "If only they'd told us about the price increase in advance.",
+      "question": "Что вы услышали?",
+      "options": [
+        "If only they'd told us about the price increase in advance.",
+        "If only they told us about the price increase in advance.",
+        "If only they'd tell us about the price increase in advance.",
+        "If only they tell us about the price increase in advance."
+      ],
+      "answer": 0,
+      "explanation": "They'd told = they had told: сокращение 'd перед третьей формой — это had. Говорящий жалеет о прошлом: их не предупредили о повышении цен."
+    },
+    {
+      "type": "translate",
+      "source": "Жаль, что ты принимаешь мою помощь как должное.",
+      "answer": "I wish you didn't take my help for granted.",
+      "accept": [
+        "I wish you did not take my help for granted.",
+        "I wish you wouldn't take my help for granted.",
+        "I wish you would not take my help for granted."
+      ],
+      "distractors": ["don't", "as", "taking"],
+      "explanation": "Сожаление о настоящем: don't после wish превращается в didn't. Выражение устойчивое — take for granted; предлог as здесь был бы калькой с русского «как должное»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «I wish I knew the answer»?",
+      "options": [
+        "Я не знаю ответа, и мне жаль",
+        "Я знал ответ, и рад этому",
+        "Жаль, что я тогда не знал ответа",
+        "Надеюсь, что скоро узнаю ответ"
+      ],
+      "answer": 0,
+      "explanation": "Past Simple после wish говорит о настоящем, а не о прошлом: сейчас я не знаю. О прошлом было бы I wish I had known, а о надежде на будущее — I hope I find out."
+    }
+  ]
+}

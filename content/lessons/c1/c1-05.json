@@ -1,0 +1,182 @@
+{
+  "id": "c1-05",
+  "level": "C1",
+  "order": 5,
+  "title": { "ru": "Причастные обороты", "en": "Participle clauses" },
+  "goal": { "ru": "Научитесь сжимать предложения с помощью причастных оборотов и избегать «висячих» причастий.", "en": "Learn to tighten your sentences with participle clauses and avoid dangling participles." },
+  "theory": [
+    {
+      "title": "Knowing… и Having finished…: активные обороты",
+      "body": "Оборот с формой на -ing заменяет придаточное времени или причины и соответствует русскому деепричастию: «зная», «не желая». Если одно действие завершилось раньше другого, используют перфектную форму having + третья форма глагола: «закончив», «проработав». Отрицание ставится перед причастием: not knowing, not having read.",
+      "examples": [
+        { "en": "Not wanting to offend the client, Dmitri phrased his objections very carefully.", "ru": "Не желая обидеть клиента, Дмитрий очень тщательно сформулировал свои возражения." },
+        { "en": "Having finished the report, she sent it to the director.", "ru": "Закончив отчёт, она отправила его директору." }
+      ],
+      "tip": "Такие обороты характерны для письменной речи. В разговоре естественнее придаточное: «After she finished the report, she sent it…»."
+    },
+    {
+      "title": "Written in 1990…: пассивные обороты",
+      "body": "Если подлежащее не действует само, а подвергается действию, оборот начинается с третьей формы глагола: published, commissioned, faced with. Он заменяет придаточное с пассивом: «Because it was written in 1990» → «Written in 1990». Форма having been + третья форма подчёркивает, что действие было завершено раньше.",
+      "examples": [
+        { "en": "Published in 1925, the novel still feels strikingly modern.", "ru": "Опубликованный в 1925 году, роман до сих пор кажется поразительно современным." },
+        { "en": "Faced with criticism, the minister withdrew the bill.", "ru": "Столкнувшись с критикой, министр отозвал законопроект." },
+        { "en": "The manuscript, having been revised by two editors, was submitted in March.", "ru": "Рукопись, переработанная двумя редакторами, была сдана в марте." }
+      ]
+    },
+    {
+      "title": "«Висячее» причастие",
+      "body": "У оборота нет своего подлежащего, поэтому читатель относит его к подлежащему главной части. Если это разные лица, получается ошибка, знакомая по чеховскому «Подъезжая к станции, у меня слетела шляпа». Проверка простая: кто выполняет действие причастия? Это и должно быть подлежащим главного предложения.",
+      "examples": [
+        { "en": "Reading the contract, I noticed several errors.", "ru": "Читая договор, я заметил несколько ошибок." },
+        { "en": "Having reviewed the findings, the committee approved the funding.", "ru": "Изучив результаты, комитет одобрил финансирование." }
+      ],
+      "tip": "Особенно часто ошибка возникает, когда главная часть стоит в пассиве или начинается с it: «Having reviewed the findings, it was decided…» — решение ничего не изучало."
+    }
+  ],
+  "vocab": [
+    { "en": "to draft", "ru": "составлять черновик", "example": "I drafted the proposal over the weekend." },
+    { "en": "to submit", "ru": "подавать, сдавать", "example": "Applications must be submitted by the first of June." },
+    { "en": "to revise", "ru": "перерабатывать, вносить правки", "example": "The author revised the final chapter twice." },
+    { "en": "findings", "ru": "результаты исследования, выводы", "example": "The findings were published in a leading journal." },
+    { "en": "thoroughly", "ru": "тщательно", "example": "Every claim in the article was thoroughly checked." },
+    { "en": "to commission", "ru": "заказывать (исследование, работу)", "example": "The city commissioned a report on air quality." },
+    { "en": "faced with", "ru": "столкнувшись с", "example": "Faced with rising costs, the firm cut its budget." },
+    { "en": "to withdraw", "ru": "отозвать, забрать назад", "example": "She withdrew her application a week later." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "В каком предложении нет «висячего» причастия?",
+      "options": [
+        "Having thoroughly reviewed the findings, the funding was approved by the committee.",
+        "Having thoroughly reviewed the findings, it was decided to approve the funding.",
+        "Having thoroughly reviewed the findings, the committee approved the funding.",
+        "Having thoroughly reviewed the findings, approval was given without delay."
+      ],
+      "answer": 2,
+      "explanation": "Результаты изучал комитет, значит именно the committee должно быть подлежащим главной части. В остальных вариантах получается, что результаты изучило финансирование, безличное it или одобрение."
+    },
+    {
+      "type": "translate",
+      "source": "Закончив отчёт, она отправила его директору.",
+      "answer": "Having finished the report, she sent it to the director.",
+      "accept": [
+        "Having completed the report, she sent it to the director.",
+        "After finishing the report, she sent it to the director.",
+        "Having finished the report, she sent it to the manager.",
+        "Having finished the report, she sent it to the CEO."
+      ],
+      "distractors": ["finish", "been", "has", "send"],
+      "explanation": "Русское деепричастие совершенного вида «закончив» передаётся перфектным причастием having finished: сначала закончила, потом отправила. Having been finished означало бы пассив, а здесь она действовала сама."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ in 1925, the novel still feels strikingly modern.",
+      "translation": "Опубликованный в 1925 году, роман до сих пор кажется поразительно современным.",
+      "options": ["Published", "Publishing", "Having published", "Being publishing"],
+      "answer": 0,
+      "explanation": "Роман не публиковал, его опубликовали — значение пассивное, поэтому нужна третья форма: published. Формы на -ing означали бы, что роман сам что-то издавал."
+    },
+    {
+      "type": "listen",
+      "audio": "Not wanting to offend the client, Dmitri phrased his objections very carefully.",
+      "question": "Почему Дмитрий так тщательно подбирал слова?",
+      "options": [
+        "Он не хотел обидеть клиента",
+        "Клиент не хотел слушать возражения",
+        "Клиент уже был обижен",
+        "Он не знал, чего хочет клиент"
+      ],
+      "answer": 0,
+      "explanation": "Оборот Not wanting to… называет причину и равен придаточному «because he didn't want to». Отрицание not стоит перед причастием, а не после него."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант: «Не зная всех фактов, я предпочёл промолчать».",
+      "options": [
+        "Not knowing all the facts, I preferred to stay silent.",
+        "Don't knowing all the facts, I preferred to stay silent.",
+        "Not known all the facts, I preferred to stay silent.",
+        "Knowing not all the facts, I preferred to stay silent."
+      ],
+      "answer": 0,
+      "explanation": "Отрицательное причастие образуется только частицей not перед формой на -ing: not knowing. Вспомогательный глагол do с причастиями не употребляется, а третья форма known дала бы пассивное значение."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ by the ministry, the study examined the impact of remote work on productivity.",
+      "translation": "В исследовании, заказанном министерством, изучалось влияние удалённой работы на производительность.",
+      "options": ["Commissioned", "Commissioning", "Having commissioned", "To commission"],
+      "answer": 0,
+      "explanation": "Предлог by указывает на исполнителя действия, значит значение пассивное: исследование заказали. Having commissioned означало бы, что исследование само что-то заказало."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to draft", "ru": "составлять черновик" },
+        { "en": "to submit", "ru": "подавать, сдавать" },
+        { "en": "to revise", "ru": "перерабатывать, вносить правки" },
+        { "en": "findings", "ru": "результаты исследования, выводы" },
+        { "en": "thoroughly", "ru": "тщательно" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Проработав там десять лет, он знает компанию изнутри.",
+      "answer": "Having worked there for ten years, he knows the company inside out.",
+      "accept": [
+        "Having worked there for a decade, he knows the company inside out.",
+        "Having worked there ten years, he knows the company inside out.",
+        "Having worked there for ten years, he knows the company from the inside."
+      ],
+      "distractors": ["working", "since", "know", "during"],
+      "explanation": "Having worked показывает, что опыт накоплен раньше и объясняет нынешнее знание. Длительность вводится предлогом for, а не during или since; inside out — устойчивое «вдоль и поперёк»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The manuscript, ___ by two editors, was finally submitted in March.",
+      "translation": "Рукопись, переработанная двумя редакторами, была наконец сдана в марте.",
+      "options": ["having been revised", "having revised", "revising", "been revised"],
+      "answer": 0,
+      "explanation": "Рукопись переработали до сдачи, и делала это не она сама: нужен перфектный пассив having been revised. Having revised и revising активны, а been не может стоять без having."
+    },
+    {
+      "type": "listen",
+      "audio": "Walking into the conference hall, I realised I had left my notes at the hotel.",
+      "question": "Что вы услышали?",
+      "options": [
+        "Walking into the conference hall, I realised I had left my notes at the hotel.",
+        "Walked into the conference hall, I realised I had left my notes at the hotel.",
+        "Walking into the conference hall, I realised I have left my notes at the hotel.",
+        "Walking in the conference hall, I realise I had left my notes at the hotel."
+      ],
+      "answer": 0,
+      "explanation": "Действие активное и одновременное с главным, поэтому walking, а не walked. Заметки были забыты раньше, чем говорящий это понял, отсюда Past Perfect: had left."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как исправить предложение «Reading the contract, several errors caught my attention»?",
+      "options": [
+        "Reading the contract, several errors were noticed.",
+        "Reading the contract, I noticed several errors.",
+        "Having read the contract, several errors caught my attention.",
+        "The contract reading, several errors caught my attention."
+      ],
+      "answer": 1,
+      "explanation": "Договор читал я, поэтому подлежащим главной части должно стать I. Замена reading на having read или перевод в пассив ничего не меняют: читают по-прежнему «ошибки»."
+    },
+    {
+      "type": "translate",
+      "source": "Столкнувшись с критикой, министр отозвал законопроект.",
+      "answer": "Faced with criticism, the minister withdrew the bill.",
+      "accept": [
+        "Facing criticism, the minister withdrew the bill.",
+        "Having faced criticism, the minister withdrew the bill.",
+        "Faced with criticism, the minister withdrew the draft law.",
+        "Confronted with criticism, the minister withdrew the bill."
+      ],
+      "distractors": ["facing", "by", "law", "has"],
+      "explanation": "Устойчивый оборот faced with означает «оказавшись перед лицом чего-то»; активный вариант facing обходится без предлога. Законопроект — bill; law — уже принятый закон."
+    }
+  ]
+}

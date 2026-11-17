@@ -1,0 +1,145 @@
+{
+  "id": "a1-03",
+  "level": "A1",
+  "order": 3,
+  "title": { "ru": "This, that, these, those и множественное число", "en": "This / that / these / those and plural nouns" },
+  "goal": { "ru": "Научитесь показывать на предметы рядом и вдали и говорить о нескольких предметах.", "en": "Learn to point at things near and far and talk about more than one thing." },
+  "theory": [
+    {
+      "title": "This и that: один предмет",
+      "body": "This — «этот», предмет рядом, до него можно дотянуться. That — «тот», предмет далеко. Оба слова используются только с единственным числом. По-русски мы почти всегда говорим просто «это», а в английском приходится выбирать по расстоянию.",
+      "examples": [
+        { "en": "This is my phone.", "ru": "Это мой телефон. (он у меня в руке)" },
+        { "en": "That is our hotel.", "ru": "Вон то — наш отель." },
+        { "en": "This coffee is hot.", "ru": "Этот кофе горячий." }
+      ],
+      "tip": "This — то, что здесь (here). That — то, что там (there)."
+    },
+    {
+      "title": "These и those: несколько предметов",
+      "body": "Для нескольких предметов свои слова: these — «эти» (рядом), those — «те» (далеко). С ними существительное стоит во множественном числе, а глагол — are. Сказать «this keys» или «these is» нельзя.",
+      "examples": [
+        { "en": "These are my keys.", "ru": "Это мои ключи." },
+        { "en": "Those shops are open.", "ru": "Те магазины открыты." },
+        { "en": "Are these your glasses?", "ru": "Это ваши очки?" }
+      ]
+    },
+    {
+      "title": "Множественное число",
+      "body": "Обычно добавляем -s: key → keys. После -s, -sh, -ch, -x добавляем -es: box → boxes, watch → watches. Несколько слов меняются целиком: man → men, woman → women, child → children, person → people.",
+      "examples": [
+        { "en": "Two tickets, please.", "ru": "Два билета, пожалуйста." },
+        { "en": "The boxes are heavy.", "ru": "Коробки тяжёлые." },
+        { "en": "Those women are my colleagues.", "ru": "Те женщины — мои коллеги." }
+      ],
+      "tip": "Перед множественным числом a / an не ставится: «a keys» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "key", "ru": "ключ", "example": "Where is my key?" },
+    { "en": "ticket", "ru": "билет", "example": "This ticket is for the train." },
+    { "en": "box", "ru": "коробка", "example": "That box is very heavy." },
+    { "en": "watch", "ru": "наручные часы", "example": "This watch is a present." },
+    { "en": "glasses", "ru": "очки", "example": "These glasses are new." },
+    { "en": "shop", "ru": "магазин", "example": "That shop is closed today." },
+    { "en": "children", "ru": "дети", "example": "Those children are from my school." },
+    { "en": "expensive", "ru": "дорогой", "example": "This hotel is expensive." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "key", "ru": "ключ" },
+        { "en": "ticket", "ru": "билет" },
+        { "en": "box", "ru": "коробка" },
+        { "en": "watch", "ru": "наручные часы" },
+        { "en": "shop", "ru": "магазин" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Ключи лежат у вас в руке. Как сказать «Это мои ключи»?",
+      "options": ["This is my keys.", "These are my keys.", "Those are my keys.", "These is my keys."],
+      "answer": 1,
+      "explanation": "Ключей несколько, и они рядом, поэтому these, а глагол — are. Русское «это» не меняется по числам, отсюда ошибка «This is my keys»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Look! ___ shop over there is open.",
+      "translation": "Смотри! Вон тот магазин открыт.",
+      "options": ["This", "That", "These", "Those"],
+      "answer": 1,
+      "explanation": "Over there («вон там») показывает, что магазин далеко, а shop и is — что он один. Для одного далёкого предмета нужно that."
+    },
+    {
+      "type": "listen",
+      "audio": "These tickets are very expensive.",
+      "question": "Что вы услышали?",
+      "options": ["These tickets are very expensive.", "This ticket is very expensive.", "Those tickets are very expensive.", "These tickets aren't very expensive."],
+      "answer": 0,
+      "explanation": "В these гласный долгий, а на конце звук [z]; в this гласный короткий, а на конце [s]. Подсказка — tickets и are: это множественное число."
+    },
+    {
+      "type": "translate",
+      "source": "Это мои дети.",
+      "answer": "These are my children.",
+      "accept": ["Those are my children."],
+      "distractors": ["this", "is", "childs"],
+      "explanation": "Детей несколько, поэтому these are, а не this is. Children — особая форма множественного числа от child; слова «childs» не существует."
+    },
+    {
+      "type": "gap",
+      "sentence": "Two ___ to Kazan, please.",
+      "translation": "Два билета до Казани, пожалуйста.",
+      "options": ["ticket", "tickets", "ticketes", "a tickets"],
+      "answer": 1,
+      "explanation": "После любого числа больше одного существительное стоит во множественном числе: two tickets. Ticket заканчивается на t, поэтому добавляем просто -s, без e."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно образовать множественное число от слова box?",
+      "options": ["boxs", "boxes", "boxies", "box"],
+      "answer": 1,
+      "explanation": "После -x, -s, -sh и -ch добавляется -es, иначе слово не произнести: box → boxes, watch → watches."
+    },
+    {
+      "type": "translate",
+      "source": "Тот магазин не дорогой.",
+      "answer": "That shop is not expensive.",
+      "accept": ["That shop isn't expensive.", "That shop's not expensive.", "That store is not expensive.", "That store isn't expensive."],
+      "distractors": ["those", "are", "this"],
+      "explanation": "«Тот» об одном далёком предмете — that, и глагол is. Those и are понадобились бы для нескольких магазинов."
+    },
+    {
+      "type": "listen",
+      "audio": "Excuse me, are these your glasses?",
+      "question": "О чём спрашивает человек?",
+      "options": ["Ваши ли это очки", "Ваши ли это ключи", "Где ваши очки", "Дорогие ли эти очки"],
+      "answer": 0,
+      "explanation": "Are these your glasses? — «Это ваши очки?» Слово glasses всегда во множественном числе, поэтому с ним these и are, а не this и is."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ is my watch. It is new.",
+      "translation": "Это мои часы. Они новые.",
+      "options": ["This", "These", "Those", "They"],
+      "answer": 0,
+      "explanation": "Watch — одни наручные часы, и в английском это единственное число: this is, it is. По-русски «часы» всегда множественные, поэтому так и тянет сказать these."
+    },
+    {
+      "type": "translate",
+      "source": "Эти ключи — твои?",
+      "answer": "Are these your keys?",
+      "accept": ["Are those your keys?", "Are these keys yours?"],
+      "distractors": ["this", "is", "key"],
+      "explanation": "В вопросе are выходит на первое место: Are these…? Ключей несколько, поэтому these, are и keys с окончанием -s."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Those womans are doctors.", "These glasses is new.", "That children are happy.", "Those people are my friends."],
+      "answer": 3,
+      "explanation": "People — множественное число от person, поэтому those и are. В остальных вариантах ошибки: правильно women, glasses are и those children."
+    }
+  ]
+}

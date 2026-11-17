@@ -1,0 +1,144 @@
+{
+  "id": "b1-08",
+  "level": "B1",
+  "order": 8,
+  "title": { "ru": "Герундий или инфинитив", "en": "Gerund or infinitive" },
+  "goal": { "ru": "Научитесь выбирать между «doing» и «to do» после другого глагола.", "en": "Learn to choose between \"doing\" and \"to do\" after another verb." },
+  "theory": [
+    {
+      "title": "Глаголы, после которых нужна форма с -ing",
+      "body": "После некоторых глаголов второй глагол всегда стоит с окончанием -ing: enjoy, avoid, mind, keep, finish, suggest. В русском после них идёт обычный инфинитив («избегаю ездить»), поэтому хочется сказать to. Форма с -ing нужна и после любого предлога: before leaving, good at cooking, thank you for coming.",
+      "examples": [
+        { "en": "I enjoy cooking for my friends.", "ru": "Мне нравится готовить для друзей." },
+        { "en": "He keeps checking his phone.", "ru": "Он постоянно проверяет телефон." },
+        { "en": "She left without saying goodbye.", "ru": "Она ушла не попрощавшись." }
+      ],
+      "tip": "Enjoy, avoid, mind, keep, finish — запомните эту пятёрку: после них никогда не бывает to."
+    },
+    {
+      "title": "Глаголы, после которых нужен инфинитив с to",
+      "body": "Другая группа глаголов требует to + начальную форму: want, decide, agree, refuse, manage, hope, plan, promise. Многие из них говорят о намерении или о решении на будущее.",
+      "examples": [
+        { "en": "We decided to move closer to the centre.", "ru": "Мы решили переехать ближе к центру." },
+        { "en": "She refused to answer the question.", "ru": "Она отказалась отвечать на вопрос." },
+        { "en": "I managed to fix the printer.", "ru": "Мне удалось починить принтер." }
+      ]
+    },
+    {
+      "title": "Stop и remember: смысл меняется",
+      "body": "После stop и remember возможны обе формы, но значение разное. Stop doing — прекратить делать; stop to do — остановиться, чтобы сделать. Remember doing — помнить о том, что уже сделал; remember to do — не забыть сделать.",
+      "examples": [
+        { "en": "I stopped drinking coffee.", "ru": "Я перестал пить кофе." },
+        { "en": "I stopped to drink some coffee.", "ru": "Я остановился выпить кофе." },
+        { "en": "Remember to call the bank.", "ru": "Не забудь позвонить в банк." }
+      ],
+      "tip": "«Бросить, перестать что-то делать» — всегда stop + -ing. Stop to smoke значит «остановиться, чтобы покурить», а не «бросить курить»."
+    }
+  ],
+  "vocab": [
+    { "en": "to enjoy", "ru": "получать удовольствие, любить (делать)", "example": "I enjoy travelling by train." },
+    { "en": "to avoid", "ru": "избегать", "example": "Try to avoid eating late at night." },
+    { "en": "to mind", "ru": "возражать, быть против", "example": "I don't mind working on Saturdays." },
+    { "en": "to keep", "ru": "продолжать, постоянно делать", "example": "Keep trying!" },
+    { "en": "to manage", "ru": "суметь, справиться", "example": "Did you manage to get a visa?" },
+    { "en": "to refuse", "ru": "отказаться", "example": "The bank refused to give him a loan." },
+    { "en": "to agree", "ru": "согласиться", "example": "She agreed to help us." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "I really enjoy ___ in the park before work.",
+      "translation": "Мне очень нравится бегать в парке перед работой.",
+      "options": ["running", "to run", "run", "ran"],
+      "answer": 0,
+      "explanation": "После enjoy второй глагол всегда с -ing: enjoy running. Русский инфинитив «нравится бегать» подсказывает to run, но с enjoy так не говорят."
+    },
+    {
+      "type": "gap",
+      "sentence": "After a long discussion, the bank agreed ___ us more time.",
+      "translation": "После долгого обсуждения банк согласился дать нам больше времени.",
+      "options": ["to give", "giving", "give", "gave"],
+      "answer": 0,
+      "explanation": "Agree относится к глаголам, после которых нужен инфинитив с to: agree to do. Без to или с -ing предложение будет неправильным."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает предложение «He stopped to smoke»?",
+      "options": ["Он остановился, чтобы покурить", "Он бросил курить", "Он не переставал курить"],
+      "answer": 0,
+      "explanation": "Stop to do — прервать одно дело ради другого: остановился, чтобы покурить. «Бросил курить» — это stopped smoking, с формой на -ing."
+    },
+    {
+      "type": "translate",
+      "source": "Вы не против подождать несколько минут?",
+      "answer": "Do you mind waiting a few minutes?",
+      "accept": ["Would you mind waiting a few minutes?", "Do you mind waiting for a few minutes?", "Would you mind waiting for a few minutes?", "Do you mind waiting a couple of minutes?"],
+      "distractors": ["wait", "to", "against"],
+      "explanation": "После mind глагол стоит с -ing: mind waiting. «Быть против» в вежливой просьбе — это именно mind, а не against; и to после него не ставится."
+    },
+    {
+      "type": "listen",
+      "audio": "Remember to lock the door when you leave.",
+      "question": "О чём просит говорящий?",
+      "options": ["Не забыть запереть дверь перед уходом", "Вспомнить, заперта ли дверь", "Не запирать дверь, когда уходишь", "Запомнить, где лежит ключ"],
+      "answer": 0,
+      "explanation": "Remember to do — не забыть сделать то, что ещё впереди. Remember locking значило бы «помнить, как запирал» — о действии, которое уже совершено."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to avoid", "ru": "избегать" },
+        { "en": "to mind", "ru": "возражать" },
+        { "en": "to manage", "ru": "суметь, справиться" },
+        { "en": "to refuse", "ru": "отказаться" },
+        { "en": "to agree", "ru": "согласиться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She avoids to drive at night.", "She avoids driving at night.", "She avoids drive at night.", "She avoids of driving at night."],
+      "answer": 1,
+      "explanation": "После avoid — только форма с -ing, без to и без предлога: avoid driving. Вариант to drive — прямая калька с русского «избегает водить»."
+    },
+    {
+      "type": "translate",
+      "source": "Он отказался подписывать контракт.",
+      "answer": "He refused to sign the contract.",
+      "accept": ["He refused to sign a contract.", "He refused to sign this contract."],
+      "distractors": ["signing", "from", "signed"],
+      "explanation": "После refuse нужен инфинитив с to: refused to sign. Русское «отказался от» подталкивает к предлогу from, но в английском он здесь не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "Thank you for ___ me with the presentation.",
+      "translation": "Спасибо, что помог мне с презентацией.",
+      "options": ["helping", "to help", "help", "helped"],
+      "answer": 0,
+      "explanation": "После предлога (здесь for) глагол всегда принимает форму с -ing: for helping. По-русски здесь придаточное «что помог», поэтому форму приходится перестраивать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Мне удалось найти дешёвые билеты».",
+      "options": ["I managed finding cheap tickets.", "I managed to find cheap tickets.", "I managed find cheap tickets.", "I could to find cheap tickets."],
+      "answer": 1,
+      "explanation": "«Удалось сделать» — manage to do, с инфинитивом. Обратите внимание на подлежащее: по-русски «мне удалось», а по-английски I managed."
+    },
+    {
+      "type": "listen",
+      "audio": "He keeps asking me the same question.",
+      "question": "Что вы услышали?",
+      "options": ["He keeps asking me the same question.", "He keeps to ask me the same question.", "He kept asking me the same question.", "He keeps asking me the same questions."],
+      "answer": 0,
+      "explanation": "Keep + -ing означает «постоянно делать, продолжать»: keeps asking. To после keep не ставится, а окончание -s показывает настоящее время."
+    },
+    {
+      "type": "translate",
+      "source": "Я перестал пить кофе по вечерам.",
+      "answer": "I stopped drinking coffee in the evening.",
+      "accept": ["I stopped drinking coffee in the evenings.", "I have stopped drinking coffee in the evening.", "I've stopped drinking coffee in the evening.", "I've stopped drinking coffee in the evenings.", "I quit drinking coffee in the evening.", "I gave up drinking coffee in the evening."],
+      "distractors": ["to", "drink", "at"],
+      "explanation": "«Перестать делать» — stop + -ing: stopped drinking. Stopped to drink означало бы «остановился, чтобы выпить»; а «вечером, по вечерам» — in the evening, не at."
+    }
+  ]
+}

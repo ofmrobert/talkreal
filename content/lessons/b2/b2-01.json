@@ -1,0 +1,182 @@
+{
+  "id": "b2-01",
+  "level": "B2",
+  "order": 1,
+  "title": { "ru": "Условные предложения: третий и смешанный тип", "en": "Third and mixed conditionals" },
+  "goal": { "ru": "Научитесь говорить о том, что могло сложиться иначе в прошлом и как это отразилось бы на настоящем.", "en": "Learn to talk about how the past could have been different and how that would affect the present." },
+  "theory": [
+    {
+      "title": "Third Conditional: нереальное прошлое",
+      "body": "Когда мы представляем, что прошлое сложилось иначе, используем схему If + Past Perfect, would have + третья форма глагола. Изменить уже ничего нельзя — это сожаление, упрёк или облегчение. В части с if никогда не ставится would: «If I would have known» — типичная калька с русского «если бы я знал».",
+      "examples": [
+        { "en": "If I had known about the strike, I would have taken the train.", "ru": "Если бы я знал о забастовке, я бы поехал на поезде." },
+        { "en": "If she hadn't missed the deadline, the client wouldn't have complained.", "ru": "Если бы она не сорвала срок, клиент бы не пожаловался." }
+      ],
+      "tip": "Вместо would можно поставить could have (смог бы) или might have (возможно, …бы): We could have won."
+    },
+    {
+      "title": "Смешанный тип: прошлое → настоящее",
+      "body": "Если условие относится к прошлому, а результат мы видим сейчас, части «смешиваются»: If + Past Perfect, would + инфинитив (или would be doing). По-русски обе части звучат одинаково — «если бы… , …бы», поэтому время приходится определять по смыслу.",
+      "examples": [
+        { "en": "If I had accepted that offer, I would be living in Berlin now.", "ru": "Если бы я принял то предложение, я бы сейчас жил в Берлине." },
+        { "en": "If he hadn't invested in that startup, he wouldn't be so wealthy today.", "ru": "Если бы он не вложился в тот стартап, он не был бы сегодня так богат." }
+      ],
+      "tip": "Ищите слова now, today, still в главной части: они показывают, что результат относится к настоящему."
+    },
+    {
+      "title": "Смешанный тип: настоящее → прошлое",
+      "body": "Бывает и наоборот: условие — постоянное качество или ситуация (она верна и сейчас), а результат относится к прошлому. Тогда If + Past Simple, would have + третья форма.",
+      "examples": [
+        { "en": "If I spoke German, I would have applied for that position.", "ru": "Если бы я говорил по-немецки, я бы подал заявку на ту должность." },
+        { "en": "If she weren't so stubborn, she would have apologised long ago.", "ru": "Если бы она не была такой упрямой, она бы давно извинилась." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "to turn down", "ru": "отклонить, отказаться (от предложения)", "example": "She turned down the promotion because of the long hours." },
+    { "en": "to back up", "ru": "сделать резервную копию", "example": "Always back up your files before an update." },
+    { "en": "to end up", "ru": "в итоге оказаться", "example": "We took the wrong exit and ended up in another town." },
+    { "en": "in advance", "ru": "заранее", "example": "It's cheaper to book the tickets in advance." },
+    { "en": "deadline", "ru": "крайний срок", "example": "The deadline for applications is the first of March." },
+    { "en": "to warn", "ru": "предупредить", "example": "Nobody warned us about the road works." },
+    { "en": "keynote speech", "ru": "главный доклад (на конференции)", "example": "The keynote speech starts at ten sharp." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Речь о вчерашнем дне. Выберите правильный вариант: «Если бы я знал о пробках, я бы выехал раньше».",
+      "options": [
+        "If I had known about the traffic, I would have left earlier.",
+        "If I would have known about the traffic, I would have left earlier.",
+        "If I knew about the traffic, I would leave earlier.",
+        "If I had known about the traffic, I will have left earlier."
+      ],
+      "answer": 0,
+      "explanation": "О нереальном прошлом говорим так: If + Past Perfect, would have + третья форма. Русское «бы» есть в обеих частях, но в английском would после if не ставится."
+    },
+    {
+      "type": "gap",
+      "sentence": "If you had backed up the files, we ___ the deadline.",
+      "translation": "Если бы ты сделал резервную копию файлов, мы бы не сорвали срок.",
+      "options": ["wouldn't have missed", "wouldn't miss", "won't miss", "hadn't missed"],
+      "answer": 0,
+      "explanation": "Срок уже сорван, это результат в прошлом, поэтому нужно wouldn't have missed. Past Perfect (hadn't missed) бывает только в части с if."
+    },
+    {
+      "type": "translate",
+      "source": "Если бы она согласилась на ту работу, она была бы сейчас в Риме.",
+      "answer": "If she had taken that job, she would be in Rome now.",
+      "accept": [
+        "If she'd taken that job, she'd be in Rome now.",
+        "If she had taken that job, she would now be in Rome.",
+        "If she had accepted that job, she would be in Rome now.",
+        "She would be in Rome now if she had taken that job."
+      ],
+      "distractors": ["have", "take", "will"],
+      "explanation": "Условие в прошлом (had taken), а результат — сейчас, поэтому would be, а не would have been. Это смешанный тип: на него указывает слово now."
+    },
+    {
+      "type": "listen",
+      "audio": "If Marina had caught the earlier flight, she wouldn't have missed the keynote speech.",
+      "question": "Что произошло на самом деле?",
+      "options": [
+        "Марина не успела на ранний рейс и пропустила главный доклад",
+        "Марина успела на ранний рейс и услышала главный доклад",
+        "Марина успела на ранний рейс, но доклад всё равно пропустила",
+        "Марина не успела на ранний рейс, но доклад услышала"
+      ],
+      "answer": 0,
+      "explanation": "Third Conditional описывает то, чего не было, поэтому реальность противоположна: had caught — на самом деле не успела, wouldn't have missed — на самом деле пропустила."
+    },
+    {
+      "type": "gap",
+      "sentence": "If I ___ so afraid of flying, I wouldn't have turned down the job in Tokyo last year.",
+      "translation": "Если бы я так не боялся летать, я бы не отказался от работы в Токио в прошлом году.",
+      "options": ["weren't", "am not", "wouldn't be", "won't be"],
+      "answer": 0,
+      "explanation": "Страх перед полётами — постоянное свойство человека, оно верно и сейчас, поэтому в условии Past Simple (weren't), хотя результат относится к прошлому. Would после if не ставится."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to turn down", "ru": "отклонить, отказаться" },
+        { "en": "to back up", "ru": "сделать резервную копию" },
+        { "en": "to end up", "ru": "в итоге оказаться" },
+        { "en": "in advance", "ru": "заранее" },
+        { "en": "to warn", "ru": "предупредить" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение означает: «Я не выучил испанский, поэтому сейчас не работаю в Мадриде»?",
+      "options": [
+        "If I had learned Spanish, I would be working in Madrid now.",
+        "If I learned Spanish, I would have worked in Madrid.",
+        "If I learn Spanish, I will work in Madrid.",
+        "If I hadn't learned Spanish, I wouldn't be working in Madrid now."
+      ],
+      "answer": 0,
+      "explanation": "Причина в прошлом (не выучил → If I had learned), следствие в настоящем (не работаю → I would be working). Отрицание в реальности превращается в утверждение в условном предложении."
+    },
+    {
+      "type": "translate",
+      "source": "Если бы ты предупредил меня заранее, я бы тебе помог.",
+      "answer": "If you had warned me in advance, I would have helped you.",
+      "accept": [
+        "If you'd warned me in advance, I'd have helped you.",
+        "If you had warned me in advance, I would have helped.",
+        "If you had told me in advance, I would have helped you.",
+        "I would have helped you if you had warned me in advance."
+      ],
+      "distractors": ["warn", "will", "did"],
+      "explanation": "Оба действия не состоялись в прошлом: had warned в условии и would have helped в результате. Past Simple (did, warned) после if описывал бы нереальное настоящее, а не прошлое."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ the conference if her visa had arrived on time.",
+      "translation": "Она смогла бы посетить конференцию, если бы виза пришла вовремя.",
+      "options": ["could have attended", "could attend", "can attend", "had attended"],
+      "answer": 0,
+      "explanation": "«Смогла бы» о несостоявшемся прошлом — could have + третья форма. Просто could attend относилось бы к настоящему или будущему."
+    },
+    {
+      "type": "listen",
+      "audio": "If I'd known you were coming, I'd have booked a bigger table.",
+      "question": "Что вы услышали?",
+      "options": [
+        "If I'd known you were coming, I'd have booked a bigger table.",
+        "If I knew you were coming, I'd book a bigger table.",
+        "If I'd known you were coming, I'd book a bigger table.",
+        "If I know you are coming, I'll book a bigger table."
+      ],
+      "answer": 0,
+      "explanation": "Сокращение 'd — это и had, и would. После if оно означает had (I'd known = I had known), а в главной части — would (I'd have booked = I would have booked)."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "If we hadn't ended up in the wrong terminal, we would have caught our flight.",
+        "If we wouldn't have ended up in the wrong terminal, we would have caught our flight.",
+        "If we didn't end up in the wrong terminal, we would caught our flight.",
+        "If we hadn't ended up in the wrong terminal, we would catch our flight yesterday."
+      ],
+      "answer": 0,
+      "explanation": "В условии — Past Perfect (hadn't ended up), в результате — would have + третья форма (would have caught). Would в части с if и would catch рядом с yesterday — ошибки."
+    },
+    {
+      "type": "translate",
+      "source": "Если бы я не был таким ленивым, я бы закончил отчёт вчера.",
+      "answer": "If I weren't so lazy, I would have finished the report yesterday.",
+      "accept": [
+        "If I wasn't so lazy, I would have finished the report yesterday.",
+        "If I were not so lazy, I would have finished the report yesterday.",
+        "If I weren't so lazy, I'd have finished the report yesterday.",
+        "I would have finished the report yesterday if I weren't so lazy.",
+        "If I hadn't been so lazy, I would have finished the report yesterday."
+      ],
+      "distractors": ["am", "will", "finish"],
+      "explanation": "Лень — постоянная черта, поэтому в условии Past Simple (weren't), а результат относится ко вчерашнему дню: would have finished. Настоящее время (am) после if в нереальном условии невозможно."
+    }
+  ]
+}

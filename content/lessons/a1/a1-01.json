@@ -1,0 +1,145 @@
+{
+  "id": "a1-01",
+  "level": "A1",
+  "order": 1,
+  "title": { "ru": "Привет! Глагол to be: am, is, are", "en": "Hello! The verb to be: am / is / are" },
+  "goal": { "ru": "Научитесь представляться, говорить, откуда вы и как себя чувствуете.", "en": "Learn to introduce yourself and say where you are from and how you feel." },
+  "theory": [
+    {
+      "title": "Зачем нужен глагол to be",
+      "body": "По-русски мы говорим «Я Анна», «Он врач», «Мы из России» — без глагола. В английском глагол обязателен в каждом предложении: если действия нет, ставим to be. У него три формы: I am, he / she / it is, we / you / they are.",
+      "examples": [
+        { "en": "I am Anna.", "ru": "Я Анна." },
+        { "en": "He is a doctor.", "ru": "Он врач." },
+        { "en": "We are from Russia.", "ru": "Мы из России." }
+      ],
+      "tip": "Если в русское предложение можно мысленно вставить «есть» или «является», в английском нужен to be."
+    },
+    {
+      "title": "Краткие формы и отрицание",
+      "body": "В разговоре формы сокращаются: I'm, you're, he's, she's, it's, we're, they're. Чтобы сказать «не», ставим not после to be: I'm not, he isn't, they aren't. Никаких других слов для отрицания здесь не нужно.",
+      "examples": [
+        { "en": "I'm tired.", "ru": "Я устал." },
+        { "en": "She isn't from Spain.", "ru": "Она не из Испании." },
+        { "en": "They aren't at home.", "ru": "Их нет дома." }
+      ]
+    },
+    {
+      "title": "Вопросы с to be",
+      "body": "В вопросе to be встаёт перед подлежащим: You are hungry → Are you hungry? Короткий ответ повторяет глагол: Yes, I am. / No, he isn't. Вопросительное слово стоит в самом начале: Where are you from?",
+      "examples": [
+        { "en": "Are you hungry? — Yes, I am.", "ru": "Ты голоден? — Да." },
+        { "en": "Is she your friend?", "ru": "Она твоя подруга?" },
+        { "en": "Where are you from?", "ru": "Откуда вы?" }
+      ],
+      "tip": "В кратком ответе «да» сокращать нельзя: Yes, I am — правильно, «Yes, I'm» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "hello", "ru": "привет, здравствуйте", "example": "Hello, I am Marta." },
+    { "en": "name", "ru": "имя", "example": "My name is Timur." },
+    { "en": "from", "ru": "из", "example": "We are from Brazil." },
+    { "en": "happy", "ru": "счастливый, довольный", "example": "The children are happy." },
+    { "en": "tired", "ru": "уставший", "example": "I am tired today." },
+    { "en": "hungry", "ru": "голодный", "example": "Are you hungry?" },
+    { "en": "friend", "ru": "друг, подруга", "example": "Olga is my friend." },
+    { "en": "country", "ru": "страна", "example": "Italy is a beautiful country." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Я из России».",
+      "options": ["I from Russia.", "I am from Russia.", "I is from Russia.", "I are from Russia."],
+      "answer": 1,
+      "explanation": "С I используется только форма am. По-русски глагола нет, но в английском без него нельзя: «I from Russia» — самая частая ошибка начинающих."
+    },
+    {
+      "type": "gap",
+      "sentence": "My friend Pablo ___ from Mexico.",
+      "translation": "Мой друг Пабло из Мексики.",
+      "options": ["am", "is", "are", "be"],
+      "answer": 1,
+      "explanation": "Pablo — это один человек (he), а с he / she / it используется is. Форма be в предложении сама по себе не употребляется."
+    },
+    {
+      "type": "translate",
+      "source": "Мы очень голодные.",
+      "answer": "We are very hungry.",
+      "accept": ["We're very hungry."],
+      "distractors": ["is", "am", "have"],
+      "explanation": "С we используется are. Русское предложение обходится без глагола, а в английском он обязателен; и это именно to be, а не have: be hungry."
+    },
+    {
+      "type": "listen",
+      "audio": "She isn't tired.",
+      "question": "Что вы услышали?",
+      "options": ["She isn't tired.", "She is tired.", "He isn't tired.", "She isn't retired."],
+      "answer": 0,
+      "explanation": "Isn't — это is not, отрицание. Окончание n't звучит коротко, но меняет смысл на противоположный, поэтому к нему стоит прислушиваться."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "hello", "ru": "привет" },
+        { "en": "name", "ru": "имя" },
+        { "en": "happy", "ru": "счастливый" },
+        { "en": "tired", "ru": "уставший" },
+        { "en": "country", "ru": "страна" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you from Kazakhstan?",
+      "translation": "Вы из Казахстана?",
+      "options": ["Is", "Are", "Am", "Do"],
+      "answer": 1,
+      "explanation": "В вопросе to be встаёт перед подлежащим, а с you всегда are. Do здесь не нужен: вопросы с to be строятся без помощников."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как коротко ответить «да» на вопрос «Are you happy?»",
+      "options": ["Yes, I am.", "Yes, I'm.", "Yes, I do.", "Yes, I are."],
+      "answer": 0,
+      "explanation": "Краткий ответ повторяет глагол из вопроса в нужной форме: Are you…? — Yes, I am. В утвердительном кратком ответе форму не сокращают, поэтому «Yes, I'm» — ошибка."
+    },
+    {
+      "type": "translate",
+      "source": "Меня зовут Алексей.",
+      "answer": "My name is Alexey.",
+      "accept": ["My name's Alexey.", "I am Alexey.", "I'm Alexey."],
+      "distractors": ["am", "are", "me"],
+      "explanation": "Дословно: «Моё имя есть Алексей». Name — это «оно» (it), поэтому is; пропустить глагол и сказать «My name Alexey» — калька с русского."
+    },
+    {
+      "type": "listen",
+      "audio": "Hello, my name is Sofia, and I am from Italy.",
+      "question": "Откуда София?",
+      "options": ["Из Италии", "Из Испании", "Из Индии", "Из Ирландии"],
+      "answer": 0,
+      "explanation": "I am from Italy — «я из Италии». Конструкция be from + страна отвечает на вопрос Where are you from?"
+    },
+    {
+      "type": "gap",
+      "sentence": "Anna and Viktor ___ not at home now.",
+      "translation": "Анны и Виктора сейчас нет дома.",
+      "options": ["is", "are", "am", "be"],
+      "answer": 1,
+      "explanation": "Анна и Виктор — это два человека, то есть they, поэтому are. Частая ошибка — ставить is, глядя только на последнее имя."
+    },
+    {
+      "type": "translate",
+      "source": "Она не моя подруга.",
+      "answer": "She is not my friend.",
+      "accept": ["She isn't my friend.", "She's not my friend."],
+      "distractors": ["no", "are", "don't"],
+      "explanation": "Отрицание с to be — это not сразу после глагола: is not. Слова no и don't здесь не подходят."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["My parents is happy.", "This country very big.", "Are your friend tired?", "It is a small country."],
+      "answer": 3,
+      "explanation": "В It is a small country глагол на месте и согласован с it. В остальных вариантах ошибки: parents — это they, нужно are; во втором пропущен is; friend — один человек, нужно Is."
+    }
+  ]
+}

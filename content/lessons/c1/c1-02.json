@@ -1,0 +1,181 @@
+{
+  "id": "c1-02",
+  "level": "C1",
+  "order": 2,
+  "title": { "ru": "Расщеплённые предложения", "en": "Cleft sentences" },
+  "goal": { "ru": "Научитесь выделять самое важное в предложении: кто, что и почему.", "en": "Learn to put the spotlight on the key part of a sentence: who, what and why." },
+  "theory": [
+    {
+      "title": "It was… who / that: выделяем одного участника",
+      "body": "В русском слово выделяют интонацией или частицей «именно». В английском порядок слов жёсткий, поэтому предложение «расщепляют»: It is / was + выделяемая часть + who или that + остальное. Так можно подчеркнуть человека, предмет, время или место и заодно противопоставить их чему-то другому.",
+      "examples": [
+        { "en": "It was the marketing team who came up with the slogan, not the agency.", "ru": "Слоган придумал именно отдел маркетинга, а не агентство." },
+        { "en": "It was only after the setback that we changed our strategy.", "ru": "Мы изменили стратегию только после этой неудачи." }
+      ],
+      "tip": "Вторая часть присоединяется через that (для людей также who), но не через what, when или where: «It was in May that we met»."
+    },
+    {
+      "title": "What I need is…: выделяем конец предложения",
+      "body": "Конструкция с what переносит главное в конец, где в английском стоит новая информация: What + подлежащее + глагол + is / was + главное. What здесь значит «то, что», и глагол после него стоит в единственном числе. Если выделяется действие, используют do: What we did was (to) postpone the launch.",
+      "examples": [
+        { "en": "What I need is more time, not more money.", "ru": "Мне нужно больше времени, а не денег." },
+        { "en": "What we overlooked was the cost of training new staff.", "ru": "Мы упустили из виду именно расходы на обучение новых сотрудников." },
+        { "en": "What happened was that the client changed the brief.", "ru": "Случилось вот что: клиент изменил техническое задание." }
+      ]
+    },
+    {
+      "title": "The reason why…, All I…, The thing that…",
+      "body": "Тот же приём работает с другими «вводными» словами. The reason (why)… is that… выделяет причину, All I did was… означает «я всего лишь…», The thing that… is… выделяет предмет разговора. После all слово what не ставится, а после the reason в аккуратной письменной речи пишут that, а не because.",
+      "examples": [
+        { "en": "The reason why the launch was delayed is that a crucial component failed testing.", "ru": "Запуск отложили потому, что важнейший компонент не прошёл испытания." },
+        { "en": "All I did was ask a question.", "ru": "Я всего лишь задал вопрос." }
+      ],
+      "tip": "Калька с русского «всё, что» — «all what» — одна из самых стойких ошибок. Правильно: all (that) I did."
+    }
+  ],
+  "vocab": [
+    { "en": "to point out", "ru": "указать, обратить внимание", "example": "She pointed out a flaw in the methodology." },
+    { "en": "to overlook", "ru": "упустить из виду", "example": "We overlooked one important detail in the contract." },
+    { "en": "a setback", "ru": "неудача, шаг назад", "example": "Losing that client was a serious setback for the firm." },
+    { "en": "crucial", "ru": "крайне важный", "example": "Timing is crucial in a negotiation like this." },
+    { "en": "to boil down to", "ru": "сводиться к", "example": "The whole dispute boils down to money." },
+    { "en": "to put someone off", "ru": "отпугнуть, отбить охоту", "example": "The long application form puts many candidates off." },
+    { "en": "a lack of", "ru": "отсутствие, нехватка", "example": "The project failed because of a lack of funding." },
+    { "en": "to come up with", "ru": "придумать, предложить", "example": "Who came up with the idea of a four-day week?" }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "It was the marketing team ___ came up with the slogan, not the agency.",
+      "translation": "Слоган придумал именно отдел маркетинга, а не агентство.",
+      "options": ["who", "what", "whom", "it"],
+      "answer": 0,
+      "explanation": "В конструкции It was… вторая часть присоединяется через who или that. What — типичная ошибка под влиянием русского «это было то, что»; whom не подходит, потому что команда здесь выполняет действие."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно закончить предложение «The reason why the launch was delayed is…»?",
+      "options": [
+        "that a crucial component failed testing.",
+        "because of a crucial component failed testing.",
+        "why a crucial component failed testing.",
+        "what a crucial component failed testing."
+      ],
+      "answer": 0,
+      "explanation": "После the reason… is идёт придаточное с that: причина состоит в том, что… Because of требует существительного, а не целого предложения, а слово reason уже само означает «потому что»."
+    },
+    {
+      "type": "listen",
+      "audio": "What we overlooked was the cost of training new staff.",
+      "question": "На чём говорящий делает акцент?",
+      "options": [
+        "На том, что именно упустили: расходы на обучение",
+        "На том, кто именно упустил эти расходы",
+        "На том, когда обучали новых сотрудников",
+        "На том, что расходы оказались слишком высокими"
+      ],
+      "answer": 0,
+      "explanation": "Конструкция What… was… ставит главное в конец предложения: упустили не что-нибудь, а расходы на обучение. Overlook — «не заметить, упустить из виду», а не «осмотреть»."
+    },
+    {
+      "type": "translate",
+      "source": "Мне нужно больше времени, а не больше денег.",
+      "answer": "What I need is more time, not more money.",
+      "accept": [
+        "What I need is more time rather than more money.",
+        "What I need is more time and not more money.",
+        "It is more time that I need, not more money.",
+        "It's more time that I need, not more money.",
+        "It's more time I need, not more money."
+      ],
+      "distractors": ["that", "are", "which"],
+      "explanation": "What здесь означает «то, что» и не требует после себя that: what I need. Глагол стоит в единственном числе (is), потому что подлежащее — вся часть «what I need»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант: «Я всего лишь задал вопрос».",
+      "options": [
+        "All what I did was ask a question.",
+        "All I did was asked a question.",
+        "All I did was ask a question.",
+        "All that I did it was ask a question."
+      ],
+      "answer": 2,
+      "explanation": "После all слово what не употребляется: all (that) I did. После was идёт инфинитив — ask, а не asked: он называет само действие, а время уже показано в did и was."
+    },
+    {
+      "type": "gap",
+      "sentence": "What the survey shows ___ that customers value speed over price.",
+      "translation": "Опрос показывает, что клиенты ценят скорость больше, чем цену.",
+      "options": ["is", "are", "it is", "does"],
+      "answer": 0,
+      "explanation": "Часть «What the survey shows» — подлежащее в единственном числе, поэтому is. Повторять подлежащее словом it не нужно: в английском предложении оно одно."
+    },
+    {
+      "type": "translate",
+      "source": "Именно Ольга указала на ошибку в договоре.",
+      "answer": "It was Olga who pointed out the mistake in the contract.",
+      "accept": [
+        "It was Olga that pointed out the mistake in the contract.",
+        "It was Olga who pointed out the error in the contract.",
+        "It was Olga that pointed out the error in the contract.",
+        "It was Olga who pointed out the mistake in the agreement.",
+        "It was Olga who pointed the mistake out in the contract."
+      ],
+      "distractors": ["what", "which", "is", "has"],
+      "explanation": "Русское «именно» передаётся конструкцией It was… who. Глагол to be согласуется по времени с остальным предложением: действие в прошлом, значит was, а не is."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to point out", "ru": "указать, обратить внимание" },
+        { "en": "to overlook", "ru": "упустить из виду" },
+        { "en": "a setback", "ru": "неудача, шаг назад" },
+        { "en": "crucial", "ru": "крайне важный" },
+        { "en": "to boil down to", "ru": "сводиться к" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "What it all boils down ___ is trust between the two teams.",
+      "translation": "Всё сводится к доверию между двумя командами.",
+      "options": ["to", "on", "in", "for"],
+      "answer": 0,
+      "explanation": "Фразовый глагол boil down to сохраняет предлог to даже тогда, когда его дополнение вынесено в конец предложения. Потерять предлог в такой конструкции — частая ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "It wasn't the price that put them off, it was the delivery time.",
+      "question": "Что отпугнуло клиентов?",
+      "options": ["Сроки доставки", "Цена", "И цена, и сроки доставки", "Ни цена, ни сроки доставки"],
+      "answer": 0,
+      "explanation": "Отрицательная конструкция It wasn't X that…, it was Y исправляет неверное предположение: дело было не в цене, а в сроках. Put someone off — «отпугнуть, отбить желание»."
+    },
+    {
+      "type": "translate",
+      "source": "Больше всего меня беспокоит отсутствие чёткого плана.",
+      "answer": "What worries me most is the lack of a clear plan.",
+      "accept": [
+        "What worries me the most is the lack of a clear plan.",
+        "What worries me most is a lack of a clear plan.",
+        "What concerns me most is the lack of a clear plan.",
+        "What bothers me most is the lack of a clear plan.",
+        "The thing that worries me most is the lack of a clear plan."
+      ],
+      "distractors": ["worry", "are", "it", "mostly"],
+      "explanation": "What выступает подлежащим в третьем лице единственного числа, поэтому worries и is. «Больше всего» — это most, а mostly значит «в основном»; перед clear plan нужен артикль a."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение построено правильно?",
+      "options": [
+        "It was only after the setback what we changed our strategy.",
+        "It was only after the setback that we changed our strategy.",
+        "It was only after the setback did we change our strategy.",
+        "It was only after the setback when we changed our strategy."
+      ],
+      "answer": 1,
+      "explanation": "В конструкции It was… вторая часть всегда вводится словом that, даже если выделено время, и порядок слов в ней прямой. Инверсия «did we change» нужна в другой конструкции, без It was: Only after the setback did we change our strategy."
+    }
+  ]
+}

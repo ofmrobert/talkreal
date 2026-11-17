@@ -1,0 +1,183 @@
+{
+  "id": "b2-06",
+  "level": "B2",
+  "order": 6,
+  "title": { "ru": "Модальные глаголы о прошлом", "en": "Modals in the past" },
+  "goal": { "ru": "Научитесь критиковать прошлые решения, строить догадки о случившемся и говорить об упущенных возможностях.", "en": "Learn to criticise past decisions, make guesses about what happened and talk about missed opportunities." },
+  "theory": [
+    {
+      "title": "Критика и лишние усилия: should have, needn't have",
+      "body": "Should have + третья форма — «следовало сделать, но не сделали»; shouldn't have — «не надо было, но сделали». Needn't have — «сделали, а оказалось, что зря». По-русски всё это передаётся словами «надо было», «не стоило», «зря», а в английском нужна конструкция модальный глагол + have + третья форма.",
+      "examples": [
+        { "en": "You should have told me about the problem earlier.", "ru": "Тебе следовало сказать мне о проблеме раньше." },
+        { "en": "I shouldn't have sent that email in such a hurry.", "ru": "Не надо было мне отправлять то письмо в такой спешке." },
+        { "en": "We needn't have booked: the restaurant was half empty.", "ru": "Мы зря бронировали столик: ресторан был наполовину пуст." }
+      ],
+      "tip": "После модального глагола всегда have, даже с he и she: She should have called. Формы «should had» и «should has» не существует."
+    },
+    {
+      "title": "Догадки о прошлом: must have, might have, can't have",
+      "body": "Эти формы выражают не обязанность, а степень уверенности. Must have — «наверняка, должно быть»; might have или could have — «возможно»; can't have — «не может быть, чтобы». Обратите внимание: в значении догадки противоположность must have — это can't have, а не mustn't have.",
+      "examples": [
+        { "en": "The streets are wet. It must have rained at night.", "ru": "Улицы мокрые. Должно быть, ночью шёл дождь." },
+        { "en": "She might have missed the bus.", "ru": "Возможно, она опоздала на автобус." },
+        { "en": "He can't have read the report: he asked what it was about.", "ru": "Не может быть, чтобы он прочитал отчёт: он спросил, о чём он." }
+      ],
+      "tip": "Не путайте: He had to leave — ему пришлось уйти (факт). He must have left — он, должно быть, ушёл (догадка)."
+    },
+    {
+      "title": "Упущенная возможность: could have",
+      "body": "Could have + третья форма означает, что возможность была, но ею не воспользовались. Если же человек действительно сумел что-то сделать в конкретной ситуации, говорим was able to или managed to.",
+      "examples": [
+        { "en": "I could have become a doctor, but I chose economics.", "ru": "Я мог бы стать врачом, но выбрал экономику." },
+        { "en": "You could have warned me!", "ru": "Мог бы и предупредить меня!" }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "to double-check", "ru": "перепроверить", "example": "Please double-check the dates before you book." },
+    { "en": "to misunderstand", "ru": "неправильно понять", "example": "I think you misunderstood my question." },
+    { "en": "to rush", "ru": "торопиться, спешить", "example": "There's no need to rush: we have plenty of time." },
+    { "en": "exhausted", "ru": "измотанный, без сил", "example": "I was exhausted after the night flight." },
+    { "en": "to bother", "ru": "утруждать себя, беспокоиться", "example": "Don't bother cooking: let's order a pizza." },
+    { "en": "traffic jam", "ru": "пробка на дороге", "example": "We sat in a traffic jam for an hour." },
+    { "en": "to oversleep", "ru": "проспать", "example": "I overslept and missed my first meeting." },
+    { "en": "invoice", "ru": "счёт (на оплату)", "example": "We sent the invoice to the client on Monday." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Он, должно быть, уже ушёл домой» (логический вывод о прошлом)?",
+      "options": [
+        "He must have gone home already.",
+        "He must go home already.",
+        "He should have gone home already.",
+        "He had to go home already."
+      ],
+      "answer": 0,
+      "explanation": "Уверенная догадка о прошлом — must have + третья форма. Had to означает «ему пришлось» (факт, обязанность), а should have — упрёк «ему следовало»."
+    },
+    {
+      "type": "translate",
+      "source": "Тебе следовало перепроверить цифры, прежде чем отправлять отчёт.",
+      "answer": "You should have double-checked the figures before sending the report.",
+      "accept": [
+        "You should've double-checked the figures before sending the report.",
+        "You should have double-checked the numbers before sending the report.",
+        "You ought to have double-checked the figures before sending the report.",
+        "You should have double-checked the figures before you sent the report."
+      ],
+      "distractors": ["must", "had", "double-check", "to"],
+      "explanation": "«Следовало, но не сделал» — should have + третья форма. После модального глагола стоит have, а не had, а после before удобно использовать -ing: before sending."
+    },
+    {
+      "type": "gap",
+      "sentence": "Thank you for the flowers, but you ___ — it was just a small favour.",
+      "translation": "Спасибо за цветы, но не стоило беспокоиться — это была всего лишь небольшая услуга.",
+      "options": ["needn't have bothered", "mustn't have bothered", "couldn't have bothered", "might have bothered"],
+      "answer": 0,
+      "explanation": "Needn't have + третья форма — действие совершили, но в нём не было необходимости. Это стандартная вежливая реакция на подарок."
+    },
+    {
+      "type": "listen",
+      "audio": "We needn't have rushed: the train was delayed by an hour.",
+      "question": "Что произошло?",
+      "options": [
+        "Они торопились, но напрасно: поезд задержали",
+        "Они не торопились, потому что знали о задержке",
+        "Они торопились и всё равно опоздали на поезд",
+        "Им запретили торопиться"
+      ],
+      "answer": 0,
+      "explanation": "Needn't have rushed — спешили, а потом оказалось, что зря. Если бы они заранее знали о задержке и не спешили, прозвучало бы We didn't need to rush."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение означает «У меня была такая возможность, но я ею не воспользовался»?",
+      "options": [
+        "I could have studied abroad.",
+        "I must have studied abroad.",
+        "I was able to study abroad.",
+        "I should study abroad."
+      ],
+      "answer": 0,
+      "explanation": "Could have + третья форма — нереализованная возможность в прошлом. Was able to, наоборот, значит, что получилось: человек действительно учился за границей."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to double-check", "ru": "перепроверить" },
+        { "en": "to misunderstand", "ru": "неправильно понять" },
+        { "en": "exhausted", "ru": "измотанный, без сил" },
+        { "en": "to oversleep", "ru": "проспать" },
+        { "en": "invoice", "ru": "счёт (на оплату)" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "I can't find the invoice. I ___ it at the client's office, but I'm not sure.",
+      "translation": "Не могу найти счёт. Возможно, я оставил его в офисе клиента, но я не уверен.",
+      "options": ["might have left", "must have left", "should have left", "needn't have left"],
+      "answer": 0,
+      "explanation": "Слова I'm not sure показывают слабую уверенность — это might have. Must have означает почти полную уверенность и с «я не уверен» не сочетается."
+    },
+    {
+      "type": "translate",
+      "source": "Он, должно быть, неправильно понял моё письмо.",
+      "answer": "He must have misunderstood my email.",
+      "accept": [
+        "He must've misunderstood my email.",
+        "He must have misunderstood my letter.",
+        "He must have misunderstood my message."
+      ],
+      "distractors": ["should", "had", "misunderstand", "be"],
+      "explanation": "«Должно быть» о прошлом — must have + третья форма: misunderstood. Дословный перевод с «must be» здесь не работает: must be описывает настоящее."
+    },
+    {
+      "type": "listen",
+      "audio": "She can't have forgotten about the meeting; I reminded her twice.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She can't have forgotten about the meeting; I reminded her twice.",
+        "She can't forget about the meeting; I reminded her twice.",
+        "She can have forgotten about the meeting; I reminded her twice.",
+        "She can't have forgotten about the meeting; I remind her twice."
+      ],
+      "answer": 0,
+      "explanation": "Can't have forgotten — «не может быть, чтобы она забыла»: говорящий уверен, что это невозможно. Can't forget относилось бы к настоящему или будущему."
+    },
+    {
+      "type": "gap",
+      "sentence": "You look exhausted. You ___ to bed so late last night.",
+      "translation": "Ты выглядишь измотанным. Не надо было вчера так поздно ложиться.",
+      "options": ["shouldn't have gone", "mustn't have gone", "shouldn't go", "couldn't go"],
+      "answer": 0,
+      "explanation": "Last night — прошлое, и это упрёк: сделал то, чего делать не стоило, — shouldn't have gone. Shouldn't go было бы советом на будущее."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "They might have got stuck in a traffic jam.",
+        "They might had got stuck in a traffic jam.",
+        "They might have get stuck in a traffic jam.",
+        "They might to have got stuck in a traffic jam."
+      ],
+      "answer": 0,
+      "explanation": "Формула одна для всех модальных глаголов: модальный + have + третья форма. Had после модального глагола не бывает, а частица to перед have не ставится."
+    },
+    {
+      "type": "translate",
+      "source": "Не может быть, чтобы она проспала: она всегда встаёт в шесть.",
+      "answer": "She can't have overslept: she always gets up at six.",
+      "accept": [
+        "She cannot have overslept: she always gets up at six.",
+        "She couldn't have overslept: she always gets up at six.",
+        "She can't have overslept: she always wakes up at six.",
+        "She can't have overslept because she always gets up at six."
+      ],
+      "distractors": ["mustn't", "oversleep", "has"],
+      "explanation": "Уверенность в том, что чего-то не было, выражает can't have + третья форма. Mustn't — это запрет, для догадок о прошлом он не используется."
+    }
+  ]
+}

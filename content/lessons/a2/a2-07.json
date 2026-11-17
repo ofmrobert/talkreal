@@ -1,0 +1,142 @@
+{
+  "id": "a2-07",
+  "level": "A2",
+  "order": 7,
+  "title": { "ru": "Present Perfect: первые шаги", "en": "Present Perfect: first steps" },
+  "goal": { "ru": "Научитесь рассказывать о своём опыте: где вы были и что уже сделали.", "en": "Learn to talk about your experience: where you have been and what you have already done." },
+  "theory": [
+    {
+      "title": "Как образуется Present Perfect",
+      "body": "Have / has + третья форма глагола. У правильных глаголов она совпадает с прошедшей (visited, finished), у неправильных её нужно запомнить: be → been, see → seen, do → done, eat → eaten. Это время говорит об опыте или результате, когда не важно, когда именно всё произошло.",
+      "examples": [
+        { "en": "I have visited Paris twice.", "ru": "Я был в Париже дважды." },
+        { "en": "She has seen this film.", "ru": "Она видела этот фильм." }
+      ],
+      "tip": "В речи обычно сокращают: I've, we've, she's, he's. С he, she, it — has, а не have."
+    },
+    {
+      "title": "Ever и never: жизненный опыт",
+      "body": "Have you ever…? — «Вы когда-нибудь…?» В ответе часто звучит never. Never уже содержит отрицание, поэтому not не добавляем: «I haven't never» — ошибка, хотя по-русски мы говорим «никогда не». О поездках говорят been to: I've been to Italy.",
+      "examples": [
+        { "en": "Have you ever been to London?", "ru": "Вы когда-нибудь были в Лондоне?" },
+        { "en": "I've never eaten oysters.", "ru": "Я никогда не ел устриц." }
+      ]
+    },
+    {
+      "title": "Already, yet — и когда нужен Past Simple",
+      "body": "Already («уже») стоит между have и глаголом в утверждениях. Yet стоит в конце вопросов и отрицаний: «уже?» и «ещё не». Но если названо конкретное время в прошлом (yesterday, last year, in 2019), Present Perfect невозможен — нужен Past Simple.",
+      "examples": [
+        { "en": "I've already had lunch.", "ru": "Я уже пообедал." },
+        { "en": "Has the taxi arrived yet?", "ru": "Такси уже приехало?" },
+        { "en": "We moved here in 2021.", "ru": "Мы переехали сюда в 2021 году." }
+      ],
+      "tip": "Русское прошедшее время переводится и Past Simple, и Present Perfect. Есть ответ на вопрос «когда?» — берите Past Simple."
+    }
+  ],
+  "vocab": [
+    { "en": "ever", "ru": "когда-либо", "example": "Have you ever ridden a horse?" },
+    { "en": "never", "ru": "никогда", "example": "He has never been late." },
+    { "en": "already", "ru": "уже", "example": "They have already left." },
+    { "en": "yet", "ru": "ещё (не); уже (в вопросе)", "example": "I haven't decided yet." },
+    { "en": "to try", "ru": "пробовать", "example": "You should try this cheese." },
+    { "en": "abroad", "ru": "за границей, за границу", "example": "My son studies abroad." },
+    { "en": "been", "ru": "был (третья форма be)", "example": "I've been to Georgia three times." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "Have you ever ___ to Turkey?",
+      "translation": "Вы когда-нибудь были в Турции?",
+      "options": ["be", "been", "was", "went"],
+      "answer": 1,
+      "explanation": "После have нужна третья форма глагола: be → been. Was и went — вторые формы, они используются в Past Simple без have."
+    },
+    {
+      "type": "listen",
+      "audio": "I've never tried Indian food.",
+      "question": "Что говорит этот человек?",
+      "options": ["Он никогда не пробовал индийскую еду", "Он часто ест индийскую еду", "Он не любит индийскую еду", "Он пробовал индийскую еду один раз"],
+      "answer": 0,
+      "explanation": "I've never tried — «я никогда не пробовал». I've — это I have; never ставится между have и глаголом и само выражает отрицание."
+    },
+    {
+      "type": "translate",
+      "source": "Я уже заплатил за такси.",
+      "answer": "I have already paid for the taxi.",
+      "accept": ["I've already paid for the taxi.", "I have paid for the taxi already.", "I've paid for the taxi already.", "I already paid for the taxi.", "I have already paid for a taxi.", "I've already paid for a taxi."],
+      "distractors": ["yet", "payed", "pay"],
+      "explanation": "Already стоит между have и третьей формой глагола: have already paid. Pay — неправильный глагол, пишется paid, а не «payed»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She has never been abroad.", "She has never be abroad.", "She have never been abroad.", "She hasn't never been abroad."],
+      "answer": 0,
+      "explanation": "С she — has, после него третья форма been. Never уже означает отрицание, поэтому второе отрицание (hasn't never) в английском недопустимо."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "ever", "ru": "когда-либо" },
+        { "en": "never", "ru": "никогда" },
+        { "en": "already", "ru": "уже" },
+        { "en": "yet", "ru": "ещё (не)" },
+        { "en": "abroad", "ru": "за границей" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "I ___ to Rome in 2019.",
+      "translation": "Я ездил в Рим в 2019 году.",
+      "options": ["have been", "went", "have gone", "been"],
+      "answer": 1,
+      "explanation": "In 2019 — конкретное время в прошлом, поэтому только Past Simple: went. Present Perfect не сочетается с указанием на то, когда это было."
+    },
+    {
+      "type": "translate",
+      "source": "Ты когда-нибудь видел этот фильм?",
+      "answer": "Have you ever seen this film?",
+      "accept": ["Have you ever seen this movie?", "Have you ever watched this film?", "Have you ever watched this movie?"],
+      "distractors": ["saw", "did", "see"],
+      "explanation": "Вопрос об опыте: Have you ever + третья форма. See → saw → seen: после have нужна именно seen, а не saw."
+    },
+    {
+      "type": "listen",
+      "audio": "We haven't booked the tickets yet.",
+      "question": "Что вы услышали?",
+      "options": ["We haven't booked the tickets yet.", "We have booked the tickets already.", "We didn't book the tickets yesterday.", "We haven't bought the tickets yet."],
+      "answer": 0,
+      "explanation": "Haven't… yet — «ещё не»: билеты пока не забронированы, но это ожидается. Yet стоит в самом конце предложения."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить коллегу, закончил ли он уже отчёт?",
+      "options": ["Have you finished the report yet?", "Did you finished the report yet?", "Have you finish the report yet?", "Are you finished the report yet?"],
+      "answer": 0,
+      "explanation": "Нас интересует результат к настоящему моменту — Present Perfect: Have you finished…? В вопросах «уже» — это yet в конце, а не already."
+    },
+    {
+      "type": "gap",
+      "sentence": "Olga has ___ sent the email, so you don't need to write to them.",
+      "translation": "Ольга уже отправила письмо, так что вам не нужно им писать.",
+      "options": ["yet", "already", "ever", "never"],
+      "answer": 1,
+      "explanation": "В утверждении «уже» — это already, и оно стоит между has и глаголом. Yet на этом месте не бывает: оно ставится в конец вопросов и отрицаний."
+    },
+    {
+      "type": "translate",
+      "source": "Мы никогда не были в Японии.",
+      "answer": "We have never been to Japan.",
+      "accept": ["We've never been to Japan."],
+      "distractors": ["in", "were", "not"],
+      "explanation": "О поездках говорят have been to, а не «in»: предлог to показывает, что вы туда ездили. Never не требует not, в отличие от русского «никогда не»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение правильное?",
+      "options": ["I have seen her yesterday.", "I saw her yesterday.", "I have saw her yesterday.", "I seen her yesterday."],
+      "answer": 1,
+      "explanation": "Yesterday — точное время в прошлом, а с ним используется только Past Simple: saw. «I have seen her yesterday» — одна из самых частых ошибок."
+    }
+  ]
+}

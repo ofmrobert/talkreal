@@ -1,0 +1,144 @@
+{
+  "id": "a1-04",
+  "level": "A1",
+  "order": 4,
+  "title": { "ru": "Мой, твой, его, её и have got", "en": "Possessives and have got" },
+  "goal": { "ru": "Научитесь говорить, что кому принадлежит, и рассказывать о своей семье.", "en": "Learn to say what belongs to whom and talk about your family." },
+  "theory": [
+    {
+      "title": "My, your, his, her, our, their",
+      "body": "Эти слова стоят перед существительным и не меняются по родам и числам: my brother, my sister, my parents. Слово выбираем по хозяину, а не по предмету: his — если хозяин мужчина, her — если женщина.",
+      "examples": [
+        { "en": "This is my husband.", "ru": "Это мой муж." },
+        { "en": "Her brother is in Minsk.", "ru": "Её брат в Минске." },
+        { "en": "His sister is a student.", "ru": "Его сестра — студентка." }
+      ],
+      "tip": "В английском нет слова «свой»: каждый раз называем хозяина — my, your, his, her, our, their."
+    },
+    {
+      "title": "Have got: у меня есть",
+      "body": "«У меня есть» по-английски — I have got, в разговоре I've got. С he, she, it форма другая: has got (he's got). Дословно перевести русскую фразу нельзя: «At me is a car» не существует.",
+      "examples": [
+        { "en": "I've got two brothers.", "ru": "У меня два брата." },
+        { "en": "She has got a cat.", "ru": "У неё есть кошка." },
+        { "en": "We've got a house near Tula.", "ru": "У нас дом под Тулой." }
+      ]
+    },
+    {
+      "title": "Вопрос и отрицание с have got",
+      "body": "В вопросе have или has встаёт перед подлежащим: Have you got…? Has he got…? В отрицании добавляем not: haven't got, hasn't got. Короткий ответ: Yes, I have. / No, she hasn't.",
+      "examples": [
+        { "en": "Have you got a pen? — Yes, I have.", "ru": "У тебя есть ручка? — Да." },
+        { "en": "He hasn't got a sister.", "ru": "У него нет сестры." }
+      ],
+      "tip": "В этой конструкции помощник do не нужен: «Do you have got» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "husband", "ru": "муж", "example": "Her husband is an engineer." },
+    { "en": "wife", "ru": "жена", "example": "His wife is from Georgia." },
+    { "en": "son", "ru": "сын", "example": "Their son is five." },
+    { "en": "daughter", "ru": "дочь", "example": "My daughter is a student." },
+    { "en": "parents", "ru": "родители", "example": "My parents are in Samara." },
+    { "en": "dog", "ru": "собака", "example": "Our dog is very friendly." },
+    { "en": "flat", "ru": "квартира", "example": "Your flat is very nice." },
+    { "en": "car", "ru": "машина", "example": "My car is old." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "I've got a son and two daughters.",
+      "question": "Сколько детей у этого человека?",
+      "options": ["Трое", "Двое", "Один", "Четверо"],
+      "answer": 0,
+      "explanation": "A son and two daughters — сын и две дочери, всего трое детей. I've got — краткая форма I have got, «у меня есть»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Maria is here with ___ husband.",
+      "translation": "Мария здесь со своим мужем.",
+      "options": ["his", "her", "she", "hers"],
+      "answer": 1,
+      "explanation": "Хозяйка — Мария, женщина, поэтому her. Слово выбирают по тому, чей муж, а не по слову husband; русское «свой» всегда заменяется на my, your, his, her и так далее."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «У меня есть машина».",
+      "options": ["I have got a car.", "At me is a car.", "I am got a car.", "I has got a car."],
+      "answer": 0,
+      "explanation": "«У меня есть» — это I have got; с I форма have, а has — только для he, she, it. Дословный перевод с предлогом в английском невозможен."
+    },
+    {
+      "type": "translate",
+      "source": "У нас маленькая квартира.",
+      "answer": "We have got a small flat.",
+      "accept": ["We've got a small flat.", "We have a small flat.", "We have got a small apartment.", "We've got a small apartment.", "We have a small apartment."],
+      "distractors": ["has", "are", "an"],
+      "explanation": "«У нас» — we have got. Не забудьте артикль: он стоит перед прилагательным — a small flat."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "husband", "ru": "муж" },
+        { "en": "wife", "ru": "жена" },
+        { "en": "son", "ru": "сын" },
+        { "en": "daughter", "ru": "дочь" },
+        { "en": "parents", "ru": "родители" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы показываете на Олега. Как сказать «Это его собака»?",
+      "options": ["This is he dog.", "This is her dog.", "This is his dog.", "This is him dog."],
+      "answer": 2,
+      "explanation": "Олег — мужчина, поэтому «его» — his. He — это «он», а him — «его» в значении «кого?» (I know him); перед существительным они не стоят."
+    },
+    {
+      "type": "gap",
+      "sentence": "My sister ___ got two children.",
+      "translation": "У моей сестры двое детей.",
+      "options": ["have", "has", "is", "are"],
+      "answer": 1,
+      "explanation": "My sister — это she, а с he, she, it используется has got. Глагол to be здесь не нужен: «у неё есть» — это has got, а не is."
+    },
+    {
+      "type": "translate",
+      "source": "У тебя есть собака?",
+      "answer": "Have you got a dog?",
+      "accept": ["Do you have a dog?"],
+      "distractors": ["has", "do", "are"],
+      "explanation": "В вопросе have выходит вперёд: Have you got…? Можно сказать и Do you have a dog?, но смешивать две модели нельзя: «Do you have got» — ошибка."
+    },
+    {
+      "type": "gap",
+      "sentence": "Timur ___ got a car, but he has got a bike.",
+      "translation": "У Тимура нет машины, но у него есть велосипед.",
+      "options": ["hasn't", "haven't", "isn't", "don't"],
+      "answer": 0,
+      "explanation": "Timur — это he, поэтому отрицание — hasn't got. Конструкция отрицается через сам глагол have, без isn't и don't."
+    },
+    {
+      "type": "listen",
+      "audio": "Their parents have got a flat in Sochi.",
+      "question": "Что вы услышали?",
+      "options": ["Their parents have got a flat in Sochi.", "Her parents have got a flat in Sochi.", "Their parents has got a flat in Sochi.", "Their parents haven't got a flat in Sochi."],
+      "answer": 0,
+      "explanation": "Their — «их». Parents — множественное число (they), поэтому have got, а не has got."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Do you have got a car?", "She have got a son.", "Have they got a flat?", "He hasn't got wife."],
+      "answer": 2,
+      "explanation": "Have they got a flat? — have перед подлежащим, артикль на месте. В остальных вариантах лишнее do, нужно has для she и пропущен артикль: a wife."
+    },
+    {
+      "type": "translate",
+      "source": "Его жена — врач.",
+      "answer": "His wife is a doctor.",
+      "accept": ["His wife's a doctor."],
+      "distractors": ["her", "he", "an"],
+      "explanation": "Хозяин — мужчина, поэтому his, хотя жена — женщина: ориентируемся на того, чья она. И не забываем is и артикль a перед профессией."
+    }
+  ]
+}

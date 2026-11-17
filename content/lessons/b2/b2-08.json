@@ -1,0 +1,187 @@
+{
+  "id": "b2-08",
+  "level": "B2",
+  "order": 8,
+  "title": { "ru": "Связки и противопоставление", "en": "Linking words of contrast" },
+  "goal": { "ru": "Научитесь противопоставлять идеи с помощью although, despite, whereas, however и nevertheless.", "en": "Learn to contrast ideas using although, despite, whereas, however and nevertheless." },
+  "theory": [
+    {
+      "title": "Although, even though + предложение",
+      "body": "Although («хотя») вводит придаточное с подлежащим и сказуемым. Even though — то же самое, но сильнее: «несмотря на то что». В русском мы часто говорим «хотя…, но…», а в английском but после although не ставится: достаточно одной связки.",
+      "examples": [
+        { "en": "Although the hotel was expensive, the service was poor.", "ru": "Хотя отель был дорогим, обслуживание было плохим." },
+        { "en": "She got the job even though she had no degree.", "ru": "Она получила эту работу, несмотря на то что у неё не было диплома." }
+      ]
+    },
+    {
+      "title": "Despite, in spite of + существительное или -ing",
+      "body": "Despite и in spite of («несмотря на») — предлоги: после них идёт существительное, местоимение или форма на -ing, но не целое предложение. Если нужно придаточное, добавьте the fact that. Самая частая ошибка — «despite of»: предлог of есть только в in spite of.",
+      "examples": [
+        { "en": "Despite the delay, we arrived on time.", "ru": "Несмотря на задержку, мы приехали вовремя." },
+        { "en": "In spite of feeling tired, he finished the report.", "ru": "Несмотря на усталость, он закончил отчёт." },
+        { "en": "Despite the fact that it was late, she called the client.", "ru": "Несмотря на то что было поздно, она позвонила клиенту." }
+      ],
+      "tip": "Проверка: после although нужен глагол в личной форме (although it was late), после despite — нет (despite the late hour)."
+    },
+    {
+      "title": "However, nevertheless, whereas",
+      "body": "However («однако») и nevertheless («тем не менее») — наречия: они начинают новое предложение или стоят после точки с запятой и отделяются запятой. Соединить ими две части через одну запятую нельзя. Whereas («тогда как») — союз: он связывает две части одного предложения и сравнивает два разных факта, а не выражает неожиданный результат.",
+      "examples": [
+        { "en": "The plan is risky. However, we have no alternative.", "ru": "План рискованный. Однако альтернативы у нас нет." },
+        { "en": "My brother loves big cities, whereas I prefer the countryside.", "ru": "Мой брат любит большие города, тогда как я предпочитаю сельскую местность." }
+      ],
+      "tip": "Nevertheless звучит официальнее, чем however, и подчёркивает: «и всё же, вопреки сказанному»."
+    }
+  ],
+  "vocab": [
+    { "en": "although", "ru": "хотя", "example": "Although it was late, the office was full." },
+    { "en": "despite", "ru": "несмотря на", "example": "Despite the rain, the match went ahead." },
+    { "en": "whereas", "ru": "тогда как", "example": "He is cautious, whereas his partner loves risk." },
+    { "en": "nevertheless", "ru": "тем не менее", "example": "The task was hard. Nevertheless, she finished it." },
+    { "en": "drawback", "ru": "недостаток, минус", "example": "The only drawback of the flat is the noise." },
+    { "en": "demand", "ru": "спрос", "example": "Demand for electric cars is growing fast." },
+    { "en": "to exceed", "ru": "превысить", "example": "The results exceeded our expectations." },
+    { "en": "flexible hours", "ru": "гибкий график", "example": "The company offers flexible hours and remote work." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "Despite the bad weather, the flight left on time.",
+        "Despite of the bad weather, the flight left on time.",
+        "Despite the weather was bad, the flight left on time.",
+        "Although the bad weather, the flight left on time."
+      ],
+      "answer": 0,
+      "explanation": "После despite идёт существительное без of: despite the bad weather. Although требует целого предложения с глаголом — although the weather was bad."
+    },
+    {
+      "type": "listen",
+      "audio": "Although the salary was lower, Timur accepted the offer because of the flexible hours.",
+      "question": "Почему Тимур принял предложение?",
+      "options": [
+        "Его привлёк гибкий график",
+        "Ему предложили более высокую зарплату",
+        "У него не было других вариантов",
+        "Он его не принял: зарплата была слишком низкой"
+      ],
+      "answer": 0,
+      "explanation": "Часть с although называет препятствие (зарплата ниже), а главная часть сообщает, что произошло вопреки ему. Причину вводит because of the flexible hours."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ having no experience in sales, she became the top performer within a year.",
+      "translation": "Несмотря на отсутствие опыта в продажах, она за год стала лучшим сотрудником.",
+      "options": ["Despite", "Although", "However", "Whereas"],
+      "answer": 0,
+      "explanation": "После пропуска стоит форма на -ing, а не предложение с подлежащим, значит, нужен предлог despite. С although было бы: Although she had no experience…"
+    },
+    {
+      "type": "translate",
+      "source": "Хотя шёл дождь, мы решили идти пешком.",
+      "answer": "Although it was raining, we decided to walk.",
+      "accept": [
+        "Even though it was raining, we decided to walk.",
+        "Though it was raining, we decided to walk.",
+        "Although it was raining, we decided to go on foot.",
+        "We decided to walk although it was raining.",
+        "We decided to walk even though it was raining."
+      ],
+      "distractors": ["despite", "of", "but"],
+      "explanation": "Although вводит придаточное с подлежащим и глаголом: it was raining. Русское «хотя…, но…» не переносится в английский: but после although лишнее."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "whereas", "ru": "тогда как" },
+        { "en": "nevertheless", "ru": "тем не менее" },
+        { "en": "drawback", "ru": "недостаток, минус" },
+        { "en": "demand", "ru": "спрос" },
+        { "en": "to exceed", "ru": "превысить" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "The north of the country is heavily industrial, ___ the south depends mainly on tourism.",
+      "translation": "Север страны — промышленный регион, тогда как юг живёт в основном за счёт туризма.",
+      "options": ["whereas", "despite", "however", "nevertheless"],
+      "answer": 0,
+      "explanation": "Здесь сравниваются два разных факта внутри одного предложения — это работа союза whereas. However и nevertheless не могут соединять части через одну запятую, а despite требует существительного."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите вариант, где связка и пунктуация верны.",
+      "options": [
+        "Sales fell in the first quarter. However, profits remained stable.",
+        "Sales fell in the first quarter, however profits remained stable.",
+        "Sales fell in the first quarter. Although, profits remained stable.",
+        "Sales fell in the first quarter. Despite, profits remained stable."
+      ],
+      "answer": 0,
+      "explanation": "However начинает новое предложение и отделяется запятой. Although и despite не могут стоять отдельно: первому нужно придаточное, второму — существительное."
+    },
+    {
+      "type": "translate",
+      "source": "Несмотря на высокий спрос, компания снизила цены.",
+      "answer": "In spite of high demand, the company lowered its prices.",
+      "accept": [
+        "In spite of the high demand, the company lowered its prices.",
+        "Despite high demand, the company lowered its prices.",
+        "Despite the high demand, the company lowered its prices.",
+        "In spite of high demand, the company reduced its prices.",
+        "In spite of high demand, the company cut its prices.",
+        "In spite of high demand, the company lowered the prices.",
+        "In spite of high demand, the company lowered prices."
+      ],
+      "distractors": ["although", "on", "looking", "request"],
+      "explanation": "In spite of состоит из трёх слов и требует существительного: in spite of high demand. «Спрос» — demand; request — это просьба или запрос."
+    },
+    {
+      "type": "listen",
+      "audio": "The project had several drawbacks. Nevertheless, the board approved it.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The project had several drawbacks. Nevertheless, the board approved it.",
+        "The project had several drawbacks. Therefore, the board approved it.",
+        "The project had several setbacks. Nevertheless, the board approved it.",
+        "The project had several drawbacks. Nevertheless, the board improved it."
+      ],
+      "answer": 0,
+      "explanation": "Nevertheless — «тем не менее»: проект одобрили вопреки недостаткам (drawbacks). Therefore означало бы «поэтому», что здесь нелогично."
+    },
+    {
+      "type": "translate",
+      "source": "Мне нравится работать из дома, тогда как моя жена предпочитает офис.",
+      "answer": "I like working from home, whereas my wife prefers the office.",
+      "accept": [
+        "I like to work from home, whereas my wife prefers the office.",
+        "I enjoy working from home, whereas my wife prefers the office.",
+        "I like working from home, while my wife prefers the office.",
+        "I like working from home whereas my wife prefers the office."
+      ],
+      "distractors": ["despite", "prefer", "house"],
+      "explanation": "Whereas противопоставляет два факта о разных людях; despite сюда не подходит, потому что дальше идёт целое предложение. «Работать из дома» — work from home: слово house (здание) здесь не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "The costs exceeded the budget; ___, the client was happy with the result.",
+      "translation": "Расходы превысили бюджет; тем не менее клиент остался доволен результатом.",
+      "options": ["nevertheless", "although", "despite", "whereas"],
+      "answer": 0,
+      "explanation": "После точки с запятой и перед запятой может стоять только наречие-связка: nevertheless. Although и whereas вводят придаточное без запятой после себя, а despite требует существительного."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение означает то же, что «Although he was ill, he gave the presentation»?",
+      "options": [
+        "In spite of being ill, he gave the presentation.",
+        "In spite of he was ill, he gave the presentation.",
+        "Because of being ill, he gave the presentation.",
+        "Despite of his illness, he gave the presentation."
+      ],
+      "answer": 0,
+      "explanation": "Придаточное с although превращается в in spite of + -ing: in spite of being ill. Ставить после in spite of подлежащее с глаголом нельзя, а despite употребляется без of."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "a1-07",
+  "level": "A1",
+  "order": 7,
+  "title": { "ru": "Вопросы и отрицания: do и does", "en": "Questions and negatives with do / does" },
+  "goal": { "ru": "Научитесь задавать вопросы о привычках и говорить, чего вы не делаете.", "en": "Learn to ask about habits and say what you don't do." },
+  "theory": [
+    {
+      "title": "Отрицание: don't и doesn't",
+      "body": "По-русски для отрицания хватает частицы «не», а в английском нужен помощник do. С I, you, we, they — don't + глагол, с he, she, it — doesn't + глагол. Сказать «I not like» нельзя.",
+      "examples": [
+        { "en": "I don't eat meat.", "ru": "Я не ем мясо." },
+        { "en": "We don't work at the weekend.", "ru": "Мы не работаем в выходные." },
+        { "en": "She doesn't drink coffee.", "ru": "Она не пьёт кофе." }
+      ],
+      "tip": "После doesn't глагол теряет -s: she doesn't like, а не «doesn't likes». Окончание уже «ушло» в слово does."
+    },
+    {
+      "title": "Вопрос: Do…? Does…?",
+      "body": "В русском вопрос можно задать одной интонацией: «Ты говоришь по-английски?» В английском в начало ставится do или does, затем подлежащее и глагол в начальной форме. Короткие ответы: Yes, I do. / No, he doesn't.",
+      "examples": [
+        { "en": "Do you like tea? — Yes, I do.", "ru": "Ты любишь чай? — Да." },
+        { "en": "Does he work here? — No, he doesn't.", "ru": "Он здесь работает? — Нет." }
+      ]
+    },
+    {
+      "title": "Вопросы с вопросительным словом",
+      "body": "Where, what, when ставятся в самое начало, а дальше порядок тот же: вопросительное слово + do / does + кто + глагол. Пропустить do — типичная ошибка: «Where you live?»",
+      "examples": [
+        { "en": "Where do you live?", "ru": "Где ты живёшь?" },
+        { "en": "What does she do? — She is a nurse.", "ru": "Кем она работает? — Она медсестра." },
+        { "en": "When do they finish work?", "ru": "Когда они заканчивают работу?" }
+      ],
+      "tip": "What do you do? — это вопрос о профессии: «Кем вы работаете?»"
+    }
+  ],
+  "vocab": [
+    { "en": "to like", "ru": "любить, нравиться", "example": "I like Italian food." },
+    { "en": "to speak", "ru": "говорить", "example": "They speak Spanish at home." },
+    { "en": "to eat", "ru": "есть", "example": "We eat a lot of fruit." },
+    { "en": "to drink", "ru": "пить", "example": "I drink tea in the morning." },
+    { "en": "to understand", "ru": "понимать", "example": "I understand this word." },
+    { "en": "meat", "ru": "мясо", "example": "My cat likes meat." },
+    { "en": "where", "ru": "где, куда", "example": "Where do you go after work?" },
+    { "en": "weekend", "ru": "выходные", "example": "We go to the park at the weekend." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "Do you speak English?",
+      "question": "Что вы услышали?",
+      "options": ["Do you speak English?", "Did you speak English?", "Do they speak English?", "Don't you speak English?"],
+      "answer": 0,
+      "explanation": "Вопрос в Present Simple начинается с do: Do you speak…? В начале фразы do звучит коротко и слабо, но без него английский вопрос не построить."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Я не ем мясо».",
+      "options": ["I not eat meat.", "I don't eat meat.", "I am not eat meat.", "I doesn't eat meat."],
+      "answer": 1,
+      "explanation": "С I отрицание строится через don't + глагол. Одного not, как русского «не», недостаточно, а am not используется только там, где нет глагола действия."
+    },
+    {
+      "type": "gap",
+      "sentence": "My wife ___ like cold weather.",
+      "translation": "Моя жена не любит холодную погоду.",
+      "options": ["don't", "doesn't", "isn't", "not"],
+      "answer": 1,
+      "explanation": "My wife — это she, поэтому doesn't. Обратите внимание: после doesn't стоит like без -s."
+    },
+    {
+      "type": "translate",
+      "source": "Где ты живёшь?",
+      "answer": "Where do you live?",
+      "distractors": ["are", "does", "lives"],
+      "explanation": "После вопросительного слова идёт помощник do, затем подлежащее и глагол: Where do you live? Варианты «Where you live?» и «Where are you live?» — типичные ошибки."
+    },
+    {
+      "type": "gap",
+      "sentence": "Does your brother ___ German?",
+      "translation": "Твой брат говорит по-немецки?",
+      "options": ["speak", "speaks", "speaking", "to speak"],
+      "answer": 0,
+      "explanation": "Окончание третьего лица уже есть в слове does, поэтому основной глагол стоит в начальной форме: speak. «Does he speaks» — двойное окончание, так нельзя."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to like", "ru": "любить, нравиться" },
+        { "en": "to speak", "ru": "говорить" },
+        { "en": "to drink", "ru": "пить" },
+        { "en": "to understand", "ru": "понимать" },
+        { "en": "where", "ru": "где, куда" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как коротко ответить «нет» на вопрос «Does she drink coffee?»",
+      "options": ["No, she doesn't.", "No, she don't.", "No, she isn't.", "No, she not."],
+      "answer": 0,
+      "explanation": "В кратком ответе повторяется помощник из вопроса: Does she…? — No, she doesn't. Isn't подошёл бы только для вопроса с is."
+    },
+    {
+      "type": "translate",
+      "source": "Мы не работаем в выходные.",
+      "answer": "We don't work at the weekend.",
+      "accept": ["We do not work at the weekend.", "We don't work on the weekend.", "We do not work on the weekend.", "We don't work at weekends.", "We don't work on weekends.", "We don't work at the weekends."],
+      "distractors": ["aren't", "doesn't", "in"],
+      "explanation": "С we отрицание — don't; aren't не подходит, потому что work — глагол действия. «В выходные» — at the weekend (в американском английском on the weekend), но не in."
+    },
+    {
+      "type": "listen",
+      "audio": "Kate doesn't eat meat, but she eats fish.",
+      "question": "Что ест Кейт?",
+      "options": ["Рыбу, но не мясо", "Мясо, но не рыбу", "И мясо, и рыбу", "Ни мясо, ни рыбу"],
+      "answer": 0,
+      "explanation": "Doesn't eat meat — не ест мясо, but she eats fish — но ест рыбу. В отрицании глагол без окончания (doesn't eat), а в утверждении с -s (eats)."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите вопрос без ошибки.",
+      "options": ["Where she works?", "Where does she works?", "Where does she work?", "Where do she work?"],
+      "answer": 2,
+      "explanation": "С she нужен помощник does, а основной глагол после него стоит без -s: Where does she work? Русский порядок слов «Where she works?» в английском вопросе не работает."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ your parents understand English?",
+      "translation": "Твои родители понимают английский?",
+      "options": ["Do", "Does", "Are", "Is"],
+      "answer": 0,
+      "explanation": "Your parents — это they, поэтому do. Are не подходит: вопрос с глаголом действия (understand) всегда строится через do или does."
+    },
+    {
+      "type": "translate",
+      "source": "Он не пьёт кофе вечером.",
+      "answer": "He doesn't drink coffee in the evening.",
+      "accept": ["He does not drink coffee in the evening.", "He doesn't drink coffee in the evenings.", "He does not drink coffee in the evenings."],
+      "distractors": ["don't", "drinks", "isn't"],
+      "explanation": "С he отрицание — doesn't, а глагол после него без -s: drink. Вариант «doesn't drinks» — частая ошибка: окончание ставят дважды."
+    }
+  ]
+}

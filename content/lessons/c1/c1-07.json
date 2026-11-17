@@ -1,0 +1,185 @@
+{
+  "id": "c1-07",
+  "level": "C1",
+  "order": 7,
+  "title": { "ru": "Рабочие словосочетания и идиомы", "en": "Collocations and idioms for work" },
+  "goal": { "ru": "Научитесь говорить о работе естественно: устойчивые сочетания и идиомы офисной речи.", "en": "Learn to talk about work naturally, using the collocations and idioms of office English." },
+  "theory": [
+    {
+      "title": "Устойчивые сочетания: глагол выбирать нельзя",
+      "body": "На продвинутом уровне ошибки чаще кроются не в грамматике, а в сочетаемости. В английском срок не «соблюдают» и не «держат», а «встречают»: meet a deadline. Вопрос «поднимают» глаголом raise, а не rise или lift. Протокол «берут»: take the minutes. Дословный перевод с русского почти всегда даёт понятную, но неестественную фразу.",
+      "examples": [
+        { "en": "We failed to meet the deadline.", "ru": "Мы не уложились в срок." },
+        { "en": "I'd like to raise an issue that wasn't on the agenda.", "ru": "Я хотел бы поднять вопрос, которого не было в повестке." },
+        { "en": "Could someone take the minutes of today's meeting?", "ru": "Кто-нибудь может вести протокол сегодняшней встречи?" }
+      ],
+      "tip": "Raise — переходный глагол (raise an issue, raise prices), rise — непереходный (prices rise). Путаница между ними остаётся даже у очень сильных студентов."
+    },
+    {
+      "title": "Идиомы офисной речи",
+      "body": "Get the ball rolling — дать делу ход, начать. Touch base — коротко связаться, чтобы свериться. Be on the same page — одинаково понимать ситуацию. Keep someone in the loop — держать в курсе. Cut corners — экономить силы или деньги в ущерб качеству. Back to square one — снова в исходной точке, всё сначала.",
+      "examples": [
+        { "en": "Let's touch base next week and see how things are going.", "ru": "Давайте свяжемся на следующей неделе и посмотрим, как идут дела." },
+        { "en": "The deal fell through, so we're back to square one.", "ru": "Сделка сорвалась, и мы снова на исходной точке." }
+      ]
+    },
+    {
+      "title": "Регистр: где идиомы уместны",
+      "body": "Эти идиомы принадлежат устной и полуформальной речи: совещания, рабочие чаты, письма коллегам. В официальном отчёте, договоре или научной статье они неуместны: там пишут «the project was launched», а не «we got the ball rolling». Идиому нельзя менять: слова в ней закреплены так же жёстко, как в русском «дать зелёный свет».",
+      "examples": [
+        { "en": "Who's going to get the ball rolling on the new campaign?", "ru": "Кто даст старт новой кампании?" },
+        { "en": "We can't afford to cut corners on safety testing.", "ru": "Мы не можем позволить себе экономить на испытаниях безопасности." }
+      ],
+      "tip": "Русское «быть на одной волне» — это on the same wavelength, и говорит оно о взаимопонимании между людьми. On the same page — о согласованности в конкретном деле."
+    }
+  ],
+  "vocab": [
+    { "en": "to meet a deadline", "ru": "уложиться в срок", "example": "We worked all weekend to meet the deadline." },
+    { "en": "to raise an issue", "ru": "поднять вопрос", "example": "Several members raised the issue of funding." },
+    { "en": "to get the ball rolling", "ru": "дать делу ход, начать", "example": "I'll send the first draft to get the ball rolling." },
+    { "en": "to touch base", "ru": "коротко связаться, свериться", "example": "Can we touch base after your call with the supplier?" },
+    { "en": "to be on the same page", "ru": "одинаково понимать ситуацию", "example": "I just want to check that we're on the same page about pricing." },
+    { "en": "to cut corners", "ru": "халтурить, экономить в ущерб качеству", "example": "The builder cut corners, and the roof leaked within a year." },
+    { "en": "back to square one", "ru": "снова на исходной точке", "example": "The test failed, so it's back to square one." },
+    { "en": "to keep someone in the loop", "ru": "держать в курсе", "example": "Please keep the legal team in the loop." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to meet a deadline", "ru": "уложиться в срок" },
+        { "en": "to raise an issue", "ru": "поднять вопрос" },
+        { "en": "to touch base", "ru": "коротко связаться, свериться" },
+        { "en": "to cut corners", "ru": "халтурить, экономить в ущерб качеству" },
+        { "en": "back to square one", "ru": "снова на исходной точке" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите естественный вариант: «Мы не уложились в срок».",
+      "options": [
+        "We failed to fit into the deadline.",
+        "We failed to catch the deadline.",
+        "We failed to meet the deadline.",
+        "We failed to hold the deadline."
+      ],
+      "answer": 2,
+      "explanation": "Со словом deadline сочетается глагол meet: срок как бы «встречают». Варианты с fit, catch и hold — кальки с русского «уложиться», «успеть» и «выдержать»; носители так не говорят."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'd like to ___ an issue that wasn't on the agenda.",
+      "translation": "Я хотел бы поднять вопрос, которого не было в повестке.",
+      "options": ["raise", "rise", "lift", "put"],
+      "answer": 0,
+      "explanation": "Вопрос или проблему «поднимают» глаголом raise. Rise не может иметь дополнения (prices rise), а lift употребляется в прямом, физическом смысле."
+    },
+    {
+      "type": "translate",
+      "source": "Давайте свяжемся на следующей неделе и посмотрим, как идут дела.",
+      "answer": "Let's touch base next week and see how things are going.",
+      "accept": [
+        "Let's touch base next week to see how things are going.",
+        "Let us touch base next week and see how things are going.",
+        "Let's touch base next week and see how it's going.",
+        "Let's touch base next week and see how things are progressing."
+      ],
+      "distractors": ["contact", "on", "the", "ground"],
+      "explanation": "Touch base — непринуждённое деловое «коротко связаться, свериться»; артикль внутри идиомы не нужен. Перед next week предлог не ставится, а contact требует дополнения: contact someone."
+    },
+    {
+      "type": "listen",
+      "audio": "We can't afford to cut corners on safety testing.",
+      "question": "Что имеет в виду говорящий?",
+      "options": [
+        "На испытаниях нельзя экономить в ущерб качеству",
+        "Испытания слишком дороги, от них придётся отказаться",
+        "Испытания можно ускорить без потери качества",
+        "На испытания не хватает времени и людей"
+      ],
+      "answer": 0,
+      "explanation": "Cut corners — делать что-то наспех или дешевле, пропуская нужные шаги; у выражения всегда неодобрительный оттенок. Can't afford to здесь значит «не можем себе позволить», а не «нет денег»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Before we go any further, let's make sure we're all on the same ___.",
+      "translation": "Прежде чем двигаться дальше, давайте убедимся, что мы все одинаково понимаем ситуацию.",
+      "options": ["page", "sheet", "line", "wave"],
+      "answer": 0,
+      "explanation": "Идиома звучит только так: on the same page — буквально «на одной странице». Вариант с wave — калька с русского «на одной волне»; близкое по смыслу английское выражение — on the same wavelength."
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега пишет: «Could you keep me in the loop?» О чём он просит?",
+      "options": [
+        "Держать его в курсе происходящего",
+        "Не вовлекать его в этот проект",
+        "Объяснить всё ещё раз с самого начала",
+        "Оставить за ним окончательное решение"
+      ],
+      "answer": 0,
+      "explanation": "Keep someone in the loop — сообщать человеку о ходе дела, например ставить его в копию писем. Противоположное выражение — out of the loop, «не в курсе»."
+    },
+    {
+      "type": "translate",
+      "source": "Сделка сорвалась, и мы снова на исходной точке.",
+      "answer": "The deal fell through, so we're back to square one.",
+      "accept": [
+        "The deal fell through, so we are back to square one.",
+        "The deal fell through, and we're back to square one.",
+        "The deal fell through, and we are back to square one.",
+        "The deal fell through, so we're back at square one.",
+        "The deal has fallen through, so we're back to square one."
+      ],
+      "distractors": ["down", "point", "zero", "first"],
+      "explanation": "О сорвавшихся планах и сделках говорят fall through, а не fall down. Square one — закреплённая часть идиомы: заменить её на «point zero» или «first square» нельзя."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая фраза уместна в официальном отчёте для совета директоров?",
+      "options": [
+        "We got the ball rolling in March.",
+        "We kicked things off in March.",
+        "The project was launched in March.",
+        "We hit the ground running in March."
+      ],
+      "answer": 2,
+      "explanation": "В официальном документе нужен нейтральный глагол и часто пассив: was launched. Остальные варианты — живые разговорные идиомы, уместные на совещании или в чате, но не в отчёте."
+    },
+    {
+      "type": "listen",
+      "audio": "Who's going to get the ball rolling on the new campaign?",
+      "question": "Что вы услышали?",
+      "options": [
+        "Who's going to get the ball rolling on the new campaign?",
+        "Who's going to get the bowl rolling on the new campaign?",
+        "Who's going to keep the ball rolling in the new campaign?",
+        "Whose going to get the ball rolled on the new campaign?"
+      ],
+      "answer": 0,
+      "explanation": "Get the ball rolling — «начать, дать делу ход»; после неё идёт предлог on. Who's — сокращение от who is; whose означает «чей» и здесь невозможно."
+    },
+    {
+      "type": "gap",
+      "sentence": "Could someone ___ the minutes of today's meeting?",
+      "translation": "Кто-нибудь может вести протокол сегодняшней встречи?",
+      "options": ["take", "make", "lead", "hold"],
+      "answer": 0,
+      "explanation": "Протокол «берут»: take the minutes. Lead и hold — кальки с русского «вести протокол»; слово minutes в этом значении всегда стоит во множественном числе."
+    },
+    {
+      "type": "translate",
+      "source": "Не хочется поднимать этот вопрос, но мы вышли за рамки бюджета.",
+      "answer": "I hate to raise the issue, but we're over budget.",
+      "accept": [
+        "I hate to raise this issue, but we're over budget.",
+        "I hate to raise the issue, but we are over budget.",
+        "I hate to raise this issue, but we are over budget.",
+        "I hate to bring this up, but we're over budget.",
+        "I don't want to raise the issue, but we're over budget."
+      ],
+      "distractors": ["rise", "lift", "above", "up"],
+      "explanation": "I hate to… — вежливый способ подвести к неприятной теме. «Выйти за рамки бюджета» — be over budget: без артикля и с предлогом over, а не above."
+    }
+  ]
+}

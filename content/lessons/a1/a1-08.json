@@ -1,0 +1,145 @@
+{
+  "id": "a1-08",
+  "level": "A1",
+  "order": 8,
+  "title": { "ru": "There is / there are и предлоги места", "en": "There is / there are and prepositions of place" },
+  "goal": { "ru": "Научитесь описывать комнату и говорить, где что находится.", "en": "Learn to describe a room and say where things are." },
+  "theory": [
+    {
+      "title": "There is / there are: где-то что-то есть",
+      "body": "Когда мы сообщаем, что где-то что-то находится, предложение начинается с there is (один предмет) или there are (несколько). В русском на первом месте стоит место: «На столе лампа». В английском наоборот: сначала there is, потом предмет, а место — в конце.",
+      "examples": [
+        { "en": "There is a mirror in the bathroom.", "ru": "В ванной есть зеркало." },
+        { "en": "There are two beds in the room.", "ru": "В номере две кровати." },
+        { "en": "There is a café next to the hotel.", "ru": "Рядом с отелем есть кафе." }
+      ],
+      "tip": "Переводите русское предложение с конца: «В комнате есть окно» → There is a window in the room."
+    },
+    {
+      "title": "Отрицание и вопрос",
+      "body": "Отрицание: There isn't a… / There aren't any… В вопросе is и are выходят вперёд: Is there a…? Are there any…? Короткий ответ: Yes, there is. / No, there aren't.",
+      "examples": [
+        { "en": "Is there a bank near here? — Yes, there is.", "ru": "Здесь рядом есть банк? — Да." },
+        { "en": "There isn't a lift in this building.", "ru": "В этом здании нет лифта." },
+        { "en": "Are there any shops in the village?", "ru": "В деревне есть магазины?" }
+      ]
+    },
+    {
+      "title": "Предлоги места",
+      "body": "In — «в», внутри чего-то. On — «на», на поверхности. Under — «под». Next to — «рядом с». Предлог стоит перед существительным с артиклем: in the box, on the floor.",
+      "examples": [
+        { "en": "The juice is in the bag.", "ru": "Сок в сумке." },
+        { "en": "Your phone is on the sofa.", "ru": "Твой телефон на диване." },
+        { "en": "The cat is under the table.", "ru": "Кошка под столом." }
+      ],
+      "tip": "Next to — это два слова, и после них сразу идёт существительное: next to the door, без of."
+    }
+  ],
+  "vocab": [
+    { "en": "room", "ru": "комната, номер в отеле", "example": "My room is on the second floor." },
+    { "en": "kitchen", "ru": "кухня", "example": "Our kitchen is small." },
+    { "en": "fridge", "ru": "холодильник", "example": "The fridge is new." },
+    { "en": "window", "ru": "окно", "example": "The desk is next to the window." },
+    { "en": "chair", "ru": "стул", "example": "This chair is very comfortable." },
+    { "en": "lamp", "ru": "лампа", "example": "There is a lamp on my desk." },
+    { "en": "bed", "ru": "кровать", "example": "The bed is big." },
+    { "en": "next to", "ru": "рядом с", "example": "The pharmacy is next to the supermarket." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "There ___ a big fridge in the kitchen.",
+      "translation": "На кухне есть большой холодильник.",
+      "options": ["is", "are", "am", "be"],
+      "answer": 0,
+      "explanation": "Холодильник один (a fridge), поэтому there is. Форму глагола выбирают по предмету, который идёт после there."
+    },
+    {
+      "type": "listen",
+      "audio": "The keys are on the chair next to the bed.",
+      "question": "Где лежат ключи?",
+      "options": ["На стуле", "На кровати", "Под стулом", "Под кроватью"],
+      "answer": 0,
+      "explanation": "On the chair — на стуле. Слова next to the bed лишь уточняют, какой это стул: тот, что стоит рядом с кроватью."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «В комнате два окна».",
+      "options": ["In the room two windows.", "There is two windows in the room.", "There are two windows in the room.", "It is two windows in the room."],
+      "answer": 2,
+      "explanation": "Окон два, поэтому there are. Русский порядок слов без глагола («In the room two windows») в английском невозможен, а it is не сообщает о наличии предмета."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "room", "ru": "комната" },
+        { "en": "kitchen", "ru": "кухня" },
+        { "en": "fridge", "ru": "холодильник" },
+        { "en": "window", "ru": "окно" },
+        { "en": "chair", "ru": "стул" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "На столе стоит лампа.",
+      "answer": "There is a lamp on the table.",
+      "accept": ["There's a lamp on the table.", "A lamp is on the table."],
+      "distractors": ["are", "in", "stands"],
+      "explanation": "Русское «стоит» здесь значит «находится», и по-английски это there is, а не stands. Предмет на поверхности — предлог on."
+    },
+    {
+      "type": "gap",
+      "sentence": "My shoes are ___ the bed, on the floor.",
+      "translation": "Мои туфли под кроватью, на полу.",
+      "options": ["under", "on", "in", "next"],
+      "answer": 0,
+      "explanation": "«Под» — это under. On значило бы «на кровати», а next без to не используется: правильно next to the bed."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить в отеле: «В номере есть холодильник?»",
+      "options": ["Is there a fridge in the room?", "There is a fridge in the room?", "Is it a fridge in the room?", "Are there a fridge in the room?"],
+      "answer": 0,
+      "explanation": "В вопросе is выходит вперёд: Is there…? Холодильник один, поэтому is, а не are; одной интонации, как в русском, недостаточно."
+    },
+    {
+      "type": "translate",
+      "source": "Банк находится рядом с отелем.",
+      "answer": "The bank is next to the hotel.",
+      "accept": ["The bank is near the hotel.", "The bank is beside the hotel.", "The bank's next to the hotel."],
+      "distractors": ["of", "with", "there"],
+      "explanation": "«Рядом с» — next to; русское «с» не переводится как with, и of здесь тоже не нужен. Банк уже известен, поэтому фраза начинается с The bank is, а не с there is."
+    },
+    {
+      "type": "listen",
+      "audio": "There aren't any chairs in the room.",
+      "question": "Что вы услышали?",
+      "options": ["There aren't any chairs in the room.", "There are many chairs in the room.", "There isn't a chair in the room.", "There aren't any chairs in the rooms."],
+      "answer": 0,
+      "explanation": "There aren't any chairs — «стульев нет совсем». В отрицании с множественным числом используется aren't any, а с единственным было бы isn't a."
+    },
+    {
+      "type": "gap",
+      "sentence": "The milk is ___ the fridge.",
+      "translation": "Молоко в холодильнике.",
+      "options": ["in", "into", "at"],
+      "answer": 0,
+      "explanation": "Молоко находится внутри холодильника, поэтому in. Into значит движение внутрь (put the milk into the fridge), а at не используется для «внутри»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["There are a lamp next to the bed.", "There is a lamp next to the bed.", "There is a lamp next the bed.", "There a lamp next to the bed."],
+      "answer": 1,
+      "explanation": "Лампа одна — there is, а «рядом с» — это next to целиком. В остальных вариантах are вместо is, потеряно to или пропущен глагол."
+    },
+    {
+      "type": "translate",
+      "source": "На кухне есть окно?",
+      "answer": "Is there a window in the kitchen?",
+      "accept": ["Does the kitchen have a window?", "Has the kitchen got a window?"],
+      "distractors": ["are", "on", "it"],
+      "explanation": "Вопрос начинается с Is there, а место уходит в конец. «На кухне» — in the kitchen: кухня — это помещение, мы внутри него, поэтому in, а не on."
+    }
+  ]
+}

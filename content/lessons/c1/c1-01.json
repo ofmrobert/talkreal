@@ -1,0 +1,186 @@
+{
+  "id": "c1-01",
+  "level": "C1",
+  "order": 1,
+  "title": { "ru": "Инверсия для усиления", "en": "Inversion for emphasis" },
+  "goal": { "ru": "Научитесь выделять главное с помощью инверсии, как в хорошей письменной речи и выступлениях.", "en": "Learn to add emphasis with inversion, as in polished writing and speeches." },
+  "theory": [
+    {
+      "title": "Отрицательное слово в начале — порядок слов как в вопросе",
+      "body": "Если предложение начинается с отрицательного или ограничительного наречия (never, rarely, seldom, little, not only), вспомогательный глагол ставится перед подлежащим, как в вопросе. Если вспомогательного глагола нет, появляется do, does или did. Это приём книжной и публичной речи: в обычном разговоре он звучит торжественно.",
+      "examples": [
+        { "en": "Never have I seen such a well-argued proposal.", "ru": "Никогда я не видел настолько убедительно обоснованного предложения." },
+        { "en": "Not only did she rewrite the report, but she also presented it to the board.", "ru": "Она не только переписала отчёт, но и представила его совету директоров." },
+        { "en": "Little did he know that the decision had already been made.", "ru": "Он и не подозревал, что решение уже принято." }
+      ],
+      "tip": "В русском достаточно вынести слово вперёд: «Никогда я не видел…». В английском этого мало: без перестановки «have I» предложение будет ошибочным."
+    },
+    {
+      "title": "Hardly… when и No sooner… than",
+      "body": "Обе конструкции означают «едва… как» и описывают два события, идущих сразу друг за другом. В первой части стоит Past Perfect с инверсией, во второй — Past Simple. Союзы закреплены жёстко: hardly и scarcely сочетаются с when, а no sooner — только с than, потому что sooner — сравнительная степень.",
+      "examples": [
+        { "en": "Hardly had the negotiations begun when the other side walked out.", "ru": "Едва переговоры начались, как другая сторона покинула зал." },
+        { "en": "No sooner had the CEO announced the merger than the share price began to fall.", "ru": "Не успел генеральный директор объявить о слиянии, как акции начали падать." }
+      ]
+    },
+    {
+      "title": "Only after, not until, under no circumstances",
+      "body": "После оборотов only after, only when, not until инверсия происходит не сразу, а в главной части предложения: сначала идёт всё обстоятельство целиком с обычным порядком слов. Обороты under no circumstances и on no account характерны для инструкций и официальных запретов; отрицание уже заключено в них, поэтому глагол остаётся утвердительным.",
+      "examples": [
+        { "en": "Only after the audit was completed did we realise the scale of the problem.", "ru": "Лишь после завершения аудита мы осознали масштаб проблемы." },
+        { "en": "On no account should passwords be sent by email.", "ru": "Пароли ни в коем случае нельзя отправлять по электронной почте." }
+      ],
+      "tip": "Одной инверсии на абзац достаточно. Если использовать её в каждом предложении, текст звучит напыщенно."
+    }
+  ],
+  "vocab": [
+    { "en": "hardly", "ru": "едва", "example": "Hardly had we sat down when the fire alarm went off." },
+    { "en": "no sooner … than", "ru": "не успел… как", "example": "No sooner had I logged in than the system crashed." },
+    { "en": "seldom", "ru": "редко", "example": "Seldom does a first draft need so few changes." },
+    { "en": "little did he know", "ru": "он и не подозревал", "example": "Little did she know that her email had been forwarded to the whole department." },
+    { "en": "under no circumstances", "ru": "ни при каких обстоятельствах", "example": "Under no circumstances may visitors enter the laboratory alone." },
+    { "en": "not until", "ru": "только когда, не раньше чем", "example": "Not until the last day did they agree on a price." },
+    { "en": "on no account", "ru": "ни в коем случае", "example": "On no account should you sign anything today." },
+    { "en": "not only … but also", "ru": "не только… но и", "example": "Not only was the venue too small, but it was also hard to find." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите грамматически верное предложение.",
+      "options": [
+        "Never I have seen such a well-argued proposal.",
+        "Never have I seen such a well-argued proposal.",
+        "Never I saw such a well-argued proposal.",
+        "Never have seen I such a well-argued proposal."
+      ],
+      "answer": 1,
+      "explanation": "После never в начале предложения вспомогательный глагол встаёт перед подлежащим: have I seen. Типичная ошибка — сохранить русский порядок слов «Never I have…»."
+    },
+    {
+      "type": "gap",
+      "sentence": "No sooner had the CEO announced the merger ___ the share price began to fall.",
+      "translation": "Не успел генеральный директор объявить о слиянии, как акции начали падать.",
+      "options": ["than", "when", "that", "then"],
+      "answer": 0,
+      "explanation": "Sooner — сравнительная степень, поэтому после неё идёт than, как в «earlier than». When сочетается с hardly и scarcely, а then часто пишут по ошибке из-за сходства с than."
+    },
+    {
+      "type": "translate",
+      "source": "Он и не подозревал, что совет директоров уже принял решение.",
+      "answer": "Little did he know that the board had already made its decision.",
+      "accept": [
+        "Little did he know that the board had already made the decision.",
+        "Little did he know the board had already made its decision.",
+        "Little did he know that the board had already made a decision.",
+        "Little did he suspect that the board had already made its decision.",
+        "Little did he know that the board had already taken its decision."
+      ],
+      "distractors": ["knew", "does", "has", "few"],
+      "explanation": "Little в начале предложения означает «совсем не» и требует инверсии: little did he know. После did глагол стоит в начальной форме, а более раннее действие выражено через Past Perfect: had already made."
+    },
+    {
+      "type": "listen",
+      "audio": "Not only did she rewrite the report, but she also presented it to the board.",
+      "question": "Что вы услышали?",
+      "options": [
+        "Not only did she rewrite the report, but she also presented it to the board.",
+        "Not only she rewrote the report, but she also presented it to the board.",
+        "Not only did she rewrote the report, but she also presented it to the board.",
+        "Not only has she rewrite the report, but she also presented it to the board."
+      ],
+      "answer": 0,
+      "explanation": "После not only появляется did, а смысловой глагол возвращается в начальную форму: did she rewrite. Во второй части, после but, порядок слов обычный: she also presented."
+    },
+    {
+      "type": "gap",
+      "sentence": "Under no circumstances ___ this document be shared with third parties.",
+      "translation": "Этот документ ни при каких обстоятельствах нельзя передавать третьим лицам.",
+      "options": ["should", "it should", "shouldn't", "you should"],
+      "answer": 0,
+      "explanation": "Отрицание уже содержится в under no circumstances, поэтому модальный глагол стоит в утвердительной форме и сразу перед подлежащим: should this document be shared. Вариант shouldn't дал бы двойное отрицание — привычное для русского, но ошибочное в английском."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении инверсия использована правильно?",
+      "options": [
+        "Only after was the audit completed we realised the scale of the problem.",
+        "Only after the audit was completed we did realise the scale of the problem.",
+        "Only after the audit was completed did we realise the scale of the problem.",
+        "Only after did the audit complete we realised the scale of the problem."
+      ],
+      "answer": 2,
+      "explanation": "После only after инверсия происходит в главной части, а не в придаточном: сначала «the audit was completed» с обычным порядком слов, затем did we realise. Частая ошибка — переставлять слова сразу после only after."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "hardly", "ru": "едва" },
+        { "en": "seldom", "ru": "редко" },
+        { "en": "under no circumstances", "ru": "ни при каких обстоятельствах" },
+        { "en": "not until", "ru": "только когда, не раньше чем" },
+        { "en": "on no account", "ru": "ни в коем случае" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Редко мы получаем такие подробные отзывы от клиентов.",
+      "answer": "Seldom do we receive such detailed feedback from our clients.",
+      "accept": [
+        "Seldom do we receive such detailed feedback from clients.",
+        "Rarely do we receive such detailed feedback from our clients.",
+        "Rarely do we receive such detailed feedback from clients.",
+        "Seldom do we get such detailed feedback from our clients.",
+        "Seldom do we receive such detailed feedback from our customers."
+      ],
+      "distractors": ["feedbacks", "so", "receives", "a"],
+      "explanation": "В Present Simple для инверсии нужен помощник do: seldom do we receive. Feedback — неисчисляемое существительное: у него нет множественного числа и перед ним не ставится артикль a."
+    },
+    {
+      "type": "listen",
+      "audio": "Hardly had the negotiations begun when the other side walked out.",
+      "question": "Что произошло?",
+      "options": [
+        "Другая сторона ушла почти сразу после начала переговоров",
+        "Другая сторона ушла ещё до начала переговоров",
+        "Переговоры шли тяжело, и в конце другая сторона ушла",
+        "Переговоры едва не начались без другой стороны"
+      ],
+      "answer": 0,
+      "explanation": "Hardly had… when означает «едва… как»: второе событие случилось сразу после первого. Hardly здесь не значит «с трудом» — это значение передаёт with difficulty."
+    },
+    {
+      "type": "gap",
+      "sentence": "Not until the final draft arrived ___ how much had been cut.",
+      "translation": "Только когда пришёл окончательный вариант, я понял, как много вырезали.",
+      "options": ["did I realise", "I realised", "I did realise", "had I realise"],
+      "answer": 0,
+      "explanation": "После not until инверсия стоит в главной части: did I realise. Само придаточное «the final draft arrived» сохраняет прямой порядок слов."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «Little did we realise how costly the delay would be»?",
+      "options": [
+        "Мы совершенно не представляли, как дорого обойдётся задержка",
+        "Мы отчасти понимали, как дорого обойдётся задержка",
+        "Мы довольно быстро поняли, как дорого обойдётся задержка",
+        "Нас мало волновало, как дорого обойдётся задержка"
+      ],
+      "answer": 0,
+      "explanation": "В инверсии little означает не «немного», а «совсем не»: мы и не догадывались. Оборот типичен для повествования, когда рассказчик уже знает, чем всё закончилось."
+    },
+    {
+      "type": "translate",
+      "source": "Едва я отправил письмо, как заметил ошибку.",
+      "answer": "Hardly had I sent the email when I noticed the mistake.",
+      "accept": [
+        "Scarcely had I sent the email when I noticed the mistake.",
+        "No sooner had I sent the email than I noticed the mistake.",
+        "Hardly had I sent the email when I noticed the error.",
+        "Hardly had I sent the email when I spotted the mistake.",
+        "Hardly had I sent the letter when I noticed the mistake."
+      ],
+      "distractors": ["than", "have", "did", "as"],
+      "explanation": "Первое действие стоит в Past Perfect с инверсией (had I sent), второе — в Past Simple после when. Than здесь не подходит: оно сочетается только с no sooner."
+    }
+  ]
+}

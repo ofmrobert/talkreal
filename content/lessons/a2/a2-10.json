@@ -1,0 +1,167 @@
+{
+  "id": "a2-10",
+  "level": "A2",
+  "order": 10,
+  "title": { "ru": "Что вы делали, когда…: Past Continuous и Past Simple", "en": "Past Continuous vs Past Simple" },
+  "goal": { "ru": "Научитесь рассказывать истории: что происходило и что вдруг случилось.", "en": "Learn to tell stories: what was happening and what suddenly happened." },
+  "theory": [
+    {
+      "title": "Past Continuous: действие в процессе",
+      "body": "Was / were + глагол с -ing показывает, что в определённый момент прошлого действие было в самом разгаре: оно началось раньше и ещё не закончилось. I, he, she, it — was; you, we, they — were.",
+      "examples": [
+        { "en": "At eight o'clock I was having dinner.", "ru": "В восемь часов я ужинал." },
+        { "en": "They were talking about work.", "ru": "Они разговаривали о работе." },
+        { "en": "She wasn't listening.", "ru": "Она не слушала." }
+      ]
+    },
+    {
+      "title": "Фон и событие",
+      "body": "В рассказе длительное действие-фон стоит в Past Continuous, а короткое событие, которое его прервало, — в Past Simple. Событие обычно вводится словом when, а фон — словом while. В русском оба глагола просто в прошедшем времени, поэтому разницу приходится держать в голове.",
+      "examples": [
+        { "en": "I was cooking when the phone rang.", "ru": "Я готовил, когда зазвонил телефон." },
+        { "en": "While we were walking home, it started to rain.", "ru": "Пока мы шли домой, начался дождь." }
+      ],
+      "tip": "When + короткое событие (Past Simple). While + длительный фон (Past Continuous)."
+    },
+    {
+      "title": "Одно за другим — Past Simple",
+      "body": "Если действия шли по очереди, а не одновременно, все они стоят в Past Simple. Сравните: When I got home, my wife made tea (я пришёл, и потом она заварила чай) — When I got home, my wife was making tea (она уже заваривала чай, когда я вошёл).",
+      "examples": [
+        { "en": "I got up, had a shower and left the house.", "ru": "Я встал, принял душ и вышел из дома." },
+        { "en": "When the film ended, we went home.", "ru": "Когда фильм закончился, мы пошли домой." }
+      ],
+      "tip": "Глаголы состояния (know, want, like) не употребляются в Continuous и в прошлом: I knew, а не «I was knowing»."
+    }
+  ],
+  "vocab": [
+    { "en": "while", "ru": "пока, в то время как", "example": "I listen to podcasts while I cook." },
+    { "en": "suddenly", "ru": "внезапно, вдруг", "example": "Suddenly the lights went out." },
+    { "en": "to ring", "ru": "звонить, звенеть (rang)", "example": "My alarm rang at six." },
+    { "en": "to happen", "ru": "происходить, случаться", "example": "What happened to your car?" },
+    { "en": "to drive", "ru": "вести машину (drove)", "example": "He drove all night." },
+    { "en": "to wait for", "ru": "ждать (кого-то, что-то)", "example": "I'll wait for you outside." },
+    { "en": "to fall asleep", "ru": "засыпать (fell asleep)", "example": "The children fell asleep in the car." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "I was driving home when you called.",
+      "question": "Что делал этот человек, когда ему позвонили?",
+      "options": ["Ехал домой на машине", "Был дома", "Шёл домой пешком", "Сам звонил по телефону"],
+      "answer": 0,
+      "explanation": "Was driving home — длительное действие-фон: человек был за рулём по дороге домой. Called — короткое событие в Past Simple, которое произошло в это время."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать, что вчера ровно в семь вечера вы были заняты ужином: «Я готовил ужин»?",
+      "options": ["I was cooking dinner at seven yesterday evening.", "I cooking dinner at seven yesterday evening.", "I were cooking dinner at seven yesterday evening.", "I was cook dinner at seven yesterday evening."],
+      "answer": 0,
+      "explanation": "Действие было в процессе в конкретный момент прошлого — Past Continuous: was + cooking. С I используется was, а не were, и пропускать его нельзя."
+    },
+    {
+      "type": "translate",
+      "source": "Мы ждали автобус, когда начался дождь.",
+      "answer": "We were waiting for the bus when it started raining.",
+      "accept": [
+        "We were waiting for the bus when it started to rain.",
+        "We were waiting for a bus when it started raining.",
+        "We were waiting for a bus when it started to rain.",
+        "We were waiting for the bus when it began to rain.",
+        "We were waiting for the bus when it began raining.",
+        "We were waiting for the bus when the rain started.",
+        "We were waiting for a bus when the rain started."
+      ],
+      "distractors": ["waited", "was", "while"],
+      "explanation": "Ожидание — длительный фон (were waiting), начало дождя — короткое событие (started). Не забудьте предлог: wait for the bus, а не «wait the bus»."
+    },
+    {
+      "type": "gap",
+      "sentence": "What were you doing when the accident ___?",
+      "translation": "Что вы делали, когда произошла авария?",
+      "options": ["was happening", "happened", "happen", "happens"],
+      "answer": 1,
+      "explanation": "Авария — короткое событие, поэтому Past Simple: happened. В Continuous стоит только фоновое действие: were you doing."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "while", "ru": "пока, в то время как" },
+        { "en": "suddenly", "ru": "внезапно" },
+        { "en": "to happen", "ru": "происходить" },
+        { "en": "to drive", "ru": "вести машину" },
+        { "en": "to fall asleep", "ru": "засыпать" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Что ты делал вчера в десять вечера?",
+      "answer": "What were you doing at ten last night?",
+      "accept": [
+        "What were you doing at ten yesterday evening?",
+        "What were you doing at ten pm yesterday?",
+        "What were you doing yesterday at ten pm?",
+        "What were you doing at ten o'clock last night?",
+        "What were you doing at 10 last night?",
+        "What were you doing last night at ten?",
+        "What were you doing yesterday at ten in the evening?",
+        "What were you doing at ten in the evening yesterday?"
+      ],
+      "distractors": ["was", "are", "done"],
+      "explanation": "Вопрос о действии в конкретный момент прошлого — Past Continuous: were you doing. С you всегда were, даже если вы обращаетесь к одному человеку."
+    },
+    {
+      "type": "gap",
+      "sentence": "While I ___ a shower, someone rang the doorbell.",
+      "translation": "Пока я принимал душ, кто-то позвонил в дверь.",
+      "options": ["were having", "was having", "am having", "having"],
+      "answer": 1,
+      "explanation": "После while идёт длительный фон в Past Continuous, а с I нужна форма was: was having. Звонок в дверь — короткое событие, поэтому rang."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She was reading when I came in.", "She reading when I came in.", "She was read when I came in.", "She were reading when I came in."],
+      "answer": 0,
+      "explanation": "В Past Continuous нужны обе части: was и глагол с -ing. В русском нет глагола-связки, поэтому was часто теряют."
+    },
+    {
+      "type": "listen",
+      "audio": "He fell asleep while he was watching a film.",
+      "question": "Что вы услышали?",
+      "options": ["He fell asleep while he was watching a film.", "He felt asleep while he was watching a film.", "He fell asleep when he watched a film.", "He falls asleep while he is watching a film."],
+      "answer": 0,
+      "explanation": "Fell — прошедшая форма fall (fall asleep — «заснуть»). Не путайте с felt — это прошедшая форма feel, «чувствовать»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I was walking to the metro when I suddenly ___ my old teacher.",
+      "translation": "Я шёл к метро, когда вдруг увидел своего старого учителя.",
+      "options": ["was seeing", "see", "saw", "seen"],
+      "answer": 2,
+      "explanation": "Suddenly указывает на короткое неожиданное событие — Past Simple: saw. Seen — третья форма, без have она не используется."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит предложение «When I got home, my wife was making tea»?",
+      "options": ["Жена уже заваривала чай, когда я вошёл", "Жена начала заваривать чай после того, как я пришёл", "Жена заварила чай и ушла до моего прихода", "Я заваривал чай, когда пришла жена"],
+      "answer": 0,
+      "explanation": "Was making — действие уже шло в момент, когда я пришёл. Если бы жена начала заваривать чай после моего прихода, было бы made."
+    },
+    {
+      "type": "translate",
+      "source": "Телефон зазвонил, когда я спал.",
+      "answer": "The phone rang when I was sleeping.",
+      "accept": [
+        "The phone rang while I was sleeping.",
+        "My phone rang when I was sleeping.",
+        "My phone rang while I was sleeping.",
+        "The phone rang when I was asleep.",
+        "The phone rang while I was asleep.",
+        "When I was sleeping, the phone rang.",
+        "While I was sleeping, the phone rang."
+      ],
+      "distractors": ["ringed", "slept", "were"],
+      "explanation": "Сон — длительный фон (was sleeping), звонок — короткое событие (rang). Ring — неправильный глагол: rang, а не «ringed»."
+    }
+  ]
+}

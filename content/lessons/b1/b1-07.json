@@ -1,0 +1,142 @@
+{
+  "id": "b1-07",
+  "level": "B1",
+  "order": 7,
+  "title": { "ru": "Косвенная речь: основы", "en": "Reported speech: the basics" },
+  "goal": { "ru": "Научитесь пересказывать чужие слова: кто что сказал.", "en": "Learn to report what other people said." },
+  "theory": [
+    {
+      "title": "Say или tell",
+      "body": "Оба глагола переводятся как «сказать», но ведут себя по-разному. После tell обязательно называют, кому сказали: tell me, tell her, tell the client. После say слушателя обычно не называют; если очень нужно — только через to: say to me. Слово that после обоих глаголов можно опустить.",
+      "examples": [
+        { "en": "He said (that) he was tired.", "ru": "Он сказал, что устал." },
+        { "en": "He told me (that) he was tired.", "ru": "Он сказал мне, что устал." }
+      ],
+      "tip": "«Сказал мне» — это told me, а не said me. Глаголы explain и mention ведут себя как say: explain something to me, а не explain me."
+    },
+    {
+      "title": "Сдвиг времён",
+      "body": "Если главный глагол стоит в прошедшем времени (said, told), время в пересказанной фразе обычно сдвигается на шаг назад: am / is → was, work → worked, will → would, can → could, have done и did → had done. В русском такого сдвига нет: «Он сказал, что занят». Поэтому это правило приходится применять сознательно.",
+      "examples": [
+        { "en": "\"I'm busy.\" → She said she was busy.", "ru": "«Я занята». → Она сказала, что занята." },
+        { "en": "\"I'll help you.\" → He said he would help me.", "ru": "«Я тебе помогу». → Он сказал, что поможет мне." },
+        { "en": "\"I can't drive.\" → She told me she couldn't drive.", "ru": "«Я не умею водить». → Она сказала мне, что не умеет водить." }
+      ],
+      "tip": "Русское настоящее время после «сказал, что…» не переносите в английский автоматически: сначала проверьте, в каком времени стоит said или told."
+    },
+    {
+      "title": "Местоимения и слова времени",
+      "body": "При пересказе меняется точка зрения, а вместе с ней — местоимения и указатели времени: I → he / she, my → his / her, tomorrow → the next day, yesterday → the day before, today → that day, here → there.",
+      "examples": [
+        { "en": "\"I'll send it tomorrow.\" → He said he would send it the next day.", "ru": "«Я отправлю это завтра». → Он сказал, что отправит это на следующий день." },
+        { "en": "\"I saw your message yesterday.\" → She said she had seen my message the day before.", "ru": "«Я видела твоё сообщение вчера». → Она сказала, что видела моё сообщение накануне." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "to say", "ru": "сказать (что-то)", "example": "She said she needed more time." },
+    { "en": "to tell", "ru": "сказать, рассказать (кому-то)", "example": "Nobody told me about the changes." },
+    { "en": "to mention", "ru": "упомянуть", "example": "He mentioned that he was moving." },
+    { "en": "to explain", "ru": "объяснить", "example": "Could you explain this to me?" },
+    { "en": "to promise", "ru": "обещать", "example": "They promised they would call back." },
+    { "en": "the next day", "ru": "на следующий день", "example": "The parcel arrived the next day." },
+    { "en": "the day before", "ru": "накануне, за день до этого", "example": "I had met him the day before." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Она сказала мне, что опоздает».",
+      "options": ["She said me that she would be late.", "She told me that she would be late.", "She told that she would be late.", "She told me that she will late."],
+      "answer": 1,
+      "explanation": "Когда названо, кому сказали, нужен tell: told me. «Said me» — самая частая ошибка; а tell без слушателя (told that…) тоже невозможен."
+    },
+    {
+      "type": "translate",
+      "source": "Он сказал, что занят.",
+      "answer": "He said that he was busy.",
+      "accept": ["He said he was busy."],
+      "distractors": ["told", "is", "will"],
+      "explanation": "После said время сдвигается назад: «занят» превращается в was busy, хотя в русском остаётся настоящее время. Слушатель не назван, поэтому said, а не told."
+    },
+    {
+      "type": "listen",
+      "audio": "Marina said she couldn't come to the meeting.",
+      "question": "Какими были слова самой Марины?",
+      "options": ["I can't come to the meeting.", "I won't come to the meeting.", "I can come to the meeting.", "I didn't come to the meeting."],
+      "answer": 0,
+      "explanation": "В косвенной речи can't сдвигается в couldn't, значит, в оригинале было can't. Won't превратилось бы в wouldn't, а didn't come — в hadn't come."
+    },
+    {
+      "type": "gap",
+      "sentence": "Viktor ___ us that the flight was delayed.",
+      "translation": "Виктор сказал нам, что рейс задерживается.",
+      "options": ["told", "said", "spoke", "talked"],
+      "answer": 0,
+      "explanation": "После глагола сразу стоит us — кому сказали, поэтому подходит только told. Say, speak и talk требуют предлога to перед слушателем."
+    },
+    {
+      "type": "choice",
+      "prompt": "На прошлой неделе Том сказал: «I will call you tomorrow». Как пересказать его слова сегодня?",
+      "options": ["Tom said he would call me the next day.", "Tom said he will call me tomorrow.", "Tom said me he would call the next day.", "Tom told he would call me the next day."],
+      "answer": 0,
+      "explanation": "Will сдвигается в would, а tomorrow становится the next day: то «завтра» давно прошло. После said слушатель не называется, а после told он обязателен."
+    },
+    {
+      "type": "gap",
+      "sentence": "Last year they promised they ___ the money back within a week, but they never did.",
+      "translation": "В прошлом году они пообещали, что вернут деньги в течение недели, но так и не вернули.",
+      "options": ["would pay", "will pay", "pay", "have paid"],
+      "answer": 0,
+      "explanation": "Обещание дано в прошлом (promised), поэтому «вернут» — это would pay: will после прошедшего времени сдвигается в would. По-русски здесь будущее время, и это сбивает."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to mention", "ru": "упомянуть" },
+        { "en": "to explain", "ru": "объяснить" },
+        { "en": "to promise", "ru": "обещать" },
+        { "en": "the next day", "ru": "на следующий день" },
+        { "en": "the day before", "ru": "накануне" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Они сказали нам, что переезжают в Казань.",
+      "answer": "They told us that they were moving to Kazan.",
+      "accept": ["They told us they were moving to Kazan."],
+      "distractors": ["said", "are", "move"],
+      "explanation": "«Сказали нам» — told us, без предлога. Их слова «We are moving» после told сдвигаются в прошедшее: were moving."
+    },
+    {
+      "type": "listen",
+      "audio": "She told me she had sent the email the day before.",
+      "question": "Что вы услышали?",
+      "options": ["She told me she had sent the email the day before.", "She said me she had sent the email the day before.", "She told me she has sent the email the day before.", "She told me she had sent the email the day after."],
+      "answer": 0,
+      "explanation": "В прямой речи было «I sent the email yesterday»: Past Simple сдвинулся в had sent, а yesterday — в the day before. После told сразу идёт me, без to."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ that she was looking for a new job, but she didn't give any details.",
+      "translation": "Она упомянула, что ищет новую работу, но не стала вдаваться в подробности.",
+      "options": ["mentioned", "told", "spoke", "talked"],
+      "answer": 0,
+      "explanation": "Mention, как и say, не требует называть слушателя: mentioned that… Told здесь не подходит, потому что после него обязательно нужно указать, кому сказали."
+    },
+    {
+      "type": "translate",
+      "source": "Она сказала, что позвонит на следующий день.",
+      "answer": "She said that she would call the next day.",
+      "accept": ["She said she would call the next day.", "She said that she'd call the next day.", "She said she'd call the next day.", "She said that she would call the following day.", "She said she would call the following day."],
+      "distractors": ["told", "will", "tomorrow"],
+      "explanation": "Русское будущее «позвонит» после said передаётся через would call: will сдвигается на шаг назад. Tomorrow в пересказе заменяется на the next day."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["He explained me the new rules.", "He explained the new rules to me.", "He said me the new rules.", "He explained for me the new rules."],
+      "answer": 1,
+      "explanation": "После explain сначала идёт то, что объясняют, а слушатель присоединяется через to: explain something to somebody. «Explained me» — калька с русского «объяснил мне»."
+    }
+  ]
+}

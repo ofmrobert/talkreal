@@ -1,0 +1,143 @@
+{
+  "id": "b1-04",
+  "level": "B1",
+  "order": 4,
+  "title": { "ru": "Used to, be used to, get used to", "en": "Used to, be used to, get used to" },
+  "goal": { "ru": "Научитесь говорить о прошлых привычках и о том, к чему вы привыкли.", "en": "Learn to talk about past habits and things you are used to." },
+  "theory": [
+    {
+      "title": "Used to + глагол: раньше было, теперь нет",
+      "body": "Used to + начальная форма глагола описывает привычку или состояние в прошлом, которых сейчас уже нет. На русский это обычно переводится словом «раньше». В вопросах и отрицаниях появляется did, и окончание -d исчезает: did you use to, didn't use to.",
+      "examples": [
+        { "en": "I used to play football every weekend.", "ru": "Раньше я играл в футбол каждые выходные." },
+        { "en": "She didn't use to like sushi.", "ru": "Раньше она не любила суши." },
+        { "en": "Did you use to live here?", "ru": "Ты раньше здесь жил?" }
+      ],
+      "tip": "У used to нет настоящего времени. О нынешних привычках говорите с usually: I usually get up at seven."
+    },
+    {
+      "title": "Be used to: уже привык",
+      "body": "Be used to + существительное или глагол с -ing означает «быть привыкшим»: что-то для вас уже нормально. Здесь to — предлог, поэтому после него идёт форма с -ing, а не инфинитив. Время показывает глагол be: I am used to, I was used to.",
+      "examples": [
+        { "en": "I'm used to the cold.", "ru": "Я привык к холоду." },
+        { "en": "He's used to working at night.", "ru": "Он привык работать по ночам." }
+      ],
+      "tip": "Сравните: I used to drive to work (раньше ездил, теперь нет) и I'm used to driving to work (для меня это привычно)."
+    },
+    {
+      "title": "Get used to: процесс привыкания",
+      "body": "Get used to + существительное или глагол с -ing описывает сам процесс: привыкать, привыкнуть. Get можно ставить в любое время: I'm getting used to, I got used to, you'll get used to.",
+      "examples": [
+        { "en": "I'm slowly getting used to my new schedule.", "ru": "Я понемногу привыкаю к новому графику." },
+        { "en": "You'll get used to living alone.", "ru": "Ты привыкнешь жить один." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "used to", "ru": "раньше (делал что-то)", "example": "We used to meet every Friday." },
+    { "en": "to be used to", "ru": "быть привыкшим к", "example": "I'm used to early flights." },
+    { "en": "to get used to", "ru": "привыкать к", "example": "It's hard to get used to a new boss." },
+    { "en": "a night shift", "ru": "ночная смена", "example": "Nurses often work night shifts." },
+    { "en": "a commute", "ru": "дорога на работу и обратно", "example": "My commute takes an hour." },
+    { "en": "to work remotely", "ru": "работать удалённо", "example": "Half of our team works remotely." },
+    { "en": "noise", "ru": "шум", "example": "I can't sleep because of the noise." },
+    { "en": "spicy food", "ru": "острая еда", "example": "Do you like spicy food?" }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "I ___ smoke, but I stopped five years ago.",
+      "translation": "Раньше я курил, но бросил пять лет назад.",
+      "options": ["used to", "am used to", "use to", "was used to"],
+      "answer": 0,
+      "explanation": "Прошлая привычка, которой больше нет, — used to + начальная форма глагола. Am used to и was used to означают «привык» и требуют после себя формы с -ing."
+    },
+    {
+      "type": "translate",
+      "source": "Раньше мы жили в маленьком городе.",
+      "answer": "We used to live in a small town.",
+      "accept": ["We used to live in a small city.", "We used to live in a little town."],
+      "distractors": ["use", "living", "were"],
+      "explanation": "Русское «раньше жили» (а теперь нет) точнее всего передаёт used to live. После used to — начальная форма глагола, а не living; глагол be перед used здесь не нужен."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Я привык рано вставать».",
+      "options": ["I used to get up early.", "I'm used to getting up early.", "I'm used to get up early.", "I use to getting up early."],
+      "answer": 1,
+      "explanation": "«Привык» — это be used to, а to здесь предлог, поэтому дальше форма с -ing: getting up. I used to get up early значит совсем другое: «раньше я вставал рано, а теперь нет»."
+    },
+    {
+      "type": "listen",
+      "audio": "I used to work night shifts, but now I work from home.",
+      "question": "Что верно о говорящем?",
+      "options": ["Раньше он работал в ночные смены, а теперь нет", "Он привык работать в ночные смены", "Он до сих пор работает в ночные смены", "Он никогда не работал по ночам"],
+      "answer": 0,
+      "explanation": "Used to work — действие регулярно происходило в прошлом и прекратилось. «Привык» звучало бы иначе: I'm used to working night shifts."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to get used to", "ru": "привыкать к" },
+        { "en": "a night shift", "ru": "ночная смена" },
+        { "en": "a commute", "ru": "дорога на работу и обратно" },
+        { "en": "to work remotely", "ru": "работать удалённо" },
+        { "en": "noise", "ru": "шум" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно спросить: «Ты раньше играл на гитаре?»",
+      "options": ["Did you use to play the guitar?", "Did you used to playing the guitar?", "Were you used to play the guitar?", "Are you used to play the guitar?"],
+      "answer": 0,
+      "explanation": "Вопрос строится через did, а после did глагол теряет -d: Did you use to play…? Варианты с were и are относятся к конструкции «быть привыкшим» и к тому же требуют формы с -ing."
+    },
+    {
+      "type": "gap",
+      "sentence": "It took me a month to ___ driving on the left.",
+      "translation": "Мне понадобился месяц, чтобы привыкнуть ездить по левой стороне.",
+      "options": ["get used to", "used to", "be used", "get use to"],
+      "answer": 0,
+      "explanation": "Речь о процессе привыкания, поэтому get used to, и после него форма с -ing: driving. Used пишется с -d во всех трёх конструкциях, кроме вопросов и отрицаний с did."
+    },
+    {
+      "type": "translate",
+      "source": "Она не привыкла к такому шуму.",
+      "answer": "She is not used to such noise.",
+      "accept": ["She isn't used to such noise.", "She's not used to such noise.", "She is not used to this noise.", "She isn't used to this noise.", "She is not used to this kind of noise.", "She isn't used to this kind of noise.", "She isn't used to so much noise.", "She is not used to so much noise."],
+      "distractors": ["didn't", "use", "with"],
+      "explanation": "«Не привыкла» — состояние, поэтому is not used to + существительное. Отрицание образует глагол be, а не did: «She didn't use to noise» — смешение двух разных конструкций."
+    },
+    {
+      "type": "gap",
+      "sentence": "Don't worry, you'll soon ___ used to the long commute.",
+      "translation": "Не переживай, ты скоро привыкнешь к долгой дороге на работу.",
+      "options": ["get", "got", "getting", "are"],
+      "answer": 0,
+      "explanation": "После will нужна начальная форма глагола: will get used to. Get показывает, что привыкание ещё только произойдёт."
+    },
+    {
+      "type": "listen",
+      "audio": "Pavel is getting used to working remotely.",
+      "question": "Что вы услышали?",
+      "options": ["Pavel is getting used to working remotely.", "Pavel is used to working remotely.", "Pavel used to work remotely.", "Pavel is getting used to work remotely."],
+      "answer": 0,
+      "explanation": "Is getting used to — «привыкает», процесс ещё идёт. После to стоит working, потому что to здесь предлог, а не часть инфинитива."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I'm used to spicy food.", "I'm used to eat spicy food.", "I used to eating spicy food.", "I'm use to spicy food."],
+      "answer": 0,
+      "explanation": "Be used to + существительное: I'm used to spicy food — «я привык к острой еде». Если нужен глагол, он идёт с -ing (used to eating), а used всегда пишется с -d."
+    },
+    {
+      "type": "translate",
+      "source": "Раньше я не любил кофе.",
+      "answer": "I didn't use to like coffee.",
+      "accept": ["I did not use to like coffee.", "I never used to like coffee.", "I used not to like coffee."],
+      "distractors": ["used", "wasn't", "liking"],
+      "explanation": "В отрицании работает didn't, и прошедшее время уже выражено в нём, поэтому пишем use без -d. Отрицание через wasn't сюда не подходит: оно относится к конструкции «не был привыкшим»."
+    }
+  ]
+}

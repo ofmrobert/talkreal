@@ -1,0 +1,144 @@
+{
+  "id": "a1-02",
+  "level": "A1",
+  "order": 2,
+  "title": { "ru": "Артикли a / an: профессии и предметы", "en": "Articles a / an with jobs and things" },
+  "goal": { "ru": "Научитесь называть профессии и предметы с артиклем a или an.", "en": "Learn to name jobs and things with a or an." },
+  "theory": [
+    {
+      "title": "Что такое артикль и зачем он нужен",
+      "body": "В русском артиклей нет, а в английском исчисляемое существительное в единственном числе не может стоять «голым». A / an значит «один, какой-то»: так мы впервые называем предмет или говорим, кем человек работает. Без артикля фраза звучит для носителя языка как ошибка — примерно как «я купить телефон» по-русски.",
+      "examples": [
+        { "en": "I am a teacher.", "ru": "Я учитель." },
+        { "en": "This is a phone.", "ru": "Это телефон." },
+        { "en": "Moscow is a big city.", "ru": "Москва — большой город." }
+      ],
+      "tip": "Перед профессией артикль обязателен: He is a doctor, а не «He is doctor»."
+    },
+    {
+      "title": "A или an?",
+      "body": "A ставится перед согласным звуком, an — перед гласным: a bag, an apple. Так просто удобнее произносить. Важен первый звук следующего слова, поэтому если перед существительным есть прилагательное, смотрим на него: a new umbrella, an old bag.",
+      "examples": [
+        { "en": "She is a nurse.", "ru": "Она медсестра." },
+        { "en": "He is an engineer.", "ru": "Он инженер." },
+        { "en": "It is an old house.", "ru": "Это старый дом." }
+      ]
+    },
+    {
+      "title": "Когда a / an не нужен",
+      "body": "A / an — это «один», поэтому во множественном числе его нет: They are doctors. Артикль не ставится и вместе со словами my, your, this: my bag, а не «a my bag».",
+      "examples": [
+        { "en": "We are engineers.", "ru": "Мы инженеры." },
+        { "en": "This is my umbrella.", "ru": "Это мой зонт." }
+      ],
+      "tip": "В упражнениях знак «—» означает, что артикль не нужен."
+    }
+  ],
+  "vocab": [
+    { "en": "job", "ru": "работа, профессия", "example": "My job is interesting." },
+    { "en": "doctor", "ru": "врач", "example": "My aunt is a doctor." },
+    { "en": "engineer", "ru": "инженер", "example": "Pavel is an engineer." },
+    { "en": "nurse", "ru": "медсестра", "example": "She is a nurse in a hospital." },
+    { "en": "driver", "ru": "водитель", "example": "He is a taxi driver." },
+    { "en": "bag", "ru": "сумка", "example": "This is a new bag." },
+    { "en": "umbrella", "ru": "зонт", "example": "It is a small umbrella." },
+    { "en": "apple", "ru": "яблоко", "example": "This is an apple." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "My brother is ___ doctor.",
+      "translation": "Мой брат — врач.",
+      "options": ["a", "an", "—"],
+      "answer": 0,
+      "explanation": "Перед профессией в единственном числе всегда стоит артикль, а doctor начинается с согласного звука, поэтому a. Пропустить артикль — типичная ошибка, ведь в русском его нет."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Она инженер».",
+      "options": ["She is engineer.", "She is a engineer.", "She is an engineer.", "She an engineer."],
+      "answer": 2,
+      "explanation": "Engineer начинается с гласного звука, поэтому нужен an. В предложении должны быть и глагол is, и артикль — в русском нет ни того, ни другого."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "doctor", "ru": "врач" },
+        { "en": "nurse", "ru": "медсестра" },
+        { "en": "driver", "ru": "водитель" },
+        { "en": "bag", "ru": "сумка" },
+        { "en": "umbrella", "ru": "зонт" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Это старая сумка.",
+      "answer": "It is an old bag.",
+      "accept": ["It's an old bag.", "This is an old bag."],
+      "distractors": ["a", "am", "are"],
+      "explanation": "Артикль выбираем по слову, которое идёт сразу за ним: old начинается с гласного звука, значит an old bag. Перед прилагательным артикль забывают особенно часто."
+    },
+    {
+      "type": "listen",
+      "audio": "My father is a bus driver.",
+      "question": "Кем работает отец?",
+      "options": ["Водителем автобуса", "Врачом", "Инженером", "Таксистом"],
+      "answer": 0,
+      "explanation": "A bus driver — водитель автобуса. Артикль a в быстрой речи почти не слышен, но он есть: is a bus driver."
+    },
+    {
+      "type": "choice",
+      "prompt": "Перед каким словом нужен артикль an?",
+      "options": ["apple", "bag", "job", "nurse"],
+      "answer": 0,
+      "explanation": "An ставится перед гласным звуком: an apple. Слова bag, job и nurse начинаются с согласных, перед ними a."
+    },
+    {
+      "type": "gap",
+      "sentence": "Elena and Dina are ___.",
+      "translation": "Елена и Дина — медсёстры.",
+      "options": ["a nurse", "nurses", "a nurses", "an nurses"],
+      "answer": 1,
+      "explanation": "Речь о двух людях, поэтому существительное стоит во множественном числе: nurses. A / an значит «один» и с множественным числом не сочетается."
+    },
+    {
+      "type": "translate",
+      "source": "Я не водитель.",
+      "answer": "I am not a driver.",
+      "accept": ["I'm not a driver."],
+      "distractors": ["an", "no", "don't"],
+      "explanation": "Артикль нужен и в отрицании: not a driver. Отрицание с to be — это not после am; слова no и don't здесь не подходят."
+    },
+    {
+      "type": "gap",
+      "sentence": "It is ___ umbrella.",
+      "translation": "Это зонт.",
+      "options": ["a", "an", "—"],
+      "answer": 1,
+      "explanation": "Umbrella начинается с гласного звука, поэтому an. Совсем без артикля нельзя: исчисляемое существительное в единственном числе всегда требует «сопровождения»."
+    },
+    {
+      "type": "listen",
+      "audio": "She is an engineer, not a doctor.",
+      "question": "Что вы услышали?",
+      "options": ["She is an engineer, not a doctor.", "She is a engineer, not a doctor.", "She is an engineer, not doctor.", "She is engineer, not a doctor."],
+      "answer": 0,
+      "explanation": "В предложении две профессии, и у каждой свой артикль: an engineer (гласный звук) и a doctor (согласный звук)."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["This is a my bag.", "This is my bag.", "This is bag.", "This is an bag."],
+      "answer": 1,
+      "explanation": "Слово my уже показывает, о какой сумке речь, и артикль с ним не ставится. А вот без my нужен артикль a: This is a bag."
+    },
+    {
+      "type": "translate",
+      "source": "Это хорошая работа.",
+      "answer": "It is a good job.",
+      "accept": ["It's a good job.", "This is a good job."],
+      "distractors": ["an", "are", "am"],
+      "explanation": "Артикль относится к существительному job, но ставится перед прилагательным: a good job. Good начинается с согласного звука, поэтому a, а не an."
+    }
+  ]
+}

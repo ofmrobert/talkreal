@@ -1,0 +1,142 @@
+{
+  "id": "b1-06",
+  "level": "B1",
+  "order": 6,
+  "title": { "ru": "Придаточные с who, which, that, where, whose", "en": "Relative clauses: who, which, that, where, whose" },
+  "goal": { "ru": "Научитесь уточнять, о каком человеке, предмете или месте идёт речь.", "en": "Learn to specify which person, thing or place you mean." },
+  "theory": [
+    {
+      "title": "Who — о людях, which — о предметах",
+      "body": "Русское «который» переводится по-разному: who — для людей, which — для предметов и животных. That подходит в обоих случаях и часто звучит в разговорной речи. Слово what в этой роли не используется никогда.",
+      "examples": [
+        { "en": "The doctor who examined me was very kind.", "ru": "Врач, который меня осматривал, был очень добрым." },
+        { "en": "The app which I use for banking is free.", "ru": "Приложение, которым я пользуюсь для банковских операций, бесплатное." },
+        { "en": "Where is the charger that was on my desk?", "ru": "Где зарядка, которая лежала у меня на столе?" }
+      ],
+      "tip": "Who, which и that уже заменяют подлежащее или дополнение, поэтому второе местоимение не нужно. Нельзя: the man who he called; the book that I read it."
+    },
+    {
+      "title": "Where и whose",
+      "body": "Where вводит уточнение о месте: «где», «в котором». Whose означает «чей», «у которого» и стоит сразу перед существительным без артикля. Whose используется и для людей, и для компаний, и для предметов.",
+      "examples": [
+        { "en": "This is the town where I grew up.", "ru": "Это город, в котором я вырос." },
+        { "en": "I have a colleague whose son plays for Spartak.", "ru": "У меня есть коллега, сын которого играет за «Спартак»." }
+      ],
+      "tip": "После where предлог не нужен: the hotel where we stayed. С which предлог обязателен: the hotel which we stayed in."
+    },
+    {
+      "title": "Когда слово можно опустить",
+      "body": "Если who, which или that — дополнение (после него идёт новое подлежащее), в разговорной речи его часто пропускают. Если же оно само является подлежащим придаточного (сразу за ним глагол), пропускать нельзя.",
+      "examples": [
+        { "en": "The flat (that) we rented was tiny.", "ru": "Квартира, которую мы сняли, была крошечной." },
+        { "en": "The flat that overlooks the park is expensive.", "ru": "Квартира, которая выходит окнами на парк, стоит дорого." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "a colleague", "ru": "коллега", "example": "I had lunch with a colleague." },
+    { "en": "a neighbour", "ru": "сосед, соседка", "example": "Our neighbours are very quiet." },
+    { "en": "a landlord", "ru": "хозяин съёмной квартиры, арендодатель", "example": "The landlord raised the rent again." },
+    { "en": "to hire", "ru": "нанимать", "example": "The company is hiring new drivers." },
+    { "en": "to recommend", "ru": "рекомендовать", "example": "Can you recommend a good dentist?" },
+    { "en": "a device", "ru": "устройство", "example": "This device tracks your sleep." },
+    { "en": "to rent", "ru": "снимать, арендовать", "example": "We rent a small office in the centre." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "The woman who lives next door is a doctor.",
+      "question": "Кто работает врачом?",
+      "options": ["Женщина, которая живёт по соседству", "Женщина, у которой живёт говорящий", "Женщина, которая лечит соседей", "Соседка этой женщины"],
+      "answer": 0,
+      "explanation": "Who lives next door уточняет, о какой женщине речь: о той, что живёт по соседству. Главная мысль предложения — the woman is a doctor."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Это коллега, который мне помог».",
+      "options": ["This is the colleague which helped me.", "This is the colleague who helped me.", "This is the colleague what helped me.", "This is the colleague who he helped me."],
+      "answer": 1,
+      "explanation": "Коллега — человек, поэтому who (или that), но не which. Who уже служит подлежащим, так что he после него лишнее; what как «который» не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "That's the café ___ we first met.",
+      "translation": "Это то кафе, где мы впервые встретились.",
+      "options": ["where", "which", "who", "whose"],
+      "answer": 0,
+      "explanation": "Речь о месте, в котором что-то произошло, — where. С which пришлось бы добавить предлог: the café which we first met in."
+    },
+    {
+      "type": "translate",
+      "source": "У меня есть друг, чья жена работает в банке.",
+      "answer": "I have a friend whose wife works in a bank.",
+      "accept": ["I have a friend whose wife works at a bank.", "I've got a friend whose wife works in a bank.", "I've got a friend whose wife works at a bank.", "I have a friend whose wife works for a bank."],
+      "distractors": ["which", "who", "her"],
+      "explanation": "«Чья», «у которого» — whose, и сразу за ним существительное без артикля и без her: whose wife. Вариант «who his wife» — калька, так в английском не говорят."
+    },
+    {
+      "type": "gap",
+      "sentence": "The device ___ I bought last week has already stopped working.",
+      "translation": "Устройство, которое я купил на прошлой неделе, уже перестало работать.",
+      "options": ["which", "who", "what", "where"],
+      "answer": 0,
+      "explanation": "Device — предмет, поэтому which (или that). What не может стоять после существительного в значении «который» — это частая ошибка из-за русского «что»."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "a neighbour", "ru": "сосед" },
+        { "en": "a landlord", "ru": "хозяин съёмной квартиры" },
+        { "en": "to hire", "ru": "нанимать" },
+        { "en": "a device", "ru": "устройство" },
+        { "en": "to rent", "ru": "снимать, арендовать" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Это квартира, которую мы хотим снять.",
+      "answer": "This is the flat that we want to rent.",
+      "accept": ["This is the flat which we want to rent.", "This is the flat we want to rent.", "This is the apartment that we want to rent.", "This is the apartment which we want to rent.", "This is the apartment we want to rent."],
+      "distractors": ["what", "who", "it"],
+      "explanation": "That заменяет слово «квартира» в придаточном, поэтому it в конце не нужно: «that we want to rent it» — типичная ошибка. Перед flat стоит the, потому что придаточное указывает на конкретную квартиру."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["The landlord who owns our flat lives abroad.", "The landlord which owns our flat lives abroad.", "The landlord who owns our flat he lives abroad.", "The landlord what owns our flat lives abroad."],
+      "answer": 0,
+      "explanation": "Для человека нужно who. Подлежащее the landlord уже есть, поэтому повторять его местоимением he после придаточного нельзя."
+    },
+    {
+      "type": "gap",
+      "sentence": "We've hired a designer ___ portfolio really impressed us.",
+      "translation": "Мы наняли дизайнера, портфолио которого нас очень впечатлило.",
+      "options": ["whose", "who", "which", "that"],
+      "answer": 0,
+      "explanation": "Портфолио принадлежит дизайнеру, поэтому whose + существительное. Русское «портфолио которого» ставит слово «которого» после существительного, а в английском whose всегда стоит перед ним."
+    },
+    {
+      "type": "listen",
+      "audio": "This is the restaurant that my neighbour recommended.",
+      "question": "Что вы услышали?",
+      "options": ["This is the restaurant that my neighbour recommended.", "This is the restaurant what my neighbour recommended.", "This is the restaurant that my neighbour recommends.", "This is the restaurant where my neighbour recommended."],
+      "answer": 0,
+      "explanation": "That здесь значит «который» и относится к ресторану. Окончание -ed в recommended показывает, что сосед посоветовал ресторан в прошлом."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении слово that можно опустить?",
+      "options": ["The film that we watched was boring.", "The film that won the prize was boring.", "The people that live upstairs are noisy."],
+      "answer": 0,
+      "explanation": "В первом предложении после that идёт новое подлежащее we, то есть that — дополнение, и его можно убрать: The film we watched. В двух других that само является подлежащим придаточного, без него предложение развалится."
+    },
+    {
+      "type": "translate",
+      "source": "Мы наняли человека, который говорит по-китайски.",
+      "answer": "We hired a person who speaks Chinese.",
+      "accept": ["We hired a person that speaks Chinese.", "We have hired a person who speaks Chinese.", "We've hired a person who speaks Chinese.", "We hired someone who speaks Chinese.", "We hired somebody who speaks Chinese.", "We've hired someone who speaks Chinese."],
+      "distractors": ["which", "speak", "he"],
+      "explanation": "О человеке — who, а не which. Глагол в придаточном согласуется со словом person, поэтому speaks с окончанием -s; местоимение he после who не ставится."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "a2-03",
+  "level": "A2",
+  "order": 3,
+  "title": { "ru": "Сейчас или обычно: Present Continuous и Present Simple", "en": "Present Continuous vs Present Simple" },
+  "goal": { "ru": "Научитесь различать то, что происходит сейчас, и то, что вы делаете обычно.", "en": "Learn to tell what is happening now from what you usually do." },
+  "theory": [
+    {
+      "title": "Обычно или прямо сейчас?",
+      "body": "Present Simple описывает привычки и факты: I work in a bank. Present Continuous (am / is / are + глагол с -ing) описывает то, что происходит в момент речи или временно, в этот период: I'm working from home today. В русском оба случая — просто «работаю», поэтому время приходится выбирать по смыслу.",
+      "examples": [
+        { "en": "She usually drinks tea in the morning.", "ru": "По утрам она обычно пьёт чай." },
+        { "en": "She is drinking coffee now.", "ru": "Сейчас она пьёт кофе." },
+        { "en": "I'm reading a good book this week.", "ru": "На этой неделе я читаю хорошую книгу." }
+      ],
+      "tip": "Подсказки для Simple: usually, always, often, every day. Для Continuous: now, right now, at the moment, today, this week."
+    },
+    {
+      "title": "Не теряйте am / is / are",
+      "body": "В Present Continuous всегда две части: форма be и глагол с -ing. «I working» — самая частая ошибка, потому что в русском глагола-связки нет. В отрицании добавляем not к be, в вопросе be выходит вперёд — помощник do здесь не нужен.",
+      "examples": [
+        { "en": "He isn't sleeping, he's watching a series.", "ru": "Он не спит, он смотрит сериал." },
+        { "en": "Are you listening to me?", "ru": "Ты меня слушаешь?" }
+      ]
+    },
+    {
+      "title": "Глаголы состояния",
+      "body": "Глаголы, которые называют не действие, а состояние — know, want, like, need, understand, believe, — в Continuous не употребляются, даже если речь о настоящем моменте. Говорим I want, а не «I'm wanting».",
+      "examples": [
+        { "en": "I want a coffee right now.", "ru": "Я хочу кофе прямо сейчас." },
+        { "en": "Do you know this man?", "ru": "Вы знаете этого человека?" }
+      ],
+      "tip": "Проверка: если действие нельзя «увидеть в процессе» (знать, хотеть, понимать), выбирайте Present Simple."
+    }
+  ],
+  "vocab": [
+    { "en": "right now", "ru": "прямо сейчас", "example": "I can't talk right now." },
+    { "en": "at the moment", "ru": "в данный момент", "example": "He is busy at the moment." },
+    { "en": "usually", "ru": "обычно", "example": "We usually have lunch at one." },
+    { "en": "to stay", "ru": "останавливаться, временно жить", "example": "They are staying with friends in Berlin." },
+    { "en": "to look for", "ru": "искать", "example": "She is looking for a new job." },
+    { "en": "to need", "ru": "нуждаться", "example": "I need a bigger suitcase." },
+    { "en": "to understand", "ru": "понимать", "example": "Sorry, I don't understand." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "I'm looking for my keys.",
+      "question": "Что вы услышали?",
+      "options": ["I'm looking for my keys.", "I look for my keys.", "I'm looking at my keys.", "I was looking for my keys."],
+      "answer": 0,
+      "explanation": "Действие происходит сейчас, поэтому I'm looking. Обратите внимание на предлог: look for — «искать», а look at — «смотреть на»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Dmitry usually ___ to work, but today he is taking the metro.",
+      "translation": "Дмитрий обычно ездит на работу на машине, но сегодня он едет на метро.",
+      "options": ["is driving", "drives", "drive", "driving"],
+      "answer": 1,
+      "explanation": "Usually говорит о привычке — нужен Present Simple, а для he не забудьте окончание -s: drives. Во второй части today, поэтому там Continuous."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вам звонят, но вы заняты. Как сказать «Я сейчас работаю»?",
+      "options": ["I'm working right now.", "I work right now.", "I working right now.", "I am work right now."],
+      "answer": 0,
+      "explanation": "Действие в момент речи — Present Continuous: am + working. Нужны обе части: без am («I working») или без -ing («I am work») предложение неправильное."
+    },
+    {
+      "type": "translate",
+      "source": "Я не понимаю этот вопрос.",
+      "answer": "I don't understand this question.",
+      "accept": ["I do not understand this question."],
+      "distractors": ["am", "understanding", "not"],
+      "explanation": "Understand — глагол состояния, он не употребляется в Continuous, даже когда речь о настоящем моменте. Поэтому I don't understand, а не «I'm not understanding»."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "right now", "ru": "прямо сейчас" },
+        { "en": "at the moment", "ru": "в данный момент" },
+        { "en": "usually", "ru": "обычно" },
+        { "en": "to look for", "ru": "искать" },
+        { "en": "to need", "ru": "нуждаться" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "Be quiet, please. The baby ___.",
+      "translation": "Тише, пожалуйста. Малыш спит.",
+      "options": ["sleeps", "is sleeping", "sleeping", "sleep"],
+      "answer": 1,
+      "explanation": "Малыш спит прямо сейчас — это видно из просьбы не шуметь, поэтому is sleeping. Sleeps означало бы привычку: The baby sleeps a lot."
+    },
+    {
+      "type": "translate",
+      "source": "На этой неделе мы живём в отеле.",
+      "answer": "We are staying at a hotel this week.",
+      "accept": [
+        "We're staying at a hotel this week.",
+        "We are staying in a hotel this week.",
+        "We're staying in a hotel this week.",
+        "We are staying at the hotel this week.",
+        "We're staying at the hotel this week.",
+        "This week we are staying at a hotel.",
+        "This week we're staying at a hotel.",
+        "This week we are staying in a hotel.",
+        "This week we're staying in a hotel."
+      ],
+      "distractors": ["stay", "live", "on"],
+      "explanation": "Временная ситуация (this week) требует Present Continuous. О временном жилье говорят stay, а live — о постоянном доме."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I'm wanting a cup of tea.", "I want a cup of tea.", "I wanting a cup of tea.", "I am want a cup of tea."],
+      "answer": 1,
+      "explanation": "Want — глагол состояния, он всегда в Present Simple: I want. Форма «I'm wanting» — калька с логики «хочу сейчас»."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you need any help with your luggage?",
+      "translation": "Вам нужна помощь с багажом?",
+      "options": ["Are", "Do", "Is", "Does"],
+      "answer": 1,
+      "explanation": "Need — глагол состояния, поэтому вопрос строится в Present Simple с помощником do: Do you need…? Are подошло бы только к форме с -ing."
+    },
+    {
+      "type": "listen",
+      "audio": "My sister works in a hospital, but this month she is working from home.",
+      "question": "Где сестра работает в этом месяце?",
+      "options": ["Дома", "В больнице", "В офисе", "Она сейчас не работает"],
+      "answer": 0,
+      "explanation": "Works in a hospital — постоянное место работы (Simple). Is working from home — временная ситуация в этом месяце (Continuous)."
+    },
+    {
+      "type": "translate",
+      "source": "Что ты сейчас готовишь?",
+      "answer": "What are you cooking right now?",
+      "accept": ["What are you cooking now?", "What are you cooking at the moment?", "What are you making right now?", "What are you making now?"],
+      "distractors": ["do", "cook", "is"],
+      "explanation": "Вопрос о действии в данный момент: are выходит вперёд, глагол с -ing. «What do you cook?» спрашивало бы о том, что человек готовит обычно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение говорит о привычке, а не о действии в данный момент?",
+      "options": ["She is reading a book.", "She reads before bed every night.", "She is reading at the moment.", "She isn't reading right now."],
+      "answer": 1,
+      "explanation": "Every night — регулярное действие, поэтому Present Simple: reads. Остальные предложения стоят в Continuous и описывают текущий момент."
+    }
+  ]
+}

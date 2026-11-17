@@ -1,0 +1,144 @@
+{
+  "id": "a2-02",
+  "level": "A2",
+  "order": 2,
+  "title": { "ru": "Прошедшее время: неправильные глаголы", "en": "Past Simple: irregular verbs" },
+  "goal": { "ru": "Научитесь рассказывать о поездках и событиях с глаголами went, saw, bought, had.", "en": "Learn to talk about trips and events with went, saw, bought and had." },
+  "theory": [
+    {
+      "title": "Вторая форма вместо -ed",
+      "body": "У неправильных глаголов нет окончания -ed: прошедшую форму нужно запомнить. Go → went, see → saw, buy → bought, have → had, take → took. Форма одна для всех лиц: I went, she went, they went.",
+      "examples": [
+        { "en": "We went to Sochi last summer.", "ru": "Мы ездили в Сочи прошлым летом." },
+        { "en": "I saw Anna at the station.", "ru": "Я видел Анну на вокзале." },
+        { "en": "She bought a new phone.", "ru": "Она купила новый телефон." }
+      ],
+      "tip": "Учите глаголы группами с похожим звучанием: buy — bought, bring — brought, think — thought."
+    },
+    {
+      "title": "Отрицание и вопрос: снова did",
+      "body": "Правило то же, что и для правильных глаголов: в отрицании и вопросе работает did, а основной глагол возвращается в начальную форму. «I didn't went» и «Did you saw?» — типичные ошибки.",
+      "examples": [
+        { "en": "I didn't go to the gym on Monday.", "ru": "Я не ходил в спортзал в понедельник." },
+        { "en": "Did you take your passport?", "ru": "Ты взял паспорт?" }
+      ],
+      "tip": "Вторая форма (went, saw, took) живёт только в утвердительных предложениях."
+    },
+    {
+      "title": "Глагол be: was и were",
+      "body": "У глагола be две прошедшие формы: was (I, he, she, it) и were (you, we, they). Ему не нужен помощник did: отрицание — wasn't / weren't, в вопросе was / were просто выходит вперёд.",
+      "examples": [
+        { "en": "The flight was late.", "ru": "Рейс опоздал." },
+        { "en": "Were you at home last night?", "ru": "Ты был дома вчера вечером?" },
+        { "en": "We weren't tired.", "ru": "Мы не устали." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "went", "ru": "ходил, ездил (от go)", "example": "They went to the cinema on Friday." },
+    { "en": "saw", "ru": "видел (от see)", "example": "I saw a great film last week." },
+    { "en": "bought", "ru": "купил (от buy)", "example": "He bought some flowers for his wife." },
+    { "en": "had", "ru": "имел; провёл, съел (от have)", "example": "We had lunch in a small café." },
+    { "en": "took", "ru": "взял (от take)", "example": "She took the wrong bag." },
+    { "en": "ate", "ru": "ел (от eat)", "example": "The children ate all the cake." },
+    { "en": "met", "ru": "встретил, познакомился (от meet)", "example": "I met my best friend at university." },
+    { "en": "spent", "ru": "потратил, провёл (от spend)", "example": "We spent three days in Vienna." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "We ___ to Georgia last summer.",
+      "translation": "Мы ездили в Грузию прошлым летом.",
+      "options": ["goed", "went", "go", "gone"],
+      "answer": 1,
+      "explanation": "Go — неправильный глагол, его прошедшая форма — went, а не «goed». Gone — это третья форма, она не используется одна, без have."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Я не видел твоё сообщение».",
+      "options": ["I didn't saw your message.", "I didn't see your message.", "I not saw your message.", "I don't saw your message."],
+      "answer": 1,
+      "explanation": "После didn't глагол стоит в начальной форме: see, а не saw. Прошедшее время уже показано в did."
+    },
+    {
+      "type": "translate",
+      "source": "Она купила билеты два дня назад.",
+      "answer": "She bought the tickets two days ago.",
+      "accept": ["She bought tickets two days ago.", "She bought the tickets 2 days ago.", "Two days ago she bought the tickets."],
+      "distractors": ["buyed", "buy", "before"],
+      "explanation": "Buy → bought: формы «buyed» не существует. «Назад» — это ago, и оно стоит после отрезка времени: two days ago."
+    },
+    {
+      "type": "listen",
+      "audio": "I took a taxi to the airport.",
+      "question": "Как этот человек добрался до аэропорта?",
+      "options": ["На такси", "На автобусе", "На поезде", "На своей машине"],
+      "answer": 0,
+      "explanation": "Took — прошедшая форма take. «Взять такси» по-английски — take a taxi, а не «go on taxi»."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "went", "ru": "ходил, ездил" },
+        { "en": "saw", "ru": "видел" },
+        { "en": "bought", "ru": "купил" },
+        { "en": "took", "ru": "взял" },
+        { "en": "ate", "ru": "ел" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "Where did you ___ your husband?",
+      "translation": "Где вы познакомились с мужем?",
+      "options": ["met", "meet", "meeted", "meeting"],
+      "answer": 1,
+      "explanation": "В вопросе с did глагол стоит в начальной форме: meet. Форма met нужна только в утверждении: I met him at work."
+    },
+    {
+      "type": "translate",
+      "source": "Мы хорошо провели время в Стамбуле.",
+      "answer": "We had a good time in Istanbul.",
+      "accept": ["We had a great time in Istanbul.", "We had a nice time in Istanbul.", "We had a lovely time in Istanbul."],
+      "distractors": ["spent", "have", "did"],
+      "explanation": "«Хорошо провести время» — устойчивое выражение have a good time, в прошлом had a good time. Дословное «spent a good time» звучит неестественно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите вопрос без ошибки.",
+      "options": ["Did you ate breakfast?", "Did you eat breakfast?", "Do you ate breakfast?", "Were you eat breakfast?"],
+      "answer": 1,
+      "explanation": "Вопрос о прошлом строится с did и начальной формой: Did you eat…? Were используется только с глаголом be, а не с обычными глаголами."
+    },
+    {
+      "type": "listen",
+      "audio": "We met at a conference in Kazan.",
+      "question": "Что вы услышали?",
+      "options": ["We met at a conference in Kazan.", "We meet at a conference in Kazan.", "We met after a conference in Kazan.", "We were at a conference in Kazan."],
+      "answer": 0,
+      "explanation": "Met — прошедшая форма meet: краткий звук «е» вместо долгого «и». На слух эти формы различаются только гласной."
+    },
+    {
+      "type": "gap",
+      "sentence": "The hotel ___ very clean, and the staff were friendly.",
+      "translation": "Отель был очень чистым, а персонал — приветливым.",
+      "options": ["were", "did", "was", "be"],
+      "answer": 2,
+      "explanation": "The hotel — это it, поэтому was. Русский часто пропускает «был», но в английском предложении глагол be обязателен."
+    },
+    {
+      "type": "translate",
+      "source": "Сколько ты потратил вчера?",
+      "answer": "How much did you spend yesterday?",
+      "accept": ["How much money did you spend yesterday?"],
+      "distractors": ["spent", "many", "was"],
+      "explanation": "После did — начальная форма spend, а не spent. О деньгах спрашиваем how much, потому что money — неисчисляемое слово."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая форма прошедшего времени у глагола buy?",
+      "options": ["buyed", "bought", "brought", "boughted"],
+      "answer": 1,
+      "explanation": "Buy → bought. Не путайте с brought — это прошедшая форма bring (приносить): лишняя буква r меняет смысл."
+    }
+  ]
+}

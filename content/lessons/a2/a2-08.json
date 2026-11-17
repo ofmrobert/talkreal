@@ -1,0 +1,143 @@
+{
+  "id": "a2-08",
+  "level": "A2",
+  "order": 8,
+  "title": { "ru": "Артикли: a / an, the или ничего", "en": "Articles: a / an, the, or nothing" },
+  "goal": { "ru": "Разберитесь, когда нужен артикль и какой именно.", "en": "Understand when you need an article and which one." },
+  "theory": [
+    {
+      "title": "A / an: один из многих",
+      "body": "Исчисляемое существительное в единственном числе не может стоять «голым»: ему нужен артикль или слово вроде my, this. A / an ставим, когда называем предмет впервые или говорим, кто человек по профессии. В русском артиклей нет, поэтому их чаще всего просто забывают: «She is doctor» — ошибка.",
+      "examples": [
+        { "en": "I have a brother and a sister.", "ru": "У меня есть брат и сестра." },
+        { "en": "She is a doctor.", "ru": "Она врач." },
+        { "en": "He works in an office.", "ru": "Он работает в офисе." }
+      ],
+      "tip": "An ставится перед гласным звуком, а не буквой: an hour (h не читается), но a university (слово начинается со звука [j])."
+    },
+    {
+      "title": "The: понятно, какой именно",
+      "body": "The показывает, что и вы, и собеседник понимаете, о каком предмете речь: он уже упоминался, он единственный (the sun) или ясен из ситуации (the kitchen, the station). Мысленно подставьте «этот» или «тот самый» — если подходит, нужен the.",
+      "examples": [
+        { "en": "I bought a jacket. The jacket was expensive.", "ru": "Я купил куртку. Куртка была дорогой." },
+        { "en": "Where is the bathroom?", "ru": "Где ванная?" }
+      ]
+    },
+    {
+      "title": "Без артикля",
+      "body": "Артикль не нужен, когда мы говорим о чём-то в целом — с множественным числом и неисчисляемыми словами: I like coffee, cats are clever. Без артикля используются и многие устойчивые выражения: at home, at work, go to bed, by bus, have breakfast, а также большинство названий городов и стран.",
+      "examples": [
+        { "en": "I don't eat meat.", "ru": "Я не ем мясо." },
+        { "en": "Children learn languages quickly.", "ru": "Дети быстро учат языки." },
+        { "en": "She goes to work by car.", "ru": "Она ездит на работу на машине." }
+      ],
+      "tip": "Сравните: I like music (музыку вообще) — I like the music in this café (конкретную музыку)."
+    }
+  ],
+  "vocab": [
+    { "en": "engineer", "ru": "инженер", "example": "My father was an engineer." },
+    { "en": "hour", "ru": "час", "example": "The lesson lasts an hour." },
+    { "en": "station", "ru": "вокзал, станция", "example": "The station is five minutes from here." },
+    { "en": "at work", "ru": "на работе", "example": "I'm at work until six." },
+    { "en": "by bus", "ru": "на автобусе", "example": "It takes forty minutes by bus." },
+    { "en": "breakfast", "ru": "завтрак", "example": "What do you have for breakfast?" },
+    { "en": "neighbour", "ru": "сосед, соседка", "example": "Our neighbour plays the piano." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Моя сестра — инженер»?",
+      "options": ["My sister is an engineer.", "My sister is engineer.", "My sister is a engineer.", "My sister an engineer."],
+      "answer": 0,
+      "explanation": "Перед профессией в единственном числе нужен артикль a / an — русскоговорящие часто его пропускают. Engineer начинается с гласного звука, поэтому an."
+    },
+    {
+      "type": "listen",
+      "audio": "I waited for the bus for twenty minutes.",
+      "question": "Что вы услышали?",
+      "options": ["I waited for the bus for twenty minutes.", "I wanted the bus for twenty minutes.", "I waited for the boss for twenty minutes.", "I waited for the bus for twelve minutes."],
+      "answer": 0,
+      "explanation": "The bus — конкретный автобус, которого ждал говорящий, поэтому the. Запомните и предлог: wait for — «ждать кого-то или что-то»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I have ___ breakfast at seven every day.",
+      "translation": "Я завтракаю в семь каждый день.",
+      "options": ["a", "the", "an", "— (без артикля)"],
+      "answer": 3,
+      "explanation": "Названия приёмов пищи в общем смысле употребляются без артикля: have breakfast, have lunch, have dinner."
+    },
+    {
+      "type": "translate",
+      "source": "Мы встретились на вокзале.",
+      "answer": "We met at the station.",
+      "accept": ["We met at the train station.", "We met at the railway station."],
+      "distractors": ["on", "to", "meet"],
+      "explanation": "Вокзал понятен из ситуации (оба знают, о каком речь), поэтому the station. Русское «на» здесь — at, а не on."
+    },
+    {
+      "type": "gap",
+      "sentence": "We rented a flat last month. ___ flat is small but very light.",
+      "translation": "В прошлом месяце мы сняли квартиру. Квартира маленькая, но очень светлая.",
+      "options": ["A", "The", "An"],
+      "answer": 1,
+      "explanation": "При первом упоминании — a flat, при втором — the flat: теперь собеседник уже знает, о какой квартире идёт речь."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "engineer", "ru": "инженер" },
+        { "en": "hour", "ru": "час" },
+        { "en": "station", "ru": "вокзал" },
+        { "en": "breakfast", "ru": "завтрак" },
+        { "en": "neighbour", "ru": "сосед" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I go to work by bus.", "I go to work by the bus.", "I go to the work by bus.", "I go to work on bus."],
+      "answer": 0,
+      "explanation": "Go to work и by bus — устойчивые выражения без артикля. Способ передвижения всегда by + транспорт без артикля: by bus, by car, by train."
+    },
+    {
+      "type": "translate",
+      "source": "У моего соседа есть собака.",
+      "answer": "My neighbour has a dog.",
+      "accept": ["My neighbor has a dog.", "My neighbour has got a dog.", "My neighbor has got a dog.", "My neighbour's got a dog.", "My neighbor's got a dog."],
+      "distractors": ["an", "have", "is"],
+      "explanation": "Собака упоминается впервые, это «какая-то одна собака» — нужен артикль a. С my neighbour глагол имеет форму has, а не have."
+    },
+    {
+      "type": "listen",
+      "audio": "She works as a nurse at the hospital near the station.",
+      "question": "Кем работает эта женщина?",
+      "options": ["Медсестрой", "Врачом", "Инженером", "Кассиром на вокзале"],
+      "answer": 0,
+      "explanation": "Works as a nurse — «работает медсестрой»: перед профессией стоит a. The hospital и the station — конкретные места, известные собеседнику."
+    },
+    {
+      "type": "gap",
+      "sentence": "Is there ___ pharmacy near here?",
+      "translation": "Здесь поблизости есть аптека?",
+      "options": ["the", "a", "an", "— (без артикля)"],
+      "answer": 1,
+      "explanation": "Мы спрашиваем о любой аптеке, а не о конкретной, поэтому a. После there is / is there почти всегда стоит a / an, а не the."
+    },
+    {
+      "type": "translate",
+      "source": "Я люблю кофе, но не люблю чай.",
+      "answer": "I like coffee, but I don't like tea.",
+      "accept": ["I like coffee but I do not like tea.", "I love coffee, but I don't like tea.", "I love coffee but I do not like tea.", "I like coffee, but I don't love tea.", "I like coffee, but not tea."],
+      "distractors": ["the", "a", "am"],
+      "explanation": "Речь о кофе и чае вообще, как о напитках, поэтому артикль не нужен. The coffee означало бы конкретный кофе, например тот, что стоит на столе."
+    },
+    {
+      "type": "choice",
+      "prompt": "Перед каким словом нужен артикль an?",
+      "options": ["hour", "hotel", "university", "house"],
+      "answer": 0,
+      "explanation": "В слове hour буква h не произносится, оно начинается с гласного звука: an hour. University начинается со звука [j], поэтому a university."
+    }
+  ]
+}

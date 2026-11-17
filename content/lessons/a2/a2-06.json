@@ -1,0 +1,154 @@
+{
+  "id": "a2-06",
+  "level": "A2",
+  "order": 6,
+  "title": { "ru": "Сколько? Some, any, much, many", "en": "Countable and uncountable nouns: some, any, much, many" },
+  "goal": { "ru": "Научитесь говорить о количестве еды, денег и вещей.", "en": "Learn to talk about amounts of food, money and things." },
+  "theory": [
+    {
+      "title": "Исчисляемые и неисчисляемые",
+      "body": "Исчисляемые существительные можно посчитать: an apple, two apples. Неисчисляемые — нельзя: water, money, bread, luggage, information, advice. У них нет множественного числа и перед ними не ставят a / an. Русские «советы» и «деньги» вводят в заблуждение: «advices» и «a money» — ошибки.",
+      "examples": [
+        { "en": "I need some information about the tour.", "ru": "Мне нужна информация о туре." },
+        { "en": "Money is not the main thing.", "ru": "Деньги — не главное." },
+        { "en": "Can I have a glass of water?", "ru": "Можно мне стакан воды?" }
+      ],
+      "tip": "Чтобы посчитать неисчисляемое, добавьте «упаковку»: a piece of advice, a bottle of water, two cups of coffee."
+    },
+    {
+      "title": "Some и any",
+      "body": "Some («несколько, немного») стоит в утвердительных предложениях, any — в отрицаниях и вопросах. Оба слова подходят и к исчисляемым во множественном числе, и к неисчисляемым. На русский их часто не переводят, но в английском они нужны.",
+      "examples": [
+        { "en": "There are some tomatoes in the bag.", "ru": "В пакете есть помидоры." },
+        { "en": "We don't have any eggs.", "ru": "У нас нет яиц." },
+        { "en": "Do you have any questions?", "ru": "У вас есть вопросы?" }
+      ]
+    },
+    {
+      "title": "Much, many, a lot of",
+      "body": "Many — с исчисляемыми, much — с неисчисляемыми: how many people, how much time. Оба слова чаще встречаются в вопросах и отрицаниях. В утверждении естественнее a lot of, оно подходит к любым существительным.",
+      "examples": [
+        { "en": "How many days are you staying?", "ru": "На сколько дней вы остаётесь?" },
+        { "en": "I don't have much time.", "ru": "У меня не много времени." },
+        { "en": "She drinks a lot of coffee.", "ru": "Она пьёт много кофе." }
+      ],
+      "tip": "Русское «сколько» — это и how much, и how many. Проверяйте: можно ли посчитать предметы поштучно?"
+    }
+  ],
+  "vocab": [
+    { "en": "money", "ru": "деньги", "example": "I left my money at home." },
+    { "en": "advice", "ru": "совет, советы", "example": "Thank you for your advice." },
+    { "en": "luggage", "ru": "багаж", "example": "Your luggage is very heavy." },
+    { "en": "bread", "ru": "хлеб", "example": "This bread is still warm." },
+    { "en": "fridge", "ru": "холодильник", "example": "Put the butter in the fridge." },
+    { "en": "a bottle of", "ru": "бутылка (чего-то)", "example": "He bought a bottle of juice." },
+    { "en": "a piece of", "ru": "кусок, часть (чего-то)", "example": "Would you like a piece of cake?" }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "У нас в холодильнике нет молока.",
+      "answer": "We don't have any milk in the fridge.",
+      "accept": [
+        "We do not have any milk in the fridge.",
+        "We don't have milk in the fridge.",
+        "We do not have milk in the fridge.",
+        "We haven't got any milk in the fridge.",
+        "We have no milk in the fridge.",
+        "There isn't any milk in the fridge.",
+        "There is no milk in the fridge.",
+        "There's no milk in the fridge.",
+        "There isn't any milk in our fridge.",
+        "There is no milk in our fridge."
+      ],
+      "distractors": ["some", "many", "a"],
+      "explanation": "В отрицании используем any, а не some. Milk — неисчисляемое, поэтому «a milk» и «many milk» невозможны."
+    },
+    {
+      "type": "gap",
+      "sentence": "How ___ luggage do you have?",
+      "translation": "Сколько у вас багажа?",
+      "options": ["many", "much", "a lot", "any"],
+      "answer": 1,
+      "explanation": "Luggage — неисчисляемое слово, поэтому how much. Many подошло бы к тому, что можно посчитать: How many bags do you have?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She gave me some good advice.", "She gave me a good advice.", "She gave me good advices.", "She gave me many advices."],
+      "answer": 0,
+      "explanation": "Advice в английском неисчисляемое: у него нет множественного числа и перед ним нельзя ставить a. Один совет — a piece of advice."
+    },
+    {
+      "type": "listen",
+      "audio": "There aren't many people in the office today.",
+      "question": "Сколько людей сегодня в офисе?",
+      "options": ["Мало", "Много", "Никого нет", "Больше, чем обычно"],
+      "answer": 0,
+      "explanation": "Aren't many — «не много», то есть мало. People — исчисляемое слово во множественном числе, поэтому many, а не much."
+    },
+    {
+      "type": "gap",
+      "sentence": "There is ___ bread on the table. Help yourself!",
+      "translation": "На столе есть хлеб. Угощайтесь!",
+      "options": ["any", "a", "some", "many"],
+      "answer": 2,
+      "explanation": "В утверждении используем some. Bread — неисчисляемое, поэтому «a bread» нельзя, а any стоит в вопросах и отрицаниях."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "money", "ru": "деньги" },
+        { "en": "advice", "ru": "совет" },
+        { "en": "luggage", "ru": "багаж" },
+        { "en": "bread", "ru": "хлеб" },
+        { "en": "a piece of", "ru": "кусок" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Сколько денег тебе нужно?",
+      "answer": "How much money do you need?",
+      "distractors": ["many", "are", "does"],
+      "explanation": "Money — неисчисляемое, хотя по-русски «деньги» во множественном числе. Поэтому how much money, а не «how many money»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы в магазине. Как спросить «У вас есть яблоки?»",
+      "options": ["Do you have any apples?", "Do you have any apple?", "Do you have much apples?", "Do you have an apples?"],
+      "answer": 0,
+      "explanation": "В вопросе используем any, а исчисляемое слово после него ставим во множественное число: any apples. Much не сочетается с исчисляемыми."
+    },
+    {
+      "type": "gap",
+      "sentence": "I don't eat ___ meat, only once or twice a month.",
+      "translation": "Я ем не много мяса, только раз или два в месяц.",
+      "options": ["many", "a lot", "much", "some"],
+      "answer": 2,
+      "explanation": "Meat — неисчисляемое, в отрицании используем much. A lot без of перед существительным не ставится: нужно a lot of meat."
+    },
+    {
+      "type": "listen",
+      "audio": "Could I have a bottle of water, please?",
+      "question": "Что вы услышали?",
+      "options": ["Could I have a bottle of water, please?", "Could I have a little water, please?", "Could I have a glass of water, please?", "Can I have a bottle of water, please?"],
+      "answer": 0,
+      "explanation": "Water нельзя посчитать, поэтому считаем бутылки: a bottle of water. Could I have…? — вежливая просьба, чуть мягче, чем Can I have…?"
+    },
+    {
+      "type": "translate",
+      "source": "У меня много друзей в Москве.",
+      "answer": "I have a lot of friends in Moscow.",
+      "accept": ["I have many friends in Moscow.", "I have lots of friends in Moscow.", "I've got a lot of friends in Moscow.", "I have got a lot of friends in Moscow.", "I've got many friends in Moscow."],
+      "distractors": ["much", "friend", "any"],
+      "explanation": "В утверждении естественнее всего a lot of. Friends можно посчитать, поэтому much здесь нельзя, а само слово стоит во множественном числе."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое из этих слов неисчисляемое?",
+      "options": ["information", "question", "answer", "idea"],
+      "answer": 0,
+      "explanation": "Information не имеет множественного числа и не сочетается с an: «informations» — ошибка. Одно сообщение — a piece of information."
+    }
+  ]
+}

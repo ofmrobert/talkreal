@@ -1,0 +1,184 @@
+{
+  "id": "b2-04",
+  "level": "B2",
+  "order": 4,
+  "title": { "ru": "Пассив продвинутого уровня", "en": "Advanced passive structures" },
+  "goal": { "ru": "Научитесь говорить об услугах, которые для вас выполняют другие, и передавать слухи и мнения, как в новостях.", "en": "Learn to talk about services other people do for you and to report rumours and opinions the way the news does." },
+  "theory": [
+    {
+      "title": "Have something done: «мне сделали»",
+      "body": "Когда действие выполняем не мы сами, а кто-то по нашей просьбе или за деньги, используем have + объект + третья форма глагола. По-русски мы говорим «я постригся», «я починил машину», даже если это делал мастер, — в английском I cut my hair значит, что вы стригли себя сами. Порядок слов строгий: объект стоит перед третьей формой.",
+      "examples": [
+        { "en": "I had my laptop repaired last week.", "ru": "Мне на прошлой неделе починили ноутбук." },
+        { "en": "We are having the office redecorated.", "ru": "Нам сейчас делают косметический ремонт в офисе." }
+      ],
+      "tip": "В разговорной речи вместо have часто говорят get: I need to get my eyes tested."
+    },
+    {
+      "title": "It is said that…",
+      "body": "Чтобы передать общее мнение или слух, не называя источник, начинаем с It + пассив: It is said / believed / thought / reported / rumoured that… Это соответствует русским «говорят, что», «считается, что», «сообщается, что». Подлежащее it обязательно: английское предложение не может начинаться с глагола.",
+      "examples": [
+        { "en": "It is believed that the fire started in the kitchen.", "ru": "Считается, что пожар начался на кухне." },
+        { "en": "It is reported that two people were injured.", "ru": "Сообщается, что пострадали два человека." }
+      ]
+    },
+    {
+      "title": "He is said to…",
+      "body": "То же самое можно сказать иначе, поставив человека или предмет в начало: подлежащее + is said / believed / thought + инфинитив. Форма инфинитива показывает время: to be — сейчас или вообще, to be doing — в процессе, to have done — раньше, в прошлом. Смешивать две модели нельзя: «He is said that he…» — ошибка.",
+      "examples": [
+        { "en": "The CEO is said to earn two million a year.", "ru": "Говорят, что генеральный директор зарабатывает два миллиона в год." },
+        { "en": "The thieves are thought to have escaped through the roof.", "ru": "Полагают, что воры скрылись через крышу." }
+      ],
+      "tip": "Если событие уже произошло, нужен перфектный инфинитив: is believed to have left, а не is believed to leave."
+    }
+  ],
+  "vocab": [
+    { "en": "to renew", "ru": "продлить (документ, договор)", "example": "You can renew your licence online." },
+    { "en": "to renovate", "ru": "делать ремонт, обновлять", "example": "They renovated the old factory and turned it into lofts." },
+    { "en": "to install", "ru": "установить", "example": "A technician will install the router tomorrow." },
+    { "en": "to merge", "ru": "слиться, объединиться", "example": "The two airlines merged in 2019." },
+    { "en": "to be rumoured", "ru": "ходят слухи, что", "example": "He is rumoured to be leaving the company." },
+    { "en": "suspect", "ru": "подозреваемый", "example": "The police have arrested a suspect." },
+    { "en": "to make a fortune", "ru": "сколотить состояние", "example": "She made a fortune selling handmade cosmetics." },
+    { "en": "demanding", "ru": "требовательный", "example": "Our new clients are extremely demanding." }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "Мне нужно постричься перед собеседованием.",
+      "answer": "I need to have my hair cut before the interview.",
+      "accept": [
+        "I need to get my hair cut before the interview.",
+        "I need to have a haircut before the interview.",
+        "I need to get a haircut before the interview.",
+        "I need a haircut before the interview."
+      ],
+      "distractors": ["cutted", "myself", "do"],
+      "explanation": "Стричь будет парикмахер, поэтому have my hair cut: объект стоит перед третьей формой. Cut — неправильный глагол, все три формы одинаковы; I need to cut my hair значило бы, что вы стрижёте себя сами."
+    },
+    {
+      "type": "gap",
+      "sentence": "I must have my passport ___ before the business trip.",
+      "translation": "Мне обязательно нужно продлить паспорт перед командировкой.",
+      "options": ["renewed", "renew", "renewing", "to renew"],
+      "answer": 0,
+      "explanation": "В конструкции have something done после объекта стоит третья форма: have my passport renewed. Паспорт продлевает ведомство, а не вы сами."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вашу машину чинил механик, а не вы сами. Как об этом сказать?",
+      "options": [
+        "I had my car repaired yesterday.",
+        "I repaired my car yesterday.",
+        "I had repaired my car yesterday.",
+        "I have repaired my car yesterday."
+      ],
+      "answer": 0,
+      "explanation": "Had my car repaired — «мне починили машину». Если поменять порядок слов (had repaired my car), получится Past Perfect, и выйдет, что чинили вы сами."
+    },
+    {
+      "type": "listen",
+      "audio": "The company is believed to be losing millions every month.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The company is believed to be losing millions every month.",
+        "The company is believed to have lost millions every month.",
+        "The company believes it is losing millions every month.",
+        "The company is believing to lose millions every month."
+      ],
+      "answer": 0,
+      "explanation": "Is believed to be losing — «считается, что компания теряет» прямо сейчас: продолженный инфинитив показывает процесс. Believes в активе означало бы, что так думает сама компания."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to renew", "ru": "продлить (документ, договор)" },
+        { "en": "to renovate", "ru": "делать ремонт, обновлять" },
+        { "en": "to install", "ru": "установить" },
+        { "en": "to merge", "ru": "слиться, объединиться" },
+        { "en": "suspect", "ru": "подозреваемый" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Говорят, что новый директор очень требовательный».",
+      "options": [
+        "The new director is said to be very demanding.",
+        "The new director is said that he is very demanding.",
+        "It is said the new director to be very demanding.",
+        "The new director says to be very demanding."
+      ],
+      "answer": 0,
+      "explanation": "Есть две модели: The director is said to be… и It is said that the director is… Смешивать их нельзя: после подлежащего-человека идёт инфинитив, а that-придаточное возможно только после it."
+    },
+    {
+      "type": "gap",
+      "sentence": "It ___ that the two banks will merge next year.",
+      "translation": "Ходят слухи, что два банка объединятся в следующем году.",
+      "options": ["is rumoured", "rumours", "is rumouring", "has rumoured"],
+      "answer": 0,
+      "explanation": "Безличная модель: It + пассив + that. Слухи распространяют люди, которых мы не называем, поэтому нужен пассив — is rumoured."
+    },
+    {
+      "type": "translate",
+      "source": "Считается, что он сколотил состояние на недвижимости.",
+      "answer": "He is believed to have made a fortune in property.",
+      "accept": [
+        "He is believed to have made a fortune in real estate.",
+        "He is thought to have made a fortune in property.",
+        "He is thought to have made a fortune in real estate.",
+        "It is believed that he made a fortune in property.",
+        "It is believed that he made a fortune in real estate."
+      ],
+      "distractors": ["make", "believes", "did", "on"],
+      "explanation": "Состояние уже заработано, поэтому нужен перфектный инфинитив: to have made. «На недвижимости» — in property: предлог on здесь был бы калькой с русского."
+    },
+    {
+      "type": "listen",
+      "audio": "Olga is having her flat renovated, so she is staying with her sister this month.",
+      "question": "Кто делает ремонт в квартире Ольги?",
+      "options": [
+        "Нанятые рабочие",
+        "Ольга своими руками",
+        "Ольга вместе с сестрой",
+        "Сестра Ольги"
+      ],
+      "answer": 0,
+      "explanation": "Is having her flat renovated — ремонт делают другие люди по её заказу. Если бы Ольга работала сама, мы бы услышали She is renovating her flat."
+    },
+    {
+      "type": "gap",
+      "sentence": "The suspect is thought ___ the country two days ago.",
+      "translation": "Полагают, что подозреваемый покинул страну два дня назад.",
+      "options": ["to have left", "to leave", "that he left", "leaving"],
+      "answer": 0,
+      "explanation": "Two days ago — действие в прошлом, поэтому перфектный инфинитив: to have left. После The suspect is thought нельзя ставить that — это возможно только в модели It is thought that…"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "We're having a new security system installed on Monday.",
+        "We're having installed a new security system on Monday.",
+        "We're having a new security system install on Monday.",
+        "We're having a new security system to install on Monday."
+      ],
+      "answer": 0,
+      "explanation": "Порядок фиксированный: have + объект + третья форма. Русскоговорящие часто ставят причастие сразу после have, но тогда конструкция разрушается."
+    },
+    {
+      "type": "translate",
+      "source": "Сообщается, что переговоры прошли успешно.",
+      "answer": "The talks are reported to have been successful.",
+      "accept": [
+        "The negotiations are reported to have been successful.",
+        "It is reported that the talks were successful.",
+        "It is reported that the negotiations were successful.",
+        "The talks are reported to have gone well.",
+        "It is reported that the talks went well."
+      ],
+      "distractors": ["reporting", "was", "had"],
+      "explanation": "Переговоры уже прошли, поэтому to have been, а не to be. Talks — множественное число, отсюда are reported."
+    }
+  ]
+}

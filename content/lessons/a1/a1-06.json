@@ -1,0 +1,143 @@
+{
+  "id": "a1-06",
+  "level": "A1",
+  "order": 6,
+  "title": { "ru": "Present Simple: он, она, оно и окончание -s", "en": "Present Simple with he / she / it: the -s ending" },
+  "goal": { "ru": "Научитесь рассказывать, что обычно делают другие люди.", "en": "Learn to say what other people usually do." },
+  "theory": [
+    {
+      "title": "Окончание -s",
+      "body": "С he, she, it и с любым одним человеком или предметом (my boss, Anna, the shop) к глаголу добавляется -s: I work → he works. Это самая живучая ошибка: окончание забывают даже те, кто учит язык много лет.",
+      "examples": [
+        { "en": "She works in a hospital.", "ru": "Она работает в больнице." },
+        { "en": "My brother lives in Tbilisi.", "ru": "Мой брат живёт в Тбилиси." },
+        { "en": "The shop opens at nine.", "ru": "Магазин открывается в девять." }
+      ],
+      "tip": "Спросите себя: можно ли заменить подлежащее на he, she или it? Если да — нужно -s."
+    },
+    {
+      "title": "Правописание: -es и -ies",
+      "body": "После -s, -sh, -ch, -x и -o добавляем -es: watch → watches, go → goes, do → does. Если глагол заканчивается на согласную + y, то y меняется на -ies: study → studies. После гласной y остаётся: play → plays.",
+      "examples": [
+        { "en": "He goes to the gym after work.", "ru": "Он ходит в спортзал после работы." },
+        { "en": "She watches the news in the evening.", "ru": "Она смотрит новости вечером." },
+        { "en": "Marina studies Spanish.", "ru": "Марина учит испанский." }
+      ]
+    },
+    {
+      "title": "Особый глагол: have → has",
+      "body": "У глагола have форма для he, she, it особая: has. Слова «haves» не существует. Has используется и в выражениях: has breakfast, has a shower, has a meeting.",
+      "examples": [
+        { "en": "She has lunch at one.", "ru": "Она обедает в час." },
+        { "en": "He has a meeting every morning.", "ru": "У него совещание каждое утро." }
+      ],
+      "tip": "Если людей двое, окончания нет: Anna works, но Anna and Oleg work."
+    }
+  ],
+  "vocab": [
+    { "en": "to live", "ru": "жить", "example": "My aunt lives in Riga." },
+    { "en": "to teach", "ru": "преподавать", "example": "He teaches maths." },
+    { "en": "to watch", "ru": "смотреть", "example": "She watches films online." },
+    { "en": "to study", "ru": "учиться, изучать", "example": "Dina studies law." },
+    { "en": "to cook", "ru": "готовить", "example": "My dad cooks very well." },
+    { "en": "to drive", "ru": "водить машину, ездить на машине", "example": "She drives a small car." },
+    { "en": "boss", "ru": "начальник", "example": "My boss speaks German." },
+    { "en": "early", "ru": "рано", "example": "The bakery opens early." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Моя сестра живёт в Праге».",
+      "options": ["My sister live in Prague.", "My sister lives in Prague.", "My sister is live in Prague.", "My sister living in Prague."],
+      "answer": 1,
+      "explanation": "My sister — это she, поэтому к глаголу добавляется -s: lives. Глагол is перед live не нужен: в предложении уже есть глагол действия."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно написать форму глагола study для she?",
+      "options": ["studys", "studies", "studyes", "studis"],
+      "answer": 1,
+      "explanation": "Согласная + y: y меняется на i и добавляется -es. Study → studies, но play → plays, потому что перед y стоит гласная."
+    },
+    {
+      "type": "gap",
+      "sentence": "My boss ___ to work every day.",
+      "translation": "Мой начальник каждый день ездит на работу на машине.",
+      "options": ["drive", "drives", "is drive", "driving"],
+      "answer": 1,
+      "explanation": "My boss — один человек (he или she), поэтому drives. Every day подсказывает, что это привычка, то есть Present Simple."
+    },
+    {
+      "type": "translate",
+      "source": "Она преподаёт английский в школе.",
+      "answer": "She teaches English at school.",
+      "accept": ["She teaches English at a school.", "She teaches English in a school.", "She teaches English at the school.", "She teaches English in school."],
+      "distractors": ["teach", "is", "learns"],
+      "explanation": "С she нужен глагол с окончанием, а после -ch оно пишется как -es: teaches. Не путайте teach (преподавать) и learn (учить самому)."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to live", "ru": "жить" },
+        { "en": "to teach", "ru": "преподавать" },
+        { "en": "to cook", "ru": "готовить" },
+        { "en": "boss", "ru": "начальник" },
+        { "en": "early", "ru": "рано" }
+      ]
+    },
+    {
+      "type": "listen",
+      "audio": "My husband cooks dinner, and I wash the dishes.",
+      "question": "Кто готовит ужин?",
+      "options": ["Муж", "Жена", "Сын", "Они готовят вместе"],
+      "answer": 0,
+      "explanation": "My husband cooks dinner — ужин готовит муж. Обратите внимание на формы: husband cooks с -s, а после I глагол без окончания — I wash."
+    },
+    {
+      "type": "gap",
+      "sentence": "Ilya ___ football on TV with his friends.",
+      "translation": "Илья смотрит футбол по телевизору с друзьями.",
+      "options": ["watch", "watchs", "watches", "is watch"],
+      "answer": 2,
+      "explanation": "Ilya — это he, а после -ch окончание пишется как -es: watches. Вариант «watchs» невозможно даже произнести."
+    },
+    {
+      "type": "translate",
+      "source": "Мой сын учится в Казани.",
+      "answer": "My son studies in Kazan.",
+      "distractors": ["study", "is", "at"],
+      "explanation": "My son — это he, поэтому studies: y меняется на -ies. Перед названием города стоит in, а не at."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Her boss haves a new office.", "Her boss have a new office.", "Her boss has a new office.", "Her boss is have a new office."],
+      "answer": 2,
+      "explanation": "У глагола have особая форма для he, she, it — has. Формы «haves» не существует, а have используется с I, you, we, they."
+    },
+    {
+      "type": "listen",
+      "audio": "She gets up early and goes to the gym.",
+      "question": "Что вы услышали?",
+      "options": ["She gets up early and goes to the gym.", "She get up early and go to the gym.", "He gets up early and goes to the gym.", "She gets up early and goes to the bank."],
+      "answer": 0,
+      "explanation": "Оба действия выполняет she, поэтому окончание есть у обоих глаголов: gets и goes. У go окончание -es, потому что глагол заканчивается на -o."
+    },
+    {
+      "type": "gap",
+      "sentence": "Karina and her brother ___ in the same office.",
+      "translation": "Карина и её брат работают в одном офисе.",
+      "options": ["work", "works", "is work", "working"],
+      "answer": 0,
+      "explanation": "Карина и её брат — это два человека, то есть they, поэтому глагол без -s. Ловушка в том, что рядом с глаголом стоит слово brother в единственном числе."
+    },
+    {
+      "type": "translate",
+      "source": "Он рано встаёт каждый день.",
+      "answer": "He gets up early every day.",
+      "accept": ["Every day he gets up early.", "He gets up early each day."],
+      "distractors": ["get", "is", "stands"],
+      "explanation": "С he глагол получает -s: gets up. По-английски early стоит после глагола, а every day — в конце; «вставать» утром — это get up, а не stand."
+    }
+  ]
+}

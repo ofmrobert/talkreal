@@ -1,0 +1,184 @@
+{
+  "id": "b2-09",
+  "level": "B2",
+  "order": 9,
+  "title": { "ru": "Устойчивые сочетания с make, do, take, have", "en": "Collocations with make, do, take and have" },
+  "goal": { "ru": "Научитесь выбирать правильный глагол в устойчивых сочетаниях, а не переводить дословно с русского.", "en": "Learn to choose the right verb in common collocations instead of translating word for word from Russian." },
+  "theory": [
+    {
+      "title": "Make или do?",
+      "body": "Оба глагола переводятся как «делать», поэтому их постоянно путают. Make связан с созданием и результатом: make a decision, make a mistake, make progress, make an effort, make money. Do — с процессом, работой и занятиями: do business, do research, do homework, do someone a favour. Правило помогает не всегда, поэтому сочетания лучше заучивать целиком.",
+      "examples": [
+        { "en": "We made a profit in the first year.", "ru": "Мы получили прибыль в первый же год." },
+        { "en": "They do a lot of business with Turkey.", "ru": "Они активно ведут дела с Турцией." },
+        { "en": "Could you do me a favour?", "ru": "Можешь оказать мне услугу?" }
+      ],
+      "tip": "Русское «сделать ошибку» — всегда make a mistake. «Do a mistake» — одна из самых заметных ошибок русскоговорящих."
+    },
+    {
+      "title": "Сочетания с take",
+      "body": "Take часто означает, что мы что-то принимаем на себя или чем-то пользуемся: take a risk, take responsibility, take advantage of, take a break, take part in, take notes. В русском здесь совсем другие глаголы: рисковать, воспользоваться, сделать перерыв, участвовать.",
+      "examples": [
+        { "en": "You need to take responsibility for your team.", "ru": "Тебе нужно взять на себя ответственность за свою команду." },
+        { "en": "Let's take a ten-minute break.", "ru": "Давайте сделаем перерыв на десять минут." }
+      ]
+    },
+    {
+      "title": "Сочетания с have",
+      "body": "Have описывает события, общение и то, что мы испытываем: have an argument, have a word with someone, have a look, have a good time, have a coffee. По-русски мы не «имеем» спор или разговор, поэтому тянет подставить make или do.",
+      "examples": [
+        { "en": "Can I have a word with you after the meeting?", "ru": "Можно поговорить с тобой после совещания?" },
+        { "en": "We had a great time in Lisbon.", "ru": "Мы отлично провели время в Лиссабоне." }
+      ],
+      "tip": "В этих сочетаниях have ведёт себя как обычный глагол: Did you have an argument? We're having a break."
+    }
+  ],
+  "vocab": [
+    { "en": "to make a decision", "ru": "принять решение", "example": "The board will make a decision next week." },
+    { "en": "to make an effort", "ru": "приложить усилие, постараться", "example": "He made an effort to learn everyone's name." },
+    { "en": "to do business", "ru": "вести дела, работать (с кем-то)", "example": "It's a pleasure to do business with you." },
+    { "en": "to do research", "ru": "проводить исследование", "example": "She is doing research into sleep disorders." },
+    { "en": "to do someone a favour", "ru": "оказать кому-то услугу", "example": "Could you do me a favour and check this file?" },
+    { "en": "to take a risk", "ru": "рискнуть", "example": "Investors are not ready to take a risk right now." },
+    { "en": "to take advantage of", "ru": "воспользоваться (возможностью)", "example": "Take advantage of the early booking discount." },
+    { "en": "to have an argument", "ru": "поссориться, поспорить", "example": "They had an argument about money." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "Our team has ___ a lot of research into customer behaviour.",
+      "translation": "Наша команда провела большое исследование поведения клиентов.",
+      "options": ["done", "made", "taken", "had"],
+      "answer": 0,
+      "explanation": "Исследование — это работа и процесс, поэтому do research. Русское «провести исследование» подсказывает совсем другой глагол, так что сочетание нужно запомнить целиком."
+    },
+    {
+      "type": "translate",
+      "source": "Нам нужно принять решение до пятницы.",
+      "answer": "We need to make a decision by Friday.",
+      "accept": [
+        "We need to make a decision before Friday.",
+        "We have to make a decision by Friday.",
+        "We need to take a decision by Friday.",
+        "We need to decide by Friday.",
+        "We must make a decision by Friday."
+      ],
+      "distractors": ["accept", "do", "until", "solution"],
+      "explanation": "«Принять решение» — make a decision: глагол accept здесь будет калькой. Decision — решение-выбор, а solution — решение задачи или проблемы."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "I made a mistake in the contract.",
+        "I did a mistake in the contract.",
+        "I took a mistake in the contract.",
+        "I have done a mistake in the contract."
+      ],
+      "answer": 0,
+      "explanation": "Ошибка — это результат, «продукт» действия, поэтому make a mistake. С do это сочетание не употребляется ни в одном времени."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to make an effort", "ru": "приложить усилие, постараться" },
+        { "en": "to do business", "ru": "вести дела" },
+        { "en": "to take a risk", "ru": "рискнуть" },
+        { "en": "to take advantage of", "ru": "воспользоваться (возможностью)" },
+        { "en": "to have an argument", "ru": "поссориться, поспорить" }
+      ]
+    },
+    {
+      "type": "listen",
+      "audio": "Could you do me a favour and have a word with the supplier?",
+      "question": "О чём просит говорящий?",
+      "options": [
+        "Поговорить с поставщиком",
+        "Написать поставщику письмо",
+        "Найти нового поставщика",
+        "Поспорить с поставщиком"
+      ],
+      "answer": 0,
+      "explanation": "Have a word with someone — коротко поговорить с кем-то, обычно по делу. Не путайте с have words или have an argument — это уже ссора."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Они ведут дела с компаниями из Азии»?",
+      "options": [
+        "They do business with companies from Asia.",
+        "They make business with companies from Asia.",
+        "They lead business with companies from Asia.",
+        "They take business with companies from Asia."
+      ],
+      "answer": 0,
+      "explanation": "Устойчивое сочетание — do business with. Lead business — дословный перевод русского «вести», а make business по-английски не говорят."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's worth ___ a risk: the potential profit is huge.",
+      "translation": "Стоит рискнуть: потенциальная прибыль огромна.",
+      "options": ["taking", "making", "doing", "having"],
+      "answer": 0,
+      "explanation": "Риск «берут на себя»: take a risk. После it's worth глагол стоит в форме на -ing, поэтому taking."
+    },
+    {
+      "type": "translate",
+      "source": "Вчера я поссорился с начальником.",
+      "answer": "I had an argument with my boss yesterday.",
+      "accept": [
+        "Yesterday I had an argument with my boss.",
+        "I had an argument with the boss yesterday.",
+        "I had a row with my boss yesterday.",
+        "I argued with my boss yesterday."
+      ],
+      "distractors": ["made", "did", "chief"],
+      "explanation": "«Поссориться» — have an argument: ни make, ни do здесь не подходят. Начальник — boss; chief употребляется в названиях должностей и к обычному руководителю не относится."
+    },
+    {
+      "type": "listen",
+      "audio": "She is making real progress, but she still has to make an effort with her pronunciation.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She is making real progress, but she still has to make an effort with her pronunciation.",
+        "She is doing real progress, but she still has to do an effort with her pronunciation.",
+        "She is making real progress, but she still has to do an effort with her pronunciation.",
+        "She is taking real progress, but she still has to make an effort with her pronunciation."
+      ],
+      "answer": 0,
+      "explanation": "И progress, и effort сочетаются с make: это результат, которого добиваются. Обратите внимание: progress неисчисляемое, перед ним нет артикля a."
+    },
+    {
+      "type": "gap",
+      "sentence": "You should ___ advantage of the free training the company offers.",
+      "translation": "Тебе стоит воспользоваться бесплатным обучением, которое предлагает компания.",
+      "options": ["take", "make", "do", "use"],
+      "answer": 0,
+      "explanation": "Take advantage of — «воспользоваться» возможностью. Глагол use тоже значит «использовать», но в это устойчивое сочетание не входит: можно сказать use the free training, но не use advantage of."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении оба глагола выбраны верно?",
+      "options": [
+        "Let's take a short break and have a coffee.",
+        "Let's do a short break and have a coffee.",
+        "Let's make a short break and have a coffee.",
+        "Let's take a short break and take a coffee."
+      ],
+      "answer": 0,
+      "explanation": "Перерыв по-английски «берут» (take a break), а не «делают», как в русском. Про еду и напитки говорят have: have a coffee, have lunch."
+    },
+    {
+      "type": "translate",
+      "source": "Он постарался приехать вовремя.",
+      "answer": "He made an effort to arrive on time.",
+      "accept": [
+        "He made an effort to come on time.",
+        "He made an effort to be on time.",
+        "He made an effort to get there on time.",
+        "He tried to arrive on time."
+      ],
+      "distractors": ["did", "applied", "efforts"],
+      "explanation": "«Постараться, приложить усилие» — make an effort: apply effort звучит как калька, а do an effort не говорят вовсе. После артикля an слово стоит в единственном числе: an effort."
+    }
+  ]
+}

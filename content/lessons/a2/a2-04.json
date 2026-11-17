@@ -1,0 +1,150 @@
+{
+  "id": "a2-04",
+  "level": "A2",
+  "order": 4,
+  "title": { "ru": "Сравнение: больше, лучше, самый", "en": "Comparatives and superlatives" },
+  "goal": { "ru": "Научитесь сравнивать вещи, места и людей.", "en": "Learn to compare things, places and people." },
+  "theory": [
+    {
+      "title": "Короткие прилагательные: -er и the -est",
+      "body": "К коротким прилагательным (один слог) добавляем -er для сравнения и the + -est для высшей степени: cheap → cheaper → the cheapest. После краткой гласной согласная удваивается: big → bigger. Конечная -y меняется на -i: easy → easier → the easiest.",
+      "examples": [
+        { "en": "The metro is faster than the bus.", "ru": "Метро быстрее автобуса." },
+        { "en": "This is the cheapest hotel in the city.", "ru": "Это самый дешёвый отель в городе." },
+        { "en": "My bag is heavier than yours.", "ru": "Моя сумка тяжелее твоей." }
+      ],
+      "tip": "«Чем» при сравнении — это than. Не путайте с then («потом») и не ставьте as."
+    },
+    {
+      "title": "Длинные прилагательные: more и the most",
+      "body": "С прилагательными из двух и более слогов (expensive, comfortable, interesting, crowded) используем more и the most, а само слово не меняется. Нельзя соединять оба способа: «more cheaper» и «the most cheapest» — ошибки.",
+      "examples": [
+        { "en": "Taxis are more expensive than buses.", "ru": "Такси дороже автобусов." },
+        { "en": "It was the most boring meeting of the year.", "ru": "Это было самое скучное совещание года." }
+      ]
+    },
+    {
+      "title": "Исключения: good, bad, far",
+      "body": "Три частых прилагательных образуют формы не по правилу: good → better → the best, bad → worse → the worst, far → further → the furthest. Формы «gooder» и «more bad» не существуют.",
+      "examples": [
+        { "en": "Your English is better than mine.", "ru": "Твой английский лучше моего." },
+        { "en": "It was the worst holiday of my life.", "ru": "Это был худший отпуск в моей жизни." }
+      ],
+      "tip": "Перед высшей степенью всегда the. После неё говорят in: the best café in the city, the tallest man in the world."
+    }
+  ],
+  "vocab": [
+    { "en": "cheap", "ru": "дешёвый", "example": "Is there a cheap café near here?" },
+    { "en": "expensive", "ru": "дорогой", "example": "Flats in the centre are expensive." },
+    { "en": "comfortable", "ru": "удобный", "example": "These shoes are very comfortable." },
+    { "en": "crowded", "ru": "многолюдный, переполненный", "example": "The beach was crowded in August." },
+    { "en": "far", "ru": "далеко, далёкий", "example": "Is the airport far from here?" },
+    { "en": "better", "ru": "лучше", "example": "I feel better today." },
+    { "en": "worse", "ru": "хуже", "example": "The weather is getting worse." },
+    { "en": "than", "ru": "чем", "example": "Tea is cheaper than coffee." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Этот отель дешевле»?",
+      "options": ["This hotel is cheaper.", "This hotel is more cheap.", "This hotel is more cheaper.", "This hotel is most cheap."],
+      "answer": 0,
+      "explanation": "Cheap — короткое прилагательное, поэтому просто добавляем -er: cheaper. More с короткими словами не используется, а «more cheaper» — двойное сравнение."
+    },
+    {
+      "type": "translate",
+      "source": "Поезд удобнее, чем автобус.",
+      "answer": "The train is more comfortable than the bus.",
+      "accept": ["A train is more comfortable than a bus.", "Trains are more comfortable than buses.", "The train is more comfortable than a bus."],
+      "distractors": ["then", "most", "as"],
+      "explanation": "Comfortable — длинное слово, сравнение образуется с more. «Чем» — это than, а не then: разница в одной букве, но then значит «потом»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Moscow is ___ than Saint Petersburg.",
+      "translation": "Москва больше Санкт-Петербурга.",
+      "options": ["biger", "more big", "bigger", "the biggest"],
+      "answer": 2,
+      "explanation": "Big — короткое слово с краткой гласной, поэтому согласная удваивается: bigger. The biggest не подходит: после высшей степени не бывает than."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "cheap", "ru": "дешёвый" },
+        { "en": "expensive", "ru": "дорогой" },
+        { "en": "comfortable", "ru": "удобный" },
+        { "en": "crowded", "ru": "многолюдный" },
+        { "en": "worse", "ru": "хуже" }
+      ]
+    },
+    {
+      "type": "listen",
+      "audio": "The red jacket is more expensive than the blue one.",
+      "question": "Какая куртка дешевле?",
+      "options": ["Синяя", "Красная", "Они стоят одинаково"],
+      "answer": 0,
+      "explanation": "Красная more expensive — дороже, значит, синяя дешевле. Слово one заменяет jacket, чтобы не повторять его дважды."
+    },
+    {
+      "type": "gap",
+      "sentence": "This is ___ restaurant in our town.",
+      "translation": "Это лучший ресторан в нашем городе.",
+      "options": ["the goodest", "best", "the best", "the most good"],
+      "answer": 2,
+      "explanation": "Good → better → the best: это исключение, форм «the goodest» и «the most good» нет. Артикль the перед высшей степенью обязателен — русскоговорящие часто его пропускают."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["The traffic is worse today than yesterday.", "The traffic is more bad today than yesterday.", "The traffic is badder today than yesterday.", "The traffic is worse today then yesterday."],
+      "answer": 0,
+      "explanation": "Bad → worse: это исключение, «badder» и «more bad» не существуют. В последнем варианте ошибка в слове then — для сравнения нужно than."
+    },
+    {
+      "type": "translate",
+      "source": "Это самый интересный музей в городе.",
+      "answer": "This is the most interesting museum in the city.",
+      "accept": [
+        "It is the most interesting museum in the city.",
+        "It's the most interesting museum in the city.",
+        "This is the most interesting museum in town.",
+        "It is the most interesting museum in town.",
+        "It's the most interesting museum in town.",
+        "This is the most interesting museum in the town."
+      ],
+      "distractors": ["more", "of", "than"],
+      "explanation": "Interesting — длинное слово, высшая степень — the most interesting. После неё говорим in the city, а не «of the city»."
+    },
+    {
+      "type": "listen",
+      "audio": "The city centre is more crowded at the weekend.",
+      "question": "Что вы услышали?",
+      "options": ["The city centre is more crowded at the weekend.", "The city centre is most crowded at the weekend.", "The city centre is not crowded at the weekend.", "The city centre was more crowded at the weekend."],
+      "answer": 0,
+      "explanation": "More crowded — «более многолюдный»: в слове crowded два слога, поэтому сравнение образуется с more, а не с -er."
+    },
+    {
+      "type": "gap",
+      "sentence": "My new office is ___ from home than the old one.",
+      "translation": "Мой новый офис дальше от дома, чем старый.",
+      "options": ["more far", "farer", "further", "the furthest"],
+      "answer": 2,
+      "explanation": "Far — исключение: far → further → the furthest. Слово than показывает, что нужна сравнительная степень, а не высшая."
+    },
+    {
+      "type": "translate",
+      "source": "Мой брат старше меня.",
+      "answer": "My brother is older than me.",
+      "accept": ["My brother is older than I am.", "My brother is older than I.", "My brother's older than me."],
+      "distractors": ["more", "then", "old"],
+      "explanation": "Old — короткое слово: older, без more. В русском можно обойтись без «чем» («старше меня»), но в английском than обязательно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно сказать «самый лёгкий экзамен»?",
+      "options": ["the easiest exam", "the most easy exam", "the easyest exam", "the more easy exam"],
+      "answer": 0,
+      "explanation": "Двусложные прилагательные на -y ведут себя как короткие: y меняется на i и добавляется -est. Easy → easier → the easiest."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "b2-07",
+  "level": "B2",
+  "order": 7,
+  "title": { "ru": "Артикли: продвинутый уровень", "en": "Articles at an advanced level" },
+  "goal": { "ru": "Научитесь правильно ставить артикли в обобщениях, с географическими названиями и со словами school, prison, hospital.", "en": "Learn to use articles correctly in generalisations, with geographical names and with words like school, prison and hospital." },
+  "theory": [
+    {
+      "title": "Обобщения: о чём-то «вообще»",
+      "body": "Когда мы говорим о чём-то в целом, артикль the не нужен: существительные во множественном числе и неисчисляемые идут без артикля (Life is short. Managers need data). Русскоговорящие часто добавляют the к абстрактным словам — life, love, nature, society, — но the означало бы что-то конкретное. Есть два особых случая с the: the + единственное число для изобретений и видов животных (the smartphone, the tiger) и the + прилагательное для группы людей (the rich, the elderly) — глагол после такой группы стоит во множественном числе.",
+      "examples": [
+        { "en": "Money doesn't buy happiness.", "ru": "Счастье за деньги не купишь." },
+        { "en": "The internet has changed the way we work.", "ru": "Интернет изменил то, как мы работаем." },
+        { "en": "The rich are getting richer.", "ru": "Богатые становятся богаче." }
+      ],
+      "tip": "Сравните: I love music (музыку вообще) — I love the music in this film (конкретную музыку)."
+    },
+    {
+      "title": "Географические названия",
+      "body": "С the употребляются реки, моря, океаны, пустыни, горные цепи, группы островов и страны, в названии которых есть множественное число или слова вроде republic, kingdom, states: the Volga, the Pacific, the Sahara, the Alps, the Netherlands, the United Kingdom. Без артикля — континенты, большинство стран, города, отдельные горы и озёра: Asia, France, Mount Everest, Lake Baikal.",
+      "examples": [
+        { "en": "The Danube flows through ten countries.", "ru": "Дунай протекает через десять стран." },
+        { "en": "We spent a week by Lake Como.", "ru": "Мы провели неделю на озере Комо." }
+      ],
+      "tip": "Названия университетов бывают двух видов: the University of Oxford (с of — с артиклем), но Oxford University (без артикля)."
+    },
+    {
+      "title": "School, prison, hospital: с артиклем и без",
+      "body": "Слова school, university, college, prison, church, bed употребляются без артикля, когда человек находится там по прямому назначению: учится, отбывает срок, молится, спит. Если мы имеем в виду просто здание или приходим туда по другому делу, появляется the. Со словом hospital в британском английском действует то же правило (in hospital — лежать в больнице), а американцы говорят in the hospital в обоих случаях.",
+      "examples": [
+        { "en": "Their daughter is at university in Leeds.", "ru": "Их дочь учится в университете в Лидсе." },
+        { "en": "The meeting will be held at the university.", "ru": "Встреча пройдёт в здании университета." },
+        { "en": "He was in prison for five years.", "ru": "Он пять лет сидел в тюрьме." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "the elderly", "ru": "пожилые люди", "example": "The elderly often feel lonely in big cities." },
+    { "en": "the unemployed", "ru": "безработные", "example": "The programme offers free training for the unemployed." },
+    { "en": "the environment", "ru": "окружающая среда", "example": "Plastic waste is harmful to the environment." },
+    { "en": "to be sent to prison", "ru": "попасть в тюрьму, получить срок", "example": "He was sent to prison for tax evasion." },
+    { "en": "sense of humour", "ru": "чувство юмора", "example": "She has a great sense of humour." },
+    { "en": "income", "ru": "доход", "example": "Half of their income goes on rent." },
+    { "en": "fraud", "ru": "мошенничество", "example": "The bank lost millions because of online fraud." },
+    { "en": "generation", "ru": "поколение", "example": "Our generation grew up without smartphones." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "He was found guilty of fraud and sent to ___ for three years.",
+      "translation": "Его признали виновным в мошенничестве и посадили в тюрьму на три года.",
+      "options": ["prison", "the prison", "the prisons", "prisons"],
+      "answer": 0,
+      "explanation": "Человек попадает в тюрьму по её прямому назначению — как заключённый, поэтому артикль не нужен: sent to prison. The prison означало бы конкретное здание, куда приходят, например, навестить кого-то."
+    },
+    {
+      "type": "listen",
+      "audio": "Maria went to the school to talk to her son's teacher.",
+      "question": "Что верно о Марии?",
+      "options": [
+        "Она пришла в школу как посетитель",
+        "Она учится в этой школе",
+        "Она преподаёт в этой школе",
+        "Она привела сына на урок"
+      ],
+      "answer": 0,
+      "explanation": "Артикль в to the school показывает, что школа здесь — просто здание, куда Мария пришла по делу. Об ученике сказали бы без артикля: He goes to school."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант. Речь о жизни вообще, а не о чьей-то конкретной жизни.",
+      "options": [
+        "Life is easier with a good sense of humour.",
+        "The life is easier with a good sense of humour.",
+        "A life is easier with good sense of humour.",
+        "Life is easier with the good sense of humour."
+      ],
+      "answer": 0,
+      "explanation": "Абстрактное понятие в общем смысле идёт без артикля: Life is… А вот перед исчисляемым sense артикль обязателен: a good sense of humour."
+    },
+    {
+      "type": "translate",
+      "source": "Правительство должно делать больше, чтобы помочь пожилым людям.",
+      "answer": "The government should do more to help the elderly.",
+      "accept": [
+        "The government should do more to help elderly people.",
+        "The government should do more to help older people.",
+        "The government ought to do more to help the elderly.",
+        "The government should do more in order to help the elderly."
+      ],
+      "distractors": ["elderlies", "an", "peoples"],
+      "explanation": "The + прилагательное обозначает целую группу людей: the elderly. Окончание -s при этом не добавляется, а слово people становится лишним."
+    },
+    {
+      "type": "gap",
+      "sentence": "We flew over ___ on our way to Milan.",
+      "translation": "По пути в Милан мы пролетали над Альпами.",
+      "options": ["the Alps", "Alps", "an Alps", "the Alp"],
+      "answer": 0,
+      "explanation": "Горные цепи всегда употребляются с the и во множественном числе: the Alps, the Urals, the Andes. Отдельная вершина — без артикля: Mont Blanc, Mount Elbrus."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "the elderly", "ru": "пожилые люди" },
+        { "en": "the unemployed", "ru": "безработные" },
+        { "en": "the environment", "ru": "окружающая среда" },
+        { "en": "income", "ru": "доход" },
+        { "en": "fraud", "ru": "мошенничество" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Она изучала право в Оксфордском университете.",
+      "answer": "She studied law at the University of Oxford.",
+      "accept": [
+        "She studied law at Oxford University.",
+        "She studied law at Oxford.",
+        "She read law at the University of Oxford.",
+        "She read law at Oxford University."
+      ],
+      "distractors": ["in", "a", "learned", "right"],
+      "explanation": "В названиях с of артикль нужен: the University of Oxford, а в варианте Oxford University его нет. Перед law как учебным предметом артикля нет, а «в университете» — at, не in."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении артикли расставлены верно?",
+      "options": [
+        "The Volga flows into the Caspian Sea.",
+        "Volga flows into the Caspian Sea.",
+        "The Volga flows into Caspian Sea.",
+        "Volga flows into Caspian Sea."
+      ],
+      "answer": 0,
+      "explanation": "И реки, и моря употребляются с the: the Volga, the Caspian Sea. В русском артиклей нет, поэтому их чаще всего пропускают именно в названиях."
+    },
+    {
+      "type": "gap",
+      "sentence": "Rising prices hit ___ hardest, because they have no regular income.",
+      "translation": "Рост цен сильнее всего бьёт по безработным, потому что у них нет постоянного дохода.",
+      "options": ["the unemployed", "unemployed", "an unemployed", "the unemployeds"],
+      "answer": 0,
+      "explanation": "Группа людей обозначается как the + прилагательное: the unemployed. Форма остаётся без -s, но по смыслу это множественное число — отсюда they have."
+    },
+    {
+      "type": "listen",
+      "audio": "She climbed Mount Elbrus and then spent a week by Lake Baikal.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She climbed Mount Elbrus and then spent a week by Lake Baikal.",
+        "She climbed the Mount Elbrus and then spent a week by the Lake Baikal.",
+        "She climbed Mount Elbrus and then spent a week by the Lake Baikal.",
+        "She climbed the Mount Elbrus and then spent a week by Lake Baikal."
+      ],
+      "answer": 0,
+      "explanation": "Отдельные горы и озёра называются без артикля: Mount Elbrus, Lake Baikal. The нужен горным цепям и группам озёр: the Caucasus, the Great Lakes."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "The smartphone has changed the way we communicate.",
+        "Smartphone has changed the way we communicate.",
+        "The smartphone has changed way we communicate.",
+        "A smartphones have changed the way we communicate."
+      ],
+      "answer": 0,
+      "explanation": "The + единственное число обозначает изобретение как класс: the smartphone, the wheel. Исчисляемое существительное в единственном числе не может стоять совсем без артикля, а the way — устойчивое сочетание."
+    },
+    {
+      "type": "translate",
+      "source": "Мы должны защищать окружающую среду ради будущих поколений.",
+      "answer": "We must protect the environment for future generations.",
+      "accept": [
+        "We have to protect the environment for future generations.",
+        "We should protect the environment for future generations.",
+        "We must protect the environment for the sake of future generations.",
+        "We need to protect the environment for future generations."
+      ],
+      "distractors": ["a", "surrounding", "generation"],
+      "explanation": "Environment в значении «природная среда» всегда с the: она у нас одна. А future generations — обобщение во множественном числе, поэтому без артикля."
+    }
+  ]
+}

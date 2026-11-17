@@ -1,0 +1,182 @@
+{
+  "id": "b2-02",
+  "level": "B2",
+  "order": 2,
+  "title": { "ru": "Past Perfect и времена для рассказа", "en": "Past Perfect and narrative tenses" },
+  "goal": { "ru": "Научитесь рассказывать истории, ясно показывая, что произошло раньше, а что — позже.", "en": "Learn to tell stories and make it clear what happened earlier and what happened later." },
+  "theory": [
+    {
+      "title": "Past Perfect: шаг назад в прошлое",
+      "body": "Past Perfect (had + третья форма) показывает, что действие завершилось раньше другого момента в прошлом. В русском оба действия стоят в одном прошедшем времени, поэтому русскоговорящие часто оставляют Past Simple — и порядок событий меняется. Сравните: When I arrived, she left (я пришёл, и тогда она ушла) — When I arrived, she had left (её уже не было).",
+      "examples": [
+        { "en": "When we got to the cinema, the film had already started.", "ru": "Когда мы добрались до кинотеатра, фильм уже начался." },
+        { "en": "I realised that I had sent the email to the wrong person.", "ru": "Я понял, что отправил письмо не тому человеку." }
+      ],
+      "tip": "Если события идут по порядку (встал, оделся, вышел), хватит Past Simple. Past Perfect нужен, только когда вы возвращаетесь к более раннему событию."
+    },
+    {
+      "title": "Past Continuous и Past Simple: фон и событие",
+      "body": "Past Continuous (was/were + -ing) описывает фон — действие, которое было в процессе. Past Simple называет событие, которое произошло на этом фоне и двигает историю вперёд.",
+      "examples": [
+        { "en": "I was checking my notes when the interviewer called my name.", "ru": "Я просматривал свои записи, когда интервьюер назвал моё имя." },
+        { "en": "It was raining, so we took a taxi.", "ru": "Шёл дождь, поэтому мы взяли такси." }
+      ]
+    },
+    {
+      "title": "Past Perfect Continuous: как долго до того момента",
+      "body": "Had been + -ing показывает, что действие длилось какое-то время до момента в прошлом и часто объясняет его результат. Обычно рядом стоит for или since. Present Perfect Continuous (have been doing) здесь не подходит: точка отсчёта находится в прошлом, а не в настоящем.",
+      "examples": [
+        { "en": "Her eyes were red because she had been staring at the screen all day.", "ru": "У неё были красные глаза, потому что она весь день смотрела в экран." },
+        { "en": "We had been negotiating for months before they finally signed.", "ru": "Мы вели переговоры несколько месяцев, прежде чем они наконец подписали договор." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "by the time", "ru": "к тому времени как", "example": "By the time I woke up, everyone had left." },
+    { "en": "to realise", "ru": "осознать, понять", "example": "I suddenly realised that I was lost." },
+    { "en": "to set off", "ru": "отправиться в путь", "example": "We set off at dawn to avoid the traffic." },
+    { "en": "to run out of", "ru": "израсходовать, остаться без чего-то", "example": "The printer has run out of ink again." },
+    { "en": "to turn out", "ru": "оказаться", "example": "It turned out that the address was wrong." },
+    { "en": "to show up", "ru": "появиться, прийти", "example": "Only half of the guests showed up." },
+    { "en": "to take off", "ru": "взлететь", "example": "The plane took off twenty minutes late." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "By the time we reached the gate, the plane ___.",
+      "translation": "К тому времени как мы добрались до выхода на посадку, самолёт уже взлетел.",
+      "options": ["had already taken off", "has already taken off", "already takes off", "would already take off"],
+      "answer": 0,
+      "explanation": "Самолёт взлетел раньше, чем мы добрались до выхода, а оба события в прошлом — значит, Past Perfect. Present Perfect (has taken off) связан с настоящим и в рассказе о прошлом невозможен."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение означает, что совещание началось ДО прихода Анны?",
+      "options": [
+        "When Anna arrived, the meeting had started.",
+        "When Anna arrived, the meeting started.",
+        "When Anna arrived, the meeting was starting.",
+        "When Anna had arrived, the meeting started."
+      ],
+      "answer": 0,
+      "explanation": "Had started — совещание уже шло к её приходу. С Past Simple (the meeting started) получается, что его начали, когда она вошла: по-русски разница не видна, а в английском её показывает время."
+    },
+    {
+      "type": "listen",
+      "audio": "I had been waiting for forty minutes when the courier finally showed up.",
+      "question": "Что вы услышали?",
+      "options": [
+        "I had been waiting for forty minutes when the courier finally showed up.",
+        "I have been waiting for forty minutes when the courier finally showed up.",
+        "I was waiting for forty minutes when the courier finally shows up.",
+        "I had been waited for forty minutes when the courier finally showed up."
+      ],
+      "answer": 0,
+      "explanation": "Had been waiting — ожидание длилось сорок минут до момента в прошлом, когда появился курьер. Have been waiting описывало бы ожидание, которое продолжается до сих пор."
+    },
+    {
+      "type": "translate",
+      "source": "Я понял, что оставил паспорт дома.",
+      "answer": "I realised that I had left my passport at home.",
+      "accept": [
+        "I realized that I had left my passport at home.",
+        "I realised I had left my passport at home.",
+        "I realized I had left my passport at home.",
+        "I realised that I'd left my passport at home.",
+        "I realised I'd left my passport at home."
+      ],
+      "distractors": ["have", "leave", "forgot", "in"],
+      "explanation": "Паспорт остался дома раньше, чем я это понял, поэтому had left. «Забыть вещь где-то» по-английски — leave: «forget something at home» звучит как калька."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "by the time", "ru": "к тому времени как" },
+        { "en": "to set off", "ru": "отправиться в путь" },
+        { "en": "to run out of", "ru": "израсходовать, остаться без чего-то" },
+        { "en": "to turn out", "ru": "оказаться" },
+        { "en": "to show up", "ru": "появиться, прийти" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ along the motorway when the engine suddenly stopped.",
+      "translation": "Мы ехали по автомагистрали, когда двигатель внезапно заглох.",
+      "options": ["were driving", "had driven", "are driving", "have been driving"],
+      "answer": 0,
+      "explanation": "Поездка — фон, процесс, на фоне которого произошло событие (the engine stopped), поэтому Past Continuous. Had driven значило бы, что поездка закончилась до поломки."
+    },
+    {
+      "type": "translate",
+      "source": "К тому времени как мы приехали, фильм уже начался.",
+      "answer": "By the time we arrived, the film had already started.",
+      "accept": [
+        "By the time we arrived, the movie had already started.",
+        "By the time we arrived, the film had already begun.",
+        "By the time we arrived, the film had started.",
+        "By the time we got there, the film had already started.",
+        "The film had already started by the time we arrived."
+      ],
+      "distractors": ["has", "starts", "did"],
+      "explanation": "После by the time идёт Past Simple (we arrived), а более раннее действие ставится в Past Perfect: had already started. Already стоит между had и третьей формой."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "She was tired because she had been working since six in the morning.",
+        "She was tired because she has been working since six in the morning.",
+        "She was tired because she worked since six in the morning.",
+        "She was tired because she was working since six in the morning."
+      ],
+      "answer": 0,
+      "explanation": "Действие длилось до момента в прошлом и объясняет его результат (was tired) — это Past Perfect Continuous. Since в рассказе о прошлом требует had been doing, а не Past Simple или Past Continuous."
+    },
+    {
+      "type": "listen",
+      "audio": "When I got to the office, my manager had already left for the airport.",
+      "question": "Застал ли говорящий своего руководителя в офисе?",
+      "options": [
+        "Нет, руководитель уехал раньше",
+        "Да, они встретились у входа",
+        "Да, руководитель как раз собирался уезжать",
+        "Нет, руководитель в тот день вообще не приходил"
+      ],
+      "answer": 0,
+      "explanation": "Had already left — к приходу говорящего руководитель уже уехал. Если бы прозвучало was leaving, они бы ещё успели увидеться."
+    },
+    {
+      "type": "gap",
+      "sentence": "It turned out that the rest of the group ___ without us.",
+      "translation": "Оказалось, что остальная часть группы отправилась в путь без нас.",
+      "options": ["had set off", "have set off", "are setting off", "will set off"],
+      "answer": 0,
+      "explanation": "Группа ушла раньше, чем это выяснилось (it turned out — прошлое), поэтому Past Perfect: had set off. Present Perfect не сочетается с рассказом в прошедшем времени."
+    },
+    {
+      "type": "translate",
+      "source": "У нас закончился бензин, потому что мы ехали всю ночь.",
+      "answer": "We ran out of petrol because we had been driving all night.",
+      "accept": [
+        "We ran out of gas because we had been driving all night.",
+        "We ran out of fuel because we had been driving all night.",
+        "We ran out of petrol because we'd been driving all night.",
+        "We ran out of petrol because we had been driving all night long."
+      ],
+      "distractors": ["have", "run", "was", "from"],
+      "explanation": "Долгая поездка предшествовала моменту, когда кончился бензин, и объясняет его: had been driving. Run — неправильный глагол, в Past Simple ran, а предлог после run out — of."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант: «Он нервничал, потому что никогда раньше не выступал перед инвесторами».",
+      "options": [
+        "He was nervous because he had never presented to investors before.",
+        "He was nervous because he has never presented to investors before.",
+        "He was nervous because he never presents to investors before.",
+        "He was nervous because he was never presenting to investors before."
+      ],
+      "answer": 0,
+      "explanation": "Опыт (точнее, его отсутствие) до момента в прошлом выражается Past Perfect: had never presented. Has never presented означало бы «до сих пор ни разу», а история уже закончилась."
+    }
+  ]
+}

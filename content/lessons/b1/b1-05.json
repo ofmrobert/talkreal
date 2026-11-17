@@ -1,0 +1,142 @@
+{
+  "id": "b1-05",
+  "level": "B1",
+  "order": 5,
+  "title": { "ru": "Пассивный залог: настоящее и прошедшее", "en": "The passive voice: present and past" },
+  "goal": { "ru": "Научитесь говорить, что делают с предметом, когда неважно, кто это делает.", "en": "Learn to say what is done to something when it doesn't matter who does it." },
+  "theory": [
+    {
+      "title": "Зачем нужен пассив",
+      "body": "Пассив используют, когда важно само действие или его объект, а исполнитель неизвестен, очевиден или неинтересен. По-русски в таких случаях часто говорят неопределённо-лично: «здесь продают», «дом построили». В английском без подлежащего нельзя, поэтому объект становится подлежащим.",
+      "examples": [
+        { "en": "Coffee is grown in Brazil.", "ru": "Кофе выращивают в Бразилии." },
+        { "en": "My bike was stolen last night.", "ru": "Вчера ночью у меня украли велосипед." }
+      ],
+      "tip": "Если русское предложение начинается с глагола во множественном числе без «они» («говорят», «построили», «доставляют»), в английском почти всегда нужен пассив."
+    },
+    {
+      "title": "Форма: be + третья форма глагола",
+      "body": "Время показывает глагол be, а смысловой глагол всегда стоит в третьей форме. Настоящее: am / is / are + made. Прошедшее: was / were + made. Вопрос начинается с be, отрицание образуется с not.",
+      "examples": [
+        { "en": "These cars are made in Korea.", "ru": "Эти машины делают в Корее." },
+        { "en": "The hotel was built in 1905.", "ru": "Отель построили в 1905 году." },
+        { "en": "Was the email sent yesterday?", "ru": "Письмо отправили вчера?" }
+      ],
+      "tip": "Две типичные ошибки: пропустить be («The house built in 1990») и взять не третью форму («was stole» вместо was stolen)."
+    },
+    {
+      "title": "Кто это сделал: by",
+      "body": "Если исполнителя всё-таки нужно назвать, он вводится предлогом by. Русский творительный падеж («написан Толстым») передаётся именно так. Но если исполнитель неважен, by-часть лучше опустить.",
+      "examples": [
+        { "en": "The company was founded by two students.", "ru": "Компанию основали два студента." },
+        { "en": "This photo was taken by my daughter.", "ru": "Эту фотографию сделала моя дочь." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "to build", "ru": "строить", "example": "This stadium was built for the World Cup." },
+    { "en": "to deliver", "ru": "доставлять", "example": "The sofa was delivered on Friday." },
+    { "en": "to cancel", "ru": "отменять", "example": "The concert was cancelled." },
+    { "en": "to invent", "ru": "изобретать", "example": "The bicycle was invented two hundred years ago." },
+    { "en": "to steal", "ru": "красть", "example": "Her phone was stolen in a café." },
+    { "en": "to found", "ru": "основывать", "example": "The university was founded in 1755." },
+    { "en": "to produce", "ru": "производить", "example": "Most of our energy is produced from gas." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Этот мост построили в 1990 году».",
+      "options": ["This bridge built in 1990.", "This bridge was built in 1990.", "This bridge is built in 1990.", "This bridge was build in 1990."],
+      "answer": 1,
+      "explanation": "Мост не строил сам — его построили, значит, нужен пассив: was + третья форма built. Без was получается, будто мост что-то построил; это самая частая ошибка при переводе «построили»."
+    },
+    {
+      "type": "gap",
+      "sentence": "These phones ___ in Vietnam.",
+      "translation": "Эти телефоны производят во Вьетнаме.",
+      "options": ["are produced", "is produced", "produce", "are producing"],
+      "answer": 0,
+      "explanation": "Телефоны не производят, а производятся: пассив в настоящем — are + produced. Phones — множественное число, поэтому are, а не is."
+    },
+    {
+      "type": "gap",
+      "sentence": "My flight ___ because of the storm, so I spent the night at the airport.",
+      "translation": "Мой рейс отменили из-за шторма, так что я провёл ночь в аэропорту.",
+      "options": ["was cancelled", "cancelled", "is cancelled", "has cancelled"],
+      "answer": 0,
+      "explanation": "Рейс отменили — действие совершено над ним в прошлом: was cancelled. Просто cancelled означало бы, что рейс сам что-то отменил."
+    },
+    {
+      "type": "translate",
+      "source": "Наши заказы доставляют в течение двух дней.",
+      "answer": "Our orders are delivered within two days.",
+      "accept": ["Our orders are delivered in two days."],
+      "distractors": ["is", "deliver", "delivering"],
+      "explanation": "«Доставляют» без указания, кто именно, — пассив: are delivered. Orders во множественном числе, поэтому are; после be нужна третья форма с -ed."
+    },
+    {
+      "type": "listen",
+      "audio": "My wallet was stolen on the underground yesterday.",
+      "question": "Что случилось?",
+      "options": ["У говорящего украли кошелёк в метро", "Говорящий потерял кошелёк в метро", "Говорящий нашёл чужой кошелёк в метро", "Говорящий забыл кошелёк дома"],
+      "answer": 0,
+      "explanation": "Was stolen — «был украден»; steal — stole — stolen. По-русски мы скажем «у меня украли», а в английском подлежащим становится сам кошелёк."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как назвать автора? Выберите предложение без ошибки.",
+      "options": ["Anna Karenina was written by Tolstoy.", "Anna Karenina was written from Tolstoy.", "Anna Karenina was written with Tolstoy.", "Anna Karenina wrote by Tolstoy."],
+      "answer": 0,
+      "explanation": "Исполнитель действия в пассиве вводится предлогом by. With означало бы «вместе с Толстым», а from в этом значении не используется."
+    },
+    {
+      "type": "translate",
+      "source": "Когда была основана эта компания?",
+      "answer": "When was this company founded?",
+      "accept": ["When was the company founded?"],
+      "distractors": ["did", "found", "were"],
+      "explanation": "Вопрос в пассиве начинается с was, did здесь не нужен. Не путайте: found — founded — founded значит «основывать», а found как форма глагола find — «нашёл»."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to deliver", "ru": "доставлять" },
+        { "en": "to cancel", "ru": "отменять" },
+        { "en": "to invent", "ru": "изобретать" },
+        { "en": "to steal", "ru": "красть" },
+        { "en": "to found", "ru": "основывать" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "English ___ all over the world.",
+      "translation": "На английском говорят во всём мире.",
+      "options": ["is spoken", "speaks", "is speaking", "is spoke"],
+      "answer": 0,
+      "explanation": "Язык сам не говорит — на нём говорят: is spoken. После be нужна третья форма spoken, а не вторая spoke."
+    },
+    {
+      "type": "listen",
+      "audio": "The meeting room is cleaned every evening.",
+      "question": "Что вы услышали?",
+      "options": ["The meeting room is cleaned every evening.", "The meeting room was cleaned every evening.", "The meeting room is clean every evening.", "The meeting room is cleaning every evening."],
+      "answer": 0,
+      "explanation": "Is cleaned — «убирают» (регулярное действие в пассиве). Окончание -ed звучит коротко, но оно важно: is clean значит просто «чистая»."
+    },
+    {
+      "type": "translate",
+      "source": "Телефон изобрели в девятнадцатом веке.",
+      "answer": "The telephone was invented in the nineteenth century.",
+      "accept": ["The phone was invented in the nineteenth century.", "The telephone was invented in the 19th century.", "The phone was invented in the 19th century."],
+      "distractors": ["is", "invent", "at"],
+      "explanation": "Событие в прошлом, исполнитель не назван: was invented. Об изобретении в целом говорят с артиклем the (the telephone), а с веками используется предлог in."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["The parcel was delivered this morning.", "The parcel delivered this morning.", "The parcel was deliver this morning.", "The parcel were delivered this morning."],
+      "answer": 0,
+      "explanation": "Пассив в прошедшем — was + третья форма: was delivered. Нельзя пропускать was, а с единственным числом (the parcel) не используется were."
+    }
+  ]
+}

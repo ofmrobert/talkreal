@@ -1,0 +1,145 @@
+{
+  "id": "a1-05",
+  "level": "A1",
+  "order": 5,
+  "title": { "ru": "Present Simple: мой обычный день", "en": "Present Simple: my daily routine" },
+  "goal": { "ru": "Научитесь рассказывать о своём обычном дне.", "en": "Learn to talk about your usual day." },
+  "theory": [
+    {
+      "title": "Present Simple: то, что происходит обычно",
+      "body": "Present Simple описывает привычки, расписание и факты. С I, you, we, they глагол стоит в начальной форме, без окончаний: I work, we live. Глагол to be перед ним не нужен: «I am work» — ошибка.",
+      "examples": [
+        { "en": "I work in a bank.", "ru": "Я работаю в банке." },
+        { "en": "We live in Novosibirsk.", "ru": "Мы живём в Новосибирске." },
+        { "en": "They drink coffee every morning.", "ru": "Они пьют кофе каждое утро." }
+      ],
+      "tip": "В предложении либо to be, либо глагол действия: I am tired, но I work."
+    },
+    {
+      "title": "Порядок слов и слова-подсказки",
+      "body": "Порядок слов в английском жёсткий: кто + делает + что + где + когда. Слова always, usually, often, sometimes ставятся перед глаголом: I usually get up at seven. Every day обычно стоит в конце предложения.",
+      "examples": [
+        { "en": "I always have breakfast at home.", "ru": "Я всегда завтракаю дома." },
+        { "en": "We often go to the gym after work.", "ru": "Мы часто ходим в спортзал после работы." },
+        { "en": "You read the news every day.", "ru": "Ты читаешь новости каждый день." }
+      ]
+    },
+    {
+      "title": "Выражения для рассказа о дне",
+      "body": "Некоторые сочетания нужно запомнить целиком: get up (вставать), have breakfast / lunch / dinner (завтракать, обедать, ужинать), go to work — без артикля, go home — без предлога.",
+      "examples": [
+        { "en": "I go to work by bus.", "ru": "Я езжу на работу на автобусе." },
+        { "en": "They go home at six.", "ru": "Они идут домой в шесть." },
+        { "en": "We have dinner together.", "ru": "Мы ужинаем вместе." }
+      ],
+      "tip": "Go home — без to: «go to home» — ошибка. А вот go to work — с to."
+    }
+  ],
+  "vocab": [
+    { "en": "to get up", "ru": "вставать", "example": "I get up at six." },
+    { "en": "to have breakfast", "ru": "завтракать", "example": "We have breakfast in the kitchen." },
+    { "en": "to go to work", "ru": "идти, ездить на работу", "example": "I go to work by train." },
+    { "en": "to start", "ru": "начинать", "example": "They start work at eight." },
+    { "en": "to finish", "ru": "заканчивать", "example": "I finish work at five." },
+    { "en": "usually", "ru": "обычно", "example": "I usually have lunch at one." },
+    { "en": "every day", "ru": "каждый день", "example": "We speak English every day." },
+    { "en": "to go home", "ru": "идти домой", "example": "You go home by taxi." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "I ___ in a small café near my house.",
+      "translation": "Я работаю в маленьком кафе рядом с домом.",
+      "options": ["work", "am work", "works", "working"],
+      "answer": 0,
+      "explanation": "С I глагол в Present Simple стоит в начальной форме: I work. Добавлять am перед обычным глаголом — частая ошибка после темы to be."
+    },
+    {
+      "type": "gap",
+      "sentence": "After work I go ___.",
+      "translation": "После работы я иду домой.",
+      "options": ["home", "to home", "at home", "in home"],
+      "answer": 0,
+      "explanation": "Go home — устойчивое выражение без предлога. Русское «иду домой» тоже обходится без предлога, но по аналогии с go to work многие ошибочно говорят «go to home»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Где должно стоять слово usually? Выберите правильное предложение.",
+      "options": ["I get up usually at six.", "I usually get up at six.", "I get usually up at six.", "I am usually get up at six."],
+      "answer": 1,
+      "explanation": "Usually, always, often ставятся перед основным глаголом: I usually get up. Разрывать get up или добавлять am нельзя."
+    },
+    {
+      "type": "translate",
+      "source": "Мы завтракаем дома каждый день.",
+      "answer": "We have breakfast at home every day.",
+      "accept": ["Every day we have breakfast at home.", "We eat breakfast at home every day."],
+      "distractors": ["has", "are", "the"],
+      "explanation": "С we глагол без окончаний: have. Have breakfast — выражение без артикля, а every day удобнее всего ставить в конец предложения."
+    },
+    {
+      "type": "listen",
+      "audio": "I start work at nine and finish at six.",
+      "question": "Когда этот человек заканчивает работу?",
+      "options": ["В шесть", "В девять", "В семь", "В пять"],
+      "answer": 0,
+      "explanation": "Start work at nine — начинаю в девять, finish at six — заканчиваю в шесть. После start и finish слово work идёт без артикля и без предлога."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to get up", "ru": "вставать" },
+        { "en": "to start", "ru": "начинать" },
+        { "en": "to finish", "ru": "заканчивать" },
+        { "en": "usually", "ru": "обычно" },
+        { "en": "every day", "ru": "каждый день" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Они живут в Самаре».",
+      "options": ["They are live in Samara.", "They lives in Samara.", "They live in Samara.", "They living in Samara."],
+      "answer": 2,
+      "explanation": "С they глагол стоит в начальной форме: they live. Are перед ним не нужен, а окончание -s бывает только с he, she, it."
+    },
+    {
+      "type": "translate",
+      "source": "Я обычно встаю в семь.",
+      "answer": "I usually get up at seven.",
+      "accept": ["Usually I get up at seven.", "I usually get up at seven o'clock."],
+      "distractors": ["am", "in", "stand"],
+      "explanation": "«Вставать» с постели — get up, а не stand. Usually стоит перед глаголом, а перед точным временем нужен предлог at, не in."
+    },
+    {
+      "type": "gap",
+      "sentence": "My friends and I ___ to work by metro.",
+      "translation": "Мы с друзьями ездим на работу на метро.",
+      "options": ["go", "goes", "are go", "going"],
+      "answer": 0,
+      "explanation": "My friends and I — это we, поэтому глагол без окончания: go. Форма goes нужна только для he, she, it."
+    },
+    {
+      "type": "listen",
+      "audio": "We often have dinner together.",
+      "question": "Что вы услышали?",
+      "options": ["We often have dinner together.", "They often have dinner together.", "We often had dinner together.", "We often have lunch together."],
+      "answer": 0,
+      "explanation": "Often стоит перед глаголом have, а have dinner значит «ужинать». Форма have, а не had, показывает, что речь о привычке, а не о прошлом."
+    },
+    {
+      "type": "translate",
+      "source": "Они заканчивают работу поздно.",
+      "answer": "They finish work late.",
+      "accept": ["They finish their work late."],
+      "distractors": ["finishes", "are", "lately"],
+      "explanation": "С they глагол без окончания: finish. «Поздно» — это late; слово lately значит совсем другое — «в последнее время»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I am go to work by bus.", "You start work at eight.", "We goes home at six.", "They every day get up early."],
+      "answer": 1,
+      "explanation": "You start work at eight: глагол в начальной форме, порядок слов правильный. В остальных вариантах лишнее am, лишнее -s после we и every day не на своём месте — оно должно стоять в конце."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "b1-01",
+  "level": "B1",
+  "order": 1,
+  "title": { "ru": "Present Perfect или Past Simple", "en": "Present Perfect vs Past Simple" },
+  "goal": { "ru": "Научитесь выбирать между «I've been» и «I went», когда говорите о прошлом.", "en": "Learn to choose between \"I've been\" and \"I went\" when you talk about the past." },
+  "theory": [
+    {
+      "title": "Past Simple: известно, когда",
+      "body": "Past Simple описывает действие, которое произошло в законченный период прошлого. Обычно время названо или понятно из контекста: yesterday, last year, in 2019, two days ago, when I was a student. Если в предложении есть такой указатель, Present Perfect использовать нельзя.",
+      "examples": [
+        { "en": "I went to Istanbul last year.", "ru": "Я ездил в Стамбул в прошлом году." },
+        { "en": "We bought this car in 2021.", "ru": "Мы купили эту машину в 2021 году." },
+        { "en": "When did you start this job?", "ru": "Когда ты начал работать на этой работе?" }
+      ],
+      "tip": "Вопрос с when о прошлом — всегда Past Simple: When did you arrive? Нельзя: When have you arrived?"
+    },
+    {
+      "title": "Present Perfect: опыт и результат",
+      "body": "Present Perfect (have / has + третья форма глагола) связывает прошлое с настоящим. Он нужен, когда важно не «когда», а сам факт: жизненный опыт (ever, never), результат, который виден сейчас (just, already, yet), или период, который ещё не закончился (since 2020, this week).",
+      "examples": [
+        { "en": "I've been to Istanbul twice.", "ru": "Я был в Стамбуле дважды." },
+        { "en": "She has just sent the email.", "ru": "Она только что отправила письмо." },
+        { "en": "Have you finished the report yet?", "ru": "Ты уже закончил отчёт?" }
+      ],
+      "tip": "В русском оба случая — просто прошедшее время («я был»), поэтому выбор приходится делать сознательно: названо ли законченное время?"
+    },
+    {
+      "title": "От опыта к деталям",
+      "body": "Разговор часто начинается с Present Perfect (был ли такой опыт вообще) и продолжается в Past Simple, как только появляются детали: когда, где, с кем. Ещё одна тонкость: has been to — побывал и вернулся, has gone to — ушёл или уехал и ещё не вернулся.",
+      "examples": [
+        { "en": "Have you ever tried Georgian food? — Yes, I tried it in Tbilisi last summer.", "ru": "Ты когда-нибудь пробовал грузинскую кухню? — Да, пробовал в Тбилиси прошлым летом." },
+        { "en": "Max has gone to lunch. He'll be back at two.", "ru": "Макс ушёл на обед. Он вернётся в два." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "ever", "ru": "когда-либо", "example": "Have you ever worked in sales?" },
+    { "en": "never", "ru": "никогда", "example": "I've never missed a flight." },
+    { "en": "already", "ru": "уже", "example": "We've already booked the hotel." },
+    { "en": "yet", "ru": "ещё (не); уже (в вопросе)", "example": "They haven't replied yet." },
+    { "en": "just", "ru": "только что", "example": "I've just talked to the manager." },
+    { "en": "abroad", "ru": "за границей, за границу", "example": "My brother has lived abroad for years." },
+    { "en": "recently", "ru": "недавно", "example": "Prices have gone up recently." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Я ездил в Лондон в прошлом году».",
+      "options": ["I've been to London last year.", "I went to London last year.", "I have went to London last year.", "I go to London last year."],
+      "answer": 1,
+      "explanation": "Last year — законченное время, поэтому только Past Simple: went. Present Perfect не сочетается с точным указанием на прошлое, хотя по-русски разницы не видно."
+    },
+    {
+      "type": "gap",
+      "sentence": "Timur ___ abroad twice since he joined the company.",
+      "translation": "Тимур дважды работал за границей с тех пор, как пришёл в компанию.",
+      "options": ["worked", "has worked", "works", "is working"],
+      "answer": 1,
+      "explanation": "Since показывает период, который начался в прошлом и продолжается до сих пор, — это Present Perfect: has worked. Past Simple здесь оборвал бы связь с настоящим."
+    },
+    {
+      "type": "translate",
+      "source": "Я никогда не был в Японии.",
+      "answer": "I have never been to Japan.",
+      "accept": ["I've never been to Japan."],
+      "distractors": ["was", "in", "didn't"],
+      "explanation": "Жизненный опыт без указания времени — Present Perfect. После been в значении «побывать» нужен предлог to, а не in; и never уже несёт отрицание, второе не требуется."
+    },
+    {
+      "type": "listen",
+      "audio": "I've already paid the bill.",
+      "question": "Что вы услышали?",
+      "options": ["I've already paid the bill.", "I already pay the bill.", "I'd already paid the bill.", "I've already paid the bills."],
+      "answer": 0,
+      "explanation": "I've — это сокращённое I have, в речи оно звучит как один короткий слог. Already ставится между have и третьей формой глагола: have already paid."
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ to this flat two years ago.",
+      "translation": "Мы переехали в эту квартиру два года назад.",
+      "options": ["have moved", "moved", "are moving", "move"],
+      "answer": 1,
+      "explanation": "Ago всегда требует Past Simple: moved. Сказать «have moved two years ago» — типичная ошибка, потому что по-русски результат «мы теперь здесь живём» кажется важным."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I have seen that film yesterday.", "When have you bought this phone?", "I haven't finished the report yet.", "She has started this job in May."],
+      "answer": 2,
+      "explanation": "Yet в отрицании стоит в конце и сочетается с Present Perfect: haven't finished yet. В остальных вариантах названо прошедшее время (yesterday, when, in May), а значит, нужен Past Simple."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "ever", "ru": "когда-либо" },
+        { "en": "already", "ru": "уже" },
+        { "en": "just", "ru": "только что" },
+        { "en": "abroad", "ru": "за границей" },
+        { "en": "recently", "ru": "недавно" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Ты уже видел новый офис?",
+      "answer": "Have you seen the new office yet?",
+      "accept": ["Have you already seen the new office?", "Have you seen our new office yet?"],
+      "distractors": ["did", "saw", "was"],
+      "explanation": "В вопросах русское «уже» обычно передаётся словом yet в конце предложения. После have нужна третья форма seen, а не saw."
+    },
+    {
+      "type": "gap",
+      "sentence": "I've ___ come back from a business trip, so I'm really tired.",
+      "translation": "Я только что вернулся из командировки, поэтому очень устал.",
+      "options": ["just", "yet", "ever", "ago"],
+      "answer": 0,
+      "explanation": "Just означает «только что» и стоит между have и глаголом. Yet возможно только в конце вопроса или отрицания, а ago требует Past Simple и указания срока."
+    },
+    {
+      "type": "listen",
+      "audio": "Anna has gone to the bank, so she isn't in the office right now.",
+      "question": "Что мы знаем об Анне?",
+      "options": ["Она ушла в банк и ещё не вернулась", "Она сходила в банк и уже вернулась", "Она собирается пойти в банк", "Она работает в банке"],
+      "answer": 0,
+      "explanation": "Has gone to — ушла и всё ещё там или в пути. Если бы она уже вернулась, сказали бы has been to the bank."
+    },
+    {
+      "type": "choice",
+      "prompt": "— Have you ever been to Georgia? — Yes, I have. Выберите правильное продолжение ответа.",
+      "options": ["I went there in 2019.", "I have been there in 2019.", "I have gone there in 2019.", "I was gone there in 2019."],
+      "answer": 0,
+      "explanation": "Как только появляется конкретное время (in 2019), переходим на Past Simple: went. Present Perfect годится только для самого факта опыта, без даты."
+    },
+    {
+      "type": "translate",
+      "source": "Он недавно сменил работу.",
+      "answer": "He has recently changed his job.",
+      "accept": ["He's recently changed his job.", "He has changed his job recently.", "He's changed his job recently.", "He recently changed his job.", "He has recently changed jobs.", "He recently changed jobs."],
+      "distractors": ["have", "ago", "work"],
+      "explanation": "Recently говорит о недавнем событии с результатом в настоящем, поэтому естественен Present Perfect; с he нужен has, а не have. «Работа» как должность — job, а не work."
+    }
+  ]
+}

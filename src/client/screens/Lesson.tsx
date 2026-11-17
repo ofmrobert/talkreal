@@ -24,7 +24,11 @@ const timezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone
 
 /** The English text to read aloud once an exercise is answered. */
 function spokenAnswer(e: Exercise): string | undefined {
-  if (e.type === 'gap') return e.sentence.replace('___', e.options[e.answer])
+  if (e.type === 'gap') {
+    // A 'no article' answer (written as a dash) is simply left out when read aloud.
+    const word = e.options[e.answer].startsWith('—') ? '' : e.options[e.answer]
+    return e.sentence.replace('___', word).replace(/\s+/g, ' ')
+  }
   if (e.type === 'translate') return e.answer
   if (e.type === 'listen') return e.audio
   return undefined

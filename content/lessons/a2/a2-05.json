@@ -1,0 +1,150 @@
+{
+  "id": "a2-05",
+  "level": "A2",
+  "order": 5,
+  "title": { "ru": "Будущее: going to и will", "en": "The future: going to vs will" },
+  "goal": { "ru": "Научитесь говорить о планах, обещаниях и прогнозах.", "en": "Learn to talk about plans, promises and predictions." },
+  "theory": [
+    {
+      "title": "Be going to: планы и намерения",
+      "body": "Если вы решили что-то заранее, до разговора, используйте am / is / are + going to + глагол. По-русски это «собираюсь», «планирую». Глагол be обязателен: «I going to» — ошибка.",
+      "examples": [
+        { "en": "I'm going to visit my parents this weekend.", "ru": "Я собираюсь навестить родителей в эти выходные." },
+        { "en": "We're going to buy a car next year.", "ru": "Мы собираемся купить машину в следующем году." },
+        { "en": "She isn't going to take the job.", "ru": "Она не собирается соглашаться на эту работу." }
+      ]
+    },
+    {
+      "title": "Will: решение в момент речи",
+      "body": "Will + глагол без to используют, когда решение принимается прямо сейчас, а также для предложений помощи и обещаний. В речи will обычно сокращается до 'll, отрицание — won't.",
+      "examples": [
+        { "en": "It's cold in here. I'll close the window.", "ru": "Здесь холодно. Я закрою окно." },
+        { "en": "Don't worry, I won't be late.", "ru": "Не волнуйся, я не опоздаю." }
+      ],
+      "tip": "После will нет to: «I will to call» — ошибка. Правильно: I will call."
+    },
+    {
+      "title": "Прогнозы",
+      "body": "Когда мы высказываем мнение о будущем, обычно говорим will — часто со словами I think, I'm sure, probably. Если же будущее уже видно по ситуации сейчас, выбираем going to.",
+      "examples": [
+        { "en": "I think you'll like this city.", "ru": "Думаю, тебе понравится этот город." },
+        { "en": "Look at those clouds. It's going to rain.", "ru": "Посмотри на эти тучи. Сейчас пойдёт дождь." }
+      ],
+      "tip": "Probably ставится после will: He will probably come. Но перед won't: He probably won't come."
+    }
+  ],
+  "vocab": [
+    { "en": "to book", "ru": "бронировать", "example": "We need to book a table for six." },
+    { "en": "to promise", "ru": "обещать", "example": "I promise to write every day." },
+    { "en": "probably", "ru": "вероятно, наверное", "example": "She is probably at work." },
+    { "en": "soon", "ru": "скоро", "example": "See you soon!" },
+    { "en": "to move", "ru": "переезжать", "example": "They moved to Canada two years ago." },
+    { "en": "to order", "ru": "заказывать", "example": "Let's order some food." },
+    { "en": "tonight", "ru": "сегодня вечером", "example": "What are you doing tonight?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to book", "ru": "бронировать" },
+        { "en": "to promise", "ru": "обещать" },
+        { "en": "probably", "ru": "вероятно" },
+        { "en": "soon", "ru": "скоро" },
+        { "en": "to move", "ru": "переезжать" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы уже купили билеты: в субботу едете в Казань. Как об этом сказать?",
+      "options": ["I'm going to travel to Kazan on Saturday.", "I will to travel to Kazan on Saturday.", "I going to travel to Kazan on Saturday.", "I'm going travel to Kazan on Saturday."],
+      "answer": 0,
+      "explanation": "Решение принято заранее — это план, поэтому be going to. В конструкции три обязательные части: am, going и to."
+    },
+    {
+      "type": "gap",
+      "sentence": "— This bag is so heavy! — Wait, ___ you with it.",
+      "translation": "— Эта сумка такая тяжёлая! — Подожди, я помогу тебе с ней.",
+      "options": ["I help", "I'll help", "I'm going to help", "I helping"],
+      "answer": 1,
+      "explanation": "Решение помочь возникло в момент разговора, поэтому will: I'll help. Going to означало бы, что вы запланировали это заранее, а русское настоящее время («я помогу» → «I help») здесь не работает."
+    },
+    {
+      "type": "translate",
+      "source": "Мы собираемся переехать в следующем году.",
+      "answer": "We are going to move next year.",
+      "accept": ["We're going to move next year.", "Next year we are going to move.", "Next year we're going to move.", "We are going to move house next year.", "We're going to move house next year."],
+      "distractors": ["go", "moving", "in"],
+      "explanation": "«Собираемся» — это план, значит, be going to. Перед next year предлог не нужен: «in next year» — типичная ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "I think it will be cold tomorrow, so take a warm jacket.",
+      "question": "Какую погоду говорящий ожидает завтра?",
+      "options": ["Холодную", "Тёплую", "Дождливую", "Солнечную"],
+      "answer": 0,
+      "explanation": "It will be cold — «будет холодно». После I think для прогноза обычно используют will."
+    },
+    {
+      "type": "choice",
+      "prompt": "В кафе вы посмотрели меню и только что выбрали. Что сказать официанту?",
+      "options": ["I'll have the soup, please.", "I will to have the soup, please.", "I having the soup, please.", "I'm have the soup, please."],
+      "answer": 0,
+      "explanation": "Решение принято только что, поэтому will: I'll have… — стандартная фраза для заказа. После will глагол идёт без to."
+    },
+    {
+      "type": "gap",
+      "sentence": "Look at the time! We ___ late for the train.",
+      "translation": "Посмотри на время! Мы опоздаем на поезд.",
+      "options": ["are going to be", "will to be", "going to be", "are going be"],
+      "answer": 0,
+      "explanation": "Прогноз основан на том, что видно сейчас (часы показывают, что времени не осталось), поэтому going to. Не теряйте are перед going и to после него."
+    },
+    {
+      "type": "translate",
+      "source": "Я позвоню тебе сегодня вечером, обещаю.",
+      "answer": "I will call you tonight, I promise.",
+      "accept": [
+        "I'll call you tonight, I promise.",
+        "I will call you this evening, I promise.",
+        "I'll call you this evening, I promise.",
+        "I promise I will call you tonight.",
+        "I promise I'll call you tonight.",
+        "I will phone you tonight, I promise.",
+        "I'll phone you tonight, I promise."
+      ],
+      "distractors": ["to", "calls", "would"],
+      "explanation": "Для обещаний используют will. После call предлог не нужен: call you, а не «call to you», как подсказывает русское «позвонить тебе»."
+    },
+    {
+      "type": "gap",
+      "sentence": "— Why are you buying so much paint? — ___ the kitchen this weekend.",
+      "translation": "— Зачем ты покупаешь столько краски? — Я собираюсь покрасить кухню в выходные.",
+      "options": ["I'll paint", "I'm going to paint", "I paint", "I going to paint"],
+      "answer": 1,
+      "explanation": "Краска уже покупается, значит, решение принято раньше — это план: I'm going to paint. Will прозвучало бы так, будто идея пришла в голову только что."
+    },
+    {
+      "type": "listen",
+      "audio": "We're going to order pizza tonight.",
+      "question": "Что вы услышали?",
+      "options": ["We're going to order pizza tonight.", "We were going to order pizza tonight.", "We're going to order pizza tomorrow.", "We'll order pizza tonight."],
+      "answer": 0,
+      "explanation": "We're — сокращение от we are, оно произносится коротко и легко теряется на слух. Going to order — «собираемся заказать», это план на вечер."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение говорит о заранее принятом плане?",
+      "options": ["I'm going to book a hotel for our trip.", "OK, I'll book a hotel.", "I think the hotel will be full.", "Don't worry, I'll pay."],
+      "answer": 0,
+      "explanation": "Be going to показывает намерение, которое появилось до разговора. В остальных вариантах will: решение в момент речи, прогноз и предложение помощи."
+    },
+    {
+      "type": "translate",
+      "source": "Наверное, он скоро придёт.",
+      "answer": "He will probably come soon.",
+      "accept": ["He'll probably come soon.", "He will probably be here soon.", "He'll probably be here soon.", "He will probably arrive soon.", "He'll probably arrive soon.", "He is probably going to come soon.", "He's probably going to come soon."],
+      "distractors": ["comes", "to", "is"],
+      "explanation": "Предположение о будущем — will, а probably стоит между will и глаголом. По-русски можно сказать «скоро придёт» без особой формы, но в английском нужно will."
+    }
+  ]
+}

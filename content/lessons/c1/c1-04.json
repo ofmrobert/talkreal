@@ -1,0 +1,189 @@
+{
+  "id": "c1-04",
+  "level": "C1",
+  "order": 4,
+  "title": { "ru": "Условные предложения: продвинутый уровень", "en": "Advanced conditionals" },
+  "goal": { "ru": "Научитесь строить условия без if — так, как принято в деловой переписке и на переговорах.", "en": "Learn to build conditions without if, as in business correspondence and negotiations." },
+  "theory": [
+    {
+      "title": "Should you…, Were I to…, Had we…: инверсия вместо if",
+      "body": "В формальной речи if можно опустить, поставив вспомогательный глагол перед подлежащим. Should you need… — «если вдруг понадобится» (реальное, но не обязательное условие). Were I to… — маловероятное или воображаемое условие. Had we known… — нереальное условие в прошлом. Отрицание не сокращается и стоит после подлежащего: Had it not been…",
+      "examples": [
+        { "en": "Should you require any further information, please do not hesitate to contact me.", "ru": "Если вам потребуется дополнительная информация, пожалуйста, обращайтесь ко мне." },
+        { "en": "Were the client to back out of the deal, we would lose a year's work.", "ru": "Если бы клиент вдруг отказался от сделки, мы потеряли бы год работы." },
+        { "en": "Had we known about the risks, we would have acted differently.", "ru": "Знай мы о рисках, мы поступили бы иначе." }
+      ],
+      "tip": "Инверсия возможна только с should, were и had. Начинать условие с would или did нельзя: «Would you need help…» — это вопрос, а не условие."
+    },
+    {
+      "title": "Had it not been for и but for: «если бы не»",
+      "body": "Русское «если бы не + существительное» передаётся оборотами if it hadn't been for, had it not been for или более книжным but for. После них идёт существительное или герундий, а не придаточное. Для настоящего времени используется were it not for.",
+      "examples": [
+        { "en": "Had it not been for the grant, the research would never have been completed.", "ru": "Если бы не грант, исследование так и не было бы завершено." },
+        { "en": "But for your help, we would have missed the deadline.", "ru": "Если бы не твоя помощь, мы бы сорвали срок." }
+      ]
+    },
+    {
+      "title": "Provided that, on condition that, supposing",
+      "body": "Provided (that) и on condition that означают «при условии, что» и подчёркивают, что условие обязательно: это язык договоров и переговоров. Supposing вводит гипотезу для обсуждения: «а что, если…». После всех этих союзов, как и после if, будущее время не используется.",
+      "examples": [
+        { "en": "We are happy to extend the contract, provided that the terms remain unchanged.", "ru": "Мы готовы продлить договор при условии, что условия останутся прежними." },
+        { "en": "Supposing the investors pull out, what then?", "ru": "А если предположить, что инвесторы выйдут из проекта, — что тогда?" }
+      ],
+      "tip": "Не путайте с in case: оно означает «на случай, если», то есть предосторожность, а не условие. Take an umbrella in case it rains — возьми зонт на случай дождя."
+    }
+  ],
+  "vocab": [
+    { "en": "provided that", "ru": "при условии, что", "example": "You may use the data provided that you cite the source." },
+    { "en": "but for", "ru": "если бы не", "example": "But for the traffic, I would have been on time." },
+    { "en": "on condition that", "ru": "при условии, что (строгое требование)", "example": "He agreed to speak on condition that he was not named." },
+    { "en": "otherwise", "ru": "иначе, в противном случае", "example": "Send it today; otherwise we will lose the order." },
+    { "en": "to hesitate", "ru": "колебаться, стесняться", "example": "Don't hesitate to ask if anything is unclear." },
+    { "en": "to reconsider", "ru": "пересмотреть (решение)", "example": "We urge the board to reconsider its position." },
+    { "en": "to back out", "ru": "отказаться от договорённости", "example": "The sponsor backed out at the last minute." },
+    { "en": "supposing", "ru": "предположим, а что если", "example": "Supposing nobody replies, what do we do next?" }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "Should you require any further information, please do not hesitate to contact me.",
+      "question": "В какой ситуации уместна эта фраза?",
+      "options": [
+        "В конце официального делового письма",
+        "В сообщении близкому другу",
+        "В разговоре с коллегой за обедом",
+        "В рекламном слогане"
+      ],
+      "answer": 0,
+      "explanation": "Should you… вместо If you…, глагол require и полная форма do not — признаки формального письменного стиля. В дружеском сообщении это прозвучало бы холодно; там говорят «Let me know if you need anything else»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите формальный вариант фразы «If we had known about the risks, we would have acted differently».",
+      "options": [
+        "Had we knew about the risks, we would have acted differently.",
+        "Had we known about the risks, we would have acted differently.",
+        "Did we know about the risks, we would have acted differently.",
+        "Have we known about the risks, we would have acted differently."
+      ],
+      "answer": 1,
+      "explanation": "В нереальном условии о прошлом if опускается, а had выходит вперёд: Had we known. После had нужна третья форма глагола (known), а не knew."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ it not been for the grant, the research would never have been completed.",
+      "translation": "Если бы не грант, исследование так и не было бы завершено.",
+      "options": ["Had", "Were", "Should", "If"],
+      "answer": 0,
+      "explanation": "Форма been и would have в главной части указывают на прошлое, значит нужно had: Had it not been for. Were it not for относится к настоящему, а после if порядок слов был бы другим: If it had not been for."
+    },
+    {
+      "type": "translate",
+      "source": "Если бы не твоя помощь, мы бы сорвали срок.",
+      "answer": "But for your help, we would have missed the deadline.",
+      "accept": [
+        "But for your help, we'd have missed the deadline.",
+        "Without your help, we would have missed the deadline.",
+        "Had it not been for your help, we would have missed the deadline.",
+        "If it hadn't been for your help, we would have missed the deadline.",
+        "If it had not been for your help, we would have missed the deadline."
+      ],
+      "distractors": ["will", "except", "miss", "had"],
+      "explanation": "But for + существительное — компактный книжный эквивалент «если бы не». В главной части нужно would have + третья форма, потому что речь о прошлом, а «сорвать срок» — это miss the deadline."
+    },
+    {
+      "type": "gap",
+      "sentence": "We are happy to extend the contract, ___ the terms remain unchanged.",
+      "translation": "Мы готовы продлить договор при условии, что условия останутся прежними.",
+      "options": ["provided that", "unless", "in case", "otherwise"],
+      "answer": 0,
+      "explanation": "Provided that вводит обязательное условие: только если условия не изменятся. In case — ложный помощник: оно значит «на случай, если», а unless («если не») придало бы фразе противоположный смысл."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "provided that", "ru": "при условии, что" },
+        { "en": "but for", "ru": "если бы не" },
+        { "en": "otherwise", "ru": "иначе, в противном случае" },
+        { "en": "to back out", "ru": "отказаться от договорённости" },
+        { "en": "to reconsider", "ru": "пересмотреть (решение)" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Будь я на вашем месте, я бы пересмотрел это предложение.",
+      "answer": "Were I in your position, I would reconsider the offer.",
+      "accept": [
+        "Were I in your position, I'd reconsider the offer.",
+        "Were I in your position, I would reconsider this offer.",
+        "Were I you, I would reconsider the offer.",
+        "Were I in your place, I would reconsider the offer.",
+        "Were I in your shoes, I would reconsider the offer.",
+        "If I were in your position, I would reconsider the offer.",
+        "If I were you, I would reconsider the offer."
+      ],
+      "distractors": ["was", "will", "am", "did"],
+      "explanation": "Русское «будь я» точно передаётся инверсией Were I…: формально и вежливо. В инверсии возможна только форма were, а не was, а в главной части стоит would, а не will."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение правильно и формально передаёт мысль «если клиент вдруг откажется от сделки»?",
+      "options": [
+        "Would the client back out of the deal, we would lose a year's work.",
+        "Were the client back out of the deal, we would lose a year's work.",
+        "Were the client to back out of the deal, we would lose a year's work.",
+        "Should the client would back out of the deal, we would lose a year's work."
+      ],
+      "answer": 2,
+      "explanation": "Маловероятное условие о будущем строится по модели were + подлежащее + to + глагол: were the client to back out. Частица to обязательна, а would в условной части не используется ни с if, ни в инверсии."
+    },
+    {
+      "type": "listen",
+      "audio": "Had it not been for the delay at customs, the shipment would have arrived on Monday.",
+      "question": "Что произошло на самом деле?",
+      "options": [
+        "Груз задержали на таможне, и в понедельник он не прибыл",
+        "Груз прибыл в понедельник, несмотря на таможню",
+        "Груз прошёл таможню без задержек",
+        "Груз прибудет в понедельник, если его не задержат"
+      ],
+      "answer": 0,
+      "explanation": "Had it not been for… описывает нереальное прошлое: задержка была, поэтому груз в понедельник не пришёл. Would have arrived говорит о несостоявшемся результате, а не о планах на будущее."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you change your mind, the offer will remain open until the end of the month.",
+      "translation": "Если вы вдруг передумаете, предложение будет действовать до конца месяца.",
+      "options": ["Should", "Would", "Were", "Had"],
+      "answer": 0,
+      "explanation": "Should you + начальная форма — вежливое «если вдруг»: условие реальное, поэтому в главной части стоит will. После were понадобилось бы to (were you to change), а had требует третьей формы глагола."
+    },
+    {
+      "type": "translate",
+      "source": "Я подпишу при условии, что этот пункт уберут.",
+      "answer": "I will sign on condition that this clause is removed.",
+      "accept": [
+        "I'll sign on condition that this clause is removed.",
+        "I will sign on the condition that this clause is removed.",
+        "I will sign provided that this clause is removed.",
+        "I will sign provided this clause is removed.",
+        "I will sign as long as this clause is removed.",
+        "I will sign on condition that this clause be removed."
+      ],
+      "distractors": ["unless", "would", "point", "in"],
+      "explanation": "После on condition that, как и после if, будущее время не ставится: is removed, а не will be removed. Пункт договора — clause; point — это «довод» или «момент», но не часть юридического текста."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «Supposing the investors pull out, what then?»",
+      "options": [
+        "А если предположить, что инвесторы выйдут из проекта, — что тогда?",
+        "Раз уж инвесторы вышли из проекта, что теперь делать?",
+        "Инвесторы предполагают выйти из проекта, и что с того?",
+        "Пока инвесторы не вышли из проекта, что нам делать?"
+      ],
+      "answer": 0,
+      "explanation": "Supposing вводит гипотезу, которую говорящий предлагает обсудить, — разговорный аналог «what if». Это не свершившийся факт и не чьё-то намерение."
+    }
+  ]
+}

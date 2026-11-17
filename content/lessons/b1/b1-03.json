@@ -1,0 +1,142 @@
+{
+  "id": "b1-03",
+  "level": "B1",
+  "order": 3,
+  "title": { "ru": "Условные предложения: первый и второй тип", "en": "First and Second Conditional" },
+  "goal": { "ru": "Научитесь говорить о реальных планах и о воображаемых ситуациях.", "en": "Learn to talk about real plans and imaginary situations." },
+  "theory": [
+    {
+      "title": "First Conditional: реальное будущее",
+      "body": "Когда условие вполне может выполниться, используем схему: if + Present Simple, а в главной части — will. Будущее время после if не ставится, хотя по-русски мы говорим «если пойдёт», «если увижу».",
+      "examples": [
+        { "en": "If it rains, we'll take a taxi.", "ru": "Если пойдёт дождь, мы возьмём такси." },
+        { "en": "If you don't hurry, you'll miss the train.", "ru": "Если не поторопишься, опоздаешь на поезд." },
+        { "en": "I'll call you if I find out anything.", "ru": "Я позвоню тебе, если что-нибудь узнаю." }
+      ],
+      "tip": "Запомните: will и if не стоят в одной части предложения. То же правило действует после when, unless, as soon as."
+    },
+    {
+      "title": "Second Conditional: воображаемое",
+      "body": "Когда ситуация нереальна или маловероятна, схема другая: if + Past Simple, а в главной части — would + глагол. Прошедшее время здесь не про прошлое: оно показывает, что мы фантазируем. Это соответствует русскому «если бы…, то… бы».",
+      "examples": [
+        { "en": "If I had more time, I would learn Spanish.", "ru": "Если бы у меня было больше времени, я бы выучил испанский." },
+        { "en": "If I were you, I'd talk to a lawyer.", "ru": "На твоём месте я бы поговорил с юристом." }
+      ],
+      "tip": "Would после if не ставится: «If I would have money» — ошибка. В выражении If I were you используется were, а не was."
+    },
+    {
+      "title": "Unless = if not",
+      "body": "Unless означает «если не» и уже содержит отрицание, поэтому глагол после него стоит в утвердительной форме. Время после unless такое же, как после if.",
+      "examples": [
+        { "en": "We'll be late unless we leave now.", "ru": "Мы опоздаем, если не выйдем сейчас." },
+        { "en": "I won't accept the offer unless they raise the salary.", "ru": "Я не приму предложение, если они не поднимут зарплату." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "unless", "ru": "если не", "example": "Don't call me unless it's urgent." },
+    { "en": "to miss", "ru": "опоздать (на транспорт), пропустить", "example": "I missed the last bus." },
+    { "en": "to afford", "ru": "позволить себе", "example": "We can't afford a new car this year." },
+    { "en": "to quit", "ru": "уволиться; бросить", "example": "She quit her job in March." },
+    { "en": "a pay rise", "ru": "повышение зарплаты", "example": "He asked for a pay rise." },
+    { "en": "to accept", "ru": "принять", "example": "They accepted our conditions." },
+    { "en": "an offer", "ru": "предложение", "example": "I got a job offer from a German company." }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "Если пойдёт дождь, мы останемся дома.",
+      "answer": "If it rains, we will stay at home.",
+      "accept": ["If it rains, we'll stay at home.", "If it rains, we will stay home.", "If it rains, we'll stay home.", "We will stay at home if it rains.", "We'll stay at home if it rains.", "We will stay home if it rains.", "We'll stay home if it rains."],
+      "distractors": ["rain", "would", "stayed"],
+      "explanation": "Реальное условие: после if — Present Simple (it rains), will — только в главной части. Русское «пойдёт» стоит в будущем времени, но переносить его в английскую if-часть нельзя."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["If I will have time, I'll call you.", "If I have time, I'll call you.", "If I'll have time, I call you.", "If I had time, I'll call you."],
+      "answer": 1,
+      "explanation": "В первом типе после if стоит Present Simple, а will — в главной части: If I have time, I'll call. Смешивать had и will нельзя: это половины двух разных типов."
+    },
+    {
+      "type": "gap",
+      "sentence": "If I ___ more money, I would buy a flat in the centre.",
+      "translation": "Если бы у меня было больше денег, я бы купил квартиру в центре.",
+      "options": ["had", "have", "would have", "will have"],
+      "answer": 0,
+      "explanation": "Would в главной части показывает, что ситуация воображаемая, значит, после if нужен Past Simple: had. Would have после if — самая частая ошибка: русское «бы» есть в обеих частях, а английское would — только в одной."
+    },
+    {
+      "type": "listen",
+      "audio": "If I were you, I would accept the offer.",
+      "question": "Что советует говорящий?",
+      "options": ["Принять предложение", "Отказаться от предложения", "Сделать встречное предложение", "Подождать с ответом"],
+      "answer": 0,
+      "explanation": "If I were you, I would… — стандартная формула совета: «На твоём месте я бы…». Accept the offer — принять предложение."
+    },
+    {
+      "type": "gap",
+      "sentence": "We won't get a table ___ we book in advance.",
+      "translation": "Мы не получим столик, если не забронируем заранее.",
+      "options": ["unless", "if", "when", "without"],
+      "answer": 0,
+      "explanation": "Unless = «если не»: отрицание уже внутри слова, поэтому глагол book стоит без not. С if или when смысл получился бы обратным, а without требует существительного или формы с -ing."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "unless", "ru": "если не" },
+        { "en": "to afford", "ru": "позволить себе" },
+        { "en": "to quit", "ru": "уволиться" },
+        { "en": "a pay rise", "ru": "повышение зарплаты" },
+        { "en": "to accept", "ru": "принять" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "У вас нет машины, вы просто мечтаете. Как сказать: «Если бы у меня была машина, я бы ездил на работу на ней»?",
+      "options": ["If I had a car, I would drive to work.", "If I have a car, I will drive to work.", "If I would have a car, I would drive to work.", "If I had a car, I will drive to work."],
+      "answer": 0,
+      "explanation": "Нереальная ситуация в настоящем — второй тип: if + Past Simple, затем would + глагол. Вариант с have и will означал бы, что машина у вас вполне может появиться."
+    },
+    {
+      "type": "translate",
+      "source": "Что бы ты сделал, если бы выиграл миллион?",
+      "answer": "What would you do if you won a million?",
+      "accept": ["What would you do if you won one million?", "If you won a million, what would you do?"],
+      "distractors": ["will", "win", "did"],
+      "explanation": "Выигрыш — фантазия, поэтому would в главной части и Past Simple (won) после if. Would во второй раз не повторяется, хотя в русском «бы» звучит дважды."
+    },
+    {
+      "type": "listen",
+      "audio": "If she doesn't get a pay rise, she'll quit.",
+      "question": "Что вы услышали?",
+      "options": ["If she doesn't get a pay rise, she'll quit.", "If she didn't get a pay rise, she'd quit.", "If she doesn't get a pay rise, she quits.", "If she won't get a pay rise, she'll quit."],
+      "answer": 0,
+      "explanation": "Это реальное условие: doesn't get (Present Simple) после if и she'll = she will в главной части. Сокращения 'll и 'd на слух похожи, но 'd означало бы воображаемую ситуацию."
+    },
+    {
+      "type": "gap",
+      "sentence": "If we take a taxi now, we ___ miss our flight.",
+      "translation": "Если мы сейчас возьмём такси, мы не опоздаем на рейс.",
+      "options": ["won't", "wouldn't", "don't", "didn't"],
+      "answer": 0,
+      "explanation": "Условие реальное (take — Present Simple), поэтому в главной части будущее: won't miss. Wouldn't подошло бы только в паре с Past Simple: If we took a taxi…"
+    },
+    {
+      "type": "translate",
+      "source": "Я бы уволился, если бы мог себе это позволить.",
+      "answer": "I would quit if I could afford it.",
+      "accept": ["I'd quit if I could afford it.", "If I could afford it, I would quit.", "If I could afford it, I'd quit.", "I would quit my job if I could afford it.", "I'd quit my job if I could afford it."],
+      "distractors": ["will", "can", "afforded"],
+      "explanation": "Говорящий уволиться не может — это второй тип: would quit, а после if — прошедшая форма could. После could глагол стоит в начальной форме: afford, без -ed."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении человек считает ситуацию вполне реальной?",
+      "options": ["If I get the job, I'll move to Berlin.", "If I got the job, I'd move to Berlin.", "If I were younger, I'd move to Berlin."],
+      "answer": 0,
+      "explanation": "Present Simple + will (первый тип) показывает, что говорящий верит в такую возможность. Past Simple + would отодвигает ситуацию в область маловероятного или воображаемого."
+    }
+  ]
+}

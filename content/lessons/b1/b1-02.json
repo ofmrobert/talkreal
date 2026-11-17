@@ -1,0 +1,143 @@
+{
+  "id": "b1-02",
+  "level": "B1",
+  "order": 2,
+  "title": { "ru": "Present Perfect Continuous: for и since", "en": "Present Perfect Continuous with for and since" },
+  "goal": { "ru": "Научитесь говорить, как долго вы уже что-то делаете.", "en": "Learn to say how long you have been doing something." },
+  "theory": [
+    {
+      "title": "Действие началось раньше и всё ещё длится",
+      "body": "Present Perfect Continuous (have / has + been + глагол с -ing) показывает действие, которое началось в прошлом и продолжается до сих пор. Это же время объясняет то, что мы видим сейчас: человек устал, потому что долго что-то делал.",
+      "examples": [
+        { "en": "I've been working here for three years.", "ru": "Я работаю здесь три года." },
+        { "en": "How long have you been waiting?", "ru": "Сколько вы уже ждёте?" },
+        { "en": "Your eyes are red. Have you been crying?", "ru": "У тебя красные глаза. Ты плакала?" }
+      ],
+      "tip": "Главная ловушка: по-русски здесь настоящее время («работаю три года»), но в английском Present Simple и Present Continuous с for и since в этом значении не используются. Нельзя: I work here for three years."
+    },
+    {
+      "title": "For или since",
+      "body": "For называет длительность: for two hours, for a long time, for ages. Since называет точку отсчёта: since Monday, since 2018, since I moved here. Русское «с» в значении «начиная с» — это since, а не from.",
+      "examples": [
+        { "en": "It's been snowing for two days.", "ru": "Снег идёт два дня." },
+        { "en": "It's been snowing since Tuesday.", "ru": "Снег идёт со вторника." }
+      ],
+      "tip": "Проверка: если можно спросить «сколько времени?» — for; если «с какого момента?» — since."
+    },
+    {
+      "title": "Глаголы состояния: без -ing",
+      "body": "Глаголы состояния (know, have в значении «иметь», be, like, want) не употребляются в длительной форме. С ними то же самое значение передаёт обычный Present Perfect.",
+      "examples": [
+        { "en": "I've known Sergei since school.", "ru": "Я знаю Сергея со школы." },
+        { "en": "We've had this dog for five years.", "ru": "Эта собака у нас пять лет." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "for", "ru": "в течение (сколько времени)", "example": "I've been learning to drive for two months." },
+    { "en": "since", "ru": "с (какого-то момента)", "example": "He's been living alone since his divorce." },
+    { "en": "how long", "ru": "как долго, сколько времени", "example": "How long have you been using this app?" },
+    { "en": "lately", "ru": "в последнее время", "example": "I've been feeling tired lately." },
+    { "en": "all day", "ru": "весь день", "example": "The phone has been ringing all day." },
+    { "en": "to look for", "ru": "искать", "example": "I've been looking for my keys for an hour." },
+    { "en": "to renovate", "ru": "делать ремонт", "example": "They've been renovating the kitchen since May." },
+    { "en": "exhausted", "ru": "вымотанный, без сил", "example": "I'm exhausted after the flight." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "I ___ here for three years, and I still love it.",
+      "translation": "Я работаю здесь три года, и мне до сих пор нравится.",
+      "options": ["work", "am working", "have been working", "worked"],
+      "answer": 2,
+      "explanation": "Действие началось три года назад и продолжается — нужен Present Perfect Continuous. Русское «работаю» подталкивает к work или am working, но с for в этом значении они невозможны."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить: «Сколько ты уже учишь английский?»",
+      "options": ["How long are you learning English?", "How long do you learn English?", "How long have you been learning English?", "How much time you learn English?"],
+      "answer": 2,
+      "explanation": "Вопрос о длительности действия, которое ещё продолжается, строится так: How long have you been + глагол с -ing. Настоящее время после how long в этом значении — калька с русского."
+    },
+    {
+      "type": "listen",
+      "audio": "She's been looking for a new flat since March.",
+      "question": "Что вы услышали?",
+      "options": ["She's been looking for a new flat since March.", "She's looking for a new flat since March.", "She's been looking for a new flat for March.", "She's been looking at a new flat since March."],
+      "answer": 0,
+      "explanation": "She's been — это she has been; короткое been легко пропустить на слух. March — точка отсчёта, поэтому since, а look for значит «искать» (look at — «смотреть на»)."
+    },
+    {
+      "type": "translate",
+      "source": "Мы ждём уже сорок минут.",
+      "answer": "We have been waiting for forty minutes.",
+      "accept": ["We've been waiting for forty minutes.", "We have been waiting for forty minutes already.", "We've been waiting for forty minutes already.", "We have been waiting forty minutes.", "We've been waiting forty minutes."],
+      "distractors": ["are", "since", "wait"],
+      "explanation": "«Ждём уже сорок минут» — действие длится до настоящего момента: have been waiting. Сорок минут — длительность, поэтому for, а не since."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I've been knowing Olga for ten years.", "I know Olga for ten years.", "I've known Olga for ten years.", "I've known Olga since ten years."],
+      "answer": 2,
+      "explanation": "Know — глагол состояния, у него нет формы с -ing, поэтому берём Present Perfect: have known. Ten years — это длительность, значит, for; since требует точки отсчёта."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's been raining ___ this morning.",
+      "translation": "Дождь идёт с самого утра.",
+      "options": ["since", "for", "from", "during"],
+      "answer": 0,
+      "explanation": "This morning — момент, с которого начался дождь, поэтому since. Русское «с утра» часто ошибочно переводят как from, но с перфектными временами нужно since."
+    },
+    {
+      "type": "translate",
+      "source": "Он весь день чинит свой ноутбук.",
+      "answer": "He has been fixing his laptop all day.",
+      "accept": ["He's been fixing his laptop all day.", "He has been repairing his laptop all day.", "He's been repairing his laptop all day.", "He has been fixing his laptop all day long."],
+      "distractors": ["is", "fixes", "since"],
+      "explanation": "All day показывает, что действие тянется с утра и ещё не закончено, — has been fixing. Вариант «He is fixing all day» повторяет русское настоящее время и звучит неправильно."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "how long", "ru": "как долго" },
+        { "en": "lately", "ru": "в последнее время" },
+        { "en": "to look for", "ru": "искать" },
+        { "en": "to renovate", "ru": "делать ремонт" },
+        { "en": "exhausted", "ru": "вымотанный" }
+      ]
+    },
+    {
+      "type": "listen",
+      "audio": "You look exhausted. Have you been working all night?",
+      "question": "Что предполагает говорящий?",
+      "options": ["Что собеседник работал всю ночь", "Что собеседнику придётся работать ночью", "Что собеседник всегда работает по ночам", "Что собеседник плохо работает"],
+      "answer": 0,
+      "explanation": "Present Perfect Continuous объясняет то, что видно сейчас: усталый вид — результат долгого недавнего действия. О привычке спросили бы в Present Simple: Do you work at night?"
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ married since 2015.",
+      "translation": "Мы женаты с 2015 года.",
+      "options": ["are", "have been", "were", "have being"],
+      "answer": 1,
+      "explanation": "Be — глагол состояния, поэтому вместо длительной формы используется Present Perfect: have been married. «We are married since 2015» — калька с русского настоящего времени."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Они делают ремонт в квартире уже полгода».",
+      "options": ["They are renovating their flat for six months.", "They have been renovating their flat for six months.", "They renovate their flat since six months.", "They have been renovating their flat since six months."],
+      "answer": 1,
+      "explanation": "Ремонт начался полгода назад и продолжается — have been renovating. Six months — длительность, поэтому for; since six months — частая ошибка под влиянием русского «уже полгода как»."
+    },
+    {
+      "type": "translate",
+      "source": "В последнее время я плохо сплю.",
+      "answer": "I haven't been sleeping well lately.",
+      "accept": ["I have not been sleeping well lately.", "Lately I haven't been sleeping well.", "I've been sleeping badly lately.", "I have been sleeping badly lately.", "I haven't been sleeping well recently."],
+      "distractors": ["don't", "am", "good"],
+      "explanation": "Lately описывает период, который тянется до настоящего момента, поэтому нужен Present Perfect Continuous, а не Present Simple. «Плохо спать» естественнее передать как not sleep well; good здесь не подходит, потому что нужно наречие."
+    }
+  ]
+}

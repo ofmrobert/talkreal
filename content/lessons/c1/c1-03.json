@@ -1,0 +1,186 @@
+{
+  "id": "c1-03",
+  "level": "C1",
+  "order": 3,
+  "title": { "ru": "Сослагательное наклонение и «нереальное прошедшее»", "en": "The subjunctive and unreal past" },
+  "goal": { "ru": "Научитесь выражать требования, пожелания и сожаления так, как это делают образованные носители языка.", "en": "Learn to express demands, preferences and regrets the way educated speakers do." },
+  "theory": [
+    {
+      "title": "I suggest that he be…: сослагательное после глаголов требования",
+      "body": "После suggest, recommend, insist, demand, propose и оборотов it is essential / vital / important that глагол стоит в начальной форме без to — для всех лиц и времён: that he be, that she sign, that they not attend. Это формальный стиль, особенно характерный для американского английского. В британском часто добавляют should: that he should be.",
+      "examples": [
+        { "en": "The committee suggested that the director step down.", "ru": "Комитет предложил директору уйти в отставку." },
+        { "en": "It's essential that every member be informed in writing.", "ru": "Необходимо, чтобы каждый участник был проинформирован письменно." },
+        { "en": "We recommend that the clause not be changed.", "ru": "Мы рекомендуем не менять этот пункт." }
+      ],
+      "tip": "Русское «чтобы + прошедшее время» («чтобы он подписал») не переводится через to: «suggested him to sign» — ошибка. Нужно suggested that he sign."
+    },
+    {
+      "title": "It's high time и I'd rather: прошедшее время о настоящем",
+      "body": "После it's (high) time и I'd rather + другое лицо глагол стоит в Past Simple, хотя речь идёт о настоящем или будущем. Прошедшее время показывает не время, а дистанцию от реальности: этого пока нет. Если сожаление относится к прошлому, используется Past Perfect: I'd rather you hadn't told him.",
+      "examples": [
+        { "en": "It's high time we updated our website.", "ru": "Нам давно пора обновить сайт." },
+        { "en": "I'd rather you didn't discuss the figures with anyone.", "ru": "Я бы предпочёл, чтобы вы ни с кем не обсуждали эти цифры." }
+      ],
+      "tip": "Если подлежащее одно и то же, после I'd rather идёт начальная форма: I'd rather stay. Прошедшее время нужно только тогда, когда действие совершает кто-то другой."
+    },
+    {
+      "title": "If only, I wish, as though",
+      "body": "Та же логика работает после if only, I wish и as if / as though. Past Simple выражает нереальное настоящее, Past Perfect — нереальное прошлое, о котором сожалеют. As though + Past Perfect показывает, что на самом деле всё было иначе.",
+      "examples": [
+        { "en": "If only we had read the contract more carefully.", "ru": "Если бы мы только прочитали договор внимательнее." },
+        { "en": "He talks about the project as though he had designed it himself.", "ru": "Он говорит о проекте так, будто сам его разработал." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "to insist", "ru": "настаивать", "example": "The client insisted that the logo be changed." },
+    { "en": "to suggest", "ru": "предлагать", "example": "I suggest that we take a short break." },
+    { "en": "it's high time", "ru": "давно пора", "example": "It's high time somebody told him the truth." },
+    { "en": "I'd rather", "ru": "я бы предпочёл", "example": "I'd rather you called me before the meeting." },
+    { "en": "essential", "ru": "необходимый, обязательный", "example": "It is essential that the data be kept confidential." },
+    { "en": "vital", "ru": "жизненно важный", "example": "It is vital that we respond today." },
+    { "en": "to postpone", "ru": "откладывать, переносить", "example": "They postponed the vote until next week." },
+    { "en": "to step down", "ru": "уйти с должности", "example": "The chairman stepped down after the scandal." }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "Нам давно пора обновить сайт.",
+      "answer": "It's high time we updated our website.",
+      "accept": [
+        "It is high time we updated our website.",
+        "It's high time we updated the website.",
+        "It's high time that we updated our website.",
+        "It's about time we updated our website.",
+        "It's high time we updated our site."
+      ],
+      "distractors": ["updating", "will", "have", "would"],
+      "explanation": "После it's high time глагол стоит в Past Simple (updated), хотя речь о настоящем: прошедшее время показывает, что действие должно было произойти, но ещё не произошло. Русское «пора обновить» подсказывает инфинитив, но с подлежащим we нужна именно прошедшая форма."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'd rather you ___ the figures with anyone until the report is published.",
+      "translation": "Я бы предпочёл, чтобы вы ни с кем не обсуждали цифры до публикации отчёта.",
+      "options": ["didn't discuss", "won't discuss", "not to discuss", "haven't discussed"],
+      "answer": 0,
+      "explanation": "Когда после I'd rather появляется другое лицо (you), глагол стоит в Past Simple, хотя имеется в виду будущее. Это вежливый, но твёрдый способ попросить чего-то не делать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант в формальном стиле.",
+      "options": [
+        "The committee suggested the director to step down.",
+        "The committee suggested that the director step down.",
+        "The committee suggested that the director to step down.",
+        "The committee suggested to step down the director."
+      ],
+      "answer": 1,
+      "explanation": "После suggest нужен оборот that + подлежащее + начальная форма глагола без to и без -s: that the director step down. Конструкция «suggest somebody to do» — калька с русского «предложить кому-то сделать»; у глагола suggest такой модели нет."
+    },
+    {
+      "type": "listen",
+      "audio": "It's essential that every member be informed of the changes in writing.",
+      "question": "Что вы услышали?",
+      "options": [
+        "It's essential that every member be informed of the changes in writing.",
+        "It's essential that every member been informed of the changes in writing.",
+        "It's essential that every member being informed of the changes in writing.",
+        "It's essential for every member be informed of the changes in writing."
+      ],
+      "answer": 0,
+      "explanation": "После it's essential that в формальной речи используется сослагательное наклонение — начальная форма be для любого лица. Это звучит непривычно, но характерно для официальных документов и протоколов."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to insist", "ru": "настаивать" },
+        { "en": "to postpone", "ru": "откладывать, переносить" },
+        { "en": "to step down", "ru": "уйти с должности" },
+        { "en": "vital", "ru": "жизненно важный" },
+        { "en": "it's high time", "ru": "давно пора" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «I'd rather you hadn't mentioned the budget»?",
+      "options": [
+        "Вы упомянули бюджет, и говорящий об этом сожалеет",
+        "Говорящий просит не упоминать бюджет в будущем",
+        "Вы не упомянули бюджет, и говорящий этому рад",
+        "Говорящий сам предпочёл не упоминать бюджет"
+      ],
+      "answer": 0,
+      "explanation": "I'd rather + Past Perfect относится к прошлому: действие уже произошло, и говорящему это не нравится. Для просьбы на будущее было бы «I'd rather you didn't mention the budget»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The union is demanding that the meeting ___ postponed until all the data is available.",
+      "translation": "Профсоюз требует, чтобы встречу отложили до тех пор, пока не появятся все данные.",
+      "options": ["be", "will be", "would be", "being"],
+      "answer": 0,
+      "explanation": "После demand that используется сослагательное наклонение: начальная форма be, независимо от времени и лица. Will и would здесь невозможны: требование не описывает будущее, а называет то, что должно быть сделано."
+    },
+    {
+      "type": "translate",
+      "source": "Я бы предпочёл, чтобы вы прислали отчёт к пятнице.",
+      "answer": "I'd rather you sent the report by Friday.",
+      "accept": [
+        "I would rather you sent the report by Friday.",
+        "I'd rather you sent me the report by Friday.",
+        "I would rather you sent me the report by Friday.",
+        "I'd rather you sent the report before Friday.",
+        "I'd rather you sent in the report by Friday."
+      ],
+      "distractors": ["to", "will", "until", "sending"],
+      "explanation": "После I'd rather you глагол стоит в Past Simple (sent) без to. «К пятнице» как крайний срок — by Friday; until означало бы, что действие длится до пятницы."
+    },
+    {
+      "type": "listen",
+      "audio": "He talks about the project as though he had designed it himself.",
+      "question": "Что из этого следует?",
+      "options": [
+        "Он не разрабатывал проект, но говорит так, будто это его работа",
+        "Он сам разработал проект и гордится этим",
+        "Он собирается разработать проект самостоятельно",
+        "Никто не знает, кто на самом деле разработал проект"
+      ],
+      "answer": 0,
+      "explanation": "As though + Past Perfect описывает нереальную ситуацию в прошлом: на самом деле проект разработал не он. Если бы говорящий допускал, что это правда, он сказал бы «as though he designed it»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "It's high time the government will address the housing shortage.",
+        "It's high time the government has addressed the housing shortage.",
+        "It's high time the government would address the housing shortage.",
+        "It's high time the government addressed the housing shortage."
+      ],
+      "answer": 3,
+      "explanation": "После it's high time + подлежащее возможен только Past Simple: addressed. Будущее время и would — типичные ошибки, потому что по смыслу действие ещё впереди."
+    },
+    {
+      "type": "gap",
+      "sentence": "If only we ___ the contract more carefully before we signed it last year.",
+      "translation": "Если бы мы только прочитали договор внимательнее, прежде чем подписать его в прошлом году.",
+      "options": ["had read", "would read", "have read", "would have read"],
+      "answer": 0,
+      "explanation": "Сожаление о прошлом после if only выражается через Past Perfect: had read. Would have после if only — распространённая ошибка: would have стоит в главной части условного предложения, а не после if."
+    },
+    {
+      "type": "translate",
+      "source": "Юрист настоял, чтобы она подписала договор лично.",
+      "answer": "The lawyer insisted that she sign the contract in person.",
+      "accept": [
+        "The lawyer insisted that she should sign the contract in person.",
+        "The lawyer insisted she sign the contract in person.",
+        "The lawyer insisted that she sign the contract personally.",
+        "The lawyer insisted that she sign the agreement in person.",
+        "The lawyer insisted that she signed the contract in person."
+      ],
+      "distractors": ["signs", "to", "her", "would"],
+      "explanation": "После insisted that глагол стоит в начальной форме без -s и без to: that she sign. «Лично» в значении «сама, не через представителя» — in person; модель «insisted her to sign» в английском невозможна."
+    }
+  ]
+}

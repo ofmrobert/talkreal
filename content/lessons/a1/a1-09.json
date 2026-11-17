@@ -1,0 +1,145 @@
+{
+  "id": "a1-09",
+  "level": "A1",
+  "order": 9,
+  "title": { "ru": "Can и can't: что я умею", "en": "Can / can't for abilities" },
+  "goal": { "ru": "Научитесь говорить, что вы умеете и чего не умеете делать.", "en": "Learn to say what you can and can't do." },
+  "theory": [
+    {
+      "title": "Can: умею, могу",
+      "body": "Can значит «уметь, мочь». После него идёт глагол в начальной форме без to. Can одинаков для всех лиц: I can, she can, they can — окончание -s к нему не добавляется никогда.",
+      "examples": [
+        { "en": "I can swim.", "ru": "Я умею плавать." },
+        { "en": "She can speak three languages.", "ru": "Она говорит на трёх языках." },
+        { "en": "We can cook Italian food.", "ru": "Мы умеем готовить итальянскую еду." }
+      ],
+      "tip": "Русское «умею плавать» хочется перевести с to, но после can частицы to нет: «I can to swim» — ошибка."
+    },
+    {
+      "title": "Can't: не умею, не могу",
+      "body": "Отрицание — cannot, в разговоре can't. Помощники do и does здесь не нужны: can сам образует отрицание. На слух can в утверждении звучит коротко и слабо, а can't — чётко и с ударением.",
+      "examples": [
+        { "en": "I can't drive.", "ru": "Я не умею водить машину." },
+        { "en": "He can't cook.", "ru": "Он не умеет готовить." },
+        { "en": "My parents can't use this app.", "ru": "Мои родители не умеют пользоваться этим приложением." }
+      ]
+    },
+    {
+      "title": "Вопросы с can",
+      "body": "В вопросе can встаёт перед подлежащим: Can you…? Короткие ответы: Yes, I can. / No, I can't. Вопросительное слово ставится перед can: What can you cook?",
+      "examples": [
+        { "en": "Can you ride a horse? — No, I can't.", "ru": "Ты умеешь ездить верхом? — Нет." },
+        { "en": "Can your daughter read?", "ru": "Твоя дочь умеет читать?" },
+        { "en": "What can you cook?", "ru": "Что ты умеешь готовить?" }
+      ],
+      "tip": "Do и can в одном вопросе не встречаются: «Do you can…?» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "to swim", "ru": "плавать", "example": "Children can swim in this pool." },
+    { "en": "to drive", "ru": "водить машину", "example": "My grandfather can drive a bus." },
+    { "en": "to ride a bike", "ru": "кататься на велосипеде", "example": "My son can ride a bike." },
+    { "en": "to play the guitar", "ru": "играть на гитаре", "example": "My friend can play the guitar." },
+    { "en": "to sing", "ru": "петь", "example": "Our teacher can sing in French." },
+    { "en": "to dance", "ru": "танцевать", "example": "They can dance salsa." },
+    { "en": "language", "ru": "язык", "example": "English is a useful language." },
+    { "en": "well", "ru": "хорошо", "example": "You can cook very well." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Я умею плавать».",
+      "options": ["I can to swim.", "I can swim.", "I am can swim.", "I can swimming."],
+      "answer": 1,
+      "explanation": "После can идёт глагол в начальной форме без to: can swim. Частицу to добавляют по привычке, потому что в русском здесь стоит инфинитив «плавать»."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to swim", "ru": "плавать" },
+        { "en": "to drive", "ru": "водить машину" },
+        { "en": "to sing", "ru": "петь" },
+        { "en": "to dance", "ru": "танцевать" },
+        { "en": "language", "ru": "язык" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "My daughter ___ play the guitar.",
+      "translation": "Моя дочь умеет играть на гитаре.",
+      "options": ["can", "cans", "can to", "is can"],
+      "answer": 0,
+      "explanation": "Can не меняется по лицам: даже с she окончания -s нет. Это особый глагол, и правило Present Simple на него не распространяется."
+    },
+    {
+      "type": "translate",
+      "source": "Я не умею водить машину.",
+      "answer": "I can't drive a car.",
+      "accept": ["I cannot drive a car.", "I can't drive.", "I cannot drive.", "I can not drive a car."],
+      "distractors": ["don't", "to", "am"],
+      "explanation": "Отрицание от can — can't, без помощника don't. После can't глагол идёт сразу, без to: can't drive."
+    },
+    {
+      "type": "listen",
+      "audio": "Tom can sing, but he can't dance.",
+      "question": "Что умеет Том?",
+      "options": ["Только петь", "Только танцевать", "Петь и танцевать", "Ни петь, ни танцевать"],
+      "answer": 0,
+      "explanation": "Can sing — умеет петь, can't dance — не умеет танцевать. Can't произносится чётко и с ударением, а can в утверждении — коротко и слабо."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить: «Ты умеешь кататься на велосипеде?»",
+      "options": ["Do you can ride a bike?", "Can you ride a bike?", "Can you to ride a bike?", "Are you can ride a bike?"],
+      "answer": 1,
+      "explanation": "В вопросе can просто встаёт перед подлежащим: Can you…? Помощники do и are здесь не нужны, и to после can не ставится."
+    },
+    {
+      "type": "gap",
+      "sentence": "He can ___ four languages.",
+      "translation": "Он говорит на четырёх языках.",
+      "options": ["speak", "speaks", "to speak", "speaking"],
+      "answer": 0,
+      "explanation": "После can глагол всегда в начальной форме, даже с he: can speak. Окончание -s здесь лишнее, как и частица to."
+    },
+    {
+      "type": "translate",
+      "source": "Она умеет хорошо танцевать.",
+      "answer": "She can dance well.",
+      "accept": ["She can dance very well."],
+      "distractors": ["good", "cans", "to"],
+      "explanation": "«Хорошо» при глаголе — это well, а good описывает предмет или человека: a good dancer. Well ставится после глагола, в конец предложения."
+    },
+    {
+      "type": "gap",
+      "sentence": "— Can you swim? — No, I ___.",
+      "translation": "— Ты умеешь плавать? — Нет, не умею.",
+      "options": ["can't", "don't", "am not", "not can"],
+      "answer": 0,
+      "explanation": "В кратком ответе повторяется глагол из вопроса: Can you…? — No, I can't. Don't подошёл бы только для вопроса с do."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["My boss cans speak Chinese.", "We don't can sing.", "Can they play the guitar?", "She can't to ride a bike."],
+      "answer": 2,
+      "explanation": "Can they play the guitar? — can стоит перед подлежащим, глагол без to. В остальных вариантах лишнее -s у can, лишнее don't и лишнее to."
+    },
+    {
+      "type": "listen",
+      "audio": "I can't swim very well.",
+      "question": "Что вы услышали?",
+      "options": ["I can't swim very well.", "I can swim very well.", "I can't sing very well.", "He can't swim very well."],
+      "answer": 0,
+      "explanation": "Can't swim very well — «не очень хорошо плаваю». Звук t на конце can't часто почти не слышен, поэтому ориентируйтесь на ударение: can't всегда произносится отчётливо."
+    },
+    {
+      "type": "translate",
+      "source": "Вы умеете играть на гитаре?",
+      "answer": "Can you play the guitar?",
+      "accept": ["Can you play guitar?"],
+      "distractors": ["do", "to", "on"],
+      "explanation": "Вопрос начинается с can, без do. «Играть на гитаре» — play the guitar: русский предлог «на» не переводится, поэтому «play on the guitar» — ошибка."
+    }
+  ]
+}

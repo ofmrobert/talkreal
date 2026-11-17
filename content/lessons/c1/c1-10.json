@@ -1,0 +1,179 @@
+{
+  "id": "c1-10",
+  "level": "C1",
+  "order": 10,
+  "title": { "ru": "Ложные друзья и кальки", "en": "False friends and calques" },
+  "goal": { "ru": "Избавьтесь от ошибок, которые выдают русскоязычного даже на продвинутом уровне.", "en": "Get rid of the mistakes that give away a Russian speaker even at an advanced level." },
+  "theory": [
+    {
+      "title": "Ложные друзья: похоже звучит — значит другое",
+      "body": "Actual — не «актуальный», а «фактический, реальный»; «актуальный» — это topical, relevant или pressing. Accurate — «точный», а не «аккуратный» (neat, tidy, careful). Sympathetic — «сочувствующий», а не «симпатичный» (nice, likeable). Magazine — «журнал», а не «магазин». Decade — десять лет, а не десять дней.",
+      "examples": [
+        { "en": "The actual cost turned out to be twice the original estimate.", "ru": "Фактическая стоимость оказалась вдвое выше первоначальной оценки." },
+        { "en": "The forecast proved remarkably accurate.", "ru": "Прогноз оказался на удивление точным." },
+        { "en": "The industry has changed dramatically over the past decade.", "ru": "За последнее десятилетие отрасль сильно изменилась." }
+      ],
+      "tip": "То же касается наречий: actually значит «на самом деле», а не «в настоящее время» (currently). Eventually — «в конце концов», а не «возможно» (possibly)."
+    },
+    {
+      "title": "Realise и implement",
+      "body": "В современном английском realise почти всегда означает «осознать, понять». Русское «реализовать план, стратегию, проект» — это implement, carry out или put into practice. «Реализовать товар» — sell. Фраза «We realised the project» носителю непонятна: он услышит «мы осознали проект».",
+      "examples": [
+        { "en": "The company plans to implement the new strategy over the next two years.", "ru": "Компания планирует реализовать новую стратегию в течение двух лет." },
+        { "en": "We eventually realised that the data was inaccurate.", "ru": "В конце концов мы осознали, что данные были неточными." }
+      ]
+    },
+    {
+      "title": "Кальки: русская конструкция английскими словами",
+      "body": "Глагол feel не требует возвратного местоимения: I feel well, а не «I feel myself well». О названии спрашивают через what, а не how: What is it called? Глагол depend сочетается с on, а не from. Все эти фразы понятны, но сразу выдают дословный перевод с русского.",
+      "examples": [
+        { "en": "I don't feel well.", "ru": "Я плохо себя чувствую." },
+        { "en": "What is this called in English?", "ru": "Как это называется по-английски?" },
+        { "en": "It all depends on how quickly the regulator responds.", "ru": "Всё зависит от того, как быстро отреагирует регулятор." }
+      ],
+      "tip": "Правило для вопроса: how спрашивает о способе (How do you say it? How do you spell it?), what — о самом названии (What is it called? What do you call it?)."
+    }
+  ],
+  "vocab": [
+    { "en": "actual", "ru": "фактический, реальный", "example": "The actual number of users is much lower." },
+    { "en": "accurate", "ru": "точный", "example": "We need accurate data before we decide." },
+    { "en": "sympathetic", "ru": "сочувствующий, отзывчивый", "example": "My manager was very sympathetic when I explained the situation." },
+    { "en": "a decade", "ru": "десятилетие", "example": "She spent a decade working in publishing." },
+    { "en": "to implement", "ru": "внедрять, реализовывать", "example": "The reforms were implemented in stages." },
+    { "en": "to realise", "ru": "осознавать, понимать", "example": "I suddenly realised that I had the wrong file." },
+    { "en": "eventually", "ru": "в конце концов", "example": "Eventually, both sides agreed to a compromise." },
+    { "en": "topical", "ru": "актуальный, злободневный", "example": "The programme discusses topical issues with invited experts." }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как сказать по-английски «актуальный вопрос»?",
+      "options": ["an actual issue", "a topical issue", "an accurate issue", "an actually issue"],
+      "answer": 1,
+      "explanation": "«Актуальный» в значении «злободневный» — topical; подойдут также pressing и relevant. Actual issue значит «реальная, настоящая проблема» — это самый известный ложный друг для русскоязычных."
+    },
+    {
+      "type": "listen",
+      "audio": "The actual cost turned out to be twice the original estimate.",
+      "question": "О какой стоимости идёт речь?",
+      "options": [
+        "О фактической, реальной стоимости",
+        "Об актуальной на сегодня стоимости",
+        "О приблизительной стоимости",
+        "О первоначальной стоимости"
+      ],
+      "answer": 0,
+      "explanation": "Actual cost — фактическая стоимость, в отличие от расчётной (estimate). «Актуальная на сегодня» была бы current cost."
+    },
+    {
+      "type": "translate",
+      "source": "Как это называется по-английски?",
+      "answer": "What is this called in English?",
+      "accept": [
+        "What's this called in English?",
+        "What is it called in English?",
+        "What's it called in English?",
+        "What do you call this in English?",
+        "What do you call it in English?"
+      ],
+      "distractors": ["how", "named", "on", "by"],
+      "explanation": "О названии спрашивают словом what: в ответ ждут имя, а не способ. «How is it called» — классическая калька; язык вводится предлогом in: in English."
+    },
+    {
+      "type": "gap",
+      "sentence": "The company plans to ___ the new strategy over the next two years.",
+      "translation": "Компания планирует реализовать новую стратегию в течение следующих двух лет.",
+      "options": ["implement", "realise", "perform", "fulfil"],
+      "answer": 0,
+      "explanation": "Стратегию, план или реформу «реализуют» глаголом implement. Realise означало бы «осознать», perform относится к задачам и выступлениям, а fulfil — к обещаниям и требованиям."
+    },
+    {
+      "type": "gap",
+      "sentence": "She was very ___ when I told her about the redundancies and offered to help.",
+      "translation": "Она отнеслась с большим сочувствием, когда я рассказал ей о сокращениях, и предложила помочь.",
+      "options": ["sympathetic", "sympathy", "attractive", "pathetic"],
+      "answer": 0,
+      "explanation": "Sympathetic — «сочувствующий, понимающий», и именно это подходит к реакции на плохие новости. «Симпатичный» — это nice или likeable, а pathetic означает «жалкий»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант: «Я плохо себя чувствую».",
+      "options": [
+        "I don't feel myself well.",
+        "I feel myself bad.",
+        "I don't feel well.",
+        "I am feeling me unwell."
+      ],
+      "answer": 2,
+      "explanation": "Feel в значении «чувствовать себя» не требует возвратного местоимения: I feel well, I feel tired. Вариант с myself — калька с русского «себя»; после feel стоит прилагательное или well в значении «здоров»."
+    },
+    {
+      "type": "translate",
+      "source": "За последнее десятилетие отрасль сильно изменилась.",
+      "answer": "The industry has changed dramatically over the past decade.",
+      "accept": [
+        "The industry has changed dramatically over the last decade.",
+        "The industry has changed dramatically in the past decade.",
+        "The industry has changed dramatically in the last decade.",
+        "The industry has changed a lot over the past decade.",
+        "The industry has changed significantly over the past decade.",
+        "Over the past decade, the industry has changed dramatically."
+      ],
+      "distractors": ["strongly", "days", "was", "ago"],
+      "explanation": "С глаголом change сочетаются dramatically или significantly; «changed strongly» — калька с «сильно изменилась». Период over the past decade продолжается до настоящего момента, поэтому Present Perfect."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "actual", "ru": "фактический, реальный" },
+        { "en": "accurate", "ru": "точный" },
+        { "en": "sympathetic", "ru": "сочувствующий, отзывчивый" },
+        { "en": "a decade", "ru": "десятилетие" },
+        { "en": "eventually", "ru": "в конце концов" }
+      ]
+    },
+    {
+      "type": "listen",
+      "audio": "I didn't realise the article had already been published in a magazine.",
+      "question": "Где была опубликована статья?",
+      "options": ["В журнале", "В магазине", "В газете", "В научном сборнике"],
+      "answer": 0,
+      "explanation": "Magazine — это журнал для широкой публики; магазин — shop или store, а научный журнал — journal. Заметьте и didn't realise: «не знал, не осознавал», а не «не реализовал»."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении слово «accurate» использовано правильно?",
+      "options": [
+        "She always keeps her desk very accurate.",
+        "Please be accurate on the icy road.",
+        "The forecast proved remarkably accurate.",
+        "He looked accurate in his new suit."
+      ],
+      "answer": 2,
+      "explanation": "Accurate значит «точный, соответствующий действительности»: accurate forecast, accurate data. Русское «аккуратный» переводится как tidy (стол), careful (на дороге) или smart (об одежде)."
+    },
+    {
+      "type": "translate",
+      "source": "Мы в конце концов осознали, что данные были неточными.",
+      "answer": "We eventually realised that the data was inaccurate.",
+      "accept": [
+        "We eventually realised that the data were inaccurate.",
+        "We eventually realised the data was inaccurate.",
+        "We eventually realized that the data was inaccurate.",
+        "Eventually, we realised that the data was inaccurate.",
+        "We finally realised that the data was inaccurate.",
+        "In the end, we realised that the data was inaccurate."
+      ],
+      "distractors": ["possibly", "implemented", "unaccurate", "datas"],
+      "explanation": "Eventually — «в конце концов», а не «возможно»; realise — «осознать». Отрицание от accurate образуется приставкой in-, а у слова data нет формы на -s."
+    },
+    {
+      "type": "gap",
+      "sentence": "It all depends ___ how quickly the regulator responds.",
+      "translation": "Всё зависит от того, как быстро отреагирует регулятор.",
+      "options": ["on", "from", "of", "in"],
+      "answer": 0,
+      "explanation": "Depend всегда сочетается с on. From — калька с русского «зависеть от», одна из самых устойчивых ошибок даже на высоком уровне."
+    }
+  ]
+}

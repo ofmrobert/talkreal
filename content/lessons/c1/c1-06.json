@@ -1,0 +1,187 @@
+{
+  "id": "c1-06",
+  "level": "C1",
+  "order": 6,
+  "title": { "ru": "Осторожные формулировки и дистанцирование", "en": "Hedging and distancing" },
+  "goal": { "ru": "Научитесь смягчать утверждения и передавать чужие сведения, не ручаясь за них.", "en": "Learn to soften claims and report information without vouching for it." },
+  "theory": [
+    {
+      "title": "Seem, appear, tend: зачем смягчать",
+      "body": "В академической, деловой и журналистской речи категоричное утверждение звучит наивно или самоуверенно. Вместо «X is Y» пишут «X seems to be Y» или «X tends to be Y». После seem и appear идёт инфинитив; для прошлого — перфектный инфинитив: appears to have had. Tend to означает «как правило, обычно» и используется в Simple, а не в Continuous.",
+      "examples": [
+        { "en": "The new policy appears to have had little effect on inflation.", "ru": "Новая политика, по-видимому, почти не повлияла на инфляцию." },
+        { "en": "Smaller firms tend to be more flexible.", "ru": "Небольшие компании, как правило, гибче." },
+        { "en": "There seems to have been a misunderstanding.", "ru": "Похоже, произошло недоразумение." }
+      ],
+      "tip": "Русское «кажется» часто ставят в начало: «It seems, he is right». В английском нужна связка: It seems that he is right или He seems to be right."
+    },
+    {
+      "title": "Is thought to, is said to: сведения из чужих уст",
+      "body": "Чтобы сообщить информацию и не брать на себя ответственность за неё, используют пассив: подлежащее + is said / thought / believed / reported / alleged + to-инфинитив. Если событие уже произошло, нужен перфектный инфинитив: to have lost. Так пишут новости: это способ сказать «считается», «по некоторым данным», «как утверждается».",
+      "examples": [
+        { "en": "The company is thought to have lost millions.", "ru": "Считается, что компания потеряла миллионы." },
+        { "en": "The director is said to be considering resignation.", "ru": "Говорят, директор подумывает об отставке." }
+      ]
+    },
+    {
+      "title": "Arguably, apparently, presumably: наречия с подвохом",
+      "body": "Эти наречия легко понять неверно. Arguably означает не «спорно», а «есть основания утверждать». Apparently — не «очевидно», а «судя по тому, что я слышал». Presumably — «надо полагать»: это логическое предположение. Allegedly — «якобы»: так говорят о недоказанных обвинениях. To some extent ограничивает утверждение: «в некоторой степени».",
+      "examples": [
+        { "en": "This is arguably her best novel.", "ru": "Это, пожалуй, её лучший роман." },
+        { "en": "Apparently, the merger has been called off.", "ru": "Судя по всему, слияние отменили." },
+        { "en": "Presumably, the delay was caused by the strike.", "ru": "Надо полагать, задержка была вызвана забастовкой." }
+      ],
+      "tip": "Одного смягчения на утверждение достаточно. «It may possibly seem to suggest» — это уже не осторожность, а отсутствие позиции."
+    }
+  ],
+  "vocab": [
+    { "en": "arguably", "ru": "пожалуй, можно утверждать", "example": "He is arguably the most influential economist of his generation." },
+    { "en": "apparently", "ru": "по всей видимости, судя по всему", "example": "Apparently, the office is moving in the spring." },
+    { "en": "presumably", "ru": "предположительно, надо полагать", "example": "Presumably, they have already seen the figures." },
+    { "en": "allegedly", "ru": "якобы, как утверждается", "example": "The files were allegedly deleted by a former employee." },
+    { "en": "to tend to", "ru": "иметь склонность, как правило", "example": "People tend to underestimate how long a task will take." },
+    { "en": "to some extent", "ru": "в некоторой степени", "example": "To some extent, the critics have a point." },
+    { "en": "to be likely to", "ru": "вероятно (сделает)", "example": "The court is likely to rule in their favour." }
+  ],
+  "exercises": [
+    {
+      "type": "gap",
+      "sentence": "The new policy ___ to have had little effect on inflation so far.",
+      "translation": "Новая политика, по-видимому, пока почти не повлияла на инфляцию.",
+      "options": ["appears", "is appeared", "appearing", "appears like"],
+      "answer": 0,
+      "explanation": "Appear — непереходный глагол, у него нет пассива: appears to have had. Перфектный инфинитив показывает, что речь о результате к настоящему моменту."
+    },
+    {
+      "type": "translate",
+      "source": "Считается, что компания потеряла миллионы.",
+      "answer": "The company is thought to have lost millions.",
+      "accept": [
+        "The company is believed to have lost millions.",
+        "The company is said to have lost millions.",
+        "It is thought that the company has lost millions.",
+        "It is thought that the company lost millions.",
+        "It is believed that the company has lost millions."
+      ],
+      "distractors": ["lose", "has", "be", "thinks"],
+      "explanation": "Безличное русское «считается, что» передаётся пассивом is thought to. Потеря уже произошла, поэтому нужен перфектный инфинитив to have lost, а не to lose."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какой вариант звучит наиболее осторожно и уместно в научной статье?",
+      "options": [
+        "These results prove that sleep plays a role in memory consolidation.",
+        "Sleep definitely plays a role in memory consolidation.",
+        "These results suggest that sleep may play a role in memory consolidation.",
+        "Everyone knows that sleep plays a role in memory consolidation."
+      ],
+      "answer": 2,
+      "explanation": "В научном стиле результаты «позволяют предположить» (suggest), а не «доказывают», и вывод смягчается модальным may. Слова prove, definitely и everyone knows звучат категорично и вызывают недоверие у рецензента."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "arguably", "ru": "пожалуй, можно утверждать" },
+        { "en": "apparently", "ru": "по всей видимости, судя по всему" },
+        { "en": "presumably", "ru": "предположительно, надо полагать" },
+        { "en": "allegedly", "ru": "якобы, как утверждается" },
+        { "en": "to some extent", "ru": "в некоторой степени" }
+      ]
+    },
+    {
+      "type": "listen",
+      "audio": "Apparently, the merger has been called off.",
+      "question": "Насколько говорящий уверен в этой информации?",
+      "options": [
+        "Он об этом слышал, но за точность не ручается",
+        "Он считает это очевидным фактом",
+        "Он знает это наверняка из первых рук",
+        "Он уверен, что это неправда"
+      ],
+      "answer": 0,
+      "explanation": "Apparently в начале фразы означает «говорят, судя по всему»: сведения получены от других. Переводить его как «очевидно» — распространённая ошибка; для этого есть obviously и clearly."
+    },
+    {
+      "type": "gap",
+      "sentence": "Smaller firms ___ to be more flexible when market conditions change.",
+      "translation": "Небольшие компании, как правило, гибче, когда рыночные условия меняются.",
+      "options": ["tend", "are tending", "tendency", "have tendency"],
+      "answer": 0,
+      "explanation": "Tend to описывает общую закономерность, поэтому используется в Present Simple, а не в Continuous. С существительным понадобился бы артикль: have a tendency to."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «This is arguably her best novel»?",
+      "options": [
+        "Весьма спорно, что это её лучший роман",
+        "Есть веские основания считать этот роман её лучшим",
+        "Это бесспорно её лучший роман",
+        "Вокруг этого романа ведётся много споров"
+      ],
+      "answer": 1,
+      "explanation": "Arguably означает «можно привести доводы в пользу этого», то есть осторожное согласие, а не сомнение. Русскому «спорно» соответствуют debatable или questionable."
+    },
+    {
+      "type": "translate",
+      "source": "Похоже, что произошло недоразумение.",
+      "answer": "There seems to have been a misunderstanding.",
+      "accept": [
+        "There appears to have been a misunderstanding.",
+        "It seems that there has been a misunderstanding.",
+        "It seems there has been a misunderstanding.",
+        "It appears that there has been a misunderstanding.",
+        "It looks like there has been a misunderstanding.",
+        "There seems to have been some misunderstanding."
+      ],
+      "distractors": ["is", "seem", "looks", "had"],
+      "explanation": "Это вежливая формула для неловких ситуаций: говорящий никого не обвиняет. Seems согласуется с a misunderstanding в единственном числе, а перфектный инфинитив to have been показывает, что недоразумение уже случилось."
+    },
+    {
+      "type": "listen",
+      "audio": "The minister is alleged to have accepted payments from a foreign company.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The minister is alleged to have accepted payments from a foreign company.",
+        "The minister has alleged to have accepted payments from a foreign company.",
+        "The minister is alleged to accept payments from a foreign company.",
+        "The minister is allegedly to have accepted payments from a foreign company."
+      ],
+      "answer": 0,
+      "explanation": "Is alleged to have accepted — стандартная формула новостей о недоказанном обвинении: пассив плюс перфектный инфинитив для прошлого действия. Has alleged означало бы, что министр сам кого-то обвинил."
+    },
+    {
+      "type": "translate",
+      "source": "Этот подход, по-видимому, работает лишь в некоторой степени.",
+      "answer": "This approach appears to work only to some extent.",
+      "accept": [
+        "This approach seems to work only to some extent.",
+        "This approach appears to work only to a certain extent.",
+        "This approach appears to only work to some extent.",
+        "This approach appears to work to some extent only.",
+        "Apparently, this approach works only to some extent."
+      ],
+      "distractors": ["in", "seem", "at", "extend"],
+      "explanation": "В выражении to some extent используется предлог to, а не in, как подсказывает русское «в некоторой степени». Extent — существительное, а extend — глагол «продлевать»; их часто путают на письме."
+    },
+    {
+      "type": "gap",
+      "sentence": "Prices are ___ to rise further, though much depends on the central bank.",
+      "translation": "Цены, вероятно, продолжат расти, хотя многое зависит от центрального банка.",
+      "options": ["likely", "probably", "possibly", "maybe"],
+      "answer": 0,
+      "explanation": "Конструкция be + to-инфинитив возможна только с прилагательным likely: are likely to rise. Probably и possibly — наречия, они стоят перед смысловым глаголом: will probably rise."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение передаёт слух, за достоверность которого автор не ручается?",
+      "options": [
+        "The director is said to be considering resignation.",
+        "The director is considering resignation.",
+        "The director said he was considering resignation.",
+        "The director must be considering resignation."
+      ],
+      "answer": 0,
+      "explanation": "Is said to — «говорят, что»: источник не назван, автор лишь пересказывает. Said he was — это уже слова самого директора, а must be выражает собственный логический вывод говорящего."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "b1-10",
+  "level": "B1",
+  "order": 10,
+  "title": { "ru": "Фразовые глаголы на каждый день", "en": "Everyday phrasal verbs" },
+  "goal": { "ru": "Научитесь понимать и использовать самые частые фразовые глаголы.", "en": "Learn to understand and use the most common phrasal verbs." },
+  "theory": [
+    {
+      "title": "Что такое фразовый глагол",
+      "body": "Фразовый глагол — это глагол плюс короткое слово (up, out, off, down), которые вместе получают новое значение. Угадать его по частям обычно нельзя: give — «давать», а give up — «сдаваться, бросать». В живой речи фразовые глаголы звучат естественнее, чем их «книжные» синонимы.",
+      "examples": [
+        { "en": "I found out the truth.", "ru": "Я узнал правду." },
+        { "en": "She gave up sugar a year ago.", "ru": "Она отказалась от сахара год назад." },
+        { "en": "They put off the meeting until Monday.", "ru": "Они перенесли встречу на понедельник." }
+      ],
+      "tip": "Учите фразовый глагол целиком и сразу с примером, как отдельное слово, а не как «глагол + предлог»."
+    },
+    {
+      "title": "Куда поставить дополнение",
+      "body": "Многие фразовые глаголы можно «разорвать»: существительное ставится либо после частицы, либо между глаголом и частицей. Но местоимение (it, them, me, him) всегда стоит только в середине.",
+      "examples": [
+        { "en": "I'll pick up the kids. / I'll pick the kids up.", "ru": "Я заберу детей." },
+        { "en": "I'll pick them up.", "ru": "Я заберу их." },
+        { "en": "Turn it down, please.", "ru": "Сделай потише, пожалуйста." }
+      ],
+      "tip": "Pick up them, turn down it — типичная ошибка. Местоимение — всегда между глаголом и частицей."
+    },
+    {
+      "title": "Глаголы из трёх слов",
+      "body": "Глаголы из трёх слов не разрываются: дополнение стоит только в конце. После look forward to слово to — предлог, поэтому дальше идёт существительное или глагол с -ing.",
+      "examples": [
+        { "en": "We've run out of coffee.", "ru": "У нас закончился кофе." },
+        { "en": "I'm looking forward to seeing you.", "ru": "С нетерпением жду встречи с тобой." },
+        { "en": "Do you get along with your neighbours?", "ru": "Ты ладишь с соседями?" }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "to pick up", "ru": "забирать (кого-то, что-то)", "example": "Can you pick me up from the station?" },
+    { "en": "to find out", "ru": "узнавать, выяснять", "example": "I need to find out the price." },
+    { "en": "to give up", "ru": "бросать, сдаваться", "example": "He gave up his job to travel." },
+    { "en": "to look forward to", "ru": "с нетерпением ждать", "example": "We're looking forward to the holidays." },
+    { "en": "to run out of", "ru": "израсходовать, остаться без чего-то", "example": "The printer has run out of paper." },
+    { "en": "to turn down", "ru": "отклонять; убавлять (звук)", "example": "The bank turned down my application." },
+    { "en": "to put off", "ru": "откладывать, переносить", "example": "Don't put off going to the dentist." },
+    { "en": "to get along with", "ru": "ладить с", "example": "I get along with everyone in my team." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to pick up", "ru": "забирать" },
+        { "en": "to find out", "ru": "узнавать, выяснять" },
+        { "en": "to give up", "ru": "бросать, сдаваться" },
+        { "en": "to put off", "ru": "откладывать" },
+        { "en": "to turn down", "ru": "отклонять" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Я заберу их из аэропорта».",
+      "options": ["I'll pick up them from the airport.", "I'll pick them up from the airport.", "I'll pick them from the airport.", "I'll take up them from the airport."],
+      "answer": 1,
+      "explanation": "Местоимение them встаёт между глаголом и частицей: pick them up. Без up глагол pick значит «выбирать» или «срывать», а не «забирать»."
+    },
+    {
+      "type": "gap",
+      "sentence": "We've run ___ milk. Can you buy some on your way home?",
+      "translation": "У нас закончилось молоко. Можешь купить по дороге домой?",
+      "options": ["out of", "out", "off", "away from"],
+      "answer": 0,
+      "explanation": "Run out of + то, что закончилось: без of дополнение присоединить нельзя. Обратите внимание на подлежащее: по-русски «молоко закончилось», а по-английски we've run out of milk."
+    },
+    {
+      "type": "translate",
+      "source": "Я с нетерпением жду встречи с вами.",
+      "answer": "I am looking forward to meeting you.",
+      "accept": ["I'm looking forward to meeting you.", "I look forward to meeting you.", "I am looking forward to seeing you.", "I'm looking forward to seeing you.", "I look forward to seeing you."],
+      "distractors": ["meet", "wait", "for"],
+      "explanation": "В look forward to слово to — предлог, поэтому после него форма с -ing: meeting, а не meet. Перевод через wait for передал бы только ожидание, без радостного предвкушения."
+    },
+    {
+      "type": "listen",
+      "audio": "They had to put off the wedding until next summer.",
+      "question": "Что произошло со свадьбой?",
+      "options": ["Её перенесли на следующее лето", "Её отменили совсем", "Она состоялась прошлым летом", "Её провели раньше, чем планировали"],
+      "answer": 0,
+      "explanation": "Put off — отложить, перенести на более поздний срок; until next summer — «до следующего лета». Совсем отменить — это cancel или call off."
+    },
+    {
+      "type": "gap",
+      "sentence": "Don't ___! You've almost finished the course.",
+      "translation": "Не сдавайся! Ты почти закончил курс.",
+      "options": ["give up", "give out", "put off", "turn down"],
+      "answer": 0,
+      "explanation": "Give up без дополнения означает «сдаваться, опускать руки». Put off и turn down не могут стоять без дополнения, а give out значит «раздавать»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает предложение «She turned down the job offer»?",
+      "options": ["Она отклонила предложение о работе", "Она приняла предложение о работе", "Она отложила ответ на предложение", "Она потеряла работу"],
+      "answer": 0,
+      "explanation": "Turn down — отказаться от предложения, отклонить его. Слово down здесь не про направление: значение фразового глагола нужно запоминать целиком."
+    },
+    {
+      "type": "translate",
+      "source": "Как ты узнал об этой вакансии?",
+      "answer": "How did you find out about this vacancy?",
+      "accept": ["How did you find out about this job?", "How did you find out about the vacancy?", "How did you find out about this job opening?", "How did you learn about this vacancy?", "How did you hear about this vacancy?", "How did you hear about this job?"],
+      "distractors": ["found", "know", "up"],
+      "explanation": "«Узнать» в значении «получить новую информацию» — find out; know означает уже «знать». После did глагол стоит в начальной форме: find, а не found."
+    },
+    {
+      "type": "gap",
+      "sentence": "Do you get ___ your new boss?",
+      "translation": "Ты ладишь с новым начальником?",
+      "options": ["along with", "along", "on", "up with"],
+      "answer": 0,
+      "explanation": "«Ладить с кем-то» — get along with: человек присоединяется через with. Это глагол из трёх слов, он не разрывается."
+    },
+    {
+      "type": "listen",
+      "audio": "We've run out of time.",
+      "question": "Что вы услышали?",
+      "options": ["We've run out of time.", "We've run out time.", "We run out of time.", "We've ran out of time."],
+      "answer": 0,
+      "explanation": "We've run out of time — «у нас закончилось время». Третья форма глагола run — тоже run (не ran), а короткое of в беглой речи почти сливается с out."
+    },
+    {
+      "type": "translate",
+      "source": "Он бросил курить два года назад.",
+      "answer": "He gave up smoking two years ago.",
+      "accept": ["He quit smoking two years ago.", "He stopped smoking two years ago."],
+      "distractors": ["smoke", "to", "threw"],
+      "explanation": "«Бросить привычку» — give up + глагол с -ing: gave up smoking. Глагол throw значит «бросать» только в прямом смысле — бросать предмет."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении есть ошибка?",
+      "options": ["Can you turn down it?", "Can you turn it down?", "Can you turn the music down?", "Can you turn down the music?"],
+      "answer": 0,
+      "explanation": "Существительное может стоять и до, и после частицы, а местоимение — только в середине: turn it down. Вариант turn down it невозможен."
+    }
+  ]
+}

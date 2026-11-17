@@ -1,0 +1,145 @@
+{
+  "id": "a1-10",
+  "level": "A1",
+  "order": 10,
+  "title": { "ru": "Числа, дни недели и время", "en": "Numbers, days and telling the time" },
+  "goal": { "ru": "Научитесь называть время и день недели и договариваться о встрече.", "en": "Learn to say the time and the day and to arrange a meeting." },
+  "theory": [
+    {
+      "title": "Который час?",
+      "body": "На вопрос What time is it? отвечаем It's + время. Ровный час — с o'clock: It's five o'clock. Время с минутами проще всего назвать двумя числами: seven thirty (7:30), nine fifteen (9:15). «Половина» — half past: half past seven.",
+      "examples": [
+        { "en": "It's ten o'clock.", "ru": "Сейчас десять часов." },
+        { "en": "It's half past three.", "ru": "Сейчас половина четвёртого." },
+        { "en": "The bus leaves at six forty.", "ru": "Автобус отправляется в шесть сорок." }
+      ],
+      "tip": "Half past seven — это 7:30, а не 6:30. По-русски «половина восьмого» считают к следующему часу, а по-английски — от прошедшего."
+    },
+    {
+      "title": "Дни недели",
+      "body": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Дни недели в английском всегда пишутся с большой буквы — даже в середине предложения. Артикль перед ними не нужен.",
+      "examples": [
+        { "en": "Today is Tuesday.", "ru": "Сегодня вторник." },
+        { "en": "See you on Friday!", "ru": "Увидимся в пятницу!" },
+        { "en": "The bank is closed on Sunday.", "ru": "Банк закрыт в воскресенье." }
+      ]
+    },
+    {
+      "title": "Предлоги времени: at, on, in",
+      "body": "Русское «в» переводится по-разному. At — с точным временем: at five o'clock. On — с днями: on Monday. In — с частью дня, месяцем и годом: in the morning, in July.",
+      "examples": [
+        { "en": "The meeting is at three o'clock.", "ru": "Встреча в три часа." },
+        { "en": "I play tennis on Thursday.", "ru": "Я играю в теннис в четверг." },
+        { "en": "We have English in the afternoon.", "ru": "У нас английский днём." }
+      ],
+      "tip": "Запомните по размеру: at — точка на часах, on — день, in — большой отрезок. «In Monday» и «in five o'clock» — ошибки."
+    }
+  ],
+  "vocab": [
+    { "en": "o'clock", "ru": "часов (ровно)", "example": "It's nine o'clock." },
+    { "en": "half past", "ru": "половина (после часа)", "example": "The film starts at half past eight." },
+    { "en": "Monday", "ru": "понедельник", "example": "Monday is a busy day." },
+    { "en": "Wednesday", "ru": "среда", "example": "My English class is on Wednesday." },
+    { "en": "Saturday", "ru": "суббота", "example": "We go shopping on Saturday." },
+    { "en": "morning", "ru": "утро", "example": "I drink coffee in the morning." },
+    { "en": "evening", "ru": "вечер", "example": "She reads in the evening." },
+    { "en": "today", "ru": "сегодня", "example": "Today is my birthday." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "Monday", "ru": "понедельник" },
+        { "en": "Wednesday", "ru": "среда" },
+        { "en": "Saturday", "ru": "суббота" },
+        { "en": "morning", "ru": "утро" },
+        { "en": "evening", "ru": "вечер" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "The lesson starts ___ six o'clock.",
+      "translation": "Урок начинается в шесть часов.",
+      "options": ["at", "in", "on", "to"],
+      "answer": 0,
+      "explanation": "С точным временем на часах используется at: at six o'clock. Русское «в» здесь нельзя перевести как in."
+    },
+    {
+      "type": "listen",
+      "audio": "The train leaves at half past nine.",
+      "question": "Во сколько отправляется поезд?",
+      "options": ["В 9:30", "В 8:30", "В 9:00", "В 10:30"],
+      "answer": 0,
+      "explanation": "Half past nine — буквально «половина после девяти», то есть 9:30. Русское «половина девятого» — это 8:30, поэтому здесь легко ошибиться на час."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение: «Я работаю в субботу».",
+      "options": ["I work in Saturday.", "I work at Saturday.", "I work on Saturday."],
+      "answer": 2,
+      "explanation": "С днями недели используется on: on Saturday. Предлог in подсказывает русское «в», но он нужен для месяцев и частей дня."
+    },
+    {
+      "type": "translate",
+      "source": "Сейчас семь часов.",
+      "answer": "It is seven o'clock.",
+      "accept": ["It's seven o'clock.", "It is seven o'clock now.", "It's seven o'clock now.", "It is seven.", "It's seven."],
+      "distractors": ["hours", "are", "time"],
+      "explanation": "Время называют через It is. «Часов» на циферблате — это o'clock, а hours означает длительность: seven hours — «семь часов подряд»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I usually go to the gym ___ the morning.",
+      "translation": "Я обычно хожу в спортзал утром.",
+      "options": ["in", "at", "on"],
+      "answer": 0,
+      "explanation": "С частями дня используется in и артикль the: in the morning, in the evening. По-русски предлога нет совсем («утром»), поэтому его легко пропустить или перепутать."
+    },
+    {
+      "type": "choice",
+      "prompt": "На часах 7:30. Как это сказать?",
+      "options": ["It's half past seven.", "It's half past eight.", "It's half to eight.", "It's seven and half."],
+      "answer": 0,
+      "explanation": "Половину отсчитывают от прошедшего часа: half past seven — «половина после семи». Half past eight — это уже 8:30."
+    },
+    {
+      "type": "translate",
+      "source": "Сегодня среда.",
+      "answer": "Today is Wednesday.",
+      "accept": ["It is Wednesday today.", "It's Wednesday today.", "Today's Wednesday."],
+      "distractors": ["on", "the", "are"],
+      "explanation": "Глагол is обязателен, хотя в русском его нет. Здесь мы называем день, а не говорим «в среду», поэтому предлог on и артикль не нужны."
+    },
+    {
+      "type": "listen",
+      "audio": "See you on Monday evening.",
+      "question": "Что вы услышали?",
+      "options": ["See you on Monday evening.", "See you on Monday morning.", "See you on Sunday evening.", "See you in Monday evening."],
+      "answer": 0,
+      "explanation": "Monday и Sunday звучат похоже — слушайте первый звук. Когда день и часть дня стоят вместе, предлог остаётся on: on Monday evening."
+    },
+    {
+      "type": "gap",
+      "sentence": "The shop opens at nine ___.",
+      "translation": "Магазин открывается в девять часов.",
+      "options": ["o'clock", "hours", "clock", "time"],
+      "answer": 0,
+      "explanation": "После ровного часа ставится o'clock. Hours — это продолжительность, а clock — сами часы на стене."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["We have a meeting in Wednesday.", "We have a meeting on Wednesday at ten.", "We have a meeting on wednesday at ten.", "We have a meeting at Wednesday in ten."],
+      "answer": 1,
+      "explanation": "С днём — on, с временем — at: on Wednesday at ten. День недели всегда пишется с большой буквы, поэтому вариант с wednesday тоже ошибочен."
+    },
+    {
+      "type": "translate",
+      "source": "Мы ужинаем в восемь вечера.",
+      "answer": "We have dinner at eight in the evening.",
+      "accept": ["We eat dinner at eight in the evening.", "We have dinner at eight o'clock in the evening.", "We have dinner at eight pm.", "We have dinner at 8 pm."],
+      "distractors": ["on", "of", "night"],
+      "explanation": "Перед временем — at, а «вечера» — это in the evening. Дословный перевод с of («eight of the evening») в английском не используется."
+    }
+  ]
+}

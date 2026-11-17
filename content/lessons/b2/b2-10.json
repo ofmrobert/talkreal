@@ -1,0 +1,187 @@
+{
+  "id": "b2-10",
+  "level": "B2",
+  "order": 10,
+  "title": { "ru": "Глаголы передачи чужой речи", "en": "Reporting verbs and their patterns" },
+  "goal": { "ru": "Научитесь пересказывать чужие слова точнее, чем просто «he said», и ставить после глагола правильную конструкцию.", "en": "Learn to report what people say more precisely than with \"he said\" and to use the right pattern after each verb." },
+  "theory": [
+    {
+      "title": "Глагол + -ing: suggest, deny, admit",
+      "body": "После suggest, deny, admit и recommend следующий глагол стоит в форме на -ing. Главная ловушка — suggest: по-русски «предложил нам сделать», и хочется сказать «suggested us to do», но так нельзя. Правильно: suggest doing или suggest that we (should) do.",
+      "examples": [
+        { "en": "He suggested moving the meeting to Thursday.", "ru": "Он предложил перенести встречу на четверг." },
+        { "en": "She admitted losing the documents.", "ru": "Она призналась, что потеряла документы." },
+        { "en": "They denied receiving the payment.", "ru": "Они отрицали, что получили платёж." }
+      ],
+      "tip": "Deny — отрицать, что что-то было. Refuse — отказаться что-то делать. В русском оба глагола могут звучать как «отказываться», но это разные вещи."
+    },
+    {
+      "title": "Глагол + (кого) + to do: advise, remind, refuse, promise",
+      "body": "После advise, remind, warn, persuade, encourage сначала называем человека, потом ставим инфинитив с to: advise someone to do. После refuse, promise, agree, offer, threaten инфинитив идёт сразу, без дополнения. Отрицание ставится перед to: advised us not to wait.",
+      "examples": [
+        { "en": "The bank advised me to change my password.", "ru": "Банк посоветовал мне сменить пароль." },
+        { "en": "She promised to call back within an hour.", "ru": "Она пообещала перезвонить в течение часа." },
+        { "en": "He warned us not to trust the forecast.", "ru": "Он предупредил нас, чтобы мы не доверяли прогнозу." }
+      ]
+    },
+    {
+      "title": "Глагол + предлог + -ing: accuse of, apologise for, insist on",
+      "body": "Некоторые глаголы требуют своего предлога, после которого идёт -ing: accuse someone of doing, apologise for doing, insist on doing, blame someone for doing, congratulate someone on doing. Предлоги не совпадают с русскими: обвинять «в» — это of, а не in; настаивать «на» — on; извиняться «за» — for.",
+      "examples": [
+        { "en": "They accused him of leaking confidential data.", "ru": "Его обвинили в утечке конфиденциальных данных." },
+        { "en": "I apologised for missing the call.", "ru": "Я извинился за то, что пропустил звонок." },
+        { "en": "She insisted on seeing the manager.", "ru": "Она настояла на том, чтобы увидеть менеджера." }
+      ],
+      "tip": "Русское «за то, что…», «в том, что…» после таких глаголов превращается в предлог + -ing, без that."
+    }
+  ],
+  "vocab": [
+    { "en": "to suggest", "ru": "предложить (идею)", "example": "I suggest taking a taxi." },
+    { "en": "to advise", "ru": "посоветовать", "example": "My lawyer advised me to wait." },
+    { "en": "to deny", "ru": "отрицать", "example": "The minister denied any involvement." },
+    { "en": "to refuse", "ru": "отказаться", "example": "He refused to answer the question." },
+    { "en": "to accuse", "ru": "обвинить", "example": "She accused him of lying." },
+    { "en": "to apologise", "ru": "извиниться", "example": "The airline apologised for the delay." },
+    { "en": "to insist", "ru": "настаивать", "example": "They insisted on a written contract." },
+    { "en": "to admit", "ru": "признать, признаться", "example": "He admitted that he was wrong." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "The manager denied knowing anything about the missing files.",
+      "question": "Что заявил менеджер?",
+      "options": [
+        "Что ему ничего не известно о пропавших файлах",
+        "Что он знает, где находятся пропавшие файлы",
+        "Что он отказывается искать пропавшие файлы",
+        "Что он сам удалил эти файлы"
+      ],
+      "answer": 0,
+      "explanation": "Deny + -ing — отрицать, что что-то было: denied knowing = «заявил, что не знает». Не путайте с refuse: отказаться что-то делать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "She suggested postponing the launch.",
+        "She suggested to postpone the launch.",
+        "She suggested us to postpone the launch.",
+        "She suggested us postponing the launch."
+      ],
+      "answer": 0,
+      "explanation": "После suggest идёт -ing или that-придаточное, но никогда не инфинитив. «Suggested us to do» — калька с русского «предложила нам сделать»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The lawyer advised us ___ anything until we had read the contract.",
+      "translation": "Юрист посоветовал нам ничего не подписывать, пока мы не прочитаем договор.",
+      "options": ["not to sign", "to not signing", "don't sign", "not signing"],
+      "answer": 0,
+      "explanation": "Advise someone to do, а в отрицании not ставится перед to: advised us not to sign. Форма на -ing после advise возможна, только если не назван человек."
+    },
+    {
+      "type": "translate",
+      "source": "Он извинился за то, что опоздал на встречу.",
+      "answer": "He apologised for being late for the meeting.",
+      "accept": [
+        "He apologized for being late for the meeting.",
+        "He apologised for being late to the meeting.",
+        "He apologized for being late to the meeting.",
+        "He apologised for coming late to the meeting.",
+        "He apologised for arriving late for the meeting."
+      ],
+      "distractors": ["that", "was", "be"],
+      "explanation": "Apologise for + -ing: русское «за то, что опоздал» сворачивается в for being late. That после apologise for не ставится."
+    },
+    {
+      "type": "gap",
+      "sentence": "They accused the supplier ___ the terms of the agreement.",
+      "translation": "Они обвинили поставщика в нарушении условий соглашения.",
+      "options": ["of breaking", "in breaking", "to break", "for breaking"],
+      "answer": 0,
+      "explanation": "Accuse someone of doing: предлог of, а не in, как подсказывает русское «обвинить в». С for употребляется другой глагол — blame someone for."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to suggest", "ru": "предложить (идею)" },
+        { "en": "to deny", "ru": "отрицать" },
+        { "en": "to refuse", "ru": "отказаться" },
+        { "en": "to accuse", "ru": "обвинить" },
+        { "en": "to admit", "ru": "признать, признаться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Нина сказала: «Я не возьму эти деньги». Как точно передать её слова?",
+      "options": [
+        "Nina refused to take the money.",
+        "Nina denied taking the money.",
+        "Nina refused taking the money.",
+        "Nina denied to take the money."
+      ],
+      "answer": 0,
+      "explanation": "Нина отказывается что-то делать — это refuse + to do. Denied taking the money значило бы другое: она отрицает, что уже взяла деньги."
+    },
+    {
+      "type": "translate",
+      "source": "Врач посоветовал мне больше спать.",
+      "answer": "The doctor advised me to get more sleep.",
+      "accept": [
+        "The doctor advised me to sleep more.",
+        "My doctor advised me to get more sleep.",
+        "My doctor advised me to sleep more.",
+        "The doctor recommended that I get more sleep."
+      ],
+      "distractors": ["advice", "that", "sleeping", "said"],
+      "explanation": "Advise + кого + to do: advised me to get. Не путайте глагол advise с существительным advice — они различаются и написанием, и произношением."
+    },
+    {
+      "type": "listen",
+      "audio": "He admitted making a mistake and promised to pay for the damage.",
+      "question": "Что вы услышали?",
+      "options": [
+        "He admitted making a mistake and promised to pay for the damage.",
+        "He admitted to make a mistake and promised paying for the damage.",
+        "He admitted making a mistake and promised paying for the damage.",
+        "He admitted to make a mistake and promised to pay for the damage."
+      ],
+      "answer": 0,
+      "explanation": "Два глагола — две разные модели: admit + -ing (признал, что сделал) и promise + to do (пообещал сделать). Их приходится запоминать вместе с глаголом."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный вариант: «Он настоял на том, чтобы оплатить счёт».",
+      "options": [
+        "He insisted on paying the bill.",
+        "He insisted to pay the bill.",
+        "He insisted in paying the bill.",
+        "He insisted on to pay the bill."
+      ],
+      "answer": 0,
+      "explanation": "Insist on + -ing: после предлога глагол всегда стоит в форме на -ing. Инфинитив после insist — типичная ошибка под влиянием русского «настоял оплатить»."
+    },
+    {
+      "type": "gap",
+      "sentence": "My colleague reminded me ___ the invoice before the weekend.",
+      "translation": "Коллега напомнил мне отправить счёт до выходных.",
+      "options": ["to send", "sending", "send", "for sending"],
+      "answer": 0,
+      "explanation": "Remind someone to do — напомнить кому-то что-то сделать. Форма на -ing здесь не используется, а частица to обязательна."
+    },
+    {
+      "type": "translate",
+      "source": "Она отрицала, что получила наше письмо на прошлой неделе.",
+      "answer": "She denied receiving our email last week.",
+      "accept": [
+        "She denied having received our email last week.",
+        "She denied getting our email last week.",
+        "She denied receiving our letter last week.",
+        "She denied that she had received our email last week.",
+        "She denied that she received our email last week."
+      ],
+      "distractors": ["refused", "to", "receive"],
+      "explanation": "Deny + -ing: «отрицала, что получила» — denied receiving. Refused to receive означало бы «отказалась получать», то есть совсем другое."
+    }
+  ]
+}

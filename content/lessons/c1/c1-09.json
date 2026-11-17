@@ -1,0 +1,182 @@
+{
+  "id": "c1-09",
+  "level": "C1",
+  "order": 9,
+  "title": { "ru": "Связки и регистр", "en": "Discourse markers and register" },
+  "goal": { "ru": "Научитесь связывать мысли и выбирать связки, подходящие к стилю: от научной статьи до разговора с коллегой.", "en": "Learn to link ideas and choose markers that fit the register, from an academic paper to a chat with a colleague." },
+  "theory": [
+    {
+      "title": "Формальные связки: moreover, nevertheless, consequently",
+      "body": "В письменной речи логику текста держат связки. Moreover и furthermore добавляют ещё один довод в ту же сторону. Nevertheless и nonetheless вводят контраст: «тем не менее». Consequently и therefore называют следствие. Обычно они стоят в начале предложения и отделяются запятой; между двумя предложениями перед ними ставят точку или точку с запятой, но не запятую.",
+      "examples": [
+        { "en": "The proposal is ambitious. Nevertheless, it fails to address the question of cost.", "ru": "Предложение амбициозное. Тем не менее вопрос стоимости в нём не затронут." },
+        { "en": "The sample was small. Consequently, the findings should be treated with caution.", "ru": "Выборка была небольшой. Следовательно, к результатам нужно относиться осторожно." },
+        { "en": "Moreover, costs have risen by a third.", "ru": "Более того, расходы выросли на треть." }
+      ],
+      "tip": "Besides не равно moreover: оно вводит довод «между прочим», часто самый весомый, и звучит разговорно. В академическом тексте выбирайте moreover или furthermore."
+    },
+    {
+      "title": "Разговорные связки: that said, mind you, by and large",
+      "body": "That said — «при этом, однако»: говорящий признаёт сказанное и добавляет противовес. Оно нейтрально и уместно и в речи, и в письме. Mind you — чисто разговорная оговорка: «правда, впрочем». By and large — «в целом, по большому счёту». As it happens — «как раз, между прочим»: вводит удачное совпадение.",
+      "examples": [
+        { "en": "The pay isn't great. That said, the job does offer a lot of flexibility.", "ru": "Зарплата не лучшая. При этом работа даёт большую свободу." },
+        { "en": "The hotel was lovely. Mind you, it was nowhere near the conference centre.", "ru": "Отель был чудесный. Правда, совсем не рядом с конференц-центром." }
+      ]
+    },
+    {
+      "title": "Регистр и типичные кальки",
+      "body": "Связка должна соответствовать стилю. Furthermore в сообщении другу звучит так же странно, как mind you в диссертации. Следите и за кальками: «с одной стороны… с другой стороны» — это on the one hand… on the other hand, с предлогом on и словом hand, а не side.",
+      "examples": [
+        { "en": "On the one hand, remote work saves time; on the other hand, it can leave people feeling isolated.", "ru": "С одной стороны, удалённая работа экономит время; с другой — люди могут чувствовать себя оторванными." },
+        { "en": "By and large, customers were happy with the new interface.", "ru": "В целом клиенты остались довольны новым интерфейсом." }
+      ],
+      "tip": "Не начинайте каждое предложение со связки. В хорошем английском тексте их меньше, чем в русском канцелярском, и каждая выполняет свою работу."
+    }
+  ],
+  "vocab": [
+    { "en": "moreover", "ru": "более того", "example": "The plan is expensive. Moreover, it is unlikely to work." },
+    { "en": "nevertheless", "ru": "тем не менее", "example": "The risks are real. Nevertheless, we intend to proceed." },
+    { "en": "consequently", "ru": "следовательно", "example": "Demand fell sharply. Consequently, two factories were closed." },
+    { "en": "that said", "ru": "при этом, однако", "example": "It's a long film. That said, I was never bored." },
+    { "en": "mind you", "ru": "правда, впрочем", "example": "He's very young. Mind you, so was she when she started." },
+    { "en": "by and large", "ru": "в целом", "example": "By and large, the reviews have been positive." },
+    { "en": "as it happens", "ru": "как раз, между прочим", "example": "As it happens, I'm free on Thursday." },
+    { "en": "on the other hand", "ru": "с другой стороны", "example": "The flat is small. On the other hand, it is very central." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "The hotel was lovely. Mind you, it was nowhere near the conference centre.",
+      "question": "Какую роль играет здесь «mind you»?",
+      "options": [
+        "Добавляет оговорку: «правда, впрочем»",
+        "Просит собеседника быть внимательнее",
+        "Вводит вывод: «следовательно»",
+        "Усиливает похвалу: «более того»"
+      ],
+      "answer": 0,
+      "explanation": "Mind you — разговорная оговорка, которая уравновешивает только что сказанное: отель хороший, но далеко. Это не просьба быть внимательным, и в формальном тексте вместо неё пишут however."
+    },
+    {
+      "type": "gap",
+      "sentence": "The proposal is ambitious and well researched. ___, it fails to address the question of cost.",
+      "translation": "Предложение амбициозное и хорошо проработанное. Тем не менее вопрос стоимости в нём не затронут.",
+      "options": ["Nevertheless", "Moreover", "Consequently", "Likewise"],
+      "answer": 0,
+      "explanation": "Вторая фраза противоречит похвале в первой, поэтому нужна связка контраста — nevertheless. Moreover и likewise продолжают мысль в том же направлении, а consequently вводит следствие."
+    },
+    {
+      "type": "translate",
+      "source": "В целом клиенты остались довольны новым интерфейсом.",
+      "answer": "By and large, customers were happy with the new interface.",
+      "accept": [
+        "By and large, the customers were happy with the new interface.",
+        "By and large, clients were happy with the new interface.",
+        "By and large, customers were pleased with the new interface.",
+        "By and large, customers were satisfied with the new interface.",
+        "On the whole, customers were happy with the new interface.",
+        "Overall, customers were happy with the new interface."
+      ],
+      "distractors": ["of", "big", "whole", "from"],
+      "explanation": "By and large — застывшее выражение, слова в нём не меняются. «Доволен чем-то» — happy with: предлоги from и of появляются под влиянием русского творительного падежа."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая связка подойдёт для академического эссе: «The sample was small. ___, the findings should be treated with caution.»",
+      "options": ["Mind you", "Besides", "Consequently", "As it happens"],
+      "answer": 2,
+      "explanation": "Вторая фраза — следствие первой, а стиль формальный: consequently. Besides добавляет новый довод, а не вывод, а mind you и as it happens принадлежат разговорной речи."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "moreover", "ru": "более того" },
+        { "en": "nevertheless", "ru": "тем не менее" },
+        { "en": "consequently", "ru": "следовательно" },
+        { "en": "by and large", "ru": "в целом" },
+        { "en": "as it happens", "ru": "как раз, между прочим" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "The pay isn't great. ___, the job does offer a lot of flexibility.",
+      "translation": "Зарплата не лучшая. При этом работа даёт большую свободу.",
+      "options": ["That said", "Moreover", "Therefore", "In other words"],
+      "answer": 0,
+      "explanation": "That said признаёт минус и тут же добавляет противовес — плюс. Moreover усилило бы критику, therefore ввело бы следствие, а in other words — пересказ той же мысли."
+    },
+    {
+      "type": "translate",
+      "source": "Более того, расходы выросли на треть.",
+      "answer": "Moreover, costs have risen by a third.",
+      "accept": [
+        "Moreover, costs rose by a third.",
+        "Moreover, the costs have risen by a third.",
+        "Moreover, costs have increased by a third.",
+        "Moreover, costs have gone up by a third.",
+        "Furthermore, costs have risen by a third.",
+        "What is more, costs have risen by a third."
+      ],
+      "distractors": ["on", "raised", "than", "for"],
+      "explanation": "Величина изменения вводится предлогом by: risen by a third; on — калька с русского «на треть». Расходы растут сами, поэтому rise (risen), а не переходный raise."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы пишете другу в мессенджере. Какая фраза звучит неуместно формально?",
+      "options": [
+        "Anyway, I can't make it on Friday.",
+        "Furthermore, I shall be unable to attend.",
+        "Mind you, I might be a bit late.",
+        "By the way, I'm bringing Katya."
+      ],
+      "answer": 1,
+      "explanation": "Furthermore, shall и be unable to attend — язык официального письма; в дружеской переписке это выглядит как шутка или холодность. Нарушение регистра не грамматическая ошибка, но носители замечают его сразу."
+    },
+    {
+      "type": "listen",
+      "audio": "As it happens, I have a copy of the contract right here.",
+      "question": "Что вы услышали?",
+      "options": [
+        "As it happens, I have a copy of the contract right here.",
+        "As it happened, I had a copy of the contract right here.",
+        "As it happens, I have copied the contract right here.",
+        "As is happens, I have a copy of the contract right there."
+      ],
+      "answer": 0,
+      "explanation": "As it happens — «как раз, по счастливому совпадению»; выражение стоит в настоящем времени, потому что и копия у говорящего есть сейчас. Оно придаёт реплике лёгкий, слегка ироничный тон."
+    },
+    {
+      "type": "gap",
+      "sentence": "On the one hand, remote work saves time; ___, it can leave people feeling isolated.",
+      "translation": "С одной стороны, удалённая работа экономит время; с другой — люди могут чувствовать себя оторванными.",
+      "options": ["on the other hand", "on the other side", "from the other hand", "in the other hand"],
+      "answer": 0,
+      "explanation": "Парная связка звучит только так: on the one hand… on the other hand. Варианты с side и from — кальки с русского «с другой стороны»; on the other side говорят лишь о месте."
+    },
+    {
+      "type": "choice",
+      "prompt": "Чем «that said» отличается от «moreover»?",
+      "options": [
+        "«That said» вводит оговорку или противовес, а «moreover» добавляет довод в ту же сторону",
+        "Обе связки добавляют довод, разница только в степени формальности",
+        "«That said» подводит итог, а «moreover» вводит пример",
+        "«That said» вводит следствие, а «moreover» — причину"
+      ],
+      "answer": 0,
+      "explanation": "That said близко к «при этом, однако»: мысль поворачивает в другую сторону. Moreover продолжает ту же линию; если их перепутать, логика текста перевернётся."
+    },
+    {
+      "type": "translate",
+      "source": "Проект был рискованным; тем не менее совет его одобрил.",
+      "answer": "The project was risky; nevertheless, the board approved it.",
+      "accept": [
+        "The project was risky. Nevertheless, the board approved it.",
+        "The project was risky; nonetheless, the board approved it.",
+        "The project was risky; however, the board approved it.",
+        "The project was risky; nevertheless, the council approved it."
+      ],
+      "distractors": ["moreover", "despite", "has", "consequently"],
+      "explanation": "Nevertheless — формальное «тем не менее»; перед ним ставят точку или точку с запятой, после — запятую. Despite — предлог, за ним идёт существительное, а не предложение: despite the risk."
+    }
+  ]
+}

@@ -39,7 +39,8 @@ export default function OptionsExercise({ exercise, options, selected, onSelect,
                 selected ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/25 text-transparent'
               }`}
             >
-              {selected ?? '____'}
+              {/* An option like '— (без артикля)' goes into the sentence as a plain dash. */}
+              {selected ? selected.replace(/\s*\(.*\)$/, '') : '____'}
             </span>
             {exercise.sentence.split('___')[1]}
           </h2>

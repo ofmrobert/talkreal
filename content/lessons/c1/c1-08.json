@@ -1,0 +1,184 @@
+{
+  "id": "c1-08",
+  "level": "C1",
+  "order": 8,
+  "title": { "ru": "Оттенки модальных глаголов", "en": "Nuanced modals" },
+  "goal": { "ru": "Научитесь различать тонкие значения модальных конструкций: напрасное действие, неизбежность, предпочтение.", "en": "Learn to tell apart the finer meanings of modal expressions: wasted effort, inevitability, preference." },
+  "theory": [
+    {
+      "title": "Needn't have done и didn't need to do",
+      "body": "Обе конструкции говорят об отсутствии необходимости в прошлом, но по-разному. Needn't have + третья форма: действие совершили, а потом выяснилось, что зря. Didn't need to + инфинитив: необходимости не было, и из самой фразы неясно, сделали или нет, — чаще всего не сделали. В настоящем времени needn't означает «можно не делать», а mustn't — «нельзя».",
+      "examples": [
+        { "en": "You needn't have printed the slides; everyone has a copy.", "ru": "Зря ты распечатывал слайды: у всех есть копии." },
+        { "en": "We didn't need to book a room, so we just met in the café.", "ru": "Бронировать переговорную не понадобилось, и мы просто встретились в кафе." }
+      ],
+      "tip": "Русское «не нужно было» покрывает оба случая. Спросите себя: действие всё-таки совершили? Если да и напрасно — needn't have."
+    },
+    {
+      "title": "Be bound to и be supposed to",
+      "body": "Be bound to выражает уверенность говорящего: что-то непременно произойдёт или не могло не произойти. Be supposed to — то, что ожидается по плану, правилам или договорённости; в прошедшем времени оно обычно намекает, что ожидание не сбылось. You're not supposed to — мягкий запрет: «так не положено».",
+      "examples": [
+        { "en": "With so little preparation, the launch was bound to go wrong.", "ru": "При такой слабой подготовке запуск был обречён на провал." },
+        { "en": "She was supposed to speak first, but she arrived late.", "ru": "Она должна была выступать первой, но опоздала." }
+      ]
+    },
+    {
+      "title": "Might as well, would rather, may well",
+      "body": "Might as well — «можно и…, раз уж так»: решение без энтузиазма, просто потому что лучшего варианта нет. Would rather + начальная форма без to — предпочтение; отрицание — would rather not. May well усиливает вероятность: «вполне возможно». Не путайте: might as well — о вынужденном выборе, may well — о вероятности.",
+      "examples": [
+        { "en": "The last train has gone, so we might as well take a taxi.", "ru": "Последний поезд ушёл, так что можно и на такси поехать." },
+        { "en": "I'd rather not discuss salaries in front of the whole team.", "ru": "Я бы предпочёл не обсуждать зарплаты при всей команде." },
+        { "en": "The figures may well be revised next quarter.", "ru": "Вполне возможно, что в следующем квартале цифры пересмотрят." }
+      ],
+      "tip": "После would rather и had better частица to не ставится. «I'd rather to stay» — одна из самых живучих ошибок."
+    }
+  ],
+  "vocab": [
+    { "en": "needn't have", "ru": "зря (сделал), не стоило", "example": "You needn't have waited for me." },
+    { "en": "to be bound to", "ru": "непременно произойти", "example": "Prices are bound to go up after the holidays." },
+    { "en": "might as well", "ru": "можно и (раз уж так)", "example": "Nobody else is coming, so we might as well start." },
+    { "en": "to be supposed to", "ru": "должен (по плану, по правилам)", "example": "The courier was supposed to be here at noon." },
+    { "en": "would rather", "ru": "предпочёл бы", "example": "I'd rather walk than wait for the bus." },
+    { "en": "may well", "ru": "вполне возможно", "example": "She may well be right about the budget." },
+    { "en": "to turn up", "ru": "появиться, прийти", "example": "Only half the guests turned up." }
+  ],
+  "exercises": [
+    {
+      "type": "translate",
+      "source": "Зря ты распечатывал слайды: у всех есть копии.",
+      "answer": "You needn't have printed the slides; everyone has a copy.",
+      "accept": [
+        "You needn't have printed the slides, everyone has a copy.",
+        "You needn't have printed the slides: everyone has a copy.",
+        "You need not have printed the slides; everyone has a copy.",
+        "You needn't have printed the slides; everybody has a copy.",
+        "You didn't need to print the slides; everyone has a copy."
+      ],
+      "distractors": ["mustn't", "print", "had", "to"],
+      "explanation": "Слайды уже распечатаны, и это оказалось лишним — значит, needn't have + третья форма. Mustn't have здесь невозможно: mustn't выражает запрет, а не отсутствие необходимости."
+    },
+    {
+      "type": "choice",
+      "prompt": "В какой ситуации говорят «I needn't have rushed»?",
+      "options": [
+        "Я спешил, но оказалось, что зря: встречу перенесли",
+        "Я не спешил, потому что знал, что встречу перенесли",
+        "Мне нельзя было спешить, но я поспешил",
+        "Мне следовало поспешить, но я опоздал"
+      ],
+      "answer": 0,
+      "explanation": "Needn't have + третья форма всегда означает, что действие было совершено напрасно. Если бы человек заранее знал и не спешил, он сказал бы «I didn't need to rush»."
+    },
+    {
+      "type": "listen",
+      "audio": "With so little preparation, the launch was bound to go wrong.",
+      "question": "Как говорящий оценивает провал запуска?",
+      "options": [
+        "Он был неизбежен",
+        "Он стал полной неожиданностью",
+        "Он был маловероятен",
+        "Он ещё может случиться"
+      ],
+      "answer": 0,
+      "explanation": "Was bound to — «не мог не»: говорящий считает исход закономерным. Глагол bind («связывать») здесь ни при чём: это устойчивая модальная конструкция."
+    },
+    {
+      "type": "gap",
+      "sentence": "The last train has gone, so we ___ take a taxi.",
+      "translation": "Последний поезд ушёл, так что можно и на такси поехать.",
+      "options": ["might as well", "may as good", "would rather to", "had better to"],
+      "answer": 0,
+      "explanation": "Might as well выражает вынужденное решение: лучшего варианта всё равно нет. После would rather и had better частица to не ставится, поэтому эти варианты ошибочны."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "I'd rather not to discuss salaries in front of the whole team.",
+        "I'd rather don't discuss salaries in front of the whole team.",
+        "I'd rather not discuss salaries in front of the whole team.",
+        "I'd rather not discussing salaries in front of the whole team."
+      ],
+      "answer": 2,
+      "explanation": "После would rather идёт начальная форма глагола без to, а отрицание образуется простым not: I'd rather not discuss. Это вежливый и твёрдый способ уйти от темы."
+    },
+    {
+      "type": "translate",
+      "source": "Она должна была выступать первой, но опоздала.",
+      "answer": "She was supposed to speak first, but she arrived late.",
+      "accept": [
+        "She was supposed to speak first, but she was late.",
+        "She was supposed to speak first, but she turned up late.",
+        "She was supposed to speak first but arrived late.",
+        "She was meant to speak first, but she arrived late.",
+        "She was supposed to present first, but she arrived late."
+      ],
+      "distractors": ["must", "should", "the", "suppose"],
+      "explanation": "Русское «должна была» в значении «так было запланировано, но не случилось» — это was supposed to. У must нет формы прошедшего времени, а порядковое first в роли наречия употребляется без артикля."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to be bound to", "ru": "непременно произойти" },
+        { "en": "might as well", "ru": "можно и (раз уж так)" },
+        { "en": "to be supposed to", "ru": "должен (по плану, по правилам)" },
+        { "en": "would rather", "ru": "предпочёл бы" },
+        { "en": "to turn up", "ru": "появиться, прийти" }
+      ]
+    },
+    {
+      "type": "gap",
+      "sentence": "You ___ worry about the visa: the agency takes care of all the paperwork.",
+      "translation": "О визе можете не беспокоиться: все документы оформляет агентство.",
+      "options": ["needn't", "mustn't", "needn't to", "don't have"],
+      "answer": 0,
+      "explanation": "Needn't — «можно не делать»; как модальный глагол он употребляется без to. Mustn't означало бы запрет («вам нельзя беспокоиться»), а после don't have не хватает to."
+    },
+    {
+      "type": "listen",
+      "audio": "I might as well finish the report tonight, since I'm here anyway.",
+      "question": "Что вы услышали?",
+      "options": [
+        "I might as well finish the report tonight, since I'm here anyway.",
+        "I might well finish the report tonight, since I'm here anyway.",
+        "I may as well finished the report tonight, since I'm here anyway.",
+        "I might as well to finish the report tonight, since I'm here anyway."
+      ],
+      "answer": 0,
+      "explanation": "Might as well finish — «закончу уж, раз всё равно здесь»: решение без особого желания. Без слова as смысл меняется: might well finish означает «вполне возможно, закончу»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «The figures may well be revised next quarter»?",
+      "options": [
+        "Цифры, возможно, пересмотрят в лучшую сторону",
+        "Вполне вероятно, что цифры пересмотрят",
+        "Цифры обязательно пересмотрят",
+        "Цифры вряд ли пересмотрят"
+      ],
+      "answer": 1,
+      "explanation": "Well после may не значит «хорошо»: оно усиливает вероятность — «вполне может быть». Это осторожный прогноз, более уверенный, чем простое may, но слабее, чем is bound to."
+    },
+    {
+      "type": "translate",
+      "source": "Я бы предпочёл остаться дома, чем идти на приём.",
+      "answer": "I would rather stay at home than go to the reception.",
+      "accept": [
+        "I'd rather stay at home than go to the reception.",
+        "I would rather stay home than go to the reception.",
+        "I'd rather stay home than go to the reception.",
+        "I would rather stay in than go to the reception."
+      ],
+      "distractors": ["then", "going", "better", "will"],
+      "explanation": "После would rather оба глагола стоят в начальной форме без to: stay… than go. Сравнение вводится словом than; then («потом») — частая орфографическая ошибка."
+    },
+    {
+      "type": "gap",
+      "sentence": "You're not ___ to share client data without written consent.",
+      "translation": "Передавать данные клиентов без письменного согласия не положено.",
+      "options": ["supposed", "proposed", "supposing", "suppose"],
+      "answer": 0,
+      "explanation": "Not supposed to — «не положено, не разрешается по правилам»: мягче, чем mustn't, но смысл тот же. В конструкции всегда стоит форма supposed с окончанием -d, которое на слух почти не различимо."
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "id": "b2-03",
+  "level": "B2",
+  "order": 3,
+  "title": { "ru": "Future Continuous и Future Perfect", "en": "Future Continuous and Future Perfect" },
+  "goal": { "ru": "Научитесь говорить о том, что будет происходить в определённый момент и что будет сделано к сроку.", "en": "Learn to say what will be in progress at a certain moment and what will be finished by a deadline." },
+  "theory": [
+    {
+      "title": "Future Continuous: действие в процессе",
+      "body": "Will be + -ing показывает, что в определённый момент будущего действие будет в самом разгаре. Ещё одно значение — то, что случится и так, по обычному ходу дел; поэтому вопрос Will you be using…? звучит вежливо: мы интересуемся планами, а не просим и не давим.",
+      "examples": [
+        { "en": "This time next week I'll be lying on a beach in Thailand.", "ru": "В это время на следующей неделе я буду лежать на пляже в Таиланде." },
+        { "en": "Will you be passing the post office on your way home?", "ru": "Ты будешь проходить мимо почты по дороге домой?" }
+      ]
+    },
+    {
+      "title": "Future Perfect: результат к сроку",
+      "body": "Will have + третья форма показывает, что действие завершится до определённого момента в будущем. Срок вводится предлогом by: by Friday, by the end of the year, by 2030. Русское «к пятнице» — это by Friday, а until Friday означает «вплоть до пятницы».",
+      "examples": [
+        { "en": "I will have finished the presentation by noon.", "ru": "Я закончу презентацию к полудню." },
+        { "en": "By 2030, the company will have opened ten new offices.", "ru": "К 2030 году компания откроет десять новых офисов." }
+      ],
+      "tip": "В русском оба времени передаются обычным будущим («закончу», «буду лежать»). Спросите себя: к этому моменту действие завершено (will have done) или ещё идёт (will be doing)?"
+    },
+    {
+      "title": "By the time + настоящее время",
+      "body": "После by the time, when, as soon as, until будущее время не ставится — используем Present Simple, даже если речь о будущем. Will появляется только в главной части предложения.",
+      "examples": [
+        { "en": "By the time you read this message, I will have left the country.", "ru": "К тому времени как ты прочитаешь это сообщение, я уже уеду из страны." },
+        { "en": "When you arrive, we'll be having dinner.", "ru": "Когда ты приедешь, мы будем ужинать." }
+      ],
+      "tip": "«By the time you will arrive» — частая ошибка: в русском после «когда» стоит будущее время, а в английском — настоящее."
+    }
+  ],
+  "vocab": [
+    { "en": "this time tomorrow", "ru": "завтра в это время", "example": "This time tomorrow we'll be driving to the coast." },
+    { "en": "by the end of", "ru": "к концу (чего-либо)", "example": "We'll know the results by the end of the month." },
+    { "en": "to launch", "ru": "запустить, выпустить на рынок", "example": "They plan to launch the service in spring." },
+    { "en": "to retire", "ru": "выйти на пенсию", "example": "My father retired at sixty-five." },
+    { "en": "to pay off", "ru": "полностью выплатить (долг)", "example": "It took them ten years to pay off the loan." },
+    { "en": "mortgage", "ru": "ипотека", "example": "They took out a mortgage to buy the house." },
+    { "en": "to drop off", "ru": "завезти, занести (по дороге)", "example": "I'll drop off the documents on my way to work." }
+  ],
+  "exercises": [
+    {
+      "type": "listen",
+      "audio": "This time tomorrow, I'll be flying over the Atlantic.",
+      "question": "Что вы услышали?",
+      "options": [
+        "This time tomorrow, I'll be flying over the Atlantic.",
+        "This time tomorrow, I'll fly over the Atlantic.",
+        "This time tomorrow, I'll have flown over the Atlantic.",
+        "This time tomorrow, I'd be flying over the Atlantic."
+      ],
+      "answer": 0,
+      "explanation": "I'll be flying — Future Continuous: завтра в этот момент полёт будет в процессе. This time tomorrow — типичный сигнал этого времени."
+    },
+    {
+      "type": "gap",
+      "sentence": "By the end of the year, we ___ the new app in three countries.",
+      "translation": "К концу года мы запустим новое приложение в трёх странах.",
+      "options": ["will have launched", "have launched", "launched", "will have been launched"],
+      "answer": 0,
+      "explanation": "By the end of the year задаёт срок в будущем, к которому действие завершится, — это Future Perfect. Пассив (will have been launched) не подходит: мы сами запускаем приложение, и после глагола стоит дополнение."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение означает, что в три часа собеседование будет в самом разгаре?",
+      "options": [
+        "At three o'clock I'll be having an interview.",
+        "By three o'clock I'll have had an interview.",
+        "At three o'clock I've been having an interview.",
+        "At three o'clock I had an interview."
+      ],
+      "answer": 0,
+      "explanation": "Процесс в конкретный момент будущего — Future Continuous: I'll be having. Вариант с by и will have had означает, что к трём собеседование уже закончится."
+    },
+    {
+      "type": "translate",
+      "source": "К пятнице я закончу этот отчёт.",
+      "answer": "I will have finished this report by Friday.",
+      "accept": [
+        "I'll have finished this report by Friday.",
+        "By Friday I will have finished this report.",
+        "By Friday I'll have finished this report.",
+        "I will have completed this report by Friday."
+      ],
+      "distractors": ["finish", "until", "am"],
+      "explanation": "Результат к сроку в будущем — will have finished. «К пятнице» — by Friday; until Friday означало бы, что действие продолжается вплоть до пятницы."
+    },
+    {
+      "type": "gap",
+      "sentence": "Don't worry about the keys: I ___ past your office anyway, so I can drop them off.",
+      "translation": "Не беспокойся насчёт ключей: я всё равно буду проезжать мимо твоего офиса и смогу их завезти.",
+      "options": ["will be driving", "will have driven", "would drive", "have driven"],
+      "answer": 0,
+      "explanation": "Future Continuous описывает то, что произойдёт и так, по обычному ходу дел, — на это указывает anyway. Говорящий не принимает решение, а сообщает, что это ему по пути."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "By the time you get here, we will have eaten everything.",
+        "By the time you will get here, we will have eaten everything.",
+        "By the time you get here, we will eaten everything.",
+        "By the time you got here, we will have eaten everything."
+      ],
+      "answer": 0,
+      "explanation": "После by the time о будущем говорим в Present Simple: you get here. В русском здесь будущее время («когда ты доберёшься»), отсюда частая ошибка с will."
+    },
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to launch", "ru": "запустить, выпустить на рынок" },
+        { "en": "to retire", "ru": "выйти на пенсию" },
+        { "en": "to pay off", "ru": "полностью выплатить (долг)" },
+        { "en": "mortgage", "ru": "ипотека" },
+        { "en": "to drop off", "ru": "завезти, занести (по дороге)" }
+      ]
+    },
+    {
+      "type": "translate",
+      "source": "Завтра в это время мы будем сидеть на пляже.",
+      "answer": "This time tomorrow we will be sitting on the beach.",
+      "accept": [
+        "This time tomorrow we'll be sitting on the beach.",
+        "At this time tomorrow we will be sitting on the beach.",
+        "At this time tomorrow we'll be sitting on the beach.",
+        "We will be sitting on the beach this time tomorrow.",
+        "We'll be sitting on the beach this time tomorrow."
+      ],
+      "distractors": ["sit", "in", "have"],
+      "explanation": "Действие будет в процессе в конкретный момент будущего — will be sitting. Запомните предлог: on the beach, а не in the beach."
+    },
+    {
+      "type": "listen",
+      "audio": "By the time Viktor retires, he will have worked for the company for thirty years.",
+      "question": "Что верно о Викторе?",
+      "options": [
+        "Он ещё работает, а к выходу на пенсию его стаж в компании составит тридцать лет",
+        "Он уже вышел на пенсию после тридцати лет работы",
+        "Он выйдет на пенсию через тридцать лет",
+        "Он проработал тридцать лет и перешёл в другую компанию"
+      ],
+      "answer": 0,
+      "explanation": "Will have worked — Future Perfect: тридцать лет наберётся к моменту выхода на пенсию, который ещё впереди. После by the time стоит Present Simple (retires), хотя речь о будущем."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы хотите вежливо узнать о планах коллеги: «Вы будете пользоваться переговорной сегодня днём?»",
+      "options": [
+        "Will you be using the meeting room this afternoon?",
+        "Will you have used the meeting room this afternoon?",
+        "Do you will use the meeting room this afternoon?",
+        "Are you use the meeting room this afternoon?"
+      ],
+      "answer": 0,
+      "explanation": "Вопрос в Future Continuous звучит нейтрально: мы просто уточняем планы человека, ничего не требуя. Will и do вместе в одном вопросе не встречаются."
+    },
+    {
+      "type": "gap",
+      "sentence": "In five years' time, they ___ off their mortgage completely.",
+      "translation": "Через пять лет они полностью выплатят ипотеку.",
+      "options": ["will have paid", "have paid", "will paid", "are paying"],
+      "answer": 0,
+      "explanation": "Completely подчёркивает завершённость к моменту в будущем — нужен Future Perfect: will have paid off. После will не может идти третья форма без have."
+    },
+    {
+      "type": "translate",
+      "source": "К тому времени как ты приедешь, я приготовлю ужин.",
+      "answer": "By the time you arrive, I will have cooked dinner.",
+      "accept": [
+        "By the time you arrive, I'll have cooked dinner.",
+        "By the time you arrive, I will have made dinner.",
+        "By the time you arrive, I'll have made dinner.",
+        "By the time you come, I will have cooked dinner.",
+        "I will have cooked dinner by the time you arrive."
+      ],
+      "distractors": ["cook", "would", "arrived"],
+      "explanation": "После by the time — Present Simple (you arrive), а в главной части Future Perfect: ужин будет готов до приезда. Перед dinner артикль не нужен."
+    }
+  ]
+}
