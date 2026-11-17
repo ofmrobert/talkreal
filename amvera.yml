@@ -1,0 +1,11 @@
+# Tells Amvera hosting how to build and run Talkreal: use our Dockerfile, app listens on port 8080.
+meta:
+  environment: docker
+  toolchain:
+    name: docker
+    version: latest
+build:
+  dockerfile: Dockerfile
+  skip: false
+run:
+  containerPort: 8080
