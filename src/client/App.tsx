@@ -5,6 +5,7 @@ import Chai from './components/Chai'
 import Home from './screens/Home'
 import Login from './screens/Login'
 import Onboarding from './screens/Onboarding'
+import Placement from './screens/Placement'
 import Profile from './screens/Profile'
 import Talk from './screens/Talk'
 import { load } from './lib/storage'
@@ -23,6 +24,12 @@ function RequireUser() {
   return user ? <Outlet /> : <Navigate to="/login" replace />
 }
 
+/** The main screens need a level, so students without one go to the level step first. */
+function RequireLevel() {
+  const { user } = useAuth()
+  return user?.level ? <Outlet /> : <Navigate to="/placement" replace />
+}
+
 export default function App() {
   return (
     <AuthProvider>
@@ -31,10 +38,13 @@ export default function App() {
           <Route path="/welcome" element={<Onboarding />} />
           <Route path="/login" element={<Login />} />
           <Route element={<RequireUser />}>
-            <Route element={<AppLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/talk" element={<Talk />} />
-              <Route path="/profile" element={<Profile />} />
+            <Route path="/placement" element={<Placement />} />
+            <Route element={<RequireLevel />}>
+              <Route element={<AppLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/talk" element={<Talk />} />
+                <Route path="/profile" element={<Profile />} />
+              </Route>
             </Route>
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />

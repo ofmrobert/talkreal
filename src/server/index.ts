@@ -5,6 +5,7 @@ import './db/client'
 import { env } from './env'
 import { authRoutes } from './routes/auth'
 import { meRoutes } from './routes/me'
+import { placementRoutes } from './routes/placement'
 
 const CLIENT_DIR = './dist/client'
 
@@ -21,6 +22,7 @@ app.onError((err, c) => {
 app.get('/api/health', (c) => c.json({ ok: true, time: new Date().toISOString() }))
 app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)
+app.route('/api/placement', placementRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
 
 app.use(

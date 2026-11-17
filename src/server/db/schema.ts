@@ -1,4 +1,4 @@
-import { date, index, integer, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import { date, index, integer, jsonb, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core'
 
 const timestamptz = (name: string) => timestamp(name, { withTimezone: true })
 
@@ -43,6 +43,22 @@ export const authCodes = pgTable(
     consumedAt: timestamptz('consumed_at'),
   },
   (t) => [index('auth_codes_email_idx').on(t.email, t.createdAt)],
+)
+
+/** How a student's level was set: by the test (with their answers) or chosen by themselves. */
+export const placementResults = pgTable(
+  'placement_results',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    method: text('method').notNull(), // 'test' | 'self'
+    level: text('level').notNull(),
+    answers: jsonb('answers'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('placement_results_user_idx').on(t.userId)],
 )
 
 /** Login sessions. Only a hash of the cookie token is stored. */

@@ -66,7 +66,8 @@
     "level": "Level",
     "minutes": "Minutes spoken",
     "language": "App language",
-    "logout": "Log out"
+    "logout": "Log out",
+    "changeLevel": "Change level"
   },
   "install": {
     "title": "Install the app on your iPhone",
@@ -99,6 +100,41 @@
       "email_failed": "Couldn't send the email. Try again later.",
       "network": "No internet connection.",
       "server_error": "Something went wrong. Try again."
+    }
+  },
+  "placement": {
+    "title": "What's your level?",
+    "subtitle": "It decides which lessons you see. The test takes a couple of minutes, or you can pick your level yourself.",
+    "takeTest": "Take the test",
+    "chooseMyself": "Choose myself",
+    "keepLevel": "Keep {{level}}",
+    "selfTitle": "Choose your level",
+    "back": "Back",
+    "instruction": "Choose the correct option",
+    "resultLabel": "Your level",
+    "resultText": "We've matched the lessons to this level. You can always change it in your profile.",
+    "startLearning": "Start learning"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "hint": "I know some words and simple phrases"
+    },
+    "A2": {
+      "name": "Elementary",
+      "hint": "I can talk about myself and follow simple speech"
+    },
+    "B1": {
+      "name": "Intermediate",
+      "hint": "I get by when travelling and follow the gist"
+    },
+    "B2": {
+      "name": "Upper-intermediate",
+      "hint": "I speak confidently on most topics"
+    },
+    "C1": {
+      "name": "Advanced",
+      "hint": "I speak fluently and want to polish the details"
     }
   }
 }

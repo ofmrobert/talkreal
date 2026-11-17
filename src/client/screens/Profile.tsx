@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthContext'
 import InstallGuide, { isStandalone } from '../components/InstallGuide'
@@ -13,6 +14,7 @@ const LANGUAGES = [
 export default function Profile() {
   const { t, i18n } = useTranslation()
   const { user, logout } = useAuth()
+  const navigate = useNavigate()
 
   const stats = [
     { label: t('profile.streak'), value: String(user?.currentStreak ?? 0) },
@@ -60,6 +62,10 @@ export default function Profile() {
           })}
         </div>
       </section>
+
+      <Button variant="secondary" onClick={() => navigate('/placement')}>
+        {t('profile.changeLevel')}
+      </Button>
 
       {!isStandalone() && <InstallGuide />}
 

@@ -1,0 +1,30 @@
+{
+  "_readme": "Placement test. 4 questions per level, easiest level first. 'answer' is the position of the correct option, counting from 0. A student moves up a level by getting at least 3 of 4 right.",
+  "passMark": 3,
+  "questions": [
+    { "id": "a1-1", "level": "A1", "prompt": "She ___ a teacher.", "options": ["am", "is", "are", "be"], "answer": 1 },
+    { "id": "a1-2", "level": "A1", "prompt": "I ___ coffee every morning.", "options": ["drinks", "drinking", "drink", "am drink"], "answer": 2 },
+    { "id": "a1-3", "level": "A1", "prompt": "There ___ two books on the table.", "options": ["are", "is", "be", "am"], "answer": 0 },
+    { "id": "a1-4", "level": "A1", "prompt": "___ you like pizza?", "options": ["Are", "Does", "Is", "Do"], "answer": 3 },
+
+    { "id": "a2-1", "level": "A2", "prompt": "Yesterday I ___ to the cinema.", "options": ["go", "went", "gone", "was go"], "answer": 1 },
+    { "id": "a2-2", "level": "A2", "prompt": "She is ___ than her brother.", "options": ["more tall", "tall", "the tallest", "taller"], "answer": 3 },
+    { "id": "a2-3", "level": "A2", "prompt": "I have lived here ___ 2019.", "options": ["since", "for", "from", "in"], "answer": 0 },
+    { "id": "a2-4", "level": "A2", "prompt": "We ___ dinner when the phone rang.", "options": ["had", "have had", "were having", "are having"], "answer": 2 },
+
+    { "id": "b1-1", "level": "B1", "prompt": "If it rains tomorrow, we ___ at home.", "options": ["stayed", "will stay", "would stay", "stay"], "answer": 1 },
+    { "id": "b1-2", "level": "B1", "prompt": "I'm used to ___ up early.", "options": ["get", "got", "getting", "be getting"], "answer": 2 },
+    { "id": "b1-3", "level": "B1", "prompt": "My sister works as ___ engineer at ___ big company.", "options": ["an / a", "a / the", "the / a", "an / the"], "answer": 0 },
+    { "id": "b1-4", "level": "B1", "prompt": "This is the first time I ___ sushi.", "options": ["eat", "ate", "am eating", "have eaten"], "answer": 3 },
+
+    { "id": "b2-1", "level": "B2", "prompt": "If I ___ about the traffic, I would have left earlier.", "options": ["knew", "would know", "had known", "have known"], "answer": 2 },
+    { "id": "b2-2", "level": "B2", "prompt": "By the time we arrived, the film ___.", "options": ["had already started", "has already started", "already starts", "was already start"], "answer": 0 },
+    { "id": "b2-3", "level": "B2", "prompt": "She suggested ___ a taxi.", "options": ["to take", "taking", "us take", "that taking"], "answer": 1 },
+    { "id": "b2-4", "level": "B2", "prompt": "The report ___ by the end of next week.", "options": ["will finish", "is finishing", "has finished", "will have been finished"], "answer": 3 },
+
+    { "id": "c1-1", "level": "C1", "prompt": "Hardly ___ the office when it started to rain.", "options": ["I had left", "had I left", "I left", "did I leave"], "answer": 1 },
+    { "id": "c1-2", "level": "C1", "prompt": "It's high time we ___ a decision.", "options": ["made", "make", "will make", "have made"], "answer": 0 },
+    { "id": "c1-3", "level": "C1", "prompt": "Her argument was so ___ that nobody could disagree.", "options": ["compulsive", "compulsory", "compelling", "competing"], "answer": 2 },
+    { "id": "c1-4", "level": "C1", "prompt": "Had it not been for your help, I ___ the deadline.", "options": ["would miss", "will have missed", "had missed", "would have missed"], "answer": 3 }
+  ]
+}
