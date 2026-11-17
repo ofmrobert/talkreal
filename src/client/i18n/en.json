@@ -1,0 +1,20 @@
+{
+  "hello": {
+    "title": "Hi! This is Talkreal",
+    "subtitle": "English the way people really speak it. Lessons and live conversations with AI teachers are coming soon.",
+    "installed": "The app is installed. You're all set!"
+  },
+  "status": {
+    "checking": "Checking the server…",
+    "online": "Server is online",
+    "offline": "Can't reach the server"
+  },
+  "install": {
+    "title": "Install the app on your iPhone",
+    "safariOnly": "Open this page in Safari.",
+    "step1": "Tap the Share button at the bottom of the screen",
+    "step2": "Choose “Add to Home Screen”",
+    "step3": "Tap “Add”",
+    "other": "On Android: browser menu → “Install app”."
+  }
+}

@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Talkreal palette. System fonts only: nothing is loaded from foreign servers. */
+@theme {
+  --color-coral: #ff6b4a;
+  --color-coral-dark: #e2512f;
+  --color-ink: #1f1b3a;
+  --color-sun: #ffc53d;
+  --color-mint: #2ec4a0;
+  --color-cream: #fff8f0;
+  --font-sans: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Keep content clear of the iPhone notch and home bar. */
+.safe-screen {
+  padding-top: max(1.25rem, env(safe-area-inset-top));
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+}
+
+@keyframes chai-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes chai-steam {
+  0% { opacity: 0; transform: translateY(6px); }
+  40% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+.chai-bob { animation: chai-bob 3s ease-in-out infinite; }
+.chai-steam { animation: chai-steam 2.4s ease-out infinite; }
+.chai-steam-2 { animation-delay: 0.8s; }
+.chai-steam-3 { animation-delay: 1.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .chai-bob, .chai-steam { animation: none; }
+}
