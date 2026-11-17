@@ -26,6 +26,16 @@ export const env = {
    */
   showCodes: process.env.DEV_SHOW_CODES ? process.env.DEV_SHOW_CODES === '1' : !isProduction,
 
+  ai: {
+    /** Google AI Studio key. Empty = voice conversations are switched off. */
+    geminiKey: process.env.GEMINI_API_KEY ?? '',
+    liveModel: process.env.GEMINI_LIVE_MODEL ?? 'gemini-3.8-live',
+    /** Where the AI is reached. Point this at a relay outside Russia if Google refuses a direct connection. */
+    geminiWsBase: process.env.GEMINI_WS_BASE ?? 'wss://generativelanguage.googleapis.com',
+    /** "mock" replaces the real AI with a stand-in, for testing without a key. */
+    voiceProvider: process.env.VOICE_PROVIDER ?? 'gemini',
+  },
+
   telegram: {
     /** From @BotFather. Empty = Telegram login is switched off. */
     botToken: process.env.TELEGRAM_BOT_TOKEN ?? '',

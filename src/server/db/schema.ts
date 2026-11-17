@@ -94,6 +94,24 @@ export const dailyUsage = pgTable(
   (t) => [primaryKey({ columns: [t.userId, t.day] })],
 )
 
+/** Every AI voice call, for cost auditing. */
+export const voiceSessions = pgTable(
+  'voice_sessions',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    teacher: text('teacher').notNull(),
+    provider: text('provider').notNull(),
+    startedAt: timestamptz('started_at').notNull().defaultNow(),
+    endedAt: timestamptz('ended_at'),
+    seconds: integer('seconds').notNull().default(0),
+    endReason: text('end_reason'),
+  },
+  (t) => [index('voice_sessions_user_idx').on(t.userId, t.startedAt)],
+)
+
 /** Login sessions. Only a hash of the cookie token is stored. */
 export const sessions = pgTable(
   'sessions',

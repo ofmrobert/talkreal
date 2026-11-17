@@ -9,6 +9,8 @@ import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
+import { voiceRoutes } from './routes/voice'
+import { attachVoiceSocket } from './voice/socket'
 
 const CLIENT_DIR = './dist/client'
 
@@ -27,6 +29,7 @@ app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)
 app.route('/api/placement', placementRoutes)
 app.route('/api/diag', diagRoutes)
+app.route('/api/voice', voiceRoutes)
 app.route('/api', courseRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
 
@@ -54,6 +57,8 @@ app.get(
 
 void startTelegramBot()
 
-serve({ fetch: app.fetch, port: env.port, hostname: '0.0.0.0' }, () => {
+const server = serve({ fetch: app.fetch, port: env.port, hostname: '0.0.0.0' }, () => {
   console.log(`Talkreal server listening on port ${env.port}`)
 })
+
+attachVoiceSocket(server as import('node:http').Server)

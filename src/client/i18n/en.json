@@ -50,7 +50,10 @@
   },
   "talk": {
     "title": "Teachers",
-    "subtitle": "Live voice conversations are coming very soon. Meanwhile, meet the team."
+    "subtitle": "Live voice conversations are coming very soon. Meanwhile, meet the team.",
+    "subtitleLive": "Pick a teacher and talk out loud. They hear you, answer by voice and gently correct mistakes.",
+    "timeLeft": "{{time}} of speaking time left today",
+    "noTime": "You have used today's speaking time. Come back tomorrow!"
   },
   "teachers": {
     "harper": {
@@ -195,5 +198,29 @@
     "streak_other": "Streak: {{count}} days",
     "streakHint": "Study every day to keep it growing.",
     "continue": "Continue"
+  },
+  "call": {
+    "intro": "Tap the button and just start talking.",
+    "start": "Start the conversation",
+    "again": "Call again",
+    "connecting": "Connecting…",
+    "listening": "Go ahead, I'm listening",
+    "speaking": "{{name}} is speaking…",
+    "muted": "Microphone is off",
+    "mute": "Mute microphone",
+    "unmute": "Unmute microphone",
+    "hangUp": "End the conversation",
+    "timeLeft": "Time left",
+    "transcriptHint": "The conversation text will appear here.",
+    "ended": {
+      "hangup": "Conversation ended.",
+      "limit": "You have used today's speaking time. Come back tomorrow!",
+      "max_duration": "The conversation reached the maximum length. You can call again.",
+      "unavailable": "Conversations are unavailable right now. Try again later.",
+      "provider_error": "Couldn't connect to the teacher. Try again.",
+      "provider_closed": "The connection dropped. Try calling again.",
+      "mic_denied": "No access to the microphone. Allow it in settings and try again.",
+      "connection": "No connection. Check your internet and try again."
+    }
   }
 }

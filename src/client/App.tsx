@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router'
 import { AuthProvider, useAuth } from './auth/AuthContext'
 import AppLayout from './components/AppLayout'
+import Call from './screens/Call'
 import Chai from './components/Chai'
 import Home from './screens/Home'
 import Lesson from './screens/Lesson'
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/placement" element={<Placement />} />
             <Route element={<RequireLevel />}>
               <Route path="/lesson/:id" element={<Lesson />} />
+              <Route path="/talk/:teacherId" element={<Call />} />
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/talk" element={<Talk />} />

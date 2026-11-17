@@ -7,7 +7,7 @@ export default defineConfig({
   build: { outDir: 'dist/client', emptyOutDir: true },
   server: {
     // In development the API runs as a separate process on port 8787.
-    proxy: { '/api': 'http://localhost:8787' },
+    proxy: { '/api': { target: 'http://localhost:8787', ws: true } },
   },
   plugins: [
     react(),

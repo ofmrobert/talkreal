@@ -42,6 +42,22 @@ async function currentUserId(c: Context): Promise<string | null> {
   return row?.userId ?? null
 }
 
+/** For WebSocket connections, which arrive outside the normal request flow. */
+export async function userIdFromCookieHeader(header: string | undefined): Promise<string | null> {
+  const token = header
+    ?.split(';')
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(COOKIE + '='))
+    ?.slice(COOKIE.length + 1)
+  if (!token) return null
+  const [row] = await db
+    .select({ userId: sessions.userId })
+    .from(sessions)
+    .where(and(eq(sessions.tokenHash, hashToken(decodeURIComponent(token))), gt(sessions.expiresAt, new Date())))
+    .limit(1)
+  return row?.userId ?? null
+}
+
 export type AuthEnv = { Variables: { userId: string } }
 
 /** Protects a route: only logged-in users get through. */
