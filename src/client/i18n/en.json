@@ -1,8 +1,71 @@
 {
-  "hello": {
-    "title": "Hi! This is Talkreal",
-    "subtitle": "English the way people really speak it. Lessons and live conversations with AI teachers are coming soon.",
-    "installed": "The app is installed. You're all set!"
+  "common": {
+    "next": "Next",
+    "skip": "Skip",
+    "start": "Get started",
+    "soon": "Soon"
+  },
+  "tabs": {
+    "learn": "Lessons",
+    "talk": "Talk",
+    "profile": "Profile"
+  },
+  "onboarding": {
+    "hello": {
+      "title": "Hi! I'm Chai",
+      "text": "I'll help you start speaking English, without cramming or boring textbooks."
+    },
+    "lessons": {
+      "title": "5 minutes a day",
+      "text": "Short lessons matched to your level, from A1 to C1. XP and a daily streak keep you going."
+    },
+    "talk": {
+      "title": "Speak out loud",
+      "text": "AI teachers are available 24/7. They correct mistakes gently and switch to Russian if you get stuck."
+    },
+    "install": {
+      "title": "Add Talkreal to your Home Screen",
+      "text": "It will open like a regular app."
+    }
+  },
+  "home": {
+    "greeting": "Good to see you! Ready for some English?",
+    "streak": "Day streak",
+    "xp": "XP",
+    "lessonTitle": "Lesson of the day",
+    "lessonText": "Lessons will appear here very soon.",
+    "talkTitle": "Speaking practice",
+    "talkText": "Meet the teachers."
+  },
+  "talk": {
+    "title": "Teachers",
+    "subtitle": "Live voice conversations are coming very soon. Meanwhile, meet the team."
+  },
+  "teachers": {
+    "harper": {
+      "role": "British English · grammar",
+      "style": "Warm and precise. Explains a rule so that it finally sticks."
+    },
+    "jake": {
+      "role": "American English · everyday speech",
+      "style": "Relaxed and fun. Small talk, slang and phrases from real life."
+    },
+    "elena": {
+      "role": "Bilingual coach · for beginners",
+      "style": "Explains in Russian when it gets hard. Ideal if you're just starting."
+    },
+    "sterling": {
+      "role": "Business English · career",
+      "style": "Interviews, calls and negotiations. Clear and to the point."
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "streak": "Day streak",
+    "xp": "XP",
+    "level": "Level",
+    "minutes": "Minutes spoken",
+    "language": "App language"
   },
   "status": {
     "checking": "Checking the server…",
