@@ -34,7 +34,13 @@ const hash = (value: string) => createHash('sha256').update(value).digest('hex')
  * Connections to Telegram are kept open and reused. Opening a new one can take seconds from
  * some networks, which would make the bot feel slow, so we also 'ping' regularly to keep one warm.
  */
-const agent = new Agent({ keepAliveTimeout: 120_000, keepAliveMaxTimeout: 600_000, connections: 4 })
+const agent = new Agent({
+  keepAliveTimeout: 120_000,
+  keepAliveMaxTimeout: 600_000,
+  connections: 4,
+  // From Russia, some connection attempts to Telegram hang. Give up quickly and try again.
+  connect: { timeout: 4000 },
+})
 const KEEP_WARM_EVERY_MS = 25_000
 
 /** Timings for diagnostics, in milliseconds. */
@@ -114,8 +120,13 @@ interface Update {
 
 /** Sends a bot message in the background, so a slow reply never delays the login itself. */
 function reply(chatId: number, text: string): void {
-  timed('lastReply', () => call('sendMessage', { chat_id: chatId, text })).catch((err) => {
-    timings.lastError = err instanceof Error ? err.message : String(err)
+  const attempt = (triesLeft: number): Promise<unknown> =>
+    call('sendMessage', { chat_id: chatId, text }, 6000).catch((err) => {
+      if (triesLeft > 0) return attempt(triesLeft - 1)
+      throw err
+    })
+  timed('lastReply', () => attempt(3)).catch((err) => {
+    timings.lastError = new Date().toISOString() + ' reply: ' + (err instanceof Error ? err.message : String(err))
     console.error('Telegram reply failed:', timings.lastError)
   })
 }
@@ -141,8 +152,8 @@ async function listen(): Promise<void> {
     try {
       const updates = await call<Update[]>(
         'getUpdates',
-        { offset, timeout: 50, allowed_updates: ['message'] },
-        65_000,
+        { offset, timeout: 25, allowed_updates: ['message'] },
+        35_000,
       )
       for (const update of updates) {
         offset = update.update_id + 1
@@ -153,7 +164,7 @@ async function listen(): Promise<void> {
       timings.lastError = new Date().toISOString() + ' ' + text
       console.error('Telegram polling error:', text)
       // 'Conflict' happens for a few seconds during an update, while the old copy of the server shuts down.
-      await new Promise((r) => setTimeout(r, text.includes('Conflict') ? 1000 : 5000))
+      await new Promise((r) => setTimeout(r, 1000))
     }
   }
 }
