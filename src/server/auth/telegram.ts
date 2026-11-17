@@ -24,6 +24,9 @@ interface PendingLogin {
 /** Waiting logins live in memory only: they are short-lived and hold no data worth keeping. */
 const pending = new Map<string, PendingLogin>()
 let botUsername: string | null = null
+/** For diagnostics: why Telegram login is or is not available. */
+let state: 'no_token' | 'connecting' | 'unreachable' | 'on' = 'no_token'
+export const telegramState = () => state
 
 const hash = (value: string) => createHash('sha256').update(value).digest('hex')
 
@@ -158,14 +161,17 @@ export async function startTelegramBot(): Promise<void> {
     console.log('Telegram login: off (TELEGRAM_BOT_TOKEN is not set)')
     return
   }
+  state = 'connecting'
   for (;;) {
     try {
       const me = await call<{ username: string }>('getMe')
       await call('deleteWebhook')
       botUsername = me.username
+      state = 'on'
       console.log(`Telegram login: on (@${me.username})`)
       break
     } catch (err) {
+      state = 'unreachable'
       console.error('Telegram login: cannot reach Telegram, retrying in 60s:', err instanceof Error ? err.message : err)
       await new Promise((r) => setTimeout(r, 60_000))
     }
