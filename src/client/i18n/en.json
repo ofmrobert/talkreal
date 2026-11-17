@@ -46,7 +46,20 @@
     "noLessons": "Lessons for this level are coming soon.",
     "repeat": "Practise again",
     "exerciseCount_one": "{{count}} exercise",
-    "exerciseCount_other": "{{count}} exercises"
+    "exerciseCount_other": "{{count}} exercises",
+    "mascot": {
+      "morning": "Good morning! Five minutes of English and the day starts right.",
+      "day": "Hi! A good moment for a short lesson.",
+      "evening": "Good evening! Shall we end the day with a couple of new phrases?",
+      "streak_one": "{{count}} day in a row! Keep it up.",
+      "streak_other": "{{count}} days in a row! Keep it up.",
+      "next": "Next tip"
+    },
+    "weekTitle": "Your week",
+    "weekDays_one": "{{count}} day of study",
+    "weekDays_other": "{{count}} days of study",
+    "phraseTitle": "Phrase of the day",
+    "teacherTitle": "Teacher of the day"
   },
   "talk": {
     "title": "Teachers",

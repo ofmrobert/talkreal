@@ -50,7 +50,24 @@
     "exerciseCount_one": "{{count}} упражнение",
     "exerciseCount_few": "{{count}} упражнения",
     "exerciseCount_many": "{{count}} упражнений",
-    "exerciseCount_other": "{{count}} упражнений"
+    "exerciseCount_other": "{{count}} упражнений",
+    "mascot": {
+      "morning": "Доброе утро! Пять минут английского — и день начался правильно.",
+      "day": "Привет! Самое время для короткого урока.",
+      "evening": "Добрый вечер! Закончим день парой новых фраз?",
+      "streak_one": "{{count}} день подряд! Так держать.",
+      "streak_few": "{{count}} дня подряд! Так держать.",
+      "streak_many": "{{count}} дней подряд! Так держать.",
+      "streak_other": "{{count}} дней подряд! Так держать.",
+      "next": "Следующий совет"
+    },
+    "weekTitle": "Ваша неделя",
+    "weekDays_one": "{{count}} день с занятиями",
+    "weekDays_few": "{{count}} дня с занятиями",
+    "weekDays_many": "{{count}} дней с занятиями",
+    "weekDays_other": "{{count}} дней с занятиями",
+    "phraseTitle": "Фраза дня",
+    "teacherTitle": "Преподаватель дня"
   },
   "talk": {
     "title": "Преподаватели",

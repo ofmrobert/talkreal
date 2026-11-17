@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import Badge from '../components/ui/Badge'
 import Card from '../components/ui/Card'
+import TeacherAvatar from '../components/TeacherAvatar'
 import { ChevronRightIcon, MicIcon } from '../components/icons'
 import { api } from '../lib/api'
 import { TEACHERS } from '../../shared/teachers'
@@ -60,13 +61,7 @@ export default function Talk() {
             className="text-left active:translate-y-0.5 disabled:active:translate-y-0"
           >
             <Card className="flex items-start gap-4">
-              <div
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-2xl font-extrabold text-white"
-                style={{ backgroundColor: teacher.color }}
-                aria-hidden="true"
-              >
-                {teacher.name.replace(/^(Miss|Mr\.)\s/, '')[0]}
-              </div>
+              <TeacherAvatar teacher={teacher.id} size={72} />
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
                   <h2 className="text-lg font-extrabold">{teacher.name}</h2>

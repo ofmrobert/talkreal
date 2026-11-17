@@ -3,6 +3,7 @@ import { Navigate, useNavigate, useParams } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { TEACHERS } from '../../shared/teachers'
 import { MicIcon } from '../components/icons'
+import TeacherAvatar from '../components/TeacherAvatar'
 import Button from '../components/ui/Button'
 import { VoiceCall, type EndReason } from '../lib/voiceCall'
 
@@ -112,13 +113,7 @@ export default function Call() {
         >
           ✕
         </button>
-        <div
-          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-xl font-extrabold text-white ${teacherSpeaking ? 'pulse-ring' : ''}`}
-          style={{ backgroundColor: teacher.color }}
-          aria-hidden="true"
-        >
-          {initial}
-        </div>
+        <TeacherAvatar teacher={teacher.id} size={48} speaking={teacherSpeaking} />
         <div className="min-w-0 flex-1">
           <h1 className="truncate text-lg font-extrabold leading-tight">{teacher.name}</h1>
           <p className="truncate text-sm font-semibold text-ink/55">{t(`teachers.${teacher.id}.role`)}</p>
@@ -136,9 +131,14 @@ export default function Call() {
       {/* Live transcript */}
       <main className="flex flex-1 flex-col gap-3 overflow-y-auto rounded-3xl bg-white/60 p-4" aria-live="polite">
         {lines.length === 0 && (
-          <p className="m-auto max-w-64 text-center text-base font-semibold text-ink/50">
-            {stage === 'idle' || stage === 'ended' ? t(`teachers.${teacher.id}.style`) : t('call.transcriptHint')}
-          </p>
+          <div className="m-auto flex max-w-64 flex-col items-center gap-4 text-center">
+            <span className={`rounded-full ${stage === 'connecting' ? 'pulse-soft' : ''}`}>
+              <TeacherAvatar teacher={teacher.id} size={150} speaking={teacherSpeaking} />
+            </span>
+            <p className="text-base font-semibold text-ink/55">
+              {stage === 'idle' || stage === 'ended' ? t(`teachers.${teacher.id}.style`) : t('call.transcriptHint')}
+            </p>
+          </div>
         )}
         {lines.map((line, i) => (
           <p

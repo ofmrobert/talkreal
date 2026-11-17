@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import type { Text } from '../../shared/lesson'
 import Chai from '../components/Chai'
 import { BoltIcon, FlameIcon } from '../components/icons'
+import { MascotSays, PhraseOfDay, TeacherOfDay, WeekStrip } from '../components/home/HomeExtras'
 import Button from '../components/ui/Button'
 import { api } from '../lib/api'
 
@@ -22,6 +23,7 @@ interface Course {
   xp: number
   streak: number
   today: { xp: number; xpGoal: number; lessonsDone: number; lessonsLimit: number | null }
+  week: { day: string; xp: number }[]
   lessons: CourseLesson[]
 }
 
@@ -114,6 +116,8 @@ export default function Home() {
         </div>
       </header>
 
+      <MascotSays streak={course.streak} />
+
       {/* Daily goal */}
       <section className="flex items-center gap-4 rounded-3xl bg-white p-4 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
         <GoalRing value={course.today.xp / course.today.xpGoal} />
@@ -156,6 +160,10 @@ export default function Home() {
           </section>
         )
       )}
+
+      <WeekStrip week={course.week} />
+      <PhraseOfDay />
+      <TeacherOfDay />
 
       {/* The course path */}
       <section>

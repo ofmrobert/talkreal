@@ -1,4 +1,4 @@
-import { and, eq, sql } from 'drizzle-orm'
+import { and, eq, gte, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { isLevel } from '../../shared/levels'
 import { requireUser, type AuthEnv } from '../auth/sessions'
@@ -6,7 +6,7 @@ import { DAILY_XP_GOAL, limitsFor } from '../billing/plans'
 import { lessonById, lessonsFor } from '../content/lessons'
 import { db } from '../db/client'
 import { dailyUsage, lessonProgress, users } from '../db/schema'
-import { currentStreak, localDay, safeTimezone, streakAfterActivity } from '../progress/streak'
+import { currentStreak, dayBefore, localDay, safeTimezone, streakAfterActivity } from '../progress/streak'
 
 const XP_BASE = 10
 const XP_ACCURACY_BONUS = 10
@@ -50,7 +50,17 @@ courseRoutes.get('/course', async (c) => {
   const usage = await usageToday(user.id, today)
   const limit = limitsFor(user.plan).lessonsPerDay
 
+  // The last seven days, oldest first, for the week strip on the home screen.
+  const days: string[] = [today]
+  while (days.length < 7) days.unshift(dayBefore(days[0]))
+  const recent = await db
+    .select({ day: dailyUsage.day, xp: dailyUsage.xp })
+    .from(dailyUsage)
+    .where(and(eq(dailyUsage.userId, user.id), gte(dailyUsage.day, days[0])))
+  const xpByDay = new Map(recent.map((r) => [r.day, r.xp]))
+
   return c.json({
+    week: days.map((day) => ({ day, xp: xpByDay.get(day) ?? 0 })),
     level: user.level,
     xp: user.xp,
     streak: currentStreak(user.currentStreak, user.lastActiveDate, today),

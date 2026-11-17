@@ -1,0 +1,73 @@
+{
+  "_readme": "Texts for the home screen. 'tips' are what Chai the mascot says. 'phrases' is the phrase of the day (one per day, in order, then it starts again). 'teacherLines' is what each teacher says on the 'teacher of the day' card.",
+  "tips": [
+    { "ru": "Пять минут каждый день работают лучше, чем час раз в неделю.", "en": "Five minutes every day beats an hour once a week." },
+    { "ru": "Ошибаться — нормально. Каждая ошибка показывает, что учить дальше.", "en": "Mistakes are fine. Each one shows you what to learn next." },
+    { "ru": "Говорите вслух, даже когда вы одни. Язык запоминается ртом, а не глазами.", "en": "Say it out loud, even when you're alone. You learn a language with your mouth, not your eyes." },
+    { "ru": "Не переводите слово за словом. Учите готовые фразы целиком.", "en": "Don't translate word by word. Learn whole phrases." },
+    { "ru": "Артикли пугают всех, кто говорит по-русски. Это привычка, а не талант — она придёт.", "en": "Articles scare every Russian speaker. They're a habit, not a talent. It comes." },
+    { "ru": "Забыли слово? Опишите его другими словами. Так делают все, кто говорит свободно.", "en": "Forgot a word? Describe it in other words. Every fluent speaker does that." },
+    { "ru": "В английском около 170 тысяч слов, но для повседневной речи хватает примерно трёх тысяч.", "en": "English has about 170,000 words, but around 3,000 cover everyday speech." },
+    { "ru": "Слушайте английский фоном: подкасты, песни, сериалы. Ухо привыкает раньше, чем язык.", "en": "Keep English in the background: podcasts, songs, shows. Your ear adapts before your tongue." },
+    { "ru": "Повторите пройденный урок через день. Со второго раза запоминается намного прочнее.", "en": "Repeat a lesson a day later. It sticks far better the second time." },
+    { "ru": "Звук «th» получится, если слегка высунуть кончик языка. Не стесняйтесь, так и надо.", "en": "For the \"th\" sound, let the tip of your tongue peek out. Don't be shy, that's how it works." },
+    { "ru": "Самое длинное слово без повторяющихся букв — «uncopyrightable».", "en": "The longest English word with no repeated letters is \"uncopyrightable\"." },
+    { "ru": "Разговор с преподавателем на три минуты даёт больше, чем полчаса молчаливых упражнений.", "en": "Three minutes of talking with a teacher does more than half an hour of silent exercises." },
+    { "ru": "«I» всегда пишется с большой буквы. Даже в середине предложения.", "en": "\"I\" is always a capital letter, even in the middle of a sentence." },
+    { "ru": "Не ждите идеального момента, чтобы заговорить. Его не бывает. Начните сегодня.", "en": "Don't wait for the perfect moment to speak. There isn't one. Start today." }
+  ],
+  "phrases": [
+    { "en": "It's up to you.", "ru": "Решать тебе.", "note": "Так говорят, когда оставляют выбор за собеседником." },
+    { "en": "I'm on my way.", "ru": "Я уже еду.", "note": "Не «I go» и не «I'm going»: именно on my way." },
+    { "en": "That makes sense.", "ru": "Логично. Понятно.", "note": "Самый естественный способ сказать «теперь понял»." },
+    { "en": "I couldn't agree more.", "ru": "Полностью согласен.", "note": "Звучит как отрицание, но означает полное согласие." },
+    { "en": "Take your time.", "ru": "Не торопитесь.", "note": "Вежливый способ сказать, что спешки нет." },
+    { "en": "It depends.", "ru": "Смотря как. Зависит от ситуации.", "note": "После него часто идёт on: It depends on the weather." },
+    { "en": "I'm looking forward to it.", "ru": "Жду с нетерпением.", "note": "После to идёт глагол с -ing: looking forward to seeing you." },
+    { "en": "Never mind.", "ru": "Неважно. Забудь.", "note": "Когда не хочется повторять или объяснять." },
+    { "en": "Could you say that again?", "ru": "Не могли бы вы повторить?", "note": "Гораздо вежливее, чем «What?»." },
+    { "en": "I'm running late.", "ru": "Я опаздываю.", "note": "Говорят, когда ещё в пути и понимают, что не успевают." },
+    { "en": "Let's call it a day.", "ru": "На сегодня хватит.", "note": "Так заканчивают работу или встречу." },
+    { "en": "It's not a big deal.", "ru": "Ничего страшного.", "note": "Ответ на извинение или способ успокоить." },
+    { "en": "I'll think it over.", "ru": "Я это обдумаю.", "note": "Think over — обдумать перед решением." },
+    { "en": "Fair enough.", "ru": "Справедливо. Ладно.", "note": "Когда принимаете чужой довод, даже если не в восторге." },
+    { "en": "Long time no see!", "ru": "Сколько лет, сколько зим!", "note": "Грамматически странная, но совершенно обычная фраза." },
+    { "en": "I'm just browsing.", "ru": "Я просто смотрю.", "note": "Пригодится в магазине, когда подходит продавец." },
+    { "en": "What do you do?", "ru": "Кем вы работаете?", "note": "Это вопрос о профессии, а не о том, что вы делаете сейчас." },
+    { "en": "Keep in touch.", "ru": "Оставайся на связи.", "note": "Говорят на прощание." },
+    { "en": "I have no idea.", "ru": "Понятия не имею.", "note": "Сильнее, чем просто «I don't know»." },
+    { "en": "Sorry to bother you.", "ru": "Извините за беспокойство.", "note": "Вежливое начало просьбы или письма." },
+    { "en": "Let me know.", "ru": "Дай знать.", "note": "Не «say me» и не «tell me know»." },
+    { "en": "It's worth it.", "ru": "Оно того стоит.", "note": "После worth идёт -ing: It's worth trying." },
+    { "en": "I'm fed up with it.", "ru": "Мне это надоело.", "note": "Разговорный способ сказать, что терпение закончилось." },
+    { "en": "By the way…", "ru": "Кстати…", "note": "Так переходят к новой теме." },
+    { "en": "I didn't mean to.", "ru": "Я не хотел. Я не нарочно.", "note": "Mean to do — намереваться что-то сделать." },
+    { "en": "You're welcome.", "ru": "Пожалуйста. Не за что.", "note": "Ответ на «thank you». «Please» здесь не подходит." },
+    { "en": "I'm starving.", "ru": "Умираю с голоду.", "note": "Обычное преувеличение, когда очень хочется есть." },
+    { "en": "Can I have the bill, please?", "ru": "Можно счёт, пожалуйста?", "note": "В США чаще говорят the check." },
+    { "en": "So far, so good.", "ru": "Пока всё хорошо.", "note": "Когда дело идёт нормально, но ещё не закончено." },
+    { "en": "Good for you!", "ru": "Молодец! Рад за тебя!", "note": "Искренняя похвала, а не сарказм." }
+  ],
+  "teacherLines": {
+    "harper": [
+      { "ru": "Артикли можно победить. Позвоните мне, и я покажу как.", "en": "Articles can be tamed. Call me and I'll show you how." },
+      { "ru": "Расскажите мне о своём дне — в прошедшем времени, разумеется.", "en": "Tell me about your day. In the past tense, of course." },
+      { "ru": "Одна фраза правильно лучше десяти в спешке. Потренируемся?", "en": "One sentence done right beats ten in a hurry. Shall we practise?" }
+    ],
+    "jake": [
+      { "ru": "Есть три минуты? Расскажи, как прошли выходные.", "en": "Got three minutes? Tell me about your weekend." },
+      { "ru": "Научу фразам, которых нет в учебниках. Звони!", "en": "I'll teach you phrases you won't find in textbooks. Call me!" },
+      { "ru": "Какой сериал сейчас смотришь? Давай обсудим по-английски.", "en": "What show are you watching? Let's talk about it in English." }
+    ],
+    "elena": [
+      { "ru": "Страшно говорить? Со мной можно по-русски, а потом попробуем по-английски.", "en": "Scared to speak? You can use Russian with me, then we'll try English." },
+      { "ru": "Начнём с простого: как вас зовут и откуда вы?", "en": "Let's start simple: what's your name and where are you from?" },
+      { "ru": "Я помню, как сама учила английский. Всё получится.", "en": "I remember learning English myself. You'll get there." }
+    ],
+    "sterling": [
+      { "ru": "Собеседование на английском? Давайте отрепетируем.", "en": "An interview in English? Let's rehearse it." },
+      { "ru": "Расскажите о своей работе за одну минуту. Засекаю.", "en": "Tell me about your job in one minute. I'm timing you." },
+      { "ru": "Уверенная речь на созвоне — это навык. Его можно натренировать.", "en": "Sounding confident on a call is a skill. It can be trained." }
+    ]
+  }
+}
