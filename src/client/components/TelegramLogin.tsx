@@ -4,7 +4,7 @@ import { useAuth } from '../auth/AuthContext'
 import Button from './ui/Button'
 import { api } from '../lib/api'
 
-const POLL_EVERY_MS = 2000
+const POLL_EVERY_MS = 1000
 
 function TelegramIcon() {
   return (
@@ -33,12 +33,17 @@ export default function TelegramLogin({ onError }: { onError: (code: string) => 
 
   useEffect(() => {
     if (!login) return
-    const timer = setInterval(async () => {
+    let stopped = false
+    let checking = false
+    async function check() {
+      if (stopped || checking) return
+      checking = true
       try {
         const res = await api<{ status: string }>('/auth/telegram/poll', {
-          pollToken: login.pollToken,
+          pollToken: login!.pollToken,
           lang: i18n.language,
         })
+        if (stopped) return
         if (res.status === 'ok') {
           setLogin(null)
           await refresh()
@@ -47,10 +52,26 @@ export default function TelegramLogin({ onError }: { onError: (code: string) => 
           onError('expired')
         }
       } catch {
-        // No connection right now (e.g. the app was in the background): try again on the next tick.
+        // No connection right now (e.g. the app was in the background): the next check retries.
+      } finally {
+        checking = false
       }
-    }, POLL_EVERY_MS)
-    return () => clearInterval(timer)
+    }
+    const timer = setInterval(check, POLL_EVERY_MS)
+    // Check the instant the student switches back from Telegram, without waiting for the timer.
+    const onReturn = () => {
+      if (document.visibilityState === 'visible') check()
+    }
+    document.addEventListener('visibilitychange', onReturn)
+    window.addEventListener('focus', onReturn)
+    window.addEventListener('pageshow', onReturn)
+    return () => {
+      stopped = true
+      clearInterval(timer)
+      document.removeEventListener('visibilitychange', onReturn)
+      window.removeEventListener('focus', onReturn)
+      window.removeEventListener('pageshow', onReturn)
+    }
   }, [login, i18n.language, refresh, onError])
 
   if (!available) return null

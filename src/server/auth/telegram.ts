@@ -2,14 +2,14 @@
  * Login through the Telegram bot.
  *
  * 1. The app asks for a login link and opens it: https://t.me/<bot>?start=<startParam>
- * 2. The student presses Start in Telegram; the bot asks them to confirm with a button.
- * 3. The app, which has been checking every couple of seconds with its secret pollToken,
- *    sees the confirmation and the student is logged in.
+ * 2. The student presses Start in Telegram. That is the confirmation.
+ * 3. The app, which has been checking with its secret pollToken, sees it and logs the student in.
  *
  * The bot receives messages by "long polling" (the server keeps asking Telegram for news),
  * so no public address or domain is required.
  */
 import { createHash, randomBytes } from 'node:crypto'
+import { Agent, fetch } from 'undici'
 import { env } from '../env'
 
 const LOGIN_TTL_MS = 10 * 60 * 1000
@@ -30,16 +30,37 @@ export const telegramState = () => state
 
 const hash = (value: string) => createHash('sha256').update(value).digest('hex')
 
+/**
+ * Connections to Telegram are kept open and reused. Opening a new one can take seconds from
+ * some networks, which would make the bot feel slow, so we also 'ping' regularly to keep one warm.
+ */
+const agent = new Agent({ keepAliveTimeout: 120_000, keepAliveMaxTimeout: 600_000, connections: 4 })
+const KEEP_WARM_EVERY_MS = 25_000
+
+/** Timings for diagnostics, in milliseconds. */
+const timings: { firstCall?: number; lastPing?: number; lastReply?: number; lastError?: string } = {}
+export const telegramTimings = () => timings
+
 async function call<T = unknown>(method: string, params: object = {}, timeoutMs = 15_000): Promise<T> {
   const res = await fetch(`${env.telegram.apiBase}/bot${env.telegram.botToken}/${method}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(params),
     signal: AbortSignal.timeout(timeoutMs),
+    dispatcher: agent,
   })
   const data = (await res.json()) as { ok: boolean; result: T; description?: string }
   if (!data.ok) throw new Error(`Telegram ${method}: ${data.description}`)
   return data.result
+}
+
+async function timed<T>(key: 'firstCall' | 'lastPing' | 'lastReply', action: () => Promise<T>): Promise<T> {
+  const started = Date.now()
+  try {
+    return await action()
+  } finally {
+    timings[key] = Date.now() - started
+  }
 }
 
 function findValid(startParam: string): PendingLogin | null {
@@ -88,50 +109,29 @@ export function pollLogin(pollToken: string): PollResult {
 
 interface Update {
   update_id: number
-  message?: { chat: { id: number }; text?: string }
-  callback_query?: {
-    id: string
-    data?: string
-    from: { id: number; first_name?: string }
-    message?: { chat: { id: number }; message_id: number }
-  }
+  message?: { chat: { id: number }; from?: { id: number; first_name?: string }; text?: string }
 }
 
-async function handle(update: Update): Promise<void> {
-  const message = update.message
-  if (message?.text?.startsWith('/start')) {
-    const startParam = message.text.split(' ')[1]
-    if (startParam && findValid(startParam)) {
-      await call('sendMessage', {
-        chat_id: message.chat.id,
-        text: 'Вы входите в приложение Talkreal. Подтвердите вход, только если вы сами его начали.',
-        reply_markup: { inline_keyboard: [[{ text: '✅ Войти в Talkreal', callback_data: `ok:${startParam}` }]] },
-      })
-    } else {
-      await call('sendMessage', {
-        chat_id: message.chat.id,
-        text: 'Чтобы войти, откройте приложение Talkreal и нажмите «Войти через Telegram».',
-      })
-    }
-    return
-  }
+/** Sends a bot message in the background, so a slow reply never delays the login itself. */
+function reply(chatId: number, text: string): void {
+  timed('lastReply', () => call('sendMessage', { chat_id: chatId, text })).catch((err) => {
+    timings.lastError = err instanceof Error ? err.message : String(err)
+    console.error('Telegram reply failed:', timings.lastError)
+  })
+}
 
-  const query = update.callback_query
-  if (query?.data?.startsWith('ok:')) {
-    const login = findValid(query.data.slice(3))
-    if (login) {
-      login.confirmed = { telegramId: String(query.from.id), name: query.from.first_name ?? null }
-    }
-    await call('answerCallbackQuery', { callback_query_id: query.id })
-    if (query.message) {
-      await call('editMessageText', {
-        chat_id: query.message.chat.id,
-        message_id: query.message.message_id,
-        text: login
-          ? 'Готово! Вернитесь в приложение Talkreal.'
-          : 'Ссылка устарела. Начните вход в приложении заново.',
-      })
-    }
+function handle(update: Update): void {
+  const message = update.message
+  if (!message?.text?.startsWith('/start')) return
+
+  const startParam = message.text.split(' ')[1]
+  const login = startParam ? findValid(startParam) : null
+  if (login && message.from) {
+    // Pressing Start is the confirmation: the app, which is already waiting, logs in at once.
+    login.confirmed = { telegramId: String(message.from.id), name: message.from.first_name ?? null }
+    reply(message.chat.id, '✅ Готово, вы вошли! Вернитесь в приложение Talkreal.')
+  } else {
+    reply(message.chat.id, 'Чтобы войти, откройте приложение Talkreal и нажмите «Войти через Telegram».')
   }
 }
 
@@ -141,15 +141,16 @@ async function listen(): Promise<void> {
     try {
       const updates = await call<Update[]>(
         'getUpdates',
-        { offset, timeout: 50, allowed_updates: ['message', 'callback_query'] },
+        { offset, timeout: 50, allowed_updates: ['message'] },
         65_000,
       )
       for (const update of updates) {
         offset = update.update_id + 1
-        await handle(update).catch((err) => console.error('Telegram update failed:', err))
+        handle(update)
       }
     } catch (err) {
-      console.error('Telegram polling error:', err instanceof Error ? err.message : err)
+      timings.lastError = err instanceof Error ? err.message : String(err)
+      console.error('Telegram polling error:', timings.lastError)
       await new Promise((r) => setTimeout(r, 5000))
     }
   }
@@ -164,7 +165,7 @@ export async function startTelegramBot(): Promise<void> {
   state = 'connecting'
   for (;;) {
     try {
-      const me = await call<{ username: string }>('getMe')
+      const me = await timed('firstCall', () => call<{ username: string }>('getMe'))
       await call('deleteWebhook')
       botUsername = me.username
       state = 'on'
@@ -177,4 +178,7 @@ export async function startTelegramBot(): Promise<void> {
     }
   }
   void listen()
+  setInterval(() => {
+    timed('lastPing', () => call('getMe')).catch(() => {})
+  }, KEEP_WARM_EVERY_MS)
 }

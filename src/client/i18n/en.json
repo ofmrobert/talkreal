@@ -102,7 +102,7 @@
       "server_error": "Something went wrong. Try again."
     },
     "telegram": "Log in with Telegram",
-    "telegramWaiting": "Open the bot in Telegram, press Start and confirm the login. Then come back here.",
+    "telegramWaiting": "Press Start in Telegram and come back here. You'll be logged in automatically.",
     "telegramOpen": "Open Telegram",
     "telegramCancel": "Cancel"
   },

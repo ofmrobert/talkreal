@@ -3,7 +3,7 @@ import { issueCode, verifyCode } from '../auth/codes'
 import { sendLoginCode } from '../auth/email'
 import { endSession, startSession } from '../auth/sessions'
 import { env } from '../env'
-import { createLogin, pollLogin, telegramAvailable, telegramState } from '../auth/telegram'
+import { createLogin, pollLogin, telegramAvailable, telegramState, telegramTimings } from '../auth/telegram'
 import {
   createUserWithEmail,
   createUserWithTelegram,
@@ -59,7 +59,7 @@ authRoutes.post('/verify', async (c) => {
 })
 
 /** Which login methods the app should offer right now. */
-authRoutes.get('/providers', (c) => c.json({ email: true, telegram: telegramAvailable(), telegramState: telegramState() }))
+authRoutes.get('/providers', (c) => c.json({ email: true, telegram: telegramAvailable(), telegramState: telegramState(), telegramTimings: telegramTimings() }))
 
 /** Telegram step 1: get a link that opens the bot. */
 authRoutes.post('/telegram/start', (c) => {
