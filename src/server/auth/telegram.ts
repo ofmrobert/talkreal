@@ -149,9 +149,11 @@ async function listen(): Promise<void> {
         handle(update)
       }
     } catch (err) {
-      timings.lastError = err instanceof Error ? err.message : String(err)
-      console.error('Telegram polling error:', timings.lastError)
-      await new Promise((r) => setTimeout(r, 5000))
+      const text = err instanceof Error ? err.message : String(err)
+      timings.lastError = new Date().toISOString() + ' ' + text
+      console.error('Telegram polling error:', text)
+      // 'Conflict' happens for a few seconds during an update, while the old copy of the server shuts down.
+      await new Promise((r) => setTimeout(r, text.includes('Conflict') ? 1000 : 5000))
     }
   }
 }
@@ -175,8 +177,8 @@ export async function startTelegramBot(): Promise<void> {
       state = 'unreachable'
       const cause = err instanceof Error && err.cause instanceof Error ? ' / ' + err.cause.message : ''
       timings.lastError = (err instanceof Error ? err.message : String(err)) + cause
-      console.error('Telegram login: cannot reach Telegram, retrying in 60s:', err instanceof Error ? err.message : err)
-      await new Promise((r) => setTimeout(r, 60_000))
+      console.error('Telegram login: cannot reach Telegram, retrying in 10s:', err instanceof Error ? err.message : err)
+      await new Promise((r) => setTimeout(r, 10_000))
     }
   }
   void listen()
