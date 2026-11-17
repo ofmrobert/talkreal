@@ -173,6 +173,8 @@ export async function startTelegramBot(): Promise<void> {
       break
     } catch (err) {
       state = 'unreachable'
+      const cause = err instanceof Error && err.cause instanceof Error ? ' / ' + err.cause.message : ''
+      timings.lastError = (err instanceof Error ? err.message : String(err)) + cause
       console.error('Telegram login: cannot reach Telegram, retrying in 60s:', err instanceof Error ? err.message : err)
       await new Promise((r) => setTimeout(r, 60_000))
     }
