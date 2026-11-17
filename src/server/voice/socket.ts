@@ -7,7 +7,8 @@
  * counts every second so a call can never run past the student's allowance.
  *
  * Messages with the phone:
- *   phone → server   {type:"start", teacher, tz}   then raw microphone audio (16-bit PCM, 16 kHz)
+ *   phone → server   {type:"start", teacher, tz}   then raw microphone audio (16-bit PCM, 16 kHz),
+ *                    and {type:"stop"} to hang up
  *   server → phone   {type:"ready"|"transcript"|"interrupted"|"turnComplete"|"tick"|"end"}
  *                    and raw teacher audio (16-bit PCM)
  */
@@ -127,10 +128,11 @@ function runCall(socket: WebSocket, userId: string) {
       session?.sendAudio(data as Buffer)
       return
     }
-    if (started) return
     try {
       const message = JSON.parse(data.toString())
-      if (message.type === 'start') {
+      // An explicit "stop" ends the call at once; waiting for the connection to close can take seconds.
+      if (message.type === 'stop') return void finish('hangup')
+      if (message.type === 'start' && !started) {
         started = true
         start(message).catch((err) => {
           console.error('Voice call failed:', err)

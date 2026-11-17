@@ -147,6 +147,8 @@ export class VoiceCall {
     this.stopPlayback()
     this.stream?.getTracks().forEach((track) => track.stop())
     if (this.socket) {
+      // Tell the server right away, so the minute counter stops the moment the student hangs up.
+      if (this.socket.readyState === WebSocket.OPEN) this.socket.send(JSON.stringify({ type: 'stop' }))
       this.socket.onclose = null
       this.socket.onerror = null
       this.socket.close()
