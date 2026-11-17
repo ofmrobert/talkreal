@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { serve } from '@hono/node-server'
 import { serveStatic } from '@hono/node-server/serve-static'
-import './db/client'
+import { dbStatus } from './db/client'
 import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
 import { authRoutes } from './routes/auth'
@@ -24,7 +24,21 @@ app.onError((err, c) => {
   return c.json({ error: 'server_error' }, 500)
 })
 
-app.get('/api/health', (c) => c.json({ ok: true, time: new Date().toISOString() }))
+/** Why the real database was not used, as a category only (the full message may contain the server address). */
+function databaseProblem(): string | null {
+  const message = dbStatus.error?.toLowerCase()
+  if (!message) return env.databaseUrl ? null : 'not_set'
+  if (/certificate|ssl|tls/.test(message)) return 'ssl'
+  if (/password|authentication|role/.test(message)) return 'login'
+  if (/does not exist|permission denied/.test(message)) return 'database_or_rights'
+  if (/timeout|enotfound|econnrefused|ehostunreach|enetunreach|eai_again/.test(message)) return 'unreachable'
+  if (/invalid|url|parse/.test(message)) return 'bad_address'
+  return 'other'
+}
+
+app.get('/api/health', (c) =>
+  c.json({ ok: true, time: new Date().toISOString(), database: dbStatus.kind, databaseProblem: databaseProblem() }),
+)
 app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)
 app.route('/api/placement', placementRoutes)
