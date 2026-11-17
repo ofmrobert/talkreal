@@ -1,0 +1,12 @@
+{
+  // The AI relay. Deploy with: npx wrangler deploy   (run inside the relay folder)
+  "name": "talkreal-relay",
+  "main": "worker.js",
+  "compatibility_date": "2026-06-01",
+  "workers_dev": true,
+  "vars": {
+    // The public IP address of the Talkreal server at Timeweb. Only this address may use the relay.
+    // If the server is ever recreated and gets a new address, change it here and deploy again.
+    "ALLOWED_IPS": "5.42.111.75"
+  }
+}

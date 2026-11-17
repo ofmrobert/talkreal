@@ -44,7 +44,8 @@ diagRoutes.get('/voice', async (c) => {
   if (!env.ai.geminiKey) return c.json({ ok: false, error: 'GEMINI_API_KEY is not set' })
   const started = Date.now()
   const modelList = await probe(
-    `https://generativelanguage.googleapis.com/v1beta/models?pageSize=1&key=${env.ai.geminiKey}`,
+    // Goes the same way as voice calls: directly, or through the relay if one is configured.
+    `${env.ai.geminiWsBase.replace(/^ws/, 'http')}/v1beta/models?pageSize=1&key=${env.ai.geminiKey}`,
   )
   try {
     let audioBytes = 0
