@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { dbStatus } from '../db/client'
 import { env } from '../env'
 import { emailConfigured } from '../auth/email'
 import { geminiProvider } from '../voice/gemini'
@@ -77,7 +78,9 @@ diagRoutes.get('/voice', async (c) => {
 diagRoutes.get('/config', (c) => {
   if (!env.showCodes) return c.json({ error: 'not_found' }, 404)
   return c.json({
-    database: env.databaseUrl ? 'postgresql' : 'embedded (temporary)',
+    database: dbStatus.kind === 'postgresql' ? 'postgresql (permanent)' : 'embedded (temporary)',
+    databaseUrlSet: Boolean(env.databaseUrl),
+    databaseError: dbStatus.error ?? null,
     email: emailConfigured ? (env.email.resendKey ? 'api' : 'smtp') : 'not configured',
     emailFrom: env.email.from || null,
     voice: env.ai.geminiKey ? 'configured' : 'not configured',

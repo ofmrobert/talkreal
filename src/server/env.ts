@@ -17,6 +17,7 @@ export const env = {
 
   /** PostgreSQL connection string. When empty, an embedded database in ./.data is used instead. */
   databaseUrl: process.env.DATABASE_URL ?? '',
+  databaseSsl: process.env.DATABASE_SSL ?? '',
 
   authSecret: authSecret(),
 
