@@ -126,12 +126,16 @@
       "too_many": "Too many requests. Try again later.",
       "email_failed": "Couldn't send the email. Try again later.",
       "network": "No internet connection.",
-      "server_error": "Something went wrong. Try again."
+      "server_error": "Something went wrong. Try again.",
+      "consent_required": "To create an account, please tick the privacy policy box.",
+      "telegram_unavailable": "Telegram is not available right now. Please try later."
     },
     "telegram": "Log in with Telegram",
     "telegramWaiting": "Press Start in Telegram and come back here. You'll be logged in automatically.",
     "telegramOpen": "Open Telegram",
-    "telegramCancel": "Cancel"
+    "telegramCancel": "Cancel",
+    "consent": "I agree to the processing of my personal data and accept the",
+    "consentLink": "privacy policy"
   },
   "placement": {
     "title": "What's your level?",
@@ -234,6 +238,93 @@
       "provider_closed": "The connection dropped. Try calling again.",
       "mic_denied": "No access to the microphone. Allow it in settings and try again.",
       "connection": "No connection. Check your internet and try again."
+    }
+  },
+  "privacy": {
+    "back": "Back",
+    "link": "Privacy policy"
+  },
+  "freeze": {
+    "label": "Streak freezes",
+    "used": "A freeze saved your streak",
+    "usedHint": "You missed yesterday, but the streak goes on.",
+    "earned": "New streak freeze",
+    "earnedHint": "It keeps your streak if you miss one day.",
+    "frozenTitle": "Your streak is frozen",
+    "frozenText": "You missed yesterday. Do a lesson today to keep the streak."
+  },
+  "reminders": {
+    "title": "Reminders",
+    "toggle": "Remind me to practise",
+    "time": "At what time",
+    "needChannel": "Choose where reminders go: Telegram or a notification on this phone.",
+    "telegramConnect": "Connect Telegram",
+    "telegramOpen": "Open Telegram and press Start",
+    "telegramLinked": "Telegram connected",
+    "pushEnable": "Turn on notifications",
+    "pushOn": "Notifications are on for this phone",
+    "pushDenied": "Notifications are blocked. Allow them for Talkreal in your phone settings.",
+    "pushUnsupported": "Notifications are not available on this device. Connect Telegram instead.",
+    "pushNeedsInstall": "To get notifications on iPhone, add Talkreal to your Home Screen and open it from there.",
+    "test": "Send a test reminder",
+    "testSent": "Sent. It will arrive in a few seconds.",
+    "testNone": "Could not deliver it. Connect Telegram or turn on notifications.",
+    "testWait": "Please wait a little before trying again."
+  },
+  "achievements": {
+    "title": "Achievements",
+    "newTitle": "New achievement",
+    "first_lesson": {
+      "name": "First step",
+      "text": "Complete your first lesson."
+    },
+    "perfect": {
+      "name": "Flawless",
+      "text": "Finish a lesson without a single mistake."
+    },
+    "streak_3": {
+      "name": "3 days in a row",
+      "text": "Practise three days in a row."
+    },
+    "streak_7": {
+      "name": "One week",
+      "text": "Practise seven days in a row."
+    },
+    "streak_30": {
+      "name": "One month",
+      "text": "Practise thirty days in a row."
+    },
+    "lessons_10": {
+      "name": "10 lessons",
+      "text": "Complete ten different lessons."
+    },
+    "lessons_25": {
+      "name": "25 lessons",
+      "text": "Complete twenty-five different lessons."
+    },
+    "lessons_50": {
+      "name": "50 lessons",
+      "text": "Complete fifty different lessons."
+    },
+    "xp_100": {
+      "name": "100 XP",
+      "text": "Earn 100 XP."
+    },
+    "xp_500": {
+      "name": "500 XP",
+      "text": "Earn 500 XP."
+    },
+    "xp_1000": {
+      "name": "1000 XP",
+      "text": "Earn 1000 XP."
+    },
+    "level_done": {
+      "name": "Level complete",
+      "text": "Finish every lesson of your level."
+    },
+    "first_call": {
+      "name": "First conversation",
+      "text": "Talk to an AI teacher for at least half a minute."
     }
   }
 }

@@ -50,10 +50,15 @@ authRoutes.post('/verify', async (c) => {
   const code = typeof body.code === 'string' ? body.code.trim() : ''
   if (!email || !/^\d{6}$/.test(code)) return c.json({ error: 'wrong' }, 400)
 
+  const existing = await findUserIdByEmail(email)
+  // A new account needs the student's agreement to the privacy policy (152-FZ).
+  // Checked before the code, so a missing tick does not use the code up.
+  if (!existing && body.consent !== true) return c.json({ error: 'consent_required' }, 400)
+
   const result = await verifyCode(email, code)
   if (result !== 'ok') return c.json({ error: result }, 400)
 
-  const userId = (await findUserIdByEmail(email)) ?? (await createUserWithEmail(email, readLang(body.lang)))
+  const userId = existing ?? (await createUserWithEmail(email, readLang(body.lang)))
   await startSession(c, userId)
   return c.json({ ok: true })
 })
@@ -62,7 +67,9 @@ authRoutes.post('/verify', async (c) => {
 authRoutes.get('/providers', (c) => c.json({ email: true, telegram: telegramAvailable(), telegramState: telegramState(), telegramTimings: telegramTimings() }))
 
 /** Telegram step 1: get a link that opens the bot. */
-authRoutes.post('/telegram/start', (c) => {
+authRoutes.post('/telegram/start', async (c) => {
+  const body = await c.req.json().catch(() => ({}))
+  if (body.consent !== true) return c.json({ error: 'consent_required' }, 400)
   const login = createLogin()
   return login ? c.json(login) : c.json({ error: 'telegram_unavailable' }, 503)
 })

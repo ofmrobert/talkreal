@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState, type FormEvent } from 'react'
-import { Navigate } from 'react-router'
+import { Link, Navigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthContext'
 import Chai from '../components/Chai'
 import TelegramLogin from '../components/TelegramLogin'
 import Button from '../components/ui/Button'
 import { api, ApiError } from '../lib/api'
+import { load, save } from '../lib/storage'
 
 const inputClass =
   'min-h-14 w-full rounded-2xl border-2 border-ink/10 bg-white px-4 text-lg font-bold text-ink outline-none select-text focus:border-coral'
@@ -22,6 +23,8 @@ export default function Login() {
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [resendIn, setResendIn] = useState(0)
+  // Agreement to the privacy policy. Remembered on this phone so returning students tick it once.
+  const [consent, setConsent] = useState(() => load('consent') === '1')
 
   useEffect(() => {
     if (resendIn <= 0) return
@@ -66,7 +69,7 @@ export default function Login() {
     setBusy(true)
     setError(null)
     try {
-      await api('/auth/verify', { email, code: value, lang: i18n.language })
+      await api('/auth/verify', { email, code: value, lang: i18n.language, consent })
       await refresh()
     } catch (err) {
       setCode('')
@@ -115,7 +118,24 @@ export default function Login() {
               className={inputClass}
               required
             />
-            <TelegramLogin onError={onTelegramError} />
+            <label className="flex items-start gap-3 rounded-2xl bg-white/70 p-3">
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => {
+                  setConsent(e.target.checked)
+                  save('consent', e.target.checked ? '1' : '0')
+                }}
+                className="mt-0.5 h-6 w-6 shrink-0 accent-coral"
+              />
+              <span className="text-sm font-semibold leading-snug text-ink/70">
+                {t('login.consent')}{' '}
+                <Link to="/privacy" className="font-extrabold text-coral-dark underline">
+                  {t('login.consentLink')}
+                </Link>
+              </span>
+            </label>
+            <TelegramLogin onError={onTelegramError} consent={consent} />
           </>
         ) : (
           <>
@@ -170,7 +190,7 @@ export default function Login() {
               </Button>
             </>
           )}
-          <Button type="submit" disabled={busy || (step === 'code' && code.length < 6)}>
+          <Button type="submit" disabled={busy || (step === 'email' && !consent) || (step === 'code' && code.length < 6)}>
             {step === 'email' ? t('login.getCode') : t('login.enter')}
           </Button>
         </div>

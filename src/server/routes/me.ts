@@ -4,7 +4,7 @@ import { requireUser, type AuthEnv } from '../auth/sessions'
 import { db } from '../db/client'
 import { users } from '../db/schema'
 import { getPii } from '../pii'
-import { currentStreak, localDay, safeTimezone } from '../progress/streak'
+import { localDay, safeTimezone, streakNow } from '../progress/streak'
 
 export const meRoutes = new Hono<AuthEnv>()
 
@@ -22,7 +22,8 @@ meRoutes.get('/', requireUser, async (c) => {
     level: user.level,
     plan: user.plan,
     xp: user.xp,
-    currentStreak: currentStreak(user.currentStreak, user.lastActiveDate, localDay(safeTimezone(user.timezone))),
+    currentStreak: streakNow(user.currentStreak, user.lastActiveDate, localDay(safeTimezone(user.timezone)), user.streakFreezes).streak,
+    freezes: user.streakFreezes,
     longestStreak: user.longestStreak,
   })
 })

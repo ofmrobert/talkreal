@@ -11,6 +11,7 @@
 import { createHash, randomBytes } from 'node:crypto'
 import { Agent, fetch } from 'undici'
 import { env } from '../env'
+import { linkTelegram } from '../pii'
 
 const LOGIN_TTL_MS = 10 * 60 * 1000
 const MAX_PENDING = 5000
@@ -19,6 +20,8 @@ interface PendingLogin {
   pollHash: string
   expiresAt: number
   confirmed?: { telegramId: string; name: string | null }
+  /** Set when this is not a login but an existing student connecting Telegram for reminders. */
+  linkUserId?: string
 }
 
 /** Waiting logins live in memory only: they are short-lived and hold no data worth keeping. */
@@ -95,13 +98,47 @@ export function createLogin(): { url: string; pollToken: string } | null {
   return { url: `https://t.me/${botUsername}?start=${startParam}`, pollToken }
 }
 
+/** A link that connects Telegram to an account that already exists (for reminders). */
+export function createTelegramLink(userId: string): string | null {
+  if (!botUsername) return null
+  for (const [key, login] of pending) if (login.expiresAt < Date.now()) pending.delete(key)
+  if (pending.size >= MAX_PENDING) return null
+
+  const startParam = randomBytes(24).toString('base64url')
+  pending.set(startParam, { pollHash: '', expiresAt: Date.now() + LOGIN_TTL_MS, linkUserId: userId })
+  return `https://t.me/${botUsername}?start=${startParam}`
+}
+
+/**
+ * Sends a message from the bot to one student. Resolves to false if it could not be delivered
+ * (for example the student blocked the bot); it never throws.
+ */
+export async function sendTelegramMessage(telegramId: string, text: string, button?: { text: string; url: string }): Promise<boolean> {
+  if (!botUsername) return false
+  try {
+    await call(
+      'sendMessage',
+      {
+        chat_id: telegramId,
+        text,
+        ...(button ? { reply_markup: { inline_keyboard: [[{ text: button.text, url: button.url }]] } } : {}),
+      },
+      8000,
+    )
+    return true
+  } catch (err) {
+    console.error('Telegram message not delivered:', err instanceof Error ? err.message : err)
+    return false
+  }
+}
+
 export type PollResult = 'pending' | 'expired' | { telegramId: string; name: string | null }
 
 /** Checks whether the student has confirmed in Telegram. A confirmed login can be collected once. */
 export function pollLogin(pollToken: string): PollResult {
   const pollHash = hash(pollToken)
   for (const [startParam, login] of pending) {
-    if (login.pollHash !== pollHash) continue
+    if (login.linkUserId || login.pollHash !== pollHash) continue
     if (login.expiresAt < Date.now()) {
       pending.delete(startParam)
       return 'expired'
@@ -137,7 +174,20 @@ function handle(update: Update): void {
 
   const startParam = message.text.split(' ')[1]
   const login = startParam ? findValid(startParam) : null
-  if (login && message.from) {
+  if (login?.linkUserId && message.from && startParam) {
+    pending.delete(startParam)
+    const chatId = message.chat.id
+    linkTelegram(login.linkUserId, String(message.from.id))
+      .then((linked) =>
+        reply(
+          chatId,
+          linked
+            ? '🔔 Готово! Теперь я буду напоминать вам о занятиях. Отключить напоминания можно в профиле Talkreal.'
+            : 'Этот Telegram уже привязан к другому аккаунту Talkreal. Войдите в приложение через Telegram, чтобы получать напоминания здесь.',
+        ),
+      )
+      .catch((err) => console.error('Could not link Telegram:', err))
+  } else if (login && message.from) {
     // Pressing Start is the confirmation: the app, which is already waiting, logs in at once.
     login.confirmed = { telegramId: String(message.from.id), name: message.from.first_name ?? null }
     reply(message.chat.id, '✅ Готово, вы вошли! Вернитесь в приложение Talkreal.')

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { achievementIcon } from '../../../shared/achievements'
 import Chai from '../Chai'
 import { FlameIcon } from '../icons'
 import Button from '../ui/Button'
@@ -12,6 +13,9 @@ export interface LessonResult {
   firstTime: boolean
   todayXp: number
   xpGoal: number
+  newAchievements?: string[]
+  freezeUsed?: boolean
+  freezeEarned?: boolean
 }
 
 interface Props {
@@ -77,6 +81,43 @@ export default function LessonSummary({ result, seconds, onContinue }: Props) {
             </div>
           </div>
         )}
+
+        {result.freezeUsed && (
+          <div className="flex w-full items-center gap-3 rounded-2xl bg-[#DDF1FF] p-4 text-left">
+            <span className="text-3xl" aria-hidden="true">
+              🧊
+            </span>
+            <div>
+              <div className="text-lg font-extrabold">{t('freeze.used')}</div>
+              <div className="text-sm font-semibold text-ink/65">{t('freeze.usedHint')}</div>
+            </div>
+          </div>
+        )}
+
+        {result.freezeEarned && (
+          <div className="flex w-full items-center gap-3 rounded-2xl bg-[#DDF1FF] p-4 text-left">
+            <span className="text-3xl" aria-hidden="true">
+              🧊
+            </span>
+            <div>
+              <div className="text-lg font-extrabold">{t('freeze.earned')}</div>
+              <div className="text-sm font-semibold text-ink/65">{t('freeze.earnedHint')}</div>
+            </div>
+          </div>
+        )}
+
+        {(result.newAchievements ?? []).map((key) => (
+          <div key={key} className="bubble-in flex w-full items-center gap-3 rounded-2xl bg-sun/30 p-4 text-left">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-3xl" aria-hidden="true">
+              {achievementIcon(key)}
+            </span>
+            <div>
+              <div className="text-xs font-extrabold uppercase tracking-wide text-ink/55">{t('achievements.newTitle')}</div>
+              <div className="text-lg font-extrabold leading-tight">{t(`achievements.${key}.name`)}</div>
+              <div className="text-sm font-semibold text-ink/65">{t(`achievements.${key}.text`)}</div>
+            </div>
+          </div>
+        ))}
 
         <div className="w-full rounded-2xl bg-white p-4 text-left">
           <div className="mb-2 flex items-baseline justify-between">

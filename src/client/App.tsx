@@ -8,6 +8,7 @@ import Lesson from './screens/Lesson'
 import Login from './screens/Login'
 import Onboarding from './screens/Onboarding'
 import Placement from './screens/Placement'
+import Privacy from './screens/Privacy'
 import Profile from './screens/Profile'
 import Talk from './screens/Talk'
 import { load } from './lib/storage'
@@ -39,6 +40,7 @@ export default function App() {
         <Routes>
           <Route path="/welcome" element={<Onboarding />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route element={<RequireUser />}>
             <Route path="/placement" element={<Placement />} />
             <Route element={<RequireLevel />}>

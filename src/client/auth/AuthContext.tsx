@@ -11,6 +11,7 @@ export interface User {
   xp: number
   currentStreak: number
   longestStreak: number
+  freezes?: number
 }
 
 interface AuthState {

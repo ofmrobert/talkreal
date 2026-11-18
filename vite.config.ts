@@ -37,7 +37,9 @@ export default defineConfig({
         // Offline shell: the app opens without a connection; API calls never come from cache.
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api\//],
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        // Adds the notification handler (public/push-sw.js) to the generated service worker.
+        importScripts: ['/push-sw.js'],
+        globPatterns:['**/*.{js,css,html,svg,png,woff2}'],
       },
     }),
   ],

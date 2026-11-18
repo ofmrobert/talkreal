@@ -22,6 +22,8 @@ interface Course {
   level: string
   xp: number
   streak: number
+  streakFrozen?: boolean
+  freezes?: number
   today: { xp: number; xpGoal: number; lessonsDone: number; lessonsLimit: number | null }
   week: { day: string; xp: number }[]
   lessons: CourseLesson[]
@@ -109,12 +111,30 @@ export default function Home() {
             <FlameIcon width={18} height={18} className={course.streak > 0 ? 'text-coral' : 'text-ink/30'} />
             {course.streak}
           </span>
+          {(course.freezes ?? 0) > 0 && (
+            <span className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-extrabold" aria-label={t('freeze.label')}>
+              <span aria-hidden="true">🧊</span>
+              {course.freezes}
+            </span>
+          )}
           <span className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-extrabold" aria-label={t('home.xp')}>
             <BoltIcon width={18} height={18} className="text-sun" />
             {course.xp}
           </span>
         </div>
       </header>
+
+      {course.streakFrozen && (
+        <section className="flex items-center gap-3 rounded-3xl bg-[#DDF1FF] p-4" role="status">
+          <span className="text-3xl" aria-hidden="true">
+            🧊
+          </span>
+          <div>
+            <h2 className="text-base font-extrabold">{t('freeze.frozenTitle')}</h2>
+            <p className="text-sm font-semibold text-ink/65">{t('freeze.frozenText')}</p>
+          </div>
+        </section>
+      )}
 
       <MascotSays streak={course.streak} />
 

@@ -19,10 +19,13 @@ export async function findUserIdByEmail(email: string): Promise<string | null> {
   return rows[0]?.userId ?? null
 }
 
-/** Creates the learner record and its personal-data record together. */
+/**
+ * Creates the learner record and its personal-data record together.
+ * Accounts are only created after the student ticked the consent box, so the moment is recorded.
+ */
 export async function createUserWithEmail(email: string, locale: string): Promise<string> {
   return db.transaction(async (tx) => {
-    const [user] = await tx.insert(users).values({ locale }).returning({ id: users.id })
+    const [user] = await tx.insert(users).values({ locale, consentAt: new Date() }).returning({ id: users.id })
     await tx.insert(userPii).values({ userId: user.id, email: normalizeEmail(email) })
     return user.id
   })
@@ -43,10 +46,27 @@ export async function createUserWithTelegram(
   locale: string,
 ): Promise<string> {
   return db.transaction(async (tx) => {
-    const [user] = await tx.insert(users).values({ locale }).returning({ id: users.id })
+    const [user] = await tx.insert(users).values({ locale, consentAt: new Date() }).returning({ id: users.id })
     await tx.insert(userPii).values({ userId: user.id, telegramId, displayName })
     return user.id
   })
+}
+
+/** Where the bot can write to this student, if they have connected Telegram. */
+export async function getTelegramId(userId: string): Promise<string | null> {
+  const rows = await db.select({ telegramId: userPii.telegramId }).from(userPii).where(eq(userPii.userId, userId)).limit(1)
+  return rows[0]?.telegramId ?? null
+}
+
+/** Connects a Telegram account to an existing student. False if that Telegram belongs to someone else. */
+export async function linkTelegram(userId: string, telegramId: string): Promise<boolean> {
+  const owner = await findUserIdByTelegramId(telegramId)
+  if (owner) return owner === userId
+  await db
+    .insert(userPii)
+    .values({ userId, telegramId })
+    .onConflictDoUpdate({ target: userPii.userId, set: { telegramId } })
+  return true
 }
 
 export async function getPii(userId: string) {

@@ -6,7 +6,8 @@ import { DAILY_XP_GOAL, limitsFor } from '../billing/plans'
 import { lessonById, lessonsFor } from '../content/lessons'
 import { db } from '../db/client'
 import { dailyUsage, lessonProgress, users } from '../db/schema'
-import { currentStreak, dayBefore, localDay, safeTimezone, streakAfterActivity } from '../progress/streak'
+import { awardAchievements, listAchievements } from '../progress/achievements'
+import { dayBefore, localDay, safeTimezone, streakAfterActivity, streakNow } from '../progress/streak'
 
 const XP_BASE = 10
 const XP_ACCURACY_BONUS = 10
@@ -58,12 +59,16 @@ courseRoutes.get('/course', async (c) => {
     .from(dailyUsage)
     .where(and(eq(dailyUsage.userId, user.id), gte(dailyUsage.day, days[0])))
   const xpByDay = new Map(recent.map((r) => [r.day, r.xp]))
+  const streak = streakNow(user.currentStreak, user.lastActiveDate, today, user.streakFreezes)
 
   return c.json({
     week: days.map((day) => ({ day, xp: xpByDay.get(day) ?? 0 })),
     level: user.level,
     xp: user.xp,
-    streak: currentStreak(user.currentStreak, user.lastActiveDate, today),
+    streak: streak.streak,
+    /** True when yesterday was missed and a freeze is holding the streak: a lesson today saves it. */
+    streakFrozen: streak.frozen,
+    freezes: user.streakFreezes,
     longestStreak: user.longestStreak,
     today: {
       xp: usage.xp,
@@ -81,6 +86,13 @@ courseRoutes.get('/course', async (c) => {
       bestAccuracy: best.get(l.id) ?? null,
     })),
   })
+})
+
+/** The student's badges. Checking here also catches badges earned outside lessons (voice calls). */
+courseRoutes.get('/achievements', async (c) => {
+  const userId = c.get('userId')
+  const fresh = await awardAchievements(userId)
+  return c.json({ earned: await listAchievements(userId), fresh })
 })
 
 /** One full lesson. Refused if it is still locked or today's free lessons are used up. */
@@ -124,7 +136,7 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
     .limit(1)
 
   const xpEarned = existing ? XP_REPLAY : XP_BASE + Math.round((XP_ACCURACY_BONUS * accuracy) / 100)
-  const streak = streakAfterActivity(user.currentStreak, user.lastActiveDate, today)
+  const streak = streakAfterActivity(user.currentStreak, user.lastActiveDate, today, user.streakFreezes)
 
   await db.transaction(async (tx) => {
     if (existing) {
@@ -155,12 +167,22 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
         currentStreak: streak.streak,
         longestStreak: Math.max(user.longestStreak, streak.streak),
         lastActiveDate: today,
+        streakFreezes: streak.freezes,
         timezone,
       })
       .where(eq(users.id, user.id))
   })
 
+  const newAchievements = await awardAchievements(user.id).catch((err) => {
+    console.error('Could not award achievements:', err)
+    return []
+  })
+
   return c.json({
+    newAchievements,
+    freezeUsed: streak.freezeUsed,
+    freezeEarned: streak.freezeEarned,
+    freezes: streak.freezes,
     xpEarned,
     accuracy,
     totalXp: user.xp + xpEarned,

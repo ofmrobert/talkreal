@@ -32,6 +32,9 @@ export const env = {
 
   authSecret: authSecret(),
 
+  /** The public address of the app, used in reminder links. */
+  appUrl: (process.env.APP_URL ?? 'https://talk-real.ru').replace(/\/+$/, ''),
+
   /**
    * Shows the login code on screen instead of relying on email.
    * On by default in local development; in production only if DEV_SHOW_CODES=1.

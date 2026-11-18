@@ -1,0 +1,133 @@
+{
+  "updated": "2026-11-18",
+  "operator": "",
+  "contact": "",
+  "ru": {
+    "title": "Политика конфиденциальности",
+    "intro": "Эта политика объясняет, какие данные собирает приложение Talkreal (talk-real.ru), зачем они нужны и как ими управлять. Создавая аккаунт, вы даёте согласие на обработку персональных данных на этих условиях.",
+    "sections": [
+      {
+        "heading": "Какие данные мы собираем",
+        "items": [
+          "Адрес электронной почты — если вы входите по коду из письма.",
+          "Идентификатор и имя в Telegram — если вы входите через Telegram или подключаете напоминания в Telegram.",
+          "Данные об обучении: уровень английского, пройденные уроки, результаты, очки опыта, серия дней, время разговоров с ИИ-преподавателями.",
+          "Технические данные: язык приложения, часовой пояс, адрес для отправки уведомлений на ваше устройство (если вы их включили)."
+        ]
+      },
+      {
+        "heading": "Зачем они нужны",
+        "items": [
+          "Чтобы вы могли входить в аккаунт и продолжать обучение на любом устройстве.",
+          "Чтобы подбирать уроки под ваш уровень и сохранять прогресс.",
+          "Чтобы присылать напоминания о занятиях, если вы их включили.",
+          "Чтобы учитывать лимиты тарифа, например минуты разговора с ИИ."
+        ]
+      },
+      {
+        "heading": "Голосовые разговоры с ИИ",
+        "items": [
+          "Во время разговора звук с вашего микрофона передаётся сервису искусственного интеллекта (Google Gemini) для распознавания и ответа. Обработка происходит на серверах за пределами России.",
+          "Мы не сохраняем запись вашего голоса и текст разговора. Сохраняется только длительность разговора.",
+          "Не сообщайте в разговоре сведения, которыми не хотите делиться: паспортные данные, пароли, номера карт."
+        ]
+      },
+      {
+        "heading": "Где хранятся данные и кому передаются",
+        "items": [
+          "Аккаунты и прогресс хранятся в базе данных на серверах в России (Москва).",
+          "Письма с кодом входа отправляются через почтовый сервис Resend (США): ему передаётся только ваш адрес почты и текст письма.",
+          "Сообщения в Telegram отправляются через сервис Telegram.",
+          "Мы не продаём данные и не передаём их рекламным сетям."
+        ]
+      },
+      {
+        "heading": "Файлы cookie",
+        "items": [
+          "Мы используем один файл cookie, который хранит вход в аккаунт. Рекламных и аналитических cookie в приложении нет."
+        ]
+      },
+      {
+        "heading": "Сколько хранятся данные",
+        "items": [
+          "Пока существует ваш аккаунт. После удаления аккаунта персональные данные удаляются в течение 30 дней."
+        ]
+      },
+      {
+        "heading": "Ваши права",
+        "items": [
+          "Вы можете запросить копию своих данных, исправить их, отозвать согласие и удалить аккаунт.",
+          "Напоминания можно отключить в профиле в любой момент.",
+          "Для запросов используйте контакты оператора, указанные ниже."
+        ]
+      }
+    ],
+    "operatorLabel": "Оператор персональных данных",
+    "contactLabel": "Контакт для обращений",
+    "updatedLabel": "Дата обновления"
+  },
+  "en": {
+    "title": "Privacy policy",
+    "intro": "This policy explains what data the Talkreal app (talk-real.ru) collects, why it is needed, and how you can control it. By creating an account you agree to the processing of your personal data on these terms.",
+    "sections": [
+      {
+        "heading": "What we collect",
+        "items": [
+          "Your email address, if you log in with an emailed code.",
+          "Your Telegram ID and first name, if you log in with Telegram or connect Telegram reminders.",
+          "Learning data: your English level, completed lessons, results, XP, streak, and time spent talking to AI teachers.",
+          "Technical data: app language, timezone, and the address used to send notifications to your device (if you switched them on)."
+        ]
+      },
+      {
+        "heading": "Why we need it",
+        "items": [
+          "So you can log in and continue learning on any device.",
+          "To pick lessons for your level and save your progress.",
+          "To send practice reminders, if you switched them on.",
+          "To apply plan limits, such as AI conversation minutes."
+        ]
+      },
+      {
+        "heading": "Voice conversations with AI",
+        "items": [
+          "During a conversation, sound from your microphone is sent to an artificial-intelligence service (Google Gemini) to be understood and answered. This processing happens on servers outside Russia.",
+          "We do not keep a recording of your voice or the text of the conversation. Only the length of the conversation is saved.",
+          "Do not say anything you would not want to share: passport details, passwords, card numbers."
+        ]
+      },
+      {
+        "heading": "Where data is stored and who receives it",
+        "items": [
+          "Accounts and progress are stored in a database on servers in Russia (Moscow).",
+          "Login emails are sent through the email service Resend (USA): it receives only your email address and the text of the email.",
+          "Telegram messages are sent through Telegram.",
+          "We do not sell data or pass it to advertising networks."
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "items": [
+          "We use one cookie, which keeps you logged in. The app has no advertising or analytics cookies."
+        ]
+      },
+      {
+        "heading": "How long data is kept",
+        "items": [
+          "For as long as your account exists. After an account is deleted, personal data is removed within 30 days."
+        ]
+      },
+      {
+        "heading": "Your rights",
+        "items": [
+          "You can ask for a copy of your data, correct it, withdraw consent, and delete your account.",
+          "You can switch reminders off in your profile at any time.",
+          "For requests, use the operator's contact details below."
+        ]
+      }
+    ],
+    "operatorLabel": "Personal data operator",
+    "contactLabel": "Contact for requests",
+    "updatedLabel": "Last updated"
+  }
+}

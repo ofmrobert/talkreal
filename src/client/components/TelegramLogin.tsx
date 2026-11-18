@@ -18,7 +18,7 @@ function TelegramIcon() {
  * "Log in with Telegram". Shown only when the server says the bot is reachable.
  * After the student taps it, we show a link to the bot and keep checking for their confirmation.
  */
-export default function TelegramLogin({ onError }: { onError: (code: string) => void }) {
+export default function TelegramLogin({ onError, consent }: { onError: (code: string) => void; consent: boolean }) {
   const { t, i18n } = useTranslation()
   const { refresh } = useAuth()
   const [available, setAvailable] = useState(false)
@@ -79,7 +79,7 @@ export default function TelegramLogin({ onError }: { onError: (code: string) => 
   async function start() {
     setBusy(true)
     try {
-      setLogin(await api<{ url: string; pollToken: string }>('/auth/telegram/start', {}))
+      setLogin(await api<{ url: string; pollToken: string }>('/auth/telegram/start', { consent }))
     } catch {
       onError('server_error')
     } finally {
@@ -108,7 +108,7 @@ export default function TelegramLogin({ onError }: { onError: (code: string) => 
   }
 
   return (
-    <Button type="button" variant="secondary" disabled={busy} onClick={start}>
+    <Button type="button" variant="secondary" disabled={busy || !consent} onClick={start}>
       <span className="text-[#2AABEE]">
         <TelegramIcon />
       </span>

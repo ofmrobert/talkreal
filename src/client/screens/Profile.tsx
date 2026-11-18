@@ -1,7 +1,9 @@
-import { useNavigate } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthContext'
+import Achievements from '../components/Achievements'
 import InstallGuide, { isStandalone } from '../components/InstallGuide'
+import Reminders from '../components/Reminders'
 import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
 
@@ -20,8 +22,7 @@ export default function Profile() {
     { label: t('profile.streak'), value: String(user?.currentStreak ?? 0) },
     { label: t('profile.xp'), value: String(user?.xp ?? 0) },
     { label: t('profile.level'), value: user?.level ?? '—' },
-    // Voice minutes are counted from the voice-conversation step onward.
-    { label: t('profile.minutes'), value: '0' },
+    { label: t('freeze.label'), value: String(user?.freezes ?? 0) },
   ]
 
   return (
@@ -41,6 +42,10 @@ export default function Profile() {
           </Card>
         ))}
       </div>
+
+      <Achievements />
+
+      <Reminders />
 
       <section>
         <h2 className="mb-2 text-sm font-extrabold uppercase tracking-wide text-ink/50">
@@ -74,6 +79,10 @@ export default function Profile() {
       <Button variant="secondary" onClick={logout}>
         {t('profile.logout')}
       </Button>
+
+      <Link to="/privacy" className="pb-2 text-center text-sm font-bold text-ink/50 underline">
+        {t('privacy.link')}
+      </Link>
     </div>
   )
 }

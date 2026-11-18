@@ -9,13 +9,15 @@ import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
+import { reminderRoutes } from './routes/reminders'
+import { startReminders } from './reminders/scheduler'
 import { voiceRoutes } from './routes/voice'
 import { attachVoiceSocket } from './voice/socket'
 
 const CLIENT_DIR = './dist/client'
 
 // These must never be cached by the browser, or installed apps stop receiving updates.
-const NEVER_CACHE = /(?:index\.html|sw\.js|registerSW\.js|manifest\.webmanifest)$/
+const NEVER_CACHE = /(?:index\.html|sw\.js|push-sw\.js|registerSW\.js|manifest\.webmanifest)$/
 
 const app = new Hono()
 
@@ -65,6 +67,7 @@ app.route('/api/me', meRoutes)
 app.route('/api/placement', placementRoutes)
 app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
+app.route('/api/reminders', reminderRoutes)
 app.route('/api', courseRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
 
@@ -91,6 +94,7 @@ app.get(
 )
 
 void startTelegramBot()
+startReminders()
 
 const server = serve({ fetch: app.fetch, port: env.port, hostname: '0.0.0.0' }, () => {
   console.log(`Talkreal server listening on port ${env.port}`)

@@ -1,4 +1,4 @@
-import { date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
 
 const timestamptz = (name: string) => timestamp(name, { withTimezone: true })
 
@@ -15,6 +15,51 @@ export const users = pgTable('users', {
   currentStreak: integer('current_streak').notNull().default(0),
   longestStreak: integer('longest_streak').notNull().default(0),
   lastActiveDate: date('last_active_date'),
+  /** Streak freezes in stock: each one saves the streak across one missed day. */
+  streakFreezes: integer('streak_freezes').notNull().default(1),
+  /** Daily "time to practise" reminders. */
+  remindersEnabled: boolean('reminders_enabled').notNull().default(true),
+  /** Hour of the student's own day (0–23) when the reminder goes out. */
+  reminderHour: integer('reminder_hour').notNull().default(19),
+  /** The last local day a reminder was sent, so nobody gets two in one day. */
+  lastReminderDay: date('last_reminder_day'),
+  /** When the student agreed to the privacy policy. */
+  consentAt: timestamptz('consent_at'),
+})
+
+/** Badges a student has earned. The list of possible badges lives in src/shared/achievements.ts. */
+export const userAchievements = pgTable(
+  'user_achievements',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    key: text('key').notNull(),
+    earnedAt: timestamptz('earned_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.key] })],
+)
+
+/** A phone or browser that agreed to receive notifications. */
+export const pushSubscriptions = pgTable(
+  'push_subscriptions',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    endpoint: text('endpoint').notNull().unique(),
+    p256dh: text('p256dh').notNull(),
+    auth: text('auth').notNull(),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('push_subscriptions_user_idx').on(t.userId)],
+)
+
+/** Values the server generates once and must keep, such as the notification signing keys. */
+export const appSettings = pgTable('app_settings', {
+  key: text('key').primaryKey(),
+  value: text('value').notNull(),
 })
 
 /**
