@@ -52,7 +52,9 @@ async function connect(): Promise<Db> {
       console.log('Database: PostgreSQL')
       return db
     } catch (err) {
-      dbStatus.error = err instanceof Error ? err.message : String(err)
+      // The query wrapper hides the real reason in `cause`; keep both.
+      const cause = err instanceof Error && err.cause instanceof Error ? ` / ${err.cause.message}` : ''
+      dbStatus.error = (err instanceof Error ? err.message : String(err)) + cause
       console.error('Could not use DATABASE_URL, falling back to the embedded database:', dbStatus.error)
     }
   }
