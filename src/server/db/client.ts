@@ -10,12 +10,37 @@ const MIGRATIONS = './drizzle'
 /** Which database is in use, and why the real one was not used (if it wasn't). Shown by the self-check. */
 export const dbStatus: { kind: 'postgresql' | 'embedded'; error?: string } = { kind: 'embedded' }
 
+/**
+ * Some hosting panels store the address with the password's special characters decoded
+ * (`#`, `&`, `;` instead of `%23`, `%26`, `%3B`), which is no longer a valid address.
+ * This re-encodes the name and password. The password may itself contain `@` or `:`,
+ * so the split is at the last `@` and the first `:`.
+ */
+export function safeConnectionString(raw: string): string {
+  const match = raw.match(/^(postgres(?:ql)?:\/\/)(.*)@([^@]*)$/s)
+  if (!match) return raw
+  const [, scheme, credentials, rest] = match
+  const colon = credentials.indexOf(':')
+  const user = colon === -1 ? credentials : credentials.slice(0, colon)
+  const password = colon === -1 ? '' : credentials.slice(colon + 1)
+  const encode = (value: string) => {
+    let plain = value
+    try {
+      plain = decodeURIComponent(value)
+    } catch {
+      // A stray % that is not an escape: the value is already plain text.
+    }
+    return encodeURIComponent(plain)
+  }
+  return `${scheme}${encode(user)}${colon === -1 ? '' : `:${encode(password)}`}@${rest}`
+}
+
 async function connectPostgres(): Promise<Db> {
   const { default: pg } = await import('pg')
   const { drizzle } = await import('drizzle-orm/node-postgres')
   const { migrate } = await import('drizzle-orm/node-postgres/migrator')
   const pool = new pg.Pool({
-    connectionString: env.databaseUrl,
+    connectionString: safeConnectionString(env.databaseUrl),
     connectionTimeoutMillis: 10_000,
     // Some hosts use their own certificate authority. DATABASE_SSL=no-verify encrypts without checking it.
     ssl: env.databaseSsl === 'no-verify' ? { rejectUnauthorized: false } : undefined,

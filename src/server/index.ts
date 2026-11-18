@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { serve } from '@hono/node-server'
 import { serveStatic } from '@hono/node-server/serve-static'
-import { dbStatus } from './db/client'
+import { dbStatus, safeConnectionString } from './db/client'
 import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
 import { authRoutes } from './routes/auth'
@@ -42,7 +42,7 @@ function databaseErrorSafe(): string | null {
   let text = dbStatus.error
   const secrets = new Set<string>()
   try {
-    const url = new URL(env.databaseUrl)
+    const url = new URL(safeConnectionString(env.databaseUrl))
     for (const part of [url.hostname, url.username, url.password, decodeURIComponent(url.password), url.pathname.slice(1)]) {
       if (part.length > 2) secrets.add(part)
     }
