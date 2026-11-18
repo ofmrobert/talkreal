@@ -36,8 +36,29 @@ function databaseProblem(): string | null {
   return 'other'
 }
 
+/** The database error with every address, name and secret from the connection line removed. */
+function databaseErrorSafe(): string | null {
+  if (!dbStatus.error) return null
+  let text = dbStatus.error
+  const secrets = new Set<string>()
+  try {
+    const url = new URL(env.databaseUrl)
+    for (const part of [url.hostname, url.username, url.password, decodeURIComponent(url.password), url.pathname.slice(1)]) {
+      if (part.length > 2) secrets.add(part)
+    }
+  } catch {
+    // The connection line itself is malformed: nothing reliable to pick out of it.
+  }
+  if (env.databaseUrl) secrets.add(env.databaseUrl)
+  for (const secret of [...secrets].sort((a, b) => b.length - a.length)) text = text.split(secret).join('***')
+  return text
+    .replace(/\b\d{1,3}(\.\d{1,3}){3}\b/g, '*.*.*.*')
+    .replace(/[a-z]+:\/\/\S+/gi, '***')
+    .slice(0, 200)
+}
+
 app.get('/api/health', (c) =>
-  c.json({ ok: true, time: new Date().toISOString(), database: dbStatus.kind, databaseProblem: databaseProblem() }),
+  c.json({ ok: true, time: new Date().toISOString(), database: dbStatus.kind, databaseProblem: databaseProblem(), databaseError: databaseErrorSafe() }),
 )
 app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)
