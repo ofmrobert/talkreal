@@ -16,7 +16,18 @@ export const env = {
   port: Number(process.env.PORT ?? 8787),
 
   /** PostgreSQL connection string. When empty, an embedded database in ./.data is used instead. */
-  databaseUrl: process.env.DATABASE_URL ?? '',
+  // Forgiving about what gets pasted: takes the address out of `psql '...'`, quotes or stray spaces.
+  databaseUrl: (process.env.DATABASE_URL ?? '').match(/postgres(?:ql)?:\/\/[^\s'"]+/)?.[0] ?? (process.env.DATABASE_URL ?? '').trim(),
+  /** What the pasted value looks like, without revealing it. Helps explain a wrong value. */
+  databaseUrlShape: ((raw: string) => ({
+    length: raw.length,
+    startsWithScheme: /^postgres(ql)?:\/\//.test(raw),
+    hasSpace: /\s/.test(raw),
+    hasQuote: /['"]/.test(raw),
+    atSigns: (raw.match(/@/g) ?? []).length,
+    hasPercent: raw.includes('%'),
+    hasHash: raw.includes('#'),
+  }))(process.env.DATABASE_URL ?? ''),
   databaseSsl: process.env.DATABASE_SSL ?? '',
 
   authSecret: authSecret(),
