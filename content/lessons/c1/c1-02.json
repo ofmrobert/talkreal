@@ -78,7 +78,7 @@
       "explanation": "Конструкция What… was… ставит главное в конец предложения: упустили не что-нибудь, а расходы на обучение. Overlook — «не заметить, упустить из виду», а не «осмотреть»."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Мне нужно больше времени, а не больше денег.",
       "answer": "What I need is more time, not more money.",
       "accept": [
@@ -88,7 +88,6 @@
         "It's more time that I need, not more money.",
         "It's more time I need, not more money."
       ],
-      "distractors": ["that", "are", "which"],
       "explanation": "What здесь означает «то, что» и не требует после себя that: what I need. Глагол стоит в единственном числе (is), потому что подлежащее — вся часть «what I need»."
     },
     {
@@ -110,6 +109,11 @@
       "options": ["is", "are", "it is", "does"],
       "answer": 0,
       "explanation": "Часть «What the survey shows» — подлежащее в единственном числе, поэтому is. Повторять подлежащее словом it не нужно: в английском предложении оно одно."
+    },
+    {
+      "type": "speak",
+      "text": "It was only after the setback that we changed our strategy.",
+      "translation": "Мы изменили стратегию только после этой неудачи."
     },
     {
       "type": "translate",
@@ -164,6 +168,11 @@
       ],
       "distractors": ["worry", "are", "it", "mostly"],
       "explanation": "What выступает подлежащим в третьем лице единственного числа, поэтому worries и is. «Больше всего» — это most, а mostly значит «в основном»; перед clear plan нужен артикль a."
+    },
+    {
+      "type": "dictation",
+      "audio": "All I did was ask a question.",
+      "translation": "Я всего лишь задал вопрос."
     },
     {
       "type": "choice",

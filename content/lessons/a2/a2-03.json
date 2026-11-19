@@ -67,11 +67,10 @@
       "explanation": "Действие в момент речи — Present Continuous: am + working. Нужны обе части: без am («I working») или без -ing («I am work») предложение неправильное."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Я не понимаю этот вопрос.",
       "answer": "I don't understand this question.",
       "accept": ["I do not understand this question."],
-      "distractors": ["am", "understanding", "not"],
       "explanation": "Understand — глагол состояния, он не употребляется в Continuous, даже когда речь о настоящем моменте. Поэтому I don't understand, а не «I'm not understanding»."
     },
     {
@@ -91,6 +90,11 @@
       "options": ["sleeps", "is sleeping", "sleeping", "sleep"],
       "answer": 1,
       "explanation": "Малыш спит прямо сейчас — это видно из просьбы не шуметь, поэтому is sleeping. Sleeps означало бы привычку: The baby sleeps a lot."
+    },
+    {
+      "type": "speak",
+      "text": "She usually drinks tea in the morning.",
+      "translation": "По утрам она обычно пьёт чай."
     },
     {
       "type": "translate",
@@ -140,6 +144,11 @@
       "accept": ["What are you cooking now?", "What are you cooking at the moment?", "What are you making right now?", "What are you making now?"],
       "distractors": ["do", "cook", "is"],
       "explanation": "Вопрос о действии в данный момент: are выходит вперёд, глагол с -ing. «What do you cook?» спрашивало бы о том, что человек готовит обычно."
+    },
+    {
+      "type": "dictation",
+      "audio": "Do you know this man?",
+      "translation": "Вы знаете этого человека?"
     },
     {
       "type": "choice",

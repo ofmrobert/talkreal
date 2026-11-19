@@ -22,6 +22,10 @@ interface Props {
   result: LessonResult
   seconds: number
   onContinue: () => void
+  /** Replaces the usual "lesson complete" headline when the result is not perfect or great. */
+  title?: string
+  /** A second button above "Continue", e.g. another round of review. */
+  extraAction?: { label: string; onClick: () => void }
 }
 
 const CONFETTI = ['#FF6B4A', '#FFC53D', '#2EC4A0', '#7C5CFF', '#FF6B4A', '#FFC53D', '#2EC4A0', '#7C5CFF', '#FF6B4A', '#FFC53D', '#2EC4A0', '#7C5CFF']
@@ -31,10 +35,10 @@ function formatTime(seconds: number): string {
 }
 
 /** The celebration after a lesson: XP, accuracy, time, streak and the daily goal. */
-export default function LessonSummary({ result, seconds, onContinue }: Props) {
+export default function LessonSummary({ result, seconds, onContinue, title, extraAction }: Props) {
   const { t } = useTranslation()
   const headline =
-    result.accuracy === 100 ? t('summary.perfect') : result.accuracy >= 80 ? t('summary.great') : t('summary.done')
+    result.accuracy === 100 ? t('summary.perfect') : result.accuracy >= 80 ? t('summary.great') : (title ?? t('summary.done'))
 
   const stats = [
     { label: t('summary.xp'), value: `+${result.xpEarned}`, color: 'bg-sun/30' },
@@ -130,7 +134,16 @@ export default function LessonSummary({ result, seconds, onContinue }: Props) {
         </div>
       </div>
 
-      <Button onClick={onContinue}>{t('summary.continue')}</Button>
+      {extraAction ? (
+        <div className="flex flex-col gap-2">
+          <Button onClick={extraAction.onClick}>{extraAction.label}</Button>
+          <Button variant="ghost" onClick={onContinue}>
+            {t('summary.continue')}
+          </Button>
+        </div>
+      ) : (
+        <Button onClick={onContinue}>{t('summary.continue')}</Button>
+      )}
     </div>
   )
 }

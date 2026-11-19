@@ -94,6 +94,11 @@
       "explanation": "Олег — мужчина, поэтому «его» — his. He — это «он», а him — «его» в значении «кого?» (I know him); перед существительным они не стоят."
     },
     {
+      "type": "speak",
+      "text": "This is my husband.",
+      "translation": "Это мой муж."
+    },
+    {
       "type": "gap",
       "sentence": "My sister ___ got two children.",
       "translation": "У моей сестры двое детей.",
@@ -133,11 +138,15 @@
       "explanation": "Have they got a flat? — have перед подлежащим, артикль на месте. В остальных вариантах лишнее do, нужно has для she и пропущен артикль: a wife."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "He hasn't got a sister.",
+      "translation": "У него нет сестры."
+    },
+    {
+      "type": "type",
       "source": "Его жена — врач.",
       "answer": "His wife is a doctor.",
       "accept": ["His wife's a doctor."],
-      "distractors": ["her", "he", "an"],
       "explanation": "Хозяин — мужчина, поэтому his, хотя жена — женщина: ориентируемся на того, чья она. И не забываем is и артикль a перед профессией."
     }
   ]

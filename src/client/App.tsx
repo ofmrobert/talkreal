@@ -9,6 +9,7 @@ import Login from './screens/Login'
 import Onboarding from './screens/Onboarding'
 import Placement from './screens/Placement'
 import Privacy from './screens/Privacy'
+import Review from './screens/Review'
 import Profile from './screens/Profile'
 import Talk from './screens/Talk'
 import { load } from './lib/storage'
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/placement" element={<Placement />} />
             <Route element={<RequireLevel />}>
               <Route path="/lesson/:id" element={<Lesson />} />
+              <Route path="/review" element={<Review />} />
               <Route path="/talk/:teacherId" element={<Call />} />
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />

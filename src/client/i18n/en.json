@@ -199,7 +199,23 @@
       "gap": "Fill in the blank",
       "translate": "Translate into English",
       "listen": "Listen and choose",
-      "match": "Match the pairs"
+      "match": "Match the pairs",
+      "type": "Write the translation",
+      "speak": "Say it aloud",
+      "dictation": "Write what you hear"
+    },
+    "typeHere": "Type in English",
+    "speak": {
+      "tap": "Tap the microphone and say the phrase aloud.",
+      "listening": "Listening… Go ahead.",
+      "again_one": "I didn't catch all of it. {{count}} try left.",
+      "again_other": "I didn't catch all of it. {{count}} tries left.",
+      "blocked": "No access to the microphone. Allow it in your browser settings or skip the exercise.",
+      "failed": "Speech recognition is not available right now. Try again or skip the exercise.",
+      "missed": "Listen to the phrase again and repeat it after the speaker. This exercise will come back at the end.",
+      "start": "Start speaking",
+      "stop": "Stop recording",
+      "skip": "I can't speak right now"
     }
   },
   "summary": {
@@ -215,6 +231,19 @@
     "streak_other": "Streak: {{count}} days",
     "streakHint": "Study every day to keep it growing.",
     "continue": "Continue"
+  },
+  "review": {
+    "cardTitle": "Review",
+    "cardText_one": "{{count}} word or mistake is ready to repeat",
+    "cardText_other": "{{count}} words and mistakes are ready to repeat",
+    "start": "Start",
+    "doneTitle": "Review complete!",
+    "more_one": "Review more ({{count}})",
+    "more_other": "Review more ({{count}})",
+    "emptyTitle": "Nothing to review yet",
+    "emptyText": "Words and mistakes from the lessons you finish will appear here when it is time to recall them.",
+    "exitTitle": "Leave the review?",
+    "exitText": "Your answers in this session will not be saved."
   },
   "call": {
     "intro": "Tap the button and just start talking.",

@@ -95,6 +95,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "I enjoy cooking for my friends.",
+      "translation": "Мне нравится готовить для друзей."
+    },
+    {
       "type": "choice",
       "prompt": "Найдите предложение без ошибки.",
       "options": ["She avoids to drive at night.", "She avoids driving at night.", "She avoids drive at night.", "She avoids of driving at night."],
@@ -102,11 +107,10 @@
       "explanation": "После avoid — только форма с -ing, без to и без предлога: avoid driving. Вариант to drive — прямая калька с русского «избегает водить»."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Он отказался подписывать контракт.",
       "answer": "He refused to sign the contract.",
       "accept": ["He refused to sign a contract.", "He refused to sign this contract."],
-      "distractors": ["signing", "from", "signed"],
       "explanation": "После refuse нужен инфинитив с to: refused to sign. Русское «отказался от» подталкивает к предлогу from, но в английском он здесь не используется."
     },
     {
@@ -131,6 +135,11 @@
       "options": ["He keeps asking me the same question.", "He keeps to ask me the same question.", "He kept asking me the same question.", "He keeps asking me the same questions."],
       "answer": 0,
       "explanation": "Keep + -ing означает «постоянно делать, продолжать»: keeps asking. To после keep не ставится, а окончание -s показывает настоящее время."
+    },
+    {
+      "type": "dictation",
+      "audio": "Remember to call the bank.",
+      "translation": "Не забудь позвонить в банк."
     },
     {
       "type": "translate",

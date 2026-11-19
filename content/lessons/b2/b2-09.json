@@ -114,6 +114,11 @@
       "explanation": "Устойчивое сочетание — do business with. Lead business — дословный перевод русского «вести», а make business по-английски не говорят."
     },
     {
+      "type": "speak",
+      "text": "We made a profit in the first year.",
+      "translation": "Мы получили прибыль в первый же год."
+    },
+    {
       "type": "gap",
       "sentence": "It's worth ___ a risk: the potential profit is huge.",
       "translation": "Стоит рискнуть: потенциальная прибыль огромна.",
@@ -168,7 +173,12 @@
       "explanation": "Перерыв по-английски «берут» (take a break), а не «делают», как в русском. Про еду и напитки говорят have: have a coffee, have lunch."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "Can I have a word with you after the meeting?",
+      "translation": "Можно поговорить с тобой после совещания?"
+    },
+    {
+      "type": "type",
       "source": "Он постарался приехать вовремя.",
       "answer": "He made an effort to arrive on time.",
       "accept": [
@@ -177,7 +187,6 @@
         "He made an effort to get there on time.",
         "He tried to arrive on time."
       ],
-      "distractors": ["did", "applied", "efforts"],
       "explanation": "«Постараться, приложить усилие» — make an effort: apply effort звучит как калька, а do an effort не говорят вовсе. После артикля an слово стоит в единственном числе: an effort."
     }
   ]

@@ -1,4 +1,4 @@
-import { and, eq, gte, sql } from 'drizzle-orm'
+import { and, eq, gte } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { isLevel } from '../../shared/levels'
 import { requireUser, type AuthEnv } from '../auth/sessions'
@@ -7,7 +7,9 @@ import { lessonById, lessonsFor } from '../content/lessons'
 import { db } from '../db/client'
 import { dailyUsage, lessonProgress, users } from '../db/schema'
 import { awardAchievements, listAchievements } from '../progress/achievements'
-import { dayBefore, localDay, safeTimezone, streakAfterActivity, streakNow } from '../progress/streak'
+import { recordActivity, usageToday } from '../progress/activity'
+import { countDue, scheduleAfterLesson } from '../progress/review'
+import { dayBefore, localDay, safeTimezone, streakNow } from '../progress/streak'
 
 const XP_BASE = 10
 const XP_ACCURACY_BONUS = 10
@@ -16,15 +18,6 @@ const XP_REPLAY = 5
 async function loadUser(userId: string) {
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1)
   return user
-}
-
-async function usageToday(userId: string, day: string) {
-  const [row] = await db
-    .select()
-    .from(dailyUsage)
-    .where(and(eq(dailyUsage.userId, userId), eq(dailyUsage.day, day)))
-    .limit(1)
-  return { lessonsDone: row?.lessonsDone ?? 0, xp: row?.xp ?? 0 }
 }
 
 /** A lesson is open if it is the first one or the one before it has been completed. */
@@ -70,6 +63,8 @@ courseRoutes.get('/course', async (c) => {
     streakFrozen: streak.frozen,
     freezes: user.streakFreezes,
     longestStreak: user.longestStreak,
+    /** Words and missed exercises waiting to be repeated today. */
+    reviewDue: await countDue(user.id, today),
     today: {
       xp: usage.xp,
       xpGoal: DAILY_XP_GOAL,
@@ -121,7 +116,15 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
 
   const body = await c.req.json().catch(() => ({}))
   const total = lesson.exercises.length
-  const firstTry = Number.isInteger(body.correctFirstTry) ? Math.min(Math.max(body.correctFirstTry, 0), total) : 0
+  // Positions of the exercises that were not right the first time. Older app versions send only the count.
+  const missed: number[] | null = Array.isArray(body.missed)
+    ? [...new Set<number>(body.missed.filter((i: unknown) => Number.isInteger(i) && (i as number) >= 0 && (i as number) < total))]
+    : null
+  const firstTry = missed
+    ? total - missed.length
+    : Number.isInteger(body.correctFirstTry)
+      ? Math.min(Math.max(body.correctFirstTry, 0), total)
+      : 0
   const accuracy = Math.round((firstTry / total) * 100)
   const timezone = safeTimezone(body.tz ?? user.timezone)
   const today = localDay(timezone)
@@ -136,9 +139,8 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
     .limit(1)
 
   const xpEarned = existing ? XP_REPLAY : XP_BASE + Math.round((XP_ACCURACY_BONUS * accuracy) / 100)
-  const streak = streakAfterActivity(user.currentStreak, user.lastActiveDate, today, user.streakFreezes)
 
-  await db.transaction(async (tx) => {
+  const streak = await db.transaction(async (tx) => {
     if (existing) {
       await tx
         .update(lessonProgress)
@@ -152,25 +154,8 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
       await tx.insert(lessonProgress).values({ userId: user.id, lessonId: lesson.id, bestAccuracy: accuracy })
     }
 
-    await tx
-      .insert(dailyUsage)
-      .values({ userId: user.id, day: today, lessonsDone: 1, xp: xpEarned })
-      .onConflictDoUpdate({
-        target: [dailyUsage.userId, dailyUsage.day],
-        set: { lessonsDone: sql`${dailyUsage.lessonsDone} + 1`, xp: sql`${dailyUsage.xp} + ${xpEarned}` },
-      })
-
-    await tx
-      .update(users)
-      .set({
-        xp: user.xp + xpEarned,
-        currentStreak: streak.streak,
-        longestStreak: Math.max(user.longestStreak, streak.streak),
-        lastActiveDate: today,
-        streakFreezes: streak.freezes,
-        timezone,
-      })
-      .where(eq(users.id, user.id))
+    await scheduleAfterLesson(tx, user.id, lesson, missed ?? [], today)
+    return recordActivity(tx, user, { today, timezone, xp: xpEarned, lessons: 1 })
   })
 
   const newAchievements = await awardAchievements(user.id).catch((err) => {

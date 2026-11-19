@@ -93,6 +93,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "If it rains, we'll take a taxi.",
+      "translation": "Если пойдёт дождь, мы возьмём такси."
+    },
+    {
       "type": "choice",
       "prompt": "У вас нет машины, вы просто мечтаете. Как сказать: «Если бы у меня была машина, я бы ездил на работу на ней»?",
       "options": ["If I had a car, I would drive to work.", "If I have a car, I will drive to work.", "If I would have a car, I would drive to work.", "If I had a car, I will drive to work."],
@@ -124,12 +129,16 @@
       "explanation": "Условие реальное (take — Present Simple), поэтому в главной части будущее: won't miss. Wouldn't подошло бы только в паре с Past Simple: If we took a taxi…"
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Я бы уволился, если бы мог себе это позволить.",
       "answer": "I would quit if I could afford it.",
       "accept": ["I'd quit if I could afford it.", "If I could afford it, I would quit.", "If I could afford it, I'd quit.", "I would quit my job if I could afford it.", "I'd quit my job if I could afford it."],
-      "distractors": ["will", "can", "afforded"],
       "explanation": "Говорящий уволиться не может — это второй тип: would quit, а после if — прошедшая форма could. После could глагол стоит в начальной форме: afford, без -ed."
+    },
+    {
+      "type": "dictation",
+      "audio": "I won't accept the offer unless they raise the salary.",
+      "translation": "Я не приму предложение, если они не поднимут зарплату."
     },
     {
       "type": "choice",

@@ -94,6 +94,11 @@
       "explanation": "An ставится перед гласным звуком: an apple. Слова bag, job и nurse начинаются с согласных, перед ними a."
     },
     {
+      "type": "speak",
+      "text": "I am a teacher.",
+      "translation": "Я учитель."
+    },
+    {
       "type": "gap",
       "sentence": "Elena and Dina are ___.",
       "translation": "Елена и Дина — медсёстры.",
@@ -133,11 +138,15 @@
       "explanation": "Слово my уже показывает, о какой сумке речь, и артикль с ним не ставится. А вот без my нужен артикль a: This is a bag."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "This is my umbrella.",
+      "translation": "Это мой зонт."
+    },
+    {
+      "type": "type",
       "source": "Это хорошая работа.",
       "answer": "It is a good job.",
       "accept": ["It's a good job.", "This is a good job."],
-      "distractors": ["an", "are", "am"],
       "explanation": "Артикль относится к существительному job, но ставится перед прилагательным: a good job. Good начинается с согласного звука, поэтому a, а не an."
     }
   ]

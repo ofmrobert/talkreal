@@ -96,6 +96,11 @@
       "explanation": "После любого числа больше одного существительное стоит во множественном числе: two tickets. Ticket заканчивается на t, поэтому добавляем просто -s, без e."
     },
     {
+      "type": "speak",
+      "text": "This is my phone.",
+      "translation": "Это мой телефон."
+    },
+    {
       "type": "choice",
       "prompt": "Как правильно образовать множественное число от слова box?",
       "options": ["boxs", "boxes", "boxies", "box"],
@@ -127,12 +132,16 @@
       "explanation": "Watch — одни наручные часы, и в английском это единственное число: this is, it is. По-русски «часы» всегда множественные, поэтому так и тянет сказать these."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Эти ключи — твои?",
       "answer": "Are these your keys?",
       "accept": ["Are those your keys?", "Are these keys yours?"],
-      "distractors": ["this", "is", "key"],
       "explanation": "В вопросе are выходит на первое место: Are these…? Ключей несколько, поэтому these, are и keys с окончанием -s."
+    },
+    {
+      "type": "dictation",
+      "audio": "Those women are my colleagues.",
+      "translation": "Те женщины — мои коллеги."
     },
     {
       "type": "choice",

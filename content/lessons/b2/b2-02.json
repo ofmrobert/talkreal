@@ -107,7 +107,12 @@
       "explanation": "Поездка — фон, процесс, на фоне которого произошло событие (the engine stopped), поэтому Past Continuous. Had driven значило бы, что поездка закончилась до поломки."
     },
     {
-      "type": "translate",
+      "type": "speak",
+      "text": "When we got to the cinema, the film had already started.",
+      "translation": "Когда мы добрались до кинотеатра, фильм уже начался."
+    },
+    {
+      "type": "type",
       "source": "К тому времени как мы приехали, фильм уже начался.",
       "answer": "By the time we arrived, the film had already started.",
       "accept": [
@@ -117,7 +122,6 @@
         "By the time we got there, the film had already started.",
         "The film had already started by the time we arrived."
       ],
-      "distractors": ["has", "starts", "did"],
       "explanation": "После by the time идёт Past Simple (we arrived), а более раннее действие ставится в Past Perfect: had already started. Already стоит между had и третьей формой."
     },
     {
@@ -165,6 +169,11 @@
       ],
       "distractors": ["have", "run", "was", "from"],
       "explanation": "Долгая поездка предшествовала моменту, когда кончился бензин, и объясняет его: had been driving. Run — неправильный глагол, в Past Simple ran, а предлог после run out — of."
+    },
+    {
+      "type": "dictation",
+      "audio": "We had been negotiating for months before they finally signed.",
+      "translation": "Мы вели переговоры несколько месяцев, прежде чем они наконец подписали договор."
     },
     {
       "type": "choice",

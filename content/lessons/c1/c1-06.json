@@ -110,6 +110,11 @@
       "explanation": "Tend to описывает общую закономерность, поэтому используется в Present Simple, а не в Continuous. С существительным понадобился бы артикль: have a tendency to."
     },
     {
+      "type": "speak",
+      "text": "The new policy appears to have had little effect on inflation.",
+      "translation": "Новая политика, по-видимому, почти не повлияла на инфляцию."
+    },
+    {
       "type": "choice",
       "prompt": "Что означает фраза «This is arguably her best novel»?",
       "options": [
@@ -122,7 +127,7 @@
       "explanation": "Arguably означает «можно привести доводы в пользу этого», то есть осторожное согласие, а не сомнение. Русскому «спорно» соответствуют debatable или questionable."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Похоже, что произошло недоразумение.",
       "answer": "There seems to have been a misunderstanding.",
       "accept": [
@@ -133,7 +138,6 @@
         "It looks like there has been a misunderstanding.",
         "There seems to have been some misunderstanding."
       ],
-      "distractors": ["is", "seem", "looks", "had"],
       "explanation": "Это вежливая формула для неловких ситуаций: говорящий никого не обвиняет. Seems согласуется с a misunderstanding в единственном числе, а перфектный инфинитив to have been показывает, что недоразумение уже случилось."
     },
     {
@@ -170,6 +174,11 @@
       "options": ["likely", "probably", "possibly", "maybe"],
       "answer": 0,
       "explanation": "Конструкция be + to-инфинитив возможна только с прилагательным likely: are likely to rise. Probably и possibly — наречия, они стоят перед смысловым глаголом: will probably rise."
+    },
+    {
+      "type": "dictation",
+      "audio": "Presumably, the delay was caused by the strike.",
+      "translation": "Надо полагать, задержка была вызвана забастовкой."
     },
     {
       "type": "choice",

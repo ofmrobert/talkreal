@@ -95,6 +95,11 @@
       "explanation": "В вопросе с did глагол стоит в начальной форме: meet. Форма met нужна только в утверждении: I met him at work."
     },
     {
+      "type": "speak",
+      "text": "We went to Sochi last summer.",
+      "translation": "Мы ездили в Сочи прошлым летом."
+    },
+    {
       "type": "translate",
       "source": "Мы хорошо провели время в Стамбуле.",
       "answer": "We had a good time in Istanbul.",
@@ -126,12 +131,16 @@
       "explanation": "The hotel — это it, поэтому was. Русский часто пропускает «был», но в английском предложении глагол be обязателен."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Сколько ты потратил вчера?",
       "answer": "How much did you spend yesterday?",
       "accept": ["How much money did you spend yesterday?"],
-      "distractors": ["spent", "many", "was"],
       "explanation": "После did — начальная форма spend, а не spent. О деньгах спрашиваем how much, потому что money — неисчисляемое слово."
+    },
+    {
+      "type": "dictation",
+      "audio": "We weren't tired.",
+      "translation": "Мы не устали."
     },
     {
       "type": "choice",

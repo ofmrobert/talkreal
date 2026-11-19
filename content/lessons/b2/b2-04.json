@@ -112,6 +112,11 @@
       "explanation": "Есть две модели: The director is said to be… и It is said that the director is… Смешивать их нельзя: после подлежащего-человека идёт инфинитив, а that-придаточное возможно только после it."
     },
     {
+      "type": "speak",
+      "text": "I had my laptop repaired last week.",
+      "translation": "Мне на прошлой неделе починили ноутбук."
+    },
+    {
       "type": "gap",
       "sentence": "It ___ that the two banks will merge next year.",
       "translation": "Ходят слухи, что два банка объединятся в следующем году.",
@@ -167,7 +172,12 @@
       "explanation": "Порядок фиксированный: have + объект + третья форма. Русскоговорящие часто ставят причастие сразу после have, но тогда конструкция разрушается."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "The thieves are thought to have escaped through the roof.",
+      "translation": "Полагают, что воры скрылись через крышу."
+    },
+    {
+      "type": "type",
       "source": "Сообщается, что переговоры прошли успешно.",
       "answer": "The talks are reported to have been successful.",
       "accept": [
@@ -177,7 +187,6 @@
         "The talks are reported to have gone well.",
         "It is reported that the talks went well."
       ],
-      "distractors": ["reporting", "was", "had"],
       "explanation": "Переговоры уже прошли, поэтому to have been, а не to be. Talks — множественное число, отсюда are reported."
     }
   ]

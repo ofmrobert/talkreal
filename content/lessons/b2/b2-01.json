@@ -107,6 +107,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "If I had known, I would have called you.",
+      "translation": "Если бы я знал, я бы тебе позвонил."
+    },
+    {
       "type": "choice",
       "prompt": "Какое предложение означает: «Я не выучил испанский, поэтому сейчас не работаю в Мадриде»?",
       "options": [
@@ -165,7 +170,12 @@
       "explanation": "В условии — Past Perfect (hadn't ended up), в результате — would have + третья форма (would have caught). Would в части с if и would catch рядом с yesterday — ошибки."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "If she had left earlier, she would be here now.",
+      "translation": "Если бы она вышла раньше, она была бы сейчас здесь."
+    },
+    {
+      "type": "type",
       "source": "Если бы я не был таким ленивым, я бы закончил отчёт вчера.",
       "answer": "If I weren't so lazy, I would have finished the report yesterday.",
       "accept": [
@@ -175,7 +185,6 @@
         "I would have finished the report yesterday if I weren't so lazy.",
         "If I hadn't been so lazy, I would have finished the report yesterday."
       ],
-      "distractors": ["am", "will", "finish"],
       "explanation": "Лень — постоянная черта, поэтому в условии Past Simple (weren't), а результат относится ко вчерашнему дню: would have finished. Настоящее время (am) после if в нереальном условии невозможно."
     }
   ]

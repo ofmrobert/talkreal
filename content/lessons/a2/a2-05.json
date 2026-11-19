@@ -92,6 +92,11 @@
       "explanation": "Решение принято только что, поэтому will: I'll have… — стандартная фраза для заказа. После will глагол идёт без to."
     },
     {
+      "type": "speak",
+      "text": "I'm going to visit my parents this weekend.",
+      "translation": "Я собираюсь навестить родителей в эти выходные."
+    },
+    {
       "type": "gap",
       "sentence": "Look at the time! We ___ late for the train.",
       "translation": "Посмотри на время! Мы опоздаем на поезд.",
@@ -139,11 +144,15 @@
       "explanation": "Be going to показывает намерение, которое появилось до разговора. В остальных вариантах will: решение в момент речи, прогноз и предложение помощи."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "I think you'll like this city.",
+      "translation": "Думаю, тебе понравится этот город."
+    },
+    {
+      "type": "type",
       "source": "Наверное, он скоро придёт.",
       "answer": "He will probably come soon.",
       "accept": ["He'll probably come soon.", "He will probably be here soon.", "He'll probably be here soon.", "He will probably arrive soon.", "He'll probably arrive soon.", "He is probably going to come soon.", "He's probably going to come soon."],
-      "distractors": ["comes", "to", "is"],
       "explanation": "Предположение о будущем — will, а probably стоит между will и глаголом. По-русски можно сказать «скоро придёт» без особой формы, но в английском нужно will."
     }
   ]

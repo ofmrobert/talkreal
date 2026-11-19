@@ -66,7 +66,7 @@
       "explanation": "Actual cost — фактическая стоимость, в отличие от расчётной (estimate). «Актуальная на сегодня» была бы current cost."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Как это называется по-английски?",
       "answer": "What is this called in English?",
       "accept": [
@@ -76,7 +76,6 @@
         "What do you call this in English?",
         "What do you call it in English?"
       ],
-      "distractors": ["how", "named", "on", "by"],
       "explanation": "О названии спрашивают словом what: в ответ ждут имя, а не способ. «How is it called» — классическая калька; язык вводится предлогом in: in English."
     },
     {
@@ -106,6 +105,11 @@
       ],
       "answer": 2,
       "explanation": "Feel в значении «чувствовать себя» не требует возвратного местоимения: I feel well, I feel tired. Вариант с myself — калька с русского «себя»; после feel стоит прилагательное или well в значении «здоров»."
+    },
+    {
+      "type": "speak",
+      "text": "The forecast proved remarkably accurate.",
+      "translation": "Прогноз оказался на удивление точным."
     },
     {
       "type": "translate",
@@ -166,6 +170,11 @@
       ],
       "distractors": ["possibly", "implemented", "unaccurate", "datas"],
       "explanation": "Eventually — «в конце концов», а не «возможно»; realise — «осознать». Отрицание от accurate образуется приставкой in-, а у слова data нет формы на -s."
+    },
+    {
+      "type": "dictation",
+      "audio": "It all depends on how quickly the regulator responds.",
+      "translation": "Всё зависит от того, как быстро отреагирует регулятор."
     },
     {
       "type": "gap",

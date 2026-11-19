@@ -45,7 +45,7 @@
   ],
   "exercises": [
     {
-      "type": "translate",
+      "type": "type",
       "source": "Нам давно пора обновить сайт.",
       "answer": "It's high time we updated our website.",
       "accept": [
@@ -55,7 +55,6 @@
         "It's about time we updated our website.",
         "It's high time we updated our site."
       ],
-      "distractors": ["updating", "will", "have", "would"],
       "explanation": "После it's high time глагол стоит в Past Simple (updated), хотя речь о настоящем: прошедшее время показывает, что действие должно было произойти, но ещё не произошло. Русское «пора обновить» подсказывает инфинитив, но с подлежащим we нужна именно прошедшая форма."
     },
     {
@@ -114,6 +113,11 @@
       "explanation": "I'd rather + Past Perfect относится к прошлому: действие уже произошло, и говорящему это не нравится. Для просьбы на будущее было бы «I'd rather you didn't mention the budget»."
     },
     {
+      "type": "speak",
+      "text": "The committee suggested that the director step down.",
+      "translation": "Комитет предложил директору уйти в отставку."
+    },
+    {
       "type": "gap",
       "sentence": "The union is demanding that the meeting ___ postponed until all the data is available.",
       "translation": "Профсоюз требует, чтобы встречу отложили до тех пор, пока не появятся все данные.",
@@ -167,6 +171,11 @@
       "options": ["had read", "would read", "have read", "would have read"],
       "answer": 0,
       "explanation": "Сожаление о прошлом после if only выражается через Past Perfect: had read. Would have после if only — распространённая ошибка: would have стоит в главной части условного предложения, а не после if."
+    },
+    {
+      "type": "dictation",
+      "audio": "If only we had read the contract more carefully.",
+      "translation": "Если бы мы только прочитали договор внимательнее."
     },
     {
       "type": "translate",

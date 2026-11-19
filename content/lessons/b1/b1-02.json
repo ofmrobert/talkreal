@@ -91,6 +91,11 @@
       "explanation": "This morning — момент, с которого начался дождь, поэтому since. Русское «с утра» часто ошибочно переводят как from, но с перфектными временами нужно since."
     },
     {
+      "type": "speak",
+      "text": "I've been working here for three years.",
+      "translation": "Я работаю здесь три года."
+    },
+    {
       "type": "translate",
       "source": "Он весь день чинит свой ноутбук.",
       "answer": "He has been fixing his laptop all day.",
@@ -132,11 +137,15 @@
       "explanation": "Ремонт начался полгода назад и продолжается — have been renovating. Six months — длительность, поэтому for; since six months — частая ошибка под влиянием русского «уже полгода как»."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "We've had this dog for five years.",
+      "translation": "Эта собака у нас пять лет."
+    },
+    {
+      "type": "type",
       "source": "В последнее время я плохо сплю.",
       "answer": "I haven't been sleeping well lately.",
       "accept": ["I have not been sleeping well lately.", "Lately I haven't been sleeping well.", "I've been sleeping badly lately.", "I have been sleeping badly lately.", "I haven't been sleeping well recently."],
-      "distractors": ["don't", "am", "good"],
       "explanation": "Lately описывает период, который тянется до настоящего момента, поэтому нужен Present Perfect Continuous, а не Present Simple. «Плохо спать» естественнее передать как not sleep well; good здесь не подходит, потому что нужно наречие."
     }
   ]

@@ -90,11 +90,15 @@
       "explanation": "Исполнитель действия в пассиве вводится предлогом by. With означало бы «вместе с Толстым», а from в этом значении не используется."
     },
     {
-      "type": "translate",
+      "type": "speak",
+      "text": "Coffee is grown in Brazil.",
+      "translation": "Кофе выращивают в Бразилии."
+    },
+    {
+      "type": "type",
       "source": "Когда была основана эта компания?",
       "answer": "When was this company founded?",
       "accept": ["When was the company founded?"],
-      "distractors": ["did", "found", "were"],
       "explanation": "Вопрос в пассиве начинается с was, did здесь не нужен. Не путайте: found — founded — founded значит «основывать», а found как форма глагола find — «нашёл»."
     },
     {
@@ -130,6 +134,11 @@
       "accept": ["The phone was invented in the nineteenth century.", "The telephone was invented in the 19th century.", "The phone was invented in the 19th century."],
       "distractors": ["is", "invent", "at"],
       "explanation": "Событие в прошлом, исполнитель не назван: was invented. Об изобретении в целом говорят с артиклем the (the telephone), а с веками используется предлог in."
+    },
+    {
+      "type": "dictation",
+      "audio": "This photo was taken by my daughter.",
+      "translation": "Эту фотографию сделала моя дочь."
     },
     {
       "type": "choice",

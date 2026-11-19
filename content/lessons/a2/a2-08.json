@@ -94,6 +94,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "I have a brother and a sister.",
+      "translation": "У меня есть брат и сестра."
+    },
+    {
       "type": "choice",
       "prompt": "Найдите предложение без ошибки.",
       "options": ["I go to work by bus.", "I go to work by the bus.", "I go to the work by bus.", "I go to work on bus."],
@@ -101,11 +106,10 @@
       "explanation": "Go to work и by bus — устойчивые выражения без артикля. Способ передвижения всегда by + транспорт без артикля: by bus, by car, by train."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "У моего соседа есть собака.",
       "answer": "My neighbour has a dog.",
       "accept": ["My neighbor has a dog.", "My neighbour has got a dog.", "My neighbor has got a dog.", "My neighbour's got a dog.", "My neighbor's got a dog."],
-      "distractors": ["an", "have", "is"],
       "explanation": "Собака упоминается впервые, это «какая-то одна собака» — нужен артикль a. С my neighbour глагол имеет форму has, а не have."
     },
     {
@@ -131,6 +135,11 @@
       "accept": ["I like coffee but I do not like tea.", "I love coffee, but I don't like tea.", "I love coffee but I do not like tea.", "I like coffee, but I don't love tea.", "I like coffee, but not tea."],
       "distractors": ["the", "a", "am"],
       "explanation": "Речь о кофе и чае вообще, как о напитках, поэтому артикль не нужен. The coffee означало бы конкретный кофе, например тот, что стоит на столе."
+    },
+    {
+      "type": "dictation",
+      "audio": "She goes to work by car.",
+      "translation": "Она ездит на работу на машине."
     },
     {
       "type": "choice",

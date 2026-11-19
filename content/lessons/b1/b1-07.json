@@ -51,11 +51,10 @@
       "explanation": "Когда названо, кому сказали, нужен tell: told me. «Said me» — самая частая ошибка; а tell без слушателя (told that…) тоже невозможен."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Он сказал, что занят.",
       "answer": "He said that he was busy.",
       "accept": ["He said he was busy."],
-      "distractors": ["told", "is", "will"],
       "explanation": "После said время сдвигается назад: «занят» превращается в was busy, хотя в русском остаётся настоящее время. Слушатель не назван, поэтому said, а не told."
     },
     {
@@ -88,6 +87,11 @@
       "options": ["would pay", "will pay", "pay", "have paid"],
       "answer": 0,
       "explanation": "Обещание дано в прошлом (promised), поэтому «вернут» — это would pay: will после прошедшего времени сдвигается в would. По-русски здесь будущее время, и это сбивает."
+    },
+    {
+      "type": "speak",
+      "text": "She said she needed more time.",
+      "translation": "Она сказала, что ей нужно больше времени."
     },
     {
       "type": "match",
@@ -130,6 +134,11 @@
       "accept": ["She said she would call the next day.", "She said that she'd call the next day.", "She said she'd call the next day.", "She said that she would call the following day.", "She said she would call the following day."],
       "distractors": ["told", "will", "tomorrow"],
       "explanation": "Русское будущее «позвонит» после said передаётся через would call: will сдвигается на шаг назад. Tomorrow в пересказе заменяется на the next day."
+    },
+    {
+      "type": "dictation",
+      "audio": "They promised they would call back.",
+      "translation": "Они пообещали, что перезвонят."
     },
     {
       "type": "choice",

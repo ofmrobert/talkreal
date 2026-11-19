@@ -95,6 +95,11 @@
       "explanation": "В вопросе can просто встаёт перед подлежащим: Can you…? Помощники do и are здесь не нужны, и to после can не ставится."
     },
     {
+      "type": "speak",
+      "text": "I can swim.",
+      "translation": "Я умею плавать."
+    },
+    {
       "type": "gap",
       "sentence": "He can ___ four languages.",
       "translation": "Он говорит на четырёх языках.",
@@ -103,11 +108,10 @@
       "explanation": "После can глагол всегда в начальной форме, даже с he: can speak. Окончание -s здесь лишнее, как и частица to."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Она умеет хорошо танцевать.",
       "answer": "She can dance well.",
       "accept": ["She can dance very well."],
-      "distractors": ["good", "cans", "to"],
       "explanation": "«Хорошо» при глаголе — это well, а good описывает предмет или человека: a good dancer. Well ставится после глагола, в конец предложения."
     },
     {
@@ -132,6 +136,11 @@
       "options": ["I can't swim very well.", "I can swim very well.", "I can't sing very well.", "He can't swim very well."],
       "answer": 0,
       "explanation": "Can't swim very well — «не очень хорошо плаваю». Звук t на конце can't часто почти не слышен, поэтому ориентируйтесь на ударение: can't всегда произносится отчётливо."
+    },
+    {
+      "type": "dictation",
+      "audio": "What can you cook?",
+      "translation": "Что ты умеешь готовить?"
     },
     {
       "type": "translate",

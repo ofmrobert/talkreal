@@ -24,6 +24,7 @@ interface Course {
   streak: number
   streakFrozen?: boolean
   freezes?: number
+  reviewDue?: number
   today: { xp: number; xpGoal: number; lessonsDone: number; lessonsLimit: number | null }
   week: { day: string; xp: number }[]
   lessons: CourseLesson[]
@@ -179,6 +180,26 @@ export default function Home() {
             </Button>
           </section>
         )
+      )}
+
+      {/* Words and mistakes that are due to be repeated */}
+      {(course.reviewDue ?? 0) > 0 && (
+        <section className="flex items-center gap-4 rounded-3xl bg-[#EDE8FF] p-4 shadow-[0_5px_0_0_rgba(124,92,255,0.18)]">
+          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#7C5CFF] text-xl font-extrabold text-white">
+            {Math.min(course.reviewDue ?? 0, 99)}
+          </span>
+          <div className="min-w-0 flex-1">
+            <h2 className="text-lg font-extrabold leading-tight">{t('review.cardTitle')}</h2>
+            <p className="text-sm font-semibold text-ink/60">{t('review.cardText', { count: course.reviewDue })}</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => navigate('/review')}
+            className="min-h-12 shrink-0 rounded-2xl bg-[#7C5CFF] px-4 text-base font-extrabold text-white shadow-[0_4px_0_0_#5B3FD6] active:translate-y-1 active:shadow-[0_1px_0_0_#5B3FD6]"
+          >
+            {t('review.start')}
+          </button>
+        </section>
       )}
 
       <WeekStrip week={course.week} />

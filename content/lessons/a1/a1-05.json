@@ -96,6 +96,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "I work in a bank.",
+      "translation": "Я работаю в банке."
+    },
+    {
       "type": "choice",
       "prompt": "Выберите правильное предложение: «Они живут в Самаре».",
       "options": ["They are live in Samara.", "They lives in Samara.", "They live in Samara.", "They living in Samara."],
@@ -127,12 +132,16 @@
       "explanation": "Often стоит перед глаголом have, а have dinner значит «ужинать». Форма have, а не had, показывает, что речь о привычке, а не о прошлом."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Они заканчивают работу поздно.",
       "answer": "They finish work late.",
       "accept": ["They finish their work late."],
-      "distractors": ["finishes", "are", "lately"],
       "explanation": "С they глагол без окончания: finish. «Поздно» — это late; слово lately значит совсем другое — «в последнее время»."
+    },
+    {
+      "type": "dictation",
+      "audio": "We have dinner together.",
+      "translation": "Мы ужинаем вместе."
     },
     {
       "type": "choice",

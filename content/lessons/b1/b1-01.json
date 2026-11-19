@@ -91,6 +91,11 @@
       "explanation": "Yet в отрицании стоит в конце и сочетается с Present Perfect: haven't finished yet. В остальных вариантах названо прошедшее время (yesterday, when, in May), а значит, нужен Past Simple."
     },
     {
+      "type": "speak",
+      "text": "I went to Istanbul last year.",
+      "translation": "Я ездил в Стамбул в прошлом году."
+    },
+    {
       "type": "match",
       "pairs": [
         { "en": "ever", "ru": "когда-либо" },
@@ -132,11 +137,15 @@
       "explanation": "Как только появляется конкретное время (in 2019), переходим на Past Simple: went. Present Perfect годится только для самого факта опыта, без даты."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "Have you finished the report yet?",
+      "translation": "Ты уже закончил отчёт?"
+    },
+    {
+      "type": "type",
       "source": "Он недавно сменил работу.",
       "answer": "He has recently changed his job.",
       "accept": ["He's recently changed his job.", "He has changed his job recently.", "He's changed his job recently.", "He recently changed his job.", "He has recently changed jobs.", "He recently changed jobs."],
-      "distractors": ["have", "ago", "work"],
       "explanation": "Recently говорит о недавнем событии с результатом в настоящем, поэтому естественен Present Perfect; с he нужен has, а не have. «Работа» как должность — job, а не work."
     }
   ]

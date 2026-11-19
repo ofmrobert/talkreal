@@ -96,6 +96,11 @@
       "explanation": "С частями дня используется in и артикль the: in the morning, in the evening. По-русски предлога нет совсем («утром»), поэтому его легко пропустить или перепутать."
     },
     {
+      "type": "speak",
+      "text": "It's ten o'clock.",
+      "translation": "Сейчас десять часов."
+    },
+    {
       "type": "choice",
       "prompt": "На часах 7:30. Как это сказать?",
       "options": ["It's half past seven.", "It's half past eight.", "It's half to eight.", "It's seven and half."],
@@ -103,11 +108,10 @@
       "explanation": "Половину отсчитывают от прошедшего часа: half past seven — «половина после семи». Half past eight — это уже 8:30."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Сегодня среда.",
       "answer": "Today is Wednesday.",
-      "accept": ["It is Wednesday today.", "It's Wednesday today.", "Today's Wednesday."],
-      "distractors": ["on", "the", "are"],
+      "accept": ["It is Wednesday today.", "It's Wednesday today.", "Today's Wednesday.", "It is Wednesday.", "It's Wednesday."],
       "explanation": "Глагол is обязателен, хотя в русском его нет. Здесь мы называем день, а не говорим «в среду», поэтому предлог on и артикль не нужны."
     },
     {
@@ -132,6 +136,11 @@
       "options": ["We have a meeting in Wednesday.", "We have a meeting on Wednesday at ten.", "We have a meeting on wednesday at ten.", "We have a meeting at Wednesday in ten."],
       "answer": 1,
       "explanation": "С днём — on, с временем — at: on Wednesday at ten. День недели всегда пишется с большой буквы, поэтому вариант с wednesday тоже ошибочен."
+    },
+    {
+      "type": "dictation",
+      "audio": "The meeting is at three o'clock.",
+      "translation": "Встреча в три часа."
     },
     {
       "type": "translate",

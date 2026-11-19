@@ -78,7 +78,7 @@
       "explanation": "После пропуска стоит форма на -ing, а не предложение с подлежащим, значит, нужен предлог despite. С although было бы: Although she had no experience…"
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Хотя шёл дождь, мы решили идти пешком.",
       "answer": "Although it was raining, we decided to walk.",
       "accept": [
@@ -88,7 +88,6 @@
         "We decided to walk although it was raining.",
         "We decided to walk even though it was raining."
       ],
-      "distractors": ["despite", "of", "but"],
       "explanation": "Although вводит придаточное с подлежащим и глаголом: it was raining. Русское «хотя…, но…» не переносится в английский: but после although лишнее."
     },
     {
@@ -108,6 +107,11 @@
       "options": ["whereas", "despite", "however", "nevertheless"],
       "answer": 0,
       "explanation": "Здесь сравниваются два разных факта внутри одного предложения — это работа союза whereas. However и nevertheless не могут соединять части через одну запятую, а despite требует существительного."
+    },
+    {
+      "type": "speak",
+      "text": "Although the hotel was expensive, the service was poor.",
+      "translation": "Хотя отель был дорогим, обслуживание было плохим."
     },
     {
       "type": "choice",
@@ -170,6 +174,11 @@
       "options": ["nevertheless", "although", "despite", "whereas"],
       "answer": 0,
       "explanation": "После точки с запятой и перед запятой может стоять только наречие-связка: nevertheless. Although и whereas вводят придаточное без запятой после себя, а despite требует существительного."
+    },
+    {
+      "type": "dictation",
+      "audio": "My brother loves big cities, whereas I prefer the countryside.",
+      "translation": "Мой брат любит большие города, тогда как я предпочитаю сельскую местность."
     },
     {
       "type": "choice",

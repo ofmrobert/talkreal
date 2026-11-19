@@ -110,6 +110,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "Money doesn't buy happiness.",
+      "translation": "Счастье за деньги не купишь."
+    },
+    {
       "type": "translate",
       "source": "Она изучала право в Оксфордском университете.",
       "answer": "She studied law at the University of Oxford.",
@@ -168,7 +173,12 @@
       "explanation": "The + единственное число обозначает изобретение как класс: the smartphone, the wheel. Исчисляемое существительное в единственном числе не может стоять совсем без артикля, а the way — устойчивое сочетание."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "He was in prison for five years.",
+      "translation": "Он пять лет сидел в тюрьме."
+    },
+    {
+      "type": "type",
       "source": "Мы должны защищать окружающую среду ради будущих поколений.",
       "answer": "We must protect the environment for future generations.",
       "accept": [
@@ -177,7 +187,6 @@
         "We must protect the environment for the sake of future generations.",
         "We need to protect the environment for future generations."
       ],
-      "distractors": ["a", "surrounding", "generation"],
       "explanation": "Environment в значении «природная среда» всегда с the: она у нас одна. А future generations — обобщение во множественном числе, поэтому без артикля."
     }
   ]

@@ -110,6 +110,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "Had we known about the risks, we would have acted differently.",
+      "translation": "Знай мы о рисках, мы поступили бы иначе."
+    },
+    {
       "type": "translate",
       "source": "Будь я на вашем месте, я бы пересмотрел это предложение.",
       "answer": "Were I in your position, I would reconsider the offer.",
@@ -159,7 +164,7 @@
       "explanation": "Should you + начальная форма — вежливое «если вдруг»: условие реальное, поэтому в главной части стоит will. После were понадобилось бы to (were you to change), а had требует третьей формы глагола."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Я подпишу при условии, что этот пункт уберут.",
       "answer": "I will sign on condition that this clause is removed.",
       "accept": [
@@ -170,8 +175,12 @@
         "I will sign as long as this clause is removed.",
         "I will sign on condition that this clause be removed."
       ],
-      "distractors": ["unless", "would", "point", "in"],
       "explanation": "После on condition that, как и после if, будущее время не ставится: is removed, а не will be removed. Пункт договора — clause; point — это «довод» или «момент», но не часть юридического текста."
+    },
+    {
+      "type": "dictation",
+      "audio": "Supposing the investors pull out, what then?",
+      "translation": "А если предположить, что инвесторы выйдут из проекта, — что тогда?"
     },
     {
       "type": "choice",

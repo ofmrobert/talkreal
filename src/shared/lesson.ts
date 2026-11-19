@@ -68,7 +68,42 @@ export interface MatchExercise {
   pairs: { en: string; ru: string }[]
 }
 
-export type Exercise = ChoiceExercise | GapExercise | TranslateExercise | ListenExercise | MatchExercise
+/** Type the English translation of a Russian sentence on the keyboard. */
+export interface TypeExercise extends Explained {
+  type: 'type'
+  source: string
+  answer: string
+  /** Other correct translations. */
+  accept?: string[]
+}
+
+/** Say an English sentence aloud. Skipped on devices that cannot recognise speech. */
+export interface SpeakExercise {
+  type: 'speak'
+  text: string
+  /** The Russian meaning, shown under the sentence. */
+  translation: string
+  explanation?: string
+}
+
+/** Hear an English sentence and type it. */
+export interface DictationExercise {
+  type: 'dictation'
+  audio: string
+  /** The Russian meaning, shown after the answer. */
+  translation: string
+  explanation?: string
+}
+
+export type Exercise =
+  | ChoiceExercise
+  | GapExercise
+  | TranslateExercise
+  | ListenExercise
+  | MatchExercise
+  | TypeExercise
+  | SpeakExercise
+  | DictationExercise
 
 export interface Lesson {
   id: string
@@ -90,6 +125,78 @@ export function normalizeAnswer(text: string): string {
     .replace(/[.,!?;:"«»]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+/**
+ * The form two answers are compared in: like normalizeAnswer, and short forms are written out,
+ * so "I don't know" equals "I do not know". Only short forms with one meaning are expanded
+ * ("he's" can be "he is" or "he has", so it is left alone).
+ */
+export function answerKey(text: string): string {
+  return normalizeAnswer(text)
+    .replace(/\bcan't\b/g, 'cannot')
+    .replace(/\bcan not\b/g, 'cannot')
+    .replace(/\bwon't\b/g, 'will not')
+    .replace(/\bshan't\b/g, 'shall not')
+    .replace(/n't\b/g, ' not')
+    .replace(/\bi'm\b/g, 'i am')
+    .replace(/'re\b/g, ' are')
+    .replace(/'ve\b/g, ' have')
+    .replace(/'ll\b/g, ' will')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+/** True if what the student built or typed equals the answer or one of the accepted versions. */
+export function isAccepted(given: string, exercise: { answer: string; accept?: string[] }): boolean {
+  const key = answerKey(given)
+  return [exercise.answer, ...(exercise.accept ?? [])].some((a) => answerKey(a) === key)
+}
+
+const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+
+/** Words of a sentence for comparing speech: speech recognition writes "2" for "two" and so on. */
+function spokenWords(text: string): string[] {
+  return answerKey(text)
+    .replace(/[-–—]/g, ' ')
+    .split(' ')
+    .filter(Boolean)
+    .map((w) => (/^\d+$/.test(w) && Number(w) < NUMBER_WORDS.length ? NUMBER_WORDS[Number(w)] : w))
+}
+
+/**
+ * Compares what speech recognition heard with the sentence the student had to say.
+ * Recognition is imperfect with learners' accents, so one word in four may be missing.
+ * `words` lists the target words in order and whether each was heard.
+ */
+export function matchSpeech(target: string, heard: string[]): { passed: boolean; words: { word: string; heard: boolean }[] } {
+  const display = toTiles(target)
+  const wanted = display.map((w) => spokenWords(w))
+  const total = wanted.flat().length
+  const allowedMisses = total <= 2 ? 0 : Math.max(1, Math.floor(total * 0.25))
+
+  let best: boolean[] = display.map(() => false)
+  let bestMisses = total
+  for (const attempt of heard) {
+    const pool = spokenWords(attempt)
+    let misses = 0
+    const found = wanted.map((parts) => {
+      let all = true
+      for (const part of parts) {
+        const at = pool.indexOf(part)
+        if (at === -1) {
+          all = false
+          misses++
+        } else pool.splice(at, 1)
+      }
+      return all
+    })
+    if (misses < bestMisses) {
+      bestMisses = misses
+      best = found
+    }
+  }
+  return { passed: total > 0 && bestMisses <= allowedMisses, words: display.map((word, i) => ({ word, heard: best[i] })) }
 }
 
 /** Splits an English sentence into the tiles a student taps. */
@@ -151,8 +258,8 @@ export function validateLesson(data: unknown): string[] {
     errors.push('every vocab item needs "en" and "ru"')
   }
 
-  if (!Array.isArray(l.exercises) || l.exercises.length < 10 || l.exercises.length > 14) {
-    errors.push('"exercises" must have 10–14 items')
+  if (!Array.isArray(l.exercises) || l.exercises.length < 10 || l.exercises.length > 16) {
+    errors.push('"exercises" must have 10–16 items')
     return errors
   }
 
@@ -160,7 +267,8 @@ export function validateLesson(data: unknown): string[] {
   l.exercises.forEach((e, i) => {
     const where = `exercise ${i + 1} (${e?.type})`
     seen.add(e?.type)
-    if (e?.type !== 'match' && !isText((e as Explained)?.explanation)) errors.push(`${where}: needs an "explanation"`)
+    const explained = e?.type !== 'match' && e?.type !== 'speak' && e?.type !== 'dictation'
+    if (explained && !isText((e as Explained)?.explanation)) errors.push(`${where}: needs an "explanation"`)
 
     switch (e?.type) {
       case 'choice':
@@ -194,6 +302,25 @@ export function validateLesson(data: unknown): string[] {
         }
         break
       }
+      case 'type':
+        if (!isText(e.source) || !isText(e.answer)) {
+          errors.push(`${where}: needs "source" and "answer"`)
+          break
+        }
+        if (toTiles(e.answer).length > 12) errors.push(`${where}: the answer must be at most 12 words`)
+        if (e.accept !== undefined && (!Array.isArray(e.accept) || !e.accept.every(isText))) {
+          errors.push(`${where}: "accept" must be a list of texts`)
+        }
+        break
+      case 'speak':
+        if (!isText(e.text) || !isText(e.translation)) errors.push(`${where}: needs "text" and "translation"`)
+        else if (toTiles(e.text).length < 2 || toTiles(e.text).length > 12) errors.push(`${where}: the text must be 2–12 words`)
+        break
+      case 'dictation':
+        if (!isText(e.audio) || !isText(e.translation)) errors.push(`${where}: needs "audio" and "translation"`)
+        else if (toTiles(e.audio).length < 2 || toTiles(e.audio).length > 12) errors.push(`${where}: the audio must be 2–12 words`)
+        else if (/\d/.test(e.audio)) errors.push(`${where}: write numbers as words, so there is one way to type them`)
+        break
       case 'match':
         if (!Array.isArray(e.pairs) || e.pairs.length < 4 || e.pairs.length > 5) {
           errors.push(`${where}: needs 4–5 pairs`)

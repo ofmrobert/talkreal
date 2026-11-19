@@ -109,6 +109,11 @@
       "explanation": "Идиома звучит только так: on the same page — буквально «на одной странице». Вариант с wave — калька с русского «на одной волне»; близкое по смыслу английское выражение — on the same wavelength."
     },
     {
+      "type": "speak",
+      "text": "We failed to meet the deadline.",
+      "translation": "Мы не уложились в срок."
+    },
+    {
       "type": "choice",
       "prompt": "Коллега пишет: «Could you keep me in the loop?» О чём он просит?",
       "options": [
@@ -168,7 +173,12 @@
       "explanation": "Протокол «берут»: take the minutes. Lead и hold — кальки с русского «вести протокол»; слово minutes в этом значении всегда стоит во множественном числе."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "Could someone take the minutes of today's meeting?",
+      "translation": "Кто-нибудь может вести протокол сегодняшней встречи?"
+    },
+    {
+      "type": "type",
       "source": "Не хочется поднимать этот вопрос, но мы вышли за рамки бюджета.",
       "answer": "I hate to raise the issue, but we're over budget.",
       "accept": [
@@ -178,7 +188,6 @@
         "I hate to bring this up, but we're over budget.",
         "I don't want to raise the issue, but we're over budget."
       ],
-      "distractors": ["rise", "lift", "above", "up"],
       "explanation": "I hate to… — вежливый способ подвести к неприятной теме. «Выйти за рамки бюджета» — be over budget: без артикля и с предлогом over, а не above."
     }
   ]

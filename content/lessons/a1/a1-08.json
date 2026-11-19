@@ -96,6 +96,11 @@
       "explanation": "«Под» — это under. On значило бы «на кровати», а next без to не используется: правильно next to the bed."
     },
     {
+      "type": "speak",
+      "text": "There is a mirror in the bathroom.",
+      "translation": "В ванной есть зеркало."
+    },
+    {
       "type": "choice",
       "prompt": "Как спросить в отеле: «В номере есть холодильник?»",
       "options": ["Is there a fridge in the room?", "There is a fridge in the room?", "Is it a fridge in the room?", "Are there a fridge in the room?"],
@@ -134,11 +139,15 @@
       "explanation": "Лампа одна — there is, а «рядом с» — это next to целиком. В остальных вариантах are вместо is, потеряно to или пропущен глагол."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "The cat is under the table.",
+      "translation": "Кошка под столом."
+    },
+    {
+      "type": "type",
       "source": "На кухне есть окно?",
       "answer": "Is there a window in the kitchen?",
       "accept": ["Does the kitchen have a window?", "Has the kitchen got a window?"],
-      "distractors": ["are", "on", "it"],
       "explanation": "Вопрос начинается с Is there, а место уходит в конец. «На кухне» — in the kitchen: кухня — это помещение, мы внутри него, поэтому in, а не on."
     }
   ]

@@ -106,10 +106,14 @@
       ]
     },
     {
-      "type": "translate",
+      "type": "speak",
+      "text": "I need some information about the tour.",
+      "translation": "Мне нужна информация о туре."
+    },
+    {
+      "type": "type",
       "source": "Сколько денег тебе нужно?",
       "answer": "How much money do you need?",
-      "distractors": ["many", "are", "does"],
       "explanation": "Money — неисчисляемое, хотя по-русски «деньги» во множественном числе. Поэтому how much money, а не «how many money»."
     },
     {
@@ -142,6 +146,11 @@
       "accept": ["I have many friends in Moscow.", "I have lots of friends in Moscow.", "I've got a lot of friends in Moscow.", "I have got a lot of friends in Moscow.", "I've got many friends in Moscow."],
       "distractors": ["much", "friend", "any"],
       "explanation": "В утверждении естественнее всего a lot of. Friends можно посчитать, поэтому much здесь нельзя, а само слово стоит во множественном числе."
+    },
+    {
+      "type": "dictation",
+      "audio": "She drinks a lot of coffee.",
+      "translation": "Она пьёт много кофе."
     },
     {
       "type": "choice",

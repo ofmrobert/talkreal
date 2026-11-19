@@ -93,6 +93,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "The doctor who examined me was very kind.",
+      "translation": "Врач, который меня осматривал, был очень добрым."
+    },
+    {
       "type": "translate",
       "source": "Это квартира, которую мы хотим снять.",
       "answer": "This is the flat that we want to rent.",
@@ -131,11 +136,15 @@
       "explanation": "В первом предложении после that идёт новое подлежащее we, то есть that — дополнение, и его можно убрать: The film we watched. В двух других that само является подлежащим придаточного, без него предложение развалится."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "The flat that overlooks the park is expensive.",
+      "translation": "Квартира, которая выходит окнами на парк, стоит дорого."
+    },
+    {
+      "type": "type",
       "source": "Мы наняли человека, который говорит по-китайски.",
       "answer": "We hired a person who speaks Chinese.",
       "accept": ["We hired a person that speaks Chinese.", "We have hired a person who speaks Chinese.", "We've hired a person who speaks Chinese.", "We hired someone who speaks Chinese.", "We hired somebody who speaks Chinese.", "We've hired someone who speaks Chinese."],
-      "distractors": ["which", "speak", "he"],
       "explanation": "О человеке — who, а не which. Глагол в придаточном согласуется со словом person, поэтому speaks с окончанием -s; местоимение he после who не ставится."
     }
   ]

@@ -93,6 +93,11 @@
       "explanation": "Вопрос строится через did, а после did глагол теряет -d: Did you use to play…? Варианты с were и are относятся к конструкции «быть привыкшим» и к тому же требуют формы с -ing."
     },
     {
+      "type": "speak",
+      "text": "I used to play football every weekend.",
+      "translation": "Раньше я играл в футбол каждые выходные."
+    },
+    {
       "type": "gap",
       "sentence": "It took me a month to ___ driving on the left.",
       "translation": "Мне понадобился месяц, чтобы привыкнуть ездить по левой стороне.",
@@ -132,11 +137,15 @@
       "explanation": "Be used to + существительное: I'm used to spicy food — «я привык к острой еде». Если нужен глагол, он идёт с -ing (used to eating), а used всегда пишется с -d."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "You'll get used to living alone.",
+      "translation": "Ты привыкнешь жить один."
+    },
+    {
+      "type": "type",
       "source": "Раньше я не любил кофе.",
       "answer": "I didn't use to like coffee.",
       "accept": ["I did not use to like coffee.", "I never used to like coffee.", "I used not to like coffee."],
-      "distractors": ["used", "wasn't", "liking"],
       "explanation": "В отрицании работает didn't, и прошедшее время уже выражено в нём, поэтому пишем use без -d. Отрицание через wasn't сюда не подходит: оно относится к конструкции «не был привыкшим»."
     }
   ]

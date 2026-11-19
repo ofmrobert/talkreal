@@ -171,3 +171,26 @@ export const sessions = pgTable(
   },
   (t) => [index('sessions_user_idx').on(t.userId)],
 )
+
+/**
+ * Things a student should see again: an exercise they got wrong, or a word from a finished lesson.
+ * Each right answer moves the item to a higher box, and it comes back after a longer gap.
+ */
+export const reviewItems = pgTable(
+  'review_items',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    /** "e:<lesson>:<exercise fingerprint>" or "w:<lesson>:<english word>". */
+    key: text('key').notNull(),
+    lessonId: text('lesson_id').notNull(),
+    box: integer('box').notNull().default(0),
+    /** The student's local day from which the item is shown again. */
+    dueDay: date('due_day').notNull(),
+    /** How many times it was answered wrong in review. */
+    lapses: integer('lapses').notNull().default(0),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.key] }), index('review_items_due_idx').on(t.userId, t.dueDay)],
+)

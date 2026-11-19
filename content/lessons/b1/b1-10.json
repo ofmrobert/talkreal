@@ -96,6 +96,11 @@
       "explanation": "Give up без дополнения означает «сдаваться, опускать руки». Put off и turn down не могут стоять без дополнения, а give out значит «раздавать»."
     },
     {
+      "type": "speak",
+      "text": "I found out the truth.",
+      "translation": "Я узнал правду."
+    },
+    {
       "type": "choice",
       "prompt": "Что означает предложение «She turned down the job offer»?",
       "options": ["Она отклонила предложение о работе", "Она приняла предложение о работе", "Она отложила ответ на предложение", "Она потеряла работу"],
@@ -127,12 +132,16 @@
       "explanation": "We've run out of time — «у нас закончилось время». Третья форма глагола run — тоже run (не ran), а короткое of в беглой речи почти сливается с out."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Он бросил курить два года назад.",
       "answer": "He gave up smoking two years ago.",
       "accept": ["He quit smoking two years ago.", "He stopped smoking two years ago."],
-      "distractors": ["smoke", "to", "threw"],
       "explanation": "«Бросить привычку» — give up + глагол с -ing: gave up smoking. Глагол throw значит «бросать» только в прямом смысле — бросать предмет."
+    },
+    {
+      "type": "dictation",
+      "audio": "I'm looking forward to seeing you.",
+      "translation": "С нетерпением жду встречи с тобой."
     },
     {
       "type": "choice",

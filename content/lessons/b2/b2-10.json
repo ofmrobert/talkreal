@@ -112,6 +112,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "He suggested moving the meeting to Thursday.",
+      "translation": "Он предложил перенести встречу на четверг."
+    },
+    {
       "type": "choice",
       "prompt": "Нина сказала: «Я не возьму эти деньги». Как точно передать её слова?",
       "options": [
@@ -170,7 +175,12 @@
       "explanation": "Remind someone to do — напомнить кому-то что-то сделать. Форма на -ing здесь не используется, а частица to обязательна."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "She insisted on seeing the manager.",
+      "translation": "Она настояла на том, чтобы увидеть менеджера."
+    },
+    {
+      "type": "type",
       "source": "Она отрицала, что получила наше письмо на прошлой неделе.",
       "answer": "She denied receiving our email last week.",
       "accept": [
@@ -180,7 +190,6 @@
         "She denied that she had received our email last week.",
         "She denied that she received our email last week."
       ],
-      "distractors": ["refused", "to", "receive"],
       "explanation": "Deny + -ing: «отрицала, что получила» — denied receiving. Refused to receive означало бы «отказалась получать», то есть совсем другое."
     }
   ]

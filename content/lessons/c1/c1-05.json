@@ -111,6 +111,11 @@
       "explanation": "Предлог by указывает на исполнителя действия, значит значение пассивное: исследование заказали. Having commissioned означало бы, что исследование само что-то заказало."
     },
     {
+      "type": "speak",
+      "text": "The manuscript, having been revised by two editors, was submitted in March.",
+      "translation": "Рукопись, переработанная двумя редакторами, была сдана в марте."
+    },
+    {
       "type": "match",
       "pairs": [
         { "en": "to draft", "ru": "составлять черновик" },
@@ -166,7 +171,12 @@
       "explanation": "Договор читал я, поэтому подлежащим главной части должно стать I. Замена reading на having read или перевод в пассив ничего не меняют: читают по-прежнему «ошибки»."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "Having reviewed the findings, the committee approved the funding.",
+      "translation": "Изучив результаты, комитет одобрил финансирование."
+    },
+    {
+      "type": "type",
       "source": "Столкнувшись с критикой, министр отозвал законопроект.",
       "answer": "Faced with criticism, the minister withdrew the bill.",
       "accept": [
@@ -175,7 +185,6 @@
         "Faced with criticism, the minister withdrew the draft law.",
         "Confronted with criticism, the minister withdrew the bill."
       ],
-      "distractors": ["facing", "by", "law", "has"],
       "explanation": "Устойчивый оборот faced with означает «оказавшись перед лицом чего-то»; активный вариант facing обходится без предлога. Законопроект — bill; law — уже принятый закон."
     }
   ]

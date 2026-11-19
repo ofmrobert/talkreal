@@ -69,10 +69,9 @@
       "explanation": "My wife — это she, поэтому doesn't. Обратите внимание: после doesn't стоит like без -s."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Где ты живёшь?",
       "answer": "Where do you live?",
-      "distractors": ["are", "does", "lives"],
       "explanation": "После вопросительного слова идёт помощник do, затем подлежащее и глагол: Where do you live? Варианты «Where you live?» и «Where are you live?» — типичные ошибки."
     },
     {
@@ -92,6 +91,11 @@
         { "en": "to understand", "ru": "понимать" },
         { "en": "where", "ru": "где, куда" }
       ]
+    },
+    {
+      "type": "speak",
+      "text": "I don't eat meat.",
+      "translation": "Я не ем мясо."
     },
     {
       "type": "choice",
@@ -130,6 +134,11 @@
       "options": ["Do", "Does", "Are", "Is"],
       "answer": 0,
       "explanation": "Your parents — это they, поэтому do. Are не подходит: вопрос с глаголом действия (understand) всегда строится через do или does."
+    },
+    {
+      "type": "dictation",
+      "audio": "When do they finish work?",
+      "translation": "Когда они заканчивают работу?"
     },
     {
       "type": "translate",

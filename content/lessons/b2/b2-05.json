@@ -72,7 +72,7 @@
       "explanation": "Досаду на чужое поведение выражает wish + would. Настоящее и будущее время после wish не ставятся, а «I want that you…» — калька с русского «хочу, чтобы ты»."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Жаль, что я не могу позволить себе эту квартиру.",
       "answer": "I wish I could afford this flat.",
       "accept": [
@@ -80,7 +80,6 @@
         "If only I could afford this flat.",
         "If only I could afford this apartment."
       ],
-      "distractors": ["can", "would", "myself", "to"],
       "explanation": "Русское «жаль, что не могу» превращается в I wish I could: отрицание исчезает, а can сдвигается в прошедшее время. После afford слово myself не нужно — «себе» уже заложено в самом глаголе."
     },
     {
@@ -107,6 +106,11 @@
       ],
       "answer": 0,
       "explanation": "Сожаление о настоящем требует прошедшего времени, а для be — формы were во всех лицах. Wish + would о самом себе не употребляется."
+    },
+    {
+      "type": "speak",
+      "text": "I wish I had more free time.",
+      "translation": "Жаль, что у меня мало свободного времени."
     },
     {
       "type": "match",
@@ -164,6 +168,11 @@
       ],
       "distractors": ["don't", "as", "taking"],
       "explanation": "Сожаление о настоящем: don't после wish превращается в didn't. Выражение устойчивое — take for granted; предлог as здесь был бы калькой с русского «как должное»."
+    },
+    {
+      "type": "dictation",
+      "audio": "I wish you would answer my messages.",
+      "translation": "Отвечал бы ты уже на мои сообщения!"
     },
     {
       "type": "choice",

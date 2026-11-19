@@ -45,11 +45,10 @@
   ],
   "exercises": [
     {
-      "type": "translate",
+      "type": "type",
       "source": "Он, должно быть, на работе.",
       "answer": "He must be at work.",
       "accept": ["He must be at work now."],
-      "distractors": ["to", "in", "maybe"],
       "explanation": "Уверенный вывод передаёт must + be, без to. «На работе» — at work, без артикля; предлог in здесь не используется."
     },
     {
@@ -94,6 +93,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "She must be in a meeting.",
+      "translation": "Должно быть, она на совещании."
+    },
+    {
       "type": "choice",
       "prompt": "Выберите правильный перевод: «Не может быть, чтобы это было правдой».",
       "options": ["It mustn't be true.", "It can't be true.", "It can't to be true.", "It doesn't must be true."],
@@ -130,6 +134,11 @@
       "options": ["They must be working late.", "They must working late.", "They mustn't be working late.", "They must be work late."],
       "answer": 0,
       "explanation": "Вывод о действии, которое идёт прямо сейчас, строится как must be + глагол с -ing. Пропустить be или убрать -ing нельзя."
+    },
+    {
+      "type": "dictation",
+      "audio": "She might not know about the meeting.",
+      "translation": "Возможно, она не знает о встрече."
     },
     {
       "type": "translate",

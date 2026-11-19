@@ -112,6 +112,11 @@
       "explanation": "После only after инверсия происходит в главной части, а не в придаточном: сначала «the audit was completed» с обычным порядком слов, затем did we realise. Частая ошибка — переставлять слова сразу после only after."
     },
     {
+      "type": "speak",
+      "text": "Never have I seen such a well-argued proposal.",
+      "translation": "Никогда я не видел настолько убедительно обоснованного предложения."
+    },
+    {
       "type": "match",
       "pairs": [
         { "en": "hardly", "ru": "едва" },
@@ -122,7 +127,7 @@
       ]
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Редко мы получаем такие подробные отзывы от клиентов.",
       "answer": "Seldom do we receive such detailed feedback from our clients.",
       "accept": [
@@ -132,7 +137,6 @@
         "Seldom do we get such detailed feedback from our clients.",
         "Seldom do we receive such detailed feedback from our customers."
       ],
-      "distractors": ["feedbacks", "so", "receives", "a"],
       "explanation": "В Present Simple для инверсии нужен помощник do: seldom do we receive. Feedback — неисчисляемое существительное: у него нет множественного числа и перед ним не ставится артикль a."
     },
     {
@@ -167,6 +171,11 @@
       ],
       "answer": 0,
       "explanation": "В инверсии little означает не «немного», а «совсем не»: мы и не догадывались. Оборот типичен для повествования, когда рассказчик уже знает, чем всё закончилось."
+    },
+    {
+      "type": "dictation",
+      "audio": "On no account should passwords be sent by email.",
+      "translation": "Пароли ни в коем случае нельзя отправлять по электронной почте."
     },
     {
       "type": "translate",

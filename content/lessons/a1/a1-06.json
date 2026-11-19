@@ -94,6 +94,11 @@
       "explanation": "My husband cooks dinner — ужин готовит муж. Обратите внимание на формы: husband cooks с -s, а после I глагол без окончания — I wash."
     },
     {
+      "type": "speak",
+      "text": "She works in a hospital.",
+      "translation": "Она работает в больнице."
+    },
+    {
       "type": "gap",
       "sentence": "Ilya ___ football on TV with his friends.",
       "translation": "Илья смотрит футбол по телевизору с друзьями.",
@@ -102,10 +107,9 @@
       "explanation": "Ilya — это he, а после -ch окончание пишется как -es: watches. Вариант «watchs» невозможно даже произнести."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Мой сын учится в Казани.",
       "answer": "My son studies in Kazan.",
-      "distractors": ["study", "is", "at"],
       "explanation": "My son — это he, поэтому studies: y меняется на -ies. Перед названием города стоит in, а не at."
     },
     {
@@ -130,6 +134,11 @@
       "options": ["work", "works", "is work", "working"],
       "answer": 0,
       "explanation": "Карина и её брат — это два человека, то есть they, поэтому глагол без -s. Ловушка в том, что рядом с глаголом стоит слово brother в единственном числе."
+    },
+    {
+      "type": "dictation",
+      "audio": "He has a meeting every morning.",
+      "translation": "У него совещание каждое утро."
     },
     {
       "type": "translate",

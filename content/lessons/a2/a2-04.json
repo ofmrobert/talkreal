@@ -94,6 +94,11 @@
       "explanation": "Good → better → the best: это исключение, форм «the goodest» и «the most good» нет. Артикль the перед высшей степенью обязателен — русскоговорящие часто его пропускают."
     },
     {
+      "type": "speak",
+      "text": "The metro is faster than the bus.",
+      "translation": "Метро быстрее автобуса."
+    },
+    {
       "type": "choice",
       "prompt": "Найдите предложение без ошибки.",
       "options": ["The traffic is worse today than yesterday.", "The traffic is more bad today than yesterday.", "The traffic is badder today than yesterday.", "The traffic is worse today then yesterday."],
@@ -132,12 +137,16 @@
       "explanation": "Far — исключение: far → further → the furthest. Слово than показывает, что нужна сравнительная степень, а не высшая."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Мой брат старше меня.",
       "answer": "My brother is older than me.",
       "accept": ["My brother is older than I am.", "My brother is older than I.", "My brother's older than me."],
-      "distractors": ["more", "then", "old"],
       "explanation": "Old — короткое слово: older, без more. В русском можно обойтись без «чем» («старше меня»), но в английском than обязательно."
+    },
+    {
+      "type": "dictation",
+      "audio": "It was the worst holiday of my life.",
+      "translation": "Это был худший отпуск в моей жизни."
     },
     {
       "type": "choice",

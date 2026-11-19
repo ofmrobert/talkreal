@@ -106,7 +106,12 @@
       "explanation": "That said признаёт минус и тут же добавляет противовес — плюс. Moreover усилило бы критику, therefore ввело бы следствие, а in other words — пересказ той же мысли."
     },
     {
-      "type": "translate",
+      "type": "speak",
+      "text": "By and large, the reviews have been positive.",
+      "translation": "В целом отзывы положительные."
+    },
+    {
+      "type": "type",
       "source": "Более того, расходы выросли на треть.",
       "answer": "Moreover, costs have risen by a third.",
       "accept": [
@@ -117,7 +122,6 @@
         "Furthermore, costs have risen by a third.",
         "What is more, costs have risen by a third."
       ],
-      "distractors": ["on", "raised", "than", "for"],
       "explanation": "Величина изменения вводится предлогом by: risen by a third; on — калька с русского «на треть». Расходы растут сами, поэтому rise (risen), а не переходный raise."
     },
     {
@@ -164,6 +168,11 @@
       ],
       "answer": 0,
       "explanation": "That said близко к «при этом, однако»: мысль поворачивает в другую сторону. Moreover продолжает ту же линию; если их перепутать, логика текста перевернётся."
+    },
+    {
+      "type": "dictation",
+      "audio": "Nevertheless, we intend to proceed.",
+      "translation": "Тем не менее мы намерены продолжать."
     },
     {
       "type": "translate",

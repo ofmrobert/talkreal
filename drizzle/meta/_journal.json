@@ -36,6 +36,13 @@
       "when": 1794965649742,
       "tag": "0004_wet_blindfold",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795125088625,
+      "tag": "0005_loud_scream",
+      "breakpoints": true
     }
   ]
 }

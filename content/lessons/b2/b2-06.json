@@ -114,6 +114,11 @@
       ]
     },
     {
+      "type": "speak",
+      "text": "You should have told me about the problem earlier.",
+      "translation": "Тебе следовало сказать мне о проблеме раньше."
+    },
+    {
       "type": "gap",
       "sentence": "I can't find the invoice. I ___ it at the client's office, but I'm not sure.",
       "translation": "Не могу найти счёт. Возможно, я оставил его в офисе клиента, но я не уверен.",
@@ -122,7 +127,7 @@
       "explanation": "Слова I'm not sure показывают слабую уверенность — это might have. Must have означает почти полную уверенность и с «я не уверен» не сочетается."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Он, должно быть, неправильно понял моё письмо.",
       "answer": "He must have misunderstood my email.",
       "accept": [
@@ -130,7 +135,6 @@
         "He must have misunderstood my letter.",
         "He must have misunderstood my message."
       ],
-      "distractors": ["should", "had", "misunderstand", "be"],
       "explanation": "«Должно быть» о прошлом — must have + третья форма: misunderstood. Дословный перевод с «must be» здесь не работает: must be описывает настоящее."
     },
     {
@@ -165,6 +169,11 @@
       ],
       "answer": 0,
       "explanation": "Формула одна для всех модальных глаголов: модальный + have + третья форма. Had после модального глагола не бывает, а частица to перед have не ставится."
+    },
+    {
+      "type": "dictation",
+      "audio": "You could have warned me!",
+      "translation": "Мог бы и предупредить меня!"
     },
     {
       "type": "translate",

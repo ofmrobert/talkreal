@@ -93,6 +93,11 @@
       "explanation": "После didn't всегда начальная форма глагола. Прошедшее время уже показано в did, поэтому -ed не нужно."
     },
     {
+      "type": "speak",
+      "text": "I worked yesterday.",
+      "translation": "Я работал вчера."
+    },
+    {
       "type": "choice",
       "prompt": "Как правильно написать прошедшую форму глагола study?",
       "options": ["studyed", "studied", "studed", "studded"],
@@ -131,11 +136,15 @@
       "explanation": "В вопросе и отрицании работает did, а глагол стоит без -ed: Did she like…? She didn't like…"
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "Did you watch the match?",
+      "translation": "Ты смотрел матч?"
+    },
+    {
+      "type": "type",
       "source": "Я закончил работу два часа назад.",
       "answer": "I finished work two hours ago.",
       "accept": ["I finished my work two hours ago.", "I finished working two hours ago."],
-      "distractors": ["finish", "before", "last"],
       "explanation": "Ago ставится после отрезка времени: two hours ago. Русское «назад» переводится именно так, а не before."
     }
   ]

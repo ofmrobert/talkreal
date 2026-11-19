@@ -103,7 +103,7 @@
       "explanation": "После would rather идёт начальная форма глагола без to, а отрицание образуется простым not: I'd rather not discuss. Это вежливый и твёрдый способ уйти от темы."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Она должна была выступать первой, но опоздала.",
       "answer": "She was supposed to speak first, but she arrived late.",
       "accept": [
@@ -113,8 +113,12 @@
         "She was meant to speak first, but she arrived late.",
         "She was supposed to present first, but she arrived late."
       ],
-      "distractors": ["must", "should", "the", "suppose"],
       "explanation": "Русское «должна была» в значении «так было запланировано, но не случилось» — это was supposed to. У must нет формы прошедшего времени, а порядковое first в роли наречия употребляется без артикля."
+    },
+    {
+      "type": "speak",
+      "text": "I'd rather not discuss salaries in front of the whole team.",
+      "translation": "Я бы предпочёл не обсуждать зарплаты при всей команде."
     },
     {
       "type": "match",
@@ -171,6 +175,11 @@
       ],
       "distractors": ["then", "going", "better", "will"],
       "explanation": "После would rather оба глагола стоят в начальной форме без to: stay… than go. Сравнение вводится словом than; then («потом») — частая орфографическая ошибка."
+    },
+    {
+      "type": "dictation",
+      "audio": "The figures may well be revised next quarter.",
+      "translation": "Вполне возможно, что в следующем квартале цифры пересмотрят."
     },
     {
       "type": "gap",

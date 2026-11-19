@@ -69,3 +69,10 @@ export function streakAfterActivity(streak: number, lastActiveDay: string | null
 
   return { streak: next, extended, freezeUsed, freezeEarned, freezes: left }
 }
+
+/** The day `days` days after the given one. */
+export function dayAfter(day: string, days = 1): string {
+  const d = new Date(`${day}T12:00:00Z`)
+  d.setUTCDate(d.getUTCDate() + days)
+  return d.toISOString().slice(0, 10)
+}

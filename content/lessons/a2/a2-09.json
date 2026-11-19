@@ -45,11 +45,10 @@
   ],
   "exercises": [
     {
-      "type": "translate",
+      "type": "type",
       "source": "Тебе следует больше спать.",
       "answer": "You should sleep more.",
       "accept": ["You should get more sleep."],
-      "distractors": ["to", "sleeping", "are"],
       "explanation": "После should глагол идёт без to: should sleep. More стоит после глагола, а не перед ним, как русское «больше спать»."
     },
     {
@@ -93,6 +92,11 @@
       "explanation": "Should не меняется по лицам, а глагол после него стоит в начальной форме без to и без -s: he should try."
     },
     {
+      "type": "speak",
+      "text": "You should see a doctor.",
+      "translation": "Тебе стоит сходить к врачу."
+    },
+    {
       "type": "gap",
       "sentence": "The museum is free today, so we ___ buy tickets.",
       "translation": "Музей сегодня бесплатный, поэтому нам не нужно покупать билеты.",
@@ -131,6 +135,11 @@
       "accept": ["Do I need to get up at six tomorrow?", "Must I get up at six tomorrow?", "Do I have to wake up at six tomorrow?", "Do I have to get up at 6 tomorrow?", "Do I have to get up at six o'clock tomorrow?"],
       "distractors": ["am", "has", "having"],
       "explanation": "Вопрос с have to строится через do, как с обычным глаголом: Do I have to…? Вариант «Have I to…?» в современном английском не используется."
+    },
+    {
+      "type": "dictation",
+      "audio": "You don't have to come early.",
+      "translation": "Тебе не обязательно приходить рано."
     },
     {
       "type": "choice",

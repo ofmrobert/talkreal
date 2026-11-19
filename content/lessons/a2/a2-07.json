@@ -93,6 +93,11 @@
       "explanation": "In 2019 — конкретное время в прошлом, поэтому только Past Simple: went. Present Perfect не сочетается с указанием на то, когда это было."
     },
     {
+      "type": "speak",
+      "text": "I have visited Paris twice.",
+      "translation": "Я был в Париже дважды."
+    },
+    {
       "type": "translate",
       "source": "Ты когда-нибудь видел этот фильм?",
       "answer": "Have you ever seen this film?",
@@ -124,12 +129,16 @@
       "explanation": "В утверждении «уже» — это already, и оно стоит между has и глаголом. Yet на этом месте не бывает: оно ставится в конец вопросов и отрицаний."
     },
     {
-      "type": "translate",
+      "type": "type",
       "source": "Мы никогда не были в Японии.",
       "answer": "We have never been to Japan.",
       "accept": ["We've never been to Japan."],
-      "distractors": ["in", "were", "not"],
       "explanation": "О поездках говорят have been to, а не «in»: предлог to показывает, что вы туда ездили. Never не требует not, в отличие от русского «никогда не»."
+    },
+    {
+      "type": "dictation",
+      "audio": "Has the taxi arrived yet?",
+      "translation": "Такси уже приехало?"
     },
     {
       "type": "choice",

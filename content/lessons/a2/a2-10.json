@@ -110,6 +110,11 @@
       "explanation": "Вопрос о действии в конкретный момент прошлого — Past Continuous: were you doing. С you всегда were, даже если вы обращаетесь к одному человеку."
     },
     {
+      "type": "speak",
+      "text": "At eight o'clock I was having dinner.",
+      "translation": "В восемь часов я ужинал."
+    },
+    {
       "type": "gap",
       "sentence": "While I ___ a shower, someone rang the doorbell.",
       "translation": "Пока я принимал душ, кто-то позвонил в дверь.",
@@ -148,7 +153,12 @@
       "explanation": "Was making — действие уже шло в момент, когда я пришёл. Если бы жена начала заваривать чай после моего прихода, было бы made."
     },
     {
-      "type": "translate",
+      "type": "dictation",
+      "audio": "When the film ended, we went home.",
+      "translation": "Когда фильм закончился, мы пошли домой."
+    },
+    {
+      "type": "type",
       "source": "Телефон зазвонил, когда я спал.",
       "answer": "The phone rang when I was sleeping.",
       "accept": [
@@ -160,7 +170,6 @@
         "When I was sleeping, the phone rang.",
         "While I was sleeping, the phone rang."
       ],
-      "distractors": ["ringed", "slept", "were"],
       "explanation": "Сон — длительный фон (was sleeping), звонок — короткое событие (rang). Ring — неправильный глагол: rang, а не «ringed»."
     }
   ]
