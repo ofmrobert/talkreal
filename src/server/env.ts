@@ -1,14 +1,4 @@
-import { randomBytes } from 'node:crypto'
-
 const isProduction = process.env.NODE_ENV === 'production'
-
-function authSecret(): string {
-  if (process.env.AUTH_SECRET) return process.env.AUTH_SECRET
-  if (!isProduction) return 'dev-only-secret'
-  // Without a configured secret, login codes stop working after each restart. Safe, but set AUTH_SECRET.
-  console.warn('AUTH_SECRET is not set: using a temporary one for this run.')
-  return randomBytes(32).toString('hex')
-}
 
 /** All server settings come from environment variables; nothing secret lives in the code. */
 export const env = {
@@ -29,8 +19,6 @@ export const env = {
     hasHash: raw.includes('#'),
   }))(process.env.DATABASE_URL ?? ''),
   databaseSsl: process.env.DATABASE_SSL ?? '',
-
-  authSecret: authSecret(),
 
   /** The public address of the app, used in reminder links. */
   appUrl: (process.env.APP_URL ?? 'https://talk-real.ru').replace(/\/+$/, ''),

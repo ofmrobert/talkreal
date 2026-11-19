@@ -1,16 +1,46 @@
-import { createHmac, randomInt, timingSafeEqual } from 'node:crypto'
+import { createHmac, randomBytes, randomInt, timingSafeEqual } from 'node:crypto'
 import { and, desc, eq, gt, isNull, sql } from 'drizzle-orm'
 import { db } from '../db/client'
-import { authCodes } from '../db/schema'
-import { env } from '../env'
+import { appSettings, authCodes } from '../db/schema'
 
 const CODE_TTL_MS = 10 * 60 * 1000
 const RESEND_WAIT_MS = 60 * 1000
 const MAX_CODES_PER_HOUR = 5
 const MAX_ATTEMPTS = 5
+/**
+ * A code that was just used still works for this long. Phones sometimes send the same code
+ * twice (autofill, a double tap, a retry on a weak connection): the second request must log
+ * the student in too, not tell them the code is no longer valid.
+ */
+const REUSE_GRACE_MS = 2 * 60 * 1000
 
-function hashCode(email: string, code: string): string {
-  return createHmac('sha256', env.authSecret).update(`${email}:${code}`).digest('hex')
+const SECRET_KEY = 'auth_secret'
+let secret: Promise<string> | null = null
+
+/**
+ * The secret that codes are hashed with. AUTH_SECRET if it is set; otherwise one is generated
+ * once and kept in the database, so codes keep working when the server restarts.
+ */
+async function loadSecret(): Promise<string> {
+  if (process.env.AUTH_SECRET) return process.env.AUTH_SECRET
+  await db
+    .insert(appSettings)
+    .values({ key: SECRET_KEY, value: randomBytes(32).toString('hex') })
+    .onConflictDoNothing()
+  const [row] = await db.select().from(appSettings).where(eq(appSettings.key, SECRET_KEY)).limit(1)
+  return row.value
+}
+
+function authSecret(): Promise<string> {
+  secret ??= loadSecret().catch((err) => {
+    secret = null
+    throw err
+  })
+  return secret
+}
+
+async function hashCode(email: string, code: string): Promise<string> {
+  return createHmac('sha256', await authSecret()).update(`${email}:${code}`).digest('hex')
 }
 
 export type IssueResult = { ok: true; code: string } | { ok: false; error: 'wait' | 'too_many'; retryAfter: number }
@@ -38,7 +68,7 @@ export async function issueCode(email: string): Promise<IssueResult> {
   const code = String(randomInt(0, 1_000_000)).padStart(6, '0')
   await db.insert(authCodes).values({
     email,
-    codeHash: hashCode(email, code),
+    codeHash: await hashCode(email, code),
     expiresAt: new Date(Date.now() + CODE_TTL_MS),
   })
   return { ok: true, code }
@@ -46,20 +76,23 @@ export async function issueCode(email: string): Promise<IssueResult> {
 
 export type VerifyResult = 'ok' | 'wrong' | 'expired' | 'too_many_attempts'
 
-/** Checks a code against the most recent one issued for the email. A code works only once. */
+/** Checks a code against the most recent one issued for the email. */
 export async function verifyCode(email: string, code: string): Promise<VerifyResult> {
   const [latest] = await db
     .select()
     .from(authCodes)
-    .where(and(eq(authCodes.email, email), isNull(authCodes.consumedAt)))
+    .where(eq(authCodes.email, email))
     .orderBy(desc(authCodes.createdAt))
     .limit(1)
 
-  if (!latest || latest.expiresAt.getTime() < Date.now()) return 'expired'
+  if (!latest) return 'expired'
+  const usedRecently = latest.consumedAt !== null && Date.now() - latest.consumedAt.getTime() < REUSE_GRACE_MS
+  if (latest.consumedAt !== null && !usedRecently) return 'expired'
+  if (latest.consumedAt === null && latest.expiresAt.getTime() < Date.now()) return 'expired'
   if (latest.attempts >= MAX_ATTEMPTS) return 'too_many_attempts'
 
   const expected = Buffer.from(latest.codeHash, 'hex')
-  const given = Buffer.from(hashCode(email, code), 'hex')
+  const given = Buffer.from(await hashCode(email, code), 'hex')
   if (expected.length !== given.length || !timingSafeEqual(expected, given)) {
     await db
       .update(authCodes)
@@ -68,6 +101,10 @@ export async function verifyCode(email: string, code: string): Promise<VerifyRes
     return 'wrong'
   }
 
-  await db.update(authCodes).set({ consumedAt: new Date() }).where(eq(authCodes.id, latest.id))
+  // Marks the code as used. If another request did so a moment ago, that is fine: see REUSE_GRACE_MS.
+  await db
+    .update(authCodes)
+    .set({ consumedAt: new Date() })
+    .where(and(eq(authCodes.id, latest.id), isNull(authCodes.consumedAt)))
   return 'ok'
 }

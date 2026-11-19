@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, type FormEvent } from 'react'
+import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link, Navigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthContext'
@@ -11,13 +11,29 @@ import { load, save } from '../lib/storage'
 const inputClass =
   'min-h-14 w-full rounded-2xl border-2 border-ink/10 bg-white px-4 text-lg font-bold text-ink outline-none select-text focus:border-coral'
 
+/** A code is valid for ten minutes; a login that was started is remembered a little less long. */
+const PENDING_MS = 9 * 60 * 1000
+
+/**
+ * The email a code was sent to, if that was a moment ago. On a phone the student leaves the app
+ * to read the email, and the phone may reload the page: they must come back to the code screen.
+ */
+function pendingEmail(): string {
+  try {
+    const pending = JSON.parse(load('pendingLogin') ?? 'null')
+    return pending && Date.now() - pending.at < PENDING_MS ? String(pending.email) : ''
+  } catch {
+    return ''
+  }
+}
+
 /** Email → 6-digit code → logged in. New emails get an account automatically. */
 export default function Login() {
   const { t, i18n } = useTranslation()
   const { user, refresh } = useAuth()
 
-  const [step, setStep] = useState<'email' | 'code'>('email')
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState(pendingEmail)
+  const [step, setStep] = useState<'email' | 'code'>(() => (pendingEmail() ? 'code' : 'email'))
   const [code, setCode] = useState('')
   const [devCode, setDevCode] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -25,6 +41,8 @@ export default function Login() {
   const [resendIn, setResendIn] = useState(0)
   // Agreement to the privacy policy. Remembered on this phone so returning students tick it once.
   const [consent, setConsent] = useState(() => load('consent') === '1')
+  /** True while a code is being checked, so the same code is never sent twice at once. */
+  const verifying = useRef(false)
 
   useEffect(() => {
     if (resendIn <= 0) return
@@ -56,9 +74,13 @@ export default function Login() {
       setCode('')
       setStep('code')
       setResendIn(60)
+      save('pendingLogin', JSON.stringify({ email, at: Date.now() }))
     } catch (err) {
       // "wait" means a code was sent less than a minute ago: let the student enter it.
-      if (err instanceof ApiError && err.code === 'wait') setStep('code')
+      if (err instanceof ApiError && err.code === 'wait') {
+        setStep('code')
+        save('pendingLogin', JSON.stringify({ email, at: Date.now() }))
+      }
       showError(err)
     } finally {
       setBusy(false)
@@ -66,15 +88,27 @@ export default function Login() {
   }
 
   async function verify(value: string) {
+    if (verifying.current) return
+    verifying.current = true
     setBusy(true)
     setError(null)
     try {
       await api('/auth/verify', { email, code: value, lang: i18n.language, consent })
-      await refresh()
+      save('pendingLogin', 'null')
+      // The login is kept in a cookie. If the browser refused it, say so instead of showing this screen again.
+      const kept = await api('/me').then(
+        () => true,
+        (err) => !(err instanceof ApiError && err.status === 401),
+      )
+      if (kept) await refresh()
+      else setError(t('login.errors.cookies'))
     } catch (err) {
       setCode('')
+      // A new account needs the privacy tick, which is on the first screen.
+      if (err instanceof ApiError && err.code === 'consent_required') setStep('email')
       showError(err)
     } finally {
+      verifying.current = false
       setBusy(false)
     }
   }
@@ -184,6 +218,7 @@ export default function Login() {
                 onClick={() => {
                   setStep('email')
                   setError(null)
+                  save('pendingLogin', 'null')
                 }}
               >
                 {t('login.changeEmail')}

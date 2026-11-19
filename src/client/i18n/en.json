@@ -128,7 +128,8 @@
       "network": "No internet connection.",
       "server_error": "Something went wrong. Try again.",
       "consent_required": "To create an account, please tick the privacy policy box.",
-      "telegram_unavailable": "Telegram is not available right now. Please try later."
+      "telegram_unavailable": "Telegram is not available right now. Please try later.",
+      "cookies": "Your browser did not keep the login. Allow cookies for this site (or leave private mode) and try again."
     },
     "telegram": "Log in with Telegram",
     "telegramWaiting": "Press Start in Telegram and come back here. You'll be logged in automatically.",

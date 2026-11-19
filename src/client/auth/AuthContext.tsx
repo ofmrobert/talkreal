@@ -41,11 +41,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       save('user', JSON.stringify(me))
       setUser(me)
     } catch (err) {
-      if (err instanceof ApiError && err.code === 'network') {
-        setUser(cachedUser())
-      } else {
+      if (err instanceof ApiError && err.status === 401) {
         save('user', 'null')
         setUser(null)
+      } else {
+        // No connection, or the server is restarting: the student is still logged in.
+        setUser(cachedUser())
       }
     }
   }, [])

@@ -24,11 +24,18 @@ export async function findUserIdByEmail(email: string): Promise<string | null> {
  * Accounts are only created after the student ticked the consent box, so the moment is recorded.
  */
 export async function createUserWithEmail(email: string, locale: string): Promise<string> {
-  return db.transaction(async (tx) => {
-    const [user] = await tx.insert(users).values({ locale, consentAt: new Date() }).returning({ id: users.id })
-    await tx.insert(userPii).values({ userId: user.id, email: normalizeEmail(email) })
-    return user.id
-  })
+  try {
+    return await db.transaction(async (tx) => {
+      const [user] = await tx.insert(users).values({ locale, consentAt: new Date() }).returning({ id: users.id })
+      await tx.insert(userPii).values({ userId: user.id, email: normalizeEmail(email) })
+      return user.id
+    })
+  } catch (err) {
+    // The same person's second request created the account a moment earlier: use that one.
+    const existing = await findUserIdByEmail(email)
+    if (existing) return existing
+    throw err
+  }
 }
 
 export async function findUserIdByTelegramId(telegramId: string): Promise<string | null> {
@@ -45,11 +52,17 @@ export async function createUserWithTelegram(
   displayName: string | null,
   locale: string,
 ): Promise<string> {
-  return db.transaction(async (tx) => {
-    const [user] = await tx.insert(users).values({ locale, consentAt: new Date() }).returning({ id: users.id })
-    await tx.insert(userPii).values({ userId: user.id, telegramId, displayName })
-    return user.id
-  })
+  try {
+    return await db.transaction(async (tx) => {
+      const [user] = await tx.insert(users).values({ locale, consentAt: new Date() }).returning({ id: users.id })
+      await tx.insert(userPii).values({ userId: user.id, telegramId, displayName })
+      return user.id
+    })
+  } catch (err) {
+    const existing = await findUserIdByTelegramId(telegramId)
+    if (existing) return existing
+    throw err
+  }
 }
 
 /** Where the bot can write to this student, if they have connected Telegram. */
