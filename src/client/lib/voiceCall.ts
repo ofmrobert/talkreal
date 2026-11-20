@@ -5,7 +5,8 @@
 export type EndReason = 'hangup' | 'limit' | 'max_duration' | 'unavailable' | 'provider_error' | 'provider_closed' | 'mic_denied' | 'connection'
 
 export interface CallEvents {
-  onReady(remainingSeconds: number): void
+  /** callId identifies this call when asking for the teacher's review afterwards. */
+  onReady(remainingSeconds: number, callId: string | null): void
   onTranscript(role: 'student' | 'teacher', text: string): void
   onTurnComplete(): void
   onTick(remainingSeconds: number): void
@@ -26,7 +27,12 @@ export class VoiceCall {
   private ended = false
   muted = false
 
-  constructor(private teacher: string, private events: CallEvents) {}
+  constructor(
+    private teacher: string,
+    private events: CallEvents,
+    /** What the call is about: a role-play or a lesson to practise. Empty = free conversation. */
+    private topic: { scenario?: string; lessonId?: string } = {},
+  ) {}
 
   /** Must be called from a tap: phones only allow the microphone and audio after a user gesture. */
   async start(): Promise<void> {
@@ -65,7 +71,7 @@ export class VoiceCall {
 
     socket.onopen = () =>
       socket.send(
-        JSON.stringify({ type: 'start', teacher: this.teacher, tz: Intl.DateTimeFormat().resolvedOptions().timeZone }),
+        JSON.stringify({ type: 'start', teacher: this.teacher, tz: Intl.DateTimeFormat().resolvedOptions().timeZone, ...this.topic }),
       )
     socket.onmessage = (event) => {
       if (event.data instanceof ArrayBuffer) return this.play(event.data)
@@ -74,7 +80,7 @@ export class VoiceCall {
         case 'ready':
           this.live = true
           this.outputRate = message.sampleRate ?? 24_000
-          this.events.onReady(message.remainingSeconds)
+          this.events.onReady(message.remainingSeconds, message.callId ?? null)
           break
         case 'transcript':
           this.events.onTranscript(message.role, message.text)

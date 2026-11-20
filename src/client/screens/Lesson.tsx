@@ -81,7 +81,16 @@ export default function Lesson() {
   }
 
   if (stage === 'intro') return <LessonIntro lesson={lesson} onStart={() => setStage('play')} onClose={leave} />
-  if (stage === 'summary' && result) return <LessonSummary result={result} seconds={seconds} onContinue={leave} />
+  if (stage === 'summary' && result) {
+    return (
+      <LessonSummary
+        result={result}
+        seconds={seconds}
+        onContinue={leave}
+        link={{ label: t('summary.practise'), onClick: () => navigate(`/talk?lesson=${lesson.id}`, { replace: true }) }}
+      />
+    )
+  }
 
   return (
     <ExercisePlayer

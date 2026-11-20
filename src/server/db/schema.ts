@@ -1,4 +1,5 @@
 import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import type { CallReport } from '../../shared/report'
 
 const timestamptz = (name: string) => timestamp(name, { withTimezone: true })
 
@@ -153,6 +154,13 @@ export const voiceSessions = pgTable(
     endedAt: timestamptz('ended_at'),
     seconds: integer('seconds').notNull().default(0),
     endReason: text('end_reason'),
+    /** The role-play that was chosen, if any, and the lesson the call practised, if any. */
+    scenario: text('scenario'),
+    lessonId: text('lesson_id'),
+    /** The teacher's written review of the call (see src/shared/report.ts). The conversation itself is not kept. */
+    report: jsonb('report').$type<CallReport>(),
+    /** 'none' | 'pending' | 'ready' | 'failed' */
+    reportStatus: text('report_status').notNull().default('none'),
   },
   (t) => [index('voice_sessions_user_idx').on(t.userId, t.startedAt)],
 )
@@ -182,7 +190,7 @@ export const reviewItems = pgTable(
     userId: uuid('user_id')
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
-    /** "e:<lesson>:<exercise fingerprint>" or "w:<lesson>:<english word>". */
+    /** "e:<lesson>:<exercise fingerprint>", "w:<lesson>:<english word>" or "c:<fingerprint>" (a word from a call). */
     key: text('key').notNull(),
     lessonId: text('lesson_id').notNull(),
     box: integer('box').notNull().default(0),
@@ -190,6 +198,8 @@ export const reviewItems = pgTable(
     dueDay: date('due_day').notNull(),
     /** How many times it was answered wrong in review. */
     lapses: integer('lapses').notNull().default(0),
+    /** For a word that does not come from a lesson (key "c:…", from a call review): the word itself. */
+    data: jsonb('data').$type<{ en: string; ru: string; example?: string }>(),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.key] }), index('review_items_due_idx').on(t.userId, t.dueDay)],

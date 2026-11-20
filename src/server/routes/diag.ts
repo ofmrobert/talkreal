@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 import { dbStatus } from '../db/client'
 import { env } from '../env'
 import { emailConfigured } from '../auth/email'
+import { askJson } from '../ai/text'
 import { geminiProvider } from '../voice/gemini'
 
 /**
@@ -71,6 +72,23 @@ diagRoutes.get('/voice', async (c) => {
       error: err instanceof Error ? err.message : String(err),
       modelList: { status: modelList.status, sample: 'sample' in modelList ? modelList.sample : modelList.error },
     })
+  }
+})
+
+/** Asks the text AI (call reviews, chat, answer checking) one tiny question and reports what happened. */
+diagRoutes.get('/text', async (c) => {
+  if (!env.showCodes) return c.json({ error: 'not_found' }, 404)
+  const started = Date.now()
+  try {
+    const answer = await askJson<{ word?: string }>({
+      system: 'Return the JSON object {"word": "hello"} and nothing else.',
+      turns: [{ role: 'student', text: 'Go.' }],
+      temperature: 0,
+      mock: () => ({ word: 'hello (stand-in AI)' }),
+    })
+    return c.json({ ok: true, model: env.ai.textModel, ms: Date.now() - started, answer })
+  } catch (err) {
+    return c.json({ ok: false, model: env.ai.textModel, ms: Date.now() - started, error: err instanceof Error ? err.message : String(err) })
   }
 })
 

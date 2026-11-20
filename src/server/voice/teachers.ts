@@ -1,4 +1,7 @@
+import type { Lesson } from '../../shared/lesson'
 import type { Level } from '../../shared/levels'
+import type { ScenarioId } from '../../shared/scenarios'
+import { lessonPrompt, scenarioPrompt } from './scenarios'
 import type { TeacherId } from '../../shared/teachers'
 
 interface Persona {
@@ -48,9 +51,44 @@ export function teacherVoice(teacher: TeacherId): string {
   return PERSONAS[teacher].voice
 }
 
-/** The instructions the AI receives before the call starts. */
-export function teacherPrompt(teacher: TeacherId, level: Level): string {
+/** What a conversation is about: a role-play, a lesson to practise, or nothing in particular. */
+export interface Focus {
+  scenario?: ScenarioId
+  lesson?: Lesson
+}
+
+function focusPrompt(focus: Focus): string {
+  if (focus.lesson) return lessonPrompt(focus.lesson)
+  if (focus.scenario) return scenarioPrompt(focus.scenario)
+  return ''
+}
+
+/** The instructions the AI receives for a written chat. Its answers come back as JSON. */
+export function chatPrompt(teacher: TeacherId, level: Level, focus: Focus = {}): string {
   const persona = PERSONAS[teacher]
+  const special = focusPrompt(focus)
+  return `You are ${persona.name}, an English teacher in the Talkreal app. You are chatting in writing with one adult student whose native language is Russian.
+
+${persona.character}
+
+${LEVEL_GUIDE[level].replace(/Speak/g, 'Write')}
+
+How to run the chat:
+- This is writing practice. Keep each reply to one to three short sentences and usually end with a question, so the student keeps writing.
+- Write in English. If the student writes in Russian or is clearly lost, add one short hint in Russian, then continue in English.
+- Look at the student's LAST message only. If it has a real mistake in grammar, word choice or spelling, put the corrected sentence in "correction". Ignore missing capital letters and final punctuation. If the message is fine, "correction" is null.
+- If the student goes off-topic or asks for something unrelated to learning English, steer back kindly.
+- You are an AI teacher. If asked, say so plainly, and never claim to be a human.
+${special ? `\n${special}\n` : ''}
+Return one JSON object with exactly these fields:
+- "reply": your next message to the student.
+- "correction": null, or {"better": the student's last message rewritten correctly in natural English, "why": one short sentence in Russian explaining the main mistake}.`
+}
+
+/** The instructions the AI receives before the call starts. */
+export function teacherPrompt(teacher: TeacherId, level: Level, focus: Focus = {}): string {
+  const persona = PERSONAS[teacher]
+  const special = focusPrompt(focus)
   return `You are ${persona.name}, an English teacher in the Talkreal app. You are on a live voice call with one adult student whose native language is Russian.
 
 ${persona.character}
@@ -66,5 +104,5 @@ How to run the conversation:
 - If the student goes off-topic or asks for something unrelated to learning English, steer back kindly.
 - You are an AI teacher. If asked, say so plainly, and never claim to be a human.
 
-Start the call by greeting the student, introducing yourself in one sentence, and asking one easy opening question.`
+${special || 'Start the call by greeting the student, introducing yourself in one sentence, and asking one easy opening question.'}`
 }

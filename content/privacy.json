@@ -28,7 +28,8 @@
         "heading": "Голосовые разговоры с ИИ",
         "items": [
           "Во время разговора звук с вашего микрофона передаётся сервису искусственного интеллекта (Google Gemini) для распознавания и ответа. Обработка происходит на серверах за пределами России.",
-          "Мы не сохраняем запись вашего голоса и текст разговора. Сохраняется только длительность разговора.",
+          "Мы не сохраняем запись вашего голоса и полный текст разговора. Сохраняются длительность разговора и короткий разбор, который преподаватель пишет после звонка: ваши ошибки с исправлениями и полезные слова.",
+          "Переписка с ИИ-преподавателем и ответы, которые вы печатаете в упражнениях, тоже передаются этому сервису для ответа и проверки. Текст переписки на наших серверах не хранится.",
           "Не сообщайте в разговоре сведения, которыми не хотите делиться: паспортные данные, пароли, номера карт."
         ]
       },
@@ -92,7 +93,8 @@
         "heading": "Voice conversations with AI",
         "items": [
           "During a conversation, sound from your microphone is sent to an artificial-intelligence service (Google Gemini) to be understood and answered. This processing happens on servers outside Russia.",
-          "We do not keep a recording of your voice or the text of the conversation. Only the length of the conversation is saved.",
+          "We do not keep a recording of your voice or the full text of the conversation. We save the length of the conversation and the short review the teacher writes after a call: your mistakes with corrections, and useful words.",
+          "Text chat with an AI teacher and the answers you type in exercises are also sent to this service to be answered and checked. The text of the chat is not stored on our servers.",
           "Do not say anything you would not want to share: passport details, passwords, card numbers."
         ]
       },

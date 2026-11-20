@@ -26,6 +26,8 @@ interface Props {
   title?: string
   /** Always shown as the headline, whatever the result (a passed test, a new level). */
   headline?: string
+  /** A quieter button above "Continue", e.g. practising the lesson with a teacher. */
+  link?: { label: string; onClick: () => void }
   /** A second button above "Continue", e.g. another round of review. */
   extraAction?: { label: string; onClick: () => void }
 }
@@ -37,7 +39,7 @@ function formatTime(seconds: number): string {
 }
 
 /** The celebration after a lesson: XP, accuracy, time, streak and the daily goal. */
-export default function LessonSummary({ result, seconds, onContinue, title, headline: fixedHeadline, extraAction }: Props) {
+export default function LessonSummary({ result, seconds, onContinue, title, headline: fixedHeadline, extraAction, link }: Props) {
   const { t } = useTranslation()
   const headline =
     fixedHeadline ??
@@ -145,7 +147,14 @@ export default function LessonSummary({ result, seconds, onContinue, title, head
           </Button>
         </div>
       ) : (
-        <Button onClick={onContinue}>{t('summary.continue')}</Button>
+        <div className="flex flex-col gap-3">
+          {link && (
+            <Button variant="secondary" onClick={link.onClick}>
+              {link.label}
+            </Button>
+          )}
+          <Button onClick={onContinue}>{t('summary.continue')}</Button>
+        </div>
       )}
     </div>
   )

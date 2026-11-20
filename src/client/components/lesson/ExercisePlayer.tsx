@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { isAccepted, toTiles, type Exercise } from '../../../shared/lesson'
+import { api } from '../../lib/api'
 import { canRecognize } from '../../lib/recognition'
 import { shuffle } from '../../lib/shuffle'
 import { playCorrect, playWrong } from '../../lib/sounds'
@@ -60,6 +61,8 @@ export default function ExercisePlayer({ exercises, onFinish, onExit, exitTitle,
   const [feedback, setFeedback] = useState<Feedback | null>(null)
   const [combo, setCombo] = useState(0)
   const [confirmExit, setConfirmExit] = useState(false)
+  /** True while the AI is giving a second opinion on a typed answer. */
+  const [checking, setChecking] = useState(false)
 
   const missed = useRef(new Set<number>())
   const startedAt = useRef(Date.now())
@@ -100,8 +103,26 @@ export default function ExercisePlayer({ exercises, onFinish, onExit, exitTitle,
     setFeedback({ correct, ...details })
   }
 
+  /**
+   * There are often more correct translations than a lesson can list. Before a typed sentence is
+   * marked wrong, the AI teacher is asked whether it is right after all. No answer in time = wrong.
+   */
+  async function secondOpinion(given: string, e: { source: string; answer: string; explanation: string }, speakText?: string) {
+    setChecking(true)
+    const verdict = await Promise.race([
+      api<{ correct: boolean; checked: boolean; note?: string }>('/check-answer', { source: e.source, expected: e.answer, given }).catch(() => null),
+      new Promise<null>((resolve) => setTimeout(() => resolve(null), 9000)),
+    ])
+    setChecking(false)
+    if (verdict?.correct) {
+      record(true, { explanation: [verdict.note, t('lesson.ourVersion', { answer: e.answer })].filter(Boolean).join(' '), speakText })
+    } else {
+      record(false, { answer: e.answer, explanation: [verdict?.checked ? verdict.note : '', e.explanation].filter(Boolean).join(' '), speakText })
+    }
+  }
+
   function check() {
-    if (!exercise || feedback) return
+    if (!exercise || feedback || checking) return
     const speakText = spokenAnswer(exercise)
     switch (exercise.type) {
       case 'translate': {
@@ -110,7 +131,10 @@ export default function ExercisePlayer({ exercises, onFinish, onExit, exitTitle,
         break
       }
       case 'type':
-        record(isAccepted(typed, exercise), { answer: exercise.answer, explanation: exercise.explanation, speakText })
+        if (isAccepted(typed, exercise)) record(true, { explanation: exercise.explanation, speakText })
+        // Only whole sentences are worth a second opinion; a single word is simply right or wrong.
+        else if (toTiles(exercise.answer).length >= 3 && toTiles(typed).length >= 2) void secondOpinion(typed, exercise, speakText)
+        else record(false, { answer: exercise.answer, explanation: exercise.explanation, speakText })
         break
       case 'dictation': {
         const explanation = [exercise.translation, exercise.explanation].filter(Boolean).join(' ')
@@ -198,7 +222,7 @@ export default function ExercisePlayer({ exercises, onFinish, onExit, exitTitle,
         ) : exercise.type === 'translate' ? (
           <TranslateExercise exercise={exercise} tiles={tiles} placed={placed} onChange={setPlaced} checked={feedback !== null} />
         ) : exercise.type === 'type' || exercise.type === 'dictation' ? (
-          <TypeExercise exercise={exercise} value={typed} onChange={setTyped} onSubmit={check} checked={feedback !== null} />
+          <TypeExercise exercise={exercise} value={typed} onChange={setTyped} onSubmit={check} checked={feedback !== null || checking} />
         ) : (
           <OptionsExercise exercise={exercise} options={options} selected={selected} onSelect={setSelected} checked={feedback !== null} />
         )}
@@ -209,8 +233,8 @@ export default function ExercisePlayer({ exercises, onFinish, onExit, exitTitle,
       ) : (
         !selfChecking && (
           <footer className="safe-bottom pt-2">
-            <Button onClick={check} disabled={!canCheck}>
-              {t('lesson.check')}
+            <Button onClick={check} disabled={!canCheck || checking}>
+              {checking ? t('lesson.checking') : t('lesson.check')}
             </Button>
           </footer>
         )

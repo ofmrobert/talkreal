@@ -43,6 +43,13 @@
       "when": 1795125088625,
       "tag": "0005_loud_scream",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795138577001,
+      "tag": "0006_slow_monster_badoon",
+      "breakpoints": true
     }
   ]
 }

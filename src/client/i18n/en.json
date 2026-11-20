@@ -63,10 +63,20 @@
   },
   "talk": {
     "title": "Teachers",
-    "subtitle": "Live voice conversations are coming very soon. Meanwhile, meet the team.",
-    "subtitleLive": "Pick a teacher and talk out loud. They hear you, answer by voice and gently correct mistakes.",
+    "subtitle": "Conversations with the teachers are coming very soon. Meanwhile, meet the team.",
+    "subtitleLive": "Call a teacher or write to them. They answer, gently correct your mistakes, and send a review after a call.",
     "timeLeft": "{{time}} of speaking time left today",
-    "noTime": "You have used today's speaking time. Come back tomorrow!"
+    "noTime": "You have used today's speaking time. Come back tomorrow!",
+    "call": "Call",
+    "write": "Write",
+    "lessonHint": "Choose a teacher to practise the lesson in conversation.",
+    "messagesLeft_one": "{{count}} message left today",
+    "messagesLeft_other": "{{count}} messages left today",
+    "reviews": "Call reviews",
+    "minutes_one": "{{count}} minute",
+    "minutes_other": "{{count}} minutes",
+    "mistakes_one": "{{count}} mistake",
+    "mistakes_other": "{{count}} mistakes"
   },
   "teachers": {
     "harper": {
@@ -217,7 +227,9 @@
       "start": "Start speaking",
       "stop": "Stop recording",
       "skip": "I can't speak right now"
-    }
+    },
+    "checking": "Checking…",
+    "ourVersion": "Our version: {{answer}}"
   },
   "summary": {
     "perfect": "Perfect!",
@@ -231,7 +243,8 @@
     "streak_one": "Streak: {{count}} day",
     "streak_other": "Streak: {{count}} days",
     "streakHint": "Study every day to keep it growing.",
-    "continue": "Continue"
+    "continue": "Continue",
+    "practise": "🎙️ Practise it with a teacher"
   },
   "review": {
     "cardTitle": "Review",
@@ -391,5 +404,45 @@
       "name": "First conversation",
       "text": "Talk to an AI teacher for at least half a minute."
     }
+  },
+  "topics": {
+    "title": "What shall we talk about?",
+    "free": "Free conversation",
+    "lesson": "My last lesson"
+  },
+  "scenarios": {
+    "cafe": "At a café",
+    "shopping": "In a shop",
+    "directions": "Asking the way",
+    "hotel": "At a hotel",
+    "airport": "At the airport",
+    "doctor": "At the doctor's",
+    "interview": "Job interview",
+    "meeting": "Work meeting",
+    "debate": "Debate",
+    "negotiation": "Negotiation"
+  },
+  "report": {
+    "title": "Call review",
+    "pending": "{{name}} is writing the review of your call…",
+    "failed": "The review of this call couldn't be prepared.",
+    "corrections": "Worth fixing",
+    "noMistakes": "No mistakes worth pointing out. Great work!",
+    "words": "Words from the call",
+    "wordsHint": "These words have been added to your review.",
+    "tip": "Tip:"
+  },
+  "chat": {
+    "subtitle": "Text chat",
+    "intro": "Write in English. The teacher will answer and show the right way to say it if your message has a mistake.",
+    "start": "Start the chat",
+    "placeholder": "Write a message in English",
+    "send": "Send",
+    "typing": "{{name}} is typing…",
+    "noMistakes": "no mistakes",
+    "left": "Messages left today",
+    "limit": "No messages left for today. Come back tomorrow!",
+    "failed": "The teacher didn't answer. Try again.",
+    "retry": "Try again"
   }
 }

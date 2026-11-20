@@ -1,9 +1,10 @@
 import { createHash } from 'node:crypto'
 import { and, asc, eq, inArray, lte, sql } from 'drizzle-orm'
 import type { Exercise, Lesson, VocabItem } from '../../shared/lesson'
+import { isLevel, type Level } from '../../shared/levels'
 import { lessonById, lessonsFor } from '../content/lessons'
 import { db } from '../db/client'
-import { reviewItems } from '../db/schema'
+import { reviewItems, users } from '../db/schema'
 import type { Tx } from './activity'
 import { dayAfter } from './streak'
 
@@ -95,8 +96,8 @@ const escapeRegExp = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&
  * Turns a word into an exercise. It gets harder as the word moves up the boxes:
  * pick the English word → recognise it by ear → write it into a sentence yourself.
  */
-function wordExercise(word: VocabItem, lesson: Lesson, box: number): Exercise | null {
-  const others = lessonsFor(lesson.level)
+function wordExercise(word: VocabItem, level: Level, box: number): Exercise | null {
+  const others = lessonsFor(level)
     .flatMap((l) => l.vocab)
     .filter((v) => v.en.toLowerCase() !== word.en.toLowerCase() && v.ru.toLowerCase() !== word.ru.toLowerCase())
   const explanation = `${word.en} — ${word.ru}.${word.example ? ` Например: ${word.example}` : ''}`
@@ -125,12 +126,14 @@ function wordExercise(word: VocabItem, lesson: Lesson, box: number): Exercise | 
     : { type: 'choice', prompt: `Как по-английски «${word.ru}»?`, options: [right, ...wrong], answer: 0, explanation }
 }
 
-function resolve(item: typeof reviewItems.$inferSelect): Exercise | null {
+function resolve(item: typeof reviewItems.$inferSelect, level: Level): Exercise | null {
+  // A word from a call review carries its own text and is practised at the student's level.
+  if (item.key.startsWith('c:')) return item.data ? wordExercise(item.data, level, item.box) : null
   const lesson = lessonById(item.lessonId)
   if (!lesson) return null
   if (item.key.startsWith('e:')) return lesson.exercises.find((e) => exerciseKey(lesson.id, e) === item.key) ?? null
   const word = lesson.vocab.find((w) => wordKey(lesson.id, w) === item.key)
-  return word ? wordExercise(word, lesson, item.box) : null
+  return word ? wordExercise(word, lesson.level, item.box) : null
 }
 
 /** The next review session: the items that have waited longest, each as a ready-to-play exercise. */
@@ -142,10 +145,13 @@ export async function buildSession(userId: string, today: string): Promise<{ id:
     .orderBy(asc(reviewItems.dueDay), asc(reviewItems.box))
     .limit(SESSION_SIZE * 2)
 
+  const [user] = await db.select({ level: users.level }).from(users).where(eq(users.id, userId)).limit(1)
+  const level: Level = isLevel(user?.level) ? user.level : 'A1'
+
   const session: { id: string; exercise: Exercise }[] = []
   const gone: string[] = []
   for (const item of due) {
-    const exercise = resolve(item)
+    const exercise = resolve(item, level)
     if (!exercise) gone.push(item.key)
     else if (session.length < SESSION_SIZE) session.push({ id: item.key, exercise })
   }

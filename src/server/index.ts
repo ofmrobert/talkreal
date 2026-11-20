@@ -4,6 +4,7 @@ import { serveStatic } from '@hono/node-server/serve-static'
 import { dbStatus, safeConnectionString } from './db/client'
 import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
+import { aiRoutes } from './routes/ai'
 import { authRoutes } from './routes/auth'
 import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
@@ -71,6 +72,7 @@ app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
 app.route('/api/reminders', reminderRoutes)
 app.route('/api', reviewRoutes)
+app.route('/api', aiRoutes)
 app.route('/api', testRoutes)
 app.route('/api', courseRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
