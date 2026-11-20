@@ -717,3 +717,116 @@ export function PromosPage() {
     </Page>
   )
 }
+
+interface PhotoRow {
+  userId: string
+  version: number
+  updatedAt: string
+  reviewedAt: string | null
+  email: string | null
+  name: string | null
+  bio: string | null
+  telegramUsername: string | null
+}
+
+/** Every new profile photo, for the owner to look at: keep it, or remove it. */
+export function PhotosPage() {
+  const [show, setShow] = useState<'new' | 'all'>('new')
+  const [page, setPage] = useState(0)
+  const { data, failed, reload } = useAdmin<{ total: number; page: number; pageSize: number; waiting: number; photos: PhotoRow[] }>(`/photos?show=${show}&page=${page}`)
+  const [busy, setBusy] = useState<string | null>(null)
+
+  async function act(userId: string, action: 'approve' | 'remove' | 'clear_bio') {
+    if (action === 'remove' && !window.confirm('Remove this photo? The student will see their initial instead and can upload another one.')) return
+    if (action === 'clear_bio' && !window.confirm('Remove the text this student wrote about themselves?')) return
+    setBusy(userId)
+    await api(`/admin/photos/${userId}`, { action }).catch(() => {})
+    setBusy(null)
+    reload()
+  }
+
+  async function approveAll() {
+    if (!data || !window.confirm(`Mark all ${data.photos.length} photos on this page as fine?`)) return
+    setBusy('all')
+    for (const photo of data.photos.filter((p) => !p.reviewedAt)) await api(`/admin/photos/${photo.userId}`, { action: 'approve' }).catch(() => {})
+    setBusy(null)
+    reload()
+  }
+
+  return (
+    <Page
+      title="Photos"
+      hint="Profile photos students uploaded, with what they wrote about themselves. Today only the student and you can see a photo; check them here before the community opens. A new photo always comes back for checking."
+      actions={
+        <div className="flex gap-2">
+          {(['new', 'all'] as const).map((s) => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => {
+                setShow(s)
+                setPage(0)
+              }}
+              className={`rounded-md px-3 py-1.5 text-sm font-bold ${show === s ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100'}`}
+            >
+              {s === 'new' ? `To check${data ? ` (${data.waiting})` : ''}` : 'All photos'}
+            </button>
+          ))}
+        </div>
+      }
+    >
+      {!data ? (
+        <Loading failed={failed} />
+      ) : data.photos.length === 0 ? (
+        <Card>
+          <p className="text-sm text-slate-500">{show === 'new' ? 'Nothing to check: every photo has been looked at.' : 'No student has uploaded a photo yet.'}</p>
+        </Card>
+      ) : (
+        <>
+          {show === 'new' && (
+            <div>
+              <button type="button" className={ghostButtonClass} disabled={busy !== null} onClick={approveAll}>
+                All on this page are fine
+              </button>
+            </div>
+          )}
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
+            {data.photos.map((photo) => (
+              <div key={photo.userId} className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white p-3">
+                <a href={`/api/profile/photo/${photo.userId}?v=${photo.version}`} target="_blank" rel="noreferrer" title="Open the photo at full size">
+                  <img src={`/api/profile/photo/${photo.userId}?v=${photo.version}`} alt="" loading="lazy" className="aspect-square w-full rounded-lg bg-slate-100 object-cover" />
+                </a>
+                <div className="min-w-0">
+                  <Link to={`/admin/users/${photo.userId}`} className="block truncate text-sm font-bold text-violet-700 hover:underline">
+                    {photo.name ?? photo.email ?? (photo.telegramUsername ? `@${photo.telegramUsername}` : photo.userId.slice(0, 8))}
+                  </Link>
+                  <p className="truncate text-xs text-slate-500">{photo.email ?? (photo.telegramUsername ? `@${photo.telegramUsername}` : '')}</p>
+                  <p className="text-xs text-slate-400">
+                    {dateTime(photo.updatedAt)} · {photo.reviewedAt ? <Pill tone="green">checked</Pill> : <Pill tone="amber">new</Pill>}
+                  </p>
+                </div>
+                {photo.bio && <p className="rounded-lg bg-slate-50 p-2 text-xs leading-snug text-slate-700">{photo.bio}</p>}
+                <div className="mt-auto flex flex-wrap gap-1.5">
+                  {!photo.reviewedAt && (
+                    <button type="button" className={`${buttonClass} !h-8 flex-1 !px-2`} disabled={busy !== null} onClick={() => act(photo.userId, 'approve')}>
+                      Fine
+                    </button>
+                  )}
+                  <button type="button" className={`${ghostButtonClass} !h-8 flex-1 !px-2`} disabled={busy !== null} onClick={() => act(photo.userId, 'remove')}>
+                    Remove
+                  </button>
+                  {photo.bio && (
+                    <button type="button" className={`${ghostButtonClass} !h-8 w-full !px-2`} disabled={busy !== null} onClick={() => act(photo.userId, 'clear_bio')}>
+                      Remove the text
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <Pager page={data.page} pageSize={data.pageSize} total={data.total} onPage={setPage} />
+        </>
+      )}
+    </Page>
+  )
+}

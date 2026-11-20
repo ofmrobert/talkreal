@@ -103,6 +103,8 @@ export const userAvatars = pgTable('user_avatars', {
   /** The picture itself, base64. */
   data: text('data').notNull(),
   updatedAt: timestamptz('updated_at').notNull().defaultNow(),
+  /** When the owner looked at this photo in the admin panel and approved it. A new photo clears it. */
+  reviewedAt: timestamptz('reviewed_at'),
 })
 
 /** One-time login codes. Only a hash of the code is stored. */

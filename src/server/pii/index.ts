@@ -2,7 +2,7 @@
  * The ONLY module allowed to touch the user_pii table (152-FZ separation).
  * If personal data must later live on separate storage, only this file changes.
  */
-import { eq, ilike, inArray, or } from 'drizzle-orm'
+import { desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm'
 import { db } from '../db/client'
 import { cleanProfile, type Profile } from '../../shared/profile'
 import { userAvatars, userPii, users } from '../db/schema'
@@ -166,7 +166,8 @@ export async function getAvatar(userId: string): Promise<{ mime: string; data: B
 
 export async function saveAvatar(userId: string, mime: string, data: Buffer): Promise<number> {
   const updatedAt = new Date()
-  const values = { mime, data: data.toString('base64'), updatedAt }
+  // A new photo has not been looked at yet.
+  const values = { mime, data: data.toString('base64'), updatedAt, reviewedAt: null }
   await db
     .insert(userAvatars)
     .values({ userId, ...values })
@@ -184,4 +185,45 @@ export async function goalCounts(): Promise<Record<string, number>> {
   const counts: Record<string, number> = {}
   for (const row of rows) for (const goal of row.goals ?? []) counts[goal] = (counts[goal] ?? 0) + 1
   return counts
+}
+
+/* ───────────── Checking photos in the admin panel ───────────── */
+
+/** Photos for the owner to look at: the ones not checked yet, or all of them, newest first. */
+export async function listPhotos(onlyNew: boolean, limit: number, offset: number) {
+  const where = onlyNew ? isNull(userAvatars.reviewedAt) : undefined
+  const [{ total }] = await db.select({ total: sql<number>`count(*)::int` }).from(userAvatars).where(where)
+  const rows = await db
+    .select({
+      userId: userAvatars.userId,
+      updatedAt: userAvatars.updatedAt,
+      reviewedAt: userAvatars.reviewedAt,
+      email: userPii.email,
+      name: userPii.displayName,
+      bio: userPii.bio,
+      telegramUsername: userPii.telegramUsername,
+    })
+    .from(userAvatars)
+    .leftJoin(userPii, eq(userPii.userId, userAvatars.userId))
+    .where(where)
+    .orderBy(desc(userAvatars.updatedAt))
+    .limit(limit)
+    .offset(offset)
+  return { total, photos: rows.map((row) => ({ ...row, version: row.updatedAt.getTime() })) }
+}
+
+export async function countNewPhotos(): Promise<number> {
+  const [row] = await db.select({ n: sql<number>`count(*)::int` }).from(userAvatars).where(isNull(userAvatars.reviewedAt))
+  return row?.n ?? 0
+}
+
+/** Marks a photo as looked at and fine. */
+export async function approvePhoto(userId: string): Promise<boolean> {
+  const rows = await db.update(userAvatars).set({ reviewedAt: new Date() }).where(eq(userAvatars.userId, userId)).returning({ id: userAvatars.userId })
+  return rows.length > 0
+}
+
+/** Removes the words a student wrote about themselves. */
+export async function clearBio(userId: string): Promise<void> {
+  await db.update(userPii).set({ bio: null }).where(eq(userPii.userId, userId))
 }

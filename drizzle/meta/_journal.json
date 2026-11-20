@@ -78,6 +78,13 @@
       "when": 1795149060403,
       "tag": "0010_loving_microchip",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1795150112014,
+      "tag": "0011_sturdy_omega_sentinel",
+      "breakpoints": true
     }
   ]
 }

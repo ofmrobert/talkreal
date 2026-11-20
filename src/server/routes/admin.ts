@@ -29,7 +29,7 @@ import {
   voiceSessions,
 } from '../db/schema'
 import { env } from '../env'
-import { getPii, getPiiFor, getProfile, goalCounts, searchUserIds } from '../pii'
+import { approvePhoto, clearBio, countNewPhotos, deleteAvatar, getPii, getPiiFor, getProfile, goalCounts, listPhotos, searchUserIds } from '../pii'
 import { dayBefore, localDay } from '../progress/streak'
 import { voiceProvider } from '../voice/socket'
 
@@ -167,7 +167,7 @@ adminRoutes.get('/overview', async (c) => {
 
   return c.json({
     days,
-    kpi: { ...k, mrr: mrr?.mrr ?? 0 },
+    kpi: { ...k, mrr: mrr?.mrr ?? 0, photos_to_review: await countNewPhotos() },
     series: range.map((day) => ({
       day,
       signups: s.get(day)?.n ?? 0,
@@ -349,6 +349,33 @@ adminRoutes.post('/users/:id/plan', async (c) => {
   if (!updated) return c.json({ error: 'not_found' }, 404)
   await log(c, body.plan === 'free' ? 'plan_removed' : 'plan_given', id, body.plan === 'free' ? undefined : { plan: body.plan, days })
   return c.json({ ok: true, plan: body.plan, planUntil })
+})
+
+/* ───────────────────────────── Photos ───────────────────────────── */
+
+/** Profile photos for the owner to look at. `show=new` (the default) lists the ones not checked yet. */
+adminRoutes.get('/photos', async (c) => {
+  const page = intParam(c.req.query('page'), 0, 0, 100000)
+  const size = 48
+  const result = await listPhotos(c.req.query('show') !== 'all', size, page * size)
+  return c.json({ ...result, page, pageSize: size, waiting: await countNewPhotos() })
+})
+
+/** What the owner decided about one photo: fine, or remove it (and, if asked, the text about the student too). */
+adminRoutes.post('/photos/:id', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  if (body.action === 'approve') {
+    if (!(await approvePhoto(id))) return c.json({ error: 'not_found' }, 404)
+  } else if (body.action === 'remove') {
+    await deleteAvatar(id)
+    await log(c, 'photo_removed', id)
+  } else if (body.action === 'clear_bio') {
+    await clearBio(id)
+    await log(c, 'bio_removed', id)
+  } else return c.json({ error: 'invalid' }, 400)
+  return c.json({ ok: true })
 })
 
 /* ───────────────────────────── Payments ───────────────────────────── */

@@ -45,7 +45,7 @@ export function OverviewPage() {
         <Stat label={`Calls, ${days} days`} value={num(kpi.calls)} sub={minutes(kpi.voice_seconds)} />
         <Stat label={`Chat messages, ${days} days`} value={num(kpi.text_messages)} />
         <Stat label="Plans ending in 7 days" value={num(kpi.expiring_7d)} sub="Not renewed automatically" />
-        <Stat label="Review items due" value={num(kpi.review_due)} sub="Across all students" />
+        <Stat label="Photos to check" value={num(kpi.photos_to_review)} sub="New profile photos, on the Photos screen" />
       </Stats>
 
       <div className="grid gap-4 lg:grid-cols-2">
