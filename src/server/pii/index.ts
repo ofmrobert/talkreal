@@ -135,7 +135,7 @@ export async function getProfile(userId: string): Promise<Profile & { photoVersi
       gender: row?.gender,
       goals: row?.goals ?? [],
       interests: row?.interests ?? [],
-      discoverable: row?.discoverable ?? false,
+      discoverable: row?.discoverable ?? true,
     }),
     // Changes whenever the photo changes, so the app knows to load the new one.
     photoVersion: photo ? photo.updatedAt.getTime() : null,

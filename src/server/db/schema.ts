@@ -92,8 +92,8 @@ export const userPii = pgTable('user_pii', {
   gender: text('gender'),
   goals: jsonb('goals').$type<string[]>(),
   interests: jsonb('interests').$type<string[]>(),
-  /** May other students see this profile once the community opens? Off unless the student turns it on. */
-  discoverable: boolean('discoverable').notNull().default(false),
+  /** May other students see this profile? On for new accounts; a student who wants a private page switches it off. */
+  discoverable: boolean('discoverable').notNull().default(true),
 })
 
 /**

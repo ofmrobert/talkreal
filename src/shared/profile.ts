@@ -48,7 +48,7 @@ export interface Profile {
   gender: Gender | null
   goals: GoalId[]
   interests: InterestId[]
-  /** Whether other students may see this profile once the community opens. Off unless the student turns it on. */
+  /** Whether other students may see this profile. On unless the student makes their page private. */
   discoverable: boolean
 }
 
@@ -67,7 +67,8 @@ export function cleanProfile(input: Record<string, unknown>): Profile {
     gender: (GENDERS as readonly string[]).includes(input.gender as string) ? (input.gender as Gender) : null,
     goals: pick(input.goals, GOALS, LIMITS.goals),
     interests: pick(input.interests, INTERESTS, LIMITS.interests),
-    discoverable: input.discoverable === true,
+    // Seen by other students unless the student asked for a private page.
+    discoverable: input.discoverable !== false,
   }
 }
 

@@ -250,7 +250,7 @@ export function UserPage() {
                 ['Learning for', data.profile.goals.join(', ') || '—'],
                 ['Interests', data.profile.interests.join(', ') || '—'],
                 ['About', data.profile.bio ?? '—'],
-                ['Visible in the future community', data.profile.discoverable ? 'yes' : 'no'],
+                ['Visible to other students', data.profile.discoverable ? 'yes' : 'no'],
               ] as const
             ).map(([label, value]) => (
               <div key={label} className="contents">

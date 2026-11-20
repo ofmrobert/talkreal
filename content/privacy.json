@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "operator": "",
   "contact": "",
   "ru": {
@@ -11,7 +11,7 @@
         "items": [
           "Адрес электронной почты — если вы входите по коду из письма.",
           "Идентификатор и имя в Telegram — если вы входите через Telegram или подключаете напоминания в Telegram.",
-          "Профиль, который вы заполняете сами и по желанию: имя, фотография, возраст, пол, город, несколько слов о себе, цели и интересы. Имя, пол, цели и интересы передаются ИИ-преподавателю, чтобы разговор был личным; фотография, возраст, город и текст о себе не передаются. Другие ученики ваш профиль не видят, пока вы сами этого не разрешите.",
+          "Профиль, который вы заполняете сами и по желанию: имя, фотография, возраст, пол, город, несколько слов о себе, цели и интересы. Имя, пол, цели и интересы передаются ИИ-преподавателю, чтобы разговор был личным; фотография, возраст, город и текст о себе не передаются. Другие ученики видят имя, фотографию, город, текст о себе, цели и интересы, если вы не сделали страницу закрытой (см. раздел «Сообщество и личные сообщения»).",
           "В таблице недельной лиги другие ученики видят ваши очки опыта за неделю. Имя и фотография показываются там, только если вы разрешили показывать профиль, а фотография ещё и проверена; иначе вы отображаетесь как «Ученик» с номером.",
           "Ваши посты и комментарии в ленте видят ученики с подпиской. Рядом с комментарием показываются имя и фотография по тому же правилу: только если вы разрешили показывать профиль. Перед публикацией комментарий проверяет сервис искусственного интеллекта; комментарии, ваши отметки «нравится» и ответы в мини-тестах хранятся на наших серверах, пока вы их не удалите или не удалите аккаунт.",
           "Данные об обучении: уровень английского, пройденные уроки, результаты, очки опыта, серия дней, время разговоров с ИИ-преподавателями.",
@@ -41,7 +41,7 @@
       {
         "heading": "Сообщество и личные сообщения",
         "items": [
-          "Другие ученики видят ваш профиль (имя, фотографию после проверки, уровень, город, текст о себе, цели и интересы) только если вы включили «Показывать мой профиль». Email и Telegram не показываются никому. Настройку можно выключить в любой момент.",
+          "Другие ученики видят ваш профиль: имя, фотографию после проверки, уровень, город, текст о себе, цели и интересы. Возраст, email и Telegram не показываются никому. Профиль виден по умолчанию; чтобы сделать страницу закрытой, выключите «Показывать мой профиль» в настройках профиля в любой момент. Тогда другие ученики видят только условное имя «Ученик» с кодом, не могут найти вас в поиске и начать с вами переписку.",
           "Личные сообщения не являются тайной от сервиса. Каждое сообщение перед отправкой автоматически проверяется ИИ (Google Gemini) на оскорбления, спам, ссылки и контактные данные; сообщение, не прошедшее проверку, не доставляется, но сохраняется для модерации.",
           "Модератор Talkreal может прочитать переписку между учениками, чтобы рассмотреть жалобу, предотвратить нарушение правил или выполнить требование закона. Каждый такой просмотр записывается в журнал действий администратора.",
           "Модератор может скрыть сообщение, пост или комментарий и отключить ученику личные сообщения при нарушении правил.",
@@ -92,7 +92,7 @@
         "items": [
           "Your email address, if you log in with an emailed code.",
           "Your Telegram ID and first name, if you log in with Telegram or connect Telegram reminders.",
-          "The profile you fill in yourself, if you wish: name, photo, age, gender, city, a few words about you, goals and interests. Your name, gender, goals and interests are passed to the AI teacher so the conversation is personal; your photo, age, city and the text about you are not. Other students do not see your profile unless you allow it.",
+          "The profile you fill in yourself, if you wish: name, photo, age, gender, city, a few words about you, goals and interests. Your name, gender, goals and interests are passed to the AI teacher so the conversation is personal; your photo, age, city and the text about you are not. Other students see your name, photo, city, the text about you, goals and interests unless you made your page private (see “Community and private messages”).",
           "In the weekly league table other students see your XP for the week. Your name and photo are shown there only if you allowed your profile to be shown, and the photo has also been checked; otherwise you appear as \"Student\" with a number.",
           "Your posts and comments in the feed are visible to students on a paid plan. Your name and photo appear next to a comment by the same rule: only if you allowed your profile to be shown. Before it is posted, a comment is checked by the artificial-intelligence service; comments, your likes and your quiz answers are kept on our servers until you delete them or your account.",
           "Learning data: your English level, completed lessons, results, XP, streak, and time spent talking to AI teachers.",
@@ -122,7 +122,7 @@
       {
         "heading": "Community and private messages",
         "items": [
-          "Other students see your profile (name, photo once it has been checked, level, city, the text about you, goals and interests) only if you switched on “Show my profile”. Your email and Telegram are never shown to anyone. You can switch the setting off at any time.",
+          "Other students see your profile: name, photo once it has been checked, level, city, the text about you, goals and interests. Your age, email and Telegram are never shown to anyone. The profile is visible by default; to make your page private, switch off “Show my profile” in your profile settings at any time. Other students then see only the code name “Student” with a code, cannot find you in search and cannot start a conversation with you.",
           "Private messages are not secret from the service. Before it is sent, every message is checked automatically by AI (Google Gemini) for insults, spam, links and contact details; a message that does not pass is not delivered but is kept for moderation.",
           "A Talkreal moderator may read a conversation between students to deal with a complaint, to prevent a breach of the rules or to comply with the law. Every such viewing is recorded in the administrator action log.",
           "A moderator may hide a message, post or comment and switch off private messages for a student who breaks the rules.",

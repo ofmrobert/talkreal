@@ -1,0 +1,1 @@
+ALTER TABLE "user_pii" ALTER COLUMN "discoverable" SET DEFAULT true;

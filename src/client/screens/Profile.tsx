@@ -194,6 +194,9 @@ export default function Profile() {
             {t('community.change')}
           </button>
         </p>
+        <button type="button" onClick={() => navigate('/people')} className="mt-3 min-h-11 rounded-2xl bg-violet px-4 text-sm font-extrabold text-white shadow-[0_4px_0_0_var(--color-violet-dark)] active:translate-y-1">
+          👥 {t('social.messages.find')}
+        </button>
       </section>
 
       {user.isAdmin && (

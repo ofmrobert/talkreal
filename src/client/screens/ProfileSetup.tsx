@@ -9,7 +9,7 @@ import Button from '../components/ui/Button'
 import ProgressBar from '../components/ui/ProgressBar'
 import { api } from '../lib/api'
 
-const EMPTY: Profile = { name: null, bio: null, city: null, age: null, gender: null, goals: [], interests: [], discoverable: false }
+const EMPTY: Profile = { name: null, bio: null, city: null, age: null, gender: null, goals: [], interests: [], discoverable: true }
 const STEPS = ['name', 'goals', 'about'] as const
 
 /**

@@ -141,7 +141,7 @@
       "interests": "Pick your interests: they are more fun to talk about."
     },
     "discoverable": "Show my profile to other students",
-    "discoverableHint": "Other students will be able to find you among practice partners, follow you and write to you. Your email and Telegram are never shown.",
+    "discoverableHint": "On by default: other students can find you among practice partners, follow you and write to you. Switch it off if you want a private page. Your email and Telegram are never shown.",
     "privacyNote": "Everything except the name is optional. The AI teachers see your name, goals and interests, so the conversation is about what matters to you."
   },
   "install": {
@@ -605,11 +605,11 @@
     "account": "Account"
   },
   "community": {
-    "soon": "Coming soon",
+    "soon": "Now open",
     "title": "The Talkreal community",
-    "text": "Find partners at your level and practise English with each other. It will open for Pro subscribers.",
-    "visible": "Your profile will be visible to other students.",
-    "hidden": "Your profile is hidden from others for now.",
+    "text": "Find partners at your level, follow them and write to each other in English. Anyone can find a partner; private messages are for subscribers.",
+    "visible": "Your profile is visible to other students.",
+    "hidden": "Your page is private: other students cannot see you.",
     "change": "Change"
   },
   "quests": {
@@ -810,8 +810,8 @@
         "following": "You are not following anyone yet.",
         "followers": "Nobody follows you yet."
       },
-      "hiddenTitle": "Nobody can see you yet",
-      "hiddenText": "Switch on “Show my profile” so other students can find you and write to you."
+      "hiddenTitle": "Your page is private",
+      "hiddenText": "Other students cannot find you or write to you. Switch on “Show my profile” if you want to change that."
     },
     "profile": {
       "notFound": "There is no such student.",
