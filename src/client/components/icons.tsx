@@ -84,6 +84,13 @@ export const CrownIcon = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 )
 
+export const FeedIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M4 5.500A2.500 2.500 0 0 1 6.500 3h11A2.500 2.500 0 0 1 20 5.500v8a2.500 2.500 0 0 1-2.500 2.500H11l-4.500 4v-4h0A2.500 2.500 0 0 1 4 13.500z" />
+    <path d="M8 8h8M8 11.500h5" />
+  </Icon>
+)
+
 export const ChevronRightIcon = (p: SVGProps<SVGSVGElement>) => (
   <Icon {...p}>
     <path d="m9 5 7 7-7 7" />

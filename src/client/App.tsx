@@ -6,6 +6,7 @@ import BillingReturn from './screens/BillingReturn'
 import Call from './screens/Call'
 import Chat from './screens/Chat'
 import EditProfile from './screens/EditProfile'
+import Feed from './screens/Feed'
 import Chai from './components/Chai'
 import Home from './screens/Home'
 import League from './screens/League'
@@ -105,6 +106,7 @@ export default function App() {
               <Route path="/chat/:teacherId" element={<Chat />} />
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />
+                <Route path="/feed" element={<Feed />} />
                 <Route path="/talk" element={<Talk />} />
                 <Route path="/league" element={<League />} />
                 <Route path="/profile" element={<Profile />} />

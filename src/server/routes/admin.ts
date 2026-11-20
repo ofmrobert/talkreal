@@ -11,11 +11,15 @@ import { planOf } from '../billing/plans'
 import { isValidCode, normalizeCode } from '../billing/promo'
 import { billingMode } from '../billing/yookassa'
 import { lessonsFor } from '../content/lessons'
+import { fillFeed } from '../feed/generate'
+import { writerName } from '../feed/writer'
 import { examId, unitsFor } from '../content/units'
 import { db, dbStatus } from '../db/client'
 import {
   adminActions,
   dailyUsage,
+  feedComments,
+  feedPosts,
   lessonProgress,
   pageViews,
   payments,
@@ -375,6 +379,84 @@ adminRoutes.post('/photos/:id', async (c) => {
     await clearBio(id)
     await log(c, 'bio_removed', id)
   } else return c.json({ error: 'invalid' }, 400)
+  return c.json({ ok: true })
+})
+
+/* ───────────────────────────── Feed ───────────────────────────── */
+
+/** The Talkreal account's posts (waiting and published) and the latest comments. */
+adminRoutes.get('/feed', async (c) => {
+  const posts = await rows<Record<string, unknown>>(sql`
+    select p.id, p.kind, p.body, p.status, p.publish_at as "publishAt", p.written_by as "writtenBy", p.image_id is not null as "hasImage",
+           (select count(*)::int from feed_likes l where l.post_id = p.id) as likes,
+           (select count(*)::int from feed_votes v where v.post_id = p.id) as votes,
+           (select count(*)::int from feed_comments m where m.post_id = p.id and m.status = 'visible') as comments
+    from feed_posts p order by p.publish_at desc limit 60
+  `)
+  const show = c.req.query('comments') === 'reported' ? sql`${feedComments.reports} > 0` : undefined
+  const comments = await db.select().from(feedComments).where(show).orderBy(desc(feedComments.createdAt)).limit(80)
+  const pii = await getPiiFor([...new Set(comments.map((m) => m.userId))])
+  const [counts] = await rows<Record<string, number>>(sql`
+    select (select count(*)::int from feed_comments) as comments,
+           (select count(*)::int from feed_comments where reports > 0 and status = 'visible') as reported,
+           (select count(*)::int from feed_comments where status = 'hidden') as hidden,
+           (select count(distinct user_id)::int from feed_comments where created_at > now() - interval '7 days') as writers_7d,
+           (select count(*)::int from feed_likes) as likes,
+           (select count(*)::int from feed_votes) as votes
+  `)
+  return c.json({
+    writer: writerName(),
+    counts,
+    posts,
+    comments: comments.map((m) => ({ ...m, who: pii.get(m.userId)?.email ?? pii.get(m.userId)?.displayName ?? m.userId.slice(0, 8) })),
+  })
+})
+
+/** Writes posts for any of the next seven days that has none. */
+adminRoutes.post('/feed/fill', async (c) => {
+  const result = await fillFeed()
+  await log(c, 'feed_filled', null, result)
+  return c.json(result)
+})
+
+/** Hides, shows, publishes now, deletes or rewrites a post. */
+adminRoutes.post('/feed/posts/:id', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const [post] = await db.select().from(feedPosts).where(eq(feedPosts.id, id)).limit(1)
+  if (!post) return c.json({ error: 'not_found' }, 404)
+  if (body.action === 'delete') await db.delete(feedPosts).where(eq(feedPosts.id, id))
+  else if (body.action === 'hide' || body.action === 'show') await db.update(feedPosts).set({ status: body.action === 'hide' ? 'hidden' : 'active' }).where(eq(feedPosts.id, id))
+  else if (body.action === 'publish_now') await db.update(feedPosts).set({ publishAt: new Date(), status: 'active' }).where(eq(feedPosts.id, id))
+  else if (body.action === 'edit') {
+    const text = (value: unknown, fallback: string) => (typeof value === 'string' && value.trim() ? value.trim().slice(0, 600) : fallback)
+    await db
+      .update(feedPosts)
+      .set({
+        body: {
+          ...post.body,
+          title: { ru: text(body.titleRu, post.body.title.ru), en: text(body.titleEn, post.body.title.en) },
+          text: { ru: text(body.textRu, post.body.text.ru), en: text(body.textEn, post.body.text.en) },
+          english: typeof body.english === 'string' ? body.english.trim().slice(0, 200) || undefined : post.body.english,
+        },
+      })
+      .where(eq(feedPosts.id, id))
+  } else return c.json({ error: 'invalid' }, 400)
+  await log(c, `post_${body.action}`, id)
+  return c.json({ ok: true })
+})
+
+/** Hides a comment or brings it back. */
+adminRoutes.post('/feed/comments/:id', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id) || (body.action !== 'hide' && body.action !== 'show')) return c.json({ error: 'invalid' }, 400)
+  // Bringing a comment back also clears its reports: the owner has looked and found it fine.
+  const set = body.action === 'hide' ? { status: 'hidden' } : { status: 'visible', reports: 0 }
+  const updated = await db.update(feedComments).set(set).where(eq(feedComments.id, id)).returning({ id: feedComments.id })
+  if (updated.length === 0) return c.json({ error: 'not_found' }, 404)
+  await log(c, `comment_${body.action}`, id)
   return c.json({ ok: true })
 })
 

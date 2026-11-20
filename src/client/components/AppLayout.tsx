@@ -1,9 +1,10 @@
 import { NavLink, Outlet } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import { BookIcon, MicIcon, TrophyIcon, UserIcon } from './icons'
+import { BookIcon, FeedIcon, MicIcon, TrophyIcon, UserIcon } from './icons'
 
 const tabs = [
   { to: '/', key: 'learn', Icon: BookIcon },
+  { to: '/feed', key: 'feed', Icon: FeedIcon },
   { to: '/talk', key: 'talk', Icon: MicIcon },
   { to: '/league', key: 'league', Icon: TrophyIcon },
   { to: '/profile', key: 'profile', Icon: UserIcon },

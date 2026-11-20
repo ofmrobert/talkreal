@@ -9,7 +9,8 @@
     "learn": "Lessons",
     "talk": "Talk",
     "profile": "Profile",
-    "league": "League"
+    "league": "League",
+    "feed": "Feed"
   },
   "onboarding": {
     "hello": {
@@ -652,5 +653,51 @@
     "you": "you",
     "rules": "Places go by XP earned in the week, Monday to Sunday (Moscow time). The top {{up}} move up, the bottom {{down}} move down.",
     "privacy": "Other students see your name and photo only if you allowed your profile to be shown. Otherwise you appear in the table as \"Student\" with a number."
+  },
+  "feed": {
+    "title": "Feed",
+    "subtitle": "A little English every day: a word, a mistake, a question, a picture.",
+    "official": "Official account",
+    "kinds": {
+      "word": "Word of the day",
+      "mistake": "Typical mistake",
+      "poll": "Quick quiz",
+      "fact": "Fun fact",
+      "question": "Question of the day",
+      "picture": "Describe the picture"
+    },
+    "like": "Like",
+    "talking_one": "{{count}} comment",
+    "talking_other": "{{count}} comments",
+    "write": "Write a comment in English",
+    "writeFree": "Your free comment this week",
+    "beFirst": "Nobody has answered yet. Be the first!",
+    "delete": "delete",
+    "report": "report",
+    "reported": "reported",
+    "suggestTitle": "This would be more correct:",
+    "suggestUse": "Post the corrected one",
+    "suggestKeep": "Post it as it is",
+    "rejected": "This comment can't be posted: the feed is no place for rudeness, adverts or contact details.",
+    "slowDown": "You have written a great many comments today. Carry on tomorrow.",
+    "failed": "Couldn't post it. Try again.",
+    "empty": "The first post is coming very soon.",
+    "more": "Show more",
+    "locked": {
+      "count_one": "{{count}} student has already answered",
+      "count_other": "{{count}} students have already answered",
+      "first": "Students answer here in English",
+      "see": "See what others are saying",
+      "join": "Join the conversation",
+      "tryOne": "Or write one comment for free"
+    },
+    "banner": {
+      "over": "The Talkreal community",
+      "active_one": "{{count}} student is in the conversations this week",
+      "active_other": "{{count}} students are in the conversations this week",
+      "empty": "Discuss the posts with other students",
+      "text": "With a paid plan you read every answer, write your own, and a teacher corrects your English before it is posted.",
+      "button": "Open with Pro"
+    }
   }
 }

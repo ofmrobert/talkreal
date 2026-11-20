@@ -5,9 +5,14 @@
  * instead, and this relay passes everything on to Google unchanged, in both directions,
  * including live voice (WebSocket) connections.
  *
+ * Addresses that start with /anthropic go to Anthropic (Claude) instead, which also does not
+ * serve Russia directly. On the app's server set ANTHROPIC_BASE_URL to this relay's address
+ * followed by /anthropic.
+ *
  * It holds no keys and stores nothing. Only our own server's address may use it.
  */
 const UPSTREAM = 'generativelanguage.googleapis.com'
+const ANTHROPIC = 'api.anthropic.com'
 
 // Headers that reveal where the request really came from. They are not passed on.
 const STRIP = ['cf-connecting-ip', 'cf-ipcountry', 'cf-ray', 'cf-visitor', 'x-forwarded-for', 'x-forwarded-proto', 'x-real-ip', 'cdn-loop']
@@ -24,7 +29,12 @@ export default {
     }
 
     url.protocol = 'https:'
-    url.hostname = UPSTREAM
+    if (url.pathname === '/anthropic' || url.pathname.startsWith('/anthropic/')) {
+      url.hostname = ANTHROPIC
+      url.pathname = url.pathname.slice('/anthropic'.length) || '/'
+    } else {
+      url.hostname = UPSTREAM
+    }
     url.port = ''
     const headers = new Headers(request.headers)
     for (const name of STRIP) headers.delete(name)

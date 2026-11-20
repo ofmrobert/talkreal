@@ -10,6 +10,8 @@ import { authRoutes } from './routes/auth'
 import { billingRoutes } from './routes/billing'
 import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
+import { feedRoutes } from './routes/feed'
+import { startFeed } from './feed/generate'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
 import { playRoutes } from './routes/play'
@@ -76,6 +78,7 @@ app.route('/api/placement', placementRoutes)
 app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
 app.route('/api/billing', billingRoutes)
+app.route('/api/feed', feedRoutes)
 app.route('/api/profile', profileRoutes)
 app.route('/api/admin', adminRoutes)
 app.route('/api/track', trackRoutes)
@@ -111,6 +114,7 @@ app.get(
 
 void startTelegramBot()
 startReminders()
+startFeed()
 
 const server = serve({ fetch: app.fetch, port: env.port, hostname: '0.0.0.0' }, () => {
   console.log(`Talkreal server listening on port ${env.port}`)

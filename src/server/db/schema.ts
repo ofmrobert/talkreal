@@ -1,4 +1,5 @@
 import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import type { PostBody } from '../../shared/feed'
 import type { CallReport } from '../../shared/report'
 
 const timestamptz = (name: string) => timestamp(name, { withTimezone: true })
@@ -356,4 +357,93 @@ export const leagueMembers = pgTable(
     joinedAt: timestamptz('joined_at').notNull().defaultNow(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.week] }), index('league_group_idx').on(t.week, t.tier, t.groupNo)],
+)
+
+/** Pictures for feed posts, kept apart from the posts so the feed loads fast. */
+export const feedImages = pgTable('feed_images', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  mime: text('mime').notNull(),
+  /** The picture, base64. */
+  data: text('data').notNull(),
+})
+
+/** Posts of the Talkreal account. A post is visible once its time has come, unless it is hidden. */
+export const feedPosts = pgTable(
+  'feed_posts',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    /** See POST_KINDS in src/shared/feed.ts. */
+    kind: text('kind').notNull(),
+    body: jsonb('body').$type<PostBody>().notNull(),
+    imageId: uuid('image_id').references(() => feedImages.id, { onDelete: 'set null' }),
+    /** 'active' | 'hidden' */
+    status: text('status').notNull().default('active'),
+    publishAt: timestamptz('publish_at').notNull(),
+    /** 'claude' | 'gemini' | 'mock' | 'owner' */
+    writtenBy: text('written_by').notNull().default('owner'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('feed_posts_time_idx').on(t.publishAt)],
+)
+
+export const feedLikes = pgTable(
+  'feed_likes',
+  {
+    postId: uuid('post_id')
+      .notNull()
+      .references(() => feedPosts.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+  },
+  (t) => [primaryKey({ columns: [t.postId, t.userId] })],
+)
+
+/** Answers to quiz posts: one per student. */
+export const feedVotes = pgTable(
+  'feed_votes',
+  {
+    postId: uuid('post_id')
+      .notNull()
+      .references(() => feedPosts.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    choice: integer('choice').notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.postId, t.userId] })],
+)
+
+export const feedComments = pgTable(
+  'feed_comments',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    postId: uuid('post_id')
+      .notNull()
+      .references(() => feedPosts.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    text: text('text').notNull(),
+    /** 'visible' | 'hidden' */
+    status: text('status').notNull().default('visible'),
+    /** How many students reported it. */
+    reports: integer('reports').notNull().default(0),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('feed_comments_post_idx').on(t.postId, t.createdAt), index('feed_comments_user_idx').on(t.userId, t.createdAt)],
+)
+
+/** Who reported which comment, so one student counts once. */
+export const feedReports = pgTable(
+  'feed_reports',
+  {
+    commentId: uuid('comment_id')
+      .notNull()
+      .references(() => feedComments.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+  },
+  (t) => [primaryKey({ columns: [t.commentId, t.userId] })],
 )

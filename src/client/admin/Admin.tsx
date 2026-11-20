@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink, Navigate, Route, Routes } from 'react-router'
 import { useAuth } from '../auth/AuthContext'
 import { load, save } from '../lib/storage'
+import { FeedPage } from './FeedAdmin'
 import { AiPage, OverviewPage, TrafficPage } from './Insights'
 import { PaymentsPage, PhotosPage, PromosPage, UserPage, UsersPage } from './People'
 import { LearningPage, SystemPage } from './Product'
@@ -10,6 +11,7 @@ const TABS = [
   { to: '/admin', label: 'Overview', end: true },
   { to: '/admin/users', label: 'Students' },
   { to: '/admin/photos', label: 'Photos' },
+  { to: '/admin/feed', label: 'Feed' },
   { to: '/admin/payments', label: 'Payments' },
   { to: '/admin/promos', label: 'Promo codes' },
   { to: '/admin/learning', label: 'Learning' },
@@ -102,6 +104,7 @@ export default function Admin() {
             <Route path="users" element={<UsersPage />} />
             <Route path="users/:id" element={<UserPage />} />
             <Route path="photos" element={<PhotosPage />} />
+            <Route path="feed" element={<FeedPage />} />
             <Route path="payments" element={<PaymentsPage />} />
             <Route path="promos" element={<PromosPage />} />
             <Route path="learning" element={<LearningPage />} />

@@ -1,0 +1,438 @@
+import { useEffect, useState, type FormEvent } from 'react'
+import { useNavigate } from 'react-router'
+import { useTranslation } from 'react-i18next'
+import { COMMENT_MAX_LENGTH, type FeedComment, type FeedFace, type FeedPost } from '../../shared/feed'
+import { useAuth } from '../auth/AuthContext'
+import Avatar from '../components/Avatar'
+import Chai from '../components/Chai'
+import SpeakButton from '../components/lesson/SpeakButton'
+import { api, ApiError } from '../lib/api'
+import { playCorrect, playWrong } from '../lib/sounds'
+
+interface FeedData {
+  posts: FeedPost[]
+  more: string | null
+  canDiscuss: boolean
+  freeCommentsLeft: number | null
+  activeThisWeek: number
+}
+
+type Lang = 'ru' | 'en'
+
+function Faces({ faces, size = 28 }: { faces: FeedFace[]; size?: number }) {
+  return (
+    <span className="flex -space-x-2">
+      {faces.map((face) => (
+        <Avatar key={face.userId} userId={face.userId} name={face.name} photoVersion={face.photoVersion} size={size} className="ring-2 ring-white" />
+      ))}
+    </span>
+  )
+}
+
+/**
+ * What a free student sees where the comments are: that people are talking, who, how many,
+ * and a clear way in. The words of the comments never reach their phone; the grey bars are only bars.
+ */
+function LockedComments({ post, freeLeft, onWrite }: { post: FeedPost; freeLeft: number; onWrite: () => void }) {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const rows = Math.min(3, Math.max(2, post.comments))
+  return (
+    <div className="relative overflow-hidden rounded-2xl bg-cream">
+      <div className="flex select-none flex-col gap-3 p-4 blur-[5px]" aria-hidden="true">
+        {Array.from({ length: rows }, (_, i) => (
+          <div key={i} className="flex items-start gap-2">
+            <span className="h-8 w-8 shrink-0 rounded-full bg-ink/30" />
+            <span className="flex flex-1 flex-col gap-1.5 pt-1">
+              <span className="h-3 rounded-full bg-ink/40" style={{ width: `${[78, 55, 66][i]}%` }} />
+              <span className="h-3 rounded-full bg-ink/25" style={{ width: `${[42, 70, 30][i]}%` }} />
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-cream/30 p-3 text-center">
+        <div className="flex items-center gap-2">
+          {post.commenters.length > 0 && <Faces faces={post.commenters} />}
+          <p className="text-sm font-extrabold leading-tight">{post.comments > 0 ? t('feed.locked.count', { count: post.comments }) : t('feed.locked.first')}</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => navigate('/plans')}
+          className="min-h-11 rounded-2xl bg-ink px-4 text-sm font-extrabold text-white shadow-[0_4px_0_0_rgba(31,27,58,0.3)] active:translate-y-1"
+        >
+          👑 {t(post.comments > 0 ? 'feed.locked.see' : 'feed.locked.join')}
+        </button>
+        {freeLeft > 0 && (
+          <button type="button" onClick={onWrite} className="min-h-9 text-sm font-extrabold text-coral-dark underline">
+            {t('feed.locked.tryOne')}
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
+interface ThreadProps {
+  post: FeedPost
+  canDiscuss: boolean
+  freeLeft: number | null
+  onCount: (count: number) => void
+  onFreeLeft: (left: number | null) => void
+}
+
+/** The comments under a post, and the box to write one. */
+function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps) {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const [comments, setComments] = useState<FeedComment[] | null>(null)
+  const [draft, setDraft] = useState('')
+  /** What the AI suggests instead of what the student wrote. */
+  const [suggestion, setSuggestion] = useState<string | null>(null)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [reported, setReported] = useState<string[]>([])
+
+  useEffect(() => {
+    api<{ comments: FeedComment[] }>(`/feed/${post.id}/comments`)
+      .then((data) => setComments(data.comments))
+      .catch(() => setComments([]))
+  }, [post.id])
+
+  async function send(text: string, confirm: boolean) {
+    setBusy(true)
+    setError(null)
+    try {
+      const result = await api<{ suggestion?: string; comment?: FeedComment; freeCommentsLeft?: number | null }>(`/feed/${post.id}/comments`, { text, confirm })
+      if (result.suggestion) setSuggestion(result.suggestion)
+      else if (result.comment) {
+        setComments([...(comments ?? []), result.comment])
+        onCount(post.comments + 1)
+        onFreeLeft(result.freeCommentsLeft ?? null)
+        setDraft('')
+        setSuggestion(null)
+      }
+    } catch (err) {
+      const code = err instanceof ApiError ? err.code : 'network'
+      if (code === 'pro') navigate('/plans')
+      else setError(t(code === 'rejected' ? 'feed.rejected' : code === 'slow_down' ? 'feed.slowDown' : 'feed.failed'))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  function submit(e: FormEvent) {
+    e.preventDefault()
+    if (draft.trim().length >= 2 && !busy) void send(draft.trim(), false)
+  }
+
+  async function remove(id: string) {
+    await api(`/feed/comments/${id}/delete`, {}).catch(() => {})
+    setComments((comments ?? []).filter((m) => m.id !== id))
+    onCount(Math.max(0, post.comments - 1))
+  }
+
+  async function report(id: string) {
+    setReported([...reported, id])
+    await api(`/feed/comments/${id}/report`, {}).catch(() => {})
+  }
+
+  const canWrite = canDiscuss || (freeLeft ?? 0) > 0
+
+  return (
+    <div className="flex flex-col gap-3">
+      {comments?.map((comment) => (
+        <div key={comment.id} className="bubble-in flex items-start gap-2">
+          <Avatar userId={comment.face.userId} name={comment.face.name} photoVersion={comment.face.photoVersion} size={34} />
+          <div className="min-w-0 flex-1 rounded-2xl rounded-tl-md bg-cream px-3 py-2">
+            <p className="flex items-baseline justify-between gap-2 text-xs font-extrabold text-ink/55">
+              <span className="truncate">{comment.face.name ?? `${t('league.student')} ${comment.face.tag}`}</span>
+              {comment.mine ? (
+                <button type="button" onClick={() => remove(comment.id)} className="shrink-0 font-bold text-ink/40 underline">
+                  {t('feed.delete')}
+                </button>
+              ) : (
+                <button type="button" disabled={reported.includes(comment.id)} onClick={() => report(comment.id)} className="shrink-0 font-bold text-ink/40 underline disabled:no-underline">
+                  {reported.includes(comment.id) ? t('feed.reported') : t('feed.report')}
+                </button>
+              )}
+            </p>
+            <p className="select-text text-base leading-snug">{comment.text}</p>
+          </div>
+        </div>
+      ))}
+      {comments?.length === 0 && canDiscuss && <p className="text-sm font-semibold text-ink/50">{t('feed.beFirst')}</p>}
+
+      {suggestion ? (
+        <div className="bubble-in flex flex-col gap-2 rounded-2xl bg-[#DDF6EF] p-3">
+          <p className="text-sm font-extrabold text-[#0E6B55]">{t('feed.suggestTitle')}</p>
+          <p className="select-text text-base font-bold text-[#0E6B55]">{suggestion}</p>
+          <div className="flex gap-2">
+            <button type="button" disabled={busy} onClick={() => send(suggestion, true)} className="min-h-11 flex-1 rounded-2xl bg-mint px-3 text-sm font-extrabold text-white shadow-[0_4px_0_0_#1FA283] active:translate-y-1">
+              {t('feed.suggestUse')}
+            </button>
+            <button type="button" disabled={busy} onClick={() => send(draft.trim(), true)} className="min-h-11 flex-1 rounded-2xl bg-white px-3 text-sm font-extrabold text-ink ring-2 ring-inset ring-ink/10 active:translate-y-0.5">
+              {t('feed.suggestKeep')}
+            </button>
+          </div>
+        </div>
+      ) : (
+        canWrite && (
+          <form onSubmit={submit} className="flex items-end gap-2">
+            <textarea
+              value={draft}
+              onChange={(e) => setDraft(e.target.value.slice(0, COMMENT_MAX_LENGTH))}
+              rows={1}
+              lang="en"
+              placeholder={t(canDiscuss ? 'feed.write' : 'feed.writeFree')}
+              aria-label={t('feed.write')}
+              className="min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-white px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
+            />
+            <button
+              type="submit"
+              disabled={busy || draft.trim().length < 2}
+              aria-label={t('chat.send')}
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-coral text-xl font-extrabold text-white shadow-[0_4px_0_0_var(--color-coral-dark)] active:translate-y-1 disabled:opacity-50"
+            >
+              ↑
+            </button>
+          </form>
+        )
+      )}
+      {error && (
+        <p role="alert" className="text-sm font-bold text-coral-dark">
+          {error}
+        </p>
+      )}
+    </div>
+  )
+}
+
+interface CardProps {
+  post: FeedPost
+  lang: Lang
+  canDiscuss: boolean
+  freeLeft: number | null
+  onChange: (post: FeedPost) => void
+  onFreeLeft: (left: number | null) => void
+}
+
+function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: CardProps) {
+  const { t, i18n } = useTranslation()
+  const { refresh } = useAuth()
+  const [open, setOpen] = useState(false)
+  const [gained, setGained] = useState(0)
+  const { body } = post
+  const when = new Intl.DateTimeFormat(i18n.language === 'en' ? 'en-GB' : 'ru-RU', { day: 'numeric', month: 'long' }).format(new Date(post.publishedAt))
+
+  async function like() {
+    // Shown at once; put right if the server disagrees.
+    onChange({ ...post, liked: !post.liked, likes: post.likes + (post.liked ? -1 : 1) })
+    const result = await api<{ liked: boolean; likes: number }>(`/feed/${post.id}/like`, {}).catch(() => null)
+    if (result) onChange({ ...post, ...result })
+  }
+
+  async function vote(choice: number) {
+    const result = await api<{ vote: number; answer: number | null; explanation: FeedPost['body']['explanation'] | null; votes: number[]; xp: number }>(`/feed/${post.id}/vote`, {
+      choice,
+      tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    }).catch(() => null)
+    if (!result) return
+    if (result.vote === result.answer) playCorrect()
+    else playWrong()
+    setGained(result.xp)
+    onChange({ ...post, vote: result.vote, votes: result.votes, body: { ...body, answer: result.answer ?? undefined, explanation: result.explanation ?? undefined } })
+    if (result.xp > 0) void refresh()
+  }
+
+  const answered = post.vote !== null
+  const totalVotes = (post.votes ?? []).reduce((sum, n) => sum + n, 0)
+
+  return (
+    <article className="flex flex-col gap-3 rounded-3xl bg-white p-4 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+      <header className="flex items-center gap-2.5">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-cream">
+          <Chai size={44} />
+        </span>
+        <div className="min-w-0 flex-1 leading-tight">
+          <p className="flex items-center gap-1 text-base font-extrabold">
+            Talkreal
+            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#3D9BFF] text-[10px] text-white" aria-label={t('feed.official')}>
+              ✓
+            </span>
+          </p>
+          <p className="text-xs font-bold text-ink/45">
+            {when} · {t(`feed.kinds.${post.kind}`)}
+          </p>
+        </div>
+        <span className="text-2xl" aria-hidden="true">
+          {body.emoji}
+        </span>
+      </header>
+
+      <h2 className="text-xl font-extrabold leading-tight">{body.title[lang]}</h2>
+
+      {body.english && (
+        <p className="flex items-center gap-2 rounded-2xl bg-coral/10 px-4 py-3 text-lg font-extrabold leading-snug text-coral-dark">
+          <span className="min-w-0 flex-1 select-text">{body.english}</span>
+          <SpeakButton text={body.english.replace(/_+/g, ' ')} />
+        </p>
+      )}
+
+      <p className="select-text whitespace-pre-line text-base leading-snug text-ink/80">{body.text[lang]}</p>
+
+      {post.hasImage && <img src={`/api/feed/${post.id}/image`} alt="" loading="lazy" className="aspect-square w-full rounded-2xl bg-cream object-cover" />}
+
+      {post.kind === 'poll' && body.options && (
+        <div className="flex flex-col gap-2">
+          {body.options.map((option, i) => {
+            const right = answered && i === body.answer
+            const mine = post.vote === i
+            const share = answered && totalVotes > 0 ? Math.round(((post.votes?.[i] ?? 0) / totalVotes) * 100) : 0
+            return (
+              <button
+                key={option}
+                type="button"
+                disabled={answered}
+                onClick={() => vote(i)}
+                className={`relative min-h-12 overflow-hidden rounded-2xl border-2 px-4 py-2.5 text-left text-base font-bold active:translate-y-0.5 ${
+                  right ? 'border-mint bg-mint/10' : mine ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/10 bg-white'
+                }`}
+              >
+                {answered && <span className={`absolute inset-y-0 left-0 ${right ? 'bg-mint/25' : 'bg-ink/5'}`} style={{ width: `${share}%` }} aria-hidden="true" />}
+                <span className="relative flex items-center justify-between gap-3">
+                  <span>
+                    {right && '✓ '}
+                    {mine && !right && '✕ '}
+                    {option}
+                  </span>
+                  {answered && <span className="text-sm font-extrabold tabular-nums text-ink/55">{share}%</span>}
+                </span>
+              </button>
+            )
+          })}
+          {answered && body.explanation && <p className="bubble-in select-text rounded-2xl bg-[#DDF6EF] px-4 py-3 text-base leading-snug text-[#0E6B55]">{body.explanation[lang]}</p>}
+          {gained > 0 && <p className="pop-in text-sm font-extrabold text-[#0E8A6C]">+{gained} XP</p>}
+        </div>
+      )}
+
+      <footer className="flex items-center gap-2 border-t border-ink/5 pt-3">
+        <button
+          type="button"
+          onClick={like}
+          aria-pressed={post.liked}
+          aria-label={t('feed.like')}
+          className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-extrabold active:scale-95 ${post.liked ? 'bg-coral/15 text-coral-dark' : 'bg-ink/5 text-ink/60'}`}
+        >
+          <span aria-hidden="true">{post.liked ? '♥' : '♡'}</span>
+          {post.likes}
+        </button>
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-extrabold active:scale-95 ${open ? 'bg-ink text-white' : 'bg-ink/5 text-ink/60'}`}
+        >
+          <span aria-hidden="true">💬</span>
+          {post.comments}
+        </button>
+        {!open && post.commenters.length > 0 && (
+          <button type="button" onClick={() => setOpen(true)} className="ml-auto flex items-center gap-2 text-xs font-bold text-ink/50">
+            <Faces faces={post.commenters} size={24} />
+            {t('feed.talking', { count: post.comments })}
+          </button>
+        )}
+      </footer>
+
+      {/* A free student always sees the locked conversation: it is the reason to upgrade. */}
+      {!canDiscuss && !open && <LockedComments post={post} freeLeft={freeLeft ?? 0} onWrite={() => setOpen(true)} />}
+      {open && (
+        <Thread
+          post={post}
+          canDiscuss={canDiscuss}
+          freeLeft={freeLeft}
+          onCount={(comments) => onChange({ ...post, comments })}
+          onFreeLeft={onFreeLeft}
+        />
+      )}
+      {open && !canDiscuss && <LockedComments post={post} freeLeft={0} onWrite={() => {}} />}
+    </article>
+  )
+}
+
+/** Feed tab: the Talkreal account's daily posts, and the conversation under them. */
+export default function Feed() {
+  const { t, i18n } = useTranslation()
+  const navigate = useNavigate()
+  const lang: Lang = i18n.language === 'en' ? 'en' : 'ru'
+  const [data, setData] = useState<FeedData | null>(null)
+  const [failed, setFailed] = useState(false)
+  const [loadingMore, setLoadingMore] = useState(false)
+
+  useEffect(() => {
+    api<FeedData>('/feed')
+      .then(setData)
+      .catch(() => setFailed(true))
+  }, [])
+
+  if (!data) {
+    return (
+      <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
+        <Chai size={110} />
+        {failed && <p className="text-base font-bold text-ink/60">{t('login.errors.network')}</p>}
+      </div>
+    )
+  }
+
+  async function more() {
+    if (!data?.more) return
+    setLoadingMore(true)
+    const next = await api<FeedData>(`/feed?before=${encodeURIComponent(data.more)}`).catch(() => null)
+    if (next) setData({ ...data, posts: [...data.posts, ...next.posts], more: next.more })
+    setLoadingMore(false)
+  }
+
+  const update = (post: FeedPost) => setData({ ...data, posts: data.posts.map((p) => (p.id === post.id ? post : p)) })
+
+  return (
+    <div className="flex flex-col gap-4">
+      <header className="pt-1">
+        <h1 className="text-3xl font-extrabold">{t('feed.title')}</h1>
+        <p className="mt-1 text-base text-ink/65">{t('feed.subtitle')}</p>
+      </header>
+
+      {!data.canDiscuss && (
+        <button
+          type="button"
+          onClick={() => navigate('/plans')}
+          className="relative overflow-hidden rounded-3xl bg-ink p-4 text-left text-white shadow-[0_6px_0_0_rgba(31,27,58,0.25)] active:translate-y-1"
+        >
+          <span className="float-slow absolute -right-4 -top-6 h-24 w-24 rounded-full bg-white/10" aria-hidden="true" />
+          <p className="text-xs font-extrabold uppercase tracking-wide text-sun">{t('feed.banner.over')}</p>
+          <p className="mt-1 text-lg font-extrabold leading-tight">{data.activeThisWeek > 0 ? t('feed.banner.active', { count: data.activeThisWeek }) : t('feed.banner.empty')}</p>
+          <p className="mt-1 text-sm font-semibold text-white/75">{t('feed.banner.text')}</p>
+          <span className="mt-3 inline-flex min-h-10 items-center rounded-2xl bg-sun px-4 text-sm font-extrabold text-ink">👑 {t('feed.banner.button')}</span>
+        </button>
+      )}
+
+      {data.posts.length === 0 && <p className="rounded-2xl bg-white p-4 text-base text-ink/65">{t('feed.empty')}</p>}
+
+      {data.posts.map((post) => (
+        <PostCard
+          key={post.id}
+          post={post}
+          lang={lang}
+          canDiscuss={data.canDiscuss}
+          freeLeft={data.freeCommentsLeft}
+          onChange={update}
+          onFreeLeft={(left) => setData((current) => (current ? { ...current, freeCommentsLeft: left } : current))}
+        />
+      ))}
+
+      {data.more && (
+        <button type="button" onClick={more} disabled={loadingMore} className="min-h-12 rounded-2xl bg-white text-base font-extrabold text-ink/70 shadow-[0_4px_0_0_rgba(31,27,58,0.06)] active:translate-y-0.5">
+          {t('feed.more')}
+        </button>
+      )}
+    </div>
+  )
+}
