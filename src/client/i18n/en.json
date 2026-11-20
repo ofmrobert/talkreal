@@ -141,7 +141,7 @@
       "interests": "Pick your interests: they are more fun to talk about."
     },
     "discoverable": "Show my profile to other students",
-    "discoverableHint": "For when the community opens. Right now nobody sees your profile but you. Your email and Telegram are never shown to anyone.",
+    "discoverableHint": "Other students will be able to find you among practice partners, follow you and write to you. Your email and Telegram are never shown.",
     "privacyNote": "Everything except the name is optional. The AI teachers see your name, goals and interests, so the conversation is about what matters to you."
   },
   "install": {
@@ -704,7 +704,8 @@
     "filter": {
       "all": "All",
       "official": "Talkreal",
-      "students": "Students"
+      "students": "Students",
+      "following": "Following"
     },
     "compose": {
       "placeholder": "Write something in English: your day, a question, a thought…",
@@ -751,7 +752,8 @@
       "active_one": "{{count}} student is writing this week",
       "active_other": "{{count}} students are writing this week",
       "newDot": "Something new"
-    }
+    },
+    "noFollowing": "Posts by the students you follow will appear here. Find them with the 👥 button at the top."
   },
   "theme": {
     "title": "Appearance",
@@ -767,6 +769,123 @@
       "forest": "Forest",
       "midnight": "Midnight",
       "plum": "Evening rose"
+    }
+  },
+  "social": {
+    "back": "Back",
+    "close": "Close",
+    "more": "More",
+    "follow": "Follow",
+    "following": "Following",
+    "followsYou": "Follows you",
+    "common_one": "{{count}} shared interest",
+    "common_other": "{{count}} shared interests",
+    "report": "Report",
+    "block": "Block",
+    "unblock": "Unblock",
+    "blockConfirm": "Block this student? You will stop seeing each other's posts and messages.",
+    "reportTitle": "What happened?",
+    "reportNote": "A few words, if you like (optional)",
+    "reportSent": "Thank you. A Talkreal moderator will look at it.",
+    "reasons": {
+      "rude": "Rudeness or insults",
+      "spam": "Spam or advertising",
+      "contacts": "Asks for contacts or money",
+      "unsafe": "Unacceptable or unsafe behaviour",
+      "other": "Something else"
+    },
+    "people": {
+      "title": "Practice partners",
+      "short": "Partners",
+      "subtitle": "Students who are good to talk to in English.",
+      "tabs": {
+        "suggested": "For you",
+        "following": "Following",
+        "followers": "Followers"
+      },
+      "search": "Find by name",
+      "nothingFound": "Nobody found.",
+      "empty": {
+        "suggested": "Nobody here yet. Look again later: students open their profiles every day.",
+        "following": "You are not following anyone yet.",
+        "followers": "Nobody follows you yet."
+      },
+      "hiddenTitle": "Nobody can see you yet",
+      "hiddenText": "Switch on “Show my profile” so other students can find you and write to you."
+    },
+    "profile": {
+      "notFound": "There is no such student.",
+      "closed": "This student does not show their profile.",
+      "posts": "posts",
+      "followers": "followers",
+      "following": "following",
+      "streak_one": "{{count}} day in a row",
+      "streak_other": "{{count}} days in a row",
+      "edit": "Edit profile",
+      "write": "Message",
+      "blocked": "You have blocked this student.",
+      "goals": "Why they learn English",
+      "interests": "Interests",
+      "theirPosts": "Posts"
+    },
+    "messages": {
+      "title": "Messages",
+      "subtitle": "Private conversations with other students, in English.",
+      "request": "Request",
+      "declined": "Declined",
+      "you": "You",
+      "hiddenText": "New message",
+      "lockedTitle": "Private messages are part of the subscription",
+      "lockedUnread_one": "You have {{count}} message",
+      "lockedUnread_other": "You have {{count}} messages",
+      "lockedText": "With a subscription you read messages, write to partners and get your English corrected.",
+      "lockedButton": "Open with Pro",
+      "age": "Private messages are for people aged 18 and over.",
+      "banned": "A Talkreal moderator has switched off private messages for you for breaking the rules.",
+      "emptyTitle": "No conversations yet",
+      "emptyText": "Find a partner at your level and write to them first.",
+      "find": "Find a partner"
+    },
+    "chat": {
+      "openProfile": "Open profile",
+      "intro": "Write to {{name}} in English. The first message is a request: the conversation goes on once they answer.",
+      "placeholder": "A message in English…",
+      "better": "Better:",
+      "hidden": "This message was hidden by a moderator",
+      "note": "Messages are checked automatically and may be read by a moderator. Do not share contact details.",
+      "requestTitle": "{{name}} would like to talk",
+      "requestText": "Accept the request to answer. If you decline, this student will not be able to write to you.",
+      "accept": "Accept",
+      "decline": "Decline",
+      "lockedTitle": "{{name}} wrote to you. Open your messages with a subscription.",
+      "closed": {
+        "waiting": "Request sent. You can write more once {{name}} answers.",
+        "declined": "{{name}} declined the request.",
+        "blocked": "This conversation is not available.",
+        "age": "Private messages are for people aged 18 and over.",
+        "banned": "A Talkreal moderator has switched off private messages for you for breaking the rules."
+      },
+      "errors": {
+        "rejected": "Not sent: the message breaks the rules (rudeness, links or contact details).",
+        "waiting": "Wait for an answer: only one message can be sent until then.",
+        "declined": "This student declined the request.",
+        "blocked": "This conversation is not available.",
+        "closed": "This student does not accept messages.",
+        "slow_down": "Too many messages today. Carry on tomorrow.",
+        "banned": "Private messages are switched off for you.",
+        "age": "Private messages are for people aged 18 and over."
+      }
+    },
+    "rules": {
+      "title": "Rules for messages",
+      "english": "Write in English: this is a place to practise.",
+      "kind": "Be polite. Insults, harassment and spam are not allowed.",
+      "contacts": "Do not share phone numbers, emails, messenger names or links, and do not ask others for them.",
+      "checked": "Every message is checked automatically before it is sent. A Talkreal moderator may read a conversation to deal with a complaint or a breach of the rules.",
+      "report": "If someone makes you uncomfortable, block or report them: the “⋯” button in the conversation.",
+      "adult": "I am 18 or older and I accept the rules.",
+      "accept": "Start talking",
+      "policy": "Privacy policy"
     }
   }
 }

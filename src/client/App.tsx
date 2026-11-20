@@ -5,12 +5,16 @@ import AppLayout from './components/AppLayout'
 import BillingReturn from './screens/BillingReturn'
 import Call from './screens/Call'
 import Chat from './screens/Chat'
+import DirectChat from './screens/DirectChat'
 import EditProfile from './screens/EditProfile'
 import Feed from './screens/Feed'
 import Chai from './components/Chai'
 import Home from './screens/Home'
 import League from './screens/League'
 import Lesson from './screens/Lesson'
+import Messages from './screens/Messages'
+import Partners from './screens/Partners'
+import PublicProfile from './screens/PublicProfile'
 import Login from './screens/Login'
 import Onboarding from './screens/Onboarding'
 import Placement from './screens/Placement'
@@ -104,9 +108,13 @@ export default function App() {
               <Route path="/test/:id" element={<Test />} />
               <Route path="/talk/:teacherId" element={<Call />} />
               <Route path="/chat/:teacherId" element={<Chat />} />
+              <Route path="/messages/:id" element={<DirectChat />} />
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/feed" element={<Feed />} />
+                <Route path="/people" element={<Partners />} />
+                <Route path="/u/:id" element={<PublicProfile />} />
+                <Route path="/messages" element={<Messages />} />
                 <Route path="/talk" element={<Talk />} />
                 <Route path="/league" element={<League />} />
                 <Route path="/profile" element={<Profile />} />

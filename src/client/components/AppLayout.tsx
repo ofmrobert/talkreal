@@ -17,7 +17,9 @@ export default function AppLayout() {
   const { pathname } = useLocation()
   // Asked again when the student moves between tabs, so the dot keeps up.
   const news = useFeedNews(pathname)
-  const feedHasNews = (news?.fresh ?? 0) > 0 && pathname !== '/feed'
+  // The people and messages screens belong to the Feed tab.
+  const inCommunity = /^\/(people|messages|u)(\/|$)/.test(pathname)
+  const feedHasNews = ((news?.fresh ?? 0) > 0 && pathname !== '/feed') || (news?.unreadMessages ?? 0) > 0
 
   return (
     <div className="mx-auto flex h-full max-w-md flex-col">
@@ -34,7 +36,7 @@ export default function AppLayout() {
                 end={to === '/'}
                 className={({ isActive }) =>
                   `flex min-h-14 flex-col items-center justify-center gap-0.5 rounded-2xl text-xs font-bold transition-colors ${
-                    isActive ? 'text-coral' : 'text-ink/45'
+                    isActive || (key === 'feed' && inCommunity) ? 'text-coral' : 'text-ink/45'
                   }`
                 }
               >

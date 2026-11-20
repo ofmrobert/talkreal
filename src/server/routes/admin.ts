@@ -18,6 +18,8 @@ import { db, dbStatus } from '../db/client'
 import {
   adminActions,
   dailyUsage,
+  dmMessages,
+  dmThreads,
   feedComments,
   feedPosts,
   lessonProgress,
@@ -28,6 +30,7 @@ import {
   pushSubscriptions,
   reviewItems,
   sessions,
+  socialReports,
   userAchievements,
   users,
   voiceSessions,
@@ -343,6 +346,8 @@ adminRoutes.get('/users/:id', async (c) => {
       reminders: user.remindersEnabled,
       reminderHour: user.reminderHour,
       consentAt: user.consentAt,
+      dmBannedAt: user.dmBannedAt,
+      dmRulesAt: user.dmRulesAt,
     },
     progress: progress.map((p) => ({ id: p.lessonId, accuracy: p.bestAccuracy, completions: p.completions, last: p.lastCompletedAt })),
     usage: usage.map((u) => ({ day: u.day, lessons: u.lessonsDone, xp: u.xp, voiceMinutes: Math.round(u.voiceSeconds / 60), messages: u.textMessages })),
@@ -747,4 +752,105 @@ adminRoutes.get('/system', async (c) => {
     counts,
     actions: actions.map((a) => ({ ...a, admin: pii.get(a.adminId)?.email ?? a.adminId })),
   })
+})
+
+/* ───────────── Private messages between students: reading and moderating ───────────── */
+
+/** How the panel names a student: email, else name, else Telegram, else the start of the id. */
+async function namesFor(ids: string[]): Promise<Map<string, string>> {
+  const unique = [...new Set(ids)]
+  const pii = await getPiiFor(unique)
+  return new Map(unique.map((id) => [id, pii.get(id)?.email ?? pii.get(id)?.displayName ?? (pii.get(id)?.telegramUsername ? `@${pii.get(id)!.telegramUsername}` : id.slice(0, 8))]))
+}
+
+/**
+ * Conversations between students, newest first. `filter`: 'reported' (a student complained and
+ * it is not dealt with yet), 'flagged' (the check stopped a message) or all; `user` narrows it to one student.
+ */
+adminRoutes.get('/messages', async (c) => {
+  const filter = c.req.query('filter')
+  const user = c.req.query('user')
+  const only = user && isUuid(user) ? sql`and (t.user_a = ${user} or t.user_b = ${user})` : sql``
+  const threads = await rows<{ id: string; userA: string; userB: string; startedBy: string; status: string; lastMessageAt: string; messages: number; rejected: number; hidden: number; reports: number }>(sql`
+    select * from (
+      select t.id, t.user_a as "userA", t.user_b as "userB", t.started_by as "startedBy", t.status, t.last_message_at as "lastMessageAt",
+             (select count(*)::int from dm_messages m where m.thread_id = t.id and m.status <> 'rejected') as messages,
+             (select count(*)::int from dm_messages m where m.thread_id = t.id and m.status = 'rejected') as rejected,
+             (select count(*)::int from dm_messages m where m.thread_id = t.id and m.status = 'hidden') as hidden,
+             (select count(*)::int from social_reports r where r.thread_id = t.id and r.resolved_at is null) as reports
+      from dm_threads t where true ${only}
+    ) x
+    where ${filter === 'reported' ? sql`x.reports > 0` : filter === 'flagged' ? sql`x.rejected > 0` : sql`true`}
+    order by x."lastMessageAt" desc limit 100`)
+  const reports = await rows<{ id: string; reporterId: string; aboutId: string; threadId: string | null; reason: string; note: string | null; createdAt: string }>(sql`
+    select id, reporter_id as "reporterId", about_id as "aboutId", thread_id as "threadId", reason, note, created_at as "createdAt"
+    from social_reports where resolved_at is null order by created_at desc limit 100`)
+  const [counts] = await rows<Record<string, number>>(sql`
+    select (select count(*)::int from dm_threads) as threads,
+           (select count(*)::int from dm_messages where status <> 'rejected' and created_at > now() - interval '1 day') as "messagesToday",
+           (select count(*)::int from dm_messages where status = 'rejected' and created_at > now() - interval '7 days') as "rejectedWeek",
+           (select count(*)::int from social_reports where resolved_at is null) as "openReports",
+           (select count(*)::int from users where dm_banned_at is not null) as banned,
+           (select count(*)::int from follows) as follows,
+           (select count(*)::int from user_blocks) as blocks`)
+  const names = await namesFor([...threads.flatMap((t) => [t.userA, t.userB]), ...reports.flatMap((r) => [r.reporterId, r.aboutId])])
+  return c.json({
+    counts,
+    threads: threads.map((t) => ({ ...t, whoA: names.get(t.userA), whoB: names.get(t.userB) })),
+    reports: reports.map((r) => ({ ...r, reporter: names.get(r.reporterId), about: names.get(r.aboutId) })),
+  })
+})
+
+/** One whole conversation, including what the check stopped and what was hidden. Every look is written to the admin log. */
+adminRoutes.get('/messages/:id', async (c) => {
+  const id = c.req.param('id')
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const [thread] = await db.select().from(dmThreads).where(eq(dmThreads.id, id)).limit(1)
+  if (!thread) return c.json({ error: 'not_found' }, 404)
+  const messages = await db.select().from(dmMessages).where(eq(dmMessages.threadId, id)).orderBy(asc(dmMessages.createdAt)).limit(1000)
+  const reports = await db.select().from(socialReports).where(eq(socialReports.threadId, id)).orderBy(desc(socialReports.createdAt))
+  const people = await db.select().from(users).where(inArray(users.id, [thread.userA, thread.userB]))
+  const names = await namesFor([thread.userA, thread.userB, ...reports.map((r) => r.reporterId)])
+  await log(c, 'dm_view', id)
+  return c.json({
+    thread: { id: thread.id, status: thread.status, startedBy: thread.startedBy, createdAt: thread.createdAt },
+    people: people.map((u) => ({ id: u.id, who: names.get(u.id), plan: planOf(u), level: u.level, banned: u.dmBannedAt !== null })),
+    messages: messages.map((m) => ({ id: m.id, senderId: m.senderId, text: m.text, better: m.better, status: m.status, createdAt: m.createdAt })),
+    reports: reports.map((r) => ({ id: r.id, reporter: names.get(r.reporterId), aboutId: r.aboutId, reason: r.reason, note: r.note, createdAt: r.createdAt, resolvedAt: r.resolvedAt })),
+  })
+})
+
+/** Hides a message from both students, or brings it back. */
+adminRoutes.post('/messages/message/:id', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id) || (body.action !== 'hide' && body.action !== 'show')) return c.json({ error: 'invalid' }, 400)
+  const changed = await db
+    .update(dmMessages)
+    .set({ status: body.action === 'hide' ? 'hidden' : 'sent' })
+    .where(and(eq(dmMessages.id, id), eq(dmMessages.status, body.action === 'hide' ? 'sent' : 'hidden')))
+    .returning({ id: dmMessages.id })
+  if (changed.length === 0) return c.json({ error: 'not_found' }, 404)
+  await log(c, `dm_${body.action}`, id)
+  return c.json({ ok: true })
+})
+
+/** Marks a complaint as dealt with. */
+adminRoutes.post('/messages/reports/:id', async (c) => {
+  const id = c.req.param('id')
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  await db.update(socialReports).set({ resolvedAt: new Date() }).where(eq(socialReports.id, id))
+  await log(c, 'report_resolve', id)
+  return c.json({ ok: true })
+})
+
+/** Stops a student from writing private messages, or lets them again. */
+adminRoutes.post('/users/:id/messaging', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const changed = await db.update(users).set({ dmBannedAt: body.banned === true ? new Date() : null }).where(eq(users.id, id)).returning({ id: users.id })
+  if (changed.length === 0) return c.json({ error: 'not_found' }, 404)
+  await log(c, body.banned === true ? 'dm_ban' : 'dm_unban', id)
+  return c.json({ ok: true })
 })

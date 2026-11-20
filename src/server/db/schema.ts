@@ -1,4 +1,4 @@
-import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid, type AnyPgColumn } from 'drizzle-orm/pg-core'
+import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uniqueIndex, uuid, type AnyPgColumn } from 'drizzle-orm/pg-core'
 import type { PostBody } from '../../shared/feed'
 import type { CallReport } from '../../shared/report'
 
@@ -31,6 +31,10 @@ export const users = pgTable('users', {
   consentAt: timestamptz('consent_at'),
   /** When the student filled in (or skipped) the "about you" step. Empty = show it once. */
   profileSetAt: timestamptz('profile_set_at'),
+  /** When the student read and accepted the rules for private messages (and said they are an adult). */
+  dmRulesAt: timestamptz('dm_rules_at'),
+  /** Set by the owner: this student may not write private messages. */
+  dmBannedAt: timestamptz('dm_banned_at'),
 })
 
 /** Badges a student has earned. The list of possible badges lives in src/shared/achievements.ts. */
@@ -471,4 +475,102 @@ export const feedReports = pgTable(
       .references(() => users.id, { onDelete: 'cascade' }),
   },
   (t) => [primaryKey({ columns: [t.commentId, t.userId] })],
+)
+
+/* ───────────── The community: following, blocking and private messages ───────────── */
+
+export const follows = pgTable(
+  'follows',
+  {
+    followerId: uuid('follower_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    followeeId: uuid('followee_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.followerId, t.followeeId] }), index('follows_followee_idx').on(t.followeeId)],
+)
+
+/** A student who does not want to hear from another one. */
+export const userBlocks = pgTable(
+  'user_blocks',
+  {
+    blockerId: uuid('blocker_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    blockedId: uuid('blocked_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.blockerId, t.blockedId] }), index('user_blocks_blocked_idx').on(t.blockedId)],
+)
+
+/**
+ * A private conversation between two students. `userA` is always the smaller id of the two,
+ * so a pair has exactly one conversation.
+ */
+export const dmThreads = pgTable(
+  'dm_threads',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userA: uuid('user_a')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    userB: uuid('user_b')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    startedBy: uuid('started_by').notNull(),
+    /** 'request' until the other student answers or accepts, then 'open'; 'declined' if they said no. */
+    status: text('status').notNull().default('request'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+    lastMessageAt: timestamptz('last_message_at').notNull().defaultNow(),
+    /** Up to when each of the two has read. */
+    readAtA: timestamptz('read_at_a'),
+    readAtB: timestamptz('read_at_b'),
+  },
+  (t) => [uniqueIndex('dm_threads_pair_idx').on(t.userA, t.userB), index('dm_threads_b_idx').on(t.userB)],
+)
+
+export const dmMessages = pgTable(
+  'dm_messages',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    threadId: uuid('thread_id')
+      .notNull()
+      .references(() => dmThreads.id, { onDelete: 'cascade' }),
+    senderId: uuid('sender_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    text: text('text').notNull(),
+    /** The same message in better English, shown to the sender only. */
+    better: text('better'),
+    /** 'sent' | 'hidden' (removed by a moderator) | 'rejected' (stopped by the check, never delivered) */
+    status: text('status').notNull().default('sent'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('dm_messages_thread_idx').on(t.threadId, t.createdAt), index('dm_messages_sender_idx').on(t.senderId, t.createdAt)],
+)
+
+/** A student's complaint about a conversation or about another student. */
+export const socialReports = pgTable(
+  'social_reports',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    reporterId: uuid('reporter_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    aboutId: uuid('about_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    threadId: uuid('thread_id').references(() => dmThreads.id, { onDelete: 'cascade' }),
+    /** See REPORT_REASONS in src/shared/social.ts. */
+    reason: text('reason').notNull(),
+    note: text('note'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+    resolvedAt: timestamptz('resolved_at'),
+  },
+  (t) => [index('social_reports_open_idx').on(t.resolvedAt, t.createdAt)],
 )

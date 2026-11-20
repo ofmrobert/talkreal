@@ -77,6 +77,8 @@ export interface FeedSummary {
   challenge: { title: Text; endsAt: string; answers: number; answered: boolean } | null
   /** Posts by others since the student last opened the feed. */
   fresh: number
+  /** Private messages waiting for the student. */
+  unreadMessages: number
   /** People who wrote a post or a comment in the last week, and a few of their faces. */
   activeThisWeek: number
   faces: FeedFace[]

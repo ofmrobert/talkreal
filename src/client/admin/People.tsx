@@ -163,6 +163,8 @@ interface UserDetail {
     telegram: boolean
     telegramId: string | null
     telegramUsername: string | null
+    dmBannedAt?: string | null
+    dmRulesAt?: string | null
     createdAt: string
     locale: string
     timezone: string | null
@@ -269,6 +271,15 @@ export function UserPage() {
                 ['Email', user.email ?? '—'],
                 ['Telegram', user.telegramId ? <Telegram id={user.telegramId} username={user.telegramUsername} /> : 'not connected'],
                 ['Name', user.name ?? '—'],
+                [
+                  'Private messages',
+                  <span key="dm">
+                    <Link to={`/admin/messages?user=${user.id}`} className="font-semibold text-violet-700 hover:underline">
+                      Read their conversations
+                    </Link>
+                    {user.dmBannedAt ? ' · banned from messaging' : user.dmRulesAt ? '' : ' · has not accepted the rules yet'}
+                  </span>,
+                ],
                 ['Last login', dateTime(data.devices.last)],
                 ['Came from', source],
                 ['App language', user.locale],

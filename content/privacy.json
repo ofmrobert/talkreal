@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-20",
   "operator": "",
   "contact": "",
   "ru": {
@@ -16,7 +16,8 @@
           "Ваши посты и комментарии в ленте видят ученики с подпиской. Рядом с комментарием показываются имя и фотография по тому же правилу: только если вы разрешили показывать профиль. Перед публикацией комментарий проверяет сервис искусственного интеллекта; комментарии, ваши отметки «нравится» и ответы в мини-тестах хранятся на наших серверах, пока вы их не удалите или не удалите аккаунт.",
           "Данные об обучении: уровень английского, пройденные уроки, результаты, очки опыта, серия дней, время разговоров с ИИ-преподавателями.",
           "Технические данные: язык приложения, часовой пояс, адрес для отправки уведомлений на ваше устройство (если вы их включили).",
-          "Статистика посещений: какие экраны приложения открывались, с какого сайта или по какой рекламной ссылке вы пришли, тип устройства (телефон или компьютер). Она привязана к случайному номеру, который хранится в вашем браузере; IP-адрес не сохраняется."
+          "Статистика посещений: какие экраны приложения открывались, с какого сайта или по какой рекламной ссылке вы пришли, тип устройства (телефон или компьютер). Она привязана к случайному номеру, который хранится в вашем браузере; IP-адрес не сохраняется.",
+          "Сообщество: ваши посты и комментарии в ленте, подписки на других учеников, блокировки и жалобы, а также личные сообщения, которые вы отправляете другим ученикам, включая сообщения, не прошедшие проверку."
         ]
       },
       {
@@ -35,6 +36,17 @@
           "Мы не сохраняем запись вашего голоса и полный текст разговора. Сохраняются длительность разговора и короткий разбор, который преподаватель пишет после звонка: ваши ошибки с исправлениями и полезные слова.",
           "Переписка с ИИ-преподавателем и ответы, которые вы печатаете в упражнениях, тоже передаются этому сервису для ответа и проверки. Текст переписки на наших серверах не хранится.",
           "Не сообщайте в разговоре сведения, которыми не хотите делиться: паспортные данные, пароли, номера карт."
+        ]
+      },
+      {
+        "heading": "Сообщество и личные сообщения",
+        "items": [
+          "Другие ученики видят ваш профиль (имя, фотографию после проверки, уровень, город, текст о себе, цели и интересы) только если вы включили «Показывать мой профиль». Email и Telegram не показываются никому. Настройку можно выключить в любой момент.",
+          "Личные сообщения не являются тайной от сервиса. Каждое сообщение перед отправкой автоматически проверяется ИИ (Google Gemini) на оскорбления, спам, ссылки и контактные данные; сообщение, не прошедшее проверку, не доставляется, но сохраняется для модерации.",
+          "Модератор Talkreal может прочитать переписку между учениками, чтобы рассмотреть жалобу, предотвратить нарушение правил или выполнить требование закона. Каждый такой просмотр записывается в журнал действий администратора.",
+          "Модератор может скрыть сообщение, пост или комментарий и отключить ученику личные сообщения при нарушении правил.",
+          "Личные сообщения доступны только с 18 лет. Сообщения хранятся, пока существует ваш аккаунт или аккаунт собеседника, и удаляются вместе с аккаунтом.",
+          "Вы можете заблокировать любого ученика и пожаловаться на него: тогда он не сможет вам писать, а вы перестанете видеть посты друг друга."
         ]
       },
       {
@@ -85,7 +97,8 @@
           "Your posts and comments in the feed are visible to students on a paid plan. Your name and photo appear next to a comment by the same rule: only if you allowed your profile to be shown. Before it is posted, a comment is checked by the artificial-intelligence service; comments, your likes and your quiz answers are kept on our servers until you delete them or your account.",
           "Learning data: your English level, completed lessons, results, XP, streak, and time spent talking to AI teachers.",
           "Technical data: app language, timezone, and the address used to send notifications to your device (if you switched them on).",
-          "Visit statistics: which screens of the app were opened, which site or advertising link you came from, and the type of device (phone or computer). They are tied to a random number kept in your browser; your IP address is not stored."
+          "Visit statistics: which screens of the app were opened, which site or advertising link you came from, and the type of device (phone or computer). They are tied to a random number kept in your browser; your IP address is not stored.",
+          "Community: your posts and comments in the feed, who you follow, blocks and reports, and the private messages you send to other students, including messages that did not pass the check."
         ]
       },
       {
@@ -104,6 +117,17 @@
           "We do not keep a recording of your voice or the full text of the conversation. We save the length of the conversation and the short review the teacher writes after a call: your mistakes with corrections, and useful words.",
           "Text chat with an AI teacher and the answers you type in exercises are also sent to this service to be answered and checked. The text of the chat is not stored on our servers.",
           "Do not say anything you would not want to share: passport details, passwords, card numbers."
+        ]
+      },
+      {
+        "heading": "Community and private messages",
+        "items": [
+          "Other students see your profile (name, photo once it has been checked, level, city, the text about you, goals and interests) only if you switched on “Show my profile”. Your email and Telegram are never shown to anyone. You can switch the setting off at any time.",
+          "Private messages are not secret from the service. Before it is sent, every message is checked automatically by AI (Google Gemini) for insults, spam, links and contact details; a message that does not pass is not delivered but is kept for moderation.",
+          "A Talkreal moderator may read a conversation between students to deal with a complaint, to prevent a breach of the rules or to comply with the law. Every such viewing is recorded in the administrator action log.",
+          "A moderator may hide a message, post or comment and switch off private messages for a student who breaks the rules.",
+          "Private messages are available only from the age of 18. Messages are kept for as long as your account or the other person’s account exists, and are deleted with the account.",
+          "You can block and report any student: they will then be unable to write to you, and you will stop seeing each other’s posts."
         ]
       },
       {

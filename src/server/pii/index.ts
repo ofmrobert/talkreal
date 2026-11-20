@@ -2,7 +2,7 @@
  * The ONLY module allowed to touch the user_pii table (152-FZ separation).
  * If personal data must later live on separate storage, only this file changes.
  */
-import { desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm'
+import { and, desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm'
 import { db } from '../db/client'
 import { cleanProfile, type Profile } from '../../shared/profile'
 import { userAvatars, userPii, users } from '../db/schema'
@@ -264,4 +264,48 @@ export async function publicFaces(userIds: string[]) {
 /** May any logged-in student load this person's photo? Only if they chose to be seen and the photo was checked. */
 export async function isPhotoPublic(userId: string): Promise<boolean> {
   return ((await publicFaces([userId])).get(userId)?.photo ?? null) !== null
+}
+
+/* ───────────── The community: what students chose to show each other ───────────── */
+
+export interface OpenProfile {
+  userId: string
+  bio: string | null
+  city: string | null
+  goals: string[]
+  interests: string[]
+}
+
+const asOpen = (row: typeof userPii.$inferSelect): OpenProfile => ({ userId: row.userId, bio: row.bio, city: row.city, goals: row.goals ?? [], interests: row.interests ?? [] })
+
+/** Students who switched "show my profile" on, optionally only those whose name contains the text. */
+export async function openProfiles(limit: number, nameContains?: string): Promise<OpenProfile[]> {
+  const name = nameContains?.trim().replace(/[%_]/g, '')
+  const rows = await db
+    .select()
+    .from(userPii)
+    .where(and(eq(userPii.discoverable, true), name ? ilike(userPii.displayName, `%${name}%`) : undefined))
+    .limit(limit)
+  return rows.map(asOpen)
+}
+
+/** For a list of students: what each one shows to others. Students who keep their profile closed are left out. */
+export async function openProfilesOf(userIds: string[]): Promise<Map<string, OpenProfile>> {
+  const found = new Map<string, OpenProfile>()
+  if (userIds.length === 0) return found
+  const rows = await db.select().from(userPii).where(and(inArray(userPii.userId, userIds), eq(userPii.discoverable, true)))
+  for (const row of rows) found.set(row.userId, asOpen(row))
+  return found
+}
+
+/** The student's own goals and interests, for finding people with something in common. */
+export async function tastesOf(userId: string): Promise<{ goals: string[]; interests: string[] }> {
+  const [row] = await db.select({ goals: userPii.goals, interests: userPii.interests }).from(userPii).where(eq(userPii.userId, userId)).limit(1)
+  return { goals: row?.goals ?? [], interests: row?.interests ?? [] }
+}
+
+/** The age a student gave, or null if they did not say. */
+export async function ageOf(userId: string): Promise<number | null> {
+  const [row] = await db.select({ birthYear: userPii.birthYear }).from(userPii).where(eq(userPii.userId, userId)).limit(1)
+  return row?.birthYear ? new Date().getFullYear() - row.birthYear : null
 }

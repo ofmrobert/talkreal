@@ -52,6 +52,8 @@
         "items": [
           "Аккаунт предназначен для одного человека. Передавать доступ другим людям и перепродавать его нельзя.",
           "Нельзя вмешиваться в работу Сервиса, обходить ограничения тарифов и использовать Сервис для целей, не связанных с изучением языка.",
+          "В ленте и в личных сообщениях запрещены оскорбления, домогательства, угрозы, материалы сексуального характера, спам и реклама, а также обмен контактными данными и ссылками. Личные сообщения доступны Пользователям с 18 лет.",
+          "Посты, комментарии и личные сообщения автоматически проверяются перед публикацией и могут быть просмотрены модератором Продавца. Продавец вправе скрыть или удалить материалы, нарушающие правила, и отключить нарушителю публикации и личные сообщения без возврата оплаты.",
           "При нарушении этих правил Продавец вправе приостановить доступ, предварительно уведомив Пользователя по электронной почте."
         ]
       },
@@ -138,6 +140,8 @@
         "items": [
           "An account is for one person. Access may not be passed on to others or resold.",
           "It is not allowed to interfere with the Service, get round plan limits or use the Service for purposes unrelated to language learning.",
+          "In the feed and in private messages, insults, harassment, threats, sexual content, spam and advertising are forbidden, as is exchanging contact details and links. Private messages are available to Users aged 18 and over.",
+          "Posts, comments and private messages are checked automatically before they are published and may be read by the Seller’s moderator. The Seller may hide or remove content that breaks the rules and switch off posting and private messages for the person responsible, without a refund.",
           "If these rules are broken, the Seller may suspend access after notifying the User by email."
         ]
       },

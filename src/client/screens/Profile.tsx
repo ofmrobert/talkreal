@@ -140,6 +140,16 @@ export default function Profile() {
         ))}
       </section>
 
+      {/* The community */}
+      <section className="grid grid-cols-2 gap-2">
+        <button type="button" onClick={() => navigate('/people')} className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-card px-3 text-base font-extrabold shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5">
+          <span aria-hidden="true">👥</span> {t('social.people.short')}
+        </button>
+        <button type="button" onClick={() => navigate('/messages')} className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-card px-3 text-base font-extrabold shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5">
+          <span aria-hidden="true">✉️</span> {t('social.messages.title')}
+        </button>
+      </section>
+
       {/* A nudge to finish the profile */}
       {filled && filled.missing && (
         <button type="button" onClick={() => navigate('/profile/edit')} className="flex flex-col gap-2 rounded-3xl bg-sun/25 p-4 text-left active:translate-y-0.5">

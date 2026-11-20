@@ -12,6 +12,7 @@ import { billingRoutes } from './routes/billing'
 import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
 import { feedRoutes } from './routes/feed'
+import { socialRoutes } from './routes/social'
 import { startFeed } from './feed/generate'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
@@ -80,6 +81,7 @@ app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
 app.route('/api/billing', billingRoutes)
 app.route('/api/feed', feedRoutes)
+app.route('/api/social', socialRoutes)
 app.route('/api/profile', profileRoutes)
 app.route('/api/admin', adminRoutes)
 app.route('/api/track', trackRoutes)

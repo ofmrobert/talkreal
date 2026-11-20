@@ -1,13 +1,14 @@
-import { and, desc, eq, gt, gte, inArray, isNotNull, isNull, lt, lte, ne, or, sql } from 'drizzle-orm'
+import { and, desc, eq, gt, gte, inArray, isNotNull, isNull, lt, lte, ne, notInArray, or, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type ChallengeState, type FeedComment, type FeedFace, type FeedPost, type FeedSummary, type PostKind } from '../../shared/feed'
-import { askJson, clip, textAiAvailable } from '../ai/text'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { planOf } from '../billing/plans'
 import { db } from '../db/client'
 import { feedComments, feedImages, feedLikes, feedPostReports, feedPosts, feedReports, feedVotes, users } from '../db/schema'
 import { publicFaces } from '../pii'
 import { recordActivity } from '../progress/activity'
+import { blockedIds, followedIds, unreadFor } from '../social/dm'
+import { review } from '../social/moderation'
 import { localDay, safeTimezone } from '../progress/streak'
 
 const PAGE = 10
@@ -27,7 +28,7 @@ async function load(userId: string) {
 }
 
 /** How someone appears to other students: their name and photo if they allowed it, otherwise "Student" and a short code. */
-async function facesFor(userIds: string[], viewer: string): Promise<Map<string, FeedFace>> {
+export async function facesFor(userIds: string[], viewer: string): Promise<Map<string, FeedFace>> {
   const known = await publicFaces(userIds)
   return new Map(
     userIds.map((id) => {
@@ -80,8 +81,25 @@ feedRoutes.get('/', async (c) => {
   const cursor = before && !Number.isNaN(Date.parse(before)) ? lt(feedPosts.publishAt, new Date(before)) : undefined
   const from = c.req.query('from')
   const answersTo = c.req.query('challenge')
-  const whose = answersTo && isUuid(answersTo) ? eq(feedPosts.challengeId, answersTo) : from === 'official' ? isNull(feedPosts.authorId) : from === 'students' ? isNotNull(feedPosts.authorId) : undefined
-  const posts = await db.select().from(feedPosts).where(and(visible, cursor, whose)).orderBy(desc(feedPosts.publishAt)).limit(PAGE)
+  const author = c.req.query('author')
+  // "following": posts by the people the student follows. An id that cannot exist keeps the list empty when they follow nobody.
+  const followed = from === 'following' ? await followedIds(user.id) : []
+  const whose =
+    answersTo && isUuid(answersTo)
+      ? eq(feedPosts.challengeId, answersTo)
+      : author && isUuid(author)
+        ? eq(feedPosts.authorId, author)
+        : from === 'official'
+          ? isNull(feedPosts.authorId)
+          : from === 'students'
+            ? isNotNull(feedPosts.authorId)
+            : from === 'following'
+              ? inArray(feedPosts.authorId, followed.length ? followed : ['00000000-0000-0000-0000-000000000000'])
+              : undefined
+  // Posts by someone the student blocked, or who blocked the student, are left out.
+  const blocked = [...(await blockedIds(user.id))]
+  const unblocked = blocked.length ? or(isNull(feedPosts.authorId), notInArray(feedPosts.authorId, blocked)) : undefined
+  const posts = await db.select().from(feedPosts).where(and(visible, cursor, whose, unblocked)).orderBy(desc(feedPosts.publishAt)).limit(PAGE)
   const ids = posts.map((p) => p.id)
   const paid = planOf(user) !== 'free'
 
@@ -186,6 +204,7 @@ feedRoutes.get('/summary', async (c) => {
     latest: latest ? { kind: latest.kind as PostKind, emoji: latest.body.emoji, title: latest.body.title } : null,
     challenge: challenge?.endsAt ? { title: challenge.body.title, endsAt: challenge.endsAt.toISOString(), answers: answers.length, answered: answers.some((a) => a.authorId === userId) } : null,
     fresh: fresh?.n ?? 0,
+    unreadMessages: await unreadFor(userId),
     activeThisWeek: active.length,
     faces: [...faces.values()],
   }
@@ -266,36 +285,6 @@ feedRoutes.get('/:id/comments', async (c) => {
   const comments: FeedComment[] = rows.map((row) => ({ id: row.id, text: row.text, createdAt: row.createdAt.toISOString(), face: faces.get(row.userId)!, mine: row.userId === user.id }))
   return c.json({ comments, locked: !paid, freeCommentsLeft: await freeCommentsLeft(user.id, paid) })
 })
-
-interface Verdict {
-  ok?: unknown
-  better?: unknown
-}
-
-/**
- * Has the AI read a comment before it is posted: is it fit for a learning community, and is
- * its English right? Without an AI the comment is let through; reports and the admin panel remain.
- */
-async function review(text: string, maxLength = COMMENT_MAX_LENGTH): Promise<{ ok: boolean; better: string | null }> {
-  if (!textAiAvailable()) return { ok: true, better: null }
-  try {
-    const verdict = await askJson<Verdict>({
-      system: `You check one comment or short post before it is posted in the feed of an English-learning app for adults. Comments are written by learners, usually in English, sometimes in Russian.
-Return one JSON object: {"ok": true or false, "better": string or null}.
-- "ok" is false only if the comment contains insults, harassment, hate, sexual content, threats, spam or advertising, links, or personal contact details (phone numbers, emails, messenger names). Disagreement, jokes and mistakes are fine.
-- "better": if the comment is in English and has a real mistake in grammar, word choice or spelling, the same comment rewritten correctly, changing as little as possible. If it is already correct, is not in English, or "ok" is false, null. Ignore missing capital letters and final punctuation.`,
-      turns: [{ role: 'student', text }],
-      temperature: 0,
-      timeoutMs: 12_000,
-      mock: () => ({ ok: !/badword/i.test(text), better: /\bi am agree\b/i.test(text) ? text.replace(/\bi am agree\b/i, 'I agree') : null }),
-    })
-    const better = clip(verdict.better, maxLength)
-    return { ok: verdict.ok !== false, better: better && better !== text ? better : null }
-  } catch (err) {
-    console.error('Comment check failed:', err instanceof Error ? err.message : err)
-    return { ok: true, better: null }
-  }
-}
 
 /**
  * Posts a comment. If the English can be improved, the first try comes back with a suggestion

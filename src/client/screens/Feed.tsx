@@ -7,7 +7,7 @@ import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import SpeakButton from '../components/lesson/SpeakButton'
 import { api, ApiError } from '../lib/api'
-import { markFeedSeen } from '../lib/feedNews'
+import { markFeedSeen, useFeedNews } from '../lib/feedNews'
 import { playCorrect, playWrong } from '../lib/sounds'
 
 interface FeedData {
@@ -20,8 +20,8 @@ interface FeedData {
 }
 
 type Lang = 'ru' | 'en'
-type From = 'all' | 'official' | 'students'
-const FILTERS: From[] = ['all', 'official', 'students']
+type From = 'all' | 'official' | 'students' | 'following'
+const FILTERS: From[] = ['all', 'official', 'students', 'following']
 
 function Faces({ faces, size = 28 }: { faces: FeedFace[]; size?: number }) {
   return (
@@ -299,7 +299,7 @@ function Composer({ left, onPosted, challengeId }: { left: number; onPosted: (po
 }
 
 /** A student's post as a free student sees it: who wrote it, never the words. The grey bars are only bars. */
-function LockedPost({ post }: { post: FeedPost }) {
+export function LockedPost({ post }: { post: FeedPost }) {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const name = post.author?.name ?? `${t('feed.lockedPost.someone')} ${post.author?.tag ?? ''}`
@@ -416,9 +416,10 @@ function ChallengeBox({ post, canDiscuss, onAnswered, onSeeAnswers }: Pick<CardP
   )
 }
 
-function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRemoved, onAnswered, onSeeAnswers }: CardProps) {
+export function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRemoved, onAnswered, onSeeAnswers }: CardProps) {
   const { t, i18n } = useTranslation()
   const { refresh } = useAuth()
+  const navigate = useNavigate()
   const [open, setOpen] = useState(false)
   const [gained, setGained] = useState(0)
   const [reported, setReported] = useState(false)
@@ -463,11 +464,13 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRe
     <article className="flex flex-col gap-3 rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
       {post.author ? (
         <header className="flex items-center gap-2.5">
-          <Avatar userId={post.author.userId} name={post.author.name} photoVersion={post.author.photoVersion} size={44} />
-          <div className="min-w-0 flex-1 leading-tight">
-            <p className="truncate text-base font-extrabold">{post.author.name ?? `${t('league.student')} ${post.author.tag}`}</p>
-            <p className="text-xs font-bold text-ink/45">{when}</p>
-          </div>
+          <button type="button" onClick={() => navigate(`/u/${post.author!.userId}`)} className="flex min-w-0 flex-1 items-center gap-2.5 text-left">
+            <Avatar userId={post.author.userId} name={post.author.name} photoVersion={post.author.photoVersion} size={44} />
+            <span className="min-w-0 flex-1 leading-tight">
+              <span className="block truncate text-base font-extrabold">{post.author.name ?? `${t('league.student')} ${post.author.tag}`}</span>
+              <span className="block text-xs font-bold text-ink/45">{when}</span>
+            </span>
+          </button>
           {post.mine ? (
             <button type="button" onClick={remove} className="min-h-9 shrink-0 text-xs font-bold text-ink/40 underline">
               {t('feed.delete')}
@@ -607,6 +610,7 @@ export default function Feed() {
   const [failed, setFailed] = useState(false)
   const [loadingMore, setLoadingMore] = useState(false)
   const [from, setFrom] = useState<From>('all')
+  const unread = useFeedNews()?.unreadMessages ?? 0
   /** The challenge whose answers are open, instead of the feed. */
   const [answersOf, setAnswersOf] = useState<FeedPost | null>(null)
   const query = answersOf ? `challenge=${answersOf.id}` : `from=${from}`
@@ -697,7 +701,18 @@ export default function Feed() {
   return (
     <div className="flex flex-col gap-4">
       <header className="pt-1">
-        <h1 className="text-3xl font-extrabold">{t('feed.title')}</h1>
+        <div className="flex items-center justify-between gap-3">
+          <h1 className="text-3xl font-extrabold">{t('feed.title')}</h1>
+          <div className="flex gap-2">
+            <button type="button" onClick={() => navigate('/people')} aria-label={t('social.people.title')} className="flex h-11 w-11 items-center justify-center rounded-full bg-card text-xl active:translate-y-0.5">
+              👥
+            </button>
+            <button type="button" onClick={() => navigate('/messages')} aria-label={t('social.messages.title')} className="relative flex h-11 w-11 items-center justify-center rounded-full bg-card text-xl active:translate-y-0.5">
+              ✉️
+              {unread > 0 && <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-coral px-1 text-[11px] font-extrabold text-white ring-2 ring-cream">{unread > 9 ? '9+' : unread}</span>}
+            </button>
+          </div>
+        </div>
         <p className="mt-1 text-base text-ink/65">{t('feed.subtitle')}</p>
       </header>
 
@@ -715,14 +730,14 @@ export default function Feed() {
         </button>
       )}
 
-      <div className="flex gap-1.5 rounded-2xl bg-card p-1.5">
+      <div className="flex gap-1 rounded-2xl bg-card p-1.5">
         {FILTERS.map((value) => (
           <button
             key={value}
             type="button"
             onClick={() => setFrom(value)}
             aria-pressed={from === value}
-            className={`min-h-10 flex-1 rounded-xl text-sm font-extrabold transition-colors ${from === value ? 'bg-coral text-white' : 'text-ink/60'}`}
+            className={`min-h-10 flex-1 rounded-xl px-0.5 text-[13px] font-extrabold transition-colors ${from === value ? 'bg-coral text-white' : 'text-ink/60'}`}
           >
             {t(`feed.filter.${value}`)}
           </button>
@@ -748,7 +763,7 @@ export default function Feed() {
         )
       )}
 
-      {data.posts.length === 0 && <p className="rounded-2xl bg-card p-4 text-base text-ink/65">{t(from === 'students' ? 'feed.noStudents' : 'feed.empty')}</p>}
+      {data.posts.length === 0 && <p className="rounded-2xl bg-card p-4 text-base text-ink/65">{t(from === 'students' ? 'feed.noStudents' : from === 'following' ? 'feed.noFollowing' : 'feed.empty')}</p>}
 
       {cards}
       {moreButton}
