@@ -371,10 +371,10 @@
     "frozenText": "You missed yesterday. Do a lesson today to keep the streak."
   },
   "reminders": {
-    "title": "Reminders",
+    "title": "Notifications",
     "toggle": "Remind me to practise",
     "time": "At what time",
-    "needChannel": "Choose where reminders go: Telegram or a notification on this phone.",
+    "needChannel": "Choose where to send notifications: to Telegram or to this phone.",
     "telegramConnect": "Connect Telegram",
     "telegramOpen": "Open Telegram and press Start",
     "telegramLinked": "Telegram connected",
@@ -383,10 +383,14 @@
     "pushDenied": "Notifications are blocked. Allow them for Talkreal in your phone settings.",
     "pushUnsupported": "Notifications are not available on this device. Connect Telegram instead.",
     "pushNeedsInstall": "To get notifications on iPhone, add Talkreal to your Home Screen and open it from there.",
-    "test": "Send a test reminder",
+    "test": "Send a test notification",
     "testSent": "Sent. It will arrive in a few seconds.",
     "testNone": "Could not deliver it. Connect Telegram or turn on notifications.",
-    "testWait": "Please wait a little before trying again."
+    "testWait": "Please wait a little before trying again.",
+    "social": "Community",
+    "socialHint": "Messages, requests, new followers, comments and challenge wins.",
+    "feed": "Post of the day",
+    "feedHint": "In the morning: the word of the day, a quiz or the new weekly challenge."
   },
   "achievements": {
     "title": "Achievements",
@@ -887,5 +891,20 @@
       "accept": "Start talking",
       "policy": "Privacy policy"
     }
+  },
+  "notify": {
+    "title": "Don't miss what matters",
+    "text": "Switch notifications on and Talkreal will only write when there is a reason.",
+    "points": {
+      "practice": "A reminder to practise, so your streak survives",
+      "messages": "Messages, followers and answers to your posts",
+      "feed": "In the morning: the word of the day and the weekly challenge"
+    },
+    "enable": "Switch notifications on",
+    "telegram": "Get them in Telegram",
+    "telegramAlso": "Or get them in Telegram",
+    "later": "Not now",
+    "done": "Done! Notifications are on. You can adjust them in the settings.",
+    "ok": "OK"
   }
 }

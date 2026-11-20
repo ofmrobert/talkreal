@@ -23,6 +23,8 @@ reminderRoutes.get('/', async (c) => {
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   return c.json({
     enabled: user.remindersEnabled,
+    social: user.notifySocial,
+    feed: user.notifyFeed,
     hour: user.reminderHour,
     telegram: { available: telegramAvailable(), linked: Boolean(await getTelegramId(userId)) },
     push: { publicKey: await pushPublicKey(), devices: await countSubscriptions(userId) },
@@ -34,6 +36,8 @@ reminderRoutes.post('/', async (c) => {
   const body = await c.req.json().catch(() => ({}))
   const changes: Partial<typeof users.$inferInsert> = {}
   if (typeof body.enabled === 'boolean') changes.remindersEnabled = body.enabled
+  if (typeof body.social === 'boolean') changes.notifySocial = body.social
+  if (typeof body.feed === 'boolean') changes.notifyFeed = body.feed
   if (Number.isInteger(body.hour) && body.hour >= 0 && body.hour <= 23) changes.reminderHour = body.hour
   if (typeof body.tz === 'string') changes.timezone = safeTimezone(body.tz)
   if (body.lang === 'ru' || body.lang === 'en') changes.locale = body.lang

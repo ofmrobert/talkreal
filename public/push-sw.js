@@ -12,7 +12,8 @@ self.addEventListener('push', (event) => {
       body: data.body || '',
       icon: '/icon-192.png',
       badge: '/icon-192.png',
-      tag: 'talkreal-reminder',
+      // One notification of each kind at a time: a new message does not hide the practice reminder.
+      tag: data.tag || 'talkreal-reminder',
       data: { url: data.url || '/' },
     }),
   )
@@ -24,7 +25,11 @@ self.addEventListener('notificationclick', (event) => {
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
       for (const client of windows) {
-        if ('focus' in client) return client.focus()
+        if ('focus' in client) {
+          // Take the open app to what the notification is about.
+          if ('navigate' in client && url !== '/') client.navigate(url).catch(() => {})
+          return client.focus()
+        }
       }
       return self.clients.openWindow(url)
     }),

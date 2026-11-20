@@ -1,38 +1,22 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { api, ApiError } from '../lib/api'
+import { pushIsOnHere, pushSupported, turnPushOn } from '../lib/push'
 import { isStandalone } from './InstallGuide'
 import Button from './ui/Button'
 
 interface ReminderInfo {
   enabled: boolean
+  /** Followers, messages, comments and prizes. */
+  social: boolean
+  /** The post of the day and the weekly challenge, in the morning. */
+  feed: boolean
   hour: number
   telegram: { available: boolean; linked: boolean }
   push: { publicKey: string; devices: number }
 }
 
 const HOURS = Array.from({ length: 17 }, (_, i) => i + 7) // 07:00 … 23:00
-
-const pushSupported = () =>
-  typeof window !== 'undefined' && 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window
-
-/** The notification key arrives as text; the browser wants it as bytes. */
-function keyToBytes(base64url: string): Uint8Array<ArrayBuffer> {
-  const base64 = (base64url + '='.repeat((4 - (base64url.length % 4)) % 4)).replace(/-/g, '+').replace(/_/g, '/')
-  const raw = atob(base64)
-  const bytes = new Uint8Array(new ArrayBuffer(raw.length))
-  for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i)
-  return bytes
-}
-
-/** The app's background worker, or null if it is not running (e.g. not installed yet). */
-async function worker(): Promise<ServiceWorkerRegistration | null> {
-  if (!pushSupported()) return null
-  return Promise.race([
-    navigator.serviceWorker.ready,
-    new Promise<null>((resolve) => setTimeout(() => resolve(null), 4000)),
-  ])
-}
 
 /** Profile section: daily reminders through Telegram and phone notifications. */
 export default function Reminders() {
@@ -63,13 +47,9 @@ export default function Reminders() {
   // Is this very phone already subscribed? If so, make sure the server still knows about it.
   useEffect(() => {
     let cancelled = false
-    void (async () => {
-      const registration = await worker()
-      const subscription = await registration?.pushManager.getSubscription().catch(() => null)
-      if (cancelled || !subscription) return
-      setThisPhone(true)
-      api('/reminders/push', { subscription: subscription.toJSON() }).catch(() => {})
-    })()
+    void pushIsOnHere().then((on) => {
+      if (!cancelled && on) setThisPhone(true)
+    })
     return () => {
       cancelled = true
     }
@@ -95,7 +75,7 @@ export default function Reminders() {
 
   if (!info) return null
 
-  async function change(changes: { enabled?: boolean; hour?: number }) {
+  async function change(changes: { enabled?: boolean; hour?: number; social?: boolean; feed?: boolean }) {
     setInfo({ ...info!, ...changes })
     await api('/reminders', changes).catch(() => refresh())
   }
@@ -115,31 +95,12 @@ export default function Reminders() {
   async function enablePush() {
     setBusy(true)
     setNote(null)
-    try {
-      const permission = await Notification.requestPermission()
-      if (permission !== 'granted') {
-        setNote(t('reminders.pushDenied'))
-        return
-      }
-      const registration = await worker()
-      if (!registration) {
-        setNote(t('reminders.pushUnsupported'))
-        return
-      }
-      const subscription =
-        (await registration.pushManager.getSubscription()) ??
-        (await registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: keyToBytes(info!.push.publicKey),
-        }))
-      await api('/reminders/push', { subscription: subscription.toJSON() })
+    const result = await turnPushOn(info!.push.publicKey)
+    if (result === 'on') {
       setThisPhone(true)
       await refresh()
-    } catch {
-      setNote(t('reminders.pushUnsupported'))
-    } finally {
-      setBusy(false)
-    }
+    } else setNote(t(result === 'denied' ? 'reminders.pushDenied' : 'reminders.pushUnsupported'))
+    setBusy(false)
   }
 
   async function sendTest() {
@@ -156,6 +117,7 @@ export default function Reminders() {
   }
 
   const hasChannel = info.telegram.linked || info.push.devices > 0
+  const anyOn = info.enabled || info.social || info.feed
 
   return (
     <section>
@@ -173,7 +135,6 @@ export default function Reminders() {
         </label>
 
         {info.enabled && (
-          <>
             <label className="flex min-h-11 items-center justify-between gap-3">
               <span className="text-base font-bold text-ink/70">{t('reminders.time')}</span>
               <select
@@ -188,7 +149,20 @@ export default function Reminders() {
                 ))}
               </select>
             </label>
+        )}
 
+        {(['social', 'feed'] as const).map((kind) => (
+          <label key={kind} className="flex min-h-11 items-center justify-between gap-3 border-t border-ink/5 pt-3">
+            <span className="min-w-0">
+              <span className="block text-base font-extrabold">{t(`reminders.${kind}`)}</span>
+              <span className="block text-sm font-semibold leading-snug text-ink/55">{t(`reminders.${kind}Hint`)}</span>
+            </span>
+            <input type="checkbox" role="switch" checked={info[kind]} onChange={(e) => change({ [kind]: e.target.checked })} className="h-7 w-7 shrink-0 accent-coral" />
+          </label>
+        ))}
+
+        {anyOn && (
+          <>
             {!hasChannel && <p className="rounded-2xl bg-sun/30 p-3 text-sm font-bold">{t('reminders.needChannel')}</p>}
 
             {/* Telegram */}

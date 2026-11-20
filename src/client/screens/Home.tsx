@@ -6,6 +6,7 @@ import { BoltIcon, FlameIcon } from '../components/icons'
 import CoursePath, { type PathExam, type PathUnit } from '../components/home/CoursePath'
 import { MascotSays, PhraseOfDay, TeacherOfDay, WeekStrip } from '../components/home/HomeExtras'
 import FeedCard from '../components/home/FeedCard'
+import NotifyPrompt from '../components/home/NotifyPrompt'
 import Quests from '../components/home/Quests'
 import { api } from '../lib/api'
 
@@ -119,6 +120,8 @@ export default function Home() {
       )}
 
       <MascotSays streak={course.streak} />
+
+      <NotifyPrompt />
 
       {/* Daily goal */}
       <section className="flex items-center gap-4 rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">

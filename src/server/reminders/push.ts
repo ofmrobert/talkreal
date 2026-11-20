@@ -88,7 +88,7 @@ export async function countSubscriptions(userId: string): Promise<number> {
 }
 
 /** Sends one notification to every device of the student. Returns how many devices received it. */
-export async function sendPush(userId: string, message: { title: string; body: string; url?: string }): Promise<number> {
+export async function sendPush(userId: string, message: { title: string; body: string; url?: string; tag?: string }): Promise<number> {
   const subs = await db.select().from(pushSubscriptions).where(eq(pushSubscriptions.userId, userId))
   if (subs.length === 0) return 0
   const { publicKey, privateKey } = await vapidKeys()

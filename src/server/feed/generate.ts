@@ -5,6 +5,7 @@ import { db } from '../db/client'
 import { dailyUsage, feedImages, feedLikes, feedPosts, users } from '../db/schema'
 import { joinLeague } from '../progress/league'
 import { dayAfter, localDay, safeTimezone } from '../progress/streak'
+import { notices } from '../reminders/notify'
 import { drawPicture, write, writerName } from './writer'
 
 /**
@@ -172,6 +173,7 @@ const challengeEnd = (monday: string) => new Date(`${dayAfter(monday, 6)}T21:00:
 export async function settleChallenges(): Promise<number> {
   const due = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.kind, 'challenge'), lte(feedPosts.endsAt, new Date()), isNull(feedPosts.settledAt)))
   for (const challenge of due) {
+    const won: { userId: string; place: number; prize: number }[] = []
     await db.transaction(async (tx) => {
       // Only one run may close a challenge, even if two start at once.
       const claimed = await tx.update(feedPosts).set({ settledAt: new Date() }).where(and(eq(feedPosts.id, challenge.id), isNull(feedPosts.settledAt))).returning({ id: feedPosts.id })
@@ -193,8 +195,10 @@ export async function settleChallenges(): Promise<number> {
         await tx.update(users).set({ xp: sql`${users.xp} + ${prize}` }).where(eq(users.id, answer.authorId))
         await tx.insert(dailyUsage).values({ userId: answer.authorId, day, lessonsDone: 0, xp: prize }).onConflictDoUpdate({ target: [dailyUsage.userId, dailyUsage.day], set: { xp: sql`${dailyUsage.xp} + ${prize}` } })
         await joinLeague(tx, answer.authorId)
+        won.push({ userId: answer.authorId, place, prize })
       }
     })
+    for (const winner of won) notices.prize(winner.userId, winner.place, winner.prize)
   }
   if (due.length > 0) console.log(`Feed: closed ${due.length} challenge(s)`)
   return due.length

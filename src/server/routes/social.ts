@@ -20,7 +20,7 @@ import { planOf } from '../billing/plans'
 import { db } from '../db/client'
 import { dmMessages, dmThreads, feedPosts, follows, socialReports, userBlocks, users } from '../db/schema'
 import { openProfiles, openProfilesOf, tastesOf, type OpenProfile } from '../pii'
-import { sendPush } from '../reminders/push'
+import { notices } from '../reminders/notify'
 import { blockedBetween, blockedIds, messagingBlock, pairOf, threadBetween, unreadFor } from '../social/dm'
 import { review } from '../social/moderation'
 import { facesFor } from './feed'
@@ -162,7 +162,8 @@ socialRoutes.post('/people/:id/follow', async (c) => {
   const [target] = await db.select({ id: users.id }).from(users).where(eq(users.id, id)).limit(1)
   if (!target) return c.json({ error: 'not_found' }, 404)
   if (await blockedBetween(userId, id)) return c.json({ error: 'blocked' }, 403)
-  await db.insert(follows).values({ followerId: userId, followeeId: id }).onConflictDoNothing()
+  const added = await db.insert(follows).values({ followerId: userId, followeeId: id }).onConflictDoNothing().returning({ id: follows.followeeId })
+  if (added.length > 0) notices.follower(id, userId, (await facesFor([userId], id)).get(userId)?.name ?? null)
   return c.json({ following: true })
 })
 
@@ -288,6 +289,7 @@ socialRoutes.post('/messages/with/:id/answer', async (c) => {
   const thread = await threadBetween(userId, id)
   if (!thread || thread.status !== 'request' || thread.startedBy === userId) return c.json({ error: 'not_found' }, 404)
   await db.update(dmThreads).set({ status: body.accept === true ? 'open' : 'declined' }).where(eq(dmThreads.id, thread.id))
+  if (body.accept === true) notices.accepted(id, userId, (await facesFor([userId], id)).get(userId)?.name ?? null)
   return c.json({ status: body.accept === true ? 'open' : 'declined' })
 })
 
@@ -343,8 +345,11 @@ socialRoutes.post('/messages/with/:id', async (c) => {
     .set({ lastMessageAt: row.createdAt, ...(thread.userA === user.id ? { readAtA: row.createdAt } : { readAtB: row.createdAt }), ...(answered ? { status: 'open' } : {}) })
     .where(eq(dmThreads.id, thread.id))
 
-  const name = (await facesFor([user.id], id)).get(user.id)?.name
-  void sendPush(id, { title: name ?? 'Talkreal', body: other.locale === 'en' ? 'New message' : 'Новое сообщение', url: `/messages/${user.id}` }).catch(() => {})
+  const name = (await facesFor([user.id], id)).get(user.id)?.name ?? null
+  // The first message is a request; an answer to a request tells the one who asked that it was accepted.
+  if (thread.status === 'request' && thread.startedBy === user.id) notices.request(id, user.id, name)
+  else if (answered) notices.accepted(id, user.id, name)
+  else notices.message(id, user.id, name)
 
   const message: DirectMessage = { id: row.id, text: row.text, mine: true, at: row.createdAt.toISOString(), better: row.better, hidden: false }
   return c.json({ message, status: answered ? 'open' : statusOf(thread.status) })

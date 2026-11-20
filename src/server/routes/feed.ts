@@ -7,6 +7,7 @@ import { db } from '../db/client'
 import { feedComments, feedImages, feedLikes, feedPostReports, feedPosts, feedReports, feedVotes, users } from '../db/schema'
 import { publicFaces } from '../pii'
 import { recordActivity } from '../progress/activity'
+import { notices } from '../reminders/notify'
 import { blockedIds, followedIds, unreadFor } from '../social/dm'
 import { review } from '../social/moderation'
 import { localDay, safeTimezone } from '../progress/streak'
@@ -234,7 +235,10 @@ feedRoutes.post('/:id/like', async (c) => {
     if (!liker || planOf(liker) === 'free') return c.json({ error: 'pro' }, 403)
   }
   const removed = await db.delete(feedLikes).where(and(eq(feedLikes.postId, id), eq(feedLikes.userId, userId))).returning({ id: feedLikes.postId })
-  if (removed.length === 0) await db.insert(feedLikes).values({ postId: id, userId }).onConflictDoNothing()
+  if (removed.length === 0) {
+    await db.insert(feedLikes).values({ postId: id, userId }).onConflictDoNothing()
+    if (post.authorId && post.authorId !== userId) notices.liked(post.authorId, id)
+  }
   const [{ n }] = await db.select({ n: sql<number>`count(*)::int` }).from(feedLikes).where(eq(feedLikes.postId, id))
   return c.json({ liked: removed.length === 0, likes: n })
 })
@@ -315,6 +319,7 @@ feedRoutes.post('/:id/comments', async (c) => {
   if (verdict.better && body.confirm !== true) return c.json({ suggestion: verdict.better })
 
   const [row] = await db.insert(feedComments).values({ postId: id, userId: user.id, text }).returning()
+  if (post.authorId && post.authorId !== user.id) notices.comment(post.authorId, id, (await facesFor([user.id], post.authorId)).get(user.id)?.name ?? null)
   const faces = await facesFor([user.id], user.id)
   const comment: FeedComment = { id: row.id, text: row.text, createdAt: row.createdAt.toISOString(), face: faces.get(user.id)!, mine: true }
   return c.json({ comment, freeCommentsLeft: await freeCommentsLeft(user.id, paid) })

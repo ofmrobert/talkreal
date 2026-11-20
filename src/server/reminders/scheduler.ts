@@ -5,10 +5,10 @@
  * who have not practised today and have not been reminded today, and writes to them
  * through Telegram and/or a phone notification.
  */
-import { and, eq, isNotNull, isNull, ne, or } from 'drizzle-orm'
+import { and, desc, eq, gt, isNotNull, isNull, lte, ne, or, sql } from 'drizzle-orm'
 import { sendTelegramMessage } from '../auth/telegram'
 import { db } from '../db/client'
-import { users } from '../db/schema'
+import { feedPosts, users } from '../db/schema'
 import { env } from '../env'
 import { getTelegramId } from '../pii'
 import { dayBefore, localDay, localHour, safeTimezone, streakNow } from '../progress/streak'
@@ -64,13 +64,13 @@ function reminderText(lang: Lang, streak: number, frozen: boolean, day: string):
 }
 
 /** Sends one reminder through every channel the student has. Returns which ones worked. */
-export async function sendReminder(userId: string, text: ReminderText, lang: Lang) {
+export async function sendReminder(userId: string, text: ReminderText, lang: Lang, url = '/', tag = 'reminder') {
   const telegramId = await getTelegramId(userId)
   const [telegram, push] = await Promise.all([
     telegramId
-      ? sendTelegramMessage(telegramId, `${text.title}\n${text.body}`, { text: TEXTS[lang].button, url: env.appUrl })
+      ? sendTelegramMessage(telegramId, `${text.title}\n${text.body}`, { text: TEXTS[lang].button, url: `${env.appUrl.replace(/\/$/, '')}${url === '/' ? '' : url}` || env.appUrl })
       : Promise.resolve(false),
-    sendPush(userId, { ...text, url: '/' }).catch((err) => {
+    sendPush(userId, { ...text, url, tag: `talkreal-${tag}` }).catch((err) => {
       console.error('Push failed:', err)
       return 0
     }),
@@ -124,8 +124,62 @@ async function tick(): Promise<void> {
   }
 }
 
+/** The post of the day goes out at this hour of the student's own morning. */
+const FEED_HOUR = 10
+
+const KIND_TITLES: Record<string, { ru: string; en: string }> = {
+  word: { ru: 'Слово дня', en: 'Word of the day' },
+  mistake: { ru: 'Типичная ошибка', en: 'A typical mistake' },
+  poll: { ru: 'Мини-тест дня', en: "Today's quiz" },
+  fact: { ru: 'Интересный факт', en: 'Fun fact' },
+  question: { ru: 'Вопрос дня', en: 'Question of the day' },
+  picture: { ru: 'Опишите картинку', en: 'Describe the picture' },
+  challenge: { ru: 'Новый челлендж недели', en: 'New weekly challenge' },
+}
+
+/**
+ * Once a morning, tells students what is new in the feed: the weekly challenge on the day it
+ * starts, otherwise the post of the day. Like the practice reminder, it stops after a week of silence.
+ */
+export async function feedTick(): Promise<void> {
+  const dayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000)
+  const fresh = await db
+    .select()
+    .from(feedPosts)
+    .where(and(isNull(feedPosts.authorId), eq(feedPosts.status, 'active'), lte(feedPosts.publishAt, sql`now()`), gt(feedPosts.publishAt, dayAgo)))
+    .orderBy(desc(feedPosts.publishAt))
+  const post = fresh.find((p) => p.kind === 'challenge') ?? fresh[0]
+  if (!post) return
+
+  const candidates = await db.select().from(users).where(and(eq(users.notifyFeed, true), isNotNull(users.level)))
+  const now = new Date()
+  for (const user of candidates) {
+    const timezone = safeTimezone(user.timezone)
+    const today = localDay(timezone, now)
+    if (localHour(timezone, now) !== FEED_HOUR || user.lastFeedPushDay === today) continue
+    const lastSeen = user.lastActiveDate ?? localDay(timezone, user.createdAt)
+    if (lastSeen < daysBack(today, GIVE_UP_AFTER_DAYS)) continue
+    const claimed = await db
+      .update(users)
+      .set({ lastFeedPushDay: today })
+      .where(and(eq(users.id, user.id), or(isNull(users.lastFeedPushDay), ne(users.lastFeedPushDay, today))))
+      .returning({ id: users.id })
+    if (claimed.length === 0) continue
+
+    const lang: Lang = user.locale === 'en' ? 'en' : 'ru'
+    const kind = KIND_TITLES[post.kind]?.[lang] ?? 'Talkreal'
+    const title = `${post.body.emoji} ${kind}`
+    const body = post.kind === 'challenge' ? `${post.body.title[lang]}. ${lang === 'en' ? 'The three best answers win XP.' : 'Три лучших ответа получат XP.'}` : (post.body.english ?? post.body.title[lang])
+    await sendReminder(user.id, { title, body: body.slice(0, 140) }, lang, '/feed', 'feed').catch((err) => console.error('Feed notification failed:', err))
+  }
+}
+
 export function startReminders(): void {
-  const run = () => tick().catch((err) => console.error('Reminder check failed:', err))
+  const run = () =>
+    tick()
+      .catch((err) => console.error('Reminder check failed:', err))
+      .then(feedTick)
+      .catch((err) => console.error('Feed notification check failed:', err))
   // The first check waits a minute so the Telegram bot has time to connect after a restart.
   setTimeout(run, 60_000)
   setInterval(run, CHECK_EVERY_MS)

@@ -27,6 +27,12 @@ export const users = pgTable('users', {
   reminderHour: integer('reminder_hour').notNull().default(19),
   /** The last local day a reminder was sent, so nobody gets two in one day. */
   lastReminderDay: date('last_reminder_day'),
+  /** Notifications about followers, messages, comments and prizes. */
+  notifySocial: boolean('notify_social').notNull().default(true),
+  /** A morning notification with the post of the day or the weekly challenge. */
+  notifyFeed: boolean('notify_feed').notNull().default(true),
+  /** The last local day the post of the day was sent. */
+  lastFeedPushDay: date('last_feed_push_day'),
   /** When the student agreed to the privacy policy. */
   consentAt: timestamptz('consent_at'),
   /** When the student filled in (or skipped) the "about you" step. Empty = show it once. */
