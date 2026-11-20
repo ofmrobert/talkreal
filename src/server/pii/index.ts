@@ -72,14 +72,22 @@ export async function getTelegramId(userId: string): Promise<string | null> {
 }
 
 /** Connects a Telegram account to an existing student. False if that Telegram belongs to someone else. */
-export async function linkTelegram(userId: string, telegramId: string): Promise<boolean> {
+export async function linkTelegram(userId: string, telegramId: string, telegramUsername: string | null = null): Promise<boolean> {
   const owner = await findUserIdByTelegramId(telegramId)
   if (owner) return owner === userId
   await db
     .insert(userPii)
-    .values({ userId, telegramId })
-    .onConflictDoUpdate({ target: userPii.userId, set: { telegramId } })
+    .values({ userId, telegramId, telegramUsername })
+    .onConflictDoUpdate({ target: userPii.userId, set: { telegramId, telegramUsername } })
   return true
+}
+
+/** Called at every Telegram login: the @name and first name are whatever Telegram says today. */
+export async function noteTelegramProfile(userId: string, telegramUsername: string | null, displayName: string | null): Promise<void> {
+  await db
+    .update(userPii)
+    .set({ telegramUsername, ...(displayName ? { displayName } : {}) })
+    .where(eq(userPii.userId, userId))
 }
 
 export async function getPii(userId: string) {
@@ -93,10 +101,10 @@ export async function getPii(userId: string) {
 
 /** For the admin panel: email, name and whether Telegram is connected, for a list of students. */
 export async function getPiiFor(userIds: string[]) {
-  const found = new Map<string, { email: string | null; displayName: string | null; telegram: boolean }>()
+  const found = new Map<string, { email: string | null; displayName: string | null; telegram: boolean; telegramId: string | null; telegramUsername: string | null }>()
   if (userIds.length === 0) return found
   const rows = await db.select().from(userPii).where(inArray(userPii.userId, userIds))
-  for (const row of rows) found.set(row.userId, { email: row.email, displayName: row.displayName, telegram: row.telegramId !== null })
+  for (const row of rows) found.set(row.userId, { email: row.email, displayName: row.displayName, telegram: row.telegramId !== null, telegramId: row.telegramId, telegramUsername: row.telegramUsername })
   return found
 }
 
@@ -106,7 +114,7 @@ export async function searchUserIds(text: string, limit = 500): Promise<string[]
   const rows = await db
     .select({ userId: userPii.userId })
     .from(userPii)
-    .where(or(ilike(userPii.email, pattern), ilike(userPii.displayName, pattern)))
+    .where(or(ilike(userPii.email, pattern), ilike(userPii.displayName, pattern), ilike(userPii.telegramUsername, pattern.replace('%@', '%')), eq(userPii.telegramId, text.trim())))
     .limit(limit)
   return rows.map((row) => row.userId)
 }

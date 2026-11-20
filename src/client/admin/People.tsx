@@ -11,6 +11,8 @@ interface UserRow {
   email: string | null
   name: string | null
   telegram: boolean
+  telegramId: string | null
+  telegramUsername: string | null
   createdAt: string
   level: string | null
   plan: string
@@ -24,6 +26,17 @@ interface UserRow {
 }
 
 const who = (u: { email: string | null; name: string | null; id: string }) => u.email ?? u.name ?? u.id.slice(0, 8)
+
+/** The student's Telegram: a link to their @name if they have one, otherwise the numeric id. */
+function Telegram({ id, username }: { id: string | null; username: string | null }) {
+  if (!id) return <span className="text-slate-300">—</span>
+  if (!username) return <span className="whitespace-nowrap">id {id}</span>
+  return (
+    <a href={`https://t.me/${username}`} target="_blank" rel="noreferrer" className="whitespace-nowrap font-semibold text-violet-700 hover:underline">
+      @{username}
+    </a>
+  )
+}
 
 export function UsersPage() {
   const [q, setQ] = useState('')
@@ -48,7 +61,7 @@ export function UsersPage() {
           change(setSearch)(q.trim())
         }}
       >
-        <input className={`${inputClass} w-64`} placeholder="Email, name or user id" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search" />
+        <input className={`${inputClass} w-64`} placeholder="Email, name, @telegram or user id" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search" />
         <button className={buttonClass} type="submit">
           Search
         </button>
@@ -82,7 +95,8 @@ export function UsersPage() {
             <Table>
               <thead>
                 <tr>
-                  <Th>Student</Th>
+                  <Th>Email login</Th>
+                  <Th>Telegram login</Th>
                   <Th>Joined</Th>
                   <Th>Level</Th>
                   <Th>Plan</Th>
@@ -98,10 +112,21 @@ export function UsersPage() {
                 {data.users.map((u) => (
                   <tr key={u.id} className="hover:bg-slate-50">
                     <Td>
+                      {/* Every row has one link to the student's page: the email, or the name for Telegram-only accounts. */}
                       <Link to={`/admin/users/${u.id}`} className="font-semibold text-violet-700 hover:underline">
-                        {who(u)}
+                        {u.email ?? (u.telegramId ? '' : `no login · ${u.id.slice(0, 8)}`)}
                       </Link>
-                      {u.telegram && <span className="ml-1.5 text-xs text-slate-400">Telegram</span>}
+                      {!u.email && u.telegramId && <span className="text-slate-300">—</span>}
+                    </Td>
+                    <Td>
+                      {u.telegramId && !u.email ? (
+                        <Link to={`/admin/users/${u.id}`} className="mr-2 font-semibold text-violet-700 hover:underline">
+                          {u.name ?? 'Telegram user'}
+                        </Link>
+                      ) : (
+                        u.telegramId && u.name && <span className="mr-2">{u.name}</span>
+                      )}
+                      <Telegram id={u.telegramId} username={u.telegramUsername} />
                     </Td>
                     <Td className="whitespace-nowrap">{date(u.createdAt)}</Td>
                     <Td>{u.level ?? '—'}</Td>
@@ -135,6 +160,8 @@ interface UserDetail {
     email: string | null
     name: string | null
     telegram: boolean
+    telegramId: string | null
+    telegramUsername: string | null
     createdAt: string
     locale: string
     timezone: string | null
@@ -208,9 +235,11 @@ export function UserPage() {
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
             {(
               [
+                ['Logs in with', [user.email ? 'email code' : '', user.telegramId ? 'Telegram' : ''].filter(Boolean).join(' + ') || '—'],
                 ['Email', user.email ?? '—'],
+                ['Telegram', user.telegramId ? `${user.telegramUsername ? `@${user.telegramUsername} · ` : ''}id ${user.telegramId}` : 'not connected'],
                 ['Name', user.name ?? '—'],
-                ['Telegram', user.telegram ? 'connected' : 'no'],
+                ['Last login', dateTime(data.devices.last)],
                 ['Came from', source],
                 ['App language', user.locale],
                 ['Timezone', user.timezone ?? '—'],

@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { NavLink, Navigate, Route, Routes } from 'react-router'
 import { useAuth } from '../auth/AuthContext'
-import { save } from '../lib/storage'
+import { load, save } from '../lib/storage'
 import { AiPage, OverviewPage, TrafficPage } from './Insights'
 import { PaymentsPage, PromosPage, UserPage, UsersPage } from './People'
 import { LearningPage, SystemPage } from './Product'
@@ -23,6 +24,15 @@ const TABS = [
  */
 export default function Admin() {
   const { user } = useAuth()
+  // Dark or light: what was chosen last time here, otherwise what the computer itself uses.
+  const [dark, setDark] = useState(() => {
+    const saved = load('admin.theme')
+    return saved ? saved === 'dark' : typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
+  function toggleTheme() {
+    save('admin.theme', dark ? 'light' : 'dark')
+    setDark(!dark)
+  }
   if (user === undefined) return <p className="p-6 text-sm text-slate-500">Loading…</p>
   if (!user) {
     // After logging in, come straight back here instead of landing in the app.
@@ -46,7 +56,7 @@ export default function Admin() {
   }
 
   return (
-    <div className="flex h-full select-text flex-col bg-slate-50 font-[system-ui,sans-serif] text-slate-800 md:flex-row" style={{ userSelect: 'text' }}>
+    <div className={`admin flex h-full select-text flex-col bg-slate-50 font-[system-ui,sans-serif] text-slate-800 md:flex-row ${dark ? 'admin-dark' : ''}`} style={{ userSelect: 'text' }}>
       <nav className="shrink-0 border-b border-slate-200 bg-white md:w-52 md:border-b-0 md:border-r">
         <div className="flex items-center justify-between px-4 py-3 md:block">
           <p className="text-base font-extrabold tracking-tight text-slate-900">
@@ -71,7 +81,18 @@ export default function Admin() {
             </li>
           ))}
         </ul>
-        <p className="hidden px-4 py-3 text-xs text-slate-400 md:block">{user.email}</p>
+        <div className="flex items-center justify-between gap-2 px-4 pb-3 md:mt-2 md:block md:py-3">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-pressed={dark}
+            className="flex h-9 items-center gap-2 rounded-lg border border-slate-200 px-3 text-sm font-bold text-slate-600 hover:bg-slate-100"
+          >
+            <span aria-hidden="true">{dark ? '☀' : '☾'}</span>
+            {dark ? 'Light mode' : 'Dark mode'}
+          </button>
+          <p className="truncate text-xs text-slate-400 md:mt-3">{user.email}</p>
+        </div>
       </nav>
       <main className="min-w-0 flex-1 overflow-y-auto p-4 md:p-6">
         <div className="mx-auto max-w-7xl">

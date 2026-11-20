@@ -137,6 +137,39 @@ body {
 .chai-steam-2 { animation-delay: 0.8s; }
 .chai-steam-3 { animation-delay: 1.6s; }
 
+/*
+ * The admin panel's dark mode. The panel is written once, in light colours; here the same
+ * colour names are given dark values, so every screen follows without being rewritten.
+ */
+.admin-dark {
+  color-scheme: dark;
+  --color-white: #131a26;      /* cards, sidebar */
+  --color-slate-50: #0b0f17;   /* page background */
+  --color-slate-100: #1c2533;  /* quiet fills, hover */
+  --color-slate-200: #232d3d;  /* borders */
+  --color-slate-300: #334155;  /* input borders, faint figures */
+  --color-slate-400: #64748b;  /* hints */
+  --color-slate-500: #8b98ab;  /* labels */
+  --color-slate-600: #a7b1c2;
+  --color-slate-700: #c5cdd9;  /* table text */
+  --color-slate-800: #dde3ec;  /* body text */
+  --color-slate-900: #f1f5f9;  /* headings; filled buttons turn light with dark text */
+  --color-violet-100: #241b45;
+  --color-violet-500: #8b5cf6;
+  --color-violet-700: #a78bfa; /* links */
+  --color-violet-800: #c4b5fd;
+  --color-emerald-100: #0f2e24;
+  --color-emerald-800: #6ee7b7;
+  --color-amber-100: #33260b;
+  --color-amber-800: #fcd34d;
+  --color-rose-100: #3a1620;
+  --color-rose-700: #fda4af;
+  --color-rose-800: #fda4af;
+}
+.admin-dark ::selection { background: #4c3d99; color: #fff; }
+/* Thin, quiet scrollbars inside the panel in both modes. */
+.admin, .admin * { scrollbar-width: thin; scrollbar-color: var(--color-slate-300) transparent; }
+
 /* The course path: round, chunky nodes that press down like buttons. */
 .path-node {
   box-shadow: 0 7px 0 0 var(--node-dark);

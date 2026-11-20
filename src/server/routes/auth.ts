@@ -9,6 +9,7 @@ import {
   createUserWithTelegram,
   findUserIdByEmail,
   findUserIdByTelegramId,
+  noteTelegramProfile,
   normalizeEmail,
 } from '../pii'
 
@@ -85,6 +86,8 @@ authRoutes.post('/telegram/poll', async (c) => {
   const userId =
     (await findUserIdByTelegramId(result.telegramId)) ??
     (await createUserWithTelegram(result.telegramId, result.name, readLang(body.lang)))
+  // The @name can change in Telegram: keep the latest one.
+  await noteTelegramProfile(userId, result.username, result.name).catch((err) => console.error('Could not save the Telegram name:', err))
   await startSession(c, userId)
   return c.json({ status: 'ok' })
 })

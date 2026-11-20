@@ -1,0 +1,1 @@
+ALTER TABLE "user_pii" ADD COLUMN "telegram_username" text;

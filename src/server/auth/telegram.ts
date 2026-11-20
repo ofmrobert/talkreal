@@ -19,7 +19,7 @@ const MAX_PENDING = 5000
 interface PendingLogin {
   pollHash: string
   expiresAt: number
-  confirmed?: { telegramId: string; name: string | null }
+  confirmed?: { telegramId: string; name: string | null; username: string | null }
   /** Set when this is not a login but an existing student connecting Telegram for reminders. */
   linkUserId?: string
 }
@@ -132,7 +132,7 @@ export async function sendTelegramMessage(telegramId: string, text: string, butt
   }
 }
 
-export type PollResult = 'pending' | 'expired' | { telegramId: string; name: string | null }
+export type PollResult = 'pending' | 'expired' | { telegramId: string; name: string | null; username: string | null }
 
 /** Checks whether the student has confirmed in Telegram. A confirmed login can be collected once. */
 export function pollLogin(pollToken: string): PollResult {
@@ -152,7 +152,7 @@ export function pollLogin(pollToken: string): PollResult {
 
 interface Update {
   update_id: number
-  message?: { chat: { id: number }; from?: { id: number; first_name?: string }; text?: string }
+  message?: { chat: { id: number }; from?: { id: number; first_name?: string; username?: string }; text?: string }
 }
 
 /** Sends a bot message in the background, so a slow reply never delays the login itself. */
@@ -177,7 +177,7 @@ function handle(update: Update): void {
   if (login?.linkUserId && message.from && startParam) {
     pending.delete(startParam)
     const chatId = message.chat.id
-    linkTelegram(login.linkUserId, String(message.from.id))
+    linkTelegram(login.linkUserId, String(message.from.id), message.from.username ?? null)
       .then((linked) =>
         reply(
           chatId,
@@ -189,7 +189,7 @@ function handle(update: Update): void {
       .catch((err) => console.error('Could not link Telegram:', err))
   } else if (login && message.from) {
     // Pressing Start is the confirmation: the app, which is already waiting, logs in at once.
-    login.confirmed = { telegramId: String(message.from.id), name: message.from.first_name ?? null }
+    login.confirmed = { telegramId: String(message.from.id), name: message.from.first_name ?? null, username: message.from.username ?? null }
     reply(message.chat.id, '✅ Готово, вы вошли! Вернитесь в приложение Talkreal.')
   } else {
     reply(message.chat.id, 'Чтобы войти, откройте приложение Talkreal и нажмите «Войти через Telegram».')

@@ -75,6 +75,8 @@ export const userPii = pgTable('user_pii', {
     .references(() => users.id, { onDelete: 'cascade' }),
   email: text('email').unique(),
   telegramId: text('telegram_id').unique(),
+  /** The @name in Telegram, without the @. People can change it, so it is refreshed at every login. */
+  telegramUsername: text('telegram_username'),
   displayName: text('display_name'),
 })
 
