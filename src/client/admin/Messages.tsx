@@ -112,7 +112,7 @@ export function MessagesPage() {
                   <Td right>
                     <div className="flex justify-end gap-1.5">
                       {report.threadId && (
-                        <Link to={`/admin/messages/${report.threadId}`} className={`${ghostButtonClass} !h-8 !px-2 inline-flex items-center`}>
+                        <Link to={`/admin/messages/${report.threadId}`} className={`${ghostButtonClass} !h-8 !px-2 inline-flex items-center whitespace-nowrap`}>
                           Read conversation
                         </Link>
                       )}
@@ -185,7 +185,7 @@ export function MessagesPage() {
                     </div>
                   </Td>
                   <Td right>
-                    <Link to={`/admin/messages/${thread.id}`} className={`${ghostButtonClass} !h-8 !px-2 inline-flex items-center`}>
+                    <Link to={`/admin/messages/${thread.id}`} className={`${ghostButtonClass} !h-8 !px-2 inline-flex items-center whitespace-nowrap`}>
                       Read
                     </Link>
                   </Td>
