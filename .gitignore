@@ -8,3 +8,6 @@ dev-dist/
 .DS_Store
 
 .data/
+
+# Lesson review pages for a teacher (npm run content:review)
+review/
