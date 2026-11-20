@@ -21,8 +21,9 @@ const MINUTE = 60
 export const PLANS: Record<PlanId, PlanLimits> = {
   free: {
     lessonsPerDay: 5,
+    // A taste of the voice teachers: one short call's worth. Voice is the most expensive thing the app does.
     voiceSecondsPerDay: 3 * MINUTE,
-    voiceSecondsPerMonth: 10 * MINUTE,
+    voiceSecondsPerMonth: 5 * MINUTE,
     textMessagesPerDay: 10,
   },
   pro: {

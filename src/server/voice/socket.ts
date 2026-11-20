@@ -41,6 +41,8 @@ export const VOICE_PATH = '/api/voice/ws'
 /** One call may not run longer than this (the AI provider ends audio sessions at 15 minutes). */
 const MAX_CALL_SECONDS = 14 * 60
 const SAVE_EVERY_SECONDS = 10
+/** A call where nobody has spoken for this long is ended: the line is billed for listening even in silence. */
+const SILENCE_SECONDS = 60
 /** A call at least this long counts as practice for the day: it earns XP and keeps the streak. */
 const PRACTICE_SECONDS = 60
 const XP_CALL = 10
@@ -63,6 +65,8 @@ function runCall(socket: WebSocket, userId: string) {
   let saved = 0
   let allowance = 0
   let finished = false
+  /** The second of the call when someone last spoke, the student or the teacher. */
+  let lastSound = 0
   let level: Level | null = null
   let timezone = ''
   /** What was said, turn by turn. Lives only in memory, for the review written when the call ends. */
@@ -129,8 +133,12 @@ function runCall(socket: WebSocket, userId: string) {
       session = await provider.connect(
         { systemPrompt: teacherPrompt(message.teacher, user.level, { lesson, scenario, student: await getProfile(userId) }), voice: teacherVoice(message.teacher) },
         {
-          onAudio: (pcm) => socket.readyState === socket.OPEN && socket.send(pcm),
+          onAudio: (pcm) => {
+            lastSound = elapsed
+            if (socket.readyState === socket.OPEN) socket.send(pcm)
+          },
           onTranscript: (role, text) => {
+            lastSound = elapsed
             hear(role, text)
             send({ type: 'transcript', role, text })
           },
@@ -172,6 +180,7 @@ function runCall(socket: WebSocket, userId: string) {
       }
       send({ type: 'tick', remainingSeconds: allowance - elapsed })
       if (elapsed >= allowance) void finish(allowance >= MAX_CALL_SECONDS ? 'max_duration' : 'limit')
+      else if (elapsed - lastSound >= SILENCE_SECONDS) void finish('silence')
     }, 1000)
   }
 

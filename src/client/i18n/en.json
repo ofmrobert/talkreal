@@ -354,7 +354,8 @@
       "provider_error": "Couldn't connect to the teacher. Try again.",
       "provider_closed": "The connection dropped. Try calling again.",
       "mic_denied": "No access to the microphone. Allow it in settings and try again.",
-      "connection": "No connection. Check your internet and try again."
+      "connection": "No connection. Check your internet and try again.",
+      "silence": "Nobody spoke for a whole minute, so the call was ended to save your minutes. Call again when you are ready."
     }
   },
   "privacy": {
