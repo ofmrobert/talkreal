@@ -30,7 +30,7 @@ const who = (u: { email: string | null; name: string | null; id: string }) => u.
 /** The student's Telegram: a link to their @name if they have one, otherwise the numeric id. */
 function Telegram({ id, username }: { id: string | null; username: string | null }) {
   if (!id) return <span className="text-slate-300">—</span>
-  if (!username) return <span className="whitespace-nowrap">id {id}</span>
+  if (!username) return <span className="whitespace-nowrap text-slate-400" title={`Telegram id ${id}`}>no @username</span>
   return (
     <a href={`https://t.me/${username}`} target="_blank" rel="noreferrer" className="whitespace-nowrap font-semibold text-violet-700 hover:underline">
       @{username}
@@ -267,7 +267,7 @@ export function UserPage() {
               [
                 ['Logs in with', [user.email ? 'email code' : '', user.telegramId ? 'Telegram' : ''].filter(Boolean).join(' + ') || '—'],
                 ['Email', user.email ?? '—'],
-                ['Telegram', user.telegramId ? `${user.telegramUsername ? `@${user.telegramUsername} · ` : ''}id ${user.telegramId}` : 'not connected'],
+                ['Telegram', user.telegramId ? <Telegram id={user.telegramId} username={user.telegramUsername} /> : 'not connected'],
                 ['Name', user.name ?? '—'],
                 ['Last login', dateTime(data.devices.last)],
                 ['Came from', source],

@@ -247,3 +247,22 @@ export async function startTelegramBot(): Promise<void> {
     timed('lastPing', () => call('getMe')).catch(() => {})
   }, KEEP_WARM_EVERY_MS)
 }
+
+/** Ids we already asked Telegram about, and when: a person without an @name is not asked about again for a day. */
+const askedAbout = new Map<string, number>()
+
+/**
+ * The @name a Telegram account has today, or null if it has none or Telegram did not answer.
+ * Works for anyone who has opened the bot, which every student who logs in with Telegram has.
+ */
+export async function telegramUsernameOf(telegramId: string): Promise<string | null> {
+  if (!botUsername) return null
+  if (Date.now() - (askedAbout.get(telegramId) ?? 0) < 24 * 60 * 60 * 1000) return null
+  try {
+    const chat = await call<{ username?: string }>('getChat', { chat_id: telegramId }, 4000)
+    askedAbout.set(telegramId, Date.now())
+    return chat.username ?? null
+  } catch {
+    return null
+  }
+}

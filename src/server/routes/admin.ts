@@ -6,7 +6,7 @@ import { PRICES } from '../../shared/plans'
 import { textAiAvailable } from '../ai/text'
 import { emailConfigured } from '../auth/email'
 import { requireUser, type AuthEnv } from '../auth/sessions'
-import { telegramAvailable } from '../auth/telegram'
+import { telegramAvailable, telegramUsernameOf } from '../auth/telegram'
 import { planOf } from '../billing/plans'
 import { isValidCode, normalizeCode } from '../billing/promo'
 import { billingMode } from '../billing/yookassa'
@@ -33,9 +33,26 @@ import {
   voiceSessions,
 } from '../db/schema'
 import { env } from '../env'
-import { approvePhoto, clearBio, countNewPhotos, deleteAvatar, getPii, getPiiFor, getProfile, goalCounts, listPhotos, searchUserIds } from '../pii'
+import { approvePhoto, clearBio, countNewPhotos, deleteAvatar, getPii, getPiiFor, getProfile, goalCounts, listPhotos, noteTelegramProfile, searchUserIds } from '../pii'
 import { dayBefore, localDay } from '../progress/streak'
 import { voiceProvider } from '../voice/socket'
+
+/**
+ * Students who logged in with Telegram before we saved @names show only a number.
+ * Ask Telegram for their @name, show it and keep it.
+ */
+async function withTelegramNames(pii: Awaited<ReturnType<typeof getPiiFor>>) {
+  const missing = [...pii].filter(([, p]) => p.telegramId && !p.telegramUsername).slice(0, 25)
+  await Promise.all(
+    missing.map(async ([userId, p]) => {
+      const username = await telegramUsernameOf(p.telegramId!)
+      if (!username) return
+      p.telegramUsername = username
+      await noteTelegramProfile(userId, username, null).catch(() => {})
+    }),
+  )
+  return pii
+}
 
 /**
  * Everything behind the admin panel (/admin). Only the people listed in ADMIN_EMAILS get in;
@@ -220,7 +237,7 @@ adminRoutes.get('/users', async (c) => {
   const [{ total }] = await db.select({ total: sql<number>`count(*)::int` }).from(users).where(where)
   const list = await db.select().from(users).where(where).orderBy(order).limit(PAGE).offset(page * PAGE)
   const ids = list.map((u) => u.id)
-  const pii = await getPiiFor(ids)
+  const pii = await withTelegramNames(await getPiiFor(ids))
 
   const lessons = ids.length ? await db.select({ id: lessonProgress.userId, n: sql<number>`count(*)::int` }).from(lessonProgress).where(inArray(lessonProgress.userId, ids)).groupBy(lessonProgress.userId) : []
   const voice = ids.length ? await db.select({ id: voiceSessions.userId, s: sql<number>`coalesce(sum(${voiceSessions.seconds}), 0)::int` }).from(voiceSessions).where(inArray(voiceSessions.userId, ids)).groupBy(voiceSessions.userId) : []
@@ -265,7 +282,7 @@ adminRoutes.get('/users/:id', async (c) => {
   const today = localDay(ZONE)
 
   const [pii, progress, usage, paid, calls, review, badges, placements, devices, push, views, source] = await Promise.all([
-    getPiiFor([id]),
+    getPiiFor([id]).then(withTelegramNames),
     db.select().from(lessonProgress).where(eq(lessonProgress.userId, id)).orderBy(desc(lessonProgress.lastCompletedAt)),
     db.select().from(dailyUsage).where(and(eq(dailyUsage.userId, id), gt(dailyUsage.day, dayBefore(lastDays(60)[0])))).orderBy(asc(dailyUsage.day)),
     db.select().from(payments).where(eq(payments.userId, id)).orderBy(desc(payments.createdAt)).limit(50),
