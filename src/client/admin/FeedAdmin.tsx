@@ -30,13 +30,12 @@ interface AdminComment {
 
 interface FeedAdminData {
   writer: string | null
-  claudeProblem: { at: string | null; status: number | null; reason: string | null; viaRelay: boolean }
   counts: Record<string, number>
   posts: AdminPost[]
   comments: AdminComment[]
 }
 
-const WRITERS: Record<string, string> = { claude: 'Claude writes the posts', gemini: 'Gemini writes the posts', mock: 'Test stand-in (not a real AI)' }
+const WRITERS: Record<string, string> = { gemini: 'Gemini writes the posts', mock: 'Test stand-in (not a real AI)' }
 
 /** The Talkreal account's posts, waiting and published, and what students write under them. */
 export function FeedPage() {
@@ -46,7 +45,6 @@ export function FeedPage() {
   const [editing, setEditing] = useState<AdminPost | null>(null)
   const [form, setForm] = useState({ titleRu: '', titleEn: '', textRu: '', textEn: '', english: '' })
   const [note, setNote] = useState<string | null>(null)
-  const [test, setTest] = useState<string | null>(null)
 
   if (!data) return <Loading failed={failed} />
   const now = Date.now()
@@ -78,25 +76,6 @@ export function FeedPage() {
     setNote(result ? `${result.removed} waiting post(s) removed, ${result.written} written${result.failed ? `, ${result.failed} could not be written` : ''}.` : 'Could not reach the server.')
     setBusy(null)
     reload()
-  }
-
-  async function testClaude() {
-    setBusy('test')
-    setTest(null)
-    const result = await api<object>('/admin/feed/test-claude', {}).catch(() => ({ ok: false, problem: 'Could not reach the server' }))
-    setTest(JSON.stringify(result, null, 2))
-    setBusy(null)
-    reload()
-  }
-
-  /** What the owner can do about Claude not answering, by the kind of refusal. */
-  function claudeAdvice(status: number | null, viaRelay: boolean): string {
-    if (status === 401) return 'Anthropic did not accept the key. Check that ANTHROPIC_API_KEY holds an API key from console.anthropic.com (it starts with sk-ant-), with no spaces or quotes.'
-    if (status === 403) return viaRelay ? 'Anthropic refused the request even through the relay. Check the key and that the relay was redeployed.' : 'Anthropic refused the request, most likely because the server is in a country it does not serve. Requests have to go through the relay.'
-    if (status === 404) return 'The address Claude is reached at does not answer. If the app uses the Cloudflare relay, the relay has to be redeployed with its latest code (it learned the /anthropic address).'
-    if (status === 400) return 'Anthropic rejected the request. If the message mentions credit or billing, the API account has no credit: plan credits for the Claude apps are separate from API credits.'
-    if (status === 429) return 'Anthropic says the limit is reached or there is no credit left on the API account.'
-    return 'Claude could not be reached. This is usually the network between the server and Anthropic.'
   }
 
   function startEdit(post: AdminPost) {
@@ -180,9 +159,6 @@ export function FeedPage() {
       hint="The Talkreal account posts once a day at 09:00 Moscow time. Posts are written a week ahead, so you can read, edit or remove any of them before students see it."
       actions={
         <div className="flex gap-2">
-          <button type="button" className={ghostButtonClass} disabled={busy !== null} onClick={testClaude}>
-            {busy === 'test' ? 'Testing…' : 'Test Claude'}
-          </button>
           <button type="button" className={ghostButtonClass} disabled={busy !== null || !data.writer} onClick={rewrite}>
             Rewrite the waiting posts
           </button>
@@ -201,22 +177,6 @@ export function FeedPage() {
         <Stat label="Quiz answers" value={num(data.counts.votes)} />
       </Stats>
       {note && <p className="text-sm font-semibold text-slate-600">{note}</p>}
-      {test && (
-        <Card title="Claude test" hint="One tiny request, and the route it took. Copy this whole box when asking for help; it contains no keys.">
-          <pre className="select-text overflow-x-auto rounded-lg bg-slate-100 p-3 font-mono text-xs text-slate-700">{test}</pre>
-        </Card>
-      )}
-      {data.claudeProblem.reason && (
-        <Card title="Claude was asked to write the posts and could not, so Gemini wrote them">
-          <p className="text-sm text-slate-700">{claudeAdvice(data.claudeProblem.status, data.claudeProblem.viaRelay)}</p>
-          <p className="mt-2 rounded-lg bg-slate-100 p-2 font-mono text-xs text-slate-600">
-            {dateTime(data.claudeProblem.at)} · {data.claudeProblem.reason}
-          </p>
-          <p className="mt-2 text-xs text-slate-500">
-            Claude is reached {data.claudeProblem.viaRelay ? 'through the relay' : 'directly'}. Once this is fixed, press "Rewrite the waiting posts" to have Claude write them.
-          </p>
-        </Card>
-      )}
 
       {editing && (
         <Card title="Edit the post" hint="Both language versions are shown to students, depending on the language of their app.">

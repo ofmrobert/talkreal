@@ -52,9 +52,6 @@ export const env = {
     .filter((email) => email.includes('@')),
 
   feed: {
-    /** Set to have Claude write the daily feed posts. Empty = the Gemini text AI writes them. */
-    anthropicKey: process.env.ANTHROPIC_API_KEY ?? '',
-    claudeModel: process.env.FEED_CLAUDE_MODEL ?? 'claude-haiku-5-5',
     /** Google's image model, for the two picture posts a week. */
     imageModel: process.env.GEMINI_IMAGE_MODEL ?? 'gemini-3.1-flash-image',
   },

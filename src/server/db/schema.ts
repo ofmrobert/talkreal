@@ -379,7 +379,7 @@ export const feedPosts = pgTable(
     /** 'active' | 'hidden' */
     status: text('status').notNull().default('active'),
     publishAt: timestamptz('publish_at').notNull(),
-    /** 'claude' | 'gemini' | 'mock' | 'owner' */
+    /** 'gemini' | 'mock' | 'owner' */
     writtenBy: text('written_by').notNull().default('owner'),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },

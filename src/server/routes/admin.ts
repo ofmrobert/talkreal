@@ -12,7 +12,7 @@ import { isValidCode, normalizeCode } from '../billing/promo'
 import { billingMode } from '../billing/yookassa'
 import { lessonsFor } from '../content/lessons'
 import { fillFeed, rewriteWaiting } from '../feed/generate'
-import { claudeProblem, testClaude, writerName } from '../feed/writer'
+import { writerName } from '../feed/writer'
 import { examId, unitsFor } from '../content/units'
 import { db, dbStatus } from '../db/client'
 import {
@@ -406,7 +406,6 @@ adminRoutes.get('/feed', async (c) => {
   `)
   return c.json({
     writer: writerName(),
-    claudeProblem,
     counts,
     posts,
     comments: comments.map((m) => ({ ...m, who: pii.get(m.userId)?.email ?? pii.get(m.userId)?.displayName ?? m.userId.slice(0, 8) })),
@@ -419,9 +418,6 @@ adminRoutes.post('/feed/fill', async (c) => {
   await log(c, 'feed_filled', null, result)
   return c.json(result)
 })
-
-/** Sends Claude one tiny request and says what happened, to find out why it does not answer. */
-adminRoutes.post('/feed/test-claude', async (c) => c.json(await testClaude()))
 
 /** Deletes the posts that have not gone out yet and writes them again. */
 adminRoutes.post('/feed/rewrite', async (c) => {

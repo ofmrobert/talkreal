@@ -137,7 +137,7 @@ export async function fillFeed(): Promise<{ written: number; failed: number }> {
 
 /**
  * Throws away the posts that have not gone out yet and writes them again: for when the writer
- * has changed (Claude now works) or the waiting posts are not good enough.
+ * has changed or the waiting posts are not good enough.
  */
 export async function rewriteWaiting(): Promise<{ removed: number; written: number; failed: number }> {
   const removed = await db.delete(feedPosts).where(gte(feedPosts.publishAt, new Date())).returning({ id: feedPosts.id })
