@@ -27,6 +27,7 @@ import { planOf } from '../billing/plans'
 import { db } from '../db/client'
 import { users, voiceSessions } from '../db/schema'
 import { env } from '../env'
+import { getProfile } from '../pii'
 import { recordActivity } from '../progress/activity'
 import { localDay, safeTimezone } from '../progress/streak'
 import { geminiProvider } from './gemini'
@@ -126,7 +127,7 @@ function runCall(socket: WebSocket, userId: string) {
 
     try {
       session = await provider.connect(
-        { systemPrompt: teacherPrompt(message.teacher, user.level, { lesson, scenario }), voice: teacherVoice(message.teacher) },
+        { systemPrompt: teacherPrompt(message.teacher, user.level, { lesson, scenario, student: await getProfile(userId) }), voice: teacherVoice(message.teacher) },
         {
           onAudio: (pcm) => socket.readyState === socket.OPEN && socket.send(pcm),
           onTranscript: (role, text) => {

@@ -55,6 +55,33 @@ export function teacherVoice(teacher: TeacherId): string {
 export interface Focus {
   scenario?: ScenarioId
   lesson?: Lesson
+  /** What the student chose to tell about themselves in their profile. */
+  student?: { name: string | null; gender: string | null; goals: string[]; interests: string[] }
+}
+
+const GOAL_WORDS: Record<string, string> = {
+  travel: 'travel',
+  work: 'work and career',
+  study: 'studying',
+  move: 'moving abroad',
+  people: 'talking to people from other countries',
+  exam: 'passing an exam',
+  media: 'films, series and books in the original',
+  self: 'self-development',
+}
+
+/** A few lines about the student, so the teacher can use their name and talk about what matters to them. */
+function studentPrompt(student: Focus['student']): string {
+  if (!student) return ''
+  const lines: string[] = []
+  if (student.name) lines.push(`The student's name is ${student.name}. Use it now and then, as a real teacher would.`)
+  if (student.gender === 'female' || student.gender === 'male') {
+    lines.push(`The student is ${student.gender === 'female' ? 'a woman' : 'a man'}: use the right grammatical gender when you say something in Russian.`)
+  }
+  const goals = student.goals.map((goal) => GOAL_WORDS[goal]).filter(Boolean)
+  if (goals.length > 0) lines.push(`They are learning English for: ${goals.join(', ')}. Prefer situations and vocabulary that serve this.`)
+  if (student.interests.length > 0) lines.push(`They are interested in: ${student.interests.join(', ')}. These make good topics when the conversation is free.`)
+  return lines.length > 0 ? `About the student:\n${lines.map((line) => `- ${line}`).join('\n')}\n` : ''
 }
 
 function focusPrompt(focus: Focus): string {
@@ -73,6 +100,7 @@ ${persona.character}
 
 ${LEVEL_GUIDE[level].replace(/Speak/g, 'Write')}
 
+${studentPrompt(focus.student)}
 How to run the chat:
 - This is writing practice. Keep each reply to one to three short sentences and usually end with a question, so the student keeps writing.
 - Write in English. If the student writes in Russian or is clearly lost, add one short hint in Russian, then continue in English.
@@ -95,6 +123,7 @@ ${persona.character}
 
 ${LEVEL_GUIDE[level]}
 
+${studentPrompt(focus.student)}
 How to run the conversation:
 - This is speaking practice. The student should talk more than you do. Keep each of your turns to one to three sentences and usually end with a question.
 - Speak English. If the student is stuck, silent for long, or asks for help in Russian, give a brief hint in Russian (one sentence), then continue in English.

@@ -104,7 +104,43 @@
     "minutes": "Minutes spoken",
     "language": "App language",
     "logout": "Log out",
-    "changeLevel": "Change level"
+    "changeLevel": "Change level",
+    "edit": "Edit profile",
+    "save": "Save",
+    "saveFailed": "Couldn't save. Check your connection and try again.",
+    "noName": "Add your name",
+    "name": "Name",
+    "namePlaceholder": "What's your name?",
+    "bio": "About me",
+    "bioPlaceholder": "A few words about you: what you do, what you like",
+    "city": "City",
+    "cityPlaceholder": "For example, Kazan",
+    "age": "Age",
+    "gender": "Gender",
+    "goals": "Why you are learning English (up to {{count}})",
+    "interests": "Interests",
+    "photoChoose": "Choose a photo",
+    "photoChange": "Change photo",
+    "photoRemove": "Remove",
+    "photoFailed": "Couldn't open this photo. Try another one.",
+    "years_one": "{{count}} year old",
+    "years_other": "{{count}} years old",
+    "joined": "Joined {{date}}",
+    "statStreak": "day streak",
+    "statXp": "XP",
+    "statLessons": "lessons",
+    "statMinutes": "min talking",
+    "completeTitle": "Complete your profile",
+    "missing": {
+      "photo": "Add a photo to make the profile yours.",
+      "name": "Add your name so the teachers can call you by it.",
+      "bio": "Write a few words about yourself.",
+      "goals": "Say why you are learning English: the teachers will choose topics for it.",
+      "interests": "Pick your interests: they are more fun to talk about."
+    },
+    "discoverable": "Show my profile to other students",
+    "discoverableHint": "For when the community opens. Right now nobody sees your profile but you. Your email and Telegram are never shown to anyone.",
+    "privacyNote": "Everything except the name is optional. The AI teachers see your name, goals and interests, so the conversation is about what matters to you."
   },
   "install": {
     "title": "Install the app on your iPhone",
@@ -520,5 +556,58 @@
     "start": "Keep learning",
     "checkAgain": "Check again",
     "tryAgain": "Try again"
+  },
+  "setup": {
+    "nameTitle": "Let's get to know each other!",
+    "nameText": "What's your name? The teachers will call you by it.",
+    "friend": "friend",
+    "goalsTitle": "Why are you learning English, {{name}}?",
+    "goalsText_one": "Choose {{count}} goal.",
+    "goalsText_other": "Choose up to {{count}} goals.",
+    "aboutTitle": "A little more about you",
+    "aboutText": "Optional, but it makes conversations with the teachers more interesting.",
+    "finish": "Done"
+  },
+  "goals": {
+    "travel": "Travel",
+    "work": "Work and career",
+    "study": "Studies",
+    "move": "Moving abroad",
+    "people": "Meeting people",
+    "exam": "An exam",
+    "media": "Films and books",
+    "self": "For myself"
+  },
+  "interests": {
+    "travel": "Travel",
+    "movies": "Films and series",
+    "music": "Music",
+    "sport": "Sport",
+    "tech": "Technology",
+    "food": "Food",
+    "games": "Games",
+    "books": "Books",
+    "business": "Business",
+    "art": "Art",
+    "science": "Science",
+    "pets": "Animals"
+  },
+  "genders": {
+    "female": "Female",
+    "male": "Male",
+    "other": "Other"
+  },
+  "settings": {
+    "title": "Settings",
+    "hint": "Reminders, language, level, log out",
+    "account": "Account"
+  },
+  "community": {
+    "soon": "Coming soon",
+    "title": "The Talkreal community",
+    "text": "Find partners at your level and practise English with each other. It will open for Pro subscribers.",
+    "visible": "Your profile will be visible to other students.",
+    "hidden": "Your profile is hidden from others for now.",
+    "change": "Change"
   }
 }

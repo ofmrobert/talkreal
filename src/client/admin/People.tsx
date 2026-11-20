@@ -155,6 +155,7 @@ export function UsersPage() {
 }
 
 interface UserDetail {
+  profile: { name: string | null; bio: string | null; city: string | null; age: number | null; gender: string | null; goals: string[]; interests: string[]; discoverable: boolean; photoVersion: number | null }
   user: {
     id: string
     email: string | null
@@ -229,6 +230,35 @@ export function UserPage() {
         <Stat label="Last active" value={user.lastActive ? shortDay(user.lastActive) : '—'} sub={`joined ${date(user.createdAt)}`} />
         <Stat label="Review" value={num(data.review.total)} sub={`${num(data.review.due)} due now`} />
       </Stats>
+
+      <Card title="Profile" hint="What the student chose to tell about themselves.">
+        <div className="flex flex-wrap items-start gap-4">
+          {data.profile.photoVersion ? (
+            <img src={`/api/profile/photo/${user.id}?v=${data.profile.photoVersion}`} alt="" className="h-20 w-20 rounded-full object-cover" />
+          ) : (
+            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-400">no photo</span>
+          )}
+          <dl className="grid min-w-64 flex-1 grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
+            {(
+              [
+                ['Name', data.profile.name ?? '—'],
+                ['Age', data.profile.age === null ? '—' : String(data.profile.age)],
+                ['Gender', data.profile.gender ?? '—'],
+                ['City', data.profile.city ?? '—'],
+                ['Learning for', data.profile.goals.join(', ') || '—'],
+                ['Interests', data.profile.interests.join(', ') || '—'],
+                ['About', data.profile.bio ?? '—'],
+                ['Visible in the future community', data.profile.discoverable ? 'yes' : 'no'],
+              ] as const
+            ).map(([label, value]) => (
+              <div key={label} className="contents">
+                <dt className="text-slate-500">{label}</dt>
+                <dd className="font-semibold text-slate-900">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </Card>
 
       <div className="grid gap-4 lg:grid-cols-3">
         <Card title="Account">

@@ -5,7 +5,7 @@ import { planOf } from '../billing/plans'
 import { db } from '../db/client'
 import { env } from '../env'
 import { users } from '../db/schema'
-import { getPii } from '../pii'
+import { getPii, getProfile } from '../pii'
 import { localDay, safeTimezone, streakNow } from '../progress/streak'
 
 export const meRoutes = new Hono<AuthEnv>()
@@ -16,6 +16,7 @@ meRoutes.get('/', requireUser, async (c) => {
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1)
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   const pii = await getPii(userId)
+  const profile = await getProfile(userId)
   // Opening the app keeps the student logged in. A failure here must not block the app.
   await renewSession(c).catch((err) => console.error('Could not renew the session:', err))
 
@@ -23,6 +24,10 @@ meRoutes.get('/', requireUser, async (c) => {
     id: user.id,
     email: pii.email,
     displayName: pii.displayName,
+    /** Changes when the profile photo changes; null = no photo. */
+    photoVersion: profile.photoVersion,
+    /** False until the "about you" step after signing up has been filled in or skipped. */
+    profileSet: user.profileSetAt !== null,
     level: user.level,
     /** True for the owners listed in ADMIN_EMAILS: the app then shows the way to the admin panel. */
     isAdmin: pii.email !== null && env.adminEmails.includes(pii.email.toLowerCase()),

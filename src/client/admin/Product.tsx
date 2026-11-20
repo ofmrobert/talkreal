@@ -13,6 +13,7 @@ interface Learning {
   levels: { level: string; n: number }[]
   placement: { method: string; level: string; n: number }[]
   review: Record<string, number>
+  goals: Record<string, number>
   achievements: { key: string; icon: string; students: number }[]
   course: {
     level: string
@@ -127,6 +128,31 @@ export function LearningPage() {
             </tr>
           </tbody>
         </Table>
+      </Card>
+
+      <Card title="Why students learn English" hint="From their profiles; a student may pick up to three. Useful for choosing what to write and advertise next.">
+        {Object.keys(data.goals).length === 0 ? (
+          <p className="text-sm text-slate-400">Nobody has answered yet.</p>
+        ) : (
+          <Table>
+            <tbody>
+              {Object.entries(data.goals)
+                .sort((a, b) => b[1] - a[1])
+                .map(([goal, n]) => (
+                  <tr key={goal}>
+                    <Td className="w-40 font-semibold capitalize">{goal}</Td>
+                    <Td>
+                      <Meter value={n} max={Math.max(...Object.values(data.goals))} />
+                    </Td>
+                    <Td right>{num(n)}</Td>
+                    <Td right className="w-20 text-slate-400">
+                      {pct(n, students)}
+                    </Td>
+                  </tr>
+                ))}
+            </tbody>
+          </Table>
+        )}
       </Card>
 
       <Card title="Badges earned">

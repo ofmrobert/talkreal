@@ -29,7 +29,7 @@ import {
   voiceSessions,
 } from '../db/schema'
 import { env } from '../env'
-import { getPii, getPiiFor, searchUserIds } from '../pii'
+import { getPii, getPiiFor, getProfile, goalCounts, searchUserIds } from '../pii'
 import { dayBefore, localDay } from '../progress/streak'
 import { voiceProvider } from '../voice/socket'
 
@@ -299,6 +299,7 @@ adminRoutes.get('/users/:id', async (c) => {
   ])
 
   return c.json({
+    profile: await getProfile(id),
     user: {
       id: user.id,
       email: pii.get(id)?.email ?? null,
@@ -452,6 +453,7 @@ adminRoutes.get('/learning', async (c) => {
     levels,
     placement,
     review,
+    goals: await goalCounts(),
     achievements: ACHIEVEMENTS.map((a) => ({ key: a.key, icon: a.icon, students: badgeBy.get(a.key) ?? 0 })),
     course: LEVELS.map((level) => ({
       level,

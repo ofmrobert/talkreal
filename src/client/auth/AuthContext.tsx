@@ -6,6 +6,10 @@ export interface User {
   id: string
   email: string | null
   displayName: string | null
+  /** Changes when the profile photo changes; null = no photo. */
+  photoVersion?: number | null
+  /** False until the "about you" step after signing up was filled in or skipped. */
+  profileSet?: boolean
   level: string | null
   plan: string
   /** True for the owner: the profile then shows the way to the admin panel. */

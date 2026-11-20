@@ -28,6 +28,8 @@ export const users = pgTable('users', {
   lastReminderDay: date('last_reminder_day'),
   /** When the student agreed to the privacy policy. */
   consentAt: timestamptz('consent_at'),
+  /** When the student filled in (or skipped) the "about you" step. Empty = show it once. */
+  profileSetAt: timestamptz('profile_set_at'),
 })
 
 /** Badges a student has earned. The list of possible badges lives in src/shared/achievements.ts. */
@@ -78,6 +80,29 @@ export const userPii = pgTable('user_pii', {
   /** The @name in Telegram, without the @. People can change it, so it is refreshed at every login. */
   telegramUsername: text('telegram_username'),
   displayName: text('display_name'),
+  /** What the student chose to tell about themselves (see src/shared/profile.ts). All optional. */
+  bio: text('bio'),
+  city: text('city'),
+  birthYear: integer('birth_year'),
+  gender: text('gender'),
+  goals: jsonb('goals').$type<string[]>(),
+  interests: jsonb('interests').$type<string[]>(),
+  /** May other students see this profile once the community opens? Off unless the student turns it on. */
+  discoverable: boolean('discoverable').notNull().default(false),
+})
+
+/**
+ * Profile photos. Personal data, so only code in src/server/pii/ may touch this table.
+ * A photo is shrunk on the phone to a small square before it is sent, so it fits in the database.
+ */
+export const userAvatars = pgTable('user_avatars', {
+  userId: uuid('user_id')
+    .primaryKey()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  mime: text('mime').notNull(),
+  /** The picture itself, base64. */
+  data: text('data').notNull(),
+  updatedAt: timestamptz('updated_at').notNull().defaultNow(),
 })
 
 /** One-time login codes. Only a hash of the code is stored. */

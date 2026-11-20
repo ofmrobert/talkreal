@@ -4,7 +4,8 @@
  */
 import { eq, ilike, inArray, or } from 'drizzle-orm'
 import { db } from '../db/client'
-import { userPii, users } from '../db/schema'
+import { cleanProfile, type Profile } from '../../shared/profile'
+import { userAvatars, userPii, users } from '../db/schema'
 
 export function normalizeEmail(email: string): string {
   return email.trim().toLowerCase()
@@ -117,4 +118,70 @@ export async function searchUserIds(text: string, limit = 500): Promise<string[]
     .where(or(ilike(userPii.email, pattern), ilike(userPii.displayName, pattern), ilike(userPii.telegramUsername, pattern.replace('%@', '%')), eq(userPii.telegramId, text.trim())))
     .limit(limit)
   return rows.map((row) => row.userId)
+}
+
+/* ───────────── The student's own profile: name, photo and what they chose to tell ───────────── */
+
+/** The profile as the app shows it. The age is worked out from the year of birth. */
+export async function getProfile(userId: string): Promise<Profile & { photoVersion: number | null }> {
+  const [row] = await db.select().from(userPii).where(eq(userPii.userId, userId)).limit(1)
+  const [photo] = await db.select({ updatedAt: userAvatars.updatedAt }).from(userAvatars).where(eq(userAvatars.userId, userId)).limit(1)
+  return {
+    ...cleanProfile({
+      name: row?.displayName,
+      bio: row?.bio,
+      city: row?.city,
+      age: row?.birthYear ? new Date().getFullYear() - row.birthYear : null,
+      gender: row?.gender,
+      goals: row?.goals ?? [],
+      interests: row?.interests ?? [],
+      discoverable: row?.discoverable ?? false,
+    }),
+    // Changes whenever the photo changes, so the app knows to load the new one.
+    photoVersion: photo ? photo.updatedAt.getTime() : null,
+  }
+}
+
+export async function saveProfile(userId: string, profile: Profile): Promise<void> {
+  const values = {
+    displayName: profile.name,
+    bio: profile.bio,
+    city: profile.city,
+    birthYear: profile.age === null ? null : new Date().getFullYear() - profile.age,
+    gender: profile.gender,
+    goals: profile.goals,
+    interests: profile.interests,
+    discoverable: profile.discoverable,
+  }
+  await db
+    .insert(userPii)
+    .values({ userId, ...values })
+    .onConflictDoUpdate({ target: userPii.userId, set: values })
+}
+
+export async function getAvatar(userId: string): Promise<{ mime: string; data: Buffer; version: number } | null> {
+  const [row] = await db.select().from(userAvatars).where(eq(userAvatars.userId, userId)).limit(1)
+  return row ? { mime: row.mime, data: Buffer.from(row.data, 'base64'), version: row.updatedAt.getTime() } : null
+}
+
+export async function saveAvatar(userId: string, mime: string, data: Buffer): Promise<number> {
+  const updatedAt = new Date()
+  const values = { mime, data: data.toString('base64'), updatedAt }
+  await db
+    .insert(userAvatars)
+    .values({ userId, ...values })
+    .onConflictDoUpdate({ target: userAvatars.userId, set: values })
+  return updatedAt.getTime()
+}
+
+export async function deleteAvatar(userId: string): Promise<void> {
+  await db.delete(userAvatars).where(eq(userAvatars.userId, userId))
+}
+
+/** For the admin panel: how many students chose each reason for learning. */
+export async function goalCounts(): Promise<Record<string, number>> {
+  const rows = await db.select({ goals: userPii.goals }).from(userPii)
+  const counts: Record<string, number> = {}
+  for (const row of rows) for (const goal of row.goals ?? []) counts[goal] = (counts[goal] ?? 0) + 1
+  return counts
 }

@@ -10,6 +10,7 @@ import { limitsFor, planOf } from '../billing/plans'
 import { lessonById } from '../content/lessons'
 import { db } from '../db/client'
 import { dailyUsage, users } from '../db/schema'
+import { getProfile } from '../pii'
 import { localDay, safeTimezone } from '../progress/streak'
 import { chatPrompt } from '../voice/teachers'
 
@@ -63,7 +64,7 @@ aiRoutes.post('/chat', async (c) => {
   let answer: ChatAnswer
   try {
     answer = await askJson<ChatAnswer>({
-      system: chatPrompt(body.teacher, user.level, { lesson, scenario }),
+      system: chatPrompt(body.teacher, user.level, { lesson, scenario, student: await getProfile(user.id) }),
       // The AI needs something to answer: an empty chat starts with a stage direction.
       turns: opening ? [{ role: 'student', text: '(The student has just opened the chat. Greet them and begin.)' }] : turns,
       temperature: 0.7,

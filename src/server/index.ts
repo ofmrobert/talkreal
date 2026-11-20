@@ -12,6 +12,7 @@ import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
+import { profileRoutes } from './routes/profile'
 import { reminderRoutes } from './routes/reminders'
 import { reviewRoutes } from './routes/review'
 import { testRoutes } from './routes/tests'
@@ -74,6 +75,7 @@ app.route('/api/placement', placementRoutes)
 app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
 app.route('/api/billing', billingRoutes)
+app.route('/api/profile', profileRoutes)
 app.route('/api/admin', adminRoutes)
 app.route('/api/track', trackRoutes)
 app.route('/api/reminders', reminderRoutes)
