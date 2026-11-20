@@ -16,7 +16,7 @@
     },
     {
       "title": "Правописание окончания -ed",
-      "body": "Если глагол заканчивается на -e, добавляем только -d: live → lived. Согласная + y меняется на -ied: study → studied. В коротких глаголах последняя согласная удваивается: stop → stopped.",
+      "body": "Если глагол заканчивается на -e, добавляем только -d: live → lived. Согласная + y меняется на -ied: study → studied. В коротких глаголах, которые заканчиваются на одну гласную + одну согласную, последняя согласная удваивается: stop → stopped.",
       "examples": [
         { "en": "We lived in Kazan.", "ru": "Мы жили в Казани." },
         { "en": "He studied English at school.", "ru": "Он учил английский в школе." },
@@ -72,7 +72,7 @@
       "type": "translate",
       "source": "Мы навестили бабушку на прошлой неделе.",
       "answer": "We visited our grandmother last week.",
-      "accept": ["We visited grandmother last week.", "Last week we visited our grandmother."],
+      "accept": ["We visited grandmother last week.", "Last week we visited our grandmother.", "Last week we visited grandmother."],
       "distractors": ["visit", "ago", "the"],
       "explanation": "Visit — правильный глагол: visited. Обратите внимание на our: в английском перед словами о родственниках обычно стоит притяжательное местоимение."
     },
@@ -116,7 +116,7 @@
       "type": "gap",
       "sentence": "The train ___ at every station.",
       "translation": "Поезд останавливался на каждой станции.",
-      "options": ["stoped", "stopped", "stopping", "stops"],
+      "options": ["stoped", "stopped", "stopping", "stop"],
       "answer": 1,
       "explanation": "В коротком глаголе с одной гласной перед конечной согласной эта согласная удваивается: stop → stopped, plan → planned."
     },
@@ -144,7 +144,7 @@
       "type": "type",
       "source": "Я закончил работу два часа назад.",
       "answer": "I finished work two hours ago.",
-      "accept": ["I finished my work two hours ago.", "I finished working two hours ago."],
+      "accept": ["I finished my work two hours ago.", "I finished the work two hours ago.", "I finished working two hours ago."],
       "explanation": "Ago ставится после отрезка времени: two hours ago. Русское «назад» переводится именно так, а не before."
     }
   ]

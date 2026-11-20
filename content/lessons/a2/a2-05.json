@@ -66,14 +66,14 @@
       "translation": "— Эта сумка такая тяжёлая! — Подожди, я помогу тебе с ней.",
       "options": ["I help", "I'll help", "I'm going to help", "I helping"],
       "answer": 1,
-      "explanation": "Решение помочь возникло в момент разговора, поэтому will: I'll help. Going to означало бы, что вы запланировали это заранее, а русское настоящее время («я помогу» → «I help») здесь не работает."
+      "explanation": "Решение помочь возникло в момент разговора, поэтому will: I'll help. Going to означало бы, что вы запланировали это заранее, а Present Simple («I help») для такого решения не подходит."
     },
     {
       "type": "translate",
       "source": "Мы собираемся переехать в следующем году.",
       "answer": "We are going to move next year.",
       "accept": ["We're going to move next year.", "Next year we are going to move.", "Next year we're going to move.", "We are going to move house next year.", "We're going to move house next year."],
-      "distractors": ["go", "moving", "in"],
+      "distractors": ["go", "moves", "in"],
       "explanation": "«Собираемся» — это план, значит, be going to. Перед next year предлог не нужен: «in next year» — типичная ошибка."
     },
     {
@@ -114,6 +114,8 @@
         "I'll call you this evening, I promise.",
         "I promise I will call you tonight.",
         "I promise I'll call you tonight.",
+        "I promise to call you tonight.",
+        "Tonight I will call you, I promise.",
         "I will phone you tonight, I promise.",
         "I'll phone you tonight, I promise."
       ],

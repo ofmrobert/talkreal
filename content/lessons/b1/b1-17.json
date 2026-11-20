@@ -77,7 +77,7 @@
       "source": "Тебе придётся заполнить эту форму.",
       "answer": "You will have to fill in this form.",
       "accept": ["You'll have to fill in this form.", "You will have to fill this form in.", "You'll have to fill this form in.", "You will have to fill out this form.", "You'll have to fill out this form.", "You will need to fill in this form.", "You'll need to fill in this form."],
-      "distractors": ["had", "having", "shall"],
+      "distractors": ["had", "having", "has"],
       "explanation": "«Придётся» — will have to: must после will стоять не может. По-русски фраза безличная («тебе придётся»), а по-английски нужно обычное подлежащее: you."
     },
     {

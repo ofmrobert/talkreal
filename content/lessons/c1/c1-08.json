@@ -111,7 +111,14 @@
         "She was supposed to speak first, but she turned up late.",
         "She was supposed to speak first but arrived late.",
         "She was meant to speak first, but she arrived late.",
-        "She was supposed to present first, but she arrived late."
+        "She was supposed to present first, but she arrived late.",
+        "She was supposed to speak first but was late.",
+        "She was supposed to speak first, but she came late.",
+        "She was meant to speak first, but she was late.",
+        "She was due to speak first, but she arrived late.",
+        "She was due to speak first, but she was late.",
+        "She was to speak first, but she arrived late.",
+        "She was to speak first, but she was late."
       ],
       "explanation": "Русское «должна была» в значении «так было запланировано, но не случилось» — это was supposed to. У must нет формы прошедшего времени, а порядковое first в роли наречия употребляется без артикля."
     },

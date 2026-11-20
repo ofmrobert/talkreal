@@ -185,7 +185,13 @@
         "It is reported that the talks were successful.",
         "It is reported that the negotiations were successful.",
         "The talks are reported to have gone well.",
-        "It is reported that the talks went well."
+        "It is reported that the talks went well.",
+        "The negotiations are reported to have gone well.",
+        "It is reported that the negotiations went well.",
+        "It's reported that the talks were successful.",
+        "It's reported that the negotiations were successful.",
+        "It's reported that the talks went well.",
+        "It's reported that the negotiations went well."
       ],
       "explanation": "Переговоры уже прошли, поэтому to have been, а не to be. Talks — множественное число, отсюда are reported."
     }

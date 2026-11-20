@@ -73,7 +73,7 @@
       "type": "translate",
       "source": "Мы завтракаем дома каждый день.",
       "answer": "We have breakfast at home every day.",
-      "accept": ["Every day we have breakfast at home.", "We eat breakfast at home every day."],
+      "accept": ["Every day we have breakfast at home.", "We have breakfast every day at home.", "We eat breakfast at home every day."],
       "distractors": ["has", "are", "the"],
       "explanation": "С we глагол без окончаний: have. Have breakfast — выражение без артикля, а every day удобнее всего ставить в конец предложения."
     },
@@ -148,7 +148,7 @@
       "prompt": "Найдите предложение без ошибки.",
       "options": ["I am go to work by bus.", "You start work at eight.", "We goes home at six.", "They every day get up early."],
       "answer": 1,
-      "explanation": "You start work at eight: глагол в начальной форме, порядок слов правильный. В остальных вариантах лишнее am, лишнее -s после we и every day не на своём месте — оно должно стоять в конце."
+      "explanation": "You start work at eight: глагол в начальной форме, порядок слов правильный. В остальных вариантах лишнее am, лишнее -s после we и every day не на своём месте — оно стоит в конце или в самом начале предложения."
     }
   ]
 }

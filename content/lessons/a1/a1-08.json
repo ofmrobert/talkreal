@@ -83,9 +83,9 @@
       "type": "translate",
       "source": "На столе стоит лампа.",
       "answer": "There is a lamp on the table.",
-      "accept": ["There's a lamp on the table.", "A lamp is on the table."],
-      "distractors": ["are", "in", "stands"],
-      "explanation": "Русское «стоит» здесь значит «находится», и по-английски это there is, а не stands. Предмет на поверхности — предлог on."
+      "accept": ["There's a lamp on the table.", "A lamp is on the table.", "On the table there is a lamp.", "On the table there's a lamp."],
+      "distractors": ["are", "in", "stand"],
+      "explanation": "Русское «стоит» здесь значит «находится», и по-английски это there is, а не stand. Предмет на поверхности — предлог on."
     },
     {
       "type": "gap",

@@ -102,7 +102,7 @@
       "source": "Ты когда-нибудь видел этот фильм?",
       "answer": "Have you ever seen this film?",
       "accept": ["Have you ever seen this movie?", "Have you ever watched this film?", "Have you ever watched this movie?"],
-      "distractors": ["saw", "did", "see"],
+      "distractors": ["saw", "has", "see"],
       "explanation": "Вопрос об опыте: Have you ever + третья форма. See → saw → seen: после have нужна именно seen, а не saw."
     },
     {

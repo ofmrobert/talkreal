@@ -150,8 +150,8 @@
     },
     {
       "type": "dictation",
-      "audio": "She enjoys travelling by train.",
-      "translation": "Ей нравится путешествовать на поезде."
+      "audio": "She enjoys reading on the train.",
+      "translation": "Ей нравится читать в поезде."
     },
     {
       "type": "choice",

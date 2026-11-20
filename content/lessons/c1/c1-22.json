@@ -91,7 +91,7 @@
         "The plane should land in twenty minutes.",
         "The plane is due to land in twenty minutes' time."
       ],
-      "distractors": ["after", "landing", "must", "of"],
+      "distractors": ["after", "landing", "at", "of"],
       "explanation": "«Должен» здесь — по расписанию, а не по обязанности, поэтому is due to, а не must. «Через двадцать минут» от настоящего момента — in twenty minutes; after требует точки отсчёта: after the meeting."
     },
     {

@@ -112,7 +112,7 @@
       "type": "type",
       "source": "Мне тоже это нравится.",
       "answer": "I like it too.",
-      "accept": ["I like this too.", "I like that too.", "I also like it.", "I also like this.", "I like it as well.", "I like this as well.", "I love it too."],
+      "accept": ["I like this too.", "I like that too.", "I also like it.", "I also like this.", "I also like that.", "I like it as well.", "I like this as well.", "I like that as well.","I love it too."],
       "explanation": "В утвердительном предложении «тоже» — too в конце. «Мне нравится» по-английски строится от I: I like it."
     },
     {

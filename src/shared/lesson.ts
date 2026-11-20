@@ -340,3 +340,12 @@ export function validateLesson(data: unknown): string[] {
   }
   return errors
 }
+
+/**
+ * For dictation: is this what was said? Things that cannot be heard do not count against the
+ * student: a hyphen, or whether two words are written together ("every day" / "everyday").
+ */
+export function soundsTheSame(given: string, said: string): boolean {
+  const heard = (text: string) => answerKey(text).replace(/[-–—\s]/g, '')
+  return isAccepted(given, { answer: said }) || heard(given) === heard(said)
+}

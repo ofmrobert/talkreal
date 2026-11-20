@@ -85,6 +85,8 @@
         "Even though it was raining, we decided to walk.",
         "Though it was raining, we decided to walk.",
         "Although it was raining, we decided to go on foot.",
+        "Even though it was raining, we decided to go on foot.",
+        "We decided to walk though it was raining.",
         "We decided to walk although it was raining.",
         "We decided to walk even though it was raining."
       ],

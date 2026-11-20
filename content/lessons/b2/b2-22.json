@@ -176,7 +176,8 @@
         "The train is due in ten minutes.",
         "The train is due to arrive in 10 minutes.",
         "The train is due in 10 minutes.",
-        "The train is supposed to arrive in ten minutes."
+        "The train is supposed to arrive in ten minutes.",
+        "The train is to arrive in ten minutes."
       ],
       "distractors": ["after", "arriving", "must"],
       "explanation": "«Должен» по расписанию — be due to, а не must: must звучало бы как уверенная догадка. «Через десять минут» — in ten minutes; after здесь было бы калькой с русского."

@@ -186,7 +186,17 @@
         "I hate to raise the issue, but we are over budget.",
         "I hate to raise this issue, but we are over budget.",
         "I hate to bring this up, but we're over budget.",
-        "I don't want to raise the issue, but we're over budget."
+        "I don't want to raise the issue, but we're over budget.",
+        "I don't want to raise this issue, but we're over budget.",
+        "I don't want to bring this up, but we're over budget.",
+        "I hate to raise the issue, but we've gone over budget.",
+        "I hate to raise this issue, but we've gone over budget.",
+        "I hate to bring this up, but we've gone over budget.",
+        "I don't want to raise this issue, but we've gone over budget.",
+        "I don't want to raise the issue, but we've gone over budget.",
+        "I hate to raise this issue, but we've exceeded the budget.",
+        "I don't want to raise this issue, but we've exceeded the budget.",
+        "I'd rather not raise this issue, but we're over budget."
       ],
       "explanation": "I hate to… — вежливый способ подвести к неприятной теме. «Выйти за рамки бюджета» — be over budget: без артикля и с предлогом over, а не above."
     }

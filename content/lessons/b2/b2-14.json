@@ -139,15 +139,19 @@
         "I'm going to hand in the report tomorrow.",
         "I'm going to hand the report in tomorrow.",
         "I'm handing in the report tomorrow.",
+        "I'm handing the report in tomorrow.",
+        "I'm going to hand in my report tomorrow.",
+        "I'm going to hand my report in tomorrow.",
         "I will submit the report tomorrow.",
+        "I will submit my report tomorrow.",
         "Tomorrow I will hand in the report."
       ],
       "explanation": "«Сдать работу» — hand in. Глагол разделяемый, поэтому существительное может стоять и после частицы, и перед ней: hand in the report или hand the report in."
     },
     {
       "type": "listen",
-      "audio": "Dana has taken on too much work, and now she keeps putting off her holiday.",
-      "question": "Что происходит с Даной?",
+      "audio": "My sister has taken on too much work, and now she keeps putting off her holiday.",
+      "question": "Что происходит с сестрой говорящего?",
       "options": [
         "Она взяла на себя слишком много работы и всё откладывает отпуск",
         "Она ушла в отпуск и отложила всю работу",

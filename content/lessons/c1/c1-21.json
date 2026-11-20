@@ -198,8 +198,8 @@
     },
     {
       "type": "dictation",
-      "audio": "He is rumoured to be writing a book.",
-      "translation": "По слухам, он пишет книгу."
+      "audio": "He is said to be writing a book.",
+      "translation": "Говорят, он пишет книгу."
     },
     {
       "type": "choice",

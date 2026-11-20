@@ -110,6 +110,7 @@
       "type": "type",
       "source": "Мой сын учится в Казани.",
       "answer": "My son studies in Kazan.",
+      "accept": ["My son is studying in Kazan.", "My son's studying in Kazan."],
       "explanation": "My son — это he, поэтому studies: y меняется на -ies. Перед названием города стоит in, а не at."
     },
     {

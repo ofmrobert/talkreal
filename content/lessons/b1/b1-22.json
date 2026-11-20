@@ -112,7 +112,7 @@
       "type": "type",
       "source": "У меня украли кошелёк.",
       "answer": "I had my wallet stolen.",
-      "accept": ["My wallet was stolen.", "My wallet has been stolen.", "I have had my wallet stolen.", "I've had my wallet stolen.", "Someone stole my wallet.", "Somebody stole my wallet.", "Someone has stolen my wallet.", "Somebody has stolen my wallet.", "My wallet got stolen.", "I had my purse stolen.", "My purse was stolen.", "My purse has been stolen.", "I've had my purse stolen.", "I have had my purse stolen.", "Someone stole my purse.", "Somebody stole my purse."],
+      "accept": ["My wallet was stolen.", "My wallet has been stolen.", "My wallet's been stolen.", "Someone's stolen my wallet.", "I have had my wallet stolen.", "I've had my wallet stolen.", "Someone stole my wallet.", "Somebody stole my wallet.", "Someone has stolen my wallet.", "Somebody has stolen my wallet.", "My wallet got stolen.", "I had my purse stolen.", "My purse was stolen.", "My purse has been stolen.", "I've had my purse stolen.", "I have had my purse stolen.", "Someone stole my purse.", "Somebody stole my purse."],
       "explanation": "Русское «у меня украли» передаётся конструкцией have + предмет + третья форма: I had my wallet stolen. Подойдёт и обычный пассив: My wallet was stolen. Дословный перевод с «at me» невозможен."
     },
     {

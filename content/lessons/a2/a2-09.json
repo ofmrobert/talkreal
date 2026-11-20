@@ -109,7 +109,7 @@
       "source": "Вчера мне пришлось работать допоздна.",
       "answer": "I had to work late yesterday.",
       "accept": ["Yesterday I had to work late.", "I had to work until late yesterday.", "I had to work late last night."],
-      "distractors": ["must", "have", "did"],
+      "distractors": ["must", "have", "worked"],
       "explanation": "У must нет прошедшей формы, поэтому «пришлось» — это had to. «Допоздна» — просто late, без предлога."
     },
     {

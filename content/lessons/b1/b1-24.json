@@ -77,7 +77,7 @@
       "source": "Хотя было поздно, мы продолжили работать.",
       "answer": "Although it was late, we continued working.",
       "accept": ["Even though it was late, we continued working.", "Though it was late, we continued working.", "Although it was late, we continued to work.", "Even though it was late, we continued to work.", "Although it was late, we kept working.", "Even though it was late, we kept working.", "Although it was late, we kept on working.", "Although it was late, we carried on working.", "Even though it was late, we carried on working.", "Although it was late, we went on working.", "We continued working although it was late.", "We continued working even though it was late.", "We kept working although it was late.", "We kept working even though it was late.", "We carried on working although it was late."],
-      "distractors": ["despite", "but", "of"],
+      "distractors": ["despite", "spite", "of"],
       "explanation": "«Хотя» + предложение — although it was late. Слово but во второй части не нужно: по-английски «хотя…, но…» не говорят. Despite здесь не подходит, потому что дальше идёт предложение, а не существительное."
     },
     {

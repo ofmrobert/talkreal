@@ -111,7 +111,7 @@
       "type": "type",
       "source": "Меня зовут Алексей.",
       "answer": "My name is Alexey.",
-      "accept": ["My name's Alexey.", "I am Alexey.", "I'm Alexey.", "My name is Alexei.", "My name is Aleksey.", "My name is Aleksei.", "My name's Alexei.", "I am Alexei.", "I'm Alexei."],
+      "accept": ["My name's Alexey.", "I am Alexey.", "I'm Alexey.", "My name is Alexei.", "My name is Aleksey.", "My name is Aleksei.", "My name's Alexei.", "I am Alexei.", "I'm Alexei.", "My name's Aleksey.", "My name's Aleksei.", "I am Aleksey.", "I am Aleksei."],
       "explanation": "Дословно: «Моё имя есть Алексей». Name — это «оно» (it), поэтому is; пропустить глагол и сказать «My name Alexey» — калька с русского."
     },
     {

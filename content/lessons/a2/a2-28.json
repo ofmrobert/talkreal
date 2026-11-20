@@ -112,7 +112,7 @@
       "type": "type",
       "source": "Он бросил курить.",
       "answer": "He gave up smoking.",
-      "accept": ["He has given up smoking.", "He's given up smoking.", "He stopped smoking.", "He has stopped smoking.", "He's stopped smoking.", "He quit smoking.", "He has quit smoking."],
+      "accept": ["He has given up smoking.", "He's given up smoking.", "He stopped smoking.", "He has stopped smoking.", "He's stopped smoking.", "He quit smoking.", "He has quit smoking.", "He's quit smoking."],
       "explanation": "«Бросить привычку» — give up, в прошедшем времени gave up. Глагол после него стоит с -ing: gave up smoking."
     },
     {

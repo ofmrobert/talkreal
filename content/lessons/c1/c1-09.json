@@ -120,7 +120,16 @@
         "Moreover, costs have increased by a third.",
         "Moreover, costs have gone up by a third.",
         "Furthermore, costs have risen by a third.",
-        "What is more, costs have risen by a third."
+        "What is more, costs have risen by a third.",
+        "What's more, costs have risen by a third.",
+        "Moreover, the costs rose by a third.",
+        "Moreover, costs increased by a third.",
+        "Moreover, costs went up by a third.",
+        "Moreover, costs have grown by a third.",
+        "Moreover, expenses have risen by a third.",
+        "Moreover, expenses rose by a third.",
+        "Moreover, costs have risen by one third.",
+        "Furthermore, costs rose by a third."
       ],
       "explanation": "Величина изменения вводится предлогом by: risen by a third; on — калька с русского «на треть». Расходы растут сами, поэтому rise (risen), а не переходный raise."
     },
@@ -184,7 +193,7 @@
         "The project was risky; however, the board approved it.",
         "The project was risky; nevertheless, the council approved it."
       ],
-      "distractors": ["moreover", "despite", "has", "consequently"],
+      "distractors": ["moreover", "despite", "approving", "consequently"],
       "explanation": "Nevertheless — формальное «тем не менее»; перед ним ставят точку или точку с запятой, после — запятую. Despite — предлог, за ним идёт существительное, а не предложение: despite the risk."
     }
   ]

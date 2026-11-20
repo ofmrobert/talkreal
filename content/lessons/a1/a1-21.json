@@ -136,7 +136,7 @@
       "type": "type",
       "source": "Дома есть сахар?",
       "answer": "Is there any sugar at home?",
-      "accept": ["Is there sugar at home?", "Is there any sugar in the house?", "Have we got any sugar at home?", "Do we have any sugar at home?"],
+      "accept": ["Is there sugar at home?", "Is there any sugar in the house?", "Have we got any sugar at home?", "Do we have any sugar at home?", "Have we got sugar at home?", "Do we have sugar at home?", "Have you got any sugar at home?", "Do you have any sugar at home?"],
       "explanation": "Сахар не считают, поэтому is there, а не are there. В вопросе перед ним стоит any, хотя по-русски отдельного слова здесь нет."
     },
     {

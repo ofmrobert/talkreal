@@ -146,7 +146,7 @@
       "type": "type",
       "source": "Это хорошая работа.",
       "answer": "It is a good job.",
-      "accept": ["It's a good job.", "This is a good job."],
+      "accept": ["It's a good job.", "This is a good job.", "That is a good job.", "That's a good job."],
       "explanation": "Артикль относится к существительному job, но ставится перед прилагательным: a good job. Good начинается с согласного звука, поэтому a, а не an."
     }
   ]

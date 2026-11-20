@@ -146,7 +146,7 @@
       "type": "translate",
       "source": "Мы ужинаем в восемь вечера.",
       "answer": "We have dinner at eight in the evening.",
-      "accept": ["We eat dinner at eight in the evening.", "We have dinner at eight o'clock in the evening.", "We have dinner at eight pm.", "We have dinner at 8 pm."],
+      "accept": ["We eat dinner at eight in the evening.", "We have dinner at eight o'clock in the evening.", "We have dinner at eight pm.", "We have dinner at 8 pm.", "We have dinner in the evening at eight.", "In the evening we have dinner at eight."],
       "distractors": ["on", "of", "night"],
       "explanation": "Перед временем — at, а «вечера» — это in the evening. Дословный перевод с of («eight of the evening») в английском не используется."
     }

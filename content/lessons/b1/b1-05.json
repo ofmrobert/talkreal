@@ -98,7 +98,7 @@
       "type": "type",
       "source": "Когда была основана эта компания?",
       "answer": "When was this company founded?",
-      "accept": ["When was the company founded?"],
+      "accept": ["When was the company founded?", "When was this company established?", "When was the company established?", "When was this company set up?"],
       "explanation": "Вопрос в пассиве начинается с was, did здесь не нужен. Не путайте: found — founded — founded значит «основывать», а found как форма глагола find — «нашёл»."
     },
     {

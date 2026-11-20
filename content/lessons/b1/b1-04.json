@@ -57,7 +57,7 @@
       "source": "Раньше мы жили в маленьком городе.",
       "answer": "We used to live in a small town.",
       "accept": ["We used to live in a small city.", "We used to live in a little town."],
-      "distractors": ["use", "living", "were"],
+      "distractors": ["use", "living", "are"],
       "explanation": "Русское «раньше жили» (а теперь нет) точнее всего передаёт used to live. После used to — начальная форма глагола, а не living; глагол be перед used здесь не нужен."
     },
     {
@@ -145,7 +145,7 @@
       "type": "type",
       "source": "Раньше я не любил кофе.",
       "answer": "I didn't use to like coffee.",
-      "accept": ["I did not use to like coffee.", "I never used to like coffee.", "I used not to like coffee."],
+      "accept": ["I did not use to like coffee.", "I never used to like coffee.", "I used not to like coffee.", "I didn't like coffee before."],
       "explanation": "В отрицании работает didn't, и прошедшее время уже выражено в нём, поэтому пишем use без -d. Отрицание через wasn't сюда не подходит: оно относится к конструкции «не был привыкшим»."
     }
   ]

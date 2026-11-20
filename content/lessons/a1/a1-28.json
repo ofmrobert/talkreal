@@ -92,9 +92,9 @@
       "type": "gap",
       "sentence": "___ we have lunch together?",
       "translation": "Пообедаем вместе?",
-      "options": ["Shall", "Let's", "How about", "Are"],
+      "options": ["Shall", "Let's", "Does", "Are"],
       "answer": 0,
-      "explanation": "Перед we в вопросе-предложении стоит shall: Shall we have lunch? После let's слово we не ставят, а после how about был бы глагол с -ing."
+      "explanation": "Перед we в вопросе-предложении стоит shall: Shall we have lunch? После let's слово we не ставят, а does и are с we have не сочетаются."
     },
     {
       "type": "speak",

@@ -136,8 +136,8 @@
       "source": "Мы устали ждать.",
       "answer": "We are tired of waiting.",
       "accept": ["We're tired of waiting."],
-      "distractors": ["tiring", "from", "wait"],
-      "explanation": "«Устать от чего-то, надоело» — tired of + глагол с -ing: tired of waiting. Предлог from — калька с русского «от», а tiring описывает то, что утомляет."
+      "distractors": ["tiring", "to", "wait"],
+      "explanation": "«Устать от чего-то, надоело» — tired of + глагол с -ing: tired of waiting. «Tired to wait» — калька с русского инфинитива «устали ждать», а tiring описывает то, что утомляет."
     },
     {
       "type": "dictation",

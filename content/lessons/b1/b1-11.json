@@ -112,7 +112,7 @@
       "type": "type",
       "source": "Подожди, я тебе помогу.",
       "answer": "Wait, I'll help you.",
-      "accept": ["Wait, I will help you.", "Hold on, I'll help you.", "Hold on, I will help you.", "Hang on, I'll help you.", "Hang on, I will help you.", "Wait, let me help you."],
+      "accept": ["Wait, I will help you.", "Hold on, I'll help you.", "Hold on, I will help you.", "Hang on, I'll help you.", "Hang on, I will help you.", "Wait, let me help you.", "Wait, I'll help.", "Wait a minute, I'll help you.", "Wait a moment, I'll help you."],
       "explanation": "Предложение помощи, возникшее прямо сейчас, — это will: I'll help you. «I help you» в настоящем времени — калька, которая по-английски не работает."
     },
     {
@@ -136,7 +136,7 @@
       "source": "Я собираюсь искать новую работу.",
       "answer": "I am going to look for a new job.",
       "accept": ["I'm going to look for a new job."],
-      "distractors": ["looking", "work", "go"],
+      "distractors": ["looking", "looks", "go"],
       "explanation": "«Собираюсь» — заранее принятое решение, то есть be going to + начальная форма: am going to look. «Работа» как место, должность — это job (исчисляемое), а не work."
     },
     {

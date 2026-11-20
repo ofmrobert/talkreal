@@ -112,16 +112,16 @@
       "type": "type",
       "source": "Он уже ушёл, когда я позвонил.",
       "answer": "He had already left when I called.",
-      "accept": ["He'd already left when I called.", "When I called, he had already left.", "When I called, he'd already left.", "He had already left when I phoned.", "He'd already left when I phoned.", "He had already left when I rang.", "He'd already left when I rang.", "He had already gone when I called.", "He'd already gone when I called.", "He had left already when I called."],
+      "accept": ["He'd already left when I called.", "When I called, he had already left.", "When I called, he'd already left.", "He had already left when I phoned.", "He'd already left when I phoned.", "He had already left when I rang.", "He'd already left when I rang.", "He had already gone when I called.", "He'd already gone when I called.", "He had left already when I called.", "When I phoned, he had already left.", "When I phoned, he'd already left.", "When I rang, he had already left.", "When I rang, he'd already left.", "When I called, he had already gone.", "When I called, he'd already gone.", "He had already left when I called him.", "He'd already left when I called him.", "He had left when I called.", "He'd left when I called."],
       "explanation": "Сначала он ушёл, потом я позвонил: более раннее действие — в Past Perfect (had left), более позднее — в Past Simple (called). Already стоит между had и left."
     },
     {
       "type": "gap",
       "sentence": "After she ___ the email, she noticed a mistake in it.",
       "translation": "После того как она отправила письмо, она заметила в нём ошибку.",
-      "options": ["had sent", "has sent", "was sent", "sends"],
+      "options": ["had sent", "has sent", "had send", "sends"],
       "answer": 0,
-      "explanation": "Письмо было отправлено до того, как она заметила ошибку, поэтому had sent. Has sent — настоящее время, а was sent — пассив: получилось бы, что отправили её саму."
+      "explanation": "Письмо было отправлено до того, как она заметила ошибку, поэтому had sent. Has sent и sends — настоящее время, а после had нужна третья форма глагола: sent, а не send."
     },
     {
       "type": "listen",

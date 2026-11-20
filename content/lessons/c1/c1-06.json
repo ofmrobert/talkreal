@@ -136,7 +136,15 @@
         "It seems there has been a misunderstanding.",
         "It appears that there has been a misunderstanding.",
         "It looks like there has been a misunderstanding.",
-        "There seems to have been some misunderstanding."
+        "There seems to have been some misunderstanding.",
+        "There appears to have been some misunderstanding.",
+        "It appears there has been a misunderstanding.",
+        "It seems that there was a misunderstanding.",
+        "It seems there was a misunderstanding.",
+        "It seems like there has been a misunderstanding.",
+        "It looks like there was a misunderstanding.",
+        "It looks as if there has been a misunderstanding.",
+        "It looks as though there has been a misunderstanding."
       ],
       "explanation": "Это вежливая формула для неловких ситуаций: говорящий никого не обвиняет. Seems согласуется с a misunderstanding в единственном числе, а перфектный инфинитив to have been показывает, что недоразумение уже случилось."
     },
@@ -173,7 +181,7 @@
       "translation": "Цены, вероятно, продолжат расти, хотя многое зависит от центрального банка.",
       "options": ["likely", "probably", "possibly", "maybe"],
       "answer": 0,
-      "explanation": "Конструкция be + to-инфинитив возможна только с прилагательным likely: are likely to rise. Probably и possibly — наречия, они стоят перед смысловым глаголом: will probably rise."
+      "explanation": "Из этих слов в конструкцию be + … + to-инфинитив встраивается только прилагательное likely: are likely to rise. Probably и possibly — наречия, они стоят перед смысловым глаголом: will probably rise."
     },
     {
       "type": "dictation",

@@ -84,7 +84,7 @@
       "type": "translate",
       "source": "Вдруг пошёл дождь.",
       "answer": "Suddenly it started to rain.",
-      "accept": ["Suddenly it started raining.", "Suddenly it began to rain.", "Suddenly it began raining.", "It suddenly started to rain.", "It suddenly started raining.", "It suddenly began to rain."],
+      "accept": ["Suddenly it started raining.", "Suddenly it began to rain.", "Suddenly it began raining.", "It suddenly started to rain.", "It suddenly started raining.", "It suddenly began to rain.", "It suddenly began raining."],
       "distractors": ["was", "starts", "while"],
       "explanation": "«Вдруг» — suddenly. Неожиданное событие стоит в Past Simple: it started. Подлежащее it обязательно, хотя по-русски его нет."
     },
@@ -136,7 +136,7 @@
       "source": "Пока мы ужинали, погас свет.",
       "answer": "While we were having dinner, the lights went out.",
       "accept": ["While we were having dinner, the light went out.", "While we were eating dinner, the lights went out.", "While we were having supper, the lights went out.", "The lights went out while we were having dinner.", "The light went out while we were having dinner."],
-      "distractors": ["had", "during", "go"],
+      "distractors": ["has", "during", "go"],
       "explanation": "После while — длительный фон в Past Continuous: were having dinner. «Погас» — короткое событие в Past Simple: went out."
     },
     {

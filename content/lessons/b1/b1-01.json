@@ -145,7 +145,7 @@
       "type": "type",
       "source": "Он недавно сменил работу.",
       "answer": "He has recently changed his job.",
-      "accept": ["He's recently changed his job.", "He has changed his job recently.", "He's changed his job recently.", "He recently changed his job.", "He has recently changed jobs.", "He recently changed jobs."],
+      "accept": ["He's recently changed his job.", "He has changed his job recently.", "He's changed his job recently.", "He recently changed his job.", "He has recently changed jobs.", "He recently changed jobs.", "He's recently changed jobs.", "He has changed jobs recently.", "He's changed jobs recently.", "He changed his job recently.", "He changed jobs recently."],
       "explanation": "Recently говорит о недавнем событии с результатом в настоящем, поэтому естественен Present Perfect; с he нужен has, а не have. «Работа» как должность — job, а не work."
     }
   ]

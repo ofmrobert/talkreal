@@ -132,7 +132,7 @@
       "type": "type",
       "source": "Я бы уволился, если бы мог себе это позволить.",
       "answer": "I would quit if I could afford it.",
-      "accept": ["I'd quit if I could afford it.", "If I could afford it, I would quit.", "If I could afford it, I'd quit.", "I would quit my job if I could afford it.", "I'd quit my job if I could afford it."],
+      "accept": ["I'd quit if I could afford it.", "If I could afford it, I would quit.", "If I could afford it, I'd quit.", "I would quit my job if I could afford it.", "I'd quit my job if I could afford it.", "I would quit if I could afford to.", "If I could afford to, I would quit.", "I would resign if I could afford it.", "I would resign if I could afford to."],
       "explanation": "Говорящий уволиться не может — это второй тип: would quit, а после if — прошедшая форма could. После could глагол стоит в начальной форме: afford, без -ed."
     },
     {

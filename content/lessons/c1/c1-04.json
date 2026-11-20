@@ -173,7 +173,16 @@
         "I will sign provided that this clause is removed.",
         "I will sign provided this clause is removed.",
         "I will sign as long as this clause is removed.",
-        "I will sign on condition that this clause be removed."
+        "I will sign on condition that this clause be removed.",
+        "I will sign on condition this clause is removed.",
+        "I will sign on the condition this clause is removed.",
+        "I will sign providing that this clause is removed.",
+        "I will sign providing this clause is removed.",
+        "I will sign so long as this clause is removed.",
+        "I will sign it on condition that this clause is removed.",
+        "I will sign it provided that this clause is removed.",
+        "I will sign on condition that this clause is deleted.",
+        "I will sign on condition that this clause is taken out."
       ],
       "explanation": "После on condition that, как и после if, будущее время не ставится: is removed, а не will be removed. Пункт договора — clause; point — это «довод» или «момент», но не часть юридического текста."
     },

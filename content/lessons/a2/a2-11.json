@@ -68,7 +68,7 @@
       "type": "gap",
       "sentence": "Be careful when you walk ___ the road.",
       "translation": "Будьте осторожны, когда переходите дорогу.",
-      "options": ["across", "through", "into", "out of"],
+      "options": ["across", "through", "between", "out of"],
       "answer": 0,
       "explanation": "Дорогу переходят с одной стороны на другую по поверхности — это across. Through подошло бы, если бы вы двигались внутри чего-то, например через туннель."
     },
@@ -132,7 +132,7 @@
       "type": "gap",
       "sentence": "It was dark when we drove ___ the tunnel.",
       "translation": "Было темно, когда мы ехали через туннель.",
-      "options": ["through", "across", "along", "out"],
+      "options": ["through", "across", "on", "out"],
       "answer": 0,
       "explanation": "Туннель окружает вас со всех сторон, вы движетесь внутри него — это through. Across здесь — типичная ошибка: оно только про поверхность, как у дороги или моста."
     },
@@ -140,7 +140,7 @@
       "type": "translate",
       "source": "Пройдите мимо аптеки и поверните налево.",
       "answer": "Go past the pharmacy and turn left.",
-      "accept": ["Walk past the pharmacy and turn left.", "Go past the chemist's and turn left."],
+      "accept": ["Walk past the pharmacy and turn left.", "Go past the chemist's and turn left.", "Pass the pharmacy and turn left."],
       "distractors": ["pass", "across", "through"],
       "explanation": "«Мимо» — past: вы проходите рядом с аптекой и идёте дальше. Pass — это глагол, после go он не ставится."
     },

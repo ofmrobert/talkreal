@@ -79,7 +79,7 @@
     },
     {
       "type": "translate",
-      "source": "Подводя итог, проект был успешным.",
+      "source": "Подводя итог: проект был успешным.",
       "answer": "To sum up, the project was a success.",
       "accept": [
         "To sum up, the project was successful.",
@@ -182,7 +182,7 @@
         "Let's go on to the next point.",
         "Let's go on to the next question."
       ],
-      "distractors": ["cross", "following", "at", "moving"],
+      "distractors": ["cross", "further", "at", "moving"],
       "explanation": "«Перейти к» в выступлении — move on to: on показывает движение дальше, to — направление. После let's глагол стоит в начальной форме, без -ing."
     },
     {

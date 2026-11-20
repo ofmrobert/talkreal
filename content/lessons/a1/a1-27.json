@@ -92,7 +92,7 @@
       "type": "gap",
       "sentence": "She ___ to get up at six every day.",
       "translation": "Ей приходится вставать в шесть каждый день.",
-      "options": ["have", "has", "is", "having"],
+      "options": ["have", "has", "are", "having"],
       "answer": 1,
       "explanation": "С she — has to, как у обычного глагола have: I have, she has. Русское «ей» в английском становится подлежащим she."
     },

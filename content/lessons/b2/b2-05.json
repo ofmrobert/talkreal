@@ -78,7 +78,11 @@
       "accept": [
         "I wish I could afford this apartment.",
         "If only I could afford this flat.",
-        "If only I could afford this apartment."
+        "If only I could afford this apartment.",
+        "It's a pity I can't afford this flat.",
+        "It's a pity that I can't afford this flat.",
+        "It is a pity I can't afford this flat.",
+        "It is a pity that I can't afford this flat."
       ],
       "explanation": "Русское «жаль, что не могу» превращается в I wish I could: отрицание исчезает, а can сдвигается в прошедшее время. После afford слово myself не нужно — «себе» уже заложено в самом глаголе."
     },
@@ -150,7 +154,7 @@
       "question": "Что вы услышали?",
       "options": [
         "If only they'd told us about the price increase in advance.",
-        "If only they told us about the price increase in advance.",
+        "If only they have told us about the price increase in advance.",
         "If only they'd tell us about the price increase in advance.",
         "If only they tell us about the price increase in advance."
       ],

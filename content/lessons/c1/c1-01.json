@@ -135,7 +135,17 @@
         "Rarely do we receive such detailed feedback from our clients.",
         "Rarely do we receive such detailed feedback from clients.",
         "Seldom do we get such detailed feedback from our clients.",
-        "Seldom do we receive such detailed feedback from our customers."
+        "Seldom do we receive such detailed feedback from our customers.",
+        "Seldom do we receive such detailed feedback from customers.",
+        "Seldom do we get such detailed feedback from clients.",
+        "Seldom do we get such detailed feedback from our customers.",
+        "Seldom do we get such detailed feedback from customers.",
+        "Rarely do we receive such detailed feedback from our customers.",
+        "Rarely do we receive such detailed feedback from customers.",
+        "Rarely do we get such detailed feedback from our clients.",
+        "Rarely do we get such detailed feedback from clients.",
+        "Rarely do we get such detailed feedback from our customers.",
+        "Rarely do we get such detailed feedback from customers."
       ],
       "explanation": "В Present Simple для инверсии нужен помощник do: seldom do we receive. Feedback — неисчисляемое существительное: у него нет множественного числа и перед ним не ставится артикль a."
     },
@@ -174,8 +184,8 @@
     },
     {
       "type": "dictation",
-      "audio": "On no account should passwords be sent by email.",
-      "translation": "Пароли ни в коем случае нельзя отправлять по электронной почте."
+      "audio": "On no account should passwords be written down.",
+      "translation": "Пароли ни в коем случае нельзя записывать."
     },
     {
       "type": "translate",

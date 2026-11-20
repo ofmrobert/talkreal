@@ -64,7 +64,7 @@
       "type": "translate",
       "source": "Она купила билеты два дня назад.",
       "answer": "She bought the tickets two days ago.",
-      "accept": ["She bought tickets two days ago.", "She bought the tickets 2 days ago.", "Two days ago she bought the tickets."],
+      "accept": ["She bought tickets two days ago.", "She bought the tickets 2 days ago.", "Two days ago she bought the tickets.", "Two days ago she bought tickets."],
       "distractors": ["buyed", "buy", "before"],
       "explanation": "Buy → bought: формы «buyed» не существует. «Назад» — это ago, и оно стоит после отрезка времени: two days ago."
     },
@@ -104,7 +104,7 @@
       "source": "Мы хорошо провели время в Стамбуле.",
       "answer": "We had a good time in Istanbul.",
       "accept": ["We had a great time in Istanbul.", "We had a nice time in Istanbul.", "We had a lovely time in Istanbul."],
-      "distractors": ["spent", "have", "did"],
+      "distractors": ["spent", "have", "well"],
       "explanation": "«Хорошо провести время» — устойчивое выражение have a good time, в прошлом had a good time. Дословное «spent a good time» звучит неестественно."
     },
     {

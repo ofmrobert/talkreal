@@ -188,7 +188,10 @@
         "She denied getting our email last week.",
         "She denied receiving our letter last week.",
         "She denied that she had received our email last week.",
-        "She denied that she received our email last week."
+        "She denied that she received our email last week.",
+        "She denied having received our letter last week.",
+        "She denied getting our letter last week.",
+        "She denied that she had received our letter last week."
       ],
       "explanation": "Deny + -ing: «отрицала, что получила» — denied receiving. Refused to receive означало бы «отказалась получать», то есть совсем другое."
     }

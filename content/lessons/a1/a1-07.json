@@ -108,7 +108,7 @@
       "type": "translate",
       "source": "Мы не работаем в выходные.",
       "answer": "We don't work at the weekend.",
-      "accept": ["We do not work at the weekend.", "We don't work on the weekend.", "We do not work on the weekend.", "We don't work at weekends.", "We don't work on weekends.", "We don't work at the weekends."],
+      "accept": ["We do not work at the weekend.", "We don't work on the weekend.", "We do not work on the weekend.", "We don't work at weekends.", "We don't work on weekends.", "We don't work at the weekends.", "At the weekend we don't work."],
       "distractors": ["aren't", "doesn't", "in"],
       "explanation": "С we отрицание — don't; aren't не подходит, потому что work — глагол действия. «В выходные» — at the weekend (в американском английском on the weekend), но не in."
     },
@@ -144,7 +144,7 @@
       "type": "translate",
       "source": "Он не пьёт кофе вечером.",
       "answer": "He doesn't drink coffee in the evening.",
-      "accept": ["He does not drink coffee in the evening.", "He doesn't drink coffee in the evenings.", "He does not drink coffee in the evenings."],
+      "accept": ["He does not drink coffee in the evening.", "He doesn't drink coffee in the evenings.", "He does not drink coffee in the evenings.", "In the evening he doesn't drink coffee."],
       "distractors": ["don't", "drinks", "isn't"],
       "explanation": "С he отрицание — doesn't, а глагол после него без -s: drink. Вариант «doesn't drinks» — частая ошибка: окончание ставят дважды."
     }

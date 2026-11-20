@@ -77,7 +77,7 @@
       "source": "Ни один из моих друзей не курит.",
       "answer": "None of my friends smoke.",
       "accept": ["None of my friends smokes."],
-      "distractors": ["don't", "nobody", "not"],
+      "distractors": ["doesn't", "nobody", "not"],
       "explanation": "None уже содержит отрицание, поэтому глагол утвердительный: none of my friends smoke. Русское двойное отрицание («ни один… не») в английском превращается в одно."
     },
     {

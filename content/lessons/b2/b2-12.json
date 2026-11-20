@@ -136,7 +136,8 @@
         "It was such a great idea!",
         "That was such a good idea!",
         "That was such a great idea!",
-        "This was such a good idea!"
+        "This was such a good idea!",
+        "This was such a great idea!"
       ],
       "explanation": "Перед прилагательным с существительным нужно such, и артикль стоит после него: such a good idea. «So good idea» и «a such good idea» — типичные ошибки."
     },
@@ -183,13 +184,13 @@
       "type": "choice",
       "prompt": "Какое предложение верно?",
       "options": [
-        "They are such friendly people.",
-        "They are so friendly people.",
-        "They are such a friendly people.",
-        "They are a such friendly people."
+        "They are such friendly neighbours.",
+        "They are so friendly neighbours.",
+        "They are such a friendly neighbours.",
+        "They are a such friendly neighbours."
       ],
       "answer": 0,
-      "explanation": "Перед прилагательным с существительным нужно such, а не so. People — множественное число, поэтому артикль a не ставится: such friendly people."
+      "explanation": "Перед прилагательным с существительным нужно such, а не so. Neighbours — множественное число, поэтому артикль a не ставится: such friendly neighbours."
     }
   ]
 }

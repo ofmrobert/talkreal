@@ -7,7 +7,7 @@
   "theory": [
     {
       "title": "Короткие прилагательные: -er и the -est",
-      "body": "К коротким прилагательным (один слог) добавляем -er для сравнения и the + -est для высшей степени: cheap → cheaper → the cheapest. После краткой гласной согласная удваивается: big → bigger. Конечная -y меняется на -i: easy → easier → the easiest.",
+      "body": "К коротким прилагательным (один слог) добавляем -er для сравнения и the + -est для высшей степени: cheap → cheaper → the cheapest. После краткой гласной согласная удваивается: big → bigger. Так же ведут себя двусложные слова на -y, только y меняется на i: easy → easier → the easiest.",
       "examples": [
         { "en": "The metro is faster than the bus.", "ru": "Метро быстрее автобуса." },
         { "en": "This is the cheapest hotel in the city.", "ru": "Это самый дешёвый отель в городе." },
@@ -17,7 +17,7 @@
     },
     {
       "title": "Длинные прилагательные: more и the most",
-      "body": "С прилагательными из двух и более слогов (expensive, comfortable, interesting, crowded) используем more и the most, а само слово не меняется. Нельзя соединять оба способа: «more cheaper» и «the most cheapest» — ошибки.",
+      "body": "С остальными прилагательными из двух и более слогов (expensive, comfortable, interesting, crowded) используем more и the most, а само слово не меняется. Нельзя соединять оба способа: «more cheaper» и «the most cheapest» — ошибки.",
       "examples": [
         { "en": "Taxis are more expensive than buses.", "ru": "Такси дороже автобусов." },
         { "en": "It was the most boring meeting of the year.", "ru": "Это было самое скучное совещание года." }
@@ -140,7 +140,7 @@
       "type": "type",
       "source": "Мой брат старше меня.",
       "answer": "My brother is older than me.",
-      "accept": ["My brother is older than I am.", "My brother is older than I.", "My brother's older than me."],
+      "accept": ["My brother is older than I am.", "My brother is older than I.", "My brother's older than me.", "My brother's older than I am."],
       "explanation": "Old — короткое слово: older, без more. В русском можно обойтись без «чем» («старше меня»), но в английском than обязательно."
     },
     {

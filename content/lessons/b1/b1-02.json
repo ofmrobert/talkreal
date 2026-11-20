@@ -145,7 +145,7 @@
       "type": "type",
       "source": "В последнее время я плохо сплю.",
       "answer": "I haven't been sleeping well lately.",
-      "accept": ["I have not been sleeping well lately.", "Lately I haven't been sleeping well.", "I've been sleeping badly lately.", "I have been sleeping badly lately.", "I haven't been sleeping well recently."],
+      "accept": ["I have not been sleeping well lately.", "Lately I haven't been sleeping well.", "I've been sleeping badly lately.", "I have been sleeping badly lately.", "I haven't been sleeping well recently.", "Recently I haven't been sleeping well.", "Lately I've been sleeping badly.", "I've been sleeping badly recently.", "I've been sleeping poorly lately.", "I haven't slept well lately.", "I haven't slept well recently."],
       "explanation": "Lately описывает период, который тянется до настоящего момента, поэтому нужен Present Perfect Continuous, а не Present Simple. «Плохо спать» естественнее передать как not sleep well; good здесь не подходит, потому что нужно наречие."
     }
   ]

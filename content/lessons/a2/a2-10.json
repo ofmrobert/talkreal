@@ -69,9 +69,11 @@
         "We were waiting for the bus when it began to rain.",
         "We were waiting for the bus when it began raining.",
         "We were waiting for the bus when the rain started.",
-        "We were waiting for a bus when the rain started."
+        "We were waiting for a bus when the rain started.",
+        "When it started raining, we were waiting for the bus.",
+        "It started raining when we were waiting for the bus."
       ],
-      "distractors": ["waited", "was", "while"],
+      "distractors": ["waited", "was", "wait"],
       "explanation": "Ожидание — длительный фон (were waiting), начало дождя — короткое событие (started). Не забудьте предлог: wait for the bus, а не «wait the bus»."
     },
     {

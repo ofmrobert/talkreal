@@ -132,7 +132,7 @@
       "type": "translate",
       "source": "Я люблю кофе, но не люблю чай.",
       "answer": "I like coffee, but I don't like tea.",
-      "accept": ["I like coffee but I do not like tea.", "I love coffee, but I don't like tea.", "I love coffee but I do not like tea.", "I like coffee, but I don't love tea.", "I like coffee, but not tea."],
+      "accept": ["I like coffee but I do not like tea.", "I like coffee but don't like tea.","I love coffee, but I don't like tea.", "I love coffee but I do not like tea.", "I like coffee, but I don't love tea.", "I like coffee, but not tea."],
       "distractors": ["the", "a", "am"],
       "explanation": "Речь о кофе и чае вообще, как о напитках, поэтому артикль не нужен. The coffee означало бы конкретный кофе, например тот, что стоит на столе."
     },

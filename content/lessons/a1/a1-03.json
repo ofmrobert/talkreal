@@ -135,13 +135,13 @@
       "type": "type",
       "source": "Эти ключи — твои?",
       "answer": "Are these your keys?",
-      "accept": ["Are those your keys?", "Are these keys yours?"],
+      "accept": ["Are those your keys?", "Are these keys yours?", "Are those keys yours?"],
       "explanation": "В вопросе are выходит на первое место: Are these…? Ключей несколько, поэтому these, are и keys с окончанием -s."
     },
     {
       "type": "dictation",
-      "audio": "Those women are my colleagues.",
-      "translation": "Те женщины — мои коллеги."
+      "audio": "Those women are my friends.",
+      "translation": "Те женщины — мои подруги."
     },
     {
       "type": "choice",

@@ -83,7 +83,9 @@
         "I'll have finished this report by Friday.",
         "By Friday I will have finished this report.",
         "By Friday I'll have finished this report.",
-        "I will have completed this report by Friday."
+        "I will have completed this report by Friday.",
+        "I will finish this report by Friday.",
+        "By Friday I will finish this report."
       ],
       "explanation": "Результат к сроку в будущем — will have finished. «К пятнице» — by Friday; until Friday означало бы, что действие продолжается вплоть до пятницы."
     },

@@ -92,9 +92,9 @@
       "type": "gap",
       "sentence": "Is there ___ interesting on TV tonight?",
       "translation": "Сегодня вечером по телевизору есть что-нибудь интересное?",
-      "options": ["anything", "anyone", "anywhere", "any"],
+      "options": ["anything", "everything", "anywhere", "any"],
       "answer": 0,
-      "explanation": "Речь о вещи, а не о человеке или месте, поэтому anything. Просто any не может стоять без существительного перед прилагательным."
+      "explanation": "Речь о вещи, а не о месте, поэтому anything, а everything значит «всё» и в такой вопрос не подходит. Просто any не может стоять без существительного перед прилагательным."
     },
     {
       "type": "choice",

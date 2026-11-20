@@ -100,7 +100,8 @@
         "I arrived early in order to get a good seat.",
         "I arrived early to get a good seat.",
         "I came earlier in order to get a good seat.",
-        "In order to get a good seat, I came early."
+        "In order to get a good seat, I came early.",
+        "To get a good seat, I came early."
       ],
       "distractors": ["for", "that", "getting"],
       "explanation": "Цель того же человека выражается инфинитивом: in order to get. For перед инфинитивом — калька с русского «для того чтобы», а после to нужна начальная форма, не getting."

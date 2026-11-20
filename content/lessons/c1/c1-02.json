@@ -79,7 +79,7 @@
     },
     {
       "type": "type",
-      "source": "Мне нужно больше времени, а не больше денег.",
+      "source": "Что мне нужно, так это больше времени, а не больше денег.",
       "answer": "What I need is more time, not more money.",
       "accept": [
         "What I need is more time rather than more money.",
@@ -126,7 +126,7 @@
         "It was Olga who pointed out the mistake in the agreement.",
         "It was Olga who pointed the mistake out in the contract."
       ],
-      "distractors": ["what", "which", "is", "has"],
+      "distractors": ["what", "which", "whom", "has"],
       "explanation": "Русское «именно» передаётся конструкцией It was… who. Глагол to be согласуется по времени с остальным предложением: действие в прошлом, значит was, а не is."
     },
     {

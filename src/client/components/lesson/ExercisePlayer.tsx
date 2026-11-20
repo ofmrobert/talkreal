@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { isAccepted, toTiles, type Exercise } from '../../../shared/lesson'
+import { isAccepted, soundsTheSame, toTiles, type Exercise } from '../../../shared/lesson'
 import { api } from '../../lib/api'
 import { canRecognize } from '../../lib/recognition'
 import { shuffle } from '../../lib/shuffle'
@@ -138,7 +138,7 @@ export default function ExercisePlayer({ exercises, onFinish, onExit, exitTitle,
         break
       case 'dictation': {
         const explanation = [exercise.translation, exercise.explanation].filter(Boolean).join(' ')
-        record(isAccepted(typed, { answer: exercise.audio }), { answer: exercise.audio, explanation, speakText })
+        record(soundsTheSame(typed, exercise.audio), { answer: exercise.audio, explanation, speakText })
         break
       }
       case 'choice':

@@ -97,7 +97,7 @@
       "translation": "По пути в Милан мы пролетали над Альпами.",
       "options": ["the Alps", "Alps", "an Alps", "the Alp"],
       "answer": 0,
-      "explanation": "Горные цепи всегда употребляются с the и во множественном числе: the Alps, the Urals, the Andes. Отдельная вершина — без артикля: Mont Blanc, Mount Elbrus."
+      "explanation": "Горные цепи употребляются с the и обычно стоят во множественном числе: the Alps, the Urals, the Andes. Отдельная вершина — без артикля: Mont Blanc, Mount Elbrus."
     },
     {
       "type": "match",
@@ -185,7 +185,9 @@
         "We have to protect the environment for future generations.",
         "We should protect the environment for future generations.",
         "We must protect the environment for the sake of future generations.",
-        "We need to protect the environment for future generations."
+        "We need to protect the environment for future generations.",
+        "We have to protect the environment for the sake of future generations.",
+        "We should protect the environment for the sake of future generations."
       ],
       "explanation": "Environment в значении «природная среда» всегда с the: она у нас одна. А future generations — обобщение во множественном числе, поэтому без артикля."
     }

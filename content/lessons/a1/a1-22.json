@@ -136,7 +136,7 @@
       "type": "type",
       "source": "Как зовут твоего брата?",
       "answer": "What is your brother's name?",
-      "accept": ["What's your brother's name?", "What is the name of your brother?", "What's the name of your brother?"],
+      "accept": ["What's your brother's name?", "What is the name of your brother?", "What's the name of your brother?", "What is your brother called?", "What's your brother called?"],
       "explanation": "По-английски спрашивают «Какое имя твоего брата?»: your brother's name. Вопрос начинается с what, а не с how, и без 's здесь не обойтись."
     },
     {
