@@ -4,6 +4,7 @@ import { serveStatic } from '@hono/node-server/serve-static'
 import { dbStatus, safeConnectionString } from './db/client'
 import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
+import { lessonCount } from './content/lessons'
 import { adminRoutes } from './routes/admin'
 import { aiRoutes } from './routes/ai'
 import { authRoutes } from './routes/auth'
@@ -70,7 +71,7 @@ function databaseErrorSafe(): string | null {
 }
 
 app.get('/api/health', (c) =>
-  c.json({ ok: true, time: new Date().toISOString(), admins: env.adminEmails.length, database: dbStatus.kind, databaseProblem: databaseProblem(), databaseError: databaseErrorSafe(), databaseUrlShape: dbStatus.kind === 'postgresql' ? undefined : env.databaseUrlShape }),
+  c.json({ ok: true, time: new Date().toISOString(), admins: env.adminEmails.length, lessons: lessonCount, database: dbStatus.kind, databaseProblem: databaseProblem(), databaseError: databaseErrorSafe(), databaseUrlShape: dbStatus.kind === 'postgresql' ? undefined : env.databaseUrlShape }),
 )
 app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)

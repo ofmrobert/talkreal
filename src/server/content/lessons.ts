@@ -40,6 +40,9 @@ function loadLessons(): Lesson[] {
 const all = loadLessons()
 const byId = new Map(all.map((l) => [l.id, l]))
 
+/** How many lessons the server has loaded: shown by the health check, to confirm a release. */
+export const lessonCount = all.length
+
 /** A level's lessons in course order. */
 export function lessonsFor(level: Level): Lesson[] {
   return all.filter((l) => l.level === level).sort((a, b) => a.order - b.order)
