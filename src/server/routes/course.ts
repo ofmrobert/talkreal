@@ -1,6 +1,7 @@
 import { and, eq, gte } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { isLevel } from '../../shared/levels'
+import { GOOD_LESSON_ACCURACY } from '../../shared/play'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { DAILY_XP_GOAL, limitsFor, planOf } from '../billing/plans'
 import { lessonById } from '../content/lessons'
@@ -160,7 +161,7 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
     }
 
     await scheduleAfterLesson(tx, user.id, lesson, missed ?? [], today)
-    return recordActivity(tx, user, { today, timezone, xp: xpEarned, lessons: 1 })
+    return recordActivity(tx, user, { today, timezone, xp: xpEarned, lessons: 1, goodLessons: accuracy >= GOOD_LESSON_ACCURACY ? 1 : 0 })
   })
 
   const newAchievements = await awardAchievements(user.id).catch((err) => {

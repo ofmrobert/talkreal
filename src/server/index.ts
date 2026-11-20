@@ -12,6 +12,7 @@ import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
 import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
+import { playRoutes } from './routes/play'
 import { profileRoutes } from './routes/profile'
 import { reminderRoutes } from './routes/reminders'
 import { reviewRoutes } from './routes/review'
@@ -80,6 +81,7 @@ app.route('/api/admin', adminRoutes)
 app.route('/api/track', trackRoutes)
 app.route('/api/reminders', reminderRoutes)
 app.route('/api', reviewRoutes)
+app.route('/api', playRoutes)
 app.route('/api', aiRoutes)
 app.route('/api', testRoutes)
 app.route('/api', courseRoutes)

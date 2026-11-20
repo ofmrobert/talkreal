@@ -8,6 +8,7 @@ import Chat from './screens/Chat'
 import EditProfile from './screens/EditProfile'
 import Chai from './components/Chai'
 import Home from './screens/Home'
+import League from './screens/League'
 import Lesson from './screens/Lesson'
 import Login from './screens/Login'
 import Onboarding from './screens/Onboarding'
@@ -105,6 +106,7 @@ export default function App() {
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/talk" element={<Talk />} />
+                <Route path="/league" element={<League />} />
                 <Route path="/profile" element={<Profile />} />
               </Route>
             </Route>

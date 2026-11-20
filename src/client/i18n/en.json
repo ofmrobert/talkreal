@@ -8,7 +8,8 @@
   "tabs": {
     "learn": "Lessons",
     "talk": "Talk",
-    "profile": "Profile"
+    "profile": "Profile",
+    "league": "League"
   },
   "onboarding": {
     "hello": {
@@ -609,5 +610,47 @@
     "visible": "Your profile will be visible to other students.",
     "hidden": "Your profile is hidden from others for now.",
     "change": "Change"
+  },
+  "quests": {
+    "title": "Today's quests",
+    "chest": "A chest for all quests: +{{xp}} XP",
+    "chestOpened": "All done!",
+    "xp_one": "Earn {{count}} XP",
+    "xp_other": "Earn {{count}} XP",
+    "lessons_one": "Finish {{count}} lesson",
+    "lessons_other": "Finish {{count}} lessons",
+    "good_one": "Finish a lesson with 90% or more",
+    "good_other": "Finish {{count}} lessons with 90% or more",
+    "review_one": "Do a review session",
+    "review_other": "Do {{count}} review sessions",
+    "chat_one": "Write {{count}} message to a teacher",
+    "chat_other": "Write {{count}} messages to a teacher",
+    "talk_one": "Talk to a teacher for {{count}} minute",
+    "talk_other": "Talk to a teacher for {{count}} minutes"
+  },
+  "league": {
+    "title": "Weekly league",
+    "tiers": {
+      "0": "Bronze League",
+      "1": "Silver League",
+      "2": "Gold League",
+      "3": "Sapphire League",
+      "4": "Royal League"
+    },
+    "daysLeft_one": "{{count}} day left this week",
+    "daysLeft_other": "{{count}} days left this week",
+    "joinTitle": "You're not in the league yet this week",
+    "joinText": "Earn your first XP: finish a lesson or a review, and you will join a group with other students.",
+    "joinButton": "Go to lessons",
+    "youUp": "You're in place {{rank}} and moving up a league. Hold on until Sunday!",
+    "youDown": "You're in place {{rank}}, in the drop zone. A little XP and you stay in the league.",
+    "youStay_one": "You're in place {{rank}} of {{count}}.",
+    "youStay_other": "You're in place {{rank}} of {{count}}.",
+    "zoneUp": "Above the line: up to the next league",
+    "zoneDown": "Below the line: back to the league below",
+    "student": "Student",
+    "you": "you",
+    "rules": "Places go by XP earned in the week, Monday to Sunday (Moscow time). The top {{up}} move up, the bottom {{down}} move down.",
+    "privacy": "Other students see your name and photo only if you allowed your profile to be shown. Otherwise you appear in the table as \"Student\" with a number."
   }
 }

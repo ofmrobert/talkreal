@@ -167,6 +167,9 @@ export const dailyUsage = pgTable(
     xp: integer('xp').notNull().default(0),
     voiceSeconds: integer('voice_seconds').notNull().default(0),
     textMessages: integer('text_messages').notNull().default(0),
+    /** Review sessions finished, and lessons finished with a high result: counted for the daily quests. */
+    reviewsDone: integer('reviews_done').notNull().default(0),
+    goodLessons: integer('good_lessons').notNull().default(0),
   },
   (t) => [primaryKey({ columns: [t.userId, t.day] })],
 )
@@ -320,4 +323,37 @@ export const adminActions = pgTable(
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [index('admin_actions_time_idx').on(t.createdAt)],
+)
+
+/** The three quests a student was given for one day, and which of them they have collected. */
+export const dailyQuests = pgTable(
+  'daily_quests',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    day: date('day').notNull(),
+    /** Quest ids, see src/shared/play.ts. */
+    quests: jsonb('quests').$type<string[]>().notNull(),
+    claimed: jsonb('claimed').$type<string[]>().notNull(),
+    /** XP given for quests that day, so it is not counted towards the "earn XP" quest itself. */
+    bonusXp: integer('bonus_xp').notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.day] })],
+)
+
+/** Which league and group a student is in for one week (the week is named by its Monday). */
+export const leagueMembers = pgTable(
+  'league_members',
+  {
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    week: date('week').notNull(),
+    /** 0 = the first league; see LEAGUE_TIERS in src/shared/play.ts. */
+    tier: integer('tier').notNull(),
+    groupNo: integer('group_no').notNull(),
+    joinedAt: timestamptz('joined_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.week] }), index('league_group_idx').on(t.week, t.tier, t.groupNo)],
 )

@@ -5,6 +5,7 @@ import Chai from '../components/Chai'
 import { BoltIcon, FlameIcon } from '../components/icons'
 import CoursePath, { type PathExam, type PathUnit } from '../components/home/CoursePath'
 import { MascotSays, PhraseOfDay, TeacherOfDay, WeekStrip } from '../components/home/HomeExtras'
+import Quests from '../components/home/Quests'
 import { api } from '../lib/api'
 
 interface Course {
@@ -55,12 +56,14 @@ export default function Home() {
   const [course, setCourse] = useState<Course | null>(null)
   const [failed, setFailed] = useState(false)
 
-  useEffect(() => {
+  /** Loads the course and today's numbers. Called again after a quest is collected, so the XP on screen is right. */
+  function load() {
     const tz = encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)
     api<Course>(`/course?tz=${tz}`)
       .then(setCourse)
       .catch(() => setFailed(true))
-  }, [])
+  }
+  useEffect(load, [])
 
   if (!course) {
     return (
@@ -131,6 +134,8 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      <Quests onClaim={load} />
 
       {/* Words and mistakes that are due to be repeated */}
       {(course.reviewDue ?? 0) > 0 && (

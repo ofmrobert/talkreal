@@ -227,3 +227,41 @@ export async function approvePhoto(userId: string): Promise<boolean> {
 export async function clearBio(userId: string): Promise<void> {
   await db.update(userPii).set({ bio: null }).where(eq(userPii.userId, userId))
 }
+
+/* ───────────── What other students may see of someone (the league, later the community) ───────────── */
+
+/**
+ * For a list of students: the name and photo that may be shown to others, and the ones only the
+ * student sees. A name is public only if the student switched "show my profile" on; a photo also
+ * has to have been checked in the admin panel first.
+ */
+export async function publicFaces(userIds: string[]) {
+  const faces = new Map<string, { name: string | null; photo: number | null; ownName: string | null; ownPhoto: number | null }>()
+  if (userIds.length === 0) return faces
+  const rows = await db
+    .select({
+      userId: userPii.userId,
+      name: userPii.displayName,
+      discoverable: userPii.discoverable,
+      photoAt: userAvatars.updatedAt,
+      reviewedAt: userAvatars.reviewedAt,
+    })
+    .from(userPii)
+    .leftJoin(userAvatars, eq(userAvatars.userId, userPii.userId))
+    .where(inArray(userPii.userId, userIds))
+  for (const row of rows) {
+    const photo = row.photoAt ? row.photoAt.getTime() : null
+    faces.set(row.userId, {
+      name: row.discoverable ? row.name : null,
+      photo: row.discoverable && row.reviewedAt ? photo : null,
+      ownName: row.name,
+      ownPhoto: photo,
+    })
+  }
+  return faces
+}
+
+/** May any logged-in student load this person's photo? Only if they chose to be seen and the photo was checked. */
+export async function isPhotoPublic(userId: string): Promise<boolean> {
+  return ((await publicFaces([userId])).get(userId)?.photo ?? null) !== null
+}

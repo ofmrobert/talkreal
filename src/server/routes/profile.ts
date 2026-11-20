@@ -6,7 +6,7 @@ import { lessonById } from '../content/lessons'
 import { db } from '../db/client'
 import { lessonProgress, reviewItems, userAchievements, users, voiceSessions } from '../db/schema'
 import { env } from '../env'
-import { deleteAvatar, getAvatar, getPii, getProfile, saveAvatar, saveProfile } from '../pii'
+import { deleteAvatar, getAvatar, getPii, getProfile, isPhotoPublic, saveAvatar, saveProfile } from '../pii'
 
 /** A profile photo arrives already shrunk by the app; anything bigger than this is refused. */
 const MAX_PHOTO_BYTES = 300 * 1024
@@ -81,14 +81,15 @@ profileRoutes.post('/photo', async (c) => {
 })
 
 /**
- * A profile photo. For now a student sees only their own, and the owner sees everyone's in the
- * admin panel. When the community opens, this is where "who may see whom" will be decided.
+ * A profile photo. A student always sees their own, and the owner sees everyone's in the admin
+ * panel. Other students see it only if its owner chose to be seen and the photo has been checked.
  */
 profileRoutes.get('/photo/:id', async (c) => {
   const id = c.req.param('id')
   const viewer = c.get('userId')
   if (!/^[0-9a-f-]{36}$/i.test(id)) return c.json({ error: 'not_found' }, 404)
-  if (id !== viewer) {
+  // Someone else's photo: only if that student chose to be seen and the photo was checked, or for the owner.
+  if (id !== viewer && !(await isPhotoPublic(id))) {
     const email = (await getPii(viewer)).email?.toLowerCase()
     if (!email || !env.adminEmails.includes(email)) return c.json({ error: 'not_found' }, 404)
   }

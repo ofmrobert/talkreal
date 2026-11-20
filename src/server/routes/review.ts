@@ -44,7 +44,7 @@ reviewRoutes.post('/review/complete', async (c) => {
     const applied = await applyResults(tx, user.id, results, today)
     if (applied.reviewed === 0) return null
     const xpEarned = Math.min(XP_MAX, XP_BASE + applied.correct)
-    const streak = await recordActivity(tx, user, { today, timezone, xp: xpEarned, lessons: 0 })
+    const streak = await recordActivity(tx, user, { today, timezone, xp: xpEarned, lessons: 0, reviews: 1 })
     return { ...applied, xpEarned, streak }
   })
   if (!outcome) return c.json({ error: 'nothing_due' }, 409)

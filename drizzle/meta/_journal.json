@@ -85,6 +85,13 @@
       "when": 1795150112014,
       "tag": "0011_sturdy_omega_sentinel",
       "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1795151344283,
+      "tag": "0012_fine_vulture",
+      "breakpoints": true
     }
   ]
 }

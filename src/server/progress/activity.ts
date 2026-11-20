@@ -1,6 +1,7 @@
 import { and, eq, sql } from 'drizzle-orm'
 import { db, type Db } from '../db/client'
 import { dailyUsage, users } from '../db/schema'
+import { joinLeague } from './league'
 import { streakAfterActivity } from './streak'
 
 /** The database handle inside a transaction. */
@@ -24,22 +25,28 @@ export async function usageToday(userId: string, day: string) {
 export async function recordActivity(
   tx: Tx,
   user: User,
-  done: { today: string; timezone: string; xp: number; lessons: number },
+  done: { today: string; timezone: string; xp: number; lessons: number; reviews?: number; goodLessons?: number },
 ) {
   const streak = streakAfterActivity(user.currentStreak, user.lastActiveDate, done.today, user.streakFreezes)
 
   await tx
     .insert(dailyUsage)
-    .values({ userId: user.id, day: done.today, lessonsDone: done.lessons, xp: done.xp })
+    .values({ userId: user.id, day: done.today, lessonsDone: done.lessons, xp: done.xp, reviewsDone: done.reviews ?? 0, goodLessons: done.goodLessons ?? 0 })
     .onConflictDoUpdate({
       target: [dailyUsage.userId, dailyUsage.day],
-      set: { lessonsDone: sql`${dailyUsage.lessonsDone} + ${done.lessons}`, xp: sql`${dailyUsage.xp} + ${done.xp}` },
+      set: {
+        lessonsDone: sql`${dailyUsage.lessonsDone} + ${done.lessons}`,
+        xp: sql`${dailyUsage.xp} + ${done.xp}`,
+        reviewsDone: sql`${dailyUsage.reviewsDone} + ${done.reviews ?? 0}`,
+        goodLessons: sql`${dailyUsage.goodLessons} + ${done.goodLessons ?? 0}`,
+      },
     })
 
   await tx
     .update(users)
     .set({
-      xp: user.xp + done.xp,
+      // Added in the database, not from the copy read earlier: two things finishing at once must both count.
+      xp: sql`${users.xp} + ${done.xp}`,
       currentStreak: streak.streak,
       longestStreak: Math.max(user.longestStreak, streak.streak),
       lastActiveDate: done.today,
@@ -47,6 +54,9 @@ export async function recordActivity(
       timezone: done.timezone,
     })
     .where(eq(users.id, user.id))
+
+  // Earning XP is what puts a student in this week's league.
+  if (done.xp > 0) await joinLeague(tx, user.id)
 
   return streak
 }
