@@ -140,6 +140,11 @@ export default function Login() {
 
         {step === 'email' ? (
           <>
+            {load('afterLogin') === '/admin' && (
+              <p className="rounded-2xl bg-ink p-3 text-center text-base font-bold text-white" role="status">
+                {t('login.forAdmin')}
+              </p>
+            )}
             <div className="text-center">
               <h1 className="text-3xl font-extrabold leading-tight">{t('login.title')}</h1>
               <p className="mt-2 text-lg text-ink/70">{t('login.subtitle')}</p>

@@ -146,7 +146,8 @@
     "telegramOpen": "Open Telegram",
     "telegramCancel": "Cancel",
     "consent": "I agree to the processing of my personal data and accept the",
-    "consentLink": "privacy policy"
+    "consentLink": "privacy policy",
+    "forAdmin": "Log in to open the admin panel."
   },
   "placement": {
     "title": "What's your level?",
