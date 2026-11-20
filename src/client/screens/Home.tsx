@@ -5,6 +5,7 @@ import Chai from '../components/Chai'
 import { BoltIcon, FlameIcon } from '../components/icons'
 import CoursePath, { type PathExam, type PathUnit } from '../components/home/CoursePath'
 import { MascotSays, PhraseOfDay, TeacherOfDay, WeekStrip } from '../components/home/HomeExtras'
+import FeedCard from '../components/home/FeedCard'
 import Quests from '../components/home/Quests'
 import { api } from '../lib/api'
 
@@ -136,6 +137,8 @@ export default function Home() {
       </section>
 
       <Quests onClaim={load} />
+
+      <FeedCard />
 
       {/* Words and mistakes that are due to be repeated */}
       {(course.reviewDue ?? 0) > 0 && (

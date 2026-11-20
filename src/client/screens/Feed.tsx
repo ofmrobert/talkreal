@@ -7,6 +7,7 @@ import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import SpeakButton from '../components/lesson/SpeakButton'
 import { api, ApiError } from '../lib/api'
+import { markFeedSeen } from '../lib/feedNews'
 import { playCorrect, playWrong } from '../lib/sounds'
 
 interface FeedData {
@@ -609,6 +610,12 @@ export default function Feed() {
   /** The challenge whose answers are open, instead of the feed. */
   const [answersOf, setAnswersOf] = useState<FeedPost | null>(null)
   const query = answersOf ? `challenge=${answersOf.id}` : `from=${from}`
+
+  // Opening the feed clears the "new" dot. Also on leaving, so what arrived meanwhile does not count.
+  useEffect(() => {
+    markFeedSeen()
+    return markFeedSeen
+  }, [])
 
   useEffect(() => {
     api<FeedData>(`/feed?${query}`)

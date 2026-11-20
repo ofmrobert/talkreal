@@ -742,6 +742,15 @@
       "noAnswers": "No answers yet. Be the first!",
       "closed": "This challenge is already over.",
       "answeredAlready": "You have already answered this challenge."
+    },
+    "home": {
+      "today": "In the feed today",
+      "freshLots": "9+ new",
+      "fresh_one": "{{count}} new",
+      "fresh_other": "{{count}} new",
+      "active_one": "{{count}} student is writing this week",
+      "active_other": "{{count}} students are writing this week",
+      "newDot": "Something new"
     }
   },
   "theme": {

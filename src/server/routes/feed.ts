@@ -1,6 +1,6 @@
-import { and, desc, eq, gt, gte, inArray, isNotNull, isNull, lt, lte, sql } from 'drizzle-orm'
+import { and, desc, eq, gt, gte, inArray, isNotNull, isNull, lt, lte, ne, or, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
-import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type ChallengeState, type FeedComment, type FeedFace, type FeedPost, type PostKind } from '../../shared/feed'
+import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type ChallengeState, type FeedComment, type FeedFace, type FeedPost, type FeedSummary, type PostKind } from '../../shared/feed'
 import { askJson, clip, textAiAvailable } from '../ai/text'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { planOf } from '../billing/plans'
@@ -158,6 +158,38 @@ feedRoutes.get('/', async (c) => {
     /** People who commented in the last week: the size of the conversation a free student is missing. */
     activeThisWeek: (await db.select({ n: sql<number>`count(distinct ${feedComments.userId})::int` }).from(feedComments).where(and(eq(feedComments.status, 'visible'), gte(feedComments.createdAt, new Date(Date.now() - WEEK_MS)))))[0]?.n ?? 0,
   })
+})
+
+/** The feed in brief: today's post, the running challenge, what is new since `since`, and who is active. */
+feedRoutes.get('/summary', async (c) => {
+  const userId = c.get('userId')
+  const asked = Date.parse(c.req.query('since') ?? '')
+  // Never further back than a week: an old phone must not show a huge number.
+  const since = new Date(Math.max(Number.isNaN(asked) ? 0 : asked, Date.now() - WEEK_MS))
+  const weekAgo = new Date(Date.now() - WEEK_MS)
+
+  const [latest] = await db.select().from(feedPosts).where(and(visible, isNull(feedPosts.authorId), ne(feedPosts.kind, 'challenge'))).orderBy(desc(feedPosts.publishAt)).limit(1)
+  const [challenge] = await db.select().from(feedPosts).where(and(visible, isNull(feedPosts.authorId), eq(feedPosts.kind, 'challenge'), gt(feedPosts.endsAt, sql`now()`))).orderBy(desc(feedPosts.publishAt)).limit(1)
+  const answers = challenge ? await db.select({ authorId: feedPosts.authorId }).from(feedPosts).where(and(eq(feedPosts.challengeId, challenge.id), eq(feedPosts.status, 'active'))) : []
+  const [fresh] = await db
+    .select({ n: sql<number>`count(*)::int` })
+    .from(feedPosts)
+    .where(and(visible, gt(feedPosts.publishAt, since), or(isNull(feedPosts.authorId), ne(feedPosts.authorId, userId))))
+
+  // Who is taking part this week: the authors of posts and of comments, newest first.
+  const writers = await db.select({ userId: feedPosts.authorId, at: feedPosts.publishAt }).from(feedPosts).where(and(visible, isNotNull(feedPosts.authorId), gte(feedPosts.publishAt, weekAgo))).orderBy(desc(feedPosts.publishAt)).limit(300)
+  const talkers = await db.select({ userId: feedComments.userId, at: feedComments.createdAt }).from(feedComments).where(and(eq(feedComments.status, 'visible'), gte(feedComments.createdAt, weekAgo))).orderBy(desc(feedComments.createdAt)).limit(300)
+  const active = [...new Set([...writers, ...talkers].sort((a, b) => b.at.getTime() - a.at.getTime()).map((row) => row.userId).filter((id): id is string => id !== null))]
+  const faces = await facesFor(active.filter((id) => id !== userId).slice(0, 3), userId)
+
+  const summary: FeedSummary = {
+    latest: latest ? { kind: latest.kind as PostKind, emoji: latest.body.emoji, title: latest.body.title } : null,
+    challenge: challenge?.endsAt ? { title: challenge.body.title, endsAt: challenge.endsAt.toISOString(), answers: answers.length, answered: answers.some((a) => a.authorId === userId) } : null,
+    fresh: fresh?.n ?? 0,
+    activeThisWeek: active.length,
+    faces: [...faces.values()],
+  }
+  return c.json(summary)
 })
 
 /** The picture of a post. */

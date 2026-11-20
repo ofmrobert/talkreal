@@ -802,6 +802,19 @@
       "noAnswers": "Ответов пока нет. Будьте первым!",
       "closed": "Этот челлендж уже завершён.",
       "answeredAlready": "Вы уже ответили на этот челлендж."
+    },
+    "home": {
+      "today": "Сегодня в ленте",
+      "freshLots": "9+ новых",
+      "fresh_one": "{{count}} новый",
+      "fresh_few": "{{count}} новых",
+      "fresh_many": "{{count}} новых",
+      "fresh_other": "{{count}} новых",
+      "active_one": "{{count}} ученик пишет на этой неделе",
+      "active_few": "{{count}} ученика пишут на этой неделе",
+      "active_many": "{{count}} учеников пишут на этой неделе",
+      "active_other": "{{count}} ученика пишут на этой неделе",
+      "newDot": "Есть новое"
     }
   },
   "theme": {

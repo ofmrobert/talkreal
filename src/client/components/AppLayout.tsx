@@ -1,5 +1,6 @@
-import { NavLink, Outlet } from 'react-router'
+import { NavLink, Outlet, useLocation } from 'react-router'
 import { useTranslation } from 'react-i18next'
+import { useFeedNews } from '../lib/feedNews'
 import { BookIcon, FeedIcon, MicIcon, TrophyIcon, UserIcon } from './icons'
 
 const tabs = [
@@ -13,6 +14,10 @@ const tabs = [
 /** The frame around the main screens: scrolling content on top, tab bar at the bottom. */
 export default function AppLayout() {
   const { t } = useTranslation()
+  const { pathname } = useLocation()
+  // Asked again when the student moves between tabs, so the dot keeps up.
+  const news = useFeedNews(pathname)
+  const feedHasNews = (news?.fresh ?? 0) > 0 && pathname !== '/feed'
 
   return (
     <div className="mx-auto flex h-full max-w-md flex-col">
@@ -33,7 +38,10 @@ export default function AppLayout() {
                   }`
                 }
               >
-                <Icon />
+                <span className="relative">
+                  <Icon />
+                  {key === 'feed' && feedHasNews && <span className="absolute -right-1.5 -top-0.5 h-3 w-3 rounded-full bg-coral ring-2 ring-card" aria-label={t('feed.home.newDot')} />}
+                </span>
                 {t(`tabs.${key}`)}
               </NavLink>
             </li>

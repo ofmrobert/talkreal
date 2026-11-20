@@ -69,6 +69,19 @@ export interface ChallengeState {
   winners: { face: FeedFace; prize: number }[]
 }
 
+/** The feed in brief, for the card on the Learn tab and the dot on the Feed tab. */
+export interface FeedSummary {
+  /** The Talkreal account's newest post. */
+  latest: { kind: PostKind; emoji: string; title: Text } | null
+  /** The weekly challenge, while it is running. */
+  challenge: { title: Text; endsAt: string; answers: number; answered: boolean } | null
+  /** Posts by others since the student last opened the feed. */
+  fresh: number
+  /** People who wrote a post or a comment in the last week, and a few of their faces. */
+  activeThisWeek: number
+  faces: FeedFace[]
+}
+
 export interface FeedComment {
   id: string
   text: string
