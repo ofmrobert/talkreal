@@ -28,7 +28,7 @@ function GoalRing({ value }: { value: number }) {
   const filled = Math.min(1, Math.max(0, value))
   return (
     <svg width="68" height="68" viewBox="0 0 68 68" aria-hidden="true">
-      <circle cx="34" cy="34" r={radius} fill="none" stroke="rgba(31,27,58,0.1)" strokeWidth="8" />
+      <circle cx="34" cy="34" r={radius} fill="none" stroke="rgb(var(--shade)/0.1)" strokeWidth="8" />
       <circle
         cx="34"
         cy="34"
@@ -83,22 +83,22 @@ export default function Home() {
     <div className="flex flex-col gap-5">
       {/* Stays in view while the path scrolls underneath */}
       <header className="sticky top-0 z-[5] -mx-5 flex items-center justify-between bg-cream px-5 pb-2 pt-1 before:absolute before:inset-x-0 before:bottom-full before:h-24 before:bg-cream">
-        <Link to="/placement" className="flex items-center gap-2 rounded-full bg-white py-1.5 pl-1.5 pr-3 text-sm font-extrabold active:translate-y-0.5">
+        <Link to="/placement" className="flex items-center gap-2 rounded-full bg-card py-1.5 pl-1.5 pr-3 text-sm font-extrabold active:translate-y-0.5">
           <span className="rounded-full bg-coral px-2.5 py-1 text-white">{course.level}</span>
           {t(`levels.${course.level}.name`)}
         </Link>
         <div className="flex gap-2">
-          <span className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-extrabold" aria-label={t('home.streak')}>
-            <FlameIcon width={18} height={18} className={course.streak > 0 ? 'text-coral' : 'text-ink/30'} />
+          <span className="flex items-center gap-1 rounded-full bg-card px-3 py-1.5 text-sm font-extrabold" aria-label={t('home.streak')}>
+            <FlameIcon width={18} height={18} className={course.streak > 0 ? 'text-bad' : 'text-ink/30'} />
             {course.streak}
           </span>
           {(course.freezes ?? 0) > 0 && (
-            <span className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-extrabold" aria-label={t('freeze.label')}>
+            <span className="flex items-center gap-1 rounded-full bg-card px-3 py-1.5 text-sm font-extrabold" aria-label={t('freeze.label')}>
               <span aria-hidden="true">🧊</span>
               {course.freezes}
             </span>
           )}
-          <span className="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm font-extrabold" aria-label={t('home.xp')}>
+          <span className="flex items-center gap-1 rounded-full bg-card px-3 py-1.5 text-sm font-extrabold" aria-label={t('home.xp')}>
             <BoltIcon width={18} height={18} className="text-sun" />
             {course.xp}
           </span>
@@ -106,7 +106,7 @@ export default function Home() {
       </header>
 
       {course.streakFrozen && (
-        <section className="flex items-center gap-3 rounded-3xl bg-[#DDF1FF] p-4" role="status">
+        <section className="flex items-center gap-3 rounded-3xl bg-sky-soft p-4" role="status">
           <span className="text-3xl" aria-hidden="true">
             🧊
           </span>
@@ -120,7 +120,7 @@ export default function Home() {
       <MascotSays streak={course.streak} />
 
       {/* Daily goal */}
-      <section className="flex items-center gap-4 rounded-3xl bg-white p-4 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+      <section className="flex items-center gap-4 rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
         <GoalRing value={course.today.xp / course.today.xpGoal} />
         <div className="min-w-0 flex-1">
           <h2 className="text-lg font-extrabold">{t('home.dailyGoal')}</h2>
@@ -139,8 +139,8 @@ export default function Home() {
 
       {/* Words and mistakes that are due to be repeated */}
       {(course.reviewDue ?? 0) > 0 && (
-        <section className="flex items-center gap-4 rounded-3xl bg-[#EDE8FF] p-4 shadow-[0_5px_0_0_rgba(124,92,255,0.18)]">
-          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#7C5CFF] text-xl font-extrabold text-white">
+        <section className="flex items-center gap-4 rounded-3xl bg-violet-soft p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
+          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-violet text-xl font-extrabold text-white">
             {Math.min(course.reviewDue ?? 0, 99)}
           </span>
           <div className="min-w-0 flex-1">
@@ -150,7 +150,7 @@ export default function Home() {
           <button
             type="button"
             onClick={() => navigate('/review')}
-            className="min-h-12 shrink-0 rounded-2xl bg-[#7C5CFF] px-4 text-base font-extrabold text-white shadow-[0_4px_0_0_#5B3FD6] active:translate-y-1 active:shadow-[0_1px_0_0_#5B3FD6]"
+            className="min-h-12 shrink-0 rounded-2xl bg-violet px-4 text-base font-extrabold text-white shadow-[0_4px_0_0_var(--color-violet-dark)] active:translate-y-1 active:shadow-[0_1px_0_0_var(--color-violet-dark)]"
           >
             {t('review.start')}
           </button>
@@ -165,7 +165,7 @@ export default function Home() {
         </span>
       </div>
       {lessons.length === 0 ? (
-        <p className="rounded-2xl bg-white p-4 text-base text-ink/65">{t('home.noLessons')}</p>
+        <p className="rounded-2xl bg-card p-4 text-base text-ink/65">{t('home.noLessons')}</p>
       ) : (
         <CoursePath level={course.level} units={course.units} exam={course.exam} />
       )}

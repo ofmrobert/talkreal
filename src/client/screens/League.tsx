@@ -47,7 +47,7 @@ export default function League() {
 
   return (
     <div className="flex flex-col gap-4">
-      <header className="relative overflow-hidden rounded-3xl p-5 text-white" style={{ background: tier.color, boxShadow: '0 6px 0 0 rgba(31,27,58,0.18)' }}>
+      <header className="relative overflow-hidden rounded-3xl p-5 text-white" style={{ background: tier.color, boxShadow: '0 6px 0 0 rgb(var(--shade)/0.18)' }}>
         <span className="float-slow absolute -right-6 -top-8 h-28 w-28 rounded-full bg-white/15" aria-hidden="true" />
         <div className="flex items-center gap-4">
           <span className="pop-in flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-white/25 text-5xl" aria-hidden="true">
@@ -64,7 +64,7 @@ export default function League() {
           {LEAGUE_TIERS.map((other, index) => (
             <span
               key={index}
-              className={`flex h-9 flex-1 items-center justify-center rounded-xl text-lg ${index === data.tier ? 'bg-white text-ink shadow-[0_3px_0_0_rgba(31,27,58,0.2)]' : index < data.tier ? 'bg-white/35' : 'bg-white/15 opacity-70'}`}
+              className={`flex h-9 flex-1 items-center justify-center rounded-xl text-lg ${index === data.tier ? 'bg-card text-ink shadow-[0_3px_0_0_rgb(var(--shade)/0.2)]' : index < data.tier ? 'bg-white/35' : 'bg-white/15 opacity-70'}`}
             >
               {other.icon}
             </span>
@@ -73,7 +73,7 @@ export default function League() {
       </header>
 
       {!data.joined ? (
-        <section className="flex flex-col items-center gap-4 rounded-3xl bg-white p-6 text-center shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+        <section className="flex flex-col items-center gap-4 rounded-3xl bg-card p-6 text-center shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
           <Chai size={120} />
           <div>
             <h2 className="text-xl font-extrabold">{t('league.joinTitle')}</h2>
@@ -84,7 +84,7 @@ export default function League() {
       ) : (
         <>
           {me && (
-            <p className="rounded-2xl bg-white px-4 py-3 text-base font-bold shadow-[0_4px_0_0_rgba(31,27,58,0.06)]" role="status">
+            <p className="rounded-2xl bg-card px-4 py-3 text-base font-bold shadow-[0_4px_0_0_rgb(var(--shade)/0.06)]" role="status">
               {me.rank <= up && canGoUp
                 ? `🚀 ${t('league.youUp', { rank: me.rank })}`
                 : down > 0 && me.rank > size - down
@@ -93,14 +93,14 @@ export default function League() {
             </p>
           )}
 
-          <ol className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+          <ol className="flex flex-col overflow-hidden rounded-3xl bg-card shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
             {data.rows.map((row, index) => (
               <Fragment key={row.userId}>
                 {canGoUp && index === up && (
-                  <li className="flex items-center gap-2 bg-mint/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-[#0E6B55]">▲ {t('league.zoneUp')}</li>
+                  <li className="flex items-center gap-2 bg-mint/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-good-ink">▲ {t('league.zoneUp')}</li>
                 )}
                 {down > 0 && index === size - down && (
-                  <li className="flex items-center gap-2 bg-coral/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-coral-dark">▼ {t('league.zoneDown')}</li>
+                  <li className="flex items-center gap-2 bg-bad/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-bad-ink">▼ {t('league.zoneDown')}</li>
                 )}
                 <li className={`flex items-center gap-3 px-4 py-2.5 ${row.me ? 'bg-sun/25' : ''} ${index > 0 ? 'border-t border-ink/5' : ''}`}>
                   <span className={`w-7 shrink-0 text-center text-base font-extrabold tabular-nums ${row.rank <= 3 ? 'text-ink' : 'text-ink/45'}`}>
@@ -109,7 +109,7 @@ export default function League() {
                   <Avatar userId={row.userId} name={row.name} photoVersion={row.photoVersion} size={40} />
                   <span className="min-w-0 flex-1 truncate text-base font-bold">
                     {row.name ?? `${t('league.student')} ${row.tag}`}
-                    {row.me && <span className="ml-1.5 rounded-full bg-ink px-2 py-0.5 text-xs font-extrabold text-white">{t('league.you')}</span>}
+                    {row.me && <span className="ml-1.5 rounded-full bg-night px-2 py-0.5 text-xs font-extrabold text-white">{t('league.you')}</span>}
                   </span>
                   <span className="flex shrink-0 items-center gap-1 text-base font-extrabold tabular-nums">
                     <BoltIcon width={16} height={16} className="text-sun" />
@@ -123,7 +123,7 @@ export default function League() {
           <p className="px-1 text-sm font-semibold leading-snug text-ink/50">{t('league.rules', { up, down })}</p>
           <p className="px-1 pb-2 text-sm font-semibold leading-snug text-ink/50">
             {t('league.privacy')}{' '}
-            <button type="button" onClick={() => navigate('/profile/edit')} className="font-extrabold text-coral-dark underline">
+            <button type="button" onClick={() => navigate('/profile/edit')} className="font-extrabold text-coral-ink underline">
               {t('community.change')}
             </button>
           </p>

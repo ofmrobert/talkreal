@@ -189,7 +189,7 @@ export default function Call() {
         </div>
         {remaining !== null && (
           <span
-            className={`rounded-full px-3 py-1.5 text-sm font-extrabold tabular-nums ${lowTime ? 'bg-coral text-white' : 'bg-white'}`}
+            className={`rounded-full px-3 py-1.5 text-sm font-extrabold tabular-nums ${lowTime ? 'bg-coral text-white' : 'bg-card'}`}
             aria-label={t('call.timeLeft')}
           >
             {clock(remaining)}
@@ -198,7 +198,7 @@ export default function Call() {
       </header>
 
       {/* Live transcript, and the teacher's review once the call is over */}
-      <main className="flex flex-1 flex-col gap-3 overflow-y-auto rounded-3xl bg-white/60 p-4" aria-live="polite">
+      <main className="flex flex-1 flex-col gap-3 overflow-y-auto rounded-3xl bg-card/60 p-4" aria-live="polite">
         {lines.length === 0 && (
           <div className="m-auto flex w-full flex-col items-center gap-4 text-center">
             <span className={`rounded-full ${stage === 'connecting' ? 'pulse-soft' : ''}`}>
@@ -219,7 +219,7 @@ export default function Call() {
             key={i}
             className={`max-w-[85%] select-text rounded-3xl px-4 py-2.5 text-base leading-snug ${
               line.role === 'teacher'
-                ? 'self-start rounded-bl-md bg-white font-semibold shadow-[0_3px_0_0_rgba(31,27,58,0.06)]'
+                ? 'self-start rounded-bl-md bg-card font-semibold shadow-[0_3px_0_0_rgb(var(--shade)/0.06)]'
                 : 'self-end rounded-br-md bg-coral font-semibold text-white'
             }`}
           >
@@ -227,19 +227,19 @@ export default function Call() {
           </p>
         ))}
         {stage === 'ended' && reportStatus === 'pending' && (
-          <p className="pulse-soft self-center rounded-2xl bg-white px-4 py-3 text-base font-bold text-ink/65" role="status">
+          <p className="pulse-soft self-center rounded-2xl bg-card px-4 py-3 text-base font-bold text-ink/65" role="status">
             {t('report.pending', { name: teacher.name })}
           </p>
         )}
         {stage === 'ended' && reportStatus === 'failed' && (
-          <p className="self-center rounded-2xl bg-white px-4 py-3 text-center text-base font-bold text-ink/55">{t('report.failed')}</p>
+          <p className="self-center rounded-2xl bg-card px-4 py-3 text-center text-base font-bold text-ink/55">{t('report.failed')}</p>
         )}
         {stage === 'ended' && report && <ReportCard report={report} />}
         <div ref={bottom} />
       </main>
 
       <footer className="flex flex-col items-center gap-4 pb-1">
-        <p className={`min-h-6 text-center text-base font-bold ${stage === 'ended' && endReason !== 'hangup' ? 'text-coral-dark' : 'text-ink/60'}`} role="status">
+        <p className={`min-h-6 text-center text-base font-bold ${stage === 'ended' && endReason !== 'hangup' ? 'text-bad-ink' : 'text-ink/60'}`} role="status">
           {status}
         </p>
 
@@ -251,7 +251,7 @@ export default function Call() {
               disabled={stage !== 'live'}
               aria-pressed={muted}
               aria-label={muted ? t('call.unmute') : t('call.mute')}
-              className={`flex h-14 w-14 items-center justify-center rounded-full text-sm font-extrabold disabled:opacity-40 ${muted ? 'bg-ink text-white' : 'bg-white text-ink'}`}
+              className={`flex h-14 w-14 items-center justify-center rounded-full text-sm font-extrabold disabled:opacity-40 ${muted ? 'bg-night text-white' : 'bg-card text-ink'}`}
             >
               {muted ? '🔇' : '🎙️'}
             </button>
@@ -272,7 +272,7 @@ export default function Call() {
               type="button"
               onClick={() => call.current?.hangUp()}
               aria-label={t('call.hangUp')}
-              className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-xl font-extrabold text-white active:translate-y-0.5"
+              className="flex h-14 w-14 items-center justify-center rounded-full bg-night text-xl font-extrabold text-white active:translate-y-0.5"
             >
               ✕
             </button>

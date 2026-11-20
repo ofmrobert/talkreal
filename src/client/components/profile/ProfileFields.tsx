@@ -7,7 +7,7 @@ import Avatar from '../Avatar'
 /* The pieces of the profile form. The step after signing up and the "edit profile" screen are both built from them. */
 
 export const fieldClass =
-  'min-h-14 w-full select-text rounded-2xl border-2 border-ink/10 bg-white px-4 text-lg font-bold text-ink outline-none placeholder:font-semibold placeholder:text-ink/30 focus:border-coral'
+  'min-h-14 w-full select-text rounded-2xl border-2 border-ink/10 bg-card px-4 text-lg font-bold text-ink outline-none placeholder:font-semibold placeholder:text-ink/30 focus:border-coral'
 
 export type Draft = Profile & { ageText: string }
 
@@ -44,14 +44,14 @@ export function PhotoPicker({ userId, name, photoVersion, preview, onPick, onRem
   return (
     <div className="flex flex-col items-center gap-2">
       <button type="button" onClick={() => input.current?.click()} className="relative rounded-full active:scale-95" aria-label={t('profile.photoChoose')}>
-        <Avatar userId={userId} name={name} photoVersion={photoVersion} preview={preview} size={size} className="ring-4 ring-white" />
+        <Avatar userId={userId} name={name} photoVersion={photoVersion} preview={preview} size={size} className="ring-4 ring-card" />
         <span className="absolute bottom-0 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-coral text-xl text-white shadow-[0_3px_0_0_var(--color-coral-dark)]" aria-hidden="true">
           📷
         </span>
       </button>
       <input ref={input} type="file" accept="image/*" className="hidden" onChange={(e) => void choose(e.target.files?.[0])} />
       <div className="flex gap-4 text-sm font-extrabold">
-        <button type="button" onClick={() => input.current?.click()} className="min-h-9 text-coral-dark underline">
+        <button type="button" onClick={() => input.current?.click()} className="min-h-9 text-coral-ink underline">
           {t(preview || photoVersion ? 'profile.photoChange' : 'profile.photoChoose')}
         </button>
         {onRemove && (preview || photoVersion) && (
@@ -61,7 +61,7 @@ export function PhotoPicker({ userId, name, photoVersion, preview, onPick, onRem
         )}
       </div>
       {failed && (
-        <p role="alert" className="text-sm font-bold text-coral-dark">
+        <p role="alert" className="text-sm font-bold text-bad-ink">
           {t('profile.photoFailed')}
         </p>
       )}
@@ -97,7 +97,7 @@ export function Chips<T extends string>({ options, names, value, max, onChange, 
             onClick={() => onChange(on ? value.filter((v) => v !== option.id) : [...value, option.id])}
             className={`flex items-center gap-2 rounded-2xl border-2 text-left font-extrabold leading-tight transition-colors active:translate-y-0.5 disabled:opacity-40 ${
               big ? 'min-h-16 px-3 py-2 text-base' : 'min-h-11 px-3 py-1.5 text-sm'
-            } ${on ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/10 bg-white text-ink'}`}
+            } ${on ? 'border-coral bg-coral/10 text-coral-ink' : 'border-ink/10 bg-card text-ink'}`}
           >
             <span className={big ? 'text-2xl' : 'text-lg'} aria-hidden="true">
               {option.icon}
@@ -143,7 +143,7 @@ export function AgeAndGender({ draft, onChange }: { draft: Draft; onChange: (dra
                 role="radio"
                 aria-checked={on}
                 onClick={() => onChange({ ...draft, gender: on ? null : gender })}
-                className={`min-h-12 rounded-2xl border-2 px-4 text-base font-extrabold active:translate-y-0.5 ${on ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/10 bg-white text-ink'}`}
+                className={`min-h-12 rounded-2xl border-2 px-4 text-base font-extrabold active:translate-y-0.5 ${on ? 'border-coral bg-coral/10 text-coral-ink' : 'border-ink/10 bg-card text-ink'}`}
               >
                 {t(`genders.${gender}`)}
               </button>

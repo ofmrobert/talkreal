@@ -19,20 +19,20 @@ interface Props {
 export default function FeedbackSheet({ feedback, onContinue }: Props) {
   const { t } = useTranslation()
   const { correct } = feedback
-  const tone = correct ? 'bg-[#DDF6EF] text-[#0E6B55]' : 'bg-[#FFE3DB] text-[#A8351A]'
+  const tone = correct ? 'bg-good-soft text-good-ink' : 'bg-bad-soft text-bad-ink'
   const button = correct
-    ? 'bg-mint shadow-[0_5px_0_0_#1FA283] active:shadow-[0_1px_0_0_#1FA283]'
-    : 'bg-coral shadow-[0_5px_0_0_var(--color-coral-dark)] active:shadow-[0_1px_0_0_var(--color-coral-dark)]'
+    ? 'bg-mint shadow-[0_5px_0_0_var(--color-mint-dark)] active:shadow-[0_1px_0_0_var(--color-mint-dark)]'
+    : 'bg-bad shadow-[0_5px_0_0_var(--color-bad-dark)] active:shadow-[0_1px_0_0_var(--color-bad-dark)]'
 
   return (
     <div className={`sheet-up safe-bottom -mx-5 rounded-t-3xl px-5 pt-5 ${tone}`} role="status">
       <div className="mx-auto flex max-w-md flex-col gap-3">
         <div className="flex items-center gap-3">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-xl font-extrabold" aria-hidden="true">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-card text-xl font-extrabold" aria-hidden="true">
             {correct ? '✓' : '✕'}
           </span>
           <h3 className="flex-1 text-2xl font-extrabold">{correct ? t('lesson.correct') : t('lesson.wrong')}</h3>
-          {feedback.speakText && <SpeakButton text={feedback.speakText} className="!bg-white/70 !text-current" />}
+          {feedback.speakText && <SpeakButton text={feedback.speakText} className="!bg-card/70 !text-current" />}
         </div>
 
         {!correct && feedback.answer && (

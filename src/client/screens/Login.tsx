@@ -9,7 +9,7 @@ import { api, ApiError } from '../lib/api'
 import { load, save } from '../lib/storage'
 
 const inputClass =
-  'min-h-14 w-full rounded-2xl border-2 border-ink/10 bg-white px-4 text-lg font-bold text-ink outline-none select-text focus:border-coral'
+  'min-h-14 w-full rounded-2xl border-2 border-ink/10 bg-card px-4 text-lg font-bold text-ink outline-none select-text focus:border-coral'
 
 /** A code is valid for ten minutes; a login that was started is remembered a little less long. */
 const PENDING_MS = 9 * 60 * 1000
@@ -141,7 +141,7 @@ export default function Login() {
         {step === 'email' ? (
           <>
             {load('afterLogin') === '/admin' && (
-              <p className="rounded-2xl bg-ink p-3 text-center text-base font-bold text-white" role="status">
+              <p className="rounded-2xl bg-night p-3 text-center text-base font-bold text-white" role="status">
                 {t('login.forAdmin')}
               </p>
             )}
@@ -162,7 +162,7 @@ export default function Login() {
               className={inputClass}
               required
             />
-            <label className="flex items-start gap-3 rounded-2xl bg-white/70 p-3">
+            <label className="flex items-start gap-3 rounded-2xl bg-card/70 p-3">
               <input
                 type="checkbox"
                 checked={consent}
@@ -174,7 +174,7 @@ export default function Login() {
               />
               <span className="text-sm font-semibold leading-snug text-ink/70">
                 {t('login.consent')}{' '}
-                <Link to="/privacy" className="font-extrabold text-coral-dark underline">
+                <Link to="/privacy" className="font-extrabold text-coral-ink underline">
                   {t('login.consentLink')}
                 </Link>
               </span>
@@ -211,7 +211,7 @@ export default function Login() {
         )}
 
         {error && (
-          <p role="alert" className="rounded-2xl bg-coral/15 p-3 text-center text-base font-bold text-coral-dark">
+          <p role="alert" className="rounded-2xl bg-bad/15 p-3 text-center text-base font-bold text-bad-ink">
             {error}
           </p>
         )}

@@ -36,7 +36,7 @@ export default function OptionsExercise({ exercise, options, selected, onSelect,
             {exercise.sentence.split('___')[0]}
             <span
               className={`mx-1 inline-block min-w-20 rounded-xl border-b-4 px-2 text-center ${
-                selected ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/25 text-transparent'
+                selected ? 'border-coral bg-coral/10 text-coral-ink' : 'border-ink/25 text-transparent'
               }`}
             >
               {/* An option like '— (без артикля)' goes into the sentence as a plain dash. */}
@@ -57,7 +57,7 @@ export default function OptionsExercise({ exercise, options, selected, onSelect,
             </div>
           ) : (
             // No voice on this device: show the sentence so the exercise still works.
-            <p className="select-text rounded-2xl bg-white p-4 text-xl font-bold">{exercise.audio}</p>
+            <p className="select-text rounded-2xl bg-card p-4 text-xl font-bold">{exercise.audio}</p>
           )}
           <h2 className="w-full text-xl font-extrabold leading-snug">{exercise.question}</h2>
         </div>
@@ -66,10 +66,10 @@ export default function OptionsExercise({ exercise, options, selected, onSelect,
       <div className="mt-auto flex flex-col gap-3" role="radiogroup" aria-label={t(`lesson.types.${exercise.type}`)}>
         {options.map((option) => {
           const isSelected = selected === option
-          let look = 'border-ink/10 bg-white text-ink shadow-[0_4px_0_0_rgba(31,27,58,0.08)]'
+          let look = 'border-ink/10 bg-card text-ink shadow-[0_4px_0_0_rgb(var(--shade)/0.08)]'
           if (checked && option === correct) look = 'border-mint bg-mint/15 text-ink shadow-[0_4px_0_0_var(--color-mint)]'
-          else if (checked && isSelected) look = 'border-coral bg-coral/10 text-coral-dark shadow-[0_4px_0_0_var(--color-coral)]'
-          else if (isSelected) look = 'border-coral bg-coral/10 text-coral-dark shadow-[0_4px_0_0_var(--color-coral)]'
+          else if (checked && isSelected) look = 'border-bad bg-bad/10 text-bad-ink shadow-[0_4px_0_0_var(--color-bad)]'
+          else if (isSelected) look = 'border-coral bg-coral/10 text-coral-ink shadow-[0_4px_0_0_var(--color-coral)]'
           return (
             <button
               key={option}

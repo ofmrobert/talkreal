@@ -66,11 +66,11 @@ export default function SpeakExercise({ exercise, onDone, onSkip, checked }: Pro
 
   return (
     <div className="flex flex-1 flex-col gap-5">
-      <div className="rounded-3xl bg-white p-5 shadow-[0_4px_0_0_rgba(31,27,58,0.07)]">
+      <div className="rounded-3xl bg-card p-5 shadow-[0_4px_0_0_rgb(var(--shade)/0.07)]">
         <div className="flex items-start gap-3">
           <p className="flex-1 select-text text-2xl font-extrabold leading-snug">
             {words.map((w, i) => (
-              <span key={i} className={w.heard ? 'text-[#0E8A6C]' : tries > 0 || checked ? 'text-coral-dark' : ''}>
+              <span key={i} className={w.heard ? 'text-good-ink' : tries > 0 || checked ? 'text-bad-ink' : ''}>
                 {w.word}{' '}
               </span>
             ))}
@@ -82,7 +82,7 @@ export default function SpeakExercise({ exercise, onDone, onSkip, checked }: Pro
 
       {!checked && (
         <div className="mt-auto flex flex-col items-center gap-4 pb-2">
-          <p className={`text-center text-base font-bold ${problem ? 'text-coral-dark' : 'text-ink/60'}`} role="status">
+          <p className={`text-center text-base font-bold ${problem ? 'text-bad-ink' : 'text-ink/60'}`} role="status">
             {hint}
           </p>
           <button

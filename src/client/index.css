@@ -1,14 +1,131 @@
 @import "tailwindcss";
 
-/* Talkreal palette. System fonts only: nothing is loaded from foreign servers. */
+/*
+ * Talkreal palette. System fonts only: nothing is loaded from foreign servers.
+ *
+ * The screens never name a colour directly, only a role. The values below are the default
+ * ("Classic") theme; the other themes further down give the same roles other values, so every
+ * screen follows without being rewritten.
+ *
+ *   cream   the page background            card    cards, inputs, sheets
+ *   ink     text, and faint fills of it    night   solid dark surfaces that carry white text
+ *   coral   the accent: main buttons, the active tab, selections
+ *   sun     gold: rewards, premium         coal    the dark text that sits on gold
+ *   mint    correct, done                  bad     wrong, problems (never changes with the theme)
+ */
 @theme {
   --color-coral: #ff6b4a;
   --color-coral-dark: #e2512f;
+  --color-coral-ink: #e2512f; /* accent-coloured text */
   --color-ink: #1f1b3a;
+  --color-night: #1f1b3a;
+  --color-coal: #1f1b3a;
   --color-sun: #ffc53d;
+  --color-sun-dark: #e0a21a;
   --color-mint: #2ec4a0;
+  --color-mint-dark: #1fa283;
   --color-cream: #fff8f0;
+  --color-card: #ffffff;
+  --color-bad: #ff6b4a;
+  --color-bad-dark: #e2512f;
+  --color-bad-ink: #cf4424;
+  --color-bad-soft: #ffe3db;
+  --color-good-ink: #0e6b55;
+  --color-good-soft: #ddf6ef;
+  --color-violet: #7c5cff;
+  --color-violet-dark: #5b3fd6;
+  --color-violet-ink: #5b3fd6;
+  --color-violet-soft: #ede8ff;
+  --color-sky-soft: #ddf1ff;
+  --color-locked: #e9e4de;
+  --color-locked-dark: #d3ccc3;
   --font-sans: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* The colour of the soft shadow under cards, as three numbers so its strength can vary. */
+:root { --shade: 31 27 58; }
+
+/* ---- Light themes: a tinted paper, a deep text colour of the same family, one accent. ---- */
+[data-theme='rose'] {
+  --color-cream: #fff4f7;
+  --color-ink: #3b1a33;
+  --color-night: #3b1a33;
+  --color-coral: #e5487e;
+  --color-coral-dark: #c22f63;
+  --color-coral-ink: #c22f63;
+  --color-locked: #f1e3e8;
+  --color-locked-dark: #dfcbd3;
+  --shade: 59 26 51;
+}
+[data-theme='ocean'] {
+  --color-cream: #f2f6fb;
+  --color-ink: #13233d;
+  --color-night: #13233d;
+  --color-coral: #2f6fed;
+  --color-coral-dark: #1f54c0;
+  --color-coral-ink: #1f54c0;
+  --color-locked: #e2e8f0;
+  --color-locked-dark: #cbd5e1;
+  --shade: 19 35 61;
+}
+[data-theme='lavender'] {
+  --color-cream: #f6f4ff;
+  --color-ink: #241a4d;
+  --color-night: #241a4d;
+  --color-coral: #7c5cff;
+  --color-coral-dark: #5b3fd6;
+  --color-coral-ink: #5b3fd6;
+  --color-locked: #e8e4f5;
+  --color-locked-dark: #d3cdea;
+  --shade: 36 26 77;
+}
+[data-theme='forest'] {
+  --color-cream: #f3f7f2;
+  --color-ink: #15302a;
+  --color-night: #15302a;
+  --color-coral: #1f8f6f;
+  --color-coral-dark: #166d54;
+  --color-coral-ink: #166d54;
+  --color-locked: #e3e9e2;
+  --color-locked-dark: #cdd6cc;
+  --shade: 21 48 42;
+}
+
+/* ---- Dark themes: text turns light, cards sit a step above the page, tints turn deep. ---- */
+[data-theme='midnight'],
+[data-theme='plum'] {
+  color-scheme: dark;
+  --color-cream: #100e1f;
+  --color-card: #1c1933;
+  --color-ink: #f2efff;
+  --color-night: #2c2852;
+  --color-coral: #ff7658;
+  --color-coral-dark: #d9502f;
+  --color-coral-ink: #ff9a82;
+  --color-bad-ink: #ffab97;
+  --color-bad-soft: #3b1b14;
+  --color-good-ink: #7ee8c8;
+  --color-good-soft: #11332b;
+  --color-violet: #8f75ff;
+  --color-violet-dark: #6a50e0;
+  --color-violet-ink: #c7bbff;
+  --color-violet-soft: #272052;
+  --color-sky-soft: #152c45;
+  --color-locked: #262342;
+  --color-locked-dark: #1a1830;
+  --shade: 0 0 0;
+}
+[data-theme='plum'] {
+  --color-cream: #1a0f18;
+  --color-card: #291927;
+  --color-ink: #ffeef5;
+  --color-night: #40263c;
+  --color-coral: #ff6f9f;
+  --color-coral-dark: #d94a7c;
+  --color-coral-ink: #ff9dbd;
+  --color-violet-soft: #33203f;
+  --color-locked: #342130;
+  --color-locked-dark: #231520;
 }
 
 html,
@@ -63,8 +180,8 @@ body {
 .shake { animation: shake 0.3s ease-in-out; }
 
 @keyframes pulse-ring {
-  0% { box-shadow: 0 4px 0 0 var(--color-coral-dark), 0 0 0 0 rgba(255, 107, 74, 0.45); }
-  100% { box-shadow: 0 4px 0 0 var(--color-coral-dark), 0 0 0 14px rgba(255, 107, 74, 0); }
+  0% { box-shadow: 0 4px 0 0 var(--color-coral-dark), 0 0 0 0 color-mix(in srgb, var(--color-coral) 45%, transparent); }
+  100% { box-shadow: 0 4px 0 0 var(--color-coral-dark), 0 0 0 14px transparent; }
 }
 .pulse-ring { animation: pulse-ring 1.6s ease-out infinite; }
 
@@ -118,8 +235,8 @@ body {
 .pop-in { animation: pop-in 0.5s ease-out; }
 
 @keyframes pulse-soft {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 74, 0.35); }
-  50% { box-shadow: 0 0 0 14px rgba(255, 107, 74, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-coral) 35%, transparent); }
+  50% { box-shadow: 0 0 0 14px transparent; }
 }
 .pulse-soft { animation: pulse-soft 1.4s ease-out infinite; }
 

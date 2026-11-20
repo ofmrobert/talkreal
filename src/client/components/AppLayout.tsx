@@ -20,7 +20,7 @@ export default function AppLayout() {
         <Outlet />
       </main>
 
-      <nav className="safe-bottom border-t-2 border-ink/5 bg-white px-2 pt-1">
+      <nav className="safe-bottom border-t-2 border-ink/5 bg-card px-2 pt-1">
         <ul className="flex">
           {tabs.map(({ to, key, Icon }) => (
             <li key={key} className="flex-1">

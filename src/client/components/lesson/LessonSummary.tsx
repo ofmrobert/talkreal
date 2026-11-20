@@ -48,7 +48,7 @@ export default function LessonSummary({ result, seconds, onContinue, title, head
   const stats = [
     { label: t('summary.xp'), value: `+${result.xpEarned}`, color: 'bg-sun/30' },
     { label: t('summary.accuracy'), value: `${result.accuracy}%`, color: 'bg-mint/20' },
-    { label: t('summary.time'), value: formatTime(seconds), color: 'bg-[#7C5CFF]/15' },
+    { label: t('summary.time'), value: formatTime(seconds), color: 'bg-violet/15' },
   ]
 
   return (
@@ -92,7 +92,7 @@ export default function LessonSummary({ result, seconds, onContinue, title, head
         )}
 
         {result.freezeUsed && (
-          <div className="flex w-full items-center gap-3 rounded-2xl bg-[#DDF1FF] p-4 text-left">
+          <div className="flex w-full items-center gap-3 rounded-2xl bg-sky-soft p-4 text-left">
             <span className="text-3xl" aria-hidden="true">
               🧊
             </span>
@@ -104,7 +104,7 @@ export default function LessonSummary({ result, seconds, onContinue, title, head
         )}
 
         {result.freezeEarned && (
-          <div className="flex w-full items-center gap-3 rounded-2xl bg-[#DDF1FF] p-4 text-left">
+          <div className="flex w-full items-center gap-3 rounded-2xl bg-sky-soft p-4 text-left">
             <span className="text-3xl" aria-hidden="true">
               🧊
             </span>
@@ -117,7 +117,7 @@ export default function LessonSummary({ result, seconds, onContinue, title, head
 
         {(result.newAchievements ?? []).map((key) => (
           <div key={key} className="bubble-in flex w-full items-center gap-3 rounded-2xl bg-sun/30 p-4 text-left">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-3xl" aria-hidden="true">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-card text-3xl" aria-hidden="true">
               {achievementIcon(key)}
             </span>
             <div>
@@ -128,7 +128,7 @@ export default function LessonSummary({ result, seconds, onContinue, title, head
           </div>
         ))}
 
-        <div className="w-full rounded-2xl bg-white p-4 text-left">
+        <div className="w-full rounded-2xl bg-card p-4 text-left">
           <div className="mb-2 flex items-baseline justify-between">
             <span className="text-base font-extrabold">{t('home.dailyGoal')}</span>
             <span className="text-sm font-bold text-ink/55">

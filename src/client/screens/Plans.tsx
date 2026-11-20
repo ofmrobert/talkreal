@@ -10,16 +10,16 @@ import { api, ApiError } from '../lib/api'
 const ORDER: PlanId[] = ['pro', 'max', 'free']
 const LOOK: Record<PlanId, { card: string; button: string; tick: string }> = {
   pro: {
-    card: 'bg-white ring-4 ring-coral shadow-[0_6px_0_0_var(--color-coral-dark)]',
+    card: 'bg-card ring-4 ring-coral shadow-[0_6px_0_0_var(--color-coral-dark)]',
     button: 'bg-coral text-white shadow-[0_5px_0_0_var(--color-coral-dark)] active:shadow-[0_1px_0_0_var(--color-coral-dark)]',
     tick: 'text-coral',
   },
   max: {
-    card: 'bg-ink text-white shadow-[0_6px_0_0_rgba(31,27,58,0.3)]',
-    button: 'bg-sun text-ink shadow-[0_5px_0_0_#E0A21A] active:shadow-[0_1px_0_0_#E0A21A]',
+    card: 'bg-night text-white shadow-[0_6px_0_0_rgb(var(--shade)/0.3)]',
+    button: 'bg-sun text-coal shadow-[0_5px_0_0_var(--color-sun-dark)] active:shadow-[0_1px_0_0_var(--color-sun-dark)]',
     tick: 'text-sun',
   },
-  free: { card: 'bg-white/70', button: '', tick: 'text-mint' },
+  free: { card: 'bg-card/70', button: '', tick: 'text-mint' },
 }
 
 const rub = (amount: number) => `${amount.toLocaleString('ru-RU')} ₽`
@@ -123,12 +123,12 @@ export default function Plans() {
         <p className="text-base leading-relaxed text-ink/70">{t('plans.subtitle')}</p>
 
         {user && user.plan !== 'free' && (
-          <p className="rounded-2xl bg-mint/20 p-3 text-base font-bold text-[#0E6B55]" role="status">
+          <p className="rounded-2xl bg-mint/20 p-3 text-base font-bold text-good-ink" role="status">
             {until ? t('plans.current', { plan: t(`plans.name.${user.plan}`), date: until }) : t('plans.currentForever', { plan: t(`plans.name.${user.plan}`) })}
           </p>
         )}
 
-        <div className="flex gap-2 rounded-2xl bg-white p-1.5" role="radiogroup" aria-label={t('plans.period')}>
+        <div className="flex gap-2 rounded-2xl bg-card p-1.5" role="radiogroup" aria-label={t('plans.period')}>
           {(['year', 'month'] as const).map((p) => (
             <button
               key={p}
@@ -136,16 +136,16 @@ export default function Plans() {
               role="radio"
               aria-checked={period === p}
               onClick={() => changePeriod(p)}
-              className={`min-h-12 flex-1 rounded-xl text-base font-extrabold transition-colors ${period === p ? 'bg-ink text-white' : 'text-ink/60'}`}
+              className={`min-h-12 flex-1 rounded-xl text-base font-extrabold transition-colors ${period === p ? 'bg-night text-white' : 'text-ink/60'}`}
             >
               {t(`plans.${p}`)}
-              {p === 'year' && <span className={`ml-1.5 rounded-full px-2 py-0.5 text-xs ${period === p ? 'bg-sun text-ink' : 'bg-sun/40 text-ink'}`}>−{yearlySaving('pro')}%</span>}
+              {p === 'year' && <span className={`ml-1.5 rounded-full px-2 py-0.5 text-xs ${period === p ? 'bg-sun text-coal' : 'bg-sun/40 text-ink'}`}>−{yearlySaving('pro')}%</span>}
             </button>
           ))}
         </div>
 
         {error && (
-          <p role="alert" className="rounded-2xl bg-coral/15 p-3 text-center text-base font-bold text-coral-dark">
+          <p role="alert" className="rounded-2xl bg-bad/15 p-3 text-center text-base font-bold text-bad-ink">
             {t('plans.error')}
           </p>
         )}
@@ -209,7 +209,7 @@ export default function Plans() {
         })}
 
         {canPay && (
-          <section className="rounded-3xl bg-white p-4">
+          <section className="rounded-3xl bg-card p-4">
             {promoOpen ? (
               <form
                 className="flex flex-col gap-2"
@@ -229,39 +229,39 @@ export default function Plans() {
                     autoCapitalize="characters"
                     autoComplete="off"
                     maxLength={24}
-                    className="min-h-12 min-w-0 flex-1 select-text rounded-2xl border-2 border-ink/10 bg-white px-4 text-lg font-bold uppercase outline-none focus:border-coral"
+                    className="min-h-12 min-w-0 flex-1 select-text rounded-2xl border-2 border-ink/10 bg-card px-4 text-lg font-bold uppercase outline-none focus:border-coral"
                   />
-                  <button type="submit" className="min-h-12 shrink-0 rounded-2xl bg-ink px-4 text-base font-extrabold text-white active:translate-y-0.5">
+                  <button type="submit" className="min-h-12 shrink-0 rounded-2xl bg-night px-4 text-base font-extrabold text-white active:translate-y-0.5">
                     {t('plans.promo.apply')}
                   </button>
                 </div>
                 {promoError && (
-                  <p role="alert" className="text-sm font-bold text-coral-dark">
+                  <p role="alert" className="text-sm font-bold text-bad-ink">
                     {promoError}
                   </p>
                 )}
                 {promo && (
-                  <p role="status" className="text-sm font-bold text-[#0E6B55]">
+                  <p role="status" className="text-sm font-bold text-good-ink">
                     {t('plans.promo.applied', { code: promo.code, percent: promo.percentOff })}
                   </p>
                 )}
               </form>
             ) : (
-              <button type="button" onClick={() => setPromoOpen(true)} className="min-h-11 text-base font-extrabold text-coral-dark underline">
+              <button type="button" onClick={() => setPromoOpen(true)} className="min-h-11 text-base font-extrabold text-coral-ink underline">
                 {t('plans.promo.have')}
               </button>
             )}
           </section>
         )}
 
-        <section className="rounded-3xl bg-white p-4">
+        <section className="rounded-3xl bg-card p-4">
           <h2 className="text-lg font-extrabold">{t('plans.howTitle')}</h2>
           <ul className="mt-2 flex list-disc flex-col gap-1.5 pl-5 text-base leading-relaxed text-ink/75">
             <li>{t('plans.how1')}</li>
             <li>{t('plans.how2')}</li>
             <li>{t('plans.how3')}</li>
           </ul>
-          <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-base font-extrabold text-coral-dark">
+          <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-base font-extrabold text-coral-ink">
             <Link to="/offer" className="underline">
               {t('plans.offer')}
             </Link>

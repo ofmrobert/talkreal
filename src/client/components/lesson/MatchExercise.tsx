@@ -57,9 +57,9 @@ export default function MatchExercise({ exercise, onDone }: Props) {
 
   function look(done: boolean, picked: boolean, isWrong: boolean) {
     if (done) return 'border-mint bg-mint/15 text-ink/40'
-    if (isWrong) return 'border-coral bg-coral/15 text-coral-dark shake'
-    if (picked) return 'border-coral bg-coral/10 text-coral-dark shadow-[0_4px_0_0_var(--color-coral)]'
-    return 'border-ink/10 bg-white shadow-[0_4px_0_0_rgba(31,27,58,0.08)]'
+    if (isWrong) return 'border-bad bg-bad/15 text-bad-ink shake'
+    if (picked) return 'border-coral bg-coral/10 text-coral-ink shadow-[0_4px_0_0_var(--color-coral)]'
+    return 'border-ink/10 bg-card shadow-[0_4px_0_0_rgb(var(--shade)/0.08)]'
   }
 
   const cell = 'flex min-h-16 w-full items-center justify-center rounded-2xl border-2 px-2 py-2 text-center text-base font-bold leading-tight transition-colors'

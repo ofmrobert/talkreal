@@ -61,17 +61,17 @@ export default function Profile() {
   const facts = [profile?.age ? t('profile.years', { count: profile.age }) : null, profile?.city].filter(Boolean).join(' · ')
 
   const numbers = [
-    { icon: <FlameIcon width={22} height={22} className="text-coral" />, value: user.currentStreak, label: t('profile.statStreak') },
+    { icon: <FlameIcon width={22} height={22} className="text-bad" />, value: user.currentStreak, label: t('profile.statStreak') },
     { icon: <BoltIcon width={22} height={22} className="text-sun" />, value: user.xp, label: t('profile.statXp') },
-    { icon: <BookIcon width={22} height={22} className="text-[#7C5CFF]" />, value: stats?.lessons ?? 0, label: t('profile.statLessons') },
+    { icon: <BookIcon width={22} height={22} className="text-violet" />, value: stats?.lessons ?? 0, label: t('profile.statLessons') },
     { icon: <MicIcon width={22} height={22} className="text-mint" />, value: stats?.callMinutes ?? 0, label: t('profile.statMinutes') },
   ]
 
   return (
     <div className="flex flex-col gap-5">
       {/* The card at the top: cover, photo, name, a few words */}
-      <section className="overflow-hidden rounded-3xl bg-white shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
-        <div className="relative h-24 bg-gradient-to-br from-coral via-[#FF8A5C] to-[#7C5CFF]">
+      <section className="overflow-hidden rounded-3xl bg-card shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
+        <div className="relative h-24 bg-gradient-to-br from-coral to-violet">
           <span className="float-slow absolute -right-4 -top-6 h-24 w-24 rounded-full bg-white/15" aria-hidden="true" />
           <span className="float-slow absolute left-8 top-10 h-10 w-10 rounded-full bg-white/15" aria-hidden="true" />
           <button
@@ -86,11 +86,11 @@ export default function Profile() {
         <div className="flex flex-col gap-3 px-5 pb-5">
           {/* Above the cover, so the photo overlaps it instead of hiding behind it. */}
           <div className="relative z-[1] -mt-12 flex items-end justify-between">
-            <Avatar userId={user.id} name={name} photoVersion={profile?.photoVersion ?? user.photoVersion} size={96} className="ring-4 ring-white" />
+            <Avatar userId={user.id} name={name} photoVersion={profile?.photoVersion ?? user.photoVersion} size={96} className="ring-4 ring-card" />
             <button
               type="button"
               onClick={() => navigate('/profile/edit')}
-              className="min-h-10 rounded-full border-2 border-ink/10 bg-white px-4 text-sm font-extrabold active:translate-y-0.5"
+              className="min-h-10 rounded-full border-2 border-ink/10 bg-card px-4 text-sm font-extrabold active:translate-y-0.5"
             >
               {t('profile.edit')}
             </button>
@@ -98,7 +98,7 @@ export default function Profile() {
           <div>
             <h1 className="flex flex-wrap items-center gap-2 text-2xl font-extrabold leading-tight">
               {name ?? t('profile.noName')}
-              {paid && <span className="rounded-full bg-ink px-2.5 py-0.5 text-xs font-extrabold uppercase tracking-wide text-sun">👑 {t(`plans.name.${user.plan}`)}</span>}
+              {paid && <span className="rounded-full bg-night px-2.5 py-0.5 text-xs font-extrabold uppercase tracking-wide text-sun">👑 {t(`plans.name.${user.plan}`)}</span>}
             </h1>
             <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-bold text-ink/55">
               {user.level && <span className="rounded-full bg-coral px-2.5 py-0.5 text-white">{user.level}</span>}
@@ -110,7 +110,7 @@ export default function Profile() {
           {profile && profile.goals.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
               {GOALS.filter((g) => profile.goals.includes(g.id)).map((g) => (
-                <span key={g.id} className="rounded-full bg-coral/10 px-3 py-1 text-sm font-extrabold text-coral-dark">
+                <span key={g.id} className="rounded-full bg-coral/10 px-3 py-1 text-sm font-extrabold text-coral-ink">
                   {g.icon} {t(`goals.${g.id}`)}
                 </span>
               ))}
@@ -132,7 +132,7 @@ export default function Profile() {
       {/* The numbers */}
       <section className="grid grid-cols-4 gap-2">
         {numbers.map((n) => (
-          <div key={n.label} className="flex flex-col items-center gap-0.5 rounded-2xl bg-white px-1 py-3 text-center shadow-[0_4px_0_0_rgba(31,27,58,0.06)]">
+          <div key={n.label} className="flex flex-col items-center gap-0.5 rounded-2xl bg-card px-1 py-3 text-center shadow-[0_4px_0_0_rgb(var(--shade)/0.06)]">
             {n.icon}
             <span className="text-xl font-extrabold tabular-nums leading-tight">{n.value}</span>
             <span className="text-[11px] font-bold leading-tight text-ink/50">{n.label}</span>
@@ -149,7 +149,7 @@ export default function Profile() {
               {filled.done} / {filled.total}
             </span>
           </span>
-          <span className="block h-2.5 w-full rounded-full bg-white/70">
+          <span className="block h-2.5 w-full rounded-full bg-card/70">
             <span className="block h-2.5 rounded-full bg-sun transition-all" style={{ width: `${(filled.done / filled.total) * 100}%` }} />
           </span>
           <span className="text-sm font-semibold text-ink/65">{t(`profile.missing.${filled.missing}`)}</span>
@@ -157,7 +157,7 @@ export default function Profile() {
       )}
 
       {/* The plan */}
-      <Link to="/plans" className={`flex items-center gap-3 rounded-3xl p-4 active:translate-y-0.5 ${paid ? 'bg-ink text-white' : 'bg-white shadow-[0_5px_0_0_rgba(31,27,58,0.07)]'}`}>
+      <Link to="/plans" className={`flex items-center gap-3 rounded-3xl p-4 active:translate-y-0.5 ${paid ? 'bg-night text-white' : 'bg-card shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]'}`}>
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sun text-2xl" aria-hidden="true">
           👑
         </span>
@@ -171,23 +171,23 @@ export default function Profile() {
       </Link>
 
       {/* What is coming: students practising with each other */}
-      <section className="relative overflow-hidden rounded-3xl bg-[#EDE8FF] p-5">
+      <section className="relative overflow-hidden rounded-3xl bg-violet-soft p-5">
         <span className="absolute -right-5 -top-5 text-7xl opacity-20" aria-hidden="true">
           🌍
         </span>
-        <p className="text-xs font-extrabold uppercase tracking-wide text-[#5B3FD6]">{t('community.soon')}</p>
+        <p className="text-xs font-extrabold uppercase tracking-wide text-violet-ink">{t('community.soon')}</p>
         <h2 className="mt-1 text-xl font-extrabold leading-tight">{t('community.title')}</h2>
         <p className="mt-1 text-base leading-snug text-ink/70">{t('community.text')}</p>
         <p className="mt-3 text-sm font-bold text-ink/60">
           {profile?.discoverable ? `✓ ${t('community.visible')}` : t('community.hidden')}{' '}
-          <button type="button" onClick={() => navigate('/profile/edit')} className="font-extrabold text-[#5B3FD6] underline">
+          <button type="button" onClick={() => navigate('/profile/edit')} className="font-extrabold text-violet-ink underline">
             {t('community.change')}
           </button>
         </p>
       </section>
 
       {user.isAdmin && (
-        <Link to="/admin" className="flex min-h-12 items-center justify-center rounded-2xl bg-ink px-4 text-base font-extrabold text-white active:translate-y-0.5">
+        <Link to="/admin" className="flex min-h-12 items-center justify-center rounded-2xl bg-night px-4 text-base font-extrabold text-white active:translate-y-0.5">
           Admin panel
         </Link>
       )}
@@ -197,7 +197,7 @@ export default function Profile() {
       <button
         type="button"
         onClick={() => navigate('/settings')}
-        className="flex min-h-14 items-center gap-3 rounded-2xl bg-white px-4 text-left text-base font-extrabold shadow-[0_4px_0_0_rgba(31,27,58,0.06)] active:translate-y-0.5"
+        className="flex min-h-14 items-center gap-3 rounded-2xl bg-card px-4 text-left text-base font-extrabold shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5"
       >
         <span className="text-xl" aria-hidden="true">
           ⚙

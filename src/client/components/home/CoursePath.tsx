@@ -44,12 +44,12 @@ interface Props {
 
 /** Each unit has its own colour, so the path changes as the student moves on. */
 const COLORS = [
-  { main: '#FF6B4A', dark: '#E2512F', ring: 'rgba(255,107,74,0.45)' },
+  { main: 'var(--color-coral)', dark: 'var(--color-coral-dark)', ring: 'color-mix(in srgb, var(--color-coral) 45%, transparent)' },
   { main: '#7C5CFF', dark: '#5B3FD6', ring: 'rgba(124,92,255,0.45)' },
   { main: '#2EC4A0', dark: '#1FA283', ring: 'rgba(46,196,160,0.45)' },
   { main: '#3D9BFF', dark: '#2379D8', ring: 'rgba(61,155,255,0.45)' },
 ]
-const LOCKED = { main: '#E9E4DE', dark: '#D3CCC3', ring: 'transparent' }
+const LOCKED = { main: 'var(--color-locked)', dark: 'var(--color-locked-dark)', ring: 'transparent' }
 const GOLD = { main: '#FFC53D', dark: '#E0A21A', ring: 'rgba(255,197,61,0.55)' }
 
 /** How far each node sits from the middle, in pixels: the path winds left and right. */
@@ -97,7 +97,7 @@ function PathNode({ status, color, step, current, big = false, label, icon, accu
       style={{ transform: `translateX(${WAVE[step % WAVE.length]}px)` }}
     >
       {current && (
-        <span className="path-hop absolute -top-9 left-1/2 z-[1] whitespace-nowrap rounded-xl border-2 border-ink/10 bg-white px-3 py-1 text-sm font-extrabold tracking-wide" style={{ color: paint.dark }}>
+        <span className="path-hop absolute -top-9 left-1/2 z-[1] whitespace-nowrap rounded-xl border-2 border-ink/10 bg-card px-3 py-1 text-sm font-extrabold tracking-wide" style={{ color: paint.dark }}>
           {t('path.start')}
         </span>
       )}
@@ -207,14 +207,14 @@ export default function CoursePath({ level, units, exam }: Props) {
         return (
           <div key={unit.number} className="flex flex-col gap-7">
             <header
-              className={`flex items-center gap-3 rounded-3xl p-4 ${reached ? 'text-white' : 'bg-[#E9E4DE] text-ink/45'}`}
+              className={`flex items-center gap-3 rounded-3xl p-4 ${reached ? 'text-white' : 'bg-locked text-ink/45'}`}
               style={reached ? { background: color.main, boxShadow: `0 5px 0 0 ${color.dark}` } : undefined}
             >
               <div className="min-w-0 flex-1">
                 <p className="text-xs font-extrabold uppercase tracking-wide opacity-80">{t('path.unit', { number: unit.number })}</p>
                 <h3 className="text-xl font-extrabold leading-tight">{unit.title[lang]}</h3>
               </div>
-              <span className={`shrink-0 rounded-full px-3 py-1 text-sm font-extrabold ${reached ? 'bg-white/25' : 'bg-white/60'}`}>
+              <span className={`shrink-0 rounded-full px-3 py-1 text-sm font-extrabold ${reached ? 'bg-white/25' : 'bg-card/60'}`}>
                 {done} / {unit.lessons.length}
               </span>
             </header>
@@ -260,16 +260,16 @@ export default function CoursePath({ level, units, exam }: Props) {
       {units.length > 0 &&
         (exam.status === 'done' && !exam.nextLevel ? (
           <div className="rounded-3xl bg-sun/30 p-5 text-center">
-            <CrownIcon width={44} height={44} className="mx-auto text-[#E0A21A]" />
+            <CrownIcon width={44} height={44} className="mx-auto text-sun-dark" />
             <h3 className="mt-1 text-2xl font-extrabold">{t('path.courseDoneTitle')}</h3>
             <p className="mt-1 text-base text-ink/70">{t('path.courseDoneText')}</p>
           </div>
         ) : (
           <div
             ref={exam.id === currentId ? currentRef : undefined}
-            className={`flex items-center gap-4 rounded-3xl p-4 ${exam.status === 'locked' ? 'bg-[#E9E4DE] text-ink/45' : 'bg-ink text-white shadow-[0_6px_0_0_rgba(31,27,58,0.25)]'}`}
+            className={`flex items-center gap-4 rounded-3xl p-4 ${exam.status === 'locked' ? 'bg-locked text-ink/45' : 'bg-night text-white shadow-[0_6px_0_0_rgb(var(--shade)/0.25)]'}`}
           >
-            <span className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl ${exam.status === 'locked' ? 'bg-white/60' : 'bg-sun text-ink'}`}>
+            <span className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl ${exam.status === 'locked' ? 'bg-card/60' : 'bg-sun text-coal'}`}>
               {exam.status === 'locked' ? <LockIcon width={30} height={30} /> : <CrownIcon width={36} height={36} />}
             </span>
             <div className="min-w-0 flex-1">
@@ -282,7 +282,7 @@ export default function CoursePath({ level, units, exam }: Props) {
               <button
                 type="button"
                 onClick={() => setSelected({ kind: 'exam' })}
-                className="min-h-12 shrink-0 rounded-2xl bg-sun px-4 text-base font-extrabold text-ink shadow-[0_4px_0_0_#E0A21A] active:translate-y-1 active:shadow-[0_1px_0_0_#E0A21A]"
+                className="min-h-12 shrink-0 rounded-2xl bg-sun px-4 text-base font-extrabold text-coal shadow-[0_4px_0_0_var(--color-sun-dark)] active:translate-y-1 active:shadow-[0_1px_0_0_var(--color-sun-dark)]"
               >
                 {t(exam.status === 'done' ? 'test.retake' : 'test.start')}
               </button>

@@ -89,7 +89,7 @@ export default function TelegramLogin({ onError, consent }: { onError: (code: st
 
   if (login) {
     return (
-      <div className="flex flex-col gap-3 rounded-3xl bg-white p-4 text-center">
+      <div className="flex flex-col gap-3 rounded-3xl bg-card p-4 text-center">
         <p className="text-base font-bold">{t('login.telegramWaiting')}</p>
         <a
           href={login.url}

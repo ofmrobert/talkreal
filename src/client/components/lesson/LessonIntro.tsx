@@ -48,7 +48,7 @@ export default function LessonIntro({ lesson, onStart, onClose }: Props) {
 
         {card ? (
           <>
-            <section className="rounded-3xl bg-white p-5 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+            <section className="rounded-3xl bg-card p-5 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
               <p className="text-xs font-extrabold uppercase tracking-wide text-ink/45">{t('lesson.rule')}</p>
               <h2 className="mt-1 text-xl font-extrabold leading-snug">{card.title}</h2>
               <p className="mt-3 select-text text-base leading-relaxed text-ink/80">{card.body}</p>
@@ -56,7 +56,7 @@ export default function LessonIntro({ lesson, onStart, onClose }: Props) {
 
             <section className="flex flex-col gap-2">
               {card.examples.map((example) => (
-                <div key={example.en} className="flex items-center gap-3 rounded-2xl border-l-4 border-mint bg-white py-3 pl-4 pr-3">
+                <div key={example.en} className="flex items-center gap-3 rounded-2xl border-l-4 border-mint bg-card py-3 pl-4 pr-3">
                   <div className="min-w-0 flex-1 select-text">
                     <p className="text-lg font-bold leading-snug">{example.en}</p>
                     <p className="text-sm text-ink/55">{example.ru}</p>
@@ -83,7 +83,7 @@ export default function LessonIntro({ lesson, onStart, onClose }: Props) {
             </div>
             <section className="flex flex-col gap-2">
               {lesson.vocab.map((word) => (
-                <div key={word.en} className="flex items-center gap-3 rounded-2xl bg-white py-3 pl-4 pr-3">
+                <div key={word.en} className="flex items-center gap-3 rounded-2xl bg-card py-3 pl-4 pr-3">
                   <div className="min-w-0 flex-1 select-text">
                     <p className="text-lg font-extrabold leading-snug">
                       {word.en} <span className="font-semibold text-ink/50">— {word.ru}</span>

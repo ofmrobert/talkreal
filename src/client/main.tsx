@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './i18n'
 import './index.css'
 import App from './App'
+import { applyTheme, chosenTheme } from './lib/theme'
+
+applyTheme(chosenTheme())
 
 /**
  * The app is saved on the phone so it opens instantly and works offline. Without the lines below,

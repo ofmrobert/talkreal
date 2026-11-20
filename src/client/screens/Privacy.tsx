@@ -25,7 +25,7 @@ export default function Privacy() {
       <main className="flex flex-1 select-text flex-col gap-4 overflow-y-auto pb-4">
         <p className="text-base leading-relaxed text-ink/75">{text.intro}</p>
         {text.sections.map((section) => (
-          <section key={section.heading} className="rounded-3xl bg-white p-4">
+          <section key={section.heading} className="rounded-3xl bg-card p-4">
             <h2 className="text-lg font-extrabold">{section.heading}</h2>
             <ul className="mt-2 flex list-disc flex-col gap-1.5 pl-5 text-base leading-relaxed text-ink/75">
               {section.items.map((item) => (

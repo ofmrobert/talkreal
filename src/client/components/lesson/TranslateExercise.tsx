@@ -12,7 +12,7 @@ interface Props {
 }
 
 const tileClass =
-  'min-h-12 rounded-xl border-2 border-ink/10 bg-white px-3.5 text-lg font-bold shadow-[0_3px_0_0_rgba(31,27,58,0.1)] active:translate-y-0.5 active:shadow-none'
+  'min-h-12 rounded-xl border-2 border-ink/10 bg-card px-3.5 text-lg font-bold shadow-[0_3px_0_0_rgb(var(--shade)/0.1)] active:translate-y-0.5 active:shadow-none'
 
 /** Build the English sentence by tapping word tiles. Tap a placed word to put it back. */
 export default function TranslateExercise({ exercise, tiles, placed, onChange, checked }: Props) {
@@ -20,7 +20,7 @@ export default function TranslateExercise({ exercise, tiles, placed, onChange, c
     <div className="flex flex-1 flex-col gap-5">
       <div className="flex items-center gap-2">
         <Chai size={72} />
-        <p className="select-text rounded-3xl rounded-bl-md bg-white px-4 py-3 text-lg font-bold shadow-[0_4px_0_0_rgba(31,27,58,0.07)]">
+        <p className="select-text rounded-3xl rounded-bl-md bg-card px-4 py-3 text-lg font-bold shadow-[0_4px_0_0_rgb(var(--shade)/0.07)]">
           {exercise.source}
         </p>
       </div>

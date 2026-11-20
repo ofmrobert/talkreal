@@ -117,7 +117,7 @@ export default function Test() {
           ✕
         </button>
         <div className="slide-in flex flex-1 flex-col items-center justify-center gap-5 text-center">
-          <span className="pop-in flex h-28 w-28 items-center justify-center rounded-[2rem] bg-sun text-ink shadow-[0_7px_0_0_#E0A21A]">
+          <span className="pop-in flex h-28 w-28 items-center justify-center rounded-[2rem] bg-sun text-coal shadow-[0_7px_0_0_var(--color-sun-dark)]">
             <Icon width={64} height={64} />
           </span>
           <div>
@@ -126,7 +126,7 @@ export default function Test() {
           </div>
           <ul className="flex w-full flex-col gap-2 text-left">
             {[t('test.questions', { count: test.exercises.length }), t('test.passMark', { mark: test.passMark }), t('test.free')].map((line) => (
-              <li key={line} className="rounded-2xl bg-white px-4 py-3 text-base font-bold shadow-[0_4px_0_0_rgba(31,27,58,0.06)]">
+              <li key={line} className="rounded-2xl bg-card px-4 py-3 text-base font-bold shadow-[0_4px_0_0_rgb(var(--shade)/0.06)]">
                 {line}
               </li>
             ))}

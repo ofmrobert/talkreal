@@ -119,7 +119,7 @@ export default function ProfileSetup() {
         )}
 
         {failed && (
-          <p role="alert" className="rounded-2xl bg-coral/15 p-3 text-center text-base font-bold text-coral-dark">
+          <p role="alert" className="rounded-2xl bg-bad/15 p-3 text-center text-base font-bold text-bad-ink">
             {t('profile.saveFailed')}
           </p>
         )}

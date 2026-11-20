@@ -50,7 +50,7 @@ export default function TopicPicker({ level, lastLesson, value, onChange }: Prop
               aria-checked={active}
               onClick={() => onChange(option.topic)}
               className={`flex min-h-11 items-center gap-1.5 rounded-2xl border-2 px-3 py-1.5 text-left text-sm font-extrabold active:translate-y-0.5 ${
-                active ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/10 bg-white text-ink'
+                active ? 'border-coral bg-coral/10 text-coral-ink' : 'border-ink/10 bg-card text-ink'
               }`}
             >
               <span aria-hidden="true">{option.icon}</span>

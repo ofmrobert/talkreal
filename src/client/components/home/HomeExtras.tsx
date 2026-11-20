@@ -48,7 +48,7 @@ export function MascotSays({ streak }: { streak: number }) {
       <Chai size={92} mood={streak >= 2 ? 'excited' : 'happy'} />
       <span
         key={index}
-        className="bubble-in min-w-0 flex-1 rounded-3xl rounded-bl-md bg-white px-4 py-3 text-base font-bold leading-snug shadow-[0_4px_0_0_rgba(31,27,58,0.07)]"
+        className="bubble-in min-w-0 flex-1 rounded-3xl rounded-bl-md bg-card px-4 py-3 text-base font-bold leading-snug shadow-[0_4px_0_0_rgb(var(--shade)/0.07)]"
       >
         {messages[index % messages.length]}
       </span>
@@ -63,7 +63,7 @@ export function WeekStrip({ week }: { week: { day: string; xp: number }[] }) {
   const activeDays = week.filter((d) => d.xp > 0).length
 
   return (
-    <section className="rounded-3xl bg-white p-4 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+    <section className="rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
       <div className="mb-3 flex items-baseline justify-between">
         <h2 className="text-base font-extrabold">{t('home.weekTitle')}</h2>
         <span className="text-sm font-bold text-ink/50">{t('home.weekDays', { count: activeDays })}</span>
@@ -98,7 +98,7 @@ export function PhraseOfDay() {
   const phrase = home.phrases[dayNumber() % home.phrases.length]
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-[#7C5CFF] p-5 text-white shadow-[0_6px_0_0_#5B3FE0]">
+    <section className="relative overflow-hidden rounded-3xl bg-violet p-5 text-white shadow-[0_6px_0_0_var(--color-violet-dark)]">
       <span className="float-slow absolute -right-6 -top-8 h-28 w-28 rounded-full bg-white/10" aria-hidden="true" />
       <span className="float-slow absolute -bottom-10 right-16 h-20 w-20 rounded-full bg-white/10" style={{ animationDelay: '1.5s' }} aria-hidden="true" />
       <p className="relative text-xs font-extrabold uppercase tracking-wide text-white/75">{t('home.phraseTitle')}</p>
@@ -128,7 +128,7 @@ export function TeacherOfDay() {
     <button
       type="button"
       onClick={() => navigate(`/talk/${teacher.id}`)}
-      className="flex w-full items-center gap-4 rounded-3xl bg-white p-4 text-left shadow-[0_5px_0_0_rgba(31,27,58,0.07)] active:translate-y-0.5"
+      className="flex w-full items-center gap-4 rounded-3xl bg-card p-4 text-left shadow-[0_5px_0_0_rgb(var(--shade)/0.07)] active:translate-y-0.5"
     >
       <TeacherAvatar teacher={teacher.id} size={76} />
       <span className="min-w-0 flex-1">

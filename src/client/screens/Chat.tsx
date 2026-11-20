@@ -125,13 +125,13 @@ export default function Chat() {
           <p className="truncate text-sm font-semibold text-ink/55">{t('chat.subtitle')}</p>
         </div>
         {left !== null && (
-          <span className={`rounded-full px-3 py-1.5 text-sm font-extrabold tabular-nums ${left <= 3 ? 'bg-coral text-white' : 'bg-white'}`} aria-label={t('chat.left')}>
+          <span className={`rounded-full px-3 py-1.5 text-sm font-extrabold tabular-nums ${left <= 3 ? 'bg-coral text-white' : 'bg-card'}`} aria-label={t('chat.left')}>
             ✉ {left}
           </span>
         )}
       </header>
 
-      <main className="flex flex-1 flex-col gap-3 overflow-y-auto rounded-3xl bg-white/60 p-4" aria-live="polite">
+      <main className="flex flex-1 flex-col gap-3 overflow-y-auto rounded-3xl bg-card/60 p-4" aria-live="polite">
         {!started && (
           <div className="m-auto flex w-full flex-col items-center gap-4 text-center">
             <TeacherAvatar teacher={teacher.id} size={110} />
@@ -145,7 +145,7 @@ export default function Chat() {
         {messages.map((message, i) =>
           message.role === 'teacher' ? (
             <div key={i} className="bubble-in flex max-w-[88%] items-end gap-1.5 self-start">
-              <p className="select-text rounded-3xl rounded-bl-md bg-white px-4 py-2.5 text-base font-semibold leading-snug shadow-[0_3px_0_0_rgba(31,27,58,0.06)]">
+              <p className="select-text rounded-3xl rounded-bl-md bg-card px-4 py-2.5 text-base font-semibold leading-snug shadow-[0_3px_0_0_rgb(var(--shade)/0.06)]">
                 {message.text}
               </p>
               <SpeakButton text={message.text} className="!h-8 !w-8" />
@@ -154,28 +154,28 @@ export default function Chat() {
             <div key={i} className="flex max-w-[88%] flex-col items-end gap-1 self-end">
               <p className="select-text rounded-3xl rounded-br-md bg-coral px-4 py-2.5 text-base font-semibold leading-snug text-white">{message.text}</p>
               {message.correction && (
-                <div className="bubble-in select-text rounded-2xl bg-[#DDF6EF] px-3 py-2 text-sm leading-snug text-[#0E6B55]">
+                <div className="bubble-in select-text rounded-2xl bg-good-soft px-3 py-2 text-sm leading-snug text-good-ink">
                   <p className="font-extrabold">✎ {message.correction.better}</p>
                   {message.correction.why && <p className="mt-0.5">{message.correction.why}</p>}
                 </div>
               )}
-              {message.correction === null && <span className="text-xs font-extrabold text-[#0E8A6C]">✓ {t('chat.noMistakes')}</span>}
+              {message.correction === null && <span className="text-xs font-extrabold text-good-ink">✓ {t('chat.noMistakes')}</span>}
             </div>
           ),
         )}
 
         {busy && (
-          <p className="pulse-soft self-start rounded-3xl rounded-bl-md bg-white px-4 py-2.5 text-base font-bold text-ink/45" role="status">
+          <p className="pulse-soft self-start rounded-3xl rounded-bl-md bg-card px-4 py-2.5 text-base font-bold text-ink/45" role="status">
             {t('chat.typing', { name: teacher.name })}
           </p>
         )}
         {error && (
           <div className="flex flex-col items-center gap-2 self-center text-center">
-            <p role="alert" className="rounded-2xl bg-coral/15 px-4 py-2 text-base font-bold text-coral-dark">
+            <p role="alert" className="rounded-2xl bg-bad/15 px-4 py-2 text-base font-bold text-bad-ink">
               {error}
             </p>
             {!outOfMessages && (
-              <button type="button" onClick={() => ask(messages)} className="min-h-11 text-base font-extrabold text-coral-dark underline">
+              <button type="button" onClick={() => ask(messages)} className="min-h-11 text-base font-extrabold text-coral-ink underline">
                 {t('chat.retry')}
               </button>
             )}
@@ -199,7 +199,7 @@ export default function Chat() {
             disabled={outOfMessages}
             placeholder={outOfMessages ? t('chat.limit') : t('chat.placeholder')}
             aria-label={t('chat.placeholder')}
-            className="min-h-14 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-white px-4 py-3 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral disabled:bg-white/50"
+            className="min-h-14 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-card px-4 py-3 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral disabled:bg-card/50"
           />
           <button
             type="submit"

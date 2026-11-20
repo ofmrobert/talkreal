@@ -699,5 +699,21 @@
       "text": "With a paid plan you read every answer, write your own, and a teacher corrects your English before it is posted.",
       "button": "Open with Pro"
     }
+  },
+  "theme": {
+    "title": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Same as my phone",
+    "autoHint": "Light by day, dark when your phone is in dark mode",
+    "names": {
+      "cream": "Classic",
+      "rose": "Rose",
+      "ocean": "Ocean",
+      "lavender": "Lavender",
+      "forest": "Forest",
+      "midnight": "Midnight",
+      "plum": "Evening rose"
+    }
   }
 }

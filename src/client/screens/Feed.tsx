@@ -23,7 +23,7 @@ function Faces({ faces, size = 28 }: { faces: FeedFace[]; size?: number }) {
   return (
     <span className="flex -space-x-2">
       {faces.map((face) => (
-        <Avatar key={face.userId} userId={face.userId} name={face.name} photoVersion={face.photoVersion} size={size} className="ring-2 ring-white" />
+        <Avatar key={face.userId} userId={face.userId} name={face.name} photoVersion={face.photoVersion} size={size} className="ring-2 ring-card" />
       ))}
     </span>
   )
@@ -58,12 +58,12 @@ function LockedComments({ post, freeLeft, onWrite }: { post: FeedPost; freeLeft:
         <button
           type="button"
           onClick={() => navigate('/plans')}
-          className="min-h-11 rounded-2xl bg-ink px-4 text-sm font-extrabold text-white shadow-[0_4px_0_0_rgba(31,27,58,0.3)] active:translate-y-1"
+          className="min-h-11 rounded-2xl bg-night px-4 text-sm font-extrabold text-white shadow-[0_4px_0_0_rgb(var(--shade)/0.3)] active:translate-y-1"
         >
           👑 {t(post.comments > 0 ? 'feed.locked.see' : 'feed.locked.join')}
         </button>
         {freeLeft > 0 && (
-          <button type="button" onClick={onWrite} className="min-h-9 text-sm font-extrabold text-coral-dark underline">
+          <button type="button" onClick={onWrite} className="min-h-9 text-sm font-extrabold text-coral-ink underline">
             {t('feed.locked.tryOne')}
           </button>
         )}
@@ -163,14 +163,14 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
       {comments?.length === 0 && canDiscuss && <p className="text-sm font-semibold text-ink/50">{t('feed.beFirst')}</p>}
 
       {suggestion ? (
-        <div className="bubble-in flex flex-col gap-2 rounded-2xl bg-[#DDF6EF] p-3">
-          <p className="text-sm font-extrabold text-[#0E6B55]">{t('feed.suggestTitle')}</p>
-          <p className="select-text text-base font-bold text-[#0E6B55]">{suggestion}</p>
+        <div className="bubble-in flex flex-col gap-2 rounded-2xl bg-good-soft p-3">
+          <p className="text-sm font-extrabold text-good-ink">{t('feed.suggestTitle')}</p>
+          <p className="select-text text-base font-bold text-good-ink">{suggestion}</p>
           <div className="flex gap-2">
-            <button type="button" disabled={busy} onClick={() => send(suggestion, true)} className="min-h-11 flex-1 rounded-2xl bg-mint px-3 text-sm font-extrabold text-white shadow-[0_4px_0_0_#1FA283] active:translate-y-1">
+            <button type="button" disabled={busy} onClick={() => send(suggestion, true)} className="min-h-11 flex-1 rounded-2xl bg-mint px-3 text-sm font-extrabold text-white shadow-[0_4px_0_0_var(--color-mint-dark)] active:translate-y-1">
               {t('feed.suggestUse')}
             </button>
-            <button type="button" disabled={busy} onClick={() => send(draft.trim(), true)} className="min-h-11 flex-1 rounded-2xl bg-white px-3 text-sm font-extrabold text-ink ring-2 ring-inset ring-ink/10 active:translate-y-0.5">
+            <button type="button" disabled={busy} onClick={() => send(draft.trim(), true)} className="min-h-11 flex-1 rounded-2xl bg-card px-3 text-sm font-extrabold text-ink ring-2 ring-inset ring-ink/10 active:translate-y-0.5">
               {t('feed.suggestKeep')}
             </button>
           </div>
@@ -185,7 +185,7 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
               lang="en"
               placeholder={t(canDiscuss ? 'feed.write' : 'feed.writeFree')}
               aria-label={t('feed.write')}
-              className="min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-white px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
+              className="min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-card px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
             />
             <button
               type="submit"
@@ -199,7 +199,7 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
         )
       )}
       {error && (
-        <p role="alert" className="text-sm font-bold text-coral-dark">
+        <p role="alert" className="text-sm font-bold text-bad-ink">
           {error}
         </p>
       )}
@@ -248,7 +248,7 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: Ca
   const totalVotes = (post.votes ?? []).reduce((sum, n) => sum + n, 0)
 
   return (
-    <article className="flex flex-col gap-3 rounded-3xl bg-white p-4 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+    <article className="flex flex-col gap-3 rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
       <header className="flex items-center gap-2.5">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-cream">
           <Chai size={44} />
@@ -272,7 +272,7 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: Ca
       <h2 className="text-xl font-extrabold leading-tight">{body.title[lang]}</h2>
 
       {body.english && (
-        <p className="flex items-center gap-2 rounded-2xl bg-coral/10 px-4 py-3 text-lg font-extrabold leading-snug text-coral-dark">
+        <p className="flex items-center gap-2 rounded-2xl bg-coral/10 px-4 py-3 text-lg font-extrabold leading-snug text-coral-ink">
           <span className="min-w-0 flex-1 select-text">{body.english}</span>
           <SpeakButton text={body.english.replace(/_+/g, ' ')} />
         </p>
@@ -295,7 +295,7 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: Ca
                 disabled={answered}
                 onClick={() => vote(i)}
                 className={`relative min-h-12 overflow-hidden rounded-2xl border-2 px-4 py-2.5 text-left text-base font-bold active:translate-y-0.5 ${
-                  right ? 'border-mint bg-mint/10' : mine ? 'border-coral bg-coral/10 text-coral-dark' : 'border-ink/10 bg-white'
+                  right ? 'border-mint bg-mint/10' : mine ? 'border-bad bg-bad/10 text-bad-ink' : 'border-ink/10 bg-card'
                 }`}
               >
                 {answered && <span className={`absolute inset-y-0 left-0 ${right ? 'bg-mint/25' : 'bg-ink/5'}`} style={{ width: `${share}%` }} aria-hidden="true" />}
@@ -310,8 +310,8 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: Ca
               </button>
             )
           })}
-          {answered && body.explanation && <p className="bubble-in select-text rounded-2xl bg-[#DDF6EF] px-4 py-3 text-base leading-snug text-[#0E6B55]">{body.explanation[lang]}</p>}
-          {gained > 0 && <p className="pop-in text-sm font-extrabold text-[#0E8A6C]">+{gained} XP</p>}
+          {answered && body.explanation && <p className="bubble-in select-text rounded-2xl bg-good-soft px-4 py-3 text-base leading-snug text-good-ink">{body.explanation[lang]}</p>}
+          {gained > 0 && <p className="pop-in text-sm font-extrabold text-good-ink">+{gained} XP</p>}
         </div>
       )}
 
@@ -321,7 +321,7 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: Ca
           onClick={like}
           aria-pressed={post.liked}
           aria-label={t('feed.like')}
-          className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-extrabold active:scale-95 ${post.liked ? 'bg-coral/15 text-coral-dark' : 'bg-ink/5 text-ink/60'}`}
+          className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-extrabold active:scale-95 ${post.liked ? 'bg-bad/15 text-bad-ink' : 'bg-ink/5 text-ink/60'}`}
         >
           <span aria-hidden="true">{post.liked ? '♥' : '♡'}</span>
           {post.likes}
@@ -330,7 +330,7 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft }: Ca
           type="button"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
-          className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-extrabold active:scale-95 ${open ? 'bg-ink text-white' : 'bg-ink/5 text-ink/60'}`}
+          className={`flex min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-extrabold active:scale-95 ${open ? 'bg-night text-white' : 'bg-ink/5 text-ink/60'}`}
         >
           <span aria-hidden="true">💬</span>
           {post.comments}
@@ -404,17 +404,17 @@ export default function Feed() {
         <button
           type="button"
           onClick={() => navigate('/plans')}
-          className="relative overflow-hidden rounded-3xl bg-ink p-4 text-left text-white shadow-[0_6px_0_0_rgba(31,27,58,0.25)] active:translate-y-1"
+          className="relative overflow-hidden rounded-3xl bg-night p-4 text-left text-white shadow-[0_6px_0_0_rgb(var(--shade)/0.25)] active:translate-y-1"
         >
           <span className="float-slow absolute -right-4 -top-6 h-24 w-24 rounded-full bg-white/10" aria-hidden="true" />
           <p className="text-xs font-extrabold uppercase tracking-wide text-sun">{t('feed.banner.over')}</p>
           <p className="mt-1 text-lg font-extrabold leading-tight">{data.activeThisWeek > 0 ? t('feed.banner.active', { count: data.activeThisWeek }) : t('feed.banner.empty')}</p>
           <p className="mt-1 text-sm font-semibold text-white/75">{t('feed.banner.text')}</p>
-          <span className="mt-3 inline-flex min-h-10 items-center rounded-2xl bg-sun px-4 text-sm font-extrabold text-ink">👑 {t('feed.banner.button')}</span>
+          <span className="mt-3 inline-flex min-h-10 items-center rounded-2xl bg-sun px-4 text-sm font-extrabold text-coal">👑 {t('feed.banner.button')}</span>
         </button>
       )}
 
-      {data.posts.length === 0 && <p className="rounded-2xl bg-white p-4 text-base text-ink/65">{t('feed.empty')}</p>}
+      {data.posts.length === 0 && <p className="rounded-2xl bg-card p-4 text-base text-ink/65">{t('feed.empty')}</p>}
 
       {data.posts.map((post) => (
         <PostCard
@@ -429,7 +429,7 @@ export default function Feed() {
       ))}
 
       {data.more && (
-        <button type="button" onClick={more} disabled={loadingMore} className="min-h-12 rounded-2xl bg-white text-base font-extrabold text-ink/70 shadow-[0_4px_0_0_rgba(31,27,58,0.06)] active:translate-y-0.5">
+        <button type="button" onClick={more} disabled={loadingMore} className="min-h-12 rounded-2xl bg-card text-base font-extrabold text-ink/70 shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5">
           {t('feed.more')}
         </button>
       )}

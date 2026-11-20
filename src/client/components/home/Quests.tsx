@@ -54,11 +54,11 @@ export default function Quests({ onClaim }: { onClaim?: () => void }) {
   const claimed = state.quests.filter((q) => q.claimed).length
 
   return (
-    <section className="rounded-3xl bg-white p-4 shadow-[0_5px_0_0_rgba(31,27,58,0.07)]">
+    <section className="rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
       <div className="mb-3 flex items-center justify-between gap-3">
         <h2 className="text-lg font-extrabold">{t('quests.title')}</h2>
         <span
-          className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-extrabold ${state.chestOpened ? 'bg-mint/20 text-[#0E6B55]' : 'bg-sun/30 text-ink'}`}
+          className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-extrabold ${state.chestOpened ? 'bg-mint/20 text-good-ink' : 'bg-sun/30 text-ink'}`}
           aria-label={t('quests.chest', { xp: state.chestXp })}
         >
           <span aria-hidden="true">{state.chestOpened ? '🎉' : '🎁'}</span>
@@ -95,7 +95,7 @@ export default function Quests({ onClaim }: { onClaim?: () => void }) {
                 +{quest.xp} XP
               </button>
             ) : (
-              <span className={`w-14 shrink-0 text-right text-sm font-extrabold ${gained?.id === quest.id ? 'pop-in text-[#0E8A6C]' : 'text-ink/35'}`}>
+              <span className={`w-14 shrink-0 text-right text-sm font-extrabold ${gained?.id === quest.id ? 'pop-in text-good-ink' : 'text-ink/35'}`}>
                 {gained?.id === quest.id ? `+${gained.xp}` : quest.claimed ? '' : `+${quest.xp}`}
               </span>
             )}

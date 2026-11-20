@@ -136,12 +136,12 @@ export default function EditProfile() {
           <InterestChips value={draft.interests} onChange={(interests) => setDraft({ ...draft, interests })} />
         </div>
 
-        <label className="flex items-start gap-3 rounded-3xl bg-[#EDE8FF] p-4">
+        <label className="flex items-start gap-3 rounded-3xl bg-violet-soft p-4">
           <input
             type="checkbox"
             checked={draft.discoverable}
             onChange={(e) => setDraft({ ...draft, discoverable: e.target.checked })}
-            className="mt-0.5 h-6 w-6 shrink-0 accent-[#7C5CFF]"
+            className="mt-0.5 h-6 w-6 shrink-0 accent-violet"
           />
           <span>
             <span className="block text-base font-extrabold">{t('profile.discoverable')}</span>
@@ -152,7 +152,7 @@ export default function EditProfile() {
         <p className="text-sm font-semibold leading-snug text-ink/50">{t('profile.privacyNote')}</p>
 
         {failed && (
-          <p role="alert" className="rounded-2xl bg-coral/15 p-3 text-center text-base font-bold text-coral-dark">
+          <p role="alert" className="rounded-2xl bg-bad/15 p-3 text-center text-base font-bold text-bad-ink">
             {t('profile.saveFailed')}
           </p>
         )}

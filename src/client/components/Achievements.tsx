@@ -35,7 +35,7 @@ export default function Achievements() {
               onClick={() => setOpen(open === badge.key ? null : badge.key)}
               aria-pressed={open === badge.key}
               className={`flex flex-col items-center gap-1.5 rounded-2xl p-3 text-center active:translate-y-0.5 ${
-                has ? 'bg-white shadow-[0_4px_0_0_rgba(31,27,58,0.07)]' : 'bg-white/50'
+                has ? 'bg-card shadow-[0_4px_0_0_rgb(var(--shade)/0.07)]' : 'bg-card/50'
               } ${open === badge.key ? 'ring-2 ring-coral' : ''}`}
             >
               <span
@@ -52,7 +52,7 @@ export default function Achievements() {
         })}
       </div>
       {open && (
-        <p className="bubble-in mt-2.5 rounded-2xl bg-white p-3 text-center text-sm font-bold text-ink/70" role="status">
+        <p className="bubble-in mt-2.5 rounded-2xl bg-card p-3 text-center text-sm font-bold text-ink/70" role="status">
           {earned.has(open) ? '✓ ' : ''}
           {t(`achievements.${open}.text`)}
         </p>

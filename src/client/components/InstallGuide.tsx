@@ -21,7 +21,7 @@ export default function InstallGuide() {
   const steps = [t('install.step1'), t('install.step2'), t('install.step3')]
 
   return (
-    <section className="w-full rounded-3xl bg-white p-5 text-left shadow-[0_6px_0_0_rgba(31,27,58,0.08)]">
+    <section className="w-full rounded-3xl bg-card p-5 text-left shadow-[0_6px_0_0_rgb(var(--shade)/0.08)]">
       <h2 className="text-lg font-bold">{t('install.title')}</h2>
       <p className="mt-1 text-sm opacity-70">{t('install.safariOnly')}</p>
       <ol className="mt-4 space-y-3">

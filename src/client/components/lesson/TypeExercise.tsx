@@ -28,7 +28,7 @@ export default function TypeExercise({ exercise, value, onChange, onSubmit, chec
       {exercise.type === 'type' ? (
         <div className="flex items-center gap-2">
           <Chai size={72} />
-          <p className="select-text rounded-3xl rounded-bl-md bg-white px-4 py-3 text-lg font-bold shadow-[0_4px_0_0_rgba(31,27,58,0.07)]">
+          <p className="select-text rounded-3xl rounded-bl-md bg-card px-4 py-3 text-lg font-bold shadow-[0_4px_0_0_rgb(var(--shade)/0.07)]">
             {exercise.source}
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function TypeExercise({ exercise, value, onChange, onSubmit, chec
         </div>
       ) : (
         // No voice on this device: the student copies the sentence, which is still writing practice.
-        <p className="select-text rounded-2xl bg-white p-4 text-xl font-bold">{exercise.audio}</p>
+        <p className="select-text rounded-2xl bg-card p-4 text-xl font-bold">{exercise.audio}</p>
       )}
 
       <textarea
@@ -61,7 +61,7 @@ export default function TypeExercise({ exercise, value, onChange, onSubmit, chec
         enterKeyHint="done"
         placeholder={t('lesson.typeHere')}
         aria-label={t(`lesson.types.${exercise.type}`)}
-        className="w-full select-text resize-none rounded-2xl border-2 border-ink/10 bg-white p-4 text-xl font-bold outline-none placeholder:font-semibold placeholder:text-ink/30 focus:border-coral"
+        className="w-full select-text resize-none rounded-2xl border-2 border-ink/10 bg-card p-4 text-xl font-bold outline-none placeholder:font-semibold placeholder:text-ink/30 focus:border-coral"
       />
     </div>
   )

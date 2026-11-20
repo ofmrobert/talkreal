@@ -67,16 +67,16 @@ export default function Talk() {
       </header>
 
       {lesson && (available || chatAvailable) && (
-        <p className="rounded-2xl bg-[#EDE8FF] p-4 text-base font-bold" role="status">
+        <p className="rounded-2xl bg-violet-soft p-4 text-base font-bold" role="status">
           📘 {t('talk.lessonHint')}
         </p>
       )}
 
       {(available || chatAvailable) && (
-        <section className={`flex flex-col gap-1 rounded-2xl p-4 ${outOfTime ? 'bg-coral/15' : 'bg-mint/20'}`}>
+        <section className={`flex flex-col gap-1 rounded-2xl p-4 ${outOfTime ? 'bg-bad/15' : 'bg-mint/20'}`}>
           {available && (
             <p className="flex items-center gap-2 text-base font-bold">
-              <MicIcon width={22} height={22} className={outOfTime ? 'text-coral-dark' : 'text-[#0E6B55]'} />
+              <MicIcon width={22} height={22} className={outOfTime ? 'text-bad-ink' : 'text-good-ink'} />
               {outOfTime ? t('talk.noTime') : t('talk.timeLeft', { time: `${minutesLeft}:${String(secondsLeft).padStart(2, '0')}` })}
             </p>
           )}
@@ -95,7 +95,7 @@ export default function Talk() {
         <button
           type="button"
           onClick={() => navigate('/plans')}
-          className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-ink px-4 text-base font-extrabold text-white shadow-[0_5px_0_0_rgba(31,27,58,0.3)] active:translate-y-1"
+          className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-night px-4 text-base font-extrabold text-white shadow-[0_5px_0_0_rgb(var(--shade)/0.3)] active:translate-y-1"
         >
           <span aria-hidden="true">👑</span>
           {t('plans.more')}
@@ -133,7 +133,7 @@ export default function Talk() {
                   type="button"
                   disabled={!canChat}
                   onClick={() => navigate(`/chat/${teacher.id}${suffix}`)}
-                  className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-white text-base font-extrabold text-ink shadow-[0_4px_0_0_rgba(31,27,58,0.14)] ring-2 ring-inset ring-ink/10 active:translate-y-1 active:shadow-[0_1px_0_0_rgba(31,27,58,0.14)] disabled:opacity-50"
+                  className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-card text-base font-extrabold text-ink shadow-[0_4px_0_0_rgb(var(--shade)/0.14)] ring-2 ring-inset ring-ink/10 active:translate-y-1 active:shadow-[0_1px_0_0_rgb(var(--shade)/0.14)] disabled:opacity-50"
                 >
                   <span aria-hidden="true">✉</span>
                   {t('talk.write')}
@@ -156,7 +156,7 @@ export default function Talk() {
                   type="button"
                   onClick={() => setOpen(isOpen ? null : call.id)}
                   aria-expanded={isOpen}
-                  className="flex items-center gap-3 rounded-2xl bg-white p-3 text-left shadow-[0_4px_0_0_rgba(31,27,58,0.06)] active:translate-y-0.5"
+                  className="flex items-center gap-3 rounded-2xl bg-card p-3 text-left shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5"
                 >
                   {teacher && <TeacherAvatar teacher={teacher.id} size={44} />}
                   <span className="min-w-0 flex-1">

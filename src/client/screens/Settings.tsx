@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthContext'
 import InstallGuide, { isStandalone } from '../components/InstallGuide'
 import Reminders from '../components/Reminders'
+import ThemePicker from '../components/ThemePicker'
 import Button from '../components/ui/Button'
 
 const LANGUAGES = [
@@ -32,16 +33,18 @@ export default function Settings() {
 
       <main className="flex flex-1 flex-col gap-5 overflow-y-auto pb-4">
         {(user?.email ?? user?.displayName) && (
-          <p className="truncate rounded-2xl bg-white px-4 py-3 text-base font-bold text-ink/65">
+          <p className="truncate rounded-2xl bg-card px-4 py-3 text-base font-bold text-ink/65">
             {t('settings.account')}: <span className="text-ink">{user?.email ?? user?.displayName}</span>
           </p>
         )}
 
         <Reminders />
 
+        <ThemePicker />
+
         <section>
           <h2 className="mb-2 text-sm font-extrabold uppercase tracking-wide text-ink/50">{t('profile.language')}</h2>
-          <div className="flex gap-2 rounded-2xl bg-white p-1.5">
+          <div className="flex gap-2 rounded-2xl bg-card p-1.5">
             {LANGUAGES.map((lang) => {
               const active = i18n.language === lang.code
               return (

@@ -9,7 +9,7 @@ const variants: Record<Variant, string> = {
   primary:
     'bg-coral text-white shadow-[0_5px_0_0_var(--color-coral-dark)] active:translate-y-1 active:shadow-[0_1px_0_0_var(--color-coral-dark)]',
   secondary:
-    'bg-white text-ink shadow-[0_5px_0_0_rgba(31,27,58,0.12)] active:translate-y-1 active:shadow-[0_1px_0_0_rgba(31,27,58,0.12)]',
+    'bg-card text-ink shadow-[0_5px_0_0_rgb(var(--shade)/0.12)] active:translate-y-1 active:shadow-[0_1px_0_0_rgb(var(--shade)/0.12)]',
   ghost: 'min-h-11 text-base font-bold text-ink/60 active:text-ink',
 }
 

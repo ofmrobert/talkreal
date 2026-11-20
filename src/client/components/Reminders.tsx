@@ -160,7 +160,7 @@ export default function Reminders() {
   return (
     <section>
       <h2 className="mb-2 text-sm font-extrabold uppercase tracking-wide text-ink/50">{t('reminders.title')}</h2>
-      <div className="flex flex-col gap-3 rounded-3xl bg-white p-4">
+      <div className="flex flex-col gap-3 rounded-3xl bg-card p-4">
         <label className="flex min-h-11 items-center justify-between gap-3">
           <span className="text-base font-extrabold">{t('reminders.toggle')}</span>
           <input

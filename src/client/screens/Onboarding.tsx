@@ -15,7 +15,7 @@ function Illustration({ slide }: { slide: Slide }) {
   const Icon = slide === 'lessons' ? BoltIcon : MicIcon
   const color = slide === 'lessons' ? 'bg-sun' : 'bg-mint'
   return (
-    <div className={`flex h-44 w-44 items-center justify-center rounded-[3rem] ${color} text-ink shadow-[0_8px_0_0_rgba(31,27,58,0.12)]`}>
+    <div className={`flex h-44 w-44 items-center justify-center rounded-[3rem] ${color} text-ink shadow-[0_8px_0_0_rgb(var(--shade)/0.12)]`}>
       <Icon width={84} height={84} />
     </div>
   )
@@ -43,7 +43,7 @@ export default function Onboarding() {
       <header className="flex items-center justify-between">
         <button
           onClick={() => i18n.changeLanguage(nextLang)}
-          className="min-h-11 min-w-11 rounded-full bg-white px-4 text-sm font-bold uppercase shadow-[0_3px_0_0_rgba(31,27,58,0.1)] active:translate-y-0.5"
+          className="min-h-11 min-w-11 rounded-full bg-card px-4 text-sm font-bold uppercase shadow-[0_3px_0_0_rgb(var(--shade)/0.1)] active:translate-y-0.5"
         >
           {nextLang}
         </button>

@@ -19,7 +19,7 @@ type Outcome = { status: 'continue'; level: Level } | { status: 'done'; level: L
 type Stage = 'intro' | 'self' | 'test' | 'result'
 
 const optionClass =
-  'min-h-14 w-full rounded-2xl border-2 border-ink/10 bg-white px-4 py-3 text-left text-lg font-bold shadow-[0_4px_0_0_rgba(31,27,58,0.08)] active:translate-y-1 active:shadow-none disabled:opacity-60'
+  'min-h-14 w-full rounded-2xl border-2 border-ink/10 bg-card px-4 py-3 text-left text-lg font-bold shadow-[0_4px_0_0_rgb(var(--shade)/0.08)] active:translate-y-1 active:shadow-none disabled:opacity-60'
 
 /** Sets the student's level: either they pick it, or a short test finds it. */
 export default function Placement() {
@@ -93,7 +93,7 @@ export default function Placement() {
   }
 
   const errorNote = error && (
-    <p role="alert" className="rounded-2xl bg-coral/15 p-3 text-center text-base font-bold text-coral-dark">
+    <p role="alert" className="rounded-2xl bg-bad/15 p-3 text-center text-base font-bold text-bad-ink">
       {t('login.errors.server_error')}
     </p>
   )
