@@ -665,7 +665,8 @@
       "fact": "Fun fact",
       "question": "Question of the day",
       "picture": "Describe the picture",
-      "student": "Student post"
+      "student": "Student post",
+      "challenge": "Weekly challenge"
     },
     "like": "Like",
     "talking_one": "{{count}} comment",
@@ -719,7 +720,29 @@
       "someone": "Student"
     },
     "noStudents": "Students’ posts will appear here. Write the first one!",
-    "deletePost": "Delete this post?"
+    "deletePost": "Delete this post?",
+    "challenge": {
+      "prize": "The three best answers win {{first}}, {{second}} and {{third}} XP. The answers with the most likes win.",
+      "daysLeft_one": "{{count}} day left",
+      "daysLeft_other": "{{count}} days left",
+      "hoursLeft_one": "{{count}} hour left",
+      "hoursLeft_other": "{{count}} hours left",
+      "over": "The challenge is over",
+      "answers_one": "{{count}} answer",
+      "answers_other": "{{count}} answers",
+      "join": "Take part",
+      "joined": "You are taking part",
+      "see": "Answers",
+      "placeholder": "Your answer in English…",
+      "winners": "Winners",
+      "answer": "Challenge answer",
+      "won": "Winner · +{{xp}} XP",
+      "answersTitle": "Challenge answers",
+      "back": "Back to the feed",
+      "noAnswers": "No answers yet. Be the first!",
+      "closed": "This challenge is already over.",
+      "answeredAlready": "You have already answered this challenge."
+    }
   },
   "theme": {
     "title": "Appearance",

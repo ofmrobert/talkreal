@@ -31,8 +31,13 @@ export interface FeedFace {
 
 export interface FeedPost {
   id: string
-  /** One of the Talkreal account's kinds, or 'student' for a post a student wrote. */
-  kind: PostKind | 'student'
+  /** One of the Talkreal account's kinds, 'challenge' for the weekly challenge, or 'student' for a post a student wrote. */
+  kind: PostKind | 'challenge' | 'student'
+  /** For the weekly challenge post. */
+  challenge?: ChallengeState
+  /** For a student's post that answers a challenge: the challenge, and the XP it won, if any. */
+  answerTo: string | null
+  prize: number | null
   /** Who wrote it. Null for the Talkreal account. */
   author: FeedFace | null
   /** The student's own post. */
@@ -53,6 +58,17 @@ export interface FeedPost {
   commenters: FeedFace[]
 }
 
+/** The weekly challenge: Talkreal sets a task on Monday, students answer with a post, the most liked answers win. */
+export interface ChallengeState {
+  endsAt: string
+  open: boolean
+  answers: number
+  /** The viewer has answered. */
+  answered: boolean
+  /** Once it is over: the winners, best first. */
+  winners: { face: FeedFace; prize: number }[]
+}
+
 export interface FeedComment {
   id: string
   text: string
@@ -67,6 +83,8 @@ export const COMMENT_MAX_LENGTH = 300
 /** A student's own post: its length, and how many a day. Writing posts is part of the paid plans. */
 export const POST_MAX_LENGTH = 500
 export const POSTS_PER_DAY = 3
+/** XP for the three most liked answers to a weekly challenge. */
+export const CHALLENGE_PRIZES = [50, 30, 20]
 /** XP for answering a poll. */
 export const POLL_XP = 2
 /** A comment reported by this many students is hidden until the owner looks at it. */

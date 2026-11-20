@@ -1,4 +1,4 @@
-import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import { boolean, date, index, integer, jsonb, pgTable, primaryKey, text, timestamp, uuid, type AnyPgColumn } from 'drizzle-orm/pg-core'
 import type { PostBody } from '../../shared/feed'
 import type { CallReport } from '../../shared/report'
 
@@ -380,6 +380,13 @@ export const feedPosts = pgTable(
     authorId: uuid('author_id').references(() => users.id, { onDelete: 'cascade' }),
     /** How many students reported it (students' posts only). */
     reports: integer('reports').notNull().default(0),
+    /** For a student's answer to a weekly challenge: the challenge post. */
+    challengeId: uuid('challenge_id').references((): AnyPgColumn => feedPosts.id, { onDelete: 'cascade' }),
+    /** For a challenge post: when answers stop being accepted, and when the winners were chosen. */
+    endsAt: timestamptz('ends_at'),
+    settledAt: timestamptz('settled_at'),
+    /** For an answer that won: the XP it earned. */
+    prize: integer('prize'),
     /** 'active' | 'hidden' */
     status: text('status').notNull().default('active'),
     publishAt: timestamptz('publish_at').notNull(),
@@ -387,7 +394,7 @@ export const feedPosts = pgTable(
     writtenBy: text('written_by').notNull().default('owner'),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
-  (t) => [index('feed_posts_time_idx').on(t.publishAt)],
+  (t) => [index('feed_posts_time_idx').on(t.publishAt), index('feed_posts_challenge_idx').on(t.challengeId)],
 )
 
 export const feedLikes = pgTable(

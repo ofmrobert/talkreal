@@ -1,6 +1,6 @@
-import { and, desc, eq, gte, inArray, isNotNull, isNull, lt, lte, sql } from 'drizzle-orm'
+import { and, desc, eq, gt, gte, inArray, isNotNull, isNull, lt, lte, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
-import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type FeedComment, type FeedFace, type FeedPost, type PostKind } from '../../shared/feed'
+import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type ChallengeState, type FeedComment, type FeedFace, type FeedPost, type PostKind } from '../../shared/feed'
 import { askJson, clip, textAiAvailable } from '../ai/text'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { planOf } from '../billing/plans'
@@ -53,7 +53,7 @@ async function postsLeftToday(userId: string): Promise<number> {
   const [row] = await db
     .select({ n: sql<number>`count(*)::int` })
     .from(feedPosts)
-    .where(and(eq(feedPosts.authorId, userId), gte(feedPosts.createdAt, new Date(Date.now() - 24 * 60 * 60 * 1000))))
+    .where(and(eq(feedPosts.authorId, userId), isNull(feedPosts.challengeId), gte(feedPosts.createdAt, new Date(Date.now() - 24 * 60 * 60 * 1000))))
   return Math.max(0, POSTS_PER_DAY - (row?.n ?? 0))
 }
 
@@ -62,7 +62,9 @@ function shape(post: typeof feedPosts.$inferSelect, viewer: string, paid: boolea
   const mine = post.authorId === viewer
   const locked = post.authorId !== null && !paid && !mine
   return {
-    kind: (post.authorId ? 'student' : post.kind) as PostKind | 'student',
+    kind: (post.authorId ? 'student' : post.kind) as PostKind | 'challenge' | 'student',
+    answerTo: post.challengeId,
+    prize: post.prize,
     author: post.authorId ? (faces.get(post.authorId) ?? null) : null,
     mine,
     locked,
@@ -77,7 +79,8 @@ feedRoutes.get('/', async (c) => {
   const before = c.req.query('before')
   const cursor = before && !Number.isNaN(Date.parse(before)) ? lt(feedPosts.publishAt, new Date(before)) : undefined
   const from = c.req.query('from')
-  const whose = from === 'official' ? isNull(feedPosts.authorId) : from === 'students' ? isNotNull(feedPosts.authorId) : undefined
+  const answersTo = c.req.query('challenge')
+  const whose = answersTo && isUuid(answersTo) ? eq(feedPosts.challengeId, answersTo) : from === 'official' ? isNull(feedPosts.authorId) : from === 'students' ? isNotNull(feedPosts.authorId) : undefined
   const posts = await db.select().from(feedPosts).where(and(visible, cursor, whose)).orderBy(desc(feedPosts.publishAt)).limit(PAGE)
   const ids = posts.map((p) => p.id)
   const paid = planOf(user) !== 'free'
@@ -94,8 +97,29 @@ feedRoutes.get('/', async (c) => {
       }
     : empty
 
-  const authors = posts.map((p) => p.authorId).filter((id): id is string => id !== null)
+  // The weekly challenges on this page: how many answered, whether the viewer did, and who won.
+  const challengeIds = posts.filter((p) => p.kind === 'challenge' && !p.authorId).map((p) => p.id)
+  const answers = challengeIds.length
+    ? await db.select({ challengeId: feedPosts.challengeId, authorId: feedPosts.authorId, prize: feedPosts.prize }).from(feedPosts).where(and(inArray(feedPosts.challengeId, challengeIds), eq(feedPosts.status, 'active')))
+    : []
+
+  const authors = [...posts, ...answers.filter((a) => a.prize !== null)].map((p) => p.authorId).filter((id): id is string => id !== null)
   const faces = await facesFor([...new Set([...data.recent.map((r) => r.userId), ...authors])], user.id)
+  const challengeOf = (post: (typeof posts)[number]): ChallengeState | undefined => {
+    if (post.kind !== 'challenge' || post.authorId || !post.endsAt) return undefined
+    const mine = answers.filter((a) => a.challengeId === post.id)
+    return {
+      endsAt: post.endsAt.toISOString(),
+      open: post.endsAt.getTime() > Date.now(),
+      answers: mine.length,
+      answered: mine.some((a) => a.authorId === user.id),
+      winners: mine
+        .filter((a) => a.prize !== null && a.authorId)
+        .sort((a, b) => b.prize! - a.prize!)
+        .map((a) => ({ face: faces.get(a.authorId!)!, prize: a.prize! }))
+        .filter((w) => w.face),
+    }
+  }
   const out: FeedPost[] = posts.map((post) => {
     const seen = shape(post, user.id, paid, faces)
     const myVote = data.myVotes.find((v) => v.id === post.id)?.choice ?? null
@@ -106,6 +130,9 @@ feedRoutes.get('/', async (c) => {
     return {
       id: post.id,
       kind: seen.kind,
+      challenge: challengeOf(post),
+      answerTo: seen.answerTo,
+      prize: seen.prize,
       author: seen.author,
       mine: seen.mine,
       locked: seen.locked,
@@ -283,7 +310,15 @@ feedRoutes.post('/posts', async (c) => {
   if (planOf(user) === 'free') return c.json({ error: 'pro' }, 403)
   const text = typeof body.text === 'string' ? body.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim().slice(0, POST_MAX_LENGTH) : ''
   if (text.length < 5) return c.json({ error: 'invalid' }, 400)
-  if ((await postsLeftToday(user.id)) === 0) return c.json({ error: 'slow_down' }, 429)
+  // An answer to the weekly challenge: one per student, while the challenge is open. It does not use up the day's posts.
+  const challengeId = typeof body.challengeId === 'string' && isUuid(body.challengeId) ? body.challengeId : null
+  if (body.challengeId && !challengeId) return c.json({ error: 'not_found' }, 404)
+  if (challengeId) {
+    const [challenge] = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.id, challengeId), eq(feedPosts.kind, 'challenge'), isNull(feedPosts.authorId), gt(feedPosts.endsAt, sql`now()`), visible)).limit(1)
+    if (!challenge) return c.json({ error: 'closed' }, 410)
+    const [already] = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.challengeId, challengeId), eq(feedPosts.authorId, user.id))).limit(1)
+    if (already) return c.json({ error: 'answered' }, 409)
+  } else if ((await postsLeftToday(user.id)) === 0) return c.json({ error: 'slow_down' }, 429)
 
   const verdict = await review(text, POST_MAX_LENGTH)
   if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
@@ -292,7 +327,7 @@ feedRoutes.post('/posts', async (c) => {
   const [row] = await db
     .insert(feedPosts)
     // Shown a moment in the past, so it is in the feed the instant it is saved.
-    .values({ kind: 'student', body: { emoji: '', title: { ru: '', en: '' }, text: { ru: text, en: text } }, authorId: user.id, publishAt: new Date(Date.now() - 1000), writtenBy: 'student' })
+    .values({ kind: 'student', body: { emoji: '', title: { ru: '', en: '' }, text: { ru: text, en: text } }, authorId: user.id, challengeId, publishAt: new Date(Date.now() - 1000), writtenBy: 'student' })
     .returning()
   const faces = await facesFor([user.id], user.id)
   const post: FeedPost = { id: row.id, ...shape(row, user.id, true, faces), publishedAt: row.publishAt.toISOString(), hasImage: false, likes: 0, liked: false, vote: null, votes: null, comments: 0, commenters: [] }

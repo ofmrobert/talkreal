@@ -1,7 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import { COMMENT_MAX_LENGTH, POST_MAX_LENGTH, type FeedComment, type FeedFace, type FeedPost } from '../../shared/feed'
+import { CHALLENGE_PRIZES, COMMENT_MAX_LENGTH, POST_MAX_LENGTH, type FeedComment, type FeedFace, type FeedPost } from '../../shared/feed'
 import { useAuth } from '../auth/AuthContext'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
@@ -211,7 +211,7 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
 }
 
 /** Where a paying student writes a post of their own. The AI reads it first, as with comments. */
-function Composer({ left, onPosted }: { left: number; onPosted: (post: FeedPost, left: number) => void }) {
+function Composer({ left, onPosted, challengeId }: { left: number; onPosted: (post: FeedPost, left: number) => void; challengeId?: string }) {
   const { t } = useTranslation()
   const { user } = useAuth()
   const [draft, setDraft] = useState('')
@@ -223,7 +223,7 @@ function Composer({ left, onPosted }: { left: number; onPosted: (post: FeedPost,
     setBusy(true)
     setError(null)
     try {
-      const result = await api<{ suggestion?: string; post?: FeedPost; postsLeft?: number }>('/feed/posts', { text, confirm })
+      const result = await api<{ suggestion?: string; post?: FeedPost; postsLeft?: number }>('/feed/posts', { text, confirm, challengeId })
       if (result.suggestion) setSuggestion(result.suggestion)
       else if (result.post) {
         onPosted(result.post, result.postsLeft ?? 0)
@@ -232,7 +232,7 @@ function Composer({ left, onPosted }: { left: number; onPosted: (post: FeedPost,
       }
     } catch (err) {
       const code = err instanceof ApiError ? err.code : 'network'
-      setError(t(code === 'rejected' ? 'feed.rejected' : code === 'slow_down' ? 'feed.compose.limit' : 'feed.failed'))
+      setError(t(code === 'rejected' ? 'feed.rejected' : code === 'slow_down' ? 'feed.compose.limit' : code === 'closed' ? 'feed.challenge.closed' : code === 'answered' ? 'feed.challenge.answeredAlready' : 'feed.failed'))
     } finally {
       setBusy(false)
     }
@@ -241,7 +241,7 @@ function Composer({ left, onPosted }: { left: number; onPosted: (post: FeedPost,
   if (left === 0 && !draft) return <p className="rounded-2xl bg-card p-4 text-sm font-semibold text-ink/55">{t('feed.compose.limit')}</p>
 
   return (
-    <section className="flex flex-col gap-3 rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
+    <section className={challengeId ? 'flex flex-col gap-3' : 'flex flex-col gap-3 rounded-3xl bg-card p-4 shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]'}>
       <div className="flex items-start gap-2.5">
         {user && <Avatar userId={user.id} name={user.displayName} photoVersion={user.photoVersion} size={40} />}
         <textarea
@@ -252,9 +252,9 @@ function Composer({ left, onPosted }: { left: number; onPosted: (post: FeedPost,
           }}
           rows={draft.length > 60 || draft.includes('\n') ? 4 : 2}
           lang="en"
-          placeholder={t('feed.compose.placeholder')}
-          aria-label={t('feed.compose.placeholder')}
-          className="min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-cream px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
+          placeholder={t(challengeId ? 'feed.challenge.placeholder' : 'feed.compose.placeholder')}
+          aria-label={t(challengeId ? 'feed.challenge.placeholder' : 'feed.compose.placeholder')}
+          className={`min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral ${challengeId ? 'bg-card' : 'bg-cream'}`}
         />
       </div>
       {suggestion ? (
@@ -344,9 +344,78 @@ interface CardProps {
   freeLeft: number | null
   onChange: (post: FeedPost) => void
   onFreeLeft: (left: number | null) => void
+  /** The viewer answered this challenge with a post. */
+  onAnswered: (answer: FeedPost) => void
+  /** Open the answers to this challenge. Absent where they are already open. */
+  onSeeAnswers?: (challenge: FeedPost) => void
 }
 
-function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRemoved }: CardProps) {
+/** The weekly challenge inside its post: the prize, the time left, the way in, and the winners once it is over. */
+function ChallengeBox({ post, canDiscuss, onAnswered, onSeeAnswers }: Pick<CardProps, 'post' | 'canDiscuss' | 'onAnswered' | 'onSeeAnswers'>) {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const [writing, setWriting] = useState(false)
+  const state = post.challenge
+  if (!state) return null
+  const hours = Math.max(1, Math.ceil((new Date(state.endsAt).getTime() - Date.now()) / 3_600_000))
+  const left = !state.open ? t('feed.challenge.over') : hours >= 24 ? t('feed.challenge.daysLeft', { count: Math.ceil(hours / 24) }) : t('feed.challenge.hoursLeft', { count: hours })
+  return (
+    <div className="flex flex-col gap-3 rounded-2xl bg-sun/20 p-3.5">
+      <p className="flex items-center justify-between gap-2 text-xs font-extrabold uppercase tracking-wide text-ink/60">
+        <span>⏳ {left}</span>
+        <span>{t('feed.challenge.answers', { count: state.answers })}</span>
+      </p>
+      {state.winners.length > 0 ? (
+        <div className="flex flex-col gap-2">
+          <p className="text-sm font-extrabold">🏆 {t('feed.challenge.winners')}</p>
+          {state.winners.map((winner, place) => (
+            <p key={winner.face.userId} className="flex items-center gap-2 text-sm font-bold">
+              <span aria-hidden="true">{['🥇', '🥈', '🥉'][place]}</span>
+              <Avatar userId={winner.face.userId} name={winner.face.name} photoVersion={winner.face.photoVersion} size={28} />
+              <span className="min-w-0 flex-1 truncate">{winner.face.name ?? `${t('league.student')} ${winner.face.tag}`}</span>
+              <span className="font-extrabold text-good-ink">+{winner.prize} XP</span>
+            </p>
+          ))}
+        </div>
+      ) : (
+        state.open && <p className="text-sm font-semibold leading-snug text-ink/75">🏆 {t('feed.challenge.prize', { first: CHALLENGE_PRIZES[0], second: CHALLENGE_PRIZES[1], third: CHALLENGE_PRIZES[2] })}</p>
+      )}
+      {writing && state.open && !state.answered && (
+        <Composer
+          left={1}
+          challengeId={post.id}
+          onPosted={(answer) => {
+            setWriting(false)
+            onAnswered(answer)
+          }}
+        />
+      )}
+      <div className="flex gap-2">
+        {state.open &&
+          !writing &&
+          (state.answered ? (
+            <span className="flex min-h-11 flex-1 items-center justify-center rounded-2xl bg-good-soft px-3 text-sm font-extrabold text-good-ink">✓ {t('feed.challenge.joined')}</span>
+          ) : (
+            <button
+              type="button"
+              onClick={() => (canDiscuss ? setWriting(true) : navigate('/plans'))}
+              className="min-h-11 flex-1 rounded-2xl bg-coral px-3 text-sm font-extrabold text-white shadow-[0_4px_0_0_var(--color-coral-dark)] active:translate-y-1"
+            >
+              {!canDiscuss && '👑 '}
+              {t('feed.challenge.join')}
+            </button>
+          ))}
+        {onSeeAnswers && state.answers > 0 && (
+          <button type="button" onClick={() => onSeeAnswers(post)} className="min-h-11 flex-1 rounded-2xl bg-card px-3 text-sm font-extrabold text-ink ring-2 ring-inset ring-ink/10 active:translate-y-0.5">
+            {t('feed.challenge.see')}
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRemoved, onAnswered, onSeeAnswers }: CardProps) {
   const { t, i18n } = useTranslation()
   const { refresh } = useAuth()
   const [open, setOpen] = useState(false)
@@ -430,6 +499,12 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRe
         </header>
       )}
 
+      {post.answerTo && (
+        <p className={`self-start rounded-full px-3 py-1 text-xs font-extrabold ${post.prize ? 'bg-sun text-coal' : 'bg-sun/25 text-ink/70'}`}>
+          🏆 {post.prize ? t('feed.challenge.won', { xp: post.prize }) : t('feed.challenge.answer')}
+        </p>
+      )}
+
       {body.title[lang] && <h2 className="text-xl font-extrabold leading-tight">{body.title[lang]}</h2>}
 
       {body.english && (
@@ -442,6 +517,8 @@ function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLeft, onRe
       <p className={`select-text whitespace-pre-line leading-snug ${post.author ? 'text-lg text-ink' : 'text-base text-ink/80'}`}>{body.text[lang]}</p>
 
       {post.hasImage && <img src={`/api/feed/${post.id}/image`} alt="" loading="lazy" className="aspect-square w-full rounded-2xl bg-cream object-cover" />}
+
+      {post.kind === 'challenge' && <ChallengeBox post={post} canDiscuss={canDiscuss} onAnswered={onAnswered} onSeeAnswers={onSeeAnswers} />}
 
       {post.kind === 'poll' && body.options && (
         <div className="flex flex-col gap-2">
@@ -529,12 +606,15 @@ export default function Feed() {
   const [failed, setFailed] = useState(false)
   const [loadingMore, setLoadingMore] = useState(false)
   const [from, setFrom] = useState<From>('all')
+  /** The challenge whose answers are open, instead of the feed. */
+  const [answersOf, setAnswersOf] = useState<FeedPost | null>(null)
+  const query = answersOf ? `challenge=${answersOf.id}` : `from=${from}`
 
   useEffect(() => {
-    api<FeedData>(`/feed?from=${from}`)
+    api<FeedData>(`/feed?${query}`)
       .then(setData)
       .catch(() => setFailed(true))
-  }, [from])
+  }, [query])
 
   if (!data) {
     return (
@@ -548,12 +628,64 @@ export default function Feed() {
   async function more() {
     if (!data?.more) return
     setLoadingMore(true)
-    const next = await api<FeedData>(`/feed?from=${from}&before=${encodeURIComponent(data.more)}`).catch(() => null)
+    const next = await api<FeedData>(`/feed?${query}&before=${encodeURIComponent(data.more)}`).catch(() => null)
     if (next) setData({ ...data, posts: [...data.posts, ...next.posts], more: next.more })
     setLoadingMore(false)
   }
 
   const update = (post: FeedPost) => setData({ ...data, posts: data.posts.map((p) => (p.id === post.id ? post : p)) })
+  /** The viewer's answer goes to the top of the feed, and the challenge shows that they are in. */
+  const answered = (answer: FeedPost) =>
+    setData({
+      ...data,
+      posts: [...(from === 'official' ? [] : [answer]), ...data.posts.map((p) => (p.id === answer.answerTo && p.challenge ? { ...p, challenge: { ...p.challenge, answered: true, answers: p.challenge.answers + 1 } } : p))],
+    })
+  /** Opens the answers to a challenge, or goes back to the feed. The old list is dropped so it is not shown under the new heading. */
+  const show = (challenge: FeedPost | null) => {
+    setData(null)
+    setAnswersOf(challenge)
+    window.scrollTo(0, 0)
+  }
+  const cards = data.posts.map((post) =>
+    post.locked ? (
+      <LockedPost key={post.id} post={post} />
+    ) : (
+      <PostCard
+        key={post.id}
+        post={post}
+        onRemoved={(id) => setData({ ...data, posts: data.posts.filter((p) => p.id !== id) })}
+        lang={lang}
+        canDiscuss={data.canDiscuss}
+        freeLeft={data.freeCommentsLeft}
+        onChange={update}
+        onFreeLeft={(left) => setData((current) => (current ? { ...current, freeCommentsLeft: left } : current))}
+        onAnswered={answered}
+        onSeeAnswers={answersOf ? undefined : show}
+      />
+    ),
+  )
+  const moreButton = data.more && (
+    <button type="button" onClick={more} disabled={loadingMore} className="min-h-12 rounded-2xl bg-card text-base font-extrabold text-ink/70 shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5">
+      {t('feed.more')}
+    </button>
+  )
+
+  if (answersOf) {
+    return (
+      <div className="flex flex-col gap-4">
+        <header className="flex flex-col gap-2 pt-1">
+          <button type="button" onClick={() => show(null)} className="min-h-10 self-start text-sm font-extrabold text-coral-ink">
+            ← {t('feed.challenge.back')}
+          </button>
+          <h1 className="text-2xl font-extrabold leading-tight">🏆 {t('feed.challenge.answersTitle')}</h1>
+          <p className="text-base font-semibold text-ink/65">{answersOf.body.title[lang]}</p>
+        </header>
+        {data.posts.length === 0 && <p className="rounded-2xl bg-card p-4 text-base text-ink/65">{t('feed.challenge.noAnswers')}</p>}
+        {cards}
+        {moreButton}
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col gap-4">
@@ -611,28 +743,8 @@ export default function Feed() {
 
       {data.posts.length === 0 && <p className="rounded-2xl bg-card p-4 text-base text-ink/65">{t(from === 'students' ? 'feed.noStudents' : 'feed.empty')}</p>}
 
-      {data.posts.map((post) =>
-        post.locked ? (
-          <LockedPost key={post.id} post={post} />
-        ) : (
-        <PostCard
-          key={post.id}
-          post={post}
-          onRemoved={(id) => setData({ ...data, posts: data.posts.filter((p) => p.id !== id) })}
-          lang={lang}
-          canDiscuss={data.canDiscuss}
-          freeLeft={data.freeCommentsLeft}
-          onChange={update}
-          onFreeLeft={(left) => setData((current) => (current ? { ...current, freeCommentsLeft: left } : current))}
-        />
-        ),
-      )}
-
-      {data.more && (
-        <button type="button" onClick={more} disabled={loadingMore} className="min-h-12 rounded-2xl bg-card text-base font-extrabold text-ink/70 shadow-[0_4px_0_0_rgb(var(--shade)/0.06)] active:translate-y-0.5">
-          {t('feed.more')}
-        </button>
-      )}
+      {cards}
+      {moreButton}
     </div>
   )
 }

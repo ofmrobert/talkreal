@@ -19,6 +19,13 @@ interface AdminPost {
   authorId: string | null
   who: string | null
   reports: number
+  /** For a weekly challenge: when it ends, whether the prizes were given, and how many answered. */
+  endsAt: string | null
+  settledAt: string | null
+  answers: number
+  /** For a student's answer to a challenge: the XP it won. */
+  challengeId: string | null
+  prize: number | null
 }
 
 interface AdminComment {
@@ -137,6 +144,8 @@ export function FeedPage() {
         <Td right className="whitespace-nowrap">
           ♥ {post.likes} · 💬 {post.comments}
           {post.kind === 'poll' ? ` · ${post.votes} answers` : ''}
+          {post.kind === 'challenge' && !post.authorId ? ` · ${post.answers} answers · ${post.settledAt ? 'prizes given' : post.endsAt ? `ends ${new Date(post.endsAt).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}` : ''}` : ''}
+          {post.challengeId ? ` · challenge answer${post.prize ? `, won ${post.prize} XP` : ''}` : ''}
         </Td>
       )}
       <Td>{post.status === 'hidden' ? <Pill tone="amber">hidden</Pill> : upcoming ? <Pill>waiting</Pill> : <Pill tone="green">live</Pill>}</Td>
@@ -150,6 +159,16 @@ export function FeedPage() {
           {upcoming && (
             <button type="button" className={`${ghostButtonClass} !h-8 !px-2`} disabled={busy !== null} onClick={() => act(`posts/${post.id}`, { action: 'publish_now' }, post.id)}>
               Publish now
+            </button>
+          )}
+          {post.kind === 'challenge' && !post.authorId && !upcoming && !post.settledAt && (
+            <button
+              type="button"
+              className={`${ghostButtonClass} !h-8 !px-2`}
+              disabled={busy !== null}
+              onClick={() => act(`posts/${post.id}`, { action: 'end_now' }, post.id, 'End this challenge now and give the prizes to the most liked answers? This cannot be undone.')}
+            >
+              End now
             </button>
           )}
           <button

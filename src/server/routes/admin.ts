@@ -11,7 +11,7 @@ import { planOf } from '../billing/plans'
 import { isValidCode, normalizeCode } from '../billing/promo'
 import { billingMode } from '../billing/yookassa'
 import { lessonsFor } from '../content/lessons'
-import { fillFeed, rewriteWaiting } from '../feed/generate'
+import { fillFeed, rewriteWaiting, settleChallenges } from '../feed/generate'
 import { writerName } from '../feed/writer'
 import { examId, unitsFor } from '../content/units'
 import { db, dbStatus } from '../db/client'
@@ -405,7 +405,8 @@ adminRoutes.post('/photos/:id', async (c) => {
 adminRoutes.get('/feed', async (c) => {
   const posts = await rows<Record<string, unknown>>(sql`
     select p.id, p.kind, p.body, p.status, p.publish_at as "publishAt", p.written_by as "writtenBy", p.image_id is not null as "hasImage",
-           p.author_id as "authorId", p.reports,
+           p.author_id as "authorId", p.reports, p.ends_at as "endsAt", p.settled_at as "settledAt", p.prize, p.challenge_id as "challengeId",
+           (select count(*)::int from feed_posts a where a.challenge_id = p.id) as answers,
            (select count(*)::int from feed_likes l where l.post_id = p.id) as likes,
            (select count(*)::int from feed_votes v where v.post_id = p.id) as votes,
            (select count(*)::int from feed_comments m where m.post_id = p.id and m.status = 'visible') as comments
@@ -458,6 +459,12 @@ adminRoutes.post('/feed/posts/:id', async (c) => {
   if (body.action === 'delete') await db.delete(feedPosts).where(eq(feedPosts.id, id))
   else if (body.action === 'hide' || body.action === 'show') await db.update(feedPosts).set({ status: body.action === 'hide' ? 'hidden' : 'active' }).where(eq(feedPosts.id, id))
   else if (body.action === 'publish_now') await db.update(feedPosts).set({ publishAt: new Date(), status: 'active' }).where(eq(feedPosts.id, id))
+  else if (body.action === 'end_now') {
+    // Ends a weekly challenge early and gives out the prizes.
+    if (post.kind !== 'challenge' || post.settledAt) return c.json({ error: 'invalid' }, 400)
+    await db.update(feedPosts).set({ endsAt: new Date() }).where(eq(feedPosts.id, id))
+    await settleChallenges()
+  }
   else if (body.action === 'edit') {
     const text = (value: unknown, fallback: string) => (typeof value === 'string' && value.trim() ? value.trim().slice(0, 600) : fallback)
     await db

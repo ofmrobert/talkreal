@@ -713,7 +713,8 @@
       "fact": "Интересный факт",
       "question": "Вопрос дня",
       "picture": "Опишите картинку",
-      "student": "Пост ученика"
+      "student": "Пост ученика",
+      "challenge": "Челлендж недели"
     },
     "like": "Нравится",
     "talking_one": "{{count}} комментарий",
@@ -773,7 +774,35 @@
       "someone": "Ученик"
     },
     "noStudents": "Здесь появятся посты учеников. Напишите первый!",
-    "deletePost": "Удалить пост?"
+    "deletePost": "Удалить пост?",
+    "challenge": {
+      "prize": "Три лучших ответа получат {{first}}, {{second}} и {{third}} XP. Побеждают ответы, собравшие больше всего лайков.",
+      "daysLeft_one": "Остался {{count}} день",
+      "daysLeft_few": "Осталось {{count}} дня",
+      "daysLeft_many": "Осталось {{count}} дней",
+      "daysLeft_other": "Осталось {{count}} дня",
+      "hoursLeft_one": "Остался {{count}} час",
+      "hoursLeft_few": "Осталось {{count}} часа",
+      "hoursLeft_many": "Осталось {{count}} часов",
+      "hoursLeft_other": "Осталось {{count}} часа",
+      "over": "Челлендж завершён",
+      "answers_one": "{{count}} ответ",
+      "answers_few": "{{count}} ответа",
+      "answers_many": "{{count}} ответов",
+      "answers_other": "{{count}} ответа",
+      "join": "Участвовать",
+      "joined": "Вы участвуете",
+      "see": "Ответы",
+      "placeholder": "Ваш ответ по-английски…",
+      "winners": "Победители",
+      "answer": "Ответ на челлендж",
+      "won": "Победитель · +{{xp}} XP",
+      "answersTitle": "Ответы на челлендж",
+      "back": "Назад в ленту",
+      "noAnswers": "Ответов пока нет. Будьте первым!",
+      "closed": "Этот челлендж уже завершён.",
+      "answeredAlready": "Вы уже ответили на этот челлендж."
+    }
   },
   "theme": {
     "title": "Оформление",
