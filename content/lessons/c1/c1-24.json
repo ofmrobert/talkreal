@@ -1,0 +1,193 @@
+{
+  "id": "c1-24",
+  "level": "C1",
+  "order": 24,
+  "title": { "ru": "Существительные из фразовых глаголов", "en": "Nouns formed from phrasal verbs" },
+  "goal": { "ru": "Научитесь пользоваться существительными, выросшими из фразовых глаголов: breakthrough, setback, outcome, drawback, turnout, downturn, takeover, input, outlook.", "en": "Learn to use nouns that grew out of phrasal verbs: breakthrough, setback, outcome, drawback, turnout, downturn, takeover, input, outlook." },
+  "theory": [
+    {
+      "title": "Глагол + частица: a breakthrough, a takeover",
+      "body": "Многие фразовые глаголы дали существительные: break through → a breakthrough, set back → a setback, take over → a takeover, turn out → turnout. Глагол пишется в два слова, существительное — в одно. Меняется и ударение: в глаголе оно падает на частицу, в существительном — на первый слог.",
+      "examples": [
+        { "en": "Scientists have made a major breakthrough in cancer research.", "ru": "Учёные совершили крупный прорыв в исследовании рака." },
+        { "en": "The project suffered a setback when the funding was cut.", "ru": "Проект был отброшен назад, когда урезали финансирование." },
+        { "en": "The takeover was approved by shareholders.", "ru": "Поглощение одобрили акционеры." }
+      ],
+      "tip": "Не путайте написание: They plan to take over the firm (глагол, два слова), но They plan a takeover (существительное, одно слово)."
+    },
+    {
+      "title": "Частица впереди: outcome, outlook, input, downturn",
+      "body": "У другой группы частица стоит в начале: outcome, outlook, input, downturn, upturn, outbreak. Их значение редко выводится из частей, поэтому их учат как отдельные слова: outcome — «исход, итог», outlook — «прогноз» или «взгляд на жизнь», input — «вклад в обсуждение», downturn — «спад».",
+      "examples": [
+        { "en": "Nobody can predict the outcome of the election.", "ru": "Никто не может предсказать исход выборов." },
+        { "en": "The outlook for the housing market is bleak.", "ru": "Прогноз для рынка жилья мрачный." },
+        { "en": "We'd welcome your input on the draft.", "ru": "Мы будем рады вашим замечаниям по черновику." }
+      ],
+      "tip": "Порядок частей закреплён, и перестановка даёт другое слово: outbreak — «вспышка» болезни или войны, а breakout — «побег из тюрьмы»; outlook — «прогноз», а lookout — «наблюдательный пост»."
+    },
+    {
+      "title": "С какими словами они сочетаются",
+      "body": "У каждого такого существительного свои постоянные спутники: make a breakthrough, suffer a setback, the main drawback of something, a high или low turnout, an economic downturn, a hostile takeover, a positive outlook, valuable input. Turnout и input обычно неисчисляемые: множественного числа у них нет.",
+      "examples": [
+        { "en": "The main drawback of the flat is its location.", "ru": "Главный недостаток квартиры — её расположение." },
+        { "en": "Turnout was low despite the good weather.", "ru": "Явка была низкой, несмотря на хорошую погоду." },
+        { "en": "Many firms went bankrupt during the downturn.", "ru": "Во время спада многие фирмы обанкротились." }
+      ],
+      "tip": "Drawback — это минус плана или вещи, а не нехватка чего-то: «недостаток времени» — a lack of time. И прорыв «совершают» глаголом make, а не do."
+    }
+  ],
+  "vocab": [
+    { "en": "a breakthrough", "ru": "прорыв", "example": "The talks ended without a breakthrough." },
+    { "en": "a setback", "ru": "неудача, шаг назад", "example": "The injury was a major setback for the team." },
+    { "en": "an outcome", "ru": "исход, итог", "example": "We are hoping for a positive outcome." },
+    { "en": "a drawback", "ru": "недостаток, минус", "example": "The only drawback of the job is the long commute." },
+    { "en": "turnout", "ru": "явка", "example": "The referendum attracted a record turnout." },
+    { "en": "a downturn", "ru": "спад", "example": "The industry is recovering from a long downturn." },
+    { "en": "a takeover", "ru": "поглощение (компании)", "example": "The board rejected the takeover bid." },
+    { "en": "input", "ru": "вклад (идеи, замечания)", "example": "The design was changed after input from users." },
+    { "en": "outlook", "ru": "прогноз; взгляд на жизнь", "example": "She has a very positive outlook on life." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "a breakthrough", "ru": "прорыв" },
+        { "en": "a drawback", "ru": "недостаток, минус" },
+        { "en": "turnout", "ru": "явка" },
+        { "en": "a takeover", "ru": "поглощение (компании)" },
+        { "en": "an outcome", "ru": "исход, итог" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое слово означает «спад в экономике»?",
+      "options": ["a downfall", "a breakdown", "a drawback", "a downturn"],
+      "answer": 3,
+      "explanation": "A downturn — период, когда экономика или отрасль идёт вниз. Downfall — крах человека или режима, breakdown — поломка или срыв, drawback — недостаток."
+    },
+    {
+      "type": "gap",
+      "sentence": "The peace talks suffered a serious ___ when one side walked out.",
+      "translation": "Мирным переговорам был нанесён серьёзный удар, когда одна из сторон покинула зал.",
+      "options": ["setback", "drawback", "backset", "outcome"],
+      "answer": 0,
+      "explanation": "Suffer a setback — устойчивое сочетание: событие отбросило переговоры назад. Drawback — постоянный минус чего-то, а не событие, а слова «backset» в этом значении нет: порядок частей закреплён."
+    },
+    {
+      "type": "translate",
+      "source": "Учёные совершили важный прорыв.",
+      "answer": "Scientists have made an important breakthrough.",
+      "accept": [
+        "Scientists made an important breakthrough.",
+        "The scientists have made an important breakthrough.",
+        "The scientists made an important breakthrough.",
+        "Scientists have made a major breakthrough.",
+        "Scientists made a major breakthrough.",
+        "Scientists have made a significant breakthrough.",
+        "Scientists made a significant breakthrough.",
+        "Scientists have achieved an important breakthrough.",
+        "Scientists achieved an important breakthrough."
+      ],
+      "distractors": ["done", "break", "through", "did"],
+      "explanation": "Прорыв «совершают» глаголом make: make a breakthrough. Существительное пишется в одно слово; раздельное break through — это глагол «прорваться»."
+    },
+    {
+      "type": "listen",
+      "audio": "The only drawback is the price; otherwise, it's perfect.",
+      "question": "Что говорящий думает об этой вещи?",
+      "options": [
+        "Она идеальна, и цена тоже отличная",
+        "Она всем хороша, кроме цены",
+        "У неё много недостатков, но цена хорошая",
+        "Её сняли с продажи из-за цены"
+      ],
+      "answer": 1,
+      "explanation": "The only drawback — «единственный недостаток». Otherwise значит «в остальном»: всё, кроме цены, говорящего полностью устраивает."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "A rival firm is planning to takeover the company.",
+        "A rival firm is planning the takeover the company.",
+        "A rival firm is planning to take over the company.",
+        "A rival firm is planning a take over of the company."
+      ],
+      "answer": 2,
+      "explanation": "После to нужен глагол, а он пишется в два слова: to take over. Слитное takeover — существительное, и ему потребовались бы артикль и предлог: a takeover of the company."
+    },
+    {
+      "type": "speak",
+      "text": "We're all waiting for the outcome of the vote.",
+      "translation": "Мы все ждём исхода голосования."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ in the local elections was just thirty per cent.",
+      "translation": "Явка на местных выборах составила всего тридцать процентов.",
+      "options": ["Outcome", "Output", "Turnover", "Turnout"],
+      "answer": 3,
+      "explanation": "Turnout — доля пришедших на выборы или мероприятие. Turnover — оборот компании или текучесть кадров, output — объём производства, outcome — исход."
+    },
+    {
+      "type": "type",
+      "source": "Спасибо за ваш вклад.",
+      "answer": "Thank you for your input.",
+      "accept": [
+        "Thanks for your input.",
+        "Thank you for your contribution.",
+        "Thanks for your contribution.",
+        "Thank you very much for your input.",
+        "Thank you for your contributions.",
+        "Thanks for your contributions."
+      ],
+      "explanation": "Input — идеи, замечания и труд, которые человек вложил в общее дело. Слово неисчисляемое: без артикля и без -s. Deposit не подойдёт: это банковский вклад."
+    },
+    {
+      "type": "listen",
+      "audio": "The economic outlook remains uncertain despite the recent upturn.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The economic lookout remains uncertain despite the recent upturn.",
+        "The economic outlook remains uncertain despite the recent upturn.",
+        "The economic outlook remains uncertain despite of the recent upturn.",
+        "The economic outlook remain uncertain despite the recent upturn."
+      ],
+      "answer": 1,
+      "explanation": "Outlook — «прогноз», lookout — «наблюдательный пост». Upturn — подъём, противоположность downturn. После despite предлог of не ставится: despite the upturn."
+    },
+    {
+      "type": "translate",
+      "source": "Каким был исход переговоров?",
+      "answer": "What was the outcome of the talks?",
+      "accept": [
+        "What was the outcome of the negotiations?",
+        "What was the outcome of the negotiation?",
+        "What was the result of the talks?",
+        "What was the result of the negotiations?"
+      ],
+      "distractors": ["income", "how", "from", "outcame"],
+      "explanation": "«Каким был» о результате — What was, а не How was: спрашивают, что именно получилось. Outcome — «исход», income — «доход»; после outcome идёт предлог of."
+    },
+    {
+      "type": "gap",
+      "sentence": "The main ___ of working from home is that you rarely see your colleagues.",
+      "translation": "Главный минус работы из дома в том, что вы редко видите коллег.",
+      "options": ["setback", "downturn", "drawback", "shortage"],
+      "answer": 2,
+      "explanation": "Drawback — постоянный минус ситуации или решения. Setback — отдельное событие, которое отбросило назад, downturn — спад, а shortage — нехватка чего-то: a shortage of staff."
+    },
+    {
+      "type": "dictation",
+      "audio": "Turnout was low despite the good weather.",
+      "translation": "Явка была низкой, несмотря на хорошую погоду."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое слово подходит: «There has been an ___ of flu at the school» (вспышка гриппа)?",
+      "options": ["outbreak", "breakout", "outburst", "upturn"],
+      "answer": 0,
+      "explanation": "An outbreak — вспышка болезни, насилия или войны. Breakout — побег, outburst — вспышка эмоций: an outburst of anger, а upturn — подъём в экономике."
+    }
+  ]
+}

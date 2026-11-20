@@ -1,0 +1,194 @@
+{
+  "id": "b2-24",
+  "level": "B2",
+  "order": 24,
+  "title": { "ru": "Глаголы восприятия: see him do или see him doing", "en": "Verbs of perception: see him do or see him doing" },
+  "goal": { "ru": "Научитесь говорить «я видел, как…», «я слышал, как…» с глаголами see, hear, watch и notice, различать законченное действие и процесс и строить пассив: he was seen leaving.", "en": "Learn to say what you saw or heard someone do with see, hear, watch and notice, to tell a complete action from one in progress, and to form the passive: he was seen leaving." },
+  "theory": [
+    {
+      "title": "See someone do: действие целиком",
+      "body": "После see, hear, watch, notice и feel стоит дополнение и глагол без to, если вы наблюдали действие от начала до конца. Русское «Я видел, как он…» не переводится через how: how значит «каким образом».",
+      "examples": [
+        { "en": "I saw her get on the bus.", "ru": "Я видел, как она села в автобус." },
+        { "en": "We heard the car stop outside the house.", "ru": "Мы услышали, как машина остановилась у дома." },
+        { "en": "Nobody noticed him leave.", "ru": "Никто не заметил, как он ушёл." }
+      ],
+      "tip": "Местоимение стоит в объектной форме: I saw him, а не «I saw he». И никакого to: «I saw him to leave» — ошибка."
+    },
+    {
+      "title": "See someone doing: действие в процессе",
+      "body": "Форма на -ing показывает, что вы застали действие в разгаре и видели или слышали только его часть. I saw him cross the road — он перешёл дорогу у меня на глазах. I saw him crossing the road — он как раз переходил, а что было дальше, я не знаю.",
+      "examples": [
+        { "en": "I saw them waiting at the bus stop.", "ru": "Я видел, как они ждали на остановке." },
+        { "en": "Can you hear someone knocking?", "ru": "Слышите, кто-то стучит?" },
+        { "en": "She felt her phone vibrating in her pocket.", "ru": "Она почувствовала, как в кармане вибрирует телефон." }
+      ],
+      "tip": "Помогает русский вид: «видел, как вышел» (совершенный) — leave; «видел, как выходил» (несовершенный) — leaving."
+    },
+    {
+      "title": "Пассив: he was seen leaving",
+      "body": "В пассиве наблюдатель не назван: «видели, как…», «слышали, как…». Форма на -ing остаётся без изменений: He was seen leaving. А глагол без to в пассиве получает to: They saw him leave → He was seen to leave. Так пишут в новостях и протоколах.",
+      "examples": [
+        { "en": "The man was seen running from the building.", "ru": "Видели, как мужчина выбегал из здания." },
+        { "en": "She was heard to say that she would resign.", "ru": "Слышали, как она сказала, что уволится." },
+        { "en": "Two boys were noticed climbing over the fence.", "ru": "Заметили, как двое мальчиков перелезали через забор." }
+      ],
+      "tip": "«He was seen leave» — ошибка: в пассиве либо leaving, либо to leave."
+    }
+  ],
+  "vocab": [
+    { "en": "to notice", "ru": "замечать", "example": "Did you notice anything strange?" },
+    { "en": "to overhear", "ru": "случайно услышать", "example": "I overheard them talking about me." },
+    { "en": "to spot", "ru": "заметить, разглядеть", "example": "I spotted an old friend in the crowd." },
+    { "en": "to slam", "ru": "хлопнуть, захлопнуть", "example": "Please don't slam the door." },
+    { "en": "to argue", "ru": "спорить, ссориться", "example": "They argue about politics all the time." },
+    { "en": "to observe", "ru": "наблюдать", "example": "The doctors observed the patient overnight." },
+    { "en": "to shout", "ru": "кричать", "example": "There's no need to shout." },
+    { "en": "a suspect", "ru": "подозреваемый", "example": "The police have questioned the suspect." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to notice", "ru": "замечать" },
+        { "en": "to overhear", "ru": "случайно услышать" },
+        { "en": "to spot", "ru": "заметить, разглядеть" },
+        { "en": "to slam", "ru": "хлопнуть, захлопнуть" },
+        { "en": "to argue", "ru": "спорить, ссориться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Я видел, как он вышел из здания»?",
+      "options": [
+        "I saw him leave the building.",
+        "I saw him to leave the building.",
+        "I saw he leave the building.",
+        "I saw his leave the building."
+      ],
+      "answer": 0,
+      "explanation": "После see стоит дополнение в объектной форме (him) и глагол без to: saw him leave. Русское «как» отдельным словом не переводится: «I saw how he left» означало бы «видел, каким образом он вышел»."
+    },
+    {
+      "type": "gap",
+      "sentence": "When I walked past the kitchen, I heard them ___ about money.",
+      "translation": "Проходя мимо кухни, я слышал, как они спорят о деньгах.",
+      "options": ["arguing", "to argue", "argued", "to arguing"],
+      "answer": 0,
+      "explanation": "Говорящий проходил мимо и застал спор в разгаре, то есть слышал только его часть, — нужна форма на -ing. Инфинитив с to и прошедшее время после heard them невозможны."
+    },
+    {
+      "type": "listen",
+      "audio": "I watched the whole team cross the finishing line.",
+      "question": "Что видел говорящий?",
+      "options": [
+        "Как вся команда пересекла финишную черту — от начала до конца",
+        "Только то, как команда приближалась к финишу",
+        "Ничего: о финише он узнал от других",
+        "Как команда готовилась к старту"
+      ],
+      "answer": 0,
+      "explanation": "Watched the team cross — глагол без to и без -ing показывает законченное действие: говорящий видел, как команда пересекла черту. Whole здесь относится к команде: «вся команда»."
+    },
+    {
+      "type": "translate",
+      "source": "Я слышал, как она пела в душе.",
+      "answer": "I heard her singing in the shower.",
+      "accept": [
+        "I heard her sing in the shower.",
+        "I could hear her singing in the shower."
+      ],
+      "distractors": ["how", "to", "she"],
+      "explanation": "Hear + дополнение + -ing: heard her singing — вы слышали пение в процессе. «Как» не переводится словом how, а местоимение стоит в объектной форме: her, не she."
+    },
+    {
+      "type": "gap",
+      "sentence": "The suspect was seen ___ a black car outside the bank.",
+      "translation": "Видели, как подозреваемый садился в чёрную машину у банка.",
+      "options": ["getting into", "get into", "got into", "gets into"],
+      "answer": 0,
+      "explanation": "В пассиве после was seen возможна форма на -ing (или инфинитив с to), но не глагол без to: «was seen get into» — ошибка. Getting into показывает, что его заметили в момент действия."
+    },
+    {
+      "type": "speak",
+      "text": "I didn't notice you come in.",
+      "translation": "Я не заметил, как вы вошли."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение значит, что вы видели всё действие целиком, до самого конца?",
+      "options": [
+        "I saw her cross the road.",
+        "I saw her crossing the road.",
+        "I saw her to cross the road.",
+        "I saw her crossed the road."
+      ],
+      "answer": 0,
+      "explanation": "Глагол без to (cross) — действие целиком: она перешла дорогу у вас на глазах. Crossing — вы видели её посреди дороги и не знаете, чем всё кончилось. Варианты с to и с crossed построены неверно."
+    },
+    {
+      "type": "type",
+      "source": "Мы видели, как он уехал.",
+      "answer": "We saw him drive away.",
+      "accept": [
+        "We saw him drive off.",
+        "We saw him leave.",
+        "We watched him drive away.",
+        "We watched him drive off.",
+        "We watched him leave."
+      ],
+      "explanation": "«Уехал» — законченное действие (совершенный вид), поэтому после saw him идёт глагол без to и без -ing: drive away. Слово «как» не переводится."
+    },
+    {
+      "type": "listen",
+      "audio": "He was heard shouting at the waiter.",
+      "question": "Что произошло?",
+      "options": [
+        "Люди слышали, как он кричал на официанта",
+        "Он слышал, как кричал официант",
+        "Официант накричал на него",
+        "Он звал официанта, но тот его не услышал"
+      ],
+      "answer": 0,
+      "explanation": "He was heard — пассив: слышали его, а кто именно — не сказано. Shouting at the waiter — что он делал в этот момент: кричал на официанта."
+    },
+    {
+      "type": "gap",
+      "sentence": "Did you notice anyone ___ the room while I was out?",
+      "translation": "Вы не заметили, чтобы кто-нибудь входил в комнату, пока меня не было?",
+      "options": ["enter", "to enter", "entered", "enters"],
+      "answer": 0,
+      "explanation": "После notice + дополнение глагол стоит без to: notice anyone enter. Инфинитив с to — калька с других глаголов (want him to enter), а личные формы entered и enters после дополнения невозможны."
+    },
+    {
+      "type": "translate",
+      "source": "Я видел, как дети играли в саду.",
+      "answer": "I saw the children playing in the garden.",
+      "accept": [
+        "I saw children playing in the garden.",
+        "I saw the kids playing in the garden.",
+        "I saw the children play in the garden.",
+        "I watched the children playing in the garden."
+      ],
+      "distractors": ["how", "played", "to"],
+      "explanation": "«Играли» — процесс (несовершенный вид): вы видели детей за игрой, поэтому playing. После дополнения нельзя ставить прошедшее время: «saw the children played» — ошибка."
+    },
+    {
+      "type": "dictation",
+      "audio": "I heard someone slam the door.",
+      "translation": "Я слышал, как кто-то хлопнул дверью."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "She was seen leaving the office at midnight.",
+        "She was seen leave the office at midnight.",
+        "She was seen left the office at midnight.",
+        "She seen leaving the office at midnight."
+      ],
+      "answer": 0,
+      "explanation": "Пассив — was seen + -ing: «видели, как она выходила». Глагол без to в пассиве не употребляется, вторая личная форма left здесь невозможна, а без was сказуемое неполное."
+    }
+  ]
+}

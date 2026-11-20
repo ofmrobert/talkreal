@@ -1,0 +1,217 @@
+{
+  "id": "c1-21",
+  "level": "C1",
+  "order": 21,
+  "title": { "ru": "Безличные конструкции: It is believed that… и He is thought to…", "en": "Impersonal reporting structures" },
+  "goal": { "ru": "Научитесь передавать сведения языком новостей: It is believed that…, He is thought to have left, She is said to be living abroad, There are reported to be…", "en": "Learn to report information in news style: It is believed that…, He is thought to have left, She is said to be living abroad, There are reported to be…" },
+  "theory": [
+    {
+      "title": "It is believed that…",
+      "body": "Русское «считается, что», «сообщают, что» — предложения без подлежащего. В английском пустое место занимает it: It is + третья форма глагола + that. Так вводят сведения, не называя источник. Чаще всего встречаются say, think, believe, report, expect, know, understand, suggest. Время глагола be меняется свободно: it was thought, it has been suggested.",
+      "examples": [
+        { "en": "It is believed that the fire started in the kitchen.", "ru": "Считается, что пожар начался на кухне." },
+        { "en": "It is widely expected that interest rates will fall.", "ru": "Многие ожидают, что процентные ставки снизятся." },
+        { "en": "It has been suggested that the two firms may merge.", "ru": "Высказывалось предположение, что две фирмы могут объединиться." }
+      ],
+      "tip": "Без it предложение не построить: «Is believed that…» — калька с русского. Английскому глаголу всегда нужно подлежащее, хотя бы формальное."
+    },
+    {
+      "title": "He is thought to have left",
+      "body": "Ту же мысль можно начать с человека или предмета: подлежащее + is said / is thought + инфинитив. Время действия показывает форма инфинитива, а не глагол be. To do — действие вообще или в будущем, to be doing — происходит сейчас, to have done — произошло раньше, to have been done — раньше и в пассиве.",
+      "examples": [
+        { "en": "The minister is expected to resign tomorrow.", "ru": "Ожидается, что министр завтра уйдёт в отставку." },
+        { "en": "She is said to be living abroad.", "ru": "Говорят, она живёт за границей." },
+        { "en": "He is thought to have left the country last week.", "ru": "Полагают, что он покинул страну на прошлой неделе." }
+      ],
+      "tip": "Не смешивайте две модели: «He is thought that he left» — ошибка. Либо It is thought that he left, либо He is thought to have left."
+    },
+    {
+      "title": "There are reported to be… и оттенки глаголов",
+      "body": "Если в исходной фразе есть there is / there are, оборот строится так: There + is / are + said, believed, reported + to be. Глагол согласуется с существительным, которое идёт после to be. Выбор глагола тоже значим: is alleged to — «утверждается», но не доказано; is rumoured to — «по слухам»; is understood to — «по имеющимся сведениям»; is known to — это установленный факт.",
+      "examples": [
+        { "en": "There are reported to be over two hundred casualties.", "ru": "Сообщается, что пострадавших более двухсот." },
+        { "en": "There is believed to be a link between the two cases.", "ru": "Считается, что между этими двумя случаями есть связь." },
+        { "en": "The suspect is alleged to have forged the documents.", "ru": "Утверждается, что подозреваемый подделал документы." }
+      ],
+      "tip": "Глагол say в активном залоге так не работает: «People say him to be rich» сказать нельзя. Только пассив: He is said to be rich."
+    }
+  ],
+  "vocab": [
+    { "en": "it is believed that", "ru": "считается, что", "example": "It is believed that the manuscript dates from the twelfth century." },
+    { "en": "to be said to", "ru": "говорят, что (кто-то)…", "example": "The castle is said to be haunted." },
+    { "en": "to be expected to", "ru": "как ожидается", "example": "The trial is expected to last three weeks." },
+    { "en": "to be alleged to", "ru": "как утверждается (но не доказано)", "example": "The firm is alleged to have misled investors." },
+    { "en": "to be rumoured to", "ru": "по слухам", "example": "The band is rumoured to be planning a reunion." },
+    { "en": "to be understood to", "ru": "по имеющимся сведениям", "example": "The couple are understood to have separated." },
+    { "en": "widely", "ru": "широко, многими", "example": "The film is widely regarded as a masterpiece." },
+    { "en": "casualties", "ru": "пострадавшие, жертвы", "example": "No casualties have been reported so far." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "it is believed that", "ru": "считается, что" },
+        { "en": "to be rumoured to", "ru": "по слухам" },
+        { "en": "to be alleged to", "ru": "как утверждается (но не доказано)" },
+        { "en": "widely", "ru": "широко, многими" },
+        { "en": "casualties", "ru": "пострадавшие, жертвы" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "The thieves are believed that they escaped through the roof.",
+        "The thieves are believed to have escaped through the roof.",
+        "The thieves are believed to escaped through the roof.",
+        "It is believed the thieves to have escaped through the roof."
+      ],
+      "answer": 1,
+      "explanation": "Если предложение начинается с людей (the thieves), после are believed идёт инфинитив, а не that. Побег уже произошёл, поэтому инфинитив перфектный: to have escaped. Придаточное с that возможно только после It is believed."
+    },
+    {
+      "type": "gap",
+      "sentence": "The actress is said ___ in a small village in Portugal these days.",
+      "translation": "Говорят, актриса сейчас живёт в небольшой деревне в Португалии.",
+      "options": ["to have lived", "living", "that she lives", "to be living"],
+      "answer": 3,
+      "explanation": "These days указывает на то, что происходит сейчас, поэтому нужен длительный инфинитив to be living. To have lived относило бы действие к прошлому, а that после is said возможно только в модели It is said that…"
+    },
+    {
+      "type": "translate",
+      "source": "Считается, что вирус возник в Азии.",
+      "answer": "The virus is believed to have originated in Asia.",
+      "accept": [
+        "It is believed that the virus originated in Asia.",
+        "It is believed the virus originated in Asia.",
+        "The virus is thought to have originated in Asia.",
+        "It is thought that the virus originated in Asia.",
+        "The virus is considered to have originated in Asia.",
+        "The virus is believed to have emerged in Asia.",
+        "It is believed that the virus emerged in Asia.",
+        "The virus is believed to have appeared in Asia.",
+        "It is believed that the virus appeared in Asia."
+      ],
+      "distractors": ["originate", "that", "was", "believing"],
+      "explanation": "«Считается» — сейчас, поэтому is believed в настоящем времени. Вирус возник раньше, и это показывает перфектный инфинитив to have originated. «Is believed to originate» означало бы, что он возникает там постоянно."
+    },
+    {
+      "type": "listen",
+      "audio": "The chief executive is expected to step down by the end of the month.",
+      "question": "Что сообщается о руководителе компании?",
+      "options": [
+        "Он уже ушёл в отставку",
+        "Он сам ждёт повышения к концу месяца",
+        "Ожидается, что он покинет пост до конца месяца",
+        "Его просят остаться до конца месяца"
+      ],
+      "answer": 2,
+      "explanation": "Is expected to — «ожидается, что»: ждут другие, а не он сам. Простой инфинитив to step down относит уход к будущему, а step down значит «уйти с поста»."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении действие произошло раньше, чем о нём говорят?",
+      "options": [
+        "She is said to have worked for a rival firm.",
+        "She is said to work for a rival firm.",
+        "She is said to be working for a rival firm.",
+        "She is expected to work for a rival firm."
+      ],
+      "answer": 0,
+      "explanation": "Перфектный инфинитив to have worked показывает, что она работала там раньше. To work и to be working описывают настоящее, а is expected to work — будущее."
+    },
+    {
+      "type": "speak",
+      "text": "There are reported to be delays on all major routes.",
+      "translation": "Сообщается, что на всех основных маршрутах задержки."
+    },
+    {
+      "type": "gap",
+      "sentence": "There ___ to be several witnesses who saw the car leave.",
+      "translation": "Считается, что есть несколько свидетелей, которые видели, как машина уехала.",
+      "options": ["is believed", "are believed", "believe", "believes"],
+      "answer": 1,
+      "explanation": "В обороте с there глагол согласуется с существительным после to be: witnesses — множественное число, значит, are believed. Активная форма believe не подходит: there не может «считать»."
+    },
+    {
+      "type": "type",
+      "source": "Говорят, что он очень богат.",
+      "answer": "He is said to be very rich.",
+      "accept": [
+        "He's said to be very rich.",
+        "He is said to be very wealthy.",
+        "He's said to be very wealthy.",
+        "It is said that he is very rich.",
+        "It is said that he's very rich.",
+        "It's said that he is very rich.",
+        "It's said that he's very rich.",
+        "It is said he is very rich.",
+        "It is said that he is very wealthy.",
+        "They say he is very rich.",
+        "They say he's very rich.",
+        "They say that he is very rich.",
+        "They say that he's very rich.",
+        "They say he is very wealthy.",
+        "People say he is very rich.",
+        "People say he's very rich.",
+        "People say that he is very rich.",
+        "People say that he's very rich."
+      ],
+      "explanation": "Безличное «говорят» в письменной речи передаётся пассивом: He is said to be… или It is said that he is… В разговоре возможно и They say he is…, но «People say him to be rich» — ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "The painting is thought to have been stolen in the nineties.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The painting is thought to have stolen in the nineties.",
+        "The painting is thought to be stolen in the nineties.",
+        "The painting thought to have been stolen in the nineties.",
+        "The painting is thought to have been stolen in the nineties."
+      ],
+      "answer": 3,
+      "explanation": "Картину украли — это пассив, и украли её раньше — это перфект. Вместе получается перфектный пассивный инфинитив: to have been stolen. Без been вышло бы, что картина сама что-то украла."
+    },
+    {
+      "type": "translate",
+      "source": "Ожидается, что цены вырастут в следующем году.",
+      "answer": "Prices are expected to rise next year.",
+      "accept": [
+        "It is expected that prices will rise next year.",
+        "Prices are expected to go up next year.",
+        "Prices are expected to increase next year.",
+        "It is expected that prices will go up next year.",
+        "It is expected that prices will increase next year.",
+        "Next year prices are expected to rise.",
+        "The prices are expected to rise next year."
+      ],
+      "distractors": ["will", "that", "raise", "expecting"],
+      "explanation": "После are expected идёт инфинитив с to, и будущее время уже заключено в нём: will здесь лишнее. Will нужен только в модели It is expected that prices will rise. Цены растут сами, поэтому rise, а не raise."
+    },
+    {
+      "type": "gap",
+      "sentence": "It ___ that the two companies have been in talks since March.",
+      "translation": "По имеющимся сведениям, две компании ведут переговоры с марта.",
+      "options": ["is understood", "understands", "is understanding", "has understood"],
+      "answer": 0,
+      "explanation": "После формального it нужен пассив: It is understood that… — так журналисты передают сведения из неназванных источников. Активные формы означали бы, что некое «оно» само что-то понимает."
+    },
+    {
+      "type": "dictation",
+      "audio": "He is rumoured to be writing a book.",
+      "translation": "По слухам, он пишет книгу."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вина чиновника не доказана. Как журналист сообщит: «Утверждается, что он брал взятки»?",
+      "options": [
+        "The official is known to have taken bribes.",
+        "The official alleges to have taken bribes.",
+        "The official is alleged to have taken bribes.",
+        "The official is alleged taking bribes."
+      ],
+      "answer": 2,
+      "explanation": "Is alleged to — «утверждается, но не доказано»: это слово защищает журналиста от обвинений в клевете. Is known to означало бы установленный факт, а активное alleges — что утверждает сам чиновник."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "a2-24",
+  "level": "A2",
+  "order": 24,
+  "title": { "ru": "Только что, уже, ещё не: just, already, yet", "en": "Present Perfect with just, already and yet" },
+  "goal": { "ru": "Научитесь говорить о том, что только что произошло, что уже сделано, а что ещё нет.", "en": "Learn to say what has just happened, what is already done and what isn't done yet." },
+  "theory": [
+    {
+      "title": "Just — только что",
+      "body": "Just с Present Perfect значит, что действие произошло только что. Оно стоит между have / has и третьей формой глагола: I've just had lunch — «Я только что пообедал». По-русски здесь прошедшее время, но в британском английском с just обычно берут Present Perfect: важен результат сейчас.",
+      "examples": [
+        { "en": "I've just spoken to the manager.", "ru": "Я только что поговорил с руководителем." },
+        { "en": "We've just got home.", "ru": "Мы только что пришли домой." },
+        { "en": "It has just started to rain.", "ru": "Только что начался дождь." }
+      ],
+      "tip": "Место just не меняется: have / has + just + третья форма. «I just have finished» — ошибка."
+    },
+    {
+      "title": "Already — уже",
+      "body": "Already показывает, что действие произошло раньше, чем ожидали. Место то же — между have / has и глаголом: I've already seen this film. Глагол стоит в третьей форме: seen, done, bought. Сказать «I've already saw» нельзя: saw — вторая форма, она нужна для Past Simple.",
+      "examples": [
+        { "en": "I've already told him about the meeting.", "ru": "Я уже сказал ему о совещании." },
+        { "en": "He has already read this book.", "ru": "Он уже читал эту книгу." },
+        { "en": "We've already bought the tickets.", "ru": "Мы уже купили билеты." }
+      ],
+      "tip": "В разговоре already иногда ставят в конец: I've done it already. Но основное место — в середине."
+    },
+    {
+      "title": "Yet — «ещё не» и «уже» в вопросе",
+      "body": "Yet ставят в конец отрицаний и вопросов. The film hasn't started yet — «Фильм ещё не начался». Have you called your mother yet? — «Вы уже позвонили маме?» Русское «уже» в вопросе — это обычно yet, а «ещё не» — not … yet. В утверждениях yet не используют: там нужно already.",
+      "examples": [
+        { "en": "The film hasn't started yet.", "ru": "Фильм ещё не начался." },
+        { "en": "Have you called your mother yet?", "ru": "Вы уже позвонили маме?" },
+        { "en": "Not yet.", "ru": "Ещё нет." }
+      ],
+      "tip": "Короткий ответ «Ещё нет» — Not yet. Это одна из самых полезных фраз в разговоре."
+    }
+  ],
+  "vocab": [
+    { "en": "just", "ru": "только что", "example": "I've just seen your message." },
+    { "en": "already", "ru": "уже", "example": "It's already ten o'clock." },
+    { "en": "yet", "ru": "ещё (не); уже (в вопросе)", "example": "Is dinner ready yet?" },
+    { "en": "to leave", "ru": "уходить, уезжать (left)", "example": "I leave home at eight." },
+    { "en": "to pack", "ru": "собирать вещи, упаковывать", "example": "I need to pack my suitcase tonight." },
+    { "en": "bill", "ru": "счёт", "example": "Can we have the bill, please?" },
+    { "en": "to feed", "ru": "кормить (fed)", "example": "Don't forget to feed the dog." },
+    { "en": "to reply", "ru": "отвечать (на письмо, сообщение)", "example": "She didn't reply to my message." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "just", "ru": "только что" },
+        { "en": "already", "ru": "уже" },
+        { "en": "to pack", "ru": "собирать вещи" },
+        { "en": "bill", "ru": "счёт" },
+        { "en": "to reply", "ru": "отвечать (на письмо)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я только что пообедал»?",
+      "options": ["I've just had lunch.", "I just have had lunch.", "I've had just lunch.", "I've just have lunch."],
+      "answer": 0,
+      "explanation": "Just стоит между have и третьей формой глагола: have just had. Здесь had — третья форма от have, поэтому в предложении и have, и had."
+    },
+    {
+      "type": "gap",
+      "sentence": "I haven't packed my bag ___.",
+      "translation": "Я ещё не собрал сумку.",
+      "options": ["yet", "already", "just", "ago"],
+      "answer": 0,
+      "explanation": "«Ещё не» — это not … yet, и yet стоит в конце предложения. Already используют в утверждениях, а не в отрицаниях."
+    },
+    {
+      "type": "listen",
+      "audio": "Don't worry about the bill. I've already paid it.",
+      "question": "Что сделал говорящий?",
+      "options": ["Уже оплатил счёт", "Ещё не оплатил счёт", "Попросил принести счёт", "Забыл кошелёк"],
+      "answer": 0,
+      "explanation": "I've already paid it — «я его уже оплатил». Already стоит между have и третьей формой paid."
+    },
+    {
+      "type": "translate",
+      "source": "Она только что ушла.",
+      "answer": "She has just left.",
+      "accept": ["She's just left.", "She has just gone.", "She's just gone.", "She has just gone out.", "She's just gone out."],
+      "distractors": ["yet", "leave", "already"],
+      "explanation": "«Только что» — just, между has и третьей формой: has just left. Already значило бы «уже», а yet в утверждениях не используют."
+    },
+    {
+      "type": "gap",
+      "sentence": "We've ___ seen this film. Let's watch something else.",
+      "translation": "Мы уже видели этот фильм. Давайте посмотрим что-нибудь другое.",
+      "options": ["already", "yet", "since", "ago"],
+      "answer": 0,
+      "explanation": "«Уже» в утверждении — already, между have и глаголом. Yet стоит в конце и только в вопросах и отрицаниях."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Have you fed the cat yet?", "Have you fed yet the cat?", "Did you fed the cat yet?", "Have you feed the cat yet?"],
+      "answer": 0,
+      "explanation": "Yet стоит в самом конце вопроса. После have нужна третья форма: fed, а не feed."
+    },
+    {
+      "type": "speak",
+      "text": "I've just finished my homework.",
+      "translation": "Я только что закончил домашнее задание."
+    },
+    {
+      "type": "type",
+      "source": "Я ещё не завтракал.",
+      "answer": "I haven't had breakfast yet.",
+      "accept": ["I have not had breakfast yet.", "I haven't eaten breakfast yet.", "I have not eaten breakfast yet.", "I've not had breakfast yet.", "I still haven't had breakfast.", "I still have not had breakfast."],
+      "explanation": "«Ещё не» — haven't … yet, и yet стоит в конце. «Завтракать» — have breakfast, поэтому третья форма had."
+    },
+    {
+      "type": "listen",
+      "audio": "Tom hasn't replied to my email yet, so I'm going to call him.",
+      "question": "Почему говорящий собирается позвонить Тому?",
+      "options": ["Том ещё не ответил на письмо", "Том только что ответил на письмо", "Том попросил позвонить", "Том уже прочитал письмо"],
+      "answer": 0,
+      "explanation": "Hasn't replied yet — «ещё не ответил». So вводит результат: поэтому говорящий позвонит."
+    },
+    {
+      "type": "gap",
+      "sentence": "The train has ___ arrived. Look, people are getting off.",
+      "translation": "Поезд только что прибыл. Смотрите, люди выходят.",
+      "options": ["just", "yet", "since", "ago"],
+      "answer": 0,
+      "explanation": "Люди выходят прямо сейчас, значит, поезд прибыл только что: has just arrived. Yet не стоит в середине утверждения."
+    },
+    {
+      "type": "translate",
+      "source": "Вы уже закончили?",
+      "answer": "Have you finished yet?",
+      "accept": ["Have you already finished?", "Have you finished already?"],
+      "distractors": ["did", "just", "finish"],
+      "explanation": "В вопросе русское «уже» — это yet в конце предложения. После have нужна третья форма finished."
+    },
+    {
+      "type": "dictation",
+      "audio": "We haven't booked the hotel yet.",
+      "translation": "Мы ещё не забронировали отель."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спросили: «Have you seen the new film yet?» Вы его ещё не видели. Как ответить?",
+      "options": ["No, not yet.", "No, not already.", "No, I haven't seen it already.", "No, yet not."],
+      "answer": 0,
+      "explanation": "«Ещё нет» — Not yet. Already в отрицаниях не используют, а yet стоит после not, а не перед ним."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "c1-23",
+  "level": "C1",
+  "order": 23,
+  "title": { "ru": "Составные прилагательные и плотные именные группы", "en": "Compound adjectives and dense noun phrases" },
+  "goal": { "ru": "Научитесь сжимать описание в одно слово через дефис: a long-awaited decision, a well-thought-out plan, a three-hour meeting, a five-year-old child.", "en": "Learn to pack a description into one hyphenated word: a long-awaited decision, a well-thought-out plan, a three-hour meeting, a five-year-old child." },
+  "theory": [
+    {
+      "title": "Число + существительное: a three-hour meeting",
+      "body": "Русские «трёхчасовой», «пятилетний» по-английски собираются из числа и существительного через дефис: a three-hour meeting, a five-year-old child. Существительное внутри такого прилагательного всегда стоит в единственном числе, потому что у английских прилагательных множественного числа нет. Сравните: The meeting lasted three hours, но a three-hour meeting.",
+      "examples": [
+        { "en": "We had a three-hour meeting this morning.", "ru": "Сегодня утром у нас была трёхчасовая встреча." },
+        { "en": "She has a five-year-old daughter.", "ru": "У неё пятилетняя дочь." },
+        { "en": "It's a ten-minute walk from the station.", "ru": "Это в десяти минутах ходьбы от станции." }
+      ],
+      "tip": "«A three-hours meeting» и «a five-years-old child» — самая частая ошибка. После глагола дефисов нет, а множественное число возвращается: The child is five years old."
+    },
+    {
+      "title": "Наречие или существительное + причастие",
+      "body": "Вторая большая группа — сочетания с причастием: well-known, long-awaited, well-thought-out, time-consuming, English-speaking, last-minute. Перед существительным их пишут через дефис: a well-known writer. После глагола дефис обычно исчезает: The writer is well known. После наречий на -ly дефис не ставят никогда: a highly paid job.",
+      "examples": [
+        { "en": "The long-awaited report was finally published.", "ru": "Долгожданный доклад наконец опубликовали." },
+        { "en": "It was a well-thought-out plan.", "ru": "Это был хорошо продуманный план." },
+        { "en": "Filling in the forms is a time-consuming process.", "ru": "Заполнение анкет — процесс, отнимающий много времени." }
+      ],
+      "tip": "Дефис меняет смысл: a small-business owner — владелец малого бизнеса, а a small business owner можно понять и как «владелец бизнеса небольшого роста»."
+    },
+    {
+      "title": "Плотные именные группы",
+      "body": "В новостях и отчётах перед главным существительным выстраивают цепочку определений: a government-funded research project, a customer satisfaction survey. Существительные в роли определения тоже стоят в единственном числе: a car park, a shoe shop. Главное слово — последнее, поэтому читайте и переводите такую цепочку с конца.",
+      "examples": [
+        { "en": "The firm announced a series of cost-cutting measures.", "ru": "Фирма объявила о ряде мер по сокращению расходов." },
+        { "en": "They work in a state-of-the-art laboratory.", "ru": "Они работают в самой современной лаборатории." },
+        { "en": "She leads a government-funded research project.", "ru": "Она руководит исследовательским проектом, который финансирует государство." }
+      ],
+      "tip": "Русский родительный падеж не всегда нужно передавать через of: «опрос об удовлетворённости клиентов» — просто a customer satisfaction survey. И не «customers satisfaction»: определение стоит в единственном числе."
+    }
+  ],
+  "vocab": [
+    { "en": "long-awaited", "ru": "долгожданный", "example": "The band has released its long-awaited second album." },
+    { "en": "well-thought-out", "ru": "хорошо продуманный", "example": "She gave a well-thought-out answer." },
+    { "en": "time-consuming", "ru": "отнимающий много времени", "example": "Checking every invoice by hand is time-consuming." },
+    { "en": "state-of-the-art", "ru": "самый современный", "example": "The gym has state-of-the-art equipment." },
+    { "en": "last-minute", "ru": "сделанный в последний момент", "example": "We booked a last-minute flight to Rome." },
+    { "en": "cost-cutting", "ru": "направленный на сокращение расходов", "example": "The closure is part of a cost-cutting plan." },
+    { "en": "highly paid", "ru": "высокооплачиваемый", "example": "He gave up a highly paid job in the City." },
+    { "en": "a three-hour meeting", "ru": "трёхчасовая встреча", "example": "After a three-hour meeting, nothing had been decided." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "long-awaited", "ru": "долгожданный" },
+        { "en": "well-thought-out", "ru": "хорошо продуманный" },
+        { "en": "time-consuming", "ru": "отнимающий много времени" },
+        { "en": "state-of-the-art", "ru": "самый современный" },
+        { "en": "last-minute", "ru": "сделанный в последний момент" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "We went on a two-week holiday.",
+        "We went on a two-weeks holiday.",
+        "We went on a two-weekly holiday.",
+        "We went on a holiday of two-week."
+      ],
+      "answer": 0,
+      "explanation": "Внутри составного прилагательного существительное стоит в единственном числе: a two-week holiday. Форма weeks возможна только вне прилагательного: The holiday lasted two weeks."
+    },
+    {
+      "type": "gap",
+      "sentence": "They have a ___ son who has just started school.",
+      "translation": "У них есть пятилетний сын, который только что пошёл в школу.",
+      "options": ["five-years-old", "five years old", "five-year-old", "five-year-olds"],
+      "answer": 2,
+      "explanation": "Перед существительным возраст превращается в прилагательное через дефисы и без -s: a five-year-old son. Five years old без дефисов ставят после глагола: Their son is five years old."
+    },
+    {
+      "type": "translate",
+      "source": "У них был хорошо продуманный план.",
+      "answer": "They had a well-thought-out plan.",
+      "accept": [
+        "They had a well thought out plan.",
+        "They had a well-thought-through plan.",
+        "They had a carefully thought-out plan.",
+        "They had a well-considered plan."
+      ],
+      "distractors": ["good-thought", "well-thinking", "plans", "out-thought"],
+      "explanation": "«Продуманный» — причастие от фразового глагола think out, а «хорошо» — наречие well: well-thought-out. Перед существительным все три части соединяются дефисами."
+    },
+    {
+      "type": "listen",
+      "audio": "It's a time-consuming job, but it's well paid.",
+      "question": "Что говорящий думает об этой работе?",
+      "options": [
+        "Она быстрая, но платят за неё мало",
+        "Она отнимает много времени, и платят мало",
+        "Работа временная, зато платят вовремя",
+        "Она отнимает много времени, но за неё хорошо платят"
+      ],
+      "answer": 3,
+      "explanation": "Time-consuming — буквально «поглощающая время», то есть долгая и трудоёмкая. Well paid после глагола пишется без дефиса; перед существительным было бы a well-paid job."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "Their daughter is ten-year-old.",
+        "Their daughter is ten years old.",
+        "Their daughter is ten year old.",
+        "Their daughter is a ten years old."
+      ],
+      "answer": 1,
+      "explanation": "После глагола be возраст называют обычным словосочетанием: ten years old, с -s и без дефисов. Форма ten-year-old возможна только перед существительным: a ten-year-old girl."
+    },
+    {
+      "type": "speak",
+      "text": "We live in a four-bedroom house near the park.",
+      "translation": "Мы живём в доме с четырьмя спальнями рядом с парком."
+    },
+    {
+      "type": "gap",
+      "sentence": "The firm has introduced several ___ measures, including a hiring freeze.",
+      "translation": "Фирма ввела несколько мер по сокращению расходов, в том числе приостановила наём.",
+      "options": ["costs-cutting", "cost-cutting", "cutting-cost", "cost-cut"],
+      "answer": 1,
+      "explanation": "Модель «существительное + форма на -ing»: cost-cutting, как time-consuming. Существительное идёт первым и стоит в единственном числе, хотя расходов много."
+    },
+    {
+      "type": "type",
+      "source": "У меня трёхлетняя дочь.",
+      "answer": "I have a three-year-old daughter.",
+      "accept": [
+        "I've got a three-year-old daughter.",
+        "I have got a three-year-old daughter.",
+        "I have a 3-year-old daughter.",
+        "I've got a 3-year-old daughter.",
+        "I have a three year old daughter.",
+        "I've got a three year old daughter.",
+        "My daughter is three years old.",
+        "My daughter is 3 years old."
+      ],
+      "explanation": "Перед существительным возраст — одно прилагательное через дефисы: three-year-old, и year стоит в единственном числе. «A three-years-old daughter» — типичная ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "The long-awaited report was published after a two-year delay.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The long-awaited report was published after a two-years delay.",
+        "The long-waited report was published after a two-year delay.",
+        "The long-awaited report was published after a two-year delay.",
+        "The long-awaiting report was published after a two-year delay."
+      ],
+      "answer": 2,
+      "explanation": "Доклада ждали — значит, нужно пассивное причастие awaited от глагола await: long-awaited. В a two-year delay слово year стоит в единственном числе, как в любом составном прилагательном."
+    },
+    {
+      "type": "translate",
+      "source": "Мы подписали пятилетний контракт.",
+      "answer": "We signed a five-year contract.",
+      "accept": [
+        "We have signed a five-year contract.",
+        "We signed a 5-year contract.",
+        "We have signed a 5-year contract.",
+        "We signed a five year contract.",
+        "We signed a five-year agreement."
+      ],
+      "distractors": ["five-years", "years", "five-yearly", "contracts"],
+      "explanation": "«Пятилетний» — five-year: число и существительное в единственном числе через дефис. Слово old добавляют, только когда говорят о возрасте: a five-year-old child, но a five-year contract."
+    },
+    {
+      "type": "gap",
+      "sentence": "It was a ___ decision, and we had no time to discuss it properly.",
+      "translation": "Это решение приняли в последний момент, и у нас не было времени как следует его обсудить.",
+      "options": ["last-minutes", "late-minute", "minute-last", "last-minute"],
+      "answer": 3,
+      "explanation": "Last-minute — «принятый в последнюю минуту»: порядок слов тот же, что в выражении at the last minute, а minute стоит в единственном числе."
+    },
+    {
+      "type": "dictation",
+      "audio": "She leads a government-funded research project.",
+      "translation": "Она руководит исследовательским проектом, который финансирует государство."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно сказать «опрос об удовлетворённости клиентов»?",
+      "options": [
+        "a customer satisfaction survey",
+        "a customers satisfaction survey",
+        "a survey satisfaction customer",
+        "a customer's satisfied survey"
+      ],
+      "answer": 0,
+      "explanation": "В цепочке существительных главное слово стоит последним, а определения перед ним — в единственном числе: customer satisfaction survey. Читается с конца: опрос — об удовлетворённости — клиентов."
+    }
+  ]
+}

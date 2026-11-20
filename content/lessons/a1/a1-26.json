@@ -1,0 +1,155 @@
+{
+  "id": "a1-26",
+  "level": "A1",
+  "order": 26,
+  "title": { "ru": "Past Simple, первые шаги: что вы делали вчера?", "en": "Past Simple, first steps: what did you do yesterday?" },
+  "goal": { "ru": "Научитесь рассказывать, что вы делали вчера и на прошлой неделе.", "en": "Learn to say what you did yesterday and last week." },
+  "theory": [
+    {
+      "title": "Правильные глаголы: + -ed",
+      "body": "О том, что было и закончилось, говорят в Past Simple. Большинству глаголов добавляют -ed: watch → watched, play → played. Если глагол кончается на -e, нужна только -d: live → lived. Форма одна для всех: I worked, she worked — никакого -s. Подсказки те же, что с was и were: yesterday, last week, two days ago.",
+      "examples": [
+        { "en": "I watched a film last night.", "ru": "Вчера вечером я смотрел фильм." },
+        { "en": "She worked at home yesterday.", "ru": "Вчера она работала дома." },
+        { "en": "We played tennis on Sunday.", "ru": "В воскресенье мы играли в теннис." }
+      ],
+      "tip": "Отдельным слогом -ed звучит только после t и d: wanted, needed. В остальных словах слог не добавляется: watched — один слог, played — тоже один."
+    },
+    {
+      "title": "Неправильные глаголы",
+      "body": "У самых частых глаголов прошедшая форма своя, и её нужно запомнить: go → went, have → had, see → saw, buy → bought, eat → ate, come → came, get → got. Окончание -ed к ним не добавляют: «goed» и «buyed» — ошибки. Форма тоже одна для всех лиц: I went, he went.",
+      "examples": [
+        { "en": "I went to the cinema on Friday.", "ru": "В пятницу я ходил в кино." },
+        { "en": "We had dinner in a restaurant.", "ru": "Мы ужинали в ресторане." },
+        { "en": "He bought a new car last month.", "ru": "В прошлом месяце он купил новую машину." }
+      ],
+      "tip": "Учите их парами и вслух: go — went, see — saw, eat — ate. Таких глаголов немного, но встречаются они постоянно."
+    },
+    {
+      "title": "Didn't и Did…?",
+      "body": "Отрицание — didn't и глагол в начальной форме: I didn't go. Вопрос — Did, подлежащее и снова начальная форма: Did you see it? Прошедшее время уже показано словом did, поэтому глагол возвращается в начальную форму: «I didn't went» и «Did you saw?» — ошибки. Did одинаков для всех, does здесь не нужен.",
+      "examples": [
+        { "en": "I didn't go to work yesterday.", "ru": "Вчера я не ходил на работу." },
+        { "en": "Did you see Anna at the party? — Yes, I did.", "ru": "Ты видел Анну на вечеринке? — Да." },
+        { "en": "Where did you go on Saturday?", "ru": "Куда вы ходили в субботу?" }
+      ],
+      "tip": "С was и were слово did не нужно: I wasn't at home. Were you at work?"
+    }
+  ],
+  "vocab": [
+    { "en": "went", "ru": "ходил, ездил (от go)", "example": "We went to the park." },
+    { "en": "had", "ru": "имел; ел, пил (от have)", "example": "I had a coffee at work." },
+    { "en": "saw", "ru": "видел (от see)", "example": "I saw your sister yesterday." },
+    { "en": "bought", "ru": "купил (от buy)", "example": "She bought some bread." },
+    { "en": "ate", "ru": "ел (от eat)", "example": "He ate two sandwiches." },
+    { "en": "came", "ru": "пришёл, приехал (от come)", "example": "They came by taxi." },
+    { "en": "got", "ru": "получил; добрался (от get)", "example": "I got home at nine." },
+    { "en": "to stay", "ru": "оставаться", "example": "I often stay at home at the weekend." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "went", "ru": "ходил, ездил" },
+        { "en": "saw", "ru": "видел" },
+        { "en": "bought", "ru": "купил" },
+        { "en": "ate", "ru": "ел" },
+        { "en": "came", "ru": "пришёл, приехал" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Вчера я смотрел футбол»?",
+      "options": ["I watch football yesterday.", "I watched football yesterday.", "I was watch football yesterday.", "I did watched football yesterday."],
+      "answer": 1,
+      "explanation": "Yesterday — прошлое, поэтому к watch добавляется -ed: watched. Was — прошедшая форма to be, перед другими глаголами его не ставят, а did в утверждении не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ to Italy last summer.",
+      "translation": "Прошлым летом мы ездили в Италию.",
+      "options": ["go", "goed", "went", "going"],
+      "answer": 2,
+      "explanation": "Last summer — прошлое, а go — неправильный глагол: его прошедшая форма — went. Формы «goed» не существует."
+    },
+    {
+      "type": "listen",
+      "audio": "I didn't cook last night. We had pizza in a café.",
+      "question": "Что они делали вчера вечером?",
+      "options": ["Ели пиццу в кафе", "Готовили пиццу дома", "Готовили ужин дома", "Смотрели фильм в кафе"],
+      "answer": 0,
+      "explanation": "I didn't cook — «я не готовил». We had pizza — «мы ели пиццу»: had — прошедшая форма have, а have pizza значит «есть пиццу»."
+    },
+    {
+      "type": "translate",
+      "source": "Мы не видели этот фильм.",
+      "answer": "We didn't see this film.",
+      "accept": ["We did not see this film.", "We didn't watch this film.", "We did not watch this film.", "We didn't see that film.", "We didn't watch that film."],
+      "distractors": ["saw", "don't", "wasn't"],
+      "explanation": "Отрицание в прошлом — didn't и начальная форма: didn't see. Saw после didn't не ставят: прошедшее время уже показано словом did."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you call your mum yesterday?",
+      "translation": "Ты звонил маме вчера?",
+      "options": ["Do", "Did", "Were", "Was"],
+      "answer": 1,
+      "explanation": "Вопрос о прошлом с обычным глаголом начинается с did. Were и was — формы to be, с глаголом call они не сочетаются, а do — это настоящее время."
+    },
+    {
+      "type": "speak",
+      "text": "What did you do at the weekend?",
+      "translation": "Что вы делали на выходных?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I didn't went to the gym.", "Did she came home late?", "He buyed a new jacket.", "They came home at ten."],
+      "answer": 3,
+      "explanation": "В утверждении нужна прошедшая форма: came. В остальных ошибки: после didn't и did глагол стоит в начальной форме — didn't go, Did she come, а у buy прошедшая форма bought."
+    },
+    {
+      "type": "translate",
+      "source": "Что ты ел на завтрак?",
+      "answer": "What did you eat for breakfast?",
+      "accept": ["What did you have for breakfast?"],
+      "distractors": ["ate", "do", "had"],
+      "explanation": "В вопросе прошедшее время показывает did, а глагол остаётся в начальной форме: did you eat. Ate нужно только в утверждении: I ate an egg."
+    },
+    {
+      "type": "listen",
+      "audio": "She came home late, ate a sandwich and went to bed.",
+      "question": "Что она сделала, когда пришла домой?",
+      "options": ["Съела сэндвич и легла спать", "Приготовила ужин и легла спать", "Съела сэндвич и посмотрела фильм", "Сразу легла спать"],
+      "answer": 0,
+      "explanation": "Ate a sandwich — «съела сэндвич», went to bed — «легла спать». Все три глагола неправильные: come — came, eat — ate, go — went."
+    },
+    {
+      "type": "gap",
+      "sentence": "My sister ___ in London two years ago.",
+      "translation": "Два года назад моя сестра жила в Лондоне.",
+      "options": ["live", "lives", "lived", "is living"],
+      "answer": 2,
+      "explanation": "Two years ago — прошлое, поэтому lived. Глагол уже кончается на -e, так что добавляется только -d. Окончания -s в прошедшем времени нет даже с she."
+    },
+    {
+      "type": "type",
+      "source": "Вчера мы остались дома.",
+      "answer": "We stayed at home yesterday.",
+      "accept": ["Yesterday we stayed at home.", "We stayed home yesterday.", "Yesterday we stayed home.", "We stayed in yesterday.", "Yesterday we stayed in."],
+      "explanation": "Stay — правильный глагол, в прошлом он получает -ed: stayed. «Дома» — at home, а yesterday стоит в начале или в конце предложения."
+    },
+    {
+      "type": "dictation",
+      "audio": "I got up late and had a big breakfast.",
+      "translation": "Я встал поздно и плотно позавтракал."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Ты ходил вчера в спортзал?»",
+      "options": ["Did you went to the gym yesterday?", "Went you to the gym yesterday?", "Did you go to the gym yesterday?", "Do you went to the gym yesterday?"],
+      "answer": 2,
+      "explanation": "Вопрос в прошлом — Did, потом подлежащее и начальная форма: Did you go? Went после did не ставят, а без did такой вопрос не строится."
+    }
+  ]
+}

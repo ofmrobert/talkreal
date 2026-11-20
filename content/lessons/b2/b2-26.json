@@ -1,0 +1,200 @@
+{
+  "id": "b2-26",
+  "level": "B2",
+  "order": 26,
+  "title": { "ru": "Слова-связки в живом разговоре", "en": "Discourse markers in conversation" },
+  "goal": { "ru": "Научитесь управлять разговором с помощью actually, anyway, by the way, mind you, to be honest, as I was saying и I mean.", "en": "Learn to manage a conversation with actually, anyway, by the way, mind you, to be honest, as I was saying and I mean." },
+  "theory": [
+    {
+      "title": "Actually, to be honest, I mean",
+      "body": "Actually — «вообще-то, на самом деле»: им мягко поправляют собеседника или сообщают неожиданное. Это ложный друг переводчика: «актуальный» — topical или relevant, а «в настоящее время» — currently. To be honest — «честно говоря», смягчает неприятную правду. I mean — «то есть, в смысле»: вы уточняете сказанное или поправляете сами себя.",
+      "examples": [
+        { "en": "Actually, my name is Katya, not Kate.", "ru": "Вообще-то меня зовут Катя, а не Кейт." },
+        { "en": "To be honest, I haven't read the book.", "ru": "Честно говоря, я не читал эту книгу." },
+        { "en": "It's quite far. I mean, it takes two hours by car.", "ru": "Это довольно далеко. То есть на машине ехать два часа." }
+      ],
+      "tip": "Возражение, начатое с actually, звучит вежливее прямого «No, you're wrong». Но не вставляйте это слово в каждую фразу: оно быстро превращается в слово-паразит."
+    },
+    {
+      "title": "By the way, as I was saying, anyway",
+      "body": "Эти слова управляют ходом разговора. By the way («кстати») вводит новую, побочную тему. As I was saying («так вот, как я говорил») возвращает к тому, на чём вас перебили. Anyway («ладно, так вот, в любом случае») закрывает отступление: им возвращаются к главному или дают понять, что разговор пора заканчивать.",
+      "examples": [
+        { "en": "By the way, I love your new haircut.", "ru": "Кстати, мне очень нравится твоя новая стрижка." },
+        { "en": "As I was saying, we need to book the tickets this week.", "ru": "Так вот, как я говорил, билеты нужно забронировать на этой неделе." },
+        { "en": "Anyway, let's get back to the plan.", "ru": "Ладно, давайте вернёмся к плану." }
+      ],
+      "tip": "By the way пишется с артиклем the. On the way — «по дороге», in the way — «мешает, стоит на пути»."
+    },
+    {
+      "title": "Mind you",
+      "body": "Mind you — «впрочем, хотя надо сказать». Так добавляют мысль, которая ограничивает или уравновешивает только что сказанное. Это не просьба и не «имейте в виду»: выражение разговорное, не изменяется и стоит в начале или в конце предложения.",
+      "examples": [
+        { "en": "The flat is tiny. Mind you, it's right in the centre.", "ru": "Квартира крошечная. Впрочем, она в самом центре." },
+        { "en": "He's always late. Mind you, so am I.", "ru": "Он вечно опаздывает. Хотя и я тоже." },
+        { "en": "It was expensive. Worth every penny, mind you.", "ru": "Это было дорого. Но, надо сказать, стоило каждого пенни." }
+      ],
+      "tip": "Все эти слова в речи отделяются паузой, а на письме — запятой. Без них речь правильная, но суховатая; с ними она звучит живо."
+    }
+  ],
+  "vocab": [
+    { "en": "actually", "ru": "вообще-то, на самом деле", "example": "Actually, I've never been to London." },
+    { "en": "anyway", "ru": "ладно, так вот; в любом случае", "example": "Anyway, I must go now." },
+    { "en": "by the way", "ru": "кстати, между прочим", "example": "By the way, how is your sister?" },
+    { "en": "mind you", "ru": "впрочем, хотя надо сказать", "example": "It's a long drive. Mind you, the views are amazing." },
+    { "en": "to be honest", "ru": "честно говоря", "example": "To be honest, I forgot all about it." },
+    { "en": "as I was saying", "ru": "так вот, как я говорил", "example": "As I was saying, the plan is simple." },
+    { "en": "I mean", "ru": "то есть, в смысле", "example": "She's a doctor. I mean, a dentist." },
+    { "en": "to interrupt", "ru": "перебивать, прерывать", "example": "Sorry to interrupt, but there's a call for you." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "actually", "ru": "вообще-то, на самом деле" },
+        { "en": "anyway", "ru": "ладно, так вот; в любом случае" },
+        { "en": "by the way", "ru": "кстати, между прочим" },
+        { "en": "mind you", "ru": "впрочем, хотя надо сказать" },
+        { "en": "to be honest", "ru": "честно говоря" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит actually во фразе «Actually, I'm from Scotland, not England»?",
+      "options": [
+        "Вообще-то, на самом деле",
+        "В настоящее время",
+        "Актуально",
+        "Наконец-то"
+      ],
+      "answer": 0,
+      "explanation": "Actually — «на самом деле, вообще-то»: говорящий вежливо поправляет собеседника. Слово лишь похоже на русское «актуально»; «в настоящее время» — это currently, а «наконец-то» — at last."
+    },
+    {
+      "type": "gap",
+      "sentence": "___, have you heard that Anna is moving to Canada?",
+      "translation": "Кстати, ты слышал, что Анна переезжает в Канаду?",
+      "options": ["By the way", "By a way", "On the way", "In the way"],
+      "answer": 0,
+      "explanation": "«Кстати» — by the way, обязательно с артиклем the. On the way значит «по дороге», in the way — «на пути, мешает», а выражения «by a way» не существует."
+    },
+    {
+      "type": "listen",
+      "audio": "To be honest, I didn't enjoy the play very much.",
+      "question": "Что говорит человек?",
+      "options": [
+        "Он откровенно признаётся, что спектакль ему не очень понравился",
+        "Он говорит, что спектакль ему очень понравился",
+        "Он признаётся, что не ходил на спектакль",
+        "Он считает, что актёры играли нечестно"
+      ],
+      "answer": 0,
+      "explanation": "To be honest — «честно говоря»: так предупреждают, что сейчас прозвучит не самое приятное мнение. Didn't enjoy… very much — мягкий способ сказать «не понравилось»."
+    },
+    {
+      "type": "translate",
+      "source": "Кстати, во сколько начинается встреча?",
+      "answer": "By the way, what time does the meeting start?",
+      "accept": [
+        "By the way, what time does the meeting begin?",
+        "By the way, when does the meeting start?",
+        "By the way, when does the meeting begin?",
+        "By the way, at what time does the meeting start?",
+        "What time does the meeting start, by the way?"
+      ],
+      "distractors": ["actually", "starts", "on"],
+      "explanation": "«Кстати» — by the way: вы вводите новый вопрос, не связанный с предыдущей темой. Actually сюда не подходит: оно поправляет или уточняет. В вопросе после does глагол стоит без -s: does the meeting start."
+    },
+    {
+      "type": "gap",
+      "sentence": "He's not very friendly. ___, he did help me when my car broke down.",
+      "translation": "Он не очень-то приветлив. Впрочем, он всё же помог мне, когда у меня сломалась машина.",
+      "options": ["Mind you", "Mind me", "As I was saying", "Never mind"],
+      "answer": 0,
+      "explanation": "Вторая фраза уравновешивает первую: «впрочем, надо признать» — это mind you. Выражение не изменяется, поэтому «mind me» невозможно; as I was saying возвращает к прерванной мысли, а never mind значит «неважно»."
+    },
+    {
+      "type": "speak",
+      "text": "Anyway, I'd better get back to work.",
+      "translation": "Ладно, мне пора возвращаться к работе."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас перебили, и вы хотите вернуться к своему рассказу. Что вы скажете?",
+      "options": [
+        "As I was saying, the hotel was right on the beach.",
+        "By the way, the hotel was right on the beach.",
+        "Mind you, the hotel was right on the beach.",
+        "To be honest, the hotel was right on the beach."
+      ],
+      "answer": 0,
+      "explanation": "As I was saying — «так вот, как я говорил»: этой фразой подхватывают мысль, на которой вас прервали. By the way начинает новую тему, mind you добавляет оговорку, to be honest вводит откровенное мнение."
+    },
+    {
+      "type": "type",
+      "source": "Честно говоря, я устал.",
+      "answer": "To be honest, I'm tired.",
+      "accept": [
+        "To be honest, I am tired.",
+        "To be honest with you, I'm tired.",
+        "Honestly, I'm tired.",
+        "Frankly, I'm tired.",
+        "To be frank, I'm tired.",
+        "To tell the truth, I'm tired.",
+        "To tell you the truth, I'm tired.",
+        "I'm tired, to be honest."
+      ],
+      "explanation": "«Честно говоря» — to be honest. Дословный перевод «honestly speaking» встречается, но звучит менее естественно. «Я устал» — I'm tired: в английском это прилагательное с глаголом be."
+    },
+    {
+      "type": "listen",
+      "audio": "Let's meet on Tuesday. I mean Thursday, sorry.",
+      "question": "Когда предлагают встретиться?",
+      "options": [
+        "В четверг",
+        "Во вторник",
+        "И во вторник, и в четверг",
+        "Во вторник или в четверг — на выбор"
+      ],
+      "answer": 0,
+      "explanation": "I mean здесь — «то есть»: говорящий оговорился и поправляет себя. Верным остаётся то, что сказано после I mean, — Thursday."
+    },
+    {
+      "type": "gap",
+      "sentence": "I know you think the trip was my idea, but ___ it was Tom's.",
+      "translation": "Я знаю, ты думаешь, что поездка была моей идеей, но на самом деле это придумал Том.",
+      "options": ["actually", "currently", "nowadays", "at present"],
+      "answer": 0,
+      "explanation": "Говорящий исправляет неверное представление: «на самом деле» — actually. Currently, nowadays и at present значат «сейчас, в настоящее время» и к прошлому событию не подходят."
+    },
+    {
+      "type": "translate",
+      "source": "Вообще-то я не пью кофе.",
+      "answer": "Actually, I don't drink coffee.",
+      "accept": [
+        "Actually, I do not drink coffee.",
+        "I don't actually drink coffee.",
+        "I don't drink coffee, actually.",
+        "As a matter of fact, I don't drink coffee."
+      ],
+      "distractors": ["currently", "drinking", "am"],
+      "explanation": "«Вообще-то» — actually: вы поправляете собеседника, который, например, предложил вам кофе. Currently значило бы «в данный момент». Привычка выражается Present Simple: I don't drink."
+    },
+    {
+      "type": "dictation",
+      "audio": "Anyway, what were you saying about the flat?",
+      "translation": "Так вот, что вы говорили о квартире?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Зачем говорящий произносит anyway: «Anyway, it was lovely to see you. Take care!»?",
+      "options": [
+        "Чтобы дать понять, что разговор заканчивается",
+        "Чтобы возразить собеседнику",
+        "Чтобы начать новую тему",
+        "Чтобы извиниться"
+      ],
+      "answer": 0,
+      "explanation": "Anyway в начале реплики подводит черту: «ну ладно». Вместе с It was lovely to see you и Take care это сигнал, что говорящий прощается."
+    }
+  ]
+}

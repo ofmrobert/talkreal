@@ -1,0 +1,199 @@
+{
+  "id": "b2-23",
+  "level": "B2",
+  "order": 23,
+  "title": { "ru": "Needn't have, didn't need to, be supposed to, be meant to", "en": "Needn't have, didn't need to, be supposed to, be meant to" },
+  "goal": { "ru": "Научитесь различать «сделал зря» и «не было необходимости» и говорить о том, что положено по правилам или замыслу.", "en": "Learn to tell \"did it for nothing\" from \"there was no need\", and to talk about what the rules or the plan expect." },
+  "theory": [
+    {
+      "title": "Needn't have: сделал, но зря",
+      "body": "Needn't have + третья форма глагола — действие совершили, а потом выяснилось, что в нём не было необходимости. Это взгляд назад с оттенком «зря старался». Так же вежливо отвечают на подарок или помощь.",
+      "examples": [
+        { "en": "I needn't have taken an umbrella: it didn't rain at all.", "ru": "Я зря взял зонт: дождя так и не было." },
+        { "en": "You needn't have paid: the museum is free on Sundays.", "ru": "Вы зря заплатили: по воскресеньям музей бесплатный." },
+        { "en": "She needn't have got up so early.", "ru": "Ей незачем было вставать так рано." }
+      ],
+      "tip": "После needn't нет частицы to: «needn't to have» — ошибка."
+    },
+    {
+      "title": "Didn't need to: не было необходимости",
+      "body": "Didn't need to + глагол (или didn't have to) сообщает только факт: необходимости не было, и человек знал это заранее. Обычно действие и не совершали. Сравните: I didn't need to wait — ждать не пришлось; I needn't have waited — я ждал, но напрасно.",
+      "examples": [
+        { "en": "The flat was furnished, so we didn't need to buy anything.", "ru": "Квартира была с мебелью, так что нам не пришлось ничего покупать." },
+        { "en": "I didn't have to show my passport.", "ru": "Мне не пришлось показывать паспорт." },
+        { "en": "He didn't need to explain: I understood everything.", "ru": "Ему не нужно было объяснять: я всё понял." }
+      ],
+      "tip": "По-русски оба случая звучат одинаково: «не нужно было». Спросите себя: действие всё-таки совершили? Если да и оказалось, что зря, — needn't have."
+    },
+    {
+      "title": "Be supposed to, be meant to",
+      "body": "Обе конструкции значат «положено, должен» — по правилам, договорённости или чьему-то замыслу. В отрицании — «нельзя, не положено». В прошедшем времени они подсказывают, что вышло иначе. Ещё одно значение — «говорят, считается».",
+      "examples": [
+        { "en": "You're supposed to knock before you come in.", "ru": "Прежде чем войти, положено стучать." },
+        { "en": "We're not meant to use our phones at work.", "ru": "Нам не положено пользоваться телефонами на работе." },
+        { "en": "That new Italian place is supposed to be very good.", "ru": "Говорят, тот новый итальянский ресторан очень хороший." }
+      ],
+      "tip": "Без be и без окончания -d не обойтись: You are supposed to… А I suppose — это уже «я полагаю»."
+    }
+  ],
+  "vocab": [
+    { "en": "needn't have", "ru": "зря (сделал), не стоило", "example": "You needn't have waited for me." },
+    { "en": "didn't need to", "ru": "не было необходимости", "example": "We didn't need to queue." },
+    { "en": "be supposed to", "ru": "должен (по правилам, по договорённости)", "example": "I'm supposed to be at work by nine." },
+    { "en": "be meant to", "ru": "должен (по замыслу); считается, что", "example": "This button is meant to open the door." },
+    { "en": "unnecessary", "ru": "ненужный, лишний", "example": "Try to avoid unnecessary expenses." },
+    { "en": "in advance", "ru": "заранее", "example": "You can buy tickets in advance." },
+    { "en": "to bother", "ru": "утруждать себя; беспокоить", "example": "Don't bother washing up; I'll do it later." },
+    { "en": "a resident", "ru": "жилец, житель", "example": "The car park is for residents only." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "needn't have", "ru": "зря (сделал), не стоило" },
+        { "en": "didn't need to", "ru": "не было необходимости" },
+        { "en": "be supposed to", "ru": "должен (по правилам, по договорённости)" },
+        { "en": "be meant to", "ru": "должен (по замыслу); считается, что" },
+        { "en": "unnecessary", "ru": "ненужный, лишний" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы купили молоко, а дома его оказалось полно. Что вы скажете?",
+      "options": [
+        "I needn't have bought any milk.",
+        "I needn't bought any milk.",
+        "I mustn't have bought any milk.",
+        "I didn't need buy any milk."
+      ],
+      "answer": 0,
+      "explanation": "Молоко куплено, но зря — это needn't have + третья форма: needn't have bought. Без have конструкция неполная, mustn't have в таком значении не употребляется, а после didn't need обязательна частица to."
+    },
+    {
+      "type": "gap",
+      "sentence": "It was a public holiday, so I ___ get up early. I stayed in bed until ten.",
+      "translation": "Был праздничный день, так что мне не нужно было рано вставать. Я пролежал в постели до десяти.",
+      "options": ["didn't need to", "needn't have", "needn't to", "wasn't supposed"],
+      "answer": 0,
+      "explanation": "Человек заранее знал, что вставать не нужно, и не вставал — это didn't need to. Needn't have требует третьей формы (got up) и значило бы, что он встал рано, но напрасно."
+    },
+    {
+      "type": "listen",
+      "audio": "You needn't have cooked so much food. Only four people came.",
+      "question": "Что произошло?",
+      "options": [
+        "Еды приготовили слишком много, и это оказалось лишним",
+        "Еды на всех не хватило",
+        "Готовить не стали, потому что гостей было мало",
+        "Готовить так много было запрещено"
+      ],
+      "answer": 0,
+      "explanation": "Needn't have cooked — еду приготовили, но в таком количестве она не понадобилась: пришли всего четверо. Если бы не готовили вовсе, сказали бы didn't need to cook."
+    },
+    {
+      "type": "translate",
+      "source": "Вчера мне не нужно было идти на работу.",
+      "answer": "I didn't need to go to work yesterday.",
+      "accept": [
+        "I did not need to go to work yesterday.",
+        "I didn't have to go to work yesterday.",
+        "Yesterday I didn't need to go to work.",
+        "Yesterday I didn't have to go to work."
+      ],
+      "distractors": ["needn't", "going", "must"],
+      "explanation": "Здесь просто факт: необходимости не было. Это didn't need to или didn't have to. I needn't have gone to work значило бы, что вы всё-таки пришли на работу и напрасно."
+    },
+    {
+      "type": "gap",
+      "sentence": "You're not ___ to park here. It's for residents only.",
+      "translation": "Здесь нельзя парковаться. Это только для жильцов.",
+      "options": ["supposed", "suppose", "supposing", "need"],
+      "answer": 0,
+      "explanation": "Be not supposed to — «не положено, нельзя по правилам». После be нужна форма с -d: supposed. На слух это окончание почти не слышно, поэтому его часто забывают на письме."
+    },
+    {
+      "type": "speak",
+      "text": "You needn't have worried about me.",
+      "translation": "Зря вы обо мне волновались."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит «This film is meant to be very good»?",
+      "options": [
+        "Говорят, что этот фильм очень хороший",
+        "Этот фильм обязан всем понравиться",
+        "Этот фильм обязательно нужно посмотреть",
+        "Я сам считаю этот фильм очень хорошим"
+      ],
+      "answer": 0,
+      "explanation": "Be meant to be, как и be supposed to be, передаёт чужое мнение: «говорят, считается». Говорящий сам фильм, скорее всего, ещё не видел и пересказывает то, что слышал."
+    },
+    {
+      "type": "type",
+      "source": "Мы зря взяли такси.",
+      "answer": "We needn't have taken a taxi.",
+      "accept": [
+        "We need not have taken a taxi.",
+        "We needn't have taken the taxi.",
+        "We needn't have got a taxi.",
+        "We needn't have taken a cab."
+      ],
+      "explanation": "Такси взяли, но в этом не было необходимости — needn't have taken. После needn't нет to, а глагол стоит в третьей форме: taken, не took."
+    },
+    {
+      "type": "listen",
+      "audio": "I was meant to finish the report by Friday, but I haven't even started.",
+      "question": "Что вы узнали?",
+      "options": [
+        "Отчёт нужно было закончить к пятнице, но он даже не начат",
+        "Отчёт был готов раньше срока",
+        "Отчёт будет готов к пятнице",
+        "Отчёт отменили, и писать его не нужно"
+      ],
+      "answer": 0,
+      "explanation": "Was meant to — «должен был» по плану или договорённости. В прошедшем времени эта форма почти всегда означает, что вышло иначе, и часть после but это подтверждает."
+    },
+    {
+      "type": "gap",
+      "sentence": "Thank you for the flowers, but you really ___ have gone to so much trouble.",
+      "translation": "Спасибо за цветы, но, право, не стоило так беспокоиться.",
+      "options": ["needn't", "didn't need", "mustn't", "don't need"],
+      "answer": 0,
+      "explanation": "Человек уже постарался, и вы вежливо говорите, что это было необязательно: needn't have gone. Перед have + третья форма может стоять только модальный глагол; didn't need и don't need требуют to и начальной формы."
+    },
+    {
+      "type": "translate",
+      "source": "Здесь положено снимать обувь.",
+      "answer": "You are supposed to take off your shoes here.",
+      "accept": [
+        "You're supposed to take off your shoes here.",
+        "You are supposed to take your shoes off here.",
+        "You're supposed to take your shoes off here.",
+        "You are meant to take off your shoes here.",
+        "You're meant to take off your shoes here.",
+        "You are meant to take your shoes off here.",
+        "You're meant to take your shoes off here.",
+        "We are supposed to take off our shoes here."
+      ],
+      "distractors": ["suppose", "must", "taking"],
+      "explanation": "«Положено» по правилам места — be supposed to. Русскому безличному предложению в английском нужно подлежащее: обобщённое you. Must звучало бы как личный приказ, а не как принятое правило."
+    },
+    {
+      "type": "dictation",
+      "audio": "We didn't need to book in advance.",
+      "translation": "Нам не нужно было бронировать заранее."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "You're supposed to switch off your phone during the exam.",
+        "You supposed to switch off your phone during the exam.",
+        "You're suppose to switch off your phone during the exam.",
+        "You're supposed switching off your phone during the exam."
+      ],
+      "answer": 0,
+      "explanation": "Конструкция состоит из трёх частей: be + supposed + to do. В остальных вариантах пропущен глагол be, потеряно окончание -d или инфинитив заменён формой на -ing."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "a1-29",
+  "level": "A1",
+  "order": 29,
+  "title": { "ru": "Транспорт и поездки: by bus, on foot, How long does it take?", "en": "Transport and travel: by bus, on foot, How long does it take?" },
+  "goal": { "ru": "Научитесь рассказывать, как вы добираетесь до работы и сколько времени это занимает.", "en": "Learn to say how you get to work and how long it takes." },
+  "theory": [
+    {
+      "title": "By bus, by car, on foot",
+      "body": "Способ передвижения — это by и вид транспорта без артикля: by bus, by car, by train, by underground, by plane, by bike. Из-за русского «на автобусе» хочется сказать «on bus», но предлог здесь by. «By the bus» — тоже ошибка. Одно исключение: пешком — on foot.",
+      "examples": [
+        { "en": "My wife goes to work by car.", "ru": "Моя жена ездит на работу на машине." },
+        { "en": "The children go to school on foot.", "ru": "Дети ходят в школу пешком." },
+        { "en": "They travel a lot by plane.", "ru": "Они много летают на самолёте." }
+      ],
+      "tip": "То же самое можно сказать одним глаголом: I walk to work — хожу пешком, I drive to work — езжу на машине."
+    },
+    {
+      "title": "How do you get to work?",
+      "body": "Get to — «добираться до»: How do you get to work? В ответе называют транспорт: By bus. или I get to work by bus. С home предлог to не нужен: get home, а не «get to home». Ещё один способ ответить — глагол take с артиклем: I take the bus, I take a taxi.",
+      "examples": [
+        { "en": "How do you get to work? — By underground.", "ru": "Как вы добираетесь до работы? — На метро." },
+        { "en": "How does your son get to school?", "ru": "Как ваш сын добирается до школы?" },
+        { "en": "What time do you get home?", "ru": "Во сколько вы приходите домой?" }
+      ],
+      "tip": "Сравните артикли: by bus — без артикля, но take the bus — с артиклем."
+    },
+    {
+      "title": "How long does it take? — It takes…",
+      "body": "«Сколько времени это занимает?» — How long does it take? Ответ: It takes и время. It здесь такое же, как в It's cold: оно ничего не значит, но без него нельзя. Не забывайте -s в takes и does в вопросе: «How long it takes?» — ошибка.",
+      "examples": [
+        { "en": "How long does it take? — It takes twenty minutes.", "ru": "Сколько времени это занимает? — Двадцать минут." },
+        { "en": "It takes about half an hour by bus.", "ru": "На автобусе это занимает примерно полчаса." },
+        { "en": "It doesn't take long.", "ru": "Это недолго." }
+      ],
+      "tip": "Half an hour — «полчаса», an hour and a half — «полтора часа». About перед числом значит «примерно»."
+    }
+  ],
+  "vocab": [
+    { "en": "by bus", "ru": "на автобусе", "example": "It's cheap by bus." },
+    { "en": "on foot", "ru": "пешком", "example": "It's ten minutes on foot." },
+    { "en": "underground", "ru": "метро", "example": "The underground is very busy in the morning." },
+    { "en": "plane", "ru": "самолёт", "example": "The plane is late." },
+    { "en": "bike", "ru": "велосипед", "example": "I've got a new bike." },
+    { "en": "to get to", "ru": "добираться до", "example": "How can I get to the station?" },
+    { "en": "to take", "ru": "занимать (время); ехать на", "example": "I take the train every day." },
+    { "en": "hour", "ru": "час", "example": "The film is two hours long." },
+    { "en": "minute", "ru": "минута", "example": "Wait a minute, please." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "on foot", "ru": "пешком" },
+        { "en": "underground", "ru": "метро" },
+        { "en": "plane", "ru": "самолёт" },
+        { "en": "hour", "ru": "час" },
+        { "en": "minute", "ru": "минута" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я езжу в офис на автобусе»?",
+      "options": ["I go to the office on bus.", "I go to the office by the bus.", "I go to the office by bus.", "I go to the office with bus."],
+      "answer": 2,
+      "explanation": "О виде транспорта говорят by и слово без артикля: by bus. Русское «на» хочется перевести как on, но здесь нужен именно by."
+    },
+    {
+      "type": "gap",
+      "sentence": "My office is near my house. I go there ___ foot.",
+      "translation": "Мой офис рядом с домом. Я хожу туда пешком.",
+      "options": ["by", "on", "in", "with"],
+      "answer": 1,
+      "explanation": "«Пешком» — on foot. Это исключение: со всеми видами транспорта стоит by, а с foot — on."
+    },
+    {
+      "type": "listen",
+      "audio": "I usually go to work by underground. It takes forty minutes.",
+      "question": "Сколько времени занимает дорога?",
+      "options": ["Сорок минут", "Четырнадцать минут", "Четыре минуты", "Час сорок"],
+      "answer": 0,
+      "explanation": "Forty — «сорок». Не путайте с fourteen, «четырнадцать»: там ударение на конце слова. It takes — «это занимает»."
+    },
+    {
+      "type": "translate",
+      "source": "Как ты добираешься до работы?",
+      "answer": "How do you get to work?",
+      "accept": ["How do you go to work?", "How do you travel to work?"],
+      "distractors": ["does", "by", "are"],
+      "explanation": "«Добираться до» — get to. Вопрос строится с do: How do you get…? Без do он неправильный, а does нужен только с he, she, it."
+    },
+    {
+      "type": "gap",
+      "sentence": "It ___ an hour by train.",
+      "translation": "На поезде это занимает час.",
+      "options": ["take", "takes", "is take", "taking"],
+      "answer": 1,
+      "explanation": "С it глагол получает -s: it takes. Is перед take не нужен: take — обычный глагол в Present Simple."
+    },
+    {
+      "type": "speak",
+      "text": "How long does it take by car?",
+      "translation": "Сколько времени это занимает на машине?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Сколько времени это занимает?»",
+      "options": ["How long it takes?", "How long does it take?", "How much time it take?", "How long is it take?"],
+      "answer": 1,
+      "explanation": "В вопросе нужен does, а take теряет -s: How long does it take? Без does вопрос неправильный, и is с глаголом take не сочетается."
+    },
+    {
+      "type": "translate",
+      "source": "Моя дочь ходит в школу пешком.",
+      "answer": "My daughter goes to school on foot.",
+      "accept": ["My daughter walks to school.", "My daughter gets to school on foot."],
+      "distractors": ["by", "go", "the"],
+      "explanation": "«Пешком» — on foot, а не by foot. My daughter — это she, поэтому goes. To school говорят без артикля."
+    },
+    {
+      "type": "listen",
+      "audio": "My brother goes to work by bike, not by car.",
+      "question": "Как брат добирается до работы?",
+      "options": ["На велосипеде", "На машине", "На автобусе", "Пешком"],
+      "answer": 0,
+      "explanation": "By bike — «на велосипеде». Not by car — «не на машине»: машину назвали только для того, чтобы сказать, что он на ней не ездит."
+    },
+    {
+      "type": "gap",
+      "sentence": "I usually ___ the bus to the city centre.",
+      "translation": "Обычно я езжу в центр города на автобусе.",
+      "options": ["take", "go", "get to", "by"],
+      "answer": 0,
+      "explanation": "С транспортом и артиклем нужен глагол take: take the bus. С go было бы по-другому: go by bus, без артикля."
+    },
+    {
+      "type": "type",
+      "source": "Это занимает двадцать минут.",
+      "answer": "It takes twenty minutes.",
+      "accept": ["It takes 20 minutes.", "This takes twenty minutes.", "This takes 20 minutes.", "That takes twenty minutes.", "That takes 20 minutes.", "It takes me twenty minutes.", "It takes me 20 minutes."],
+      "explanation": "It takes и время. С it у глагола обязательно -s, а minutes стоит во множественном числе."
+    },
+    {
+      "type": "dictation",
+      "audio": "I get home at half past six.",
+      "translation": "Я прихожу домой в половине седьмого."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She goes to work by a car.", "How long does it takes?", "It takes about ten minutes on foot.", "I get to home at six."],
+      "answer": 2,
+      "explanation": "It takes и время, on foot — всё верно. В остальных ошибки: by car без артикля, после does — take без -s, а get home говорят без to."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "b1-26",
+  "level": "B1",
+  "order": 26,
+  "title": { "ru": "Would rather, had better, it's time: «я бы лучше…», «вам лучше…», «пора»", "en": "Would rather, had better, it's time" },
+  "goal": { "ru": "Научитесь говорить о своих предпочтениях, давать настойчивые советы и говорить, что пора что-то сделать.", "en": "Learn to say what you would prefer, give strong advice and say that it's time to do something." },
+  "theory": [
+    {
+      "title": "I'd rather: я бы предпочёл",
+      "body": "Would rather + глагол без to значит «я бы предпочёл», «я бы лучше». В речи would почти всегда сокращается: I'd rather. Отрицание — I'd rather not, а второй вариант при сравнении вводится словом than. Так говорят о том, чего хочется в конкретной ситуации.",
+      "examples": [
+        { "en": "I'd rather stay in tonight.", "ru": "Я бы лучше остался сегодня дома." },
+        { "en": "I'd rather cook than order a pizza.", "ru": "Я бы лучше приготовил сам, чем заказывать пиццу." },
+        { "en": "Would you rather eat in or go out?", "ru": "Вы бы предпочли поесть дома или куда-нибудь сходить?" }
+      ],
+      "tip": "После would rather нет to: «I'd rather to stay» — ошибка. Сравните: I'd prefer to stay, но I'd rather stay."
+    },
+    {
+      "title": "You'd better: настойчивый совет",
+      "body": "Had better + глагол без to — это совет или предупреждение о конкретной ситуации: «вам лучше…, иначе будет плохо». Несмотря на форму had, речь идёт о настоящем или будущем. В речи говорят you'd better, we'd better. Отрицание — had better not. Для общих советов и мнений подходит более мягкое should.",
+      "examples": [
+        { "en": "You'd better hurry or you'll miss your flight.", "ru": "Вам лучше поторопиться, иначе опоздаете на рейс." },
+        { "en": "We'd better book a table. It's Saturday.", "ru": "Нам лучше забронировать столик. Сегодня суббота." },
+        { "en": "You'd better not touch that.", "ru": "Лучше это не трогайте." }
+      ],
+      "tip": "В I'd rather 'd — это would, а в I'd better — had. После обоих глагол стоит без to: «you'd better to go» — ошибка."
+    },
+    {
+      "title": "It's time: пора",
+      "body": "У «пора» три схемы. It's time to + глагол: it's time to go. It's time for + существительное: it's time for lunch. И третья, с упрёком «давно пора»: it's time + подлежащее + прошедшее время — it's time we left. Прошедшее время здесь не о прошлом: оно показывает, что это уже следовало сделать.",
+      "examples": [
+        { "en": "It's time to go home.", "ru": "Пора идти домой." },
+        { "en": "It's time for a break.", "ru": "Пора сделать перерыв." },
+        { "en": "It's time you bought a new phone.", "ru": "Вам давно пора купить новый телефон." }
+      ],
+      "tip": "It's time we left значит «нам пора уходить (мы уже задержались)», а не «мы ушли». Настоящее время в этой схеме не ставят: «it's time we leave» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "I'd rather", "ru": "я бы предпочёл, я бы лучше", "example": "I'd rather walk." },
+    { "en": "you'd better", "ru": "вам лучше, вам стоит", "example": "You'd better take an umbrella." },
+    { "en": "it's time", "ru": "пора", "example": "It's time to start." },
+    { "en": "to stay in", "ru": "остаться дома", "example": "Let's stay in and watch a film." },
+    { "en": "to eat out", "ru": "поесть в кафе или ресторане", "example": "We eat out once a week." },
+    { "en": "to hurry", "ru": "торопиться", "example": "There's no need to hurry." },
+    { "en": "to set off", "ru": "отправляться в путь", "example": "We set off at six in the morning." },
+    { "en": "to book", "ru": "бронировать", "example": "Shall I book a table for eight o'clock?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "it's time", "ru": "пора" },
+        { "en": "to stay in", "ru": "остаться дома" },
+        { "en": "to eat out", "ru": "поесть в кафе или ресторане" },
+        { "en": "to hurry", "ru": "торопиться" },
+        { "en": "to set off", "ru": "отправляться в путь" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас зовут в кино, но вам больше хочется побыть дома. Что вы скажете?",
+      "options": ["I'd rather stay at home.", "I'd rather to stay at home.", "I'd rather staying at home.", "I rather stay at home."],
+      "answer": 0,
+      "explanation": "Предпочтение выражает would rather + глагол без to: I'd rather stay. To и -ing после rather не ставятся, а без would ('d) слово rather эту роль не выполняет."
+    },
+    {
+      "type": "gap",
+      "sentence": "You'd better ___ a coat. It's freezing outside.",
+      "translation": "Вам лучше взять пальто. На улице мороз.",
+      "options": ["take", "to take", "taking", "took"],
+      "answer": 0,
+      "explanation": "После had better глагол стоит в начальной форме без to: you'd better take. Хотя had — форма прошедшего времени, совет относится к настоящему, поэтому took тоже не подходит."
+    },
+    {
+      "type": "translate",
+      "source": "Нам давно пора идти домой.",
+      "answer": "It is time we went home.",
+      "accept": ["It's time we went home.", "It is high time we went home.", "It's high time we went home.", "It is about time we went home.", "It's about time we went home.", "It is time for us to go home.", "It's time for us to go home.", "It is time to go home.", "It's time to go home."],
+      "distractors": ["go", "will", "are"],
+      "explanation": "«Давно пора» — it's time + подлежащее + прошедшее время: it's time we went. Форма went здесь не о прошлом, она показывает, что уйти уже следовало. Настоящее время go в этой схеме не ставят."
+    },
+    {
+      "type": "listen",
+      "audio": "I'd rather not talk about it right now.",
+      "question": "Чего хочет говорящий?",
+      "options": ["Не обсуждать это сейчас", "Обсудить это прямо сейчас", "Чтобы об этом рассказал кто-то другой", "Поговорить об этом подробнее"],
+      "answer": 0,
+      "explanation": "I'd rather not — вежливый способ отказаться: «я бы предпочёл этого не делать». Not стоит сразу после rather, перед глаголом talk."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'd rather walk ___ wait for the bus.",
+      "translation": "Я бы лучше пошёл пешком, чем ждать автобус.",
+      "options": ["than", "then", "that", "as"],
+      "answer": 0,
+      "explanation": "Второй вариант при сравнении вводит than — «чем»: I'd rather walk than wait. Then значит «потом», а that и as здесь не подходят по смыслу."
+    },
+    {
+      "type": "speak",
+      "text": "We'd better leave now or we'll be late.",
+      "translation": "Нам лучше выйти сейчас, иначе мы опоздаем."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["You'd better to see a doctor.", "You'd better see a doctor.", "You better seeing a doctor.", "You'd better saw a doctor."],
+      "answer": 1,
+      "explanation": "Had better + глагол в начальной форме без to: you'd better see. To после better — самая частая ошибка, а форма на -ing и прошедшее время здесь невозможны."
+    },
+    {
+      "type": "type",
+      "source": "Я бы предпочёл поехать на поезде.",
+      "answer": "I would rather go by train.",
+      "accept": ["I'd rather go by train.", "I would rather take the train.", "I'd rather take the train.", "I would rather travel by train.", "I'd rather travel by train.", "I would prefer to go by train.", "I'd prefer to go by train.", "I would prefer to take the train.", "I'd prefer to take the train.", "I would prefer to travel by train.", "I'd prefer to travel by train."],
+      "explanation": "«Я бы предпочёл» — I'd rather + глагол без to: I'd rather go. Если выбрать prefer, to уже понадобится: I'd prefer to go. «На поезде» — by train, без артикля."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's nearly midnight. It's time the children ___ in bed.",
+      "translation": "Уже почти полночь. Детям давно пора быть в постели.",
+      "options": ["were", "are", "will be", "be"],
+      "answer": 0,
+      "explanation": "После it's time + подлежащее глагол стоит в прошедшем времени, хотя речь о настоящем: it's time the children were in bed. Так английский показывает, что это уже должно было произойти."
+    },
+    {
+      "type": "listen",
+      "audio": "I'd rather have tea than coffee.",
+      "question": "Что вы услышали?",
+      "options": ["I'd rather have tea than coffee.", "I'd rather have coffee than tea.", "I'd better have tea than coffee.", "I'd rather have tea and coffee."],
+      "answer": 0,
+      "explanation": "I'd rather… than… — «я бы предпочёл… а не…»: то, что вы выбираете, стоит перед than. Говорящий выбирает чай. Rather и better легко спутать на слух, но better говорит о совете, а не о желании."
+    },
+    {
+      "type": "translate",
+      "source": "Вам лучше не опаздывать.",
+      "answer": "You had better not be late.",
+      "accept": ["You'd better not be late.", "You had better not come late.", "You'd better not come late.", "You should not be late.", "You shouldn't be late."],
+      "distractors": ["to", "don't", "rather"],
+      "explanation": "Отрицание строится так: had better not + глагол без to — you had better not be late. Don't здесь не нужно, а rather говорит о предпочтении, а не о совете."
+    },
+    {
+      "type": "dictation",
+      "audio": "It's time to start cooking dinner.",
+      "translation": "Пора начинать готовить ужин."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «You'd better apologise»?",
+      "options": ["Вам стоит извиниться, иначе будет хуже", "Вы бы предпочли извиниться", "Вы правильно сделали, что извинились"],
+      "answer": 0,
+      "explanation": "You'd better = you had better — настойчивый совет на настоящее или будущее с намёком на неприятные последствия. Предпочтение — это would rather, а о прошлом had better не говорит."
+    }
+  ]
+}

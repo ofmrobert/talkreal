@@ -1,0 +1,202 @@
+{
+  "id": "b2-30",
+  "level": "B2",
+  "order": 30,
+  "title": { "ru": "Официальный и неофициальный стиль: письма и сообщения", "en": "Formal and informal writing: emails and messages" },
+  "goal": { "ru": "Научитесь начинать письмо, формулировать просьбу и прощаться в двух стилях: от I am writing to enquire… до Just a quick note….", "en": "Learn to open an email, make a request and sign off in two styles: from I am writing to enquire… to Just a quick note…." },
+  "theory": [
+    {
+      "title": "Начало письма",
+      "body": "Официальное письмо начинается с Dear Mr Brown или Dear Ms Lee, а если имя неизвестно — с Dear Sir or Madam. Затем сразу называют цель: I am writing to enquire about… («хочу узнать о…»), I am writing with regard to… («пишу по поводу…»). В сообщении другу или коллеге — Hi Tom и Just a quick note to… («пишу буквально пару строк, чтобы…»).",
+      "examples": [
+        { "en": "Dear Ms Lee, I am writing to enquire about the position of sales assistant.", "ru": "Уважаемая госпожа Ли, я хотел бы узнать о вакансии продавца-консультанта." },
+        { "en": "I am writing with regard to my recent order.", "ru": "Пишу по поводу моего недавнего заказа." },
+        { "en": "Hi Tom, just a quick note to say I'll be late tomorrow.", "ru": "Привет, Том! Пишу буквально пару строк: завтра я опоздаю." }
+      ],
+      "tip": "В официальном письме избегайте сокращений: I am, а не I'm; I would, а не I'd. После обращения в английском ставят запятую, а не восклицательный знак."
+    },
+    {
+      "title": "Просьбы",
+      "body": "Чем официальнее письмо, тем длиннее и осторожнее просьба. I would be grateful if you could… — «Я был бы признателен, если бы вы…». Could you please…? — вежливо и нейтрально. Can you…? и повелительное наклонение подходят только для близких знакомых.",
+      "examples": [
+        { "en": "I would be grateful if you could send me further information.", "ru": "Я был бы признателен, если бы вы прислали мне дополнительную информацию." },
+        { "en": "Could you please confirm your address?", "ru": "Не могли бы вы подтвердить свой адрес?" },
+        { "en": "Can you send me the photos when you get a chance?", "ru": "Пришлёшь мне фотографии, когда будет минутка?" }
+      ],
+      "tip": "Слово please не превращает приказ в вежливую просьбу: «Please send me the documents» звучит как распоряжение. Вопрос с could намного мягче."
+    },
+    {
+      "title": "Концовка",
+      "body": "Перед подписью официального письма часто пишут I look forward to hearing from you — «жду вашего ответа». Затем — Yours sincerely, если вы обратились по имени, и Yours faithfully после Dear Sir or Madam. Kind regards и Best regards — вежливо, но менее официально. Друзьям пишут Speak soon, Take care или Cheers.",
+      "examples": [
+        { "en": "I look forward to hearing from you.", "ru": "С нетерпением жду вашего ответа." },
+        { "en": "Please do not hesitate to contact me if you have any questions.", "ru": "Если у вас возникнут вопросы, пожалуйста, обращайтесь." },
+        { "en": "Thanks again. Speak soon!", "ru": "Ещё раз спасибо. До связи!" }
+      ],
+      "tip": "В look forward to слово to — предлог, поэтому после него идёт форма на -ing: to hearing, а не «to hear»."
+    }
+  ],
+  "vocab": [
+    { "en": "to enquire", "ru": "наводить справки, запрашивать", "example": "I am writing to enquire about opening hours." },
+    { "en": "grateful", "ru": "благодарный, признательный", "example": "We are very grateful for your help." },
+    { "en": "to look forward to", "ru": "с нетерпением ждать", "example": "I look forward to meeting you." },
+    { "en": "with regard to", "ru": "по поводу, в отношении", "example": "I am writing with regard to your advertisement." },
+    { "en": "attached", "ru": "приложенный, во вложении", "example": "Please see the attached file." },
+    { "en": "Yours sincerely", "ru": "с уважением (в конце официального письма)", "example": "Yours sincerely, Anna Petrova" },
+    { "en": "Kind regards", "ru": "с наилучшими пожеланиями", "example": "Kind regards, Anna" },
+    { "en": "a quick note", "ru": "короткое сообщение, пара строк", "example": "Just a quick note to remind you about Friday." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to enquire", "ru": "наводить справки, запрашивать" },
+        { "en": "grateful", "ru": "благодарный, признательный" },
+        { "en": "to look forward to", "ru": "с нетерпением ждать" },
+        { "en": "with regard to", "ru": "по поводу, в отношении" },
+        { "en": "attached", "ru": "приложенный, во вложении" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы впервые пишете в незнакомую компанию. Какое начало письма подходит?",
+      "options": [
+        "I am writing to enquire about your language courses.",
+        "Just a quick note to ask about your language courses.",
+        "Hey! Tell me about your language courses.",
+        "I wanna ask about your language courses."
+      ],
+      "answer": 0,
+      "explanation": "I am writing to enquire about… — стандартное начало официального запроса: полная форма I am и нейтральный глагол enquire. Just a quick note, Hey и wanna уместны только в переписке со знакомыми."
+    },
+    {
+      "type": "gap",
+      "sentence": "We look forward to ___ you at the conference in May.",
+      "translation": "С нетерпением ждём встречи с вами на конференции в мае.",
+      "options": ["seeing", "see", "saw", "be seeing"],
+      "answer": 0,
+      "explanation": "В look forward to слово to — предлог, а не частица инфинитива, поэтому дальше идёт форма на -ing: to seeing. «Look forward to see» — одна из самых частых ошибок в деловых письмах."
+    },
+    {
+      "type": "listen",
+      "audio": "Just a quick note to say thanks for dinner last night.",
+      "question": "Что это за сообщение?",
+      "options": [
+        "Короткое дружеское сообщение с благодарностью за ужин",
+        "Официальное приглашение на ужин",
+        "Жалоба на ужин в ресторане",
+        "Официальный отказ от приглашения на ужин"
+      ],
+      "answer": 0,
+      "explanation": "Just a quick note to say… — неофициальное начало: «пишу пару строк, чтобы сказать…». Разговорное thanks вместо thank you тоже выдаёт дружеский тон."
+    },
+    {
+      "type": "translate",
+      "source": "Я был бы благодарен, если бы вы прислали мне прайс-лист.",
+      "answer": "I would be grateful if you could send me the price list.",
+      "accept": [
+        "I would be grateful if you could send me a price list.",
+        "I would be grateful if you could send me your price list.",
+        "I would be grateful if you would send me the price list.",
+        "I would be grateful if you sent me the price list.",
+        "I'd be grateful if you could send me the price list.",
+        "I would be grateful if you could send the price list to me."
+      ],
+      "distractors": ["will", "sending", "pleased"],
+      "explanation": "Официальная просьба — I would be grateful if you could + глагол. После if не ставят will: «if you will send» — ошибка, нужно could send. Частица «бы» передаётся словами would и could."
+    },
+    {
+      "type": "gap",
+      "sentence": "A letter that begins 'Dear Sir or Madam' traditionally ends 'Yours ___'.",
+      "translation": "Письмо, которое начинается с «Dear Sir or Madam», традиционно заканчивается словами «Yours ___».",
+      "options": ["faithfully", "sincerely", "friendly", "honestly"],
+      "answer": 0,
+      "explanation": "В британской традиции Yours faithfully пишут, когда имя адресата неизвестно (Dear Sir or Madam), а Yours sincerely — когда вы обратились по имени (Dear Mr Brown). Yours friendly и Yours honestly не говорят."
+    },
+    {
+      "type": "speak",
+      "text": "Please find attached a copy of the invoice.",
+      "translation": "Во вложении вы найдёте копию счёта."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая просьба звучит наиболее официально?",
+      "options": [
+        "I would be grateful if you could confirm the date.",
+        "Can you confirm the date?",
+        "Confirm the date, please.",
+        "Let me know the date, OK?"
+      ],
+      "answer": 0,
+      "explanation": "I would be grateful if you could… — самая официальная и осторожная формула. Can you…? нейтрально-разговорное, повелительное наклонение звучит как распоряжение даже с please, а OK? уместно только между друзьями."
+    },
+    {
+      "type": "type",
+      "source": "С нетерпением жду вашего ответа.",
+      "answer": "I look forward to hearing from you.",
+      "accept": [
+        "I am looking forward to hearing from you.",
+        "I'm looking forward to hearing from you.",
+        "Looking forward to hearing from you.",
+        "I look forward to your reply.",
+        "I am looking forward to your reply.",
+        "I look forward to your response.",
+        "I look forward to your answer."
+      ],
+      "explanation": "Стандартная заключительная фраза — I look forward to hearing from you. После to здесь нужна форма на -ing или существительное (your reply). «Wait for your answer» для концовки письма звучит неестественно и требовательно."
+    },
+    {
+      "type": "listen",
+      "audio": "I am writing with regard to the invoice you sent us on Monday.",
+      "question": "О чём это письмо?",
+      "options": [
+        "О счёте, который прислали в понедельник",
+        "О встрече, назначенной на понедельник",
+        "О заказе, который отправят в понедельник",
+        "О приглашении, полученном в понедельник"
+      ],
+      "answer": 0,
+      "explanation": "I am writing with regard to… — «пишу по поводу…»: официальный способ назвать тему письма. Invoice — счёт на оплату; you sent us on Monday — «который вы прислали нам в понедельник»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Hi Sam, thanks for your message. ___ soon! Kate",
+      "translation": "Привет, Сэм, спасибо за сообщение. До связи! Кейт",
+      "options": ["Speak", "Yours faithfully", "I look forward", "Respectfully"],
+      "answer": 0,
+      "explanation": "Hi и thanks задают дружеский тон, и концовка должна ему соответствовать: Speak soon! — «До связи!». Yours faithfully и Respectfully слишком официальны, а после I look forward нужны to и продолжение."
+    },
+    {
+      "type": "translate",
+      "source": "Не могли бы вы прислать мне подробности?",
+      "answer": "Could you please send me the details?",
+      "accept": [
+        "Could you send me the details, please?",
+        "Could you send me the details?",
+        "Could you please send me details?",
+        "Could you please send the details to me?",
+        "Would you please send me the details?",
+        "Would you mind sending me the details?"
+      ],
+      "distractors": ["say", "sending", "may"],
+      "explanation": "«Не могли бы вы…» — Could you (please)…: отрицание из русской фразы в английскую не переносится. May you…? как просьба не употребляется: may используют, когда просят разрешения для себя (May I…?)."
+    },
+    {
+      "type": "dictation",
+      "audio": "Thank you for your prompt reply.",
+      "translation": "Благодарю вас за быстрый ответ."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая концовка НЕ подходит для официального письма?",
+      "options": [
+        "Cheers, Mike",
+        "Yours sincerely, Michael Brown",
+        "Yours faithfully, Michael Brown",
+        "Kind regards, Michael Brown"
+      ],
+      "answer": 0,
+      "explanation": "Cheers — разговорное «пока, спасибо», так прощаются с друзьями; к тому же в официальном письме подписываются полным именем. Yours sincerely, Yours faithfully и Kind regards уместны в деловой переписке."
+    }
+  ]
+}

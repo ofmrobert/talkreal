@@ -1,0 +1,155 @@
+{
+  "id": "a2-22",
+  "level": "A2",
+  "order": 22,
+  "title": { "ru": "Зачем и для чего: to + глагол, for + существительное", "en": "Purpose: to + infinitive and for + noun" },
+  "goal": { "ru": "Научитесь объяснять, зачем вы что-то делаете и для кого или для чего это нужно.", "en": "Learn to say why you do something and who or what something is for." },
+  "theory": [
+    {
+      "title": "Чтобы сделать: to + глагол",
+      "body": "Цель действия в английском выражают инфинитивом с to: I went to the shop to buy milk — «Я пошёл в магазин, чтобы купить молоко». Отдельное слово для «чтобы» не нужно: его роль играет to. Русское «для того чтобы» тянет сказать «for to buy» или «for buy», но так сказать нельзя.",
+      "examples": [
+        { "en": "I went to the shop to buy milk.", "ru": "Я пошёл в магазин, чтобы купить молоко." },
+        { "en": "She's saving money to buy a car.", "ru": "Она копит деньги, чтобы купить машину." },
+        { "en": "I'm writing to ask about the price.", "ru": "Я пишу, чтобы спросить о цене." }
+      ],
+      "tip": "На вопрос Why? можно ответить одним инфинитивом: Why did you get up so early? — To catch the first train."
+    },
+    {
+      "title": "Для кого и для чего: for + существительное",
+      "body": "For ставят перед существительным или местоимением: This is for you — «Это для вас». Так же говорят о цели, если она названа существительным, а не глаголом: We went to a café for lunch — «Мы пошли в кафе пообедать». Запомните пару: to + глагол, for + существительное.",
+      "examples": [
+        { "en": "This present is for my sister.", "ru": "Этот подарок — для моей сестры." },
+        { "en": "Let's go out for a walk.", "ru": "Давайте выйдем прогуляться." },
+        { "en": "I need a table for two.", "ru": "Мне нужен столик на двоих." }
+      ],
+      "tip": "После for местоимение стоит в объектной форме: for me, for him, for her, for us, for them."
+    },
+    {
+      "title": "To или for?",
+      "body": "Одну мысль часто можно выразить двумя способами: I went to the shop for milk (существительное) и I went to the shop to buy milk (глагол). Ошибка — смешать их: «for buy milk». Ещё одно употребление: for + глагол с -ing объясняет, для чего служит вещь: This knife is for cutting bread.",
+      "examples": [
+        { "en": "He came here to study.", "ru": "Он приехал сюда учиться." },
+        { "en": "He came here for work.", "ru": "Он приехал сюда по работе." },
+        { "en": "This cupboard is for keeping plates.", "ru": "Этот шкаф — для хранения тарелок." }
+      ],
+      "tip": "О цели человека — только to: I'm here to help you. «I'm here for help you» и «for to help you» — ошибки."
+    }
+  ],
+  "vocab": [
+    { "en": "to save", "ru": "копить, экономить", "example": "I'm trying to save money." },
+    { "en": "to book", "ru": "бронировать", "example": "I'd like to book a room for two nights." },
+    { "en": "present", "ru": "подарок", "example": "Thank you for the present." },
+    { "en": "cash", "ru": "наличные", "example": "Can I pay in cash?" },
+    { "en": "to borrow", "ru": "брать на время, одалживать (у кого-то)", "example": "Can I borrow your pen?" },
+    { "en": "chemist's", "ru": "аптека", "example": "Is there a chemist's near here?" },
+    { "en": "medicine", "ru": "лекарство", "example": "Take this medicine twice a day." },
+    { "en": "to practise", "ru": "тренировать, практиковать", "example": "You need to practise every day." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to save", "ru": "копить" },
+        { "en": "to book", "ru": "бронировать" },
+        { "en": "present", "ru": "подарок" },
+        { "en": "cash", "ru": "наличные" },
+        { "en": "medicine", "ru": "лекарство" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я пошёл в библиотеку, чтобы взять книгу»?",
+      "options": ["I went to the library to borrow a book.", "I went to the library for borrow a book.", "I went to the library for to borrow a book.", "I went to the library that borrow a book."],
+      "answer": 0,
+      "explanation": "Цель выражают инфинитивом с to: to borrow. Слово «чтобы» отдельно не переводится, а «for borrow» и «for to borrow» — кальки с русского «для того чтобы»."
+    },
+    {
+      "type": "gap",
+      "sentence": "She went to the chemist's ___ some medicine.",
+      "translation": "Она пошла в аптеку, чтобы купить лекарство.",
+      "options": ["to get", "for get", "for to get", "getting"],
+      "answer": 0,
+      "explanation": "Перед глаголом цель вводит to: to get. For возможен только перед существительным: She went to the chemist's for some medicine."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm saving money to buy a new laptop.",
+      "question": "Зачем говорящий копит деньги?",
+      "options": ["Чтобы купить новый ноутбук", "Чтобы поехать в отпуск", "Чтобы купить машину", "Он не копит деньги"],
+      "answer": 0,
+      "explanation": "To buy a new laptop — «чтобы купить новый ноутбук». Инфинитив с to отвечает на вопрос «зачем?»."
+    },
+    {
+      "type": "translate",
+      "source": "Я звоню, чтобы забронировать столик.",
+      "answer": "I'm calling to book a table.",
+      "accept": ["I am calling to book a table.", "I'm phoning to book a table.", "I am phoning to book a table.", "I'm ringing to book a table.", "I'm calling to reserve a table.", "I am calling to reserve a table."],
+      "distractors": ["for", "booking", "that"],
+      "explanation": "«Чтобы забронировать» — to book. Перед глаголом for не ставят: «for book» и «for to book» — ошибки."
+    },
+    {
+      "type": "gap",
+      "sentence": "These flowers are ___ my mother.",
+      "translation": "Эти цветы — для моей мамы.",
+      "options": ["for", "to", "for to", "at"],
+      "answer": 0,
+      "explanation": "My mother — существительное, а «для кого-то» перед существительным — это for. To в значении цели ставят только перед глаголом."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["We went to a café for lunch.", "We went to a café for have lunch.", "We went to a café for to have lunch.", "We went to a café to having lunch."],
+      "answer": 0,
+      "explanation": "Lunch здесь существительное, поэтому for lunch. С глаголом было бы to have lunch — без for и без -ing."
+    },
+    {
+      "type": "speak",
+      "text": "I use this app to practise my English.",
+      "translation": "Я пользуюсь этим приложением, чтобы тренировать английский."
+    },
+    {
+      "type": "type",
+      "source": "Это для вас.",
+      "answer": "This is for you.",
+      "accept": ["It's for you.", "It is for you.", "That's for you.", "That is for you.", "This one is for you."],
+      "explanation": "«Для кого-то» — for + местоимение: for you. В английском предложении обязателен глагол is, хотя по-русски его нет."
+    },
+    {
+      "type": "listen",
+      "audio": "Excuse me, is this queue for tickets or for the café?",
+      "question": "Что хочет узнать говорящий?",
+      "options": ["Для чего эта очередь", "Сколько стоят билеты", "Где находится кафе", "Когда откроется касса"],
+      "answer": 0,
+      "explanation": "Queue — «очередь». For tickets or for the café — «за билетами или в кафе»: for + существительное показывает назначение."
+    },
+    {
+      "type": "gap",
+      "sentence": "This knife is for ___ bread.",
+      "translation": "Этот нож — чтобы резать хлеб.",
+      "options": ["cutting", "cut", "to cut", "cuts"],
+      "answer": 0,
+      "explanation": "Когда объясняют, для чего служит вещь, после for глагол получает -ing: for cutting. «For cut» и «for to cut» — ошибки."
+    },
+    {
+      "type": "translate",
+      "source": "Он пошёл в банк, чтобы снять наличные.",
+      "answer": "He went to the bank to get some cash.",
+      "accept": ["He went to the bank to get cash.", "He went to the bank to take out some cash.", "He went to the bank to take out cash.", "He went to the bank to withdraw some cash.", "He went to the bank to withdraw cash.", "He went to the bank for some cash."],
+      "distractors": ["that", "getting", "got"],
+      "explanation": "«Чтобы снять» — to get: цель перед глаголом вводит to. Первое to в предложении — обычный предлог направления: to the bank."
+    },
+    {
+      "type": "dictation",
+      "audio": "I need a bigger bag for my laptop.",
+      "translation": "Мне нужна сумка побольше для ноутбука."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спросили: «Why are you learning English?» Какой ответ правильный?",
+      "options": ["To find a better job.", "For find a better job.", "For to find a better job.", "Because to find a better job."],
+      "answer": 0,
+      "explanation": "На вопрос «зачем?» отвечают инфинитивом с to: To find a better job. После because нужно целое предложение: Because I want to find a better job."
+    }
+  ]
+}

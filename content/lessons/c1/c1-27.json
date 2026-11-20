@@ -1,0 +1,206 @@
+{
+  "id": "c1-27",
+  "level": "C1",
+  "order": 27,
+  "title": { "ru": "Преуменьшение и ирония: not exactly cheap, hardly ideal", "en": "Understatement and irony" },
+  "goal": { "ru": "Научитесь понимать и использовать британское преуменьшение и иронию: not exactly cheap, hardly ideal, a bit of a problem, not the best idea, I've had better days.", "en": "Learn to understand and use British understatement and irony: not exactly cheap, hardly ideal, a bit of a problem, not the best idea, I've had better days." },
+  "theory": [
+    {
+      "title": "Not exactly, hardly, not the best",
+      "body": "В уроке о дипломатичном английском преуменьшение служило вежливости. Но это ещё и излюбленный британский юмор: о большом говорят как о малом. Три частые модели: not exactly + прилагательное («не то чтобы»), hardly + прилагательное («вовсе не») и not the + превосходная степень. Слушатель сам восстанавливает настоящий масштаб.",
+      "examples": [
+        { "en": "At nine hundred pounds a night, the hotel is not exactly cheap.", "ru": "При цене девятьсот фунтов за ночь отель не то чтобы дешёвый." },
+        { "en": "A tent in the garden is hardly ideal for a business meeting.", "ru": "Палатка в саду — вовсе не идеальное место для деловой встречи." },
+        { "en": "Calling him at three in the morning was not the best idea.", "ru": "Звонить ему в три часа ночи было не лучшей идеей." }
+      ],
+      "tip": "Hardly — не наречие от hard. He works hard — «он много работает», а He hardly works — «он почти не работает». Смысл противоположный."
+    },
+    {
+      "title": "A bit of a problem и I've had better days",
+      "body": "A bit of a + существительное уменьшает на словах то, что на деле велико: a bit of a problem нередко означает серьёзную проблему, a bit of a nightmare — настоящий кошмар. Тот же приём — сравнение с лучшим: I've had better days значит «день был ужасный», I've seen better — «это было слабо».",
+      "examples": [
+        { "en": "We have a bit of a problem: the venue has cancelled.", "ru": "У нас небольшая проблема: площадка отменила бронь." },
+        { "en": "The journey home was a bit of a nightmare.", "ru": "Дорога домой оказалась тем ещё кошмаром." },
+        { "en": "How was the interview? — Well, I've had better days.", "ru": "Как прошло собеседование? — Ну, бывали дни и получше." }
+      ],
+      "tip": "Перед существительным нужна полная формула a bit of a: a bit of a problem. «A bit problem» — ошибка; просто a bit ставят перед прилагательным: a bit difficult."
+    },
+    {
+      "title": "Ирония и похвала через отрицание",
+      "body": "Ирония — сказать противоположное тому, что думаешь: brilliant о плохой новости, That went well после провала. Выдают её контекст и интонация. Обратный приём — похвала через отрицание: not bad значит «хорошо», not bad at all — «очень хорошо», а I wouldn't say no — это вежливое «да, с удовольствием».",
+      "examples": [
+        { "en": "Oh, brilliant. The train has been cancelled again.", "ru": "Ну замечательно. Поезд опять отменили." },
+        { "en": "Your French is not bad at all.", "ru": "Ваш французский очень даже неплох." },
+        { "en": "Would you like a coffee? — I wouldn't say no.", "ru": "Хотите кофе? — Не откажусь." }
+      ],
+      "tip": "Британское not bad — похвала, а не «так себе». Если коллега сказал Not bad! о вашей работе, он доволен."
+    }
+  ],
+  "vocab": [
+    { "en": "not exactly", "ru": "не то чтобы", "example": "He was not exactly thrilled by the news." },
+    { "en": "hardly", "ru": "едва ли; вовсе не", "example": "It's hardly surprising that she left." },
+    { "en": "a bit of a problem", "ru": "небольшая (на деле серьёзная) проблема", "example": "Parking is a bit of a problem round here." },
+    { "en": "not the best idea", "ru": "не лучшая идея", "example": "Driving in this fog is not the best idea." },
+    { "en": "I've had better days", "ru": "бывали дни и получше", "example": "I've had better days, but I'll survive." },
+    { "en": "not bad at all", "ru": "очень даже неплохо", "example": "For a first attempt, that's not bad at all." },
+    { "en": "I wouldn't say no", "ru": "не откажусь", "example": "A cup of tea? I wouldn't say no." },
+    { "en": "understatement", "ru": "преуменьшение", "example": "To say he was annoyed would be an understatement." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "hardly", "ru": "едва ли; вовсе не" },
+        { "en": "understatement", "ru": "преуменьшение" },
+        { "en": "I wouldn't say no", "ru": "не откажусь" },
+        { "en": "not bad at all", "ru": "очень даже неплохо" },
+        { "en": "I've had better days", "ru": "бывали дни и получше" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Ваш друг выходит с провального собеседования и говорит: «Well, that went well». Что он имеет в виду?",
+      "options": [
+        "Собеседование прошло хорошо",
+        "Собеседование ещё не закончилось",
+        "Собеседование прошло плохо — это ирония",
+        "Он не уверен, как всё прошло"
+      ],
+      "answer": 2,
+      "explanation": "That went well после явной неудачи — классическая ирония: говорят противоположное тому, что думают. Понять это помогает контекст: вы знаете, что собеседование провалилось."
+    },
+    {
+      "type": "gap",
+      "sentence": "A noisy open-plan office is ___ ideal for work that needs concentration.",
+      "translation": "Шумный офис открытого типа — вовсе не идеальное место для работы, требующей сосредоточенности.",
+      "options": ["hard", "hardy", "strongly", "hardly"],
+      "answer": 3,
+      "explanation": "Hardly ideal — «вовсе не идеально»: преуменьшение, за которым стоит «совсем не подходит». Hard — «усердно» или «трудный», hardy — «выносливый»; со словом ideal они не сочетаются."
+    },
+    {
+      "type": "translate",
+      "source": "У нас небольшая проблема с бюджетом.",
+      "answer": "We have a bit of a problem with the budget.",
+      "accept": [
+        "We've got a bit of a problem with the budget.",
+        "We have got a bit of a problem with the budget.",
+        "We have a slight problem with the budget.",
+        "We've got a slight problem with the budget.",
+        "We have a small problem with the budget.",
+        "We've got a small problem with the budget.",
+        "We have a little problem with the budget.",
+        "We have a bit of a budget problem.",
+        "We have a bit of a problem with our budget."
+      ],
+      "distractors": ["few", "bits", "at", "problems"],
+      "explanation": "A bit of a problem — формула с двумя артиклями: a bit of a + существительное в единственном числе. «A bit problem» сказать нельзя; few употребляется только с множественным числом."
+    },
+    {
+      "type": "listen",
+      "audio": "The flat is not exactly spacious, but the location is not bad at all.",
+      "question": "Что говорящий думает о квартире?",
+      "options": [
+        "Она тесная, зато расположение очень хорошее",
+        "Она просторная, но район плохой",
+        "Она тесная, и район так себе",
+        "Точную площадь он не знает, но район неплохой"
+      ],
+      "answer": 0,
+      "explanation": "Not exactly spacious — преуменьшение: квартира маленькая. Not bad at all — похвала через отрицание: расположение очень хорошее. Exactly здесь не про точность."
+    },
+    {
+      "type": "choice",
+      "prompt": "Британский начальник посмотрел ваш отчёт и сказал: «Not bad at all». Как это понимать?",
+      "options": [
+        "Отчёт так себе",
+        "Отчёт хороший",
+        "Отчёт плохой, но не безнадёжный",
+        "Отчёт нужно переделать"
+      ],
+      "answer": 1,
+      "explanation": "Not bad at all — сдержанная, но настоящая похвала: «очень даже хорошо». At all усиливает отрицание, а вместе с ним и положительную оценку."
+    },
+    {
+      "type": "speak",
+      "text": "I've had better days, to tell you the truth.",
+      "translation": "По правде говоря, бывали дни и получше."
+    },
+    {
+      "type": "gap",
+      "sentence": "Getting a visa turned out to be a bit ___ a nightmare.",
+      "translation": "Получение визы оказалось тем ещё кошмаром.",
+      "options": ["as", "of", "from", "with"],
+      "answer": 1,
+      "explanation": "Формула — a bit of a + существительное: a bit of a nightmare. На словах кошмар «небольшой», но слушатель понимает, что всё было очень плохо."
+    },
+    {
+      "type": "type",
+      "source": "Это была не лучшая идея.",
+      "answer": "It was not the best idea.",
+      "accept": [
+        "It wasn't the best idea.",
+        "That was not the best idea.",
+        "That wasn't the best idea.",
+        "This was not the best idea.",
+        "This wasn't the best idea.",
+        "It was not the greatest idea.",
+        "That was not the greatest idea.",
+        "It was not the best of ideas.",
+        "That was not the best of ideas."
+      ],
+      "explanation": "Not the best idea — преуменьшение: на деле идея была плохой. Перед превосходной степенью best нужен артикль the."
+    },
+    {
+      "type": "listen",
+      "audio": "At that price, it's not exactly a bargain, is it?",
+      "question": "Что вы услышали?",
+      "options": [
+        "On that price, it's not exactly a bargain, is it?",
+        "At that price, it's not exact a bargain, is it?",
+        "At that price, it's not exactly a bargain, is it?",
+        "At that price, it's not exactly a bargain, isn't it?"
+      ],
+      "answer": 2,
+      "explanation": "Not exactly a bargain — «не то чтобы выгодная покупка», то есть дорого. С ценой употребляется предлог at, а после отрицательного предложения «хвостик» положительный: is it?"
+    },
+    {
+      "type": "translate",
+      "source": "Билеты были не то чтобы дешёвыми.",
+      "answer": "The tickets were not exactly cheap.",
+      "accept": [
+        "The tickets weren't exactly cheap.",
+        "Tickets were not exactly cheap.",
+        "The tickets were hardly cheap.",
+        "The tickets were not particularly cheap.",
+        "The tickets were not really cheap."
+      ],
+      "distractors": ["exact", "cheaply", "cheaper", "no"],
+      "explanation": "«Не то чтобы» — not exactly перед прилагательным. Exactly — наречие, поэтому с -ly; после глагола were нужно прилагательное cheap, а не наречие cheaply."
+    },
+    {
+      "type": "gap",
+      "sentence": "I've had ___ days, but at least nobody was hurt.",
+      "translation": "День выдался так себе, но, по крайней мере, никто не пострадал.",
+      "options": ["more better", "best", "better", "well"],
+      "answer": 2,
+      "explanation": "I've had better days — «бывали дни и получше»: сравнительная степень намекает, что сегодняшний день гораздо хуже прежних. Это устойчивая формула, и другие формы в ней не употребляются."
+    },
+    {
+      "type": "dictation",
+      "audio": "The journey home was a bit of a nightmare.",
+      "translation": "Дорога домой оказалась тем ещё кошмаром."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает «He hardly works»?",
+      "options": [
+        "Он работает усердно",
+        "Он почти не работает",
+        "Ему тяжело работать",
+        "Он едва начал работать"
+      ],
+      "answer": 1,
+      "explanation": "Hardly значит «едва ли, почти не», и к hard («усердно») оно отношения не имеет. «Он работает усердно» — He works hard, без -ly."
+    }
+  ]
+}

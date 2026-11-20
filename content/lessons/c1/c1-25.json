@@ -1,0 +1,203 @@
+{
+  "id": "c1-25",
+  "level": "C1",
+  "order": 25,
+  "title": { "ru": "Устойчивые пары: pros and cons, sooner or later", "en": "Fixed pairs" },
+  "goal": { "ru": "Научитесь употреблять пары слов с жёстким порядком: pros and cons, by and large, sooner or later, more or less, ups and downs, safe and sound, give and take.", "en": "Learn to use word pairs with a fixed order: pros and cons, by and large, sooner or later, more or less, ups and downs, safe and sound, give and take." },
+  "theory": [
+    {
+      "title": "Порядок менять нельзя",
+      "body": "В английском много пар, соединённых союзом and или or, где слова стоят в раз и навсегда закреплённом порядке: pros and cons, ups and downs, safe and sound, back and forth. Переставить их — всё равно что сказать по-русски «поздно или рано». Часть пар совпадает с русскими, часть устроена иначе, поэтому их запоминают целиком.",
+      "examples": [
+        { "en": "We need to weigh up the pros and cons before we decide.", "ru": "Прежде чем решать, нужно взвесить все за и против." },
+        { "en": "Every marriage has its ups and downs.", "ru": "В каждом браке бывают взлёты и падения." },
+        { "en": "The children arrived home safe and sound.", "ru": "Дети добрались домой целыми и невредимыми." }
+      ],
+      "tip": "Русский порядок слов подводит: «тишина и покой» — peace and quiet, «туда-сюда» — back and forth, а «чёрно-белый» — black and white, но никак не «white and black»."
+    },
+    {
+      "title": "Пары-наречия: sooner or later, more or less, by and large",
+      "body": "Многие пары работают как наречия и вводные слова: sooner or later — «рано или поздно», more or less — «более-менее», by and large — «в целом», now and then — «время от времени», first and foremost — «прежде всего». Смысл не всегда складывается из частей: by and large по словам не разобрать.",
+      "examples": [
+        { "en": "Sooner or later, the truth will come out.", "ru": "Рано или поздно правда выйдет наружу." },
+        { "en": "The report is more or less finished.", "ru": "Отчёт более-менее готов." },
+        { "en": "By and large, the launch went smoothly.", "ru": "В целом запуск прошёл гладко." }
+      ],
+      "tip": "«Рано или поздно» — не «early or late», а sooner or later: обе части стоят в сравнительной степени. More or less ставят перед тем словом, которое уточняют: more or less ready."
+    },
+    {
+      "title": "Пары-существительные: give and take, trial and error",
+      "body": "Некоторые пары стали существительными: give and take — «взаимные уступки», trial and error — «метод проб и ошибок», wear and tear — «износ», peace and quiet — «тишина и покой», odds and ends — «всякая всячина». Есть и пара-прилагательное: sick and tired of something — «сыт по горло».",
+      "examples": [
+        { "en": "Any successful partnership involves a bit of give and take.", "ru": "Любое успешное партнёрство требует взаимных уступок." },
+        { "en": "We found the solution by trial and error.", "ru": "Мы нашли решение методом проб и ошибок." },
+        { "en": "I'm sick and tired of these endless delays.", "ru": "Я сыт по горло этими бесконечными задержками." }
+      ],
+      "tip": "В trial and error оба слова стоят в единственном числе, хотя по-русски «проб и ошибок» — множественное. «By trials and errors» — калька."
+    }
+  ],
+  "vocab": [
+    { "en": "pros and cons", "ru": "за и против", "example": "What are the pros and cons of renting?" },
+    { "en": "by and large", "ru": "в целом", "example": "The staff are, by and large, happy with the changes." },
+    { "en": "sooner or later", "ru": "рано или поздно", "example": "Sooner or later you'll have to make up your mind." },
+    { "en": "more or less", "ru": "более-менее", "example": "We've more or less agreed on the price." },
+    { "en": "ups and downs", "ru": "взлёты и падения", "example": "The business has had its ups and downs." },
+    { "en": "safe and sound", "ru": "целый и невредимый", "example": "The missing climbers were found safe and sound." },
+    { "en": "give and take", "ru": "взаимные уступки", "example": "There has to be some give and take in any team." },
+    { "en": "trial and error", "ru": "метод проб и ошибок", "example": "Most children learn to use a tablet by trial and error." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "pros and cons", "ru": "за и против" },
+        { "en": "ups and downs", "ru": "взлёты и падения" },
+        { "en": "safe and sound", "ru": "целый и невредимый" },
+        { "en": "give and take", "ru": "взаимные уступки" },
+        { "en": "trial and error", "ru": "метод проб и ошибок" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "Early or late, he'll have to tell her.",
+        "Later or sooner, he'll have to tell her.",
+        "Sooner or later, he'll have to tell her.",
+        "Soon or late, he'll have to tell her."
+      ],
+      "answer": 2,
+      "explanation": "«Рано или поздно» — sooner or later: обе части в сравнительной степени, и порядок не меняется. «Early or late» — дословный перевод с русского, которого в английском нет."
+    },
+    {
+      "type": "gap",
+      "sentence": "Let's go through the pros and ___ of moving abroad.",
+      "translation": "Давайте разберём все за и против переезда за границу.",
+      "options": ["contras", "cons", "againsts", "minuses"],
+      "answer": 1,
+      "explanation": "Pros and cons — от латинских pro («за») и contra («против»), но contra сократилось до con. Оба слова стоят во множественном числе."
+    },
+    {
+      "type": "translate",
+      "source": "Работа более-менее закончена.",
+      "answer": "The work is more or less finished.",
+      "accept": [
+        "The work is more or less done.",
+        "The work is more or less complete.",
+        "The work is more or less completed.",
+        "The job is more or less finished.",
+        "The job is more or less done.",
+        "The work has more or less been finished."
+      ],
+      "distractors": ["less-more", "and", "end", "most"],
+      "explanation": "More or less — с союзом or и именно в таком порядке: сначала more. Пара стоит перед словом, которое уточняет: more or less finished."
+    },
+    {
+      "type": "listen",
+      "audio": "It's been a year of ups and downs, but by and large we're happy.",
+      "question": "Как говорящий оценивает прошедший год?",
+      "options": [
+        "Были и удачи, и трудности, но в целом он доволен",
+        "Год прошёл ровно, без событий",
+        "Год был сплошной чередой неудач",
+        "Цены то росли, то падали, и это его радует"
+      ],
+      "answer": 0,
+      "explanation": "Ups and downs — «взлёты и падения», то есть удачи вперемешку с трудностями. By and large значит «в целом»: общий итог для говорящего положительный."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое выражение означает «готовность обеих сторон идти на уступки»?",
+      "options": ["take and give", "wear and tear", "odds and ends", "give and take"],
+      "answer": 3,
+      "explanation": "Give and take — «взаимные уступки»: сначала give, потом take. Wear and tear — износ вещей, odds and ends — всякая мелочь."
+    },
+    {
+      "type": "speak",
+      "text": "I'm glad you got back safe and sound.",
+      "translation": "Я рад, что вы вернулись целыми и невредимыми."
+    },
+    {
+      "type": "gap",
+      "sentence": "We worked out the best recipe by trial and ___.",
+      "translation": "Лучший рецепт мы подобрали методом проб и ошибок.",
+      "options": ["mistake", "errors", "error", "fault"],
+      "answer": 2,
+      "explanation": "Trial and error — оба слова в единственном числе, хотя по-русски «проб и ошибок». Mistake и fault в это устойчивое выражение не входят."
+    },
+    {
+      "type": "type",
+      "source": "Рано или поздно он узнает правду.",
+      "answer": "Sooner or later he will find out the truth.",
+      "accept": [
+        "Sooner or later he will learn the truth.",
+        "Sooner or later he will know the truth.",
+        "Sooner or later he will discover the truth.",
+        "Sooner or later he is going to find out the truth.",
+        "Sooner or later he's going to find out the truth.",
+        "He will find out the truth sooner or later.",
+        "He will learn the truth sooner or later.",
+        "He will know the truth sooner or later.",
+        "He will discover the truth sooner or later.",
+        "He is going to find out the truth sooner or later.",
+        "He's going to find out the truth sooner or later."
+      ],
+      "explanation": "«Рано или поздно» — sooner or later, в начале или в конце предложения. «Узнать» в значении «выяснить» — find out; перед truth нужен артикль the."
+    },
+    {
+      "type": "listen",
+      "audio": "She has been pacing back and forth all morning.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She has been pacing forth and back all morning.",
+        "She has been pacing back and forth all morning.",
+        "She has been pacing back and force all morning.",
+        "She has been pacing back or forth all morning."
+      ],
+      "answer": 1,
+      "explanation": "Back and forth — «туда-сюда, взад-вперёд»: сначала back, потом forth. Forth — устаревшее «вперёд»; не путайте его на слух с force («сила»)."
+    },
+    {
+      "type": "translate",
+      "source": "В целом встреча прошла хорошо.",
+      "answer": "By and large, the meeting went well.",
+      "accept": [
+        "On the whole, the meeting went well.",
+        "Overall, the meeting went well.",
+        "In general, the meeting went well.",
+        "Generally, the meeting went well.",
+        "All in all, the meeting went well.",
+        "The meeting went well by and large.",
+        "The meeting went well on the whole.",
+        "The meeting went well overall."
+      ],
+      "distractors": ["big", "passed", "larger", "good"],
+      "explanation": "By and large — «в целом», обычно в начале предложения. «Прошла» о встрече — went, а не passed; после went нужно наречие well, а не прилагательное good."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'm sick and ___ of being told what to do.",
+      "translation": "Я сыт по горло тем, что мне указывают, что делать.",
+      "options": ["ill", "bored", "fed", "tired"],
+      "answer": 3,
+      "explanation": "Sick and tired of — «сыт по горло»: устойчивая пара, где sick не про болезнь. Fed употребляется в другом выражении с тем же смыслом: fed up with."
+    },
+    {
+      "type": "dictation",
+      "audio": "Every marriage has its ups and downs.",
+      "translation": "В каждом браке бывают взлёты и падения."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как носитель языка скажет «Я хочу только тишины и покоя»?",
+      "options": [
+        "All I want is some peace and quiet.",
+        "All I want is some quiet and peace.",
+        "All I want is some peace and quite.",
+        "All I want is some silent and calm."
+      ],
+      "answer": 0,
+      "explanation": "Peace and quiet — порядок обратный русскому «тишина и покой», и менять его нельзя. Quite — это наречие «довольно», а silent и calm — прилагательные, которые не могут стоять после some без существительного."
+    }
+  ]
+}

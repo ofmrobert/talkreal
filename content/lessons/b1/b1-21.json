@@ -1,0 +1,155 @@
+{
+  "id": "b1-21",
+  "level": "B1",
+  "order": 21,
+  "title": { "ru": "Пассивный залог в других временах: has been done, is being done, will be done", "en": "The passive in other tenses and after modal verbs" },
+  "goal": { "ru": "Научитесь говорить «уже сделано», «сейчас делают», «будет сделано» и «нужно сделать», когда неважно, кто это делает.", "en": "Learn to say that something has been done, is being done, will be done or must be done when it doesn't matter who does it." },
+  "theory": [
+    {
+      "title": "Has been done: результат к настоящему моменту",
+      "body": "Пассив всегда строится одинаково: глагол be в нужном времени + третья форма глагола. В Present Perfect глагол be превращается в has been / have been: the letter has been sent — «письмо отправлено». Эта форма нужна там же, где и активный Present Perfect: важен результат сейчас, а не то, когда это случилось.",
+      "examples": [
+        { "en": "Your order has been sent.", "ru": "Ваш заказ отправлен." },
+        { "en": "The windows have just been cleaned.", "ru": "Окна только что помыли." },
+        { "en": "Has the invoice been paid yet?", "ru": "Счёт уже оплатили?" }
+      ],
+      "tip": "Не теряйте been. The letter has sent — это актив: получается, что письмо само что-то отправило."
+    },
+    {
+      "title": "Is being done: это делают прямо сейчас",
+      "body": "Если действие над предметом идёт в данный момент, нужен Present Continuous в пассиве: am / is / are + being + третья форма. По-русски здесь обычно стоит неопределённо-личная форма: «дорогу ремонтируют», «ваш заказ готовят». Being показывает процесс, а третья форма — что действие направлено на предмет.",
+      "examples": [
+        { "en": "The road is being repaired.", "ru": "Дорогу ремонтируют." },
+        { "en": "Your table is being prepared.", "ru": "Ваш столик сейчас готовят." },
+        { "en": "Two new schools are being built in our area.", "ru": "В нашем районе строят две новые школы." }
+      ],
+      "tip": "Being и been легко спутать на слух. После is / are стоит being (процесс), после has / have — been (результат)."
+    },
+    {
+      "title": "Will be done, can be done, must be done",
+      "body": "После will и модальных глаголов (can, must, should, may, have to) глагол be стоит в начальной форме: will be done, can be done, must be done. Схема одна для всех: модальный глагол + be + третья форма. Так часто пишут в объявлениях, инструкциях и деловых письмах.",
+      "examples": [
+        { "en": "The winners will be chosen next week.", "ru": "Победителей выберут на следующей неделе." },
+        { "en": "Tickets can be bought online.", "ru": "Билеты можно купить онлайн." },
+        { "en": "Mobile phones must be switched off.", "ru": "Мобильные телефоны необходимо выключить." }
+      ],
+      "tip": "После модального глагола — только be: «must is done» и «will been done» невозможны. Русское «можно купить», «нужно выключить» часто переводится именно так."
+    }
+  ],
+  "vocab": [
+    { "en": "to deliver", "ru": "доставлять", "example": "When will they deliver the new sofa?" },
+    { "en": "to repair", "ru": "ремонтировать, чинить", "example": "It will take a week to repair the lift." },
+    { "en": "to cancel", "ru": "отменять", "example": "They had to cancel the concert." },
+    { "en": "to postpone", "ru": "переносить на более поздний срок", "example": "We will have to postpone the match." },
+    { "en": "to announce", "ru": "объявлять", "example": "They will announce the date soon." },
+    { "en": "to replace", "ru": "заменять", "example": "We need to replace the battery." },
+    { "en": "to sign", "ru": "подписывать", "example": "Could you sign the contract today?" },
+    { "en": "at the moment", "ru": "в данный момент", "example": "The system is being updated at the moment." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to deliver", "ru": "доставлять" },
+        { "en": "to cancel", "ru": "отменять" },
+        { "en": "to postpone", "ru": "переносить на потом" },
+        { "en": "to announce", "ru": "объявлять" },
+        { "en": "to replace", "ru": "заменять" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Вашу посылку уже доставили»?",
+      "options": ["Your parcel has been delivered.", "Your parcel has delivered.", "Your parcel is been delivered.", "Your parcel has being delivered."],
+      "answer": 0,
+      "explanation": "Результат к настоящему моменту в пассиве — has been + третья форма: has been delivered. Без been получается актив («посылка что-то доставила»), а being и is с has не сочетаются."
+    },
+    {
+      "type": "gap",
+      "sentence": "The lift is ___ repaired at the moment, so please use the stairs.",
+      "translation": "Лифт сейчас ремонтируют, поэтому, пожалуйста, пользуйтесь лестницей.",
+      "options": ["being", "been", "be", "to be"],
+      "answer": 0,
+      "explanation": "Действие идёт прямо сейчас (at the moment), поэтому нужен Present Continuous в пассиве: is being repaired. Been ставится только после has / have."
+    },
+    {
+      "type": "translate",
+      "source": "Результаты объявят завтра.",
+      "answer": "The results will be announced tomorrow.",
+      "accept": ["The results are going to be announced tomorrow.", "Tomorrow the results will be announced."],
+      "distractors": ["announce", "been", "is"],
+      "explanation": "Неважно, кто объявит, поэтому подлежащим становятся the results, а глагол стоит в пассиве будущего времени: will be + третья форма. После will идёт be, а не been или is."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm afraid the three o'clock train has been cancelled.",
+      "question": "Что случилось с поездом?",
+      "options": ["Его отменили", "Он опаздывает на три часа", "Он уже ушёл", "Его перенесли на завтра"],
+      "answer": 0,
+      "explanation": "Has been cancelled — «отменён»: Present Perfect в пассиве сообщает новость, результат которой важен сейчас. Three o'clock — это время отправления, а не опоздание."
+    },
+    {
+      "type": "gap",
+      "sentence": "This form must ___ signed by both parents.",
+      "translation": "Эту анкету должны подписать оба родителя.",
+      "options": ["be", "been", "being", "is"],
+      "answer": 0,
+      "explanation": "После модального глагола must стоит начальная форма be: must be signed. Been нужно после has / have, being — после is / are."
+    },
+    {
+      "type": "speak",
+      "text": "The kitchen is being painted this week.",
+      "translation": "На этой неделе красят кухню."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["This medicine can buy without a prescription.", "This medicine can be bought without a prescription.", "This medicine can been bought without a prescription.", "This medicine can be buy without a prescription."],
+      "answer": 1,
+      "explanation": "Лекарство не покупает само — его покупают, значит, нужен пассив: can + be + третья форма (bought). После can возможна только начальная форма be."
+    },
+    {
+      "type": "type",
+      "source": "Мою машину ещё не починили.",
+      "answer": "My car has not been repaired yet.",
+      "accept": ["My car hasn't been repaired yet.", "My car has not been fixed yet.", "My car hasn't been fixed yet.", "My car has not yet been repaired.", "My car hasn't yet been repaired.", "My car still hasn't been repaired.", "My car still has not been repaired.", "My car still hasn't been fixed.", "My car still has not been fixed.", "My car has not been mended yet.", "My car hasn't been mended yet.", "They have not repaired my car yet.", "They haven't repaired my car yet.", "They haven't fixed my car yet.", "They have not fixed my car yet."],
+      "explanation": "«Ещё не» + результат к настоящему моменту — Present Perfect, а раз чинит кто-то другой, нужен пассив: has not been repaired. Not стоит сразу после has, yet — в конце."
+    },
+    {
+      "type": "gap",
+      "sentence": "A new shopping centre ___ built near our house right now.",
+      "translation": "Рядом с нашим домом сейчас строят новый торговый центр.",
+      "options": ["is being", "has been", "is", "will be"],
+      "answer": 0,
+      "explanation": "Right now показывает, что стройка идёт в данный момент: is being built. Has been built означало бы, что центр уже построен, will be built — что стройка ещё впереди."
+    },
+    {
+      "type": "listen",
+      "audio": "The meeting has been postponed until Monday.",
+      "question": "Что вы услышали?",
+      "options": ["The meeting has been postponed until Monday.", "The meeting has been postponed until Sunday.", "The meeting was postponed until Monday.", "The meeting is being postponed until Monday."],
+      "answer": 0,
+      "explanation": "Has been postponed — Present Perfect в пассиве: встречу перенесли, и это новость. Обратите внимание на been (не being) и на день недели: Monday, а не Sunday."
+    },
+    {
+      "type": "translate",
+      "source": "Эту проблему можно решить.",
+      "answer": "This problem can be solved.",
+      "accept": ["The problem can be solved.", "This problem can be resolved.", "This problem can be fixed.", "This issue can be solved.", "This issue can be resolved.", "We can solve this problem.", "It is possible to solve this problem.", "It's possible to solve this problem."],
+      "distractors": ["solve", "been", "is"],
+      "explanation": "Русское «можно + глагол» о предмете часто переводится пассивом с can: can be solved. Проблема не решает сама, поэтому нужны be и третья форма, а не просто solve."
+    },
+    {
+      "type": "dictation",
+      "audio": "Dinner will be served at eight.",
+      "translation": "Ужин подадут в восемь."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «The bridge is being repaired»?",
+      "options": ["Мост ремонтируют прямо сейчас", "Мост уже отремонтировали", "Мост отремонтируют позже"],
+      "answer": 0,
+      "explanation": "Is being + третья форма — процесс, который идёт сейчас. «Уже отремонтировали» — has been repaired, «отремонтируют» — will be repaired."
+    }
+  ]
+}

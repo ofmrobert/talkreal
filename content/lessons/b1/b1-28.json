@@ -1,0 +1,155 @@
+{
+  "id": "b1-28",
+  "level": "B1",
+  "order": 28,
+  "title": { "ru": "Сравнения точнее: much better, a bit cheaper, twice as big, the sooner the better", "en": "Comparing in more detail: much / a bit + comparative, twice as… as, the more… the better" },
+  "goal": { "ru": "Научитесь говорить, насколько одно больше, лучше или дороже другого: «гораздо», «чуть-чуть», «в два раза», «чем…, тем…».", "en": "Learn to say how much bigger, better or more expensive something is: much, a bit, twice as… as, the more… the better." },
+  "theory": [
+    {
+      "title": "Much, far, a bit, slightly + сравнительная степень",
+      "body": "Чтобы показать, велика ли разница, перед сравнительной степенью ставят усилитель. Большая разница: much, far, a lot — «гораздо, намного». Небольшая: a bit, a little, slightly — «немного, чуть-чуть». Эти слова стоят и перед короткими формами (much bigger), и перед more (far more expensive).",
+      "examples": [
+        { "en": "This flat is much bigger than ours.", "ru": "Эта квартира гораздо больше нашей." },
+        { "en": "The second exam was far more difficult.", "ru": "Второй экзамен был намного труднее." },
+        { "en": "Could you speak a bit more slowly?", "ru": "Не могли бы вы говорить чуть медленнее?" }
+      ],
+      "tip": "Very со сравнительной степенью не сочетается: «very better» — ошибка. Very good, но much better."
+    },
+    {
+      "title": "Twice as big as: во сколько раз",
+      "body": "Русское «в два раза больше» по-английски строится через as… as: twice as big as. Так же: three times as expensive as, half as much as. Между as и as стоит обычная, не сравнительная форма. Этой же конструкцией говорят «не такой…, как»: not as good as.",
+      "examples": [
+        { "en": "This suitcase is twice as heavy as mine.", "ru": "Этот чемодан в два раза тяжелее моего." },
+        { "en": "Tickets are three times as expensive as last year.", "ru": "Билеты в три раза дороже, чем в прошлом году." },
+        { "en": "The journey took half as long as we expected.", "ru": "Дорога заняла вдвое меньше времени, чем мы ожидали." }
+      ],
+      "tip": "Внутри as… as сравнительная степень не нужна: «twice as bigger as» — ошибка. Правильно: twice as big as."
+    },
+    {
+      "title": "The more…, the better: чем…, тем…",
+      "body": "«Чем…, тем…» по-английски — это два the и две сравнительные степени: the more you practise, the better you speak. Порядок слов в каждой части такой: the + сравнительная степень + подлежащее + глагол. В коротких фразах подлежащее и глагол можно опустить: the sooner, the better.",
+      "examples": [
+        { "en": "The more you practise, the better you speak.", "ru": "Чем больше вы практикуетесь, тем лучше говорите." },
+        { "en": "The older I get, the less I worry.", "ru": "Чем старше я становлюсь, тем меньше волнуюсь." },
+        { "en": "The sooner, the better.", "ru": "Чем скорее, тем лучше." }
+      ],
+      "tip": "Русское «чем» здесь не than и не what. Оба the обязательны: «more you practise, better you speak» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "far", "ru": "намного, гораздо", "example": "It's far easier than I thought." },
+    { "en": "slightly", "ru": "слегка, чуть-чуть", "example": "This one is slightly cheaper." },
+    { "en": "a bit", "ru": "немного", "example": "I'm a bit older than my wife." },
+    { "en": "twice", "ru": "в два раза, дважды", "example": "He earns twice as much as me." },
+    { "en": "half", "ru": "половина, вдвое меньше", "example": "It costs half as much online." },
+    { "en": "to practise", "ru": "практиковаться, тренироваться", "example": "I practise my English every day." },
+    { "en": "crowded", "ru": "многолюдный, переполненный", "example": "The beach is too crowded in August." },
+    { "en": "reliable", "ru": "надёжный", "example": "My old car was more reliable." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "slightly", "ru": "слегка, чуть-чуть" },
+        { "en": "twice", "ru": "в два раза" },
+        { "en": "half", "ru": "половина" },
+        { "en": "crowded", "ru": "многолюдный" },
+        { "en": "reliable", "ru": "надёжный" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Эта машина гораздо дороже»?",
+      "options": ["This car is much more expensive.", "This car is very more expensive.", "This car is much expensive.", "This car is more much expensive."],
+      "answer": 0,
+      "explanation": "«Гораздо» перед сравнительной степенью — much: much more expensive. Very со сравнением не сочетается, а без more у длинного прилагательного сравнительной степени нет."
+    },
+    {
+      "type": "gap",
+      "sentence": "The more you read, ___ your vocabulary becomes.",
+      "translation": "Чем больше вы читаете, тем больше становится ваш словарный запас.",
+      "options": ["the bigger", "bigger", "the big", "than bigger"],
+      "answer": 0,
+      "explanation": "В конструкции «чем…, тем…» каждая часть начинается с the + сравнительная степень: the more…, the bigger. Без the или с than конструкция разваливается."
+    },
+    {
+      "type": "translate",
+      "source": "Их квартира в два раза больше нашей.",
+      "answer": "Their flat is twice as big as ours.",
+      "accept": ["Their apartment is twice as big as ours.", "Their flat is twice as large as ours.", "Their apartment is twice as large as ours.", "Their flat is twice the size of ours.", "Their apartment is twice the size of ours.", "Their flat is twice as big as our flat.", "Their flat is two times as big as ours."],
+      "distractors": ["bigger", "than", "two"],
+      "explanation": "«В два раза больше» — twice as big as: между as и as стоит обычная форма big. Дословное «twice bigger than» в стандартном английском не используют."
+    },
+    {
+      "type": "listen",
+      "audio": "The train is slightly more expensive, but it's far more comfortable.",
+      "question": "Что говорящий думает о поезде?",
+      "options": ["Он чуть дороже, но гораздо удобнее", "Он гораздо дороже и немного удобнее", "Он дешевле и удобнее", "Он дороже и не такой удобный"],
+      "answer": 0,
+      "explanation": "Slightly — «чуть-чуть», far — «гораздо». Значит, разница в цене небольшая, а в удобстве большая."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's ___ colder today than it was yesterday.",
+      "translation": "Сегодня немного холоднее, чем вчера.",
+      "options": ["a bit", "very", "more", "too"],
+      "answer": 0,
+      "explanation": "Перед сравнительной степенью colder возможен усилитель a bit — «немного». Very и too стоят только перед обычной формой (very cold), а more лишнее: сравнение уже выражено окончанием -er."
+    },
+    {
+      "type": "speak",
+      "text": "The sooner we start, the sooner we'll finish.",
+      "translation": "Чем раньше начнём, тем раньше закончим."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["My new phone is twice as faster as the old one.", "My new phone is twice as fast as the old one.", "My new phone is twice as fast than the old one.", "My new phone is twice so fast as the old one."],
+      "answer": 1,
+      "explanation": "Twice as + обычная форма + as: twice as fast as. Сравнительная степень faster внутри as… as не ставится, а второе as нельзя заменить на than."
+    },
+    {
+      "type": "type",
+      "source": "Сегодня я чувствую себя гораздо лучше.",
+      "answer": "I feel much better today.",
+      "accept": ["I feel a lot better today.", "I feel far better today.", "I feel so much better today.", "I am feeling much better today.", "I'm feeling much better today.", "I am feeling a lot better today.", "I'm feeling a lot better today.", "Today I feel much better.", "Today I feel a lot better.", "Today I am feeling much better.", "Today I'm feeling much better."],
+      "explanation": "«Гораздо лучше» — much better или a lot better: very со сравнительной степенью не употребляется. И не забудьте, что feel не требует myself."
+    },
+    {
+      "type": "gap",
+      "sentence": "This hotel isn't ___ the one we stayed in last year.",
+      "translation": "Этот отель не такой хороший, как тот, где мы останавливались в прошлом году.",
+      "options": ["as good as", "as better as", "so good than", "as good than"],
+      "answer": 0,
+      "explanation": "«Не такой…, как» — not as + обычная форма + as: isn't as good as. Сравнительная степень better внутри as… as не нужна, а than употребляется только после сравнительной степени."
+    },
+    {
+      "type": "listen",
+      "audio": "The city centre is far more crowded at weekends.",
+      "question": "Что вы услышали?",
+      "options": ["The city centre is far more crowded at weekends.", "The city centre is far less crowded at weekends.", "The city centre is much more crowded at weekends.", "The city centre was far more crowded at weekends."],
+      "answer": 0,
+      "explanation": "Far more crowded — «гораздо многолюднее». Far и much здесь значат одно и то же, но прозвучало far; is показывает настоящее время, а more — что людей больше, а не меньше."
+    },
+    {
+      "type": "translate",
+      "source": "Чем больше я работаю, тем меньше у меня свободного времени.",
+      "answer": "The more I work, the less free time I have.",
+      "accept": ["The more I work, the less spare time I have.", "The more I work, the less free time I have got.", "The more I work, the less free time I've got.", "The more I work, the less time off I have."],
+      "distractors": ["than", "what", "fewer"],
+      "explanation": "«Чем…, тем…» — the + сравнительная степень в обеих частях: the more…, the less… Time — неисчисляемое, поэтому less, а не fewer. Русское «чем» не переводится ни как than, ни как what."
+    },
+    {
+      "type": "dictation",
+      "audio": "My sister is a bit taller than me.",
+      "translation": "Моя сестра немного выше меня."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «This phone costs half as much as that one»?",
+      "options": ["Этот телефон стоит вдвое дешевле того", "Этот телефон стоит вдвое дороже того", "Оба телефона стоят одинаково"],
+      "answer": 0,
+      "explanation": "Half as much as — «вдвое меньше, чем»: половина цены. «Вдвое дороже» было бы twice as much as, а «одинаково» — as much as без half."
+    }
+  ]
+}

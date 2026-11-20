@@ -1,0 +1,155 @@
+{
+  "id": "a1-22",
+  "level": "A1",
+  "order": 22,
+  "title": { "ru": "Семья и 's: Tom's sister, my parents' house", "en": "Family and the possessive 's: Tom's sister, my parents' house" },
+  "goal": { "ru": "Научитесь рассказывать о родственниках и говорить, чей это брат, дом или машина.", "en": "Learn to talk about your relatives and say whose brother, house or car it is." },
+  "theory": [
+    {
+      "title": "Tom's sister: сначала хозяин",
+      "body": "По-русски мы говорим «сестра Тома»: сначала сестра, потом Том. В английском порядок обратный: хозяин, потом 's, потом то, что ему принадлежит, — Tom's sister. Артикль перед вторым словом не нужен: «Tom's the sister» — ошибка. А «the sister of Tom» о людях не говорят, это звучит неестественно.",
+      "examples": [
+        { "en": "This is Anna's brother.", "ru": "Это брат Анны." },
+        { "en": "My sister's husband is from Minsk.", "ru": "Муж моей сестры из Минска." },
+        { "en": "Where is Dad's phone?", "ru": "Где папин телефон?" }
+      ],
+      "tip": "Длинную цепочку читайте с конца: my friend's mother — «мама моего друга»."
+    },
+    {
+      "title": "My parents' house: когда хозяев несколько",
+      "body": "Если слово во множественном числе уже кончается на -s, второе s не пишут — добавляют только апостроф: my parents' house, my friends' names. На слух parents и parents' звучат одинаково, разница только на письме. У слов без -s во множественном числе всё как обычно: the children's room.",
+      "examples": [
+        { "en": "My parents' flat is in the city centre.", "ru": "Квартира моих родителей в центре города." },
+        { "en": "This is my grandparents' dog.", "ru": "Это собака моих бабушки и дедушки." },
+        { "en": "The children's school is near here.", "ru": "Школа детей недалеко отсюда." }
+      ],
+      "tip": "Сравните: my sister's room — комната одной сестры, my sisters' room — комната двух или трёх сестёр."
+    },
+    {
+      "title": "'s — не всегда «чей»",
+      "body": "У 's три значения. Kate's brother — «брат Кейт», принадлежность. Kate's tired — это Kate is tired. Kate's got a car — это Kate has got a car. Отличить легко: если сразу после 's стоит существительное — человек или вещь, значит, это «чей».",
+      "examples": [
+        { "en": "Kate's brother is a student.", "ru": "Брат Кейт — студент." },
+        { "en": "Kate's a student.", "ru": "Кейт — студентка." },
+        { "en": "Kate's got two brothers.", "ru": "У Кейт два брата." }
+      ],
+      "tip": "Не путайте 's с множественным числом: my brothers — «мои братья», my brother's — «моего брата»."
+    }
+  ],
+  "vocab": [
+    { "en": "family", "ru": "семья", "example": "I've got a big family." },
+    { "en": "sister", "ru": "сестра", "example": "My sister lives in Kazan." },
+    { "en": "brother", "ru": "брат", "example": "Her brother is a driver." },
+    { "en": "grandmother", "ru": "бабушка", "example": "My grandmother cooks very well." },
+    { "en": "grandfather", "ru": "дедушка", "example": "His grandfather is eighty." },
+    { "en": "aunt", "ru": "тётя", "example": "My aunt has got three cats." },
+    { "en": "uncle", "ru": "дядя", "example": "Our uncle works in a bank." },
+    { "en": "cousin", "ru": "двоюродный брат, двоюродная сестра", "example": "My cousin is a student." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "sister", "ru": "сестра" },
+        { "en": "brother", "ru": "брат" },
+        { "en": "aunt", "ru": "тётя" },
+        { "en": "uncle", "ru": "дядя" },
+        { "en": "grandmother", "ru": "бабушка" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Это сестра Тома»?",
+      "options": ["This is sister Tom.", "This is Tom sister.", "This is Tom's sister.", "This is the Tom's sister."],
+      "answer": 2,
+      "explanation": "Сначала хозяин с 's, потом то, что ему принадлежит: Tom's sister. Русский порядок «сестра Тома» в английском не работает, а артикль перед именем не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "My ___ name is Oleg.",
+      "translation": "Моего дядю зовут Олег.",
+      "options": ["uncle", "uncles", "uncle's", "uncle is"],
+      "answer": 2,
+      "explanation": "Имя принадлежит дяде, поэтому нужен 's: my uncle's name — «имя моего дяди». Uncles — это просто «дяди», множественное число без значения «чей»."
+    },
+    {
+      "type": "listen",
+      "audio": "My mother's brother lives in Canada.",
+      "question": "Кто живёт в Канаде?",
+      "options": ["Брат мамы", "Мама брата", "Мама и брат", "Брат папы"],
+      "answer": 0,
+      "explanation": "My mother's brother — «брат моей мамы», то есть дядя. Главное слово стоит последним: речь о брате, а mother's только уточняет, чей он."
+    },
+    {
+      "type": "translate",
+      "source": "Машина моего брата новая.",
+      "answer": "My brother's car is new.",
+      "accept": ["My brother's car is a new one."],
+      "distractors": ["brother", "brothers", "of"],
+      "explanation": "«Моего брата» — my brother's, с апострофом и s. Машина стоит после хозяина: my brother's car. С of о людях так не говорят."
+    },
+    {
+      "type": "gap",
+      "sentence": "This is my ___ house. They live here with my grandmother.",
+      "translation": "Это дом моих родителей. Они живут здесь с моей бабушкой.",
+      "options": ["parent's", "parents'", "parents", "parent"],
+      "answer": 1,
+      "explanation": "Родителей двое, и слово parents уже кончается на -s, поэтому добавляется только апостроф: parents'. Parent's значило бы «одного родителя»."
+    },
+    {
+      "type": "speak",
+      "text": "My aunt's dog is very friendly.",
+      "translation": "Собака моей тёти очень дружелюбная."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении 's значит «чей», а не is?",
+      "options": ["Anna's at work.", "Anna's my cousin.", "Anna's flat is small.", "Anna's very tall."],
+      "answer": 2,
+      "explanation": "Anna's flat — «квартира Анны»: сразу после 's стоит вещь, а глагол is идёт дальше. В остальных предложениях 's — это is: Anna is at work, Anna is my cousin, Anna is very tall."
+    },
+    {
+      "type": "translate",
+      "source": "Это комната детей.",
+      "answer": "This is the children's room.",
+      "accept": ["It is the children's room.", "It's the children's room.", "That is the children's room.", "That's the children's room.", "This is the children's bedroom.", "This is the kids' room."],
+      "distractors": ["childrens", "of", "childs"],
+      "explanation": "Children — множественное число без -s, поэтому 's добавляется целиком: children's. Слова «childrens» без апострофа не существует."
+    },
+    {
+      "type": "listen",
+      "audio": "This is my cousin's wife. Her name's Laura.",
+      "question": "Кто такая Лаура?",
+      "options": ["Жена двоюродного брата", "Двоюродная сестра", "Сестра жены", "Жена родного брата"],
+      "answer": 0,
+      "explanation": "My cousin's wife — «жена моего двоюродного брата». В her name's Laura 's — это is: «её зовут Лаура»."
+    },
+    {
+      "type": "gap",
+      "sentence": "My friend's ___ is a teacher.",
+      "translation": "Мама моего друга — учитель.",
+      "options": ["mother", "mother's", "mothers", "the mother"],
+      "answer": 0,
+      "explanation": "'s уже стоит у хозяина — friend's. То, что принадлежит, идёт после него без изменений и без артикля: my friend's mother."
+    },
+    {
+      "type": "type",
+      "source": "Как зовут твоего брата?",
+      "answer": "What is your brother's name?",
+      "accept": ["What's your brother's name?", "What is the name of your brother?", "What's the name of your brother?"],
+      "explanation": "По-английски спрашивают «Какое имя твоего брата?»: your brother's name. Вопрос начинается с what, а не с how, и без 's здесь не обойтись."
+    },
+    {
+      "type": "dictation",
+      "audio": "My grandmother's flat is next to the park.",
+      "translation": "Квартира моей бабушки рядом с парком."
+    },
+    {
+      "type": "choice",
+      "prompt": "У вас две сестры, и комната у них общая. Как написать «комната моих сестёр»?",
+      "options": ["my sister's room", "my sisters' room", "my sisters room", "my sister room"],
+      "answer": 1,
+      "explanation": "Сестёр две, поэтому сначала множественное число sisters, а потом только апостроф: sisters'. My sister's room — комната одной сестры, а совсем без апострофа писать нельзя."
+    }
+  ]
+}

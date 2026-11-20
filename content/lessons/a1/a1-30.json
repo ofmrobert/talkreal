@@ -1,0 +1,155 @@
+{
+  "id": "a1-30",
+  "level": "A1",
+  "order": 30,
+  "title": { "ru": "Соединяем предложения: and, but, or, because", "en": "Joining sentences: and, but, or, because" },
+  "goal": { "ru": "Научитесь рассказывать о себе длинными предложениями, а не короткими фразами.", "en": "Learn to talk about yourself in longer sentences instead of short ones." },
+  "theory": [
+    {
+      "title": "And и but",
+      "body": "And добавляет: «и». But противопоставляет: «но». Русское «а» бывает и тем и другим. Если вы просто сравниваете, это and: «Я врач, а жена — учитель». Если есть контраст — but: «Чай я люблю, а кофе нет». Когда подлежащее одно, после and его можно не повторять.",
+      "examples": [
+        { "en": "I live in Kazan and I work in a bank.", "ru": "Я живу в Казани и работаю в банке." },
+        { "en": "I like tea, but I don't like coffee.", "ru": "Чай я люблю, а кофе нет." },
+        { "en": "She gets up at seven and goes to work.", "ru": "Она встаёт в семь и идёт на работу." }
+      ],
+      "tip": "Перед but обычно ставят запятую. Перед and в коротком предложении она не нужна."
+    },
+    {
+      "title": "Or: или",
+      "body": "Or — «или», когда нужно выбрать: Tea or coffee? Им соединяют и слова, и целые предложения. В отрицании or заменяет русское «и»: «Я не ем мясо и рыбу» — I don't eat meat or fish. And здесь звучало бы так, будто вы не едите их только вместе.",
+      "examples": [
+        { "en": "Would you like tea or coffee?", "ru": "Вы хотите чай или кофе?" },
+        { "en": "We can meet today or tomorrow.", "ru": "Мы можем встретиться сегодня или завтра." },
+        { "en": "I don't like football or tennis.", "ru": "Я не люблю ни футбол, ни теннис." }
+      ],
+      "tip": "На вопрос с or не отвечают Yes или No, а называют свой выбор: Tea or coffee? — Tea, please."
+    },
+    {
+      "title": "Because: потому что",
+      "body": "Because называет причину и отвечает на вопрос why. После него идёт полное предложение с подлежащим и глаголом: because I want to travel. «Because want to travel» — ошибка: по-русски «я» можно опустить, по-английски нельзя. Запятую перед because, в отличие от русского, не ставят.",
+      "examples": [
+        { "en": "I'm tired because I worked a lot today.", "ru": "Я устал, потому что сегодня много работал." },
+        { "en": "She walks to work because her office is near her house.", "ru": "Она ходит на работу пешком, потому что её офис рядом с домом." },
+        { "en": "Why do you like summer? — Because it's warm.", "ru": "Почему вы любите лето? — Потому что тепло." }
+      ],
+      "tip": "Не путайте: why — вопрос «почему?», because — ответ «потому что»."
+    }
+  ],
+  "vocab": [
+    { "en": "and", "ru": "и; а", "example": "My sister and I live together." },
+    { "en": "but", "ru": "но; а", "example": "The flat is small, but it's nice." },
+    { "en": "or", "ru": "или", "example": "Is it Monday or Tuesday today?" },
+    { "en": "because", "ru": "потому что", "example": "I'm happy because it's Friday." },
+    { "en": "to travel", "ru": "путешествовать", "example": "We travel every summer." },
+    { "en": "interesting", "ru": "интересный", "example": "This book is very interesting." },
+    { "en": "difficult", "ru": "трудный", "example": "English isn't difficult." },
+    { "en": "favourite", "ru": "любимый", "example": "My favourite season is spring." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "and", "ru": "и" },
+        { "en": "but", "ru": "но" },
+        { "en": "or", "ru": "или" },
+        { "en": "because", "ru": "потому что" },
+        { "en": "difficult", "ru": "трудный" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать одним предложением «Я живу в Москве и работаю в школе»?",
+      "options": ["I live in Moscow but work in a school.", "I live in Moscow and work in a school.", "I live in Moscow or work in a school.", "I live in Moscow because work in a school."],
+      "answer": 1,
+      "explanation": "Вы добавляете второй факт к первому, поэтому and. Подлежащее I одно, и после and его можно не повторять. But показало бы контраст, а or — выбор."
+    },
+    {
+      "type": "gap",
+      "sentence": "The hotel is nice, ___ it's too expensive.",
+      "translation": "Отель хороший, но слишком дорогой.",
+      "options": ["and", "but", "or", "because"],
+      "answer": 1,
+      "explanation": "Здесь плюс и минус: отель хороший, но дорогой. Контраст передаёт but. And просто поставило бы два факта рядом, без «но»."
+    },
+    {
+      "type": "listen",
+      "audio": "I don't have a car because I live near my office.",
+      "question": "Почему у человека нет машины?",
+      "options": ["Он живёт рядом с офисом", "Машина слишком дорогая", "Он не умеет водить", "Он не любит машины"],
+      "answer": 0,
+      "explanation": "После because идёт причина: I live near my office — «я живу рядом с офисом». Машина ему просто не нужна."
+    },
+    {
+      "type": "translate",
+      "source": "Я учу английский, потому что хочу путешествовать.",
+      "answer": "I am learning English because I want to travel.",
+      "accept": ["I'm learning English because I want to travel.", "I learn English because I want to travel.", "I am studying English because I want to travel.", "I'm studying English because I want to travel.", "I study English because I want to travel."],
+      "distractors": ["but", "why", "or"],
+      "explanation": "«Потому что» — because, а why — только вопрос. После because обязательно подлежащее: because I want. По-русски «я» можно опустить, по-английски нельзя."
+    },
+    {
+      "type": "gap",
+      "sentence": "Do you want to stay at home ___ go out tonight?",
+      "translation": "Ты хочешь остаться дома или куда-нибудь пойти сегодня вечером?",
+      "options": ["or", "but", "because", "and"],
+      "answer": 0,
+      "explanation": "Нужно выбрать одно из двух — остаться или пойти, поэтому or. Сделать и то и другое сразу нельзя, так что and не подходит."
+    },
+    {
+      "type": "speak",
+      "text": "I like my job, but I work a lot.",
+      "translation": "Мне нравится моя работа, но я много работаю."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спрашивают: «Why are you late?» Как ответить?",
+      "options": ["But the bus was late.", "Or the bus was late.", "Because the bus was late.", "Why the bus was late."],
+      "answer": 2,
+      "explanation": "На why отвечают словом because — «потому что». Why бывает только в вопросе, а but и or причину не называют."
+    },
+    {
+      "type": "translate",
+      "source": "Он живёт в Лондоне, но работает в Оксфорде.",
+      "answer": "He lives in London, but he works in Oxford.",
+      "accept": ["He lives in London but works in Oxford.", "He lives in London, but works in Oxford."],
+      "distractors": ["and", "because", "live"],
+      "explanation": "Живёт в одном городе, а работает в другом — это контраст, поэтому but. С he оба глагола получают -s: lives, works."
+    },
+    {
+      "type": "listen",
+      "audio": "At the weekend I usually read or watch films, but I never work.",
+      "question": "Что человек делает на выходных?",
+      "options": ["Читает или смотрит фильмы", "Читает и работает", "Смотрит фильмы и работает", "Только работает"],
+      "answer": 0,
+      "explanation": "Read or watch films — «читаю или смотрю фильмы». После but идёт контраст: I never work — «я никогда не работаю»."
+    },
+    {
+      "type": "gap",
+      "sentence": "She can't come to the party ___ she's ill.",
+      "translation": "Она не может прийти на вечеринку, потому что заболела.",
+      "options": ["but", "or", "because", "and"],
+      "answer": 2,
+      "explanation": "Вторая часть объясняет причину: она больна, поэтому не придёт. Причину вводит because, и запятая перед ним не ставится."
+    },
+    {
+      "type": "type",
+      "source": "Я устал, но я счастлив.",
+      "answer": "I am tired, but I am happy.",
+      "accept": ["I'm tired, but I'm happy.", "I am tired but happy.", "I'm tired but happy.", "I am tired, but happy.", "I'm tired, but I am happy."],
+      "explanation": "«Но» — but: усталость и счастье здесь противопоставлены. В каждой части нужен свой глагол to be: I am tired, I am happy."
+    },
+    {
+      "type": "dictation",
+      "audio": "I get up early and go to the gym.",
+      "translation": "Я встаю рано и иду в спортзал."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I like summer because is warm.", "I like summer, why it's warm.", "I like summer because of it's warm.", "I like summer because it's warm."],
+      "answer": 3,
+      "explanation": "После because идёт полное предложение с подлежащим: because it's warm. Без it нельзя, why — это вопрос, а because of перед предложением не ставят."
+    }
+  ]
+}

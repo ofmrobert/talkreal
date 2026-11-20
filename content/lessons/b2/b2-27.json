@@ -1,0 +1,199 @@
+{
+  "id": "b2-27",
+  "level": "B2",
+  "order": 27,
+  "title": { "ru": "Устойчивые сочетания: heavy rain, strong coffee", "en": "Strong collocations: heavy rain, strong coffee" },
+  "goal": { "ru": "Научитесь сочетать слова так, как это делают носители: heavy rain, strong coffee, make a decision, pay attention, highly likely, deeply sorry, bitterly cold.", "en": "Learn to combine words the way native speakers do: heavy rain, strong coffee, make a decision, pay attention, highly likely, deeply sorry, bitterly cold." },
+  "theory": [
+    {
+      "title": "Прилагательное + существительное",
+      "body": "Многие слова «дружат» только с определёнными соседями. По-русски и дождь, и ветер «сильные», а в английском дождь, снег и движение на дорогах — heavy, ветер же и кофе — strong. Логики тут немного: такие пары нужно просто запомнить.",
+      "examples": [
+        { "en": "We got caught in heavy rain.", "ru": "Мы попали под сильный дождь." },
+        { "en": "A strong wind was blowing from the sea.", "ru": "С моря дул сильный ветер." },
+        { "en": "He used to be a heavy smoker.", "ru": "Раньше он был заядлым курильщиком." }
+      ],
+      "tip": "«Strong rain» и «heavy wind» носитель поймёт, но сразу услышит ошибку. Учите слова парами: не rain, а heavy rain."
+    },
+    {
+      "title": "Глагол + существительное",
+      "body": "Дословный перевод подводит и здесь. «Принять решение» — make a decision (в британском английском также take a decision), но не accept a decision: это значит «согласиться с чужим решением». «Обратить внимание» — pay attention, «сдержать обещание» — keep a promise, «простудиться» — catch a cold.",
+      "examples": [
+        { "en": "It's time to make a decision.", "ru": "Пора принять решение." },
+        { "en": "Nobody paid attention to the warning.", "ru": "Никто не обратил внимания на предупреждение." },
+        { "en": "I caught a cold on holiday.", "ru": "В отпуске я простудился." }
+      ],
+      "tip": "Встретив новое существительное, смотрите в словаре, какой глагол стоит с ним в примерах, и выписывайте пару целиком."
+    },
+    {
+      "title": "Наречие + прилагательное",
+      "body": "Усилить прилагательное можно не только словом very. Highly likely — «весьма вероятно», deeply sorry и deeply concerned — «глубоко сожалею» и «серьёзно обеспокоен», bitterly cold и bitterly disappointed — «страшно холодно» и «горько разочарован», fully aware — «прекрасно осознаю». Эти наречия не взаимозаменяемы.",
+      "examples": [
+        { "en": "It's highly unlikely that he'll agree.", "ru": "Крайне маловероятно, что он согласится." },
+        { "en": "I'm deeply sorry for the delay.", "ru": "Я глубоко сожалею о задержке." },
+        { "en": "It was a bitterly cold morning.", "ru": "Утро было страшно холодным." }
+      ],
+      "tip": "Highly сочетается с вероятностью и оценкой (highly likely, highly successful), deeply — с чувствами, bitterly — с холодом и разочарованием."
+    }
+  ],
+  "vocab": [
+    { "en": "heavy rain", "ru": "сильный дождь", "example": "The match was stopped because of heavy rain." },
+    { "en": "strong coffee", "ru": "крепкий кофе", "example": "I need a cup of strong coffee." },
+    { "en": "to make a decision", "ru": "принять решение", "example": "You don't have to make a decision right now." },
+    { "en": "to pay attention", "ru": "обращать внимание", "example": "Pay attention to the road signs." },
+    { "en": "highly likely", "ru": "весьма вероятно", "example": "A delay is highly likely." },
+    { "en": "bitterly cold", "ru": "страшно холодно", "example": "It gets bitterly cold here in January." },
+    { "en": "deeply sorry", "ru": "глубоко сожалею, очень жаль", "example": "We are deeply sorry for the mistake." },
+    { "en": "to keep a promise", "ru": "сдержать обещание", "example": "I always try to keep a promise." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "heavy rain", "ru": "сильный дождь" },
+        { "en": "strong coffee", "ru": "крепкий кофе" },
+        { "en": "to make a decision", "ru": "принять решение" },
+        { "en": "to pay attention", "ru": "обращать внимание" },
+        { "en": "highly likely", "ru": "весьма вероятно" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «сильный дождь»?",
+      "options": [
+        "heavy rain",
+        "strong rain",
+        "powerful rain",
+        "big rain"
+      ],
+      "answer": 0,
+      "explanation": "С дождём и снегом сочетается heavy, буквально «тяжёлый». Русское «сильный» подсказывает strong, но strong говорят о ветре, а не об осадках."
+    },
+    {
+      "type": "gap",
+      "sentence": "I can't sleep if I drink ___ coffee in the evening.",
+      "translation": "Я не могу уснуть, если вечером пью крепкий кофе.",
+      "options": ["strong", "heavy", "hard", "powerful"],
+      "answer": 0,
+      "explanation": "Крепкий кофе и чай — strong coffee, strong tea. Hard о напитках значит «содержащий алкоголь» (hard drinks), а heavy и powerful с кофе не сочетаются."
+    },
+    {
+      "type": "listen",
+      "audio": "It's highly likely that the match will be cancelled.",
+      "question": "Насколько вероятна отмена матча?",
+      "options": [
+        "Весьма вероятна",
+        "Маловероятна",
+        "Матч уже отменили",
+        "Отмена исключена"
+      ],
+      "answer": 0,
+      "explanation": "Highly likely — «весьма вероятно»: highly усиливает likely. Матч пока не отменён: will be cancelled говорит о будущем."
+    },
+    {
+      "type": "translate",
+      "source": "Нам нужно принять решение сегодня.",
+      "answer": "We need to make a decision today.",
+      "accept": [
+        "We need to take a decision today.",
+        "We have to make a decision today.",
+        "We have to take a decision today.",
+        "We must make a decision today.",
+        "We need to decide today.",
+        "Today we need to make a decision."
+      ],
+      "distractors": ["accept", "do", "solution"],
+      "explanation": "«Принять решение» — make a decision. Accept a decision значит «согласиться с чужим решением», do с этим словом не сочетается, а solution — решение задачи или проблемы, а не выбор."
+    },
+    {
+      "type": "gap",
+      "sentence": "Please ___ attention to the safety instructions.",
+      "translation": "Пожалуйста, обратите внимание на инструкции по безопасности.",
+      "options": ["pay", "turn", "put", "make"],
+      "answer": 0,
+      "explanation": "Внимание в английском «платят»: pay attention to. Turn attention — калька с русского «обратить», и в значении «будьте внимательны» так не говорят."
+    },
+    {
+      "type": "speak",
+      "text": "It was bitterly cold, so we stayed indoors.",
+      "translation": "Было страшно холодно, поэтому мы остались дома."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Он сдержал обещание»?",
+      "options": [
+        "He kept his promise.",
+        "He held his promise.",
+        "He saved his promise.",
+        "He stood his promise."
+      ],
+      "answer": 0,
+      "explanation": "«Сдержать обещание» — keep a promise, буквально «сохранить». Hold, save и stand с promise не сочетаются. Противоположное по смыслу — break a promise, «нарушить обещание»."
+    },
+    {
+      "type": "type",
+      "source": "Я глубоко сожалею о своей ошибке.",
+      "answer": "I deeply regret my mistake.",
+      "accept": [
+        "I am deeply sorry for my mistake.",
+        "I'm deeply sorry for my mistake.",
+        "I am deeply sorry about my mistake.",
+        "I'm deeply sorry about my mistake.",
+        "I deeply regret my error."
+      ],
+      "explanation": "С чувствами сочетается наречие deeply: deeply regret, deeply sorry. «Strongly regret» и «very regret» — ошибки: very вообще не ставится перед глаголом."
+    },
+    {
+      "type": "listen",
+      "audio": "There was heavy traffic, so I missed the beginning of the film.",
+      "question": "Почему говорящий пропустил начало фильма?",
+      "options": [
+        "Из-за плотного движения на дорогах",
+        "Из-за сильного дождя",
+        "Из-за аварии с грузовиком",
+        "Потому что он поздно вышел из дома"
+      ],
+      "answer": 0,
+      "explanation": "Heavy traffic — «плотное движение, пробки». Heavy здесь означает не «тяжёлый», а «интенсивный», как и в heavy rain."
+    },
+    {
+      "type": "gap",
+      "sentence": "We were ___ disappointed when the concert was cancelled.",
+      "translation": "Мы были горько разочарованы, когда концерт отменили.",
+      "options": ["bitterly", "strongly", "heavily", "widely"],
+      "answer": 0,
+      "explanation": "Разочарование в английском «горькое», как и в русском: bitterly disappointed. Strongly сочетается с мнениями (strongly agree), heavily — с глаголами (rain heavily), widely — с распространённостью (widely known)."
+    },
+    {
+      "type": "translate",
+      "source": "Вчера был сильный ветер.",
+      "answer": "There was a strong wind yesterday.",
+      "accept": [
+        "There was strong wind yesterday.",
+        "There were strong winds yesterday.",
+        "Yesterday there was a strong wind.",
+        "The wind was strong yesterday.",
+        "It was very windy yesterday."
+      ],
+      "distractors": ["heavy", "hard", "big"],
+      "explanation": "Ветер — strong wind, а heavy говорят о дожде и снеге. Русское «был ветер» начинается с there was: в английском предложении обязательно нужно подлежащее."
+    },
+    {
+      "type": "dictation",
+      "audio": "Heavy snow is expected in the north tonight.",
+      "translation": "Сегодня ночью на севере ожидается сильный снег."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "I'm fully aware of the risks.",
+        "I'm strongly aware of the risks.",
+        "I'm heavily aware of the risks.",
+        "I'm bitterly aware of the risks."
+      ],
+      "answer": 0,
+      "explanation": "С aware сочетается fully: fully aware — «прекрасно осознаю». Strongly, heavily и bitterly образуют пары с другими словами: strongly recommend, heavily influenced, bitterly disappointed."
+    }
+  ]
+}

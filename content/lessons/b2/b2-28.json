@@ -1,0 +1,195 @@
+{
+  "id": "b2-28",
+  "level": "B2",
+  "order": 28,
+  "title": { "ru": "Коварные существительные: advice, news, people", "en": "Tricky nouns: advice, news, people" },
+  "goal": { "ru": "Научитесь правильно употреблять неисчисляемые advice, information, news, luggage, furniture, research и progress, считать их с помощью a piece of и согласовывать глагол с news, people и police.", "en": "Learn to use the uncountable nouns advice, information, news, luggage, furniture, research and progress, to count them with a piece of, and to choose the right verb with news, people and police." },
+  "theory": [
+    {
+      "title": "Неисчисляемые, хотя в русском их считают",
+      "body": "Advice, information, news, luggage, furniture, research, progress и knowledge в английском неисчисляемые. У них нет множественного числа, перед ними не ставят a / an, а глагол стоит в единственном числе. Количество выражают словами some, much, a lot of, a little.",
+      "examples": [
+        { "en": "Can you give me some advice?", "ru": "Можете дать мне совет?" },
+        { "en": "We don't have much information yet.", "ru": "У нас пока мало сведений." },
+        { "en": "The furniture in this room is very old.", "ru": "Мебель в этой комнате очень старая." }
+      ],
+      "tip": "«An advice», «informations», «furnitures», «a research» — типичные ошибки. По-русски «советы» и «исследования» бывают во множественном числе, по-английски — нет."
+    },
+    {
+      "title": "A piece of: как посчитать несчитаемое",
+      "body": "Чтобы назвать одну единицу, используют a piece of: a piece of advice — один совет, a piece of news — одна новость, a piece of furniture — предмет мебели. В разговорной речи вместо piece часто говорят bit. Для нескольких единиц — two pieces of.",
+      "examples": [
+        { "en": "Let me give you a piece of advice.", "ru": "Позвольте дать вам один совет." },
+        { "en": "That's an interesting piece of news.", "ru": "Это интересная новость." },
+        { "en": "We bought two pieces of furniture for the hall.", "ru": "Мы купили два предмета мебели для прихожей." }
+      ],
+      "tip": "Прилагательное ставится перед piece или перед самим существительным: a useful piece of advice или some useful advice — но не «a useful advice»."
+    },
+    {
+      "title": "The news is, people are, the police are",
+      "body": "News оканчивается на -s, но это единственное число: The news is good. People и police, наоборот, выглядят как единственное число, но требуют глагола во множественном: People are, The police have. Русское «полиция приехала» подталкивает к is и has — это ошибка.",
+      "examples": [
+        { "en": "The news was a complete surprise.", "ru": "Новость стала полной неожиданностью." },
+        { "en": "Most people are happy with the changes.", "ru": "Большинство людей довольны изменениями." },
+        { "en": "The police have closed the road.", "ru": "Полиция перекрыла дорогу." }
+      ],
+      "tip": "Один человек — a person, один полицейский — a police officer. «A people» значит «народ», а «a police» сказать нельзя."
+    }
+  ],
+  "vocab": [
+    { "en": "advice", "ru": "совет, советы", "example": "Thanks for the advice." },
+    { "en": "luggage", "ru": "багаж", "example": "Is this all your luggage?" },
+    { "en": "furniture", "ru": "мебель", "example": "We need some new furniture for the office." },
+    { "en": "research", "ru": "исследование, исследования", "example": "She is doing research into climate change." },
+    { "en": "progress", "ru": "прогресс, успехи", "example": "You're making good progress." },
+    { "en": "a piece of advice", "ru": "(один) совет", "example": "My father gave me a good piece of advice." },
+    { "en": "the police", "ru": "полиция", "example": "The police are on their way." },
+    { "en": "knowledge", "ru": "знания", "example": "His knowledge of history is impressive." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "advice", "ru": "совет, советы" },
+        { "en": "luggage", "ru": "багаж" },
+        { "en": "furniture", "ru": "мебель" },
+        { "en": "research", "ru": "исследование, исследования" },
+        { "en": "progress", "ru": "прогресс, успехи" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "She gave me some good advice.",
+        "She gave me a good advice.",
+        "She gave me some good advices.",
+        "She gave me some good advise."
+      ],
+      "answer": 0,
+      "explanation": "Advice — неисчисляемое существительное: без артикля a и без множественного числа. Advise с буквой s — это глагол «советовать», а не существительное."
+    },
+    {
+      "type": "gap",
+      "sentence": "The news ___ on at ten o'clock every evening.",
+      "translation": "Новости идут в десять часов каждый вечер.",
+      "options": ["is", "are", "were", "have been"],
+      "answer": 0,
+      "explanation": "News — единственное число, несмотря на -s на конце: The news is. Русское «новости идут» стоит во множественном числе, поэтому так и тянет сказать are."
+    },
+    {
+      "type": "listen",
+      "audio": "The police are looking for a man in a red jacket.",
+      "question": "Кого ищет полиция?",
+      "options": [
+        "Мужчину в красной куртке",
+        "Мужчину с красной сумкой",
+        "Полицейского в красной куртке",
+        "Мужчину, который украл красную куртку"
+      ],
+      "answer": 0,
+      "explanation": "Обратите внимание на глагол: the police are looking, а не is. Слово police в английском всегда согласуется с глаголом во множественном числе."
+    },
+    {
+      "type": "translate",
+      "source": "У меня для тебя хорошие новости.",
+      "answer": "I have some good news for you.",
+      "accept": [
+        "I've got some good news for you.",
+        "I have got some good news for you.",
+        "I have good news for you.",
+        "I've got good news for you.",
+        "I have got good news for you."
+      ],
+      "distractors": ["a", "new", "are"],
+      "explanation": "News неисчисляемое: перед ним ставят some или ничего, но не артикль a. Формы «a news» или «a new» в значении «новость» не существует; одна новость — a piece of news."
+    },
+    {
+      "type": "gap",
+      "sentence": "How ___ luggage are you taking with you?",
+      "translation": "Сколько багажа вы берёте с собой?",
+      "options": ["much", "many", "few", "a lot"],
+      "answer": 0,
+      "explanation": "Luggage неисчисляемое, поэтому вопрос «сколько» — how much. How many подошло бы к исчисляемым bags или suitcases: How many bags are you taking?"
+    },
+    {
+      "type": "speak",
+      "text": "Can I give you a piece of advice?",
+      "translation": "Можно дать вам один совет?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Люди устали ждать»?",
+      "options": [
+        "People are tired of waiting.",
+        "People is tired of waiting.",
+        "Peoples are tired of waiting.",
+        "People tired of waiting."
+      ],
+      "answer": 0,
+      "explanation": "People — множественное число от person, поэтому глагол are. Peoples значит «народы», а совсем без глагола be английское предложение обойтись не может."
+    },
+    {
+      "type": "type",
+      "source": "Мне нужна информация о курсе.",
+      "answer": "I need some information about the course.",
+      "accept": [
+        "I need information about the course.",
+        "I need some information on the course.",
+        "I need information on the course."
+      ],
+      "explanation": "Information неисчисляемое: без артикля an и без -s на конце. Перед ним обычно ставят some. «I need an information» и «informations» — ошибки."
+    },
+    {
+      "type": "listen",
+      "audio": "We've made a lot of progress, but there is still a lot to do.",
+      "question": "Как идут дела?",
+      "options": [
+        "Сделано уже многое, но работы ещё хватает",
+        "Работа полностью закончена",
+        "Почти ничего не сделано",
+        "Работу пришлось остановить"
+      ],
+      "answer": 0,
+      "explanation": "Make progress — «добиваться успехов, продвигаться»; progress неисчисляемое, поэтому a lot of progress без артикля a. Часть после but сообщает, что дел осталось много."
+    },
+    {
+      "type": "gap",
+      "sentence": "All our furniture ___ made of oak.",
+      "translation": "Вся наша мебель сделана из дуба.",
+      "options": ["is", "are", "were", "have"],
+      "answer": 0,
+      "explanation": "Furniture неисчисляемое, глагол с ним стоит в единственном числе: furniture is. Слово all не делает его множественным."
+    },
+    {
+      "type": "translate",
+      "source": "Полиция арестовала двух человек.",
+      "answer": "The police have arrested two people.",
+      "accept": [
+        "The police arrested two people.",
+        "Police have arrested two people.",
+        "Police arrested two people.",
+        "The police have arrested 2 people."
+      ],
+      "distractors": ["has", "peoples", "persons"],
+      "explanation": "Police требует множественного числа: the police have, а не has. «Два человека» — two people; peoples значит «народы», а persons встречается только в юридических текстах и объявлениях."
+    },
+    {
+      "type": "dictation",
+      "audio": "Is there any news about the flight?",
+      "translation": "Есть какие-нибудь новости о рейсе?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "Scientists have done a lot of research on sleep.",
+        "Scientists have done a lot of researches on sleep.",
+        "Scientists have done many research on sleep.",
+        "Scientists have done a research on sleep."
+      ],
+      "answer": 0,
+      "explanation": "Research неисчисляемое: без -es, без артикля a и не с many. Чтобы назвать одно исследование, говорят a study или a piece of research."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "id": "b2-22",
+  "level": "B2",
+  "order": 22,
+  "title": { "ru": "Ближайшее и вероятное будущее", "en": "The near and likely future" },
+  "goal": { "ru": "Научитесь говорить о том, что вот-вот случится, должно произойти по расписанию или весьма вероятно: be about to, be due to, be likely to, be bound to, be on the point of.", "en": "Learn to talk about what is just about to happen, what is scheduled and what is probable: be about to, be due to, be likely to, be bound to, be on the point of." },
+  "theory": [
+    {
+      "title": "Вот-вот: be about to, be on the point of",
+      "body": "Be about to + глагол — действие произойдёт в ближайшие секунды или минуты. Be on the point of + -ing значит то же, но звучит официальнее и обычно относится к важному шагу. Обе конструкции уже содержат идею «очень скоро», поэтому слова вроде tomorrow или next week с ними не сочетаются.",
+      "examples": [
+        { "en": "Please take your seats: the show is about to begin.", "ru": "Пожалуйста, займите свои места: представление вот-вот начнётся." },
+        { "en": "I'm about to go into a meeting. Can I call you back?", "ru": "Я как раз иду на совещание. Можно я перезвоню?" },
+        { "en": "The two companies are on the point of signing the contract.", "ru": "Две компании вот-вот подпишут контракт." }
+      ],
+      "tip": "После about to — начальная форма глагола, после on the point of — форма на -ing. «I'm about to leaving» и «on the point to leave» — ошибки."
+    },
+    {
+      "title": "По расписанию: be due to",
+      "body": "Be due to + глагол — событие ожидается в определённое время по расписанию, графику или плану; обычно рядом назван срок. Можно и без глагола: The train is due at 9.15. Не путайте с предлогом due to («из-за»), после которого идёт существительное.",
+      "examples": [
+        { "en": "The plane is due to land at 6.40.", "ru": "Самолёт должен приземлиться в 6.40." },
+        { "en": "The new manager is due to start on Monday.", "ru": "Новый руководитель должен приступить к работе в понедельник." },
+        { "en": "Their baby is due in March.", "ru": "Их ребёнок должен родиться в марте." }
+      ],
+      "tip": "По-русски здесь говорят «должен», но must не подходит: must — это обязанность или уверенная догадка, а не расписание."
+    },
+    {
+      "title": "Вероятность: be likely to, be bound to",
+      "body": "Be likely to — «вероятно, скорее всего», be unlikely to — «вряд ли», be bound to — «непременно, наверняка»: говорящий не сомневается. Подлежащим становится тот, о ком идёт речь: He is likely to win. Русское «Вероятно, он победит» начинается с наречия, а likely — прилагательное, и ему нужен глагол be.",
+      "examples": [
+        { "en": "The meeting is likely to last all morning.", "ru": "Совещание, скорее всего, продлится всё утро." },
+        { "en": "She is unlikely to change her mind.", "ru": "Вряд ли она передумает." },
+        { "en": "If you don't write it down, you're bound to forget.", "ru": "Если не запишете, обязательно забудете." }
+      ],
+      "tip": "«He likely to win» и «He is probably to win» — ошибки. Либо He is likely to win, либо He will probably win."
+    }
+  ],
+  "vocab": [
+    { "en": "be about to", "ru": "вот-вот, с минуты на минуту", "example": "The lesson is about to end." },
+    { "en": "be due to", "ru": "должен (по расписанию, по плану)", "example": "The bus is due to leave at noon." },
+    { "en": "be likely to", "ru": "вероятно, скорее всего", "example": "It's likely to be cold tonight." },
+    { "en": "be bound to", "ru": "непременно, наверняка", "example": "They're bound to notice the mistake." },
+    { "en": "be on the point of", "ru": "быть на грани, вот-вот (сделать)", "example": "He was on the point of giving up." },
+    { "en": "unlikely", "ru": "маловероятный", "example": "A long delay is unlikely." },
+    { "en": "to take off", "ru": "взлетать", "example": "Our plane took off on time." },
+    { "en": "to resign", "ru": "увольняться, уходить в отставку", "example": "The minister was forced to resign." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "be about to", "ru": "вот-вот, с минуты на минуту" },
+        { "en": "be due to", "ru": "должен (по расписанию, по плану)" },
+        { "en": "be likely to", "ru": "вероятно, скорее всего" },
+        { "en": "be bound to", "ru": "непременно, наверняка" },
+        { "en": "be on the point of", "ru": "быть на грани, вот-вот (сделать)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Самолёт взлетит через минуту-другую. Как это сказать?",
+      "options": [
+        "The plane is about to take off.",
+        "The plane is about taking off.",
+        "The plane is about to taking off.",
+        "The plane about to take off."
+      ],
+      "answer": 0,
+      "explanation": "Be about to + начальная форма глагола: is about to take off. Нельзя ни пропустить глагол be, ни заменить инфинитив формой на -ing."
+    },
+    {
+      "type": "gap",
+      "sentence": "The new bridge is ___ to open next spring.",
+      "translation": "Новый мост должен открыться следующей весной.",
+      "options": ["due", "about", "on the point", "bounded"],
+      "answer": 0,
+      "explanation": "Срок по плану — be due to. About to не подходит: это «с минуты на минуту», а не «следующей весной». После on the point нужны of и форма на -ing, а bounded значит «ограниченный» и к be bound to отношения не имеет."
+    },
+    {
+      "type": "listen",
+      "audio": "Take an umbrella: it's likely to rain this afternoon.",
+      "question": "Что говорящий думает о погоде?",
+      "options": [
+        "Днём, скорее всего, пойдёт дождь",
+        "Днём дождя точно не будет",
+        "Дождь уже идёт",
+        "Дождь возможен, но маловероятен"
+      ],
+      "answer": 0,
+      "explanation": "It's likely to rain — «вероятно, пойдёт дождь»: говорящий считает это вполне вероятным, поэтому и советует взять зонт. «Маловероятно» было бы unlikely."
+    },
+    {
+      "type": "translate",
+      "source": "Он наверняка забудет про встречу.",
+      "answer": "He is bound to forget about the meeting.",
+      "accept": [
+        "He's bound to forget about the meeting.",
+        "He is bound to forget the meeting.",
+        "He's bound to forget the meeting.",
+        "He is sure to forget about the meeting.",
+        "He's sure to forget about the meeting.",
+        "He is certain to forget about the meeting.",
+        "He will definitely forget about the meeting.",
+        "He'll definitely forget about the meeting."
+      ],
+      "distractors": ["forgetting", "bind", "probably"],
+      "explanation": "«Наверняка, непременно» — be bound to + глагол: говорящий в этом уверен. Likely или probably передают лишь вероятность, а это слабее, чем «наверняка»."
+    },
+    {
+      "type": "gap",
+      "sentence": "She was on the point of ___ when her boss offered her a pay rise.",
+      "translation": "Она уже готова была уволиться, когда начальник предложил ей прибавку.",
+      "options": ["resigning", "to resign", "resign", "resigned"],
+      "answer": 0,
+      "explanation": "В on the point of стоит предлог of, а после предлога глагол принимает форму на -ing: on the point of resigning. Инфинитив нужен после about to: was about to resign."
+    },
+    {
+      "type": "speak",
+      "text": "The results are due to be announced on Friday.",
+      "translation": "Результаты должны объявить в пятницу."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Вряд ли они согласятся»?",
+      "options": [
+        "They are unlikely to agree.",
+        "They unlikely to agree.",
+        "They are unlikely agree.",
+        "They are unlikely agreeing."
+      ],
+      "answer": 0,
+      "explanation": "Unlikely — прилагательное, поэтому нужен глагол be, а после него — инфинитив с to: are unlikely to agree. Русское «вряд ли» — наречие, отсюда и желание пропустить are."
+    },
+    {
+      "type": "type",
+      "source": "Я как раз собираюсь уходить.",
+      "answer": "I'm about to leave.",
+      "accept": [
+        "I am about to leave.",
+        "I'm just about to leave.",
+        "I am just about to leave.",
+        "I'm about to go.",
+        "I'm just about to go.",
+        "I'm on the point of leaving."
+      ],
+      "explanation": "«Как раз собираюсь» — действие случится в ближайшую минуту, поэтому be about to. Just усиливает оттенок «вот прямо сейчас», но не обязательно."
+    },
+    {
+      "type": "listen",
+      "audio": "Don't worry about the interview. With your experience, you're bound to get the job.",
+      "question": "Что думает говорящий?",
+      "options": [
+        "Он уверен, что собеседник получит эту работу",
+        "Он сомневается, что собеседник получит эту работу",
+        "Он считает, что собеседник обязан согласиться на эту работу",
+        "Он знает, что собеседник уже получил эту работу"
+      ],
+      "answer": 0,
+      "explanation": "You're bound to get the job — «вы наверняка получите эту работу». Bound to выражает уверенность говорящего, а не обязанность: об обязанности сказали бы have to."
+    },
+    {
+      "type": "gap",
+      "sentence": "Prices are ___ to go up again next year, according to most experts.",
+      "translation": "По мнению большинства экспертов, в следующем году цены, вероятно, снова вырастут.",
+      "options": ["likely", "probably", "possibly", "maybe"],
+      "answer": 0,
+      "explanation": "После be и перед to может стоять только прилагательное likely: are likely to go up. Probably, possibly и maybe — наречия, с ними нужна другая структура: Prices will probably go up."
+    },
+    {
+      "type": "translate",
+      "source": "Поезд должен прибыть через десять минут.",
+      "answer": "The train is due to arrive in ten minutes.",
+      "accept": [
+        "The train's due to arrive in ten minutes.",
+        "The train is due in ten minutes.",
+        "The train is due to arrive in 10 minutes.",
+        "The train is due in 10 minutes.",
+        "The train is supposed to arrive in ten minutes."
+      ],
+      "distractors": ["after", "arriving", "must"],
+      "explanation": "«Должен» по расписанию — be due to, а не must: must звучало бы как уверенная догадка. «Через десять минут» — in ten minutes; after здесь было бы калькой с русского."
+    },
+    {
+      "type": "dictation",
+      "audio": "Hurry up, the shop is about to close.",
+      "translation": "Поторопись, магазин вот-вот закроется."
+    },
+    {
+      "type": "choice",
+      "prompt": "Том опаздывает всегда, и вы уверены, что сегодня будет так же. Что вы скажете?",
+      "options": [
+        "Tom is bound to be late.",
+        "Tom is unlikely to be late.",
+        "Tom is due to be late.",
+        "Tom is on the point to be late."
+      ],
+      "answer": 0,
+      "explanation": "Полная уверенность — be bound to: «Том наверняка опоздает». Unlikely значит обратное, due to говорит о расписании, а после on the point нужны of и форма на -ing."
+    }
+  ]
+}

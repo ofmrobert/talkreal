@@ -1,0 +1,155 @@
+{
+  "id": "a2-26",
+  "level": "A2",
+  "order": 26,
+  "title": { "ru": "Может быть и скорее всего: might, may, will probably", "en": "Possibility: might, may, will probably" },
+  "goal": { "ru": "Научитесь говорить о том, что в будущем возможно, вероятно или маловероятно.", "en": "Learn to say what is possible, likely or unlikely in the future." },
+  "theory": [
+    {
+      "title": "Might и may — «может быть»",
+      "body": "Might и may показывают, что вы не уверены: это возможно, но не точно. It might rain — «Может пойти дождь». После них глагол стоит в начальной форме без to, а форма одна для всех лиц: he might, без -s. В разговоре чаще звучит might, may — чуть официальнее.",
+      "examples": [
+        { "en": "It might rain this afternoon.", "ru": "Днём может пойти дождь." },
+        { "en": "I may be late tomorrow.", "ru": "Завтра я, возможно, опоздаю." },
+        { "en": "She might know the answer.", "ru": "Возможно, она знает ответ." }
+      ],
+      "tip": "Русское «может быть, я пойду» можно перевести и как Maybe I'll go, но короче и естественнее I might go. «I might to go» — ошибка."
+    },
+    {
+      "title": "Might not — «может и не…»",
+      "body": "Отрицание — might not или may not: I might not come — «Я, может быть, не приду». Это значит «возможно, нет», а не запрет и не «не могу». Вопросы с might редки. Обычно спрашивают Do you think…? — Do you think it will rain?",
+      "examples": [
+        { "en": "I might not come to the party.", "ru": "Я, может быть, не приду на вечеринку." },
+        { "en": "He may not like the idea.", "ru": "Ему может не понравиться эта идея." },
+        { "en": "We might not get tickets.", "ru": "Мы можем и не достать билеты." }
+      ],
+      "tip": "Не путайте с can't. He can't come — «Он не может прийти», это точно. He might not come — «Он может и не прийти», это неизвестно."
+    },
+    {
+      "title": "Will probably и probably won't",
+      "body": "Когда вы почти уверены, говорят will probably: She'll probably call tonight. Следите за местом probably: оно стоит после will, но перед won't. I'll probably go. I probably won't go. По степени уверенности: will — точно, will probably — скорее всего, might — может быть, probably won't — вряд ли.",
+      "examples": [
+        { "en": "She'll probably call tonight.", "ru": "Она, скорее всего, позвонит сегодня вечером." },
+        { "en": "I probably won't go out this evening.", "ru": "Я вряд ли куда-то пойду сегодня вечером." },
+        { "en": "They'll probably be late, as usual.", "ru": "Они, скорее всего, опоздают, как обычно." }
+      ],
+      "tip": "«Вряд ли» по-английски — probably won't: He probably won't come — «Он вряд ли придёт»."
+    }
+  ],
+  "vocab": [
+    { "en": "might", "ru": "может быть, возможно (модальный глагол)", "example": "I might be a little late." },
+    { "en": "probably", "ru": "вероятно, скорее всего", "example": "It's probably too late to call." },
+    { "en": "perhaps", "ru": "возможно, может быть", "example": "Perhaps we can meet next week." },
+    { "en": "to snow", "ru": "идти (о снеге)", "example": "It often snows here in January." },
+    { "en": "forecast", "ru": "прогноз", "example": "What's the weather forecast for tomorrow?" },
+    { "en": "to change your mind", "ru": "передумать", "example": "I've changed my mind." },
+    { "en": "traffic", "ru": "уличное движение, пробки", "example": "There's a lot of traffic in the morning." },
+    { "en": "cloudy", "ru": "облачный, пасмурный", "example": "It's cloudy today." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "probably", "ru": "скорее всего" },
+        { "en": "forecast", "ru": "прогноз" },
+        { "en": "to change your mind", "ru": "передумать" },
+        { "en": "traffic", "ru": "уличное движение" },
+        { "en": "cloudy", "ru": "облачный" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Завтра может пойти снег»?",
+      "options": ["It might snow tomorrow.", "It might to snow tomorrow.", "It mights snow tomorrow.", "It might snows tomorrow."],
+      "answer": 0,
+      "explanation": "После might глагол стоит в начальной форме без to: might snow. Окончания -s нет ни у might, ни у глагола после него."
+    },
+    {
+      "type": "gap",
+      "sentence": "Take an umbrella. It ___ rain later.",
+      "translation": "Возьмите зонт. Позже может пойти дождь.",
+      "options": ["might", "might to", "mights", "is might"],
+      "answer": 0,
+      "explanation": "Might — модальный глагол: у него одна форма для всех лиц, после него нет to, а перед ним не нужен is."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm not sure about Saturday. I might go to the cinema, or I might stay at home.",
+      "question": "Что говорящий будет делать в субботу?",
+      "options": ["Он ещё не решил", "Точно пойдёт в кино", "Точно останется дома", "Пойдёт на работу"],
+      "answer": 0,
+      "explanation": "I'm not sure и два might показывают, что решения ещё нет: может быть, кино, а может быть, дом."
+    },
+    {
+      "type": "translate",
+      "source": "Я, скорее всего, опоздаю.",
+      "answer": "I'll probably be late.",
+      "accept": ["I will probably be late.", "I'm probably going to be late.", "I am probably going to be late."],
+      "distractors": ["won't", "am", "to"],
+      "explanation": "«Скорее всего» — probably, после will: I'll probably. «Опоздать» — be late, поэтому после will стоит be."
+    },
+    {
+      "type": "gap",
+      "sentence": "She's ill, so she probably ___ come to the meeting.",
+      "translation": "Она болеет, поэтому вряд ли придёт на совещание.",
+      "options": ["won't", "isn't", "doesn't", "not"],
+      "answer": 0,
+      "explanation": "«Вряд ли придёт» — probably won't come. Речь о будущем, поэтому doesn't и isn't не подходят, а одно not без помощника невозможно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["We probably won't have time.", "We probably not will have time.", "We probably won't to have time.", "We don't probably will have time."],
+      "answer": 0,
+      "explanation": "В отрицании probably стоит перед won't: probably won't have. После won't глагол идёт без to."
+    },
+    {
+      "type": "speak",
+      "text": "I might not have time this evening.",
+      "translation": "У меня, возможно, не будет времени сегодня вечером."
+    },
+    {
+      "type": "type",
+      "source": "Возможно, он опоздает.",
+      "answer": "He might be late.",
+      "accept": ["He may be late.", "Maybe he will be late.", "Maybe he'll be late.", "Perhaps he will be late.", "Perhaps he'll be late.", "He could be late.", "He might come late."],
+      "explanation": "«Возможно» удобно передать глаголом might: he might be late. После might идёт начальная форма be, без to и без will."
+    },
+    {
+      "type": "listen",
+      "audio": "The forecast says it will probably be cloudy tomorrow, but it won't rain.",
+      "question": "Какая погода ожидается завтра?",
+      "options": ["Скорее всего, облачно, но без дождя", "Точно будет дождь", "Скорее всего, солнечно", "Может пойти снег"],
+      "answer": 0,
+      "explanation": "Will probably be cloudy — «скорее всего, будет облачно». It won't rain — «дождя не будет», это сказано уверенно."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'm not sure, but I ___ change my job next year.",
+      "translation": "Я не уверен, но, возможно, поменяю работу в следующем году.",
+      "options": ["might", "might to", "maybe", "am might"],
+      "answer": 0,
+      "explanation": "Перед глаголом нужен модальный might. Maybe — это не глагол, а слово «может быть», оно стоит в начале предложения: Maybe I'll change my job."
+    },
+    {
+      "type": "translate",
+      "source": "Она может и не прийти.",
+      "answer": "She might not come.",
+      "accept": ["She may not come.", "Maybe she won't come.", "Maybe she will not come.", "Perhaps she won't come.", "Perhaps she will not come."],
+      "distractors": ["doesn't", "to", "comes"],
+      "explanation": "Отрицание от might — might not, без do и does. Глагол после него в начальной форме: come, а не comes."
+    },
+    {
+      "type": "dictation",
+      "audio": "They will probably arrive after lunch.",
+      "translation": "Они, скорее всего, приедут после обеда."
+    },
+    {
+      "type": "choice",
+      "prompt": "Кто из говорящих больше всех уверен, что придёт?",
+      "options": ["I'll come.", "I'll probably come.", "I might come.", "I probably won't come."],
+      "answer": 0,
+      "explanation": "Will без оговорок — самая уверенная форма. Will probably — «скорее всего», might — «может быть», probably won't — «вряд ли»."
+    }
+  ]
+}

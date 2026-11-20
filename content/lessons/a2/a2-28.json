@@ -1,0 +1,155 @@
+{
+  "id": "a2-28",
+  "level": "A2",
+  "order": 28,
+  "title": { "ru": "Фразовые глаголы: get up, turn on, put on, look for", "en": "Phrasal verbs: first steps" },
+  "goal": { "ru": "Научитесь пользоваться самыми частыми фразовыми глаголами и правильно ставить it и them.", "en": "Learn to use the most common phrasal verbs and to put it and them in the right place." },
+  "theory": [
+    {
+      "title": "Что такое фразовый глагол",
+      "body": "Фразовый глагол — это глагол плюс короткое слово (up, on, off, for). Вместе они значат не то же, что по отдельности: give — «давать», а give up — «бросить, сдаться»; look — «смотреть», а look for — «искать». Такие глаголы учат целиком, как одно слово. В прошедшем времени меняется только сам глагол: got up, woke up, gave up.",
+      "examples": [
+        { "en": "I wake up at six, but I get up at seven.", "ru": "Я просыпаюсь в шесть, а встаю в семь." },
+        { "en": "The game was hard, but she didn't give up.", "ru": "Игра была трудной, но она не сдалась." },
+        { "en": "She's looking for a new flat.", "ru": "Она ищет новую квартиру." }
+      ],
+      "tip": "Wake up — проснуться, открыть глаза. Get up — встать с постели. Это два разных действия."
+    },
+    {
+      "title": "Turn on, turn off, put on, take off, pick up",
+      "body": "У этих глаголов есть дополнение, и существительное можно поставить в два места: Turn off the light и Turn the light off — оба варианта правильные. Put on — надеть, take off — снять, pick up — поднять или забрать. По-русски «надеть» и «включить» — одно слово, поэтому вторую часть легко забыть. «Put your coat» без on — ошибка.",
+      "examples": [
+        { "en": "I turned on the TV to watch the news.", "ru": "Я включил телевизор, чтобы посмотреть новости." },
+        { "en": "Put your hat on, it's sunny.", "ru": "Наденьте шляпу, на улице солнце." },
+        { "en": "I'll pick up the children from school.", "ru": "Я заберу детей из школы." }
+      ],
+      "tip": "Противоположности удобно учить парами: turn on — turn off, put on — take off."
+    },
+    {
+      "title": "Turn it off: место it и them",
+      "body": "Если дополнение — местоимение (it, them, me, him), оно стоит только в середине: Turn it off. Put them on. Pick me up. «Turn off it» — ошибка. А вот look for не разделяется никогда: I'm looking for my glasses, I'm looking for them. Здесь for — обычный предлог, и дополнение всегда идёт после него.",
+      "examples": [
+        { "en": "The radio is too loud. Could you turn it off?", "ru": "Радио играет слишком громко. Вы не могли бы его выключить?" },
+        { "en": "These are my new gloves. I want to put them on.", "ru": "Это мои новые перчатки. Я хочу их надеть." },
+        { "en": "I can't find my glasses. I'm looking for them.", "ru": "Я не могу найти очки. Я их ищу." }
+      ],
+      "tip": "Короткая проверка: существительное — два варианта, местоимение — только в середине."
+    }
+  ],
+  "vocab": [
+    { "en": "to get up", "ru": "вставать (got up)", "example": "I get up early on weekdays." },
+    { "en": "to wake up", "ru": "просыпаться (woke up)", "example": "I woke up in the middle of the night." },
+    { "en": "to turn on / off", "ru": "включать / выключать", "example": "Don't forget to turn off the oven." },
+    { "en": "to put on", "ru": "надевать", "example": "Put on a jumper, it's cold." },
+    { "en": "to take off", "ru": "снимать (одежду, обувь)", "example": "You can take off your jacket." },
+    { "en": "to look for", "ru": "искать", "example": "I'm looking for a cheap hotel." },
+    { "en": "to give up", "ru": "бросать, сдаваться (gave up)", "example": "I gave up coffee a month ago." },
+    { "en": "to pick up", "ru": "поднимать; забирать", "example": "Can you pick up that pen?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to get up", "ru": "вставать" },
+        { "en": "to put on", "ru": "надевать" },
+        { "en": "to take off", "ru": "снимать (одежду)" },
+        { "en": "to look for", "ru": "искать" },
+        { "en": "to give up", "ru": "сдаваться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Телевизор работает слишком громко. Как попросить его выключить?",
+      "options": ["Please turn it off.", "Please turn off it.", "Please turn it on.", "Please take it off."],
+      "answer": 0,
+      "explanation": "«Выключить» — turn off, а местоимение it стоит только в середине: turn it off. Turn on — «включить», take off — «снять одежду»."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's cold outside. ___ your coat.",
+      "translation": "На улице холодно. Наденьте пальто.",
+      "options": ["Put on", "Take off", "Put", "Turn on"],
+      "answer": 0,
+      "explanation": "«Надеть» — put on, обе части обязательны: одно put значит «положить». Take off — «снять», turn on — «включить»."
+    },
+    {
+      "type": "listen",
+      "audio": "I usually wake up at six, but I don't get up until half past six.",
+      "question": "Во сколько говорящий встаёт с постели?",
+      "options": ["В половине седьмого", "В шесть", "В семь", "В половине шестого"],
+      "answer": 0,
+      "explanation": "Wake up — «просыпаться», это в шесть. Get up — «вставать»: I don't get up until half past six — «встаю только в половине седьмого»."
+    },
+    {
+      "type": "translate",
+      "source": "Я ищу свой телефон.",
+      "answer": "I'm looking for my phone.",
+      "accept": ["I am looking for my phone.", "I'm looking for my mobile.", "I am looking for my mobile.", "I'm looking for my mobile phone."],
+      "distractors": ["at", "after", "search"],
+      "explanation": "«Искать» — look for. Действие происходит сейчас, поэтому Present Continuous: I'm looking. Look at значило бы «смотреть на»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Your shoes are dirty. Please ___ before you come in.",
+      "translation": "У вас грязные ботинки. Пожалуйста, снимите их, прежде чем войти.",
+      "options": ["take them off", "take off them", "put them on", "take it off"],
+      "answer": 0,
+      "explanation": "«Снять» — take off. Shoes во множественном числе, значит, them, и стоит оно в середине: take them off. «Take off them» — ошибка."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I'm looking for them.", "I'm looking them for.", "I'm looking them.", "I'm look for them."],
+      "answer": 0,
+      "explanation": "Look for не разделяется: дополнение всегда после for, даже если это местоимение. Этим он отличается от turn it off и put them on."
+    },
+    {
+      "type": "speak",
+      "text": "Could you turn off the light, please?",
+      "translation": "Вы не могли бы выключить свет?"
+    },
+    {
+      "type": "type",
+      "source": "Он бросил курить.",
+      "answer": "He gave up smoking.",
+      "accept": ["He has given up smoking.", "He's given up smoking.", "He stopped smoking.", "He has stopped smoking.", "He's stopped smoking.", "He quit smoking.", "He has quit smoking."],
+      "explanation": "«Бросить привычку» — give up, в прошедшем времени gave up. Глагол после него стоит с -ing: gave up smoking."
+    },
+    {
+      "type": "listen",
+      "audio": "Can you pick me up from the airport at eight?",
+      "question": "О чём просит говорящий?",
+      "options": ["Встретить его в аэропорту в восемь", "Отвезти его в аэропорт в восемь", "Купить ему билет на самолёт", "Позвонить ему в восемь"],
+      "answer": 0,
+      "explanation": "Pick up — «забрать, встретить на машине». From the airport — «из аэропорта». Местоимение me стоит в середине: pick me up."
+    },
+    {
+      "type": "gap",
+      "sentence": "I ___ at seven every day, even at the weekend.",
+      "translation": "Я встаю в семь каждый день, даже в выходные.",
+      "options": ["get up", "get on", "give up", "pick up"],
+      "answer": 0,
+      "explanation": "«Вставать с постели» — get up. Маленькое слово меняет весь смысл: give up — «сдаваться», pick up — «поднимать»."
+    },
+    {
+      "type": "translate",
+      "source": "Включите, пожалуйста, отопление.",
+      "answer": "Please turn on the heating.",
+      "accept": ["Please turn the heating on.", "Turn on the heating, please.", "Turn the heating on, please.", "Please switch on the heating.", "Please switch the heating on.", "Switch on the heating, please."],
+      "distractors": ["off", "in", "open"],
+      "explanation": "«Включить» — turn on. Open значит «открыть» дверь или окно, приборы так не включают. С существительным возможны оба порядка: turn on the heating и turn the heating on."
+    },
+    {
+      "type": "dictation",
+      "audio": "She took off her coat and sat down.",
+      "translation": "Она сняла пальто и села."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение с ошибкой.",
+      "options": ["I picked up it.", "I picked it up.", "I picked up the phone.", "I picked the phone up."],
+      "answer": 0,
+      "explanation": "Местоимение it не может стоять после up: только I picked it up. С существительным the phone правильны оба порядка."
+    }
+  ]
+}

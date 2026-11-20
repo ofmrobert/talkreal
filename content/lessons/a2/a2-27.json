@@ -1,0 +1,166 @@
+{
+  "id": "a2-27",
+  "level": "A2",
+  "order": 27,
+  "title": { "ru": "Такой же, не такой, другой: as … as, less, the same as", "en": "More comparing: as … as, less … than, the same as" },
+  "goal": { "ru": "Научитесь говорить, что вещи одинаковые, разные или что одна уступает другой.", "en": "Learn to say that things are equal, different, or that one is less than the other." },
+  "theory": [
+    {
+      "title": "As … as — такой же, как",
+      "body": "Когда два предмета равны по какому-то признаку, прилагательное ставят между as и as: Tom is as tall as his father — «Том такой же высокий, как отец». Прилагательное стоит в обычной форме, не в сравнительной: «as taller as» — ошибка. Второе слово — тоже as: не than, не like и не how, хотя по-русски здесь «как».",
+      "examples": [
+        { "en": "Tom is as tall as his father.", "ru": "Том такой же высокий, как его отец." },
+        { "en": "The second film was as good as the first.", "ru": "Второй фильм был таким же хорошим, как первый." },
+        { "en": "Is the bus as fast as the train?", "ru": "Автобус идёт так же быстро, как поезд?" }
+      ],
+      "tip": "С наречиями всё так же: I can't run as fast as you — «Я не могу бегать так же быстро, как вы»."
+    },
+    {
+      "title": "Not as … as и less … than",
+      "body": "Not as … as значит «не такой… как»: My car isn't as new as yours. Это самый естественный способ сказать «менее». Less + прилагательное + than тоже возможно, но обычно с длинными словами: less expensive than, less interesting than. С короткими словами говорят not as cold as, а не «less cold than».",
+      "examples": [
+        { "en": "My car isn't as new as yours.", "ru": "Моя машина не такая новая, как ваша." },
+        { "en": "The exam wasn't as difficult as I thought.", "ru": "Экзамен был не таким трудным, как я думал." },
+        { "en": "This phone is less expensive than that one.", "ru": "Этот телефон дешевле (менее дорогой), чем тот." }
+      ],
+      "tip": "Not as … as переворачивает сравнение: The bus isn't as fast as the train = The train is faster than the bus."
+    },
+    {
+      "title": "The same as и different from",
+      "body": "«Такой же, как» — the same as: всегда с артиклем the и со словом as. Your bag is the same as mine. «Отличаться от» — be different from. Русское «такой же, как» тянет сказать «the same like» или «same that», а «отличается от» — «different of». Всё это ошибки.",
+      "examples": [
+        { "en": "Your bag is the same as mine.", "ru": "У вас такая же сумка, как у меня." },
+        { "en": "The weather here is different from the weather at home.", "ru": "Погода здесь не такая, как дома." },
+        { "en": "We are the same age.", "ru": "Мы одного возраста." }
+      ],
+      "tip": "Между the same и as можно вставить существительное: We stayed at the same hotel as last year."
+    }
+  ],
+  "vocab": [
+    { "en": "the same", "ru": "такой же, одинаковый", "example": "We live in the same street." },
+    { "en": "different", "ru": "другой, разный", "example": "Can I see a different colour?" },
+    { "en": "similar", "ru": "похожий", "example": "Our flats are very similar." },
+    { "en": "heavy", "ru": "тяжёлый", "example": "These bags are too heavy for me." },
+    { "en": "light", "ru": "лёгкий; светлый", "example": "My new laptop is very light." },
+    { "en": "price", "ru": "цена", "example": "The price is too high." },
+    { "en": "size", "ru": "размер", "example": "What size do you need?" },
+    { "en": "less", "ru": "менее, меньше", "example": "I have less free time now." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "the same", "ru": "такой же" },
+        { "en": "different", "ru": "другой" },
+        { "en": "similar", "ru": "похожий" },
+        { "en": "heavy", "ru": "тяжёлый" },
+        { "en": "price", "ru": "цена" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Мой брат такой же высокий, как я»?",
+      "options": ["My brother is as tall as me.", "My brother is as taller as me.", "My brother is as tall than me.", "My brother is so tall how me."],
+      "answer": 0,
+      "explanation": "Равенство — as + прилагательное в обычной форме + as. Сравнительная форма taller здесь не нужна, а than идёт только после неё: taller than."
+    },
+    {
+      "type": "gap",
+      "sentence": "This suitcase is as heavy ___ mine.",
+      "translation": "Этот чемодан такой же тяжёлый, как мой.",
+      "options": ["as", "than", "like", "how"],
+      "answer": 0,
+      "explanation": "Конструкция парная: as heavy as. Русское «как» тянет к like или how, но после as + прилагательное возможно только второе as."
+    },
+    {
+      "type": "listen",
+      "audio": "The new office isn't as big as the old one, but it's much lighter.",
+      "question": "Что говорится о новом офисе?",
+      "options": ["Он меньше старого, но светлее", "Он больше старого", "Он такой же, как старый", "Он темнее старого"],
+      "answer": 0,
+      "explanation": "Isn't as big as the old one — «не такой большой, как старый», то есть меньше. Lighter здесь — «светлее»."
+    },
+    {
+      "type": "translate",
+      "source": "Моя квартира не такая большая, как ваша.",
+      "answer": "My flat isn't as big as yours.",
+      "accept": ["My flat is not as big as yours.", "My flat isn't so big as yours.", "My flat is not so big as yours.", "My flat isn't as large as yours.", "My flat is not as large as yours.", "My apartment isn't as big as yours.", "My apartment is not as big as yours."],
+      "distractors": ["than", "bigger", "your"],
+      "explanation": "«Не такая… как» — isn't as big as. В конце нужно yours («ваша»), а не your: после your обязательно шло бы существительное."
+    },
+    {
+      "type": "gap",
+      "sentence": "The train is ___ expensive than the plane.",
+      "translation": "Поезд не такой дорогой, как самолёт.",
+      "options": ["less", "not as", "as", "least"],
+      "answer": 0,
+      "explanation": "Дальше стоит than, значит, нужно less: less expensive than. С not as в конце было бы as: The train is not as expensive as the plane."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Your jacket is the same as mine.", "Your jacket is the same like mine.", "Your jacket is same as mine.", "Your jacket is the same than mine."],
+      "answer": 0,
+      "explanation": "Устойчивое сочетание — the same as: с артиклем the и со словом as. «The same like» — калька с русского «такой же, как»."
+    },
+    {
+      "type": "speak",
+      "text": "London is very different from my home town.",
+      "translation": "Лондон очень отличается от моего родного города."
+    },
+    {
+      "type": "type",
+      "source": "Этот фильм не такой интересный, как книга.",
+      "answer": "This film isn't as interesting as the book.",
+      "accept": [
+        "This film is not as interesting as the book.",
+        "This film isn't so interesting as the book.",
+        "This film is not so interesting as the book.",
+        "This film is less interesting than the book.",
+        "The film isn't as interesting as the book.",
+        "The film is not as interesting as the book.",
+        "The film is less interesting than the book.",
+        "This movie isn't as interesting as the book.",
+        "This movie is not as interesting as the book.",
+        "This movie is less interesting than the book."
+      ],
+      "explanation": "«Не такой… как» — isn't as interesting as. Можно сказать и less interesting than, но тогда в конце than, а не as."
+    },
+    {
+      "type": "listen",
+      "audio": "The price is the same in both shops, so let's buy it here.",
+      "question": "Что говорится о цене?",
+      "options": ["В обоих магазинах она одинаковая", "Здесь дешевле", "Здесь дороже", "Цену ещё не знают"],
+      "answer": 0,
+      "explanation": "The same — «одинаковая», in both shops — «в обоих магазинах». Перед same всегда стоит the."
+    },
+    {
+      "type": "gap",
+      "sentence": "Life in a village is very different ___ life in a big city.",
+      "translation": "Жизнь в деревне очень отличается от жизни в большом городе.",
+      "options": ["from", "as", "like", "of"],
+      "answer": 0,
+      "explanation": "«Отличаться от» — different from. As идёт после the same, а не после different: the same as, но different from."
+    },
+    {
+      "type": "translate",
+      "source": "У меня такой же телефон, как у вас.",
+      "answer": "I have the same phone as you.",
+      "accept": ["I've got the same phone as you.", "I have got the same phone as you.", "My phone is the same as yours.", "I have the same mobile as you.", "I have the same phone as you have.", "I have the same phone as you do."],
+      "distractors": ["like", "that", "a"],
+      "explanation": "Существительное стоит между the same и as: the same phone as you. Артикль только the: «a same phone» сказать нельзя."
+    },
+    {
+      "type": "dictation",
+      "audio": "Today isn't as cold as yesterday.",
+      "translation": "Сегодня не так холодно, как вчера."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение значит то же, что «Anna is younger than Tom»?",
+      "options": ["Anna isn't as old as Tom.", "Anna is as old as Tom.", "Tom isn't as old as Anna.", "Anna is the same age as Tom."],
+      "answer": 0,
+      "explanation": "Анна младше Тома, то есть она «не такая взрослая, как Том»: Anna isn't as old as Tom. Вариант Tom isn't as old as Anna значил бы обратное."
+    }
+  ]
+}

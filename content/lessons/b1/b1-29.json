@@ -1,0 +1,155 @@
+{
+  "id": "b1-29",
+  "level": "B1",
+  "order": 29,
+  "title": { "ru": "Деньги: borrow и lend, afford, owe, be worth, spend и pay for", "en": "Money: borrow / lend, afford, owe, be worth, cost / spend / pay for, save up" },
+  "goal": { "ru": "Научитесь говорить о деньгах: занять и одолжить, «не могу себе позволить», «я вам должен», потратить и накопить.", "en": "Learn to talk about money: borrowing and lending, what you can afford, what you owe, spending and saving up." },
+  "theory": [
+    {
+      "title": "Borrow, lend и owe",
+      "body": "Русское «одолжить» работает в обе стороны, а в английском это два разных глагола. Borrow — взять на время (borrow from): тот, кто берёт. Lend — дать на время (lend to): тот, кто даёт. Когда деньги взяты, вы их должны — owe, а потом возвращаете — pay back.",
+      "examples": [
+        { "en": "Can I borrow your charger?", "ru": "Можно взять вашу зарядку?" },
+        { "en": "My sister lent me her car for the weekend.", "ru": "Сестра одолжила мне на выходные свою машину." },
+        { "en": "I owe you ten pounds for the taxi.", "ru": "Я должен вам десять фунтов за такси." }
+      ],
+      "tip": "«Can you borrow me some money?» — ошибка. Либо Can you lend me…? (вы даёте), либо Can I borrow…? (я беру)."
+    },
+    {
+      "title": "Cost, spend и pay for",
+      "body": "У глагола cost подлежащее — вещь: the jacket cost me fifty pounds; все три формы одинаковы: cost, cost, cost. Spend значит «тратить», и деньги тратят on something. Pay for — «платить за» покупку. Но счёт или человека оплачивают без for: pay the bill, pay the rent, pay the driver.",
+      "examples": [
+        { "en": "How much did your bike cost?", "ru": "Сколько стоил ваш велосипед?" },
+        { "en": "We spend too much on food.", "ru": "Мы тратим слишком много на еду." },
+        { "en": "I'll pay for the tickets.", "ru": "За билеты заплачу я." }
+      ],
+      "tip": "«Pay the coffee» — ошибка: за покупку платят pay for the coffee. И тратят on, а не for: spend money on clothes."
+    },
+    {
+      "title": "Afford, be worth и save up",
+      "body": "Afford — «позволить себе» — почти всегда идёт с can или could: I can't afford it; глагол после него стоит с to. Worth — не глагол, а слово, которому нужен be: it is worth ten pounds, it isn't worth it. После worth глагол получает -ing: worth seeing. Save up for — «копить на что-то».",
+      "examples": [
+        { "en": "We can't afford to move to a bigger flat.", "ru": "Мы не можем позволить себе переехать в квартиру побольше." },
+        { "en": "That film is worth seeing.", "ru": "Этот фильм стоит посмотреть." },
+        { "en": "She's saving up for a new laptop.", "ru": "Она копит на новый ноутбук." }
+      ],
+      "tip": "«It worths» и «it doesn't worth» — ошибки: у worth нет окончаний. Правильно: it is worth, it isn't worth. И afford не требует myself: «afford myself» — калька с русского."
+    }
+  ],
+  "vocab": [
+    { "en": "to borrow", "ru": "брать взаймы", "example": "Can I borrow twenty pounds until Friday?" },
+    { "en": "to lend", "ru": "давать взаймы", "example": "Could you lend me your umbrella?" },
+    { "en": "to owe", "ru": "быть должным", "example": "How much do I owe you?" },
+    { "en": "to afford", "ru": "позволить себе", "example": "I can't afford a holiday this year." },
+    { "en": "to be worth", "ru": "стоить, иметь ценность", "example": "That ring must be worth a lot of money." },
+    { "en": "to save up", "ru": "копить", "example": "I need to save up for a new bike." },
+    { "en": "to pay back", "ru": "возвращать долг", "example": "I will pay back the money next week." },
+    { "en": "a bill", "ru": "счёт", "example": "The waiter brought us a bill for sixty pounds." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to borrow", "ru": "брать взаймы" },
+        { "en": "to lend", "ru": "давать взаймы" },
+        { "en": "to owe", "ru": "быть должным" },
+        { "en": "to afford", "ru": "позволить себе" },
+        { "en": "to save up", "ru": "копить" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы забыли кошелёк и просите коллегу выручить вас. Что вы скажете?",
+      "options": ["Could you lend me ten pounds?", "Could you borrow me ten pounds?", "Could I lend ten pounds from you?", "Could you lend to me ten pounds?"],
+      "answer": 0,
+      "explanation": "Коллега даёт, значит, глагол lend: lend me ten pounds. Borrow — это «брать», поэтому было бы Could I borrow ten pounds? Предлог to перед me в таком порядке слов не ставится."
+    },
+    {
+      "type": "gap",
+      "sentence": "How much did you ___ on your holiday?",
+      "translation": "Сколько вы потратили на отпуск?",
+      "options": ["spend", "cost", "pay", "afford"],
+      "answer": 0,
+      "explanation": "Предлог on подсказывает глагол spend: spend money on something. У cost подлежащим была бы сама поездка (How much did it cost?), а pay требует for."
+    },
+    {
+      "type": "translate",
+      "source": "Я не могу позволить себе новую машину.",
+      "answer": "I cannot afford a new car.",
+      "accept": ["I can't afford a new car.", "I can not afford a new car.", "I cannot afford to buy a new car.", "I can't afford to buy a new car."],
+      "distractors": ["myself", "allow", "me"],
+      "explanation": "«Позволить себе» в смысле денег — can afford, и слово «себе» не переводится: I can't afford a new car. Allow myself — калька: allow говорит о разрешении, а не о деньгах."
+    },
+    {
+      "type": "listen",
+      "audio": "I owe my brother two hundred pounds, and I'll pay him back on Friday.",
+      "question": "Что мы узнали?",
+      "options": ["Говорящий должен брату деньги и вернёт их в пятницу", "Брат должен говорящему двести фунтов", "Говорящий одолжил брату двести фунтов", "Брат вернёт долг в пятницу"],
+      "answer": 0,
+      "explanation": "I owe my brother — «я должен брату»: должник — подлежащее. Pay him back — «вернуть ему долг», и делает это тоже говорящий."
+    },
+    {
+      "type": "gap",
+      "sentence": "Don't worry, I'll pay ___ the drinks.",
+      "translation": "Не волнуйтесь, за напитки заплачу я.",
+      "options": ["for", "on", "to", "of"],
+      "answer": 0,
+      "explanation": "За покупку платят pay for: pay for the drinks. Без предлога говорят только о счёте или о человеке: pay the bill, pay the waiter."
+    },
+    {
+      "type": "speak",
+      "text": "We're saving up for a holiday in Italy.",
+      "translation": "Мы копим на отпуск в Италии."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["This old watch worths a lot of money.", "This old watch is worth a lot of money.", "This old watch is worth of a lot of money.", "This old watch does worth a lot of money."],
+      "answer": 1,
+      "explanation": "Worth — не глагол, ему нужен be: is worth. Окончание -s и вспомогательный does к нему не присоединяются, а сумма идёт сразу после worth, без of."
+    },
+    {
+      "type": "type",
+      "source": "Можно одолжить у вас словарь?",
+      "answer": "Can I borrow your dictionary?",
+      "accept": ["Could I borrow your dictionary?", "May I borrow your dictionary?", "Can I borrow a dictionary?", "Could I borrow a dictionary?", "May I borrow a dictionary?", "Can I borrow a dictionary from you?", "Could I borrow a dictionary from you?", "Can you lend me your dictionary?", "Could you lend me your dictionary?", "Can you lend me a dictionary?", "Could you lend me a dictionary?", "Would you lend me your dictionary?", "Can I use your dictionary?", "Could I use your dictionary?", "May I use your dictionary?"],
+      "explanation": "Вы берёте, значит, глагол borrow: Can I borrow your dictionary? С lend подлежащим был бы собеседник: Could you lend me your dictionary? Смешивать нельзя: «Can I lend your dictionary?» значило бы, что вы хотите отдать чужой словарь кому-то ещё."
+    },
+    {
+      "type": "gap",
+      "sentence": "The concert tickets ___ us forty pounds each.",
+      "translation": "Билеты на концерт обошлись нам в сорок фунтов каждый.",
+      "options": ["cost", "spent", "paid", "were worth"],
+      "answer": 0,
+      "explanation": "Подлежащее — вещь (the tickets), и после глагола стоит «кому» и «сколько»: cost us forty pounds. Spend и pay требуют подлежащего-человека: we spent, we paid. Прошедшая форма cost совпадает с начальной."
+    },
+    {
+      "type": "listen",
+      "audio": "She lent me her umbrella.",
+      "question": "Что вы услышали?",
+      "options": ["She lent me her umbrella.", "She lends me her umbrella.", "She sent me her umbrella.", "She lent me an umbrella."],
+      "answer": 0,
+      "explanation": "Lent — прошедшее время от lend, «одолжила». Не спутайте с sent («прислала») и с настоящим временем lends; перед umbrella звучит her — «свой»."
+    },
+    {
+      "type": "translate",
+      "source": "Этот музей стоит посетить.",
+      "answer": "This museum is worth visiting.",
+      "accept": ["The museum is worth visiting.", "That museum is worth visiting.", "This museum is worth a visit.", "This museum is worth seeing.", "It is worth visiting this museum.", "It's worth visiting this museum."],
+      "distractors": ["worths", "visit", "to"],
+      "explanation": "«Стоит сделать» — be worth + глагол с -ing: is worth visiting. Русский инфинитив «посетить» подсказывает to visit, но после worth инфинитив не ставится; и не забудьте is."
+    },
+    {
+      "type": "dictation",
+      "audio": "I can't afford to eat out every day.",
+      "translation": "Я не могу позволить себе каждый день есть в кафе."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «I borrowed fifty pounds from Anna»?",
+      "options": ["Я взял у Анны пятьдесят фунтов в долг", "Я дал Анне пятьдесят фунтов в долг", "Я вернул Анне пятьдесят фунтов"],
+      "answer": 0,
+      "explanation": "Borrow from — «взять взаймы у кого-то». «Дать в долг» — lend: I lent Anna fifty pounds, а «вернуть» — pay back."
+    }
+  ]
+}

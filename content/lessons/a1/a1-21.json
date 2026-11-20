@@ -1,0 +1,155 @@
+{
+  "id": "a1-21",
+  "level": "A1",
+  "order": 21,
+  "title": { "ru": "Еда и напитки: some и any", "en": "Food and drink: some and any" },
+  "goal": { "ru": "Научитесь говорить, какая еда есть дома и чего нет, и спрашивать об этом.", "en": "Learn to say what food there is at home and what there isn't, and to ask about it." },
+  "theory": [
+    {
+      "title": "Что можно посчитать, а что нельзя",
+      "body": "Яйца и помидоры можно посчитать: an egg, two eggs, three tomatoes. Молоко, хлеб, сыр, рис и сахар в английском не считают: у них нет множественного числа, и a / an перед ними не ставят. «A bread» и «two milks» — ошибки. Глагол с такими словами стоит в единственном числе: The milk is cold.",
+      "examples": [
+        { "en": "There is an egg on the plate.", "ru": "На тарелке лежит яйцо." },
+        { "en": "There are four tomatoes in the salad.", "ru": "В салате четыре помидора." },
+        { "en": "The bread is very fresh.", "ru": "Хлеб очень свежий." }
+      ],
+      "tip": "Чтобы посчитать такое слово, назовите порцию: a glass of milk, a cup of tea, a bottle of water."
+    },
+    {
+      "title": "Some — когда что-то есть",
+      "body": "Some значит «немного, несколько», а по-русски чаще всего никак не переводится: «В холодильнике есть сыр». Оно стоит в утверждениях перед тем, что не считают, и перед множественным числом: some milk, some eggs. Глагол выбирайте по существительному: There is some milk, но There are some eggs.",
+      "examples": [
+        { "en": "There is some cheese in the fridge.", "ru": "В холодильнике есть сыр." },
+        { "en": "There are some apples on the table.", "ru": "На столе есть яблоки." },
+        { "en": "I've got some rice and some meat.", "ru": "У меня есть рис и мясо." }
+      ],
+      "tip": "Перед одним предметом, который можно посчитать, остаётся a / an: There is an apple, а не «some apple»."
+    },
+    {
+      "title": "Any — в вопросах и отрицаниях",
+      "body": "В вопросах и после not вместо some ставят any: Is there any bread? There isn't any bread. По-русски мы говорим просто «Хлеб есть?», «Хлеба нет», поэтому any легко забыть. С множественным числом так же: Are there any eggs? We haven't got any eggs.",
+      "examples": [
+        { "en": "Is there any milk? — No, there isn't.", "ru": "Молоко есть? — Нет." },
+        { "en": "There isn't any sugar in my coffee.", "ru": "В моём кофе нет сахара." },
+        { "en": "Have you got any tomatoes?", "ru": "У вас есть помидоры?" }
+      ],
+      "tip": "Когда вы предлагаете или просите, в вопросе остаётся some: Would you like some tea? Can I have some water?"
+    }
+  ],
+  "vocab": [
+    { "en": "milk", "ru": "молоко", "example": "I drink milk every morning." },
+    { "en": "bread", "ru": "хлеб", "example": "This bread is very good." },
+    { "en": "cheese", "ru": "сыр", "example": "I love French cheese." },
+    { "en": "egg", "ru": "яйцо", "example": "I have an egg for breakfast." },
+    { "en": "butter", "ru": "сливочное масло", "example": "The butter is in the fridge." },
+    { "en": "rice", "ru": "рис", "example": "We often eat rice for dinner." },
+    { "en": "tomato", "ru": "помидор", "example": "This tomato is very big." },
+    { "en": "sugar", "ru": "сахар", "example": "I don't drink tea with sugar." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "milk", "ru": "молоко" },
+        { "en": "bread", "ru": "хлеб" },
+        { "en": "cheese", "ru": "сыр" },
+        { "en": "egg", "ru": "яйцо" },
+        { "en": "butter", "ru": "сливочное масло" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы открыли холодильник. Как сказать «В холодильнике есть молоко»?",
+      "options": ["There is a milk in the fridge.", "There are some milk in the fridge.", "There is some milk in the fridge.", "There is any milk in the fridge."],
+      "answer": 2,
+      "explanation": "Молоко не считают, поэтому a перед ним не ставят, а глагол стоит в единственном числе: there is. В утверждении нужно some; any — для вопросов и отрицаний."
+    },
+    {
+      "type": "gap",
+      "sentence": "There isn't ___ bread at home.",
+      "translation": "Дома нет хлеба.",
+      "options": ["some", "any", "a", "an"],
+      "answer": 1,
+      "explanation": "После isn't ставят any: There isn't any bread. Some — для утверждений, а a и an не подходят, потому что хлеб в английском не считают."
+    },
+    {
+      "type": "listen",
+      "audio": "We've got some eggs and some cheese, but we haven't got any butter.",
+      "question": "Чего нет дома?",
+      "options": ["Масла", "Яиц", "Сыра", "Молока"],
+      "answer": 0,
+      "explanation": "We haven't got any butter — «у нас нет масла». Яйца и сыр есть: some eggs and some cheese. О молоке ничего не сказано."
+    },
+    {
+      "type": "translate",
+      "source": "В холодильнике есть яйца?",
+      "answer": "Are there any eggs in the fridge?",
+      "accept": ["Are there eggs in the fridge?", "Have we got any eggs in the fridge?", "Do we have any eggs in the fridge?"],
+      "distractors": ["is", "some", "egg"],
+      "explanation": "Это вопрос, поэтому any, а не some. Eggs — множественное число, значит, are there, а не is there."
+    },
+    {
+      "type": "gap",
+      "sentence": "There ___ some rice in the kitchen.",
+      "translation": "На кухне есть рис.",
+      "options": ["are", "is", "am", "be"],
+      "answer": 1,
+      "explanation": "Рис не считают, и множественного числа у него нет, поэтому there is. Слово some не делает его множественным: some rice — это «немного риса»."
+    },
+    {
+      "type": "speak",
+      "text": "There are some tomatoes in the bag.",
+      "translation": "В сумке есть помидоры."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I'd like a bread, please.", "There are some butter on the table.", "We haven't got any sugar.", "Is there any eggs?"],
+      "answer": 2,
+      "explanation": "После haven't got стоит any, и sugar без артикля — всё верно. В остальных ошибки: хлеб не считают, поэтому some bread; масло тоже — there is some butter; а про яйца спрашивают Are there any eggs?"
+    },
+    {
+      "type": "translate",
+      "source": "У нас нет сыра.",
+      "answer": "We haven't got any cheese.",
+      "accept": ["We have not got any cheese.", "We don't have any cheese.", "We do not have any cheese.", "We haven't got cheese.", "We don't have cheese.", "We have no cheese.", "We have got no cheese.", "We've got no cheese."],
+      "distractors": ["some", "a", "cheeses"],
+      "explanation": "В отрицании — any: haven't got any cheese. Сыр не считают, поэтому ни a, ни окончание -s ему не нужны."
+    },
+    {
+      "type": "listen",
+      "audio": "Can you buy some bread and some tomatoes? We haven't got any.",
+      "question": "Что просят купить?",
+      "options": ["Хлеб и помидоры", "Хлеб и яйца", "Молоко и помидоры", "Сыр и хлеб"],
+      "answer": 0,
+      "explanation": "Some bread and some tomatoes — «хлеб и помидоры». Это просьба, поэтому в вопросе стоит some, а не any. We haven't got any — «у нас их нет»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Are there ___ apples in the kitchen?",
+      "translation": "На кухне есть яблоки?",
+      "options": ["a", "an", "any", "this"],
+      "answer": 2,
+      "explanation": "Apples — множественное число, поэтому a, an и this не подходят. В вопросе о том, есть ли что-то, перед множественным числом ставят any."
+    },
+    {
+      "type": "type",
+      "source": "Дома есть сахар?",
+      "answer": "Is there any sugar at home?",
+      "accept": ["Is there sugar at home?", "Is there any sugar in the house?", "Have we got any sugar at home?", "Do we have any sugar at home?"],
+      "explanation": "Сахар не считают, поэтому is there, а не are there. В вопросе перед ним стоит any, хотя по-русски отдельного слова здесь нет."
+    },
+    {
+      "type": "dictation",
+      "audio": "There is some butter on the table.",
+      "translation": "На столе есть масло."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое из этих слов в английском нельзя посчитать и нельзя поставить после a / an?",
+      "options": ["egg", "tomato", "bread", "apple"],
+      "answer": 2,
+      "explanation": "Bread не считают: говорят some bread, а не «a bread» и не «two breads». Остальные слова считаются: an egg, a tomato, an apple."
+    }
+  ]
+}

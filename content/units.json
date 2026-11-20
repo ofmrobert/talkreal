@@ -6,31 +6,41 @@
       { "ru": "Знакомство", "en": "First steps" },
       { "ru": "Мой день", "en": "My day" },
       { "ru": "В городе", "en": "Around town" },
-      { "ru": "Вчера и сейчас", "en": "Then and now" }
+      { "ru": "Вчера и сейчас", "en": "Then and now" },
+      { "ru": "Жизнь вокруг", "en": "Life around me" },
+      { "ru": "Планы и рассказы", "en": "Plans and stories" }
     ],
     "A2": [
       { "ru": "Прошлое и планы", "en": "Past and plans" },
       { "ru": "Точнее и увереннее", "en": "Getting precise" },
       { "ru": "В поездке", "en": "On the move" },
-      { "ru": "Люди и мнения", "en": "People and opinions" }
+      { "ru": "Люди и мнения", "en": "People and opinions" },
+      { "ru": "Условия и цели", "en": "Conditions and reasons" },
+      { "ru": "Живая речь", "en": "Everyday talk" }
     ],
     "B1": [
       { "ru": "Опыт и привычки", "en": "Experience and habits" },
       { "ru": "Сложные мысли", "en": "Complex ideas" },
       { "ru": "Работа и общение", "en": "Work and communication" },
-      { "ru": "Говорим точно", "en": "Saying it precisely" }
+      { "ru": "Говорим точно", "en": "Saying it precisely" },
+      { "ru": "Гибкая грамматика", "en": "Flexible grammar" },
+      { "ru": "Жизненные ситуации", "en": "Real-life situations" }
     ],
     "B2": [
       { "ru": "Времена и сожаления", "en": "Tenses and regrets" },
       { "ru": "Связная речь", "en": "Joined-up English" },
       { "ru": "Аргументы и нюансы", "en": "Arguing a point" },
-      { "ru": "Естественная речь", "en": "Natural English" }
+      { "ru": "Естественная речь", "en": "Natural English" },
+      { "ru": "Тонкости грамматики", "en": "Fine grammar" },
+      { "ru": "Английский для дела", "en": "English that works" }
     ],
     "C1": [
       { "ru": "Акцент и выразительность", "en": "Emphasis" },
       { "ru": "Тонкости", "en": "Nuance" },
       { "ru": "Стиль и регистр", "en": "Style and register" },
-      { "ru": "Убеждение", "en": "Persuasion" }
+      { "ru": "Убеждение", "en": "Persuasion" },
+      { "ru": "Высокий стиль", "en": "Polished English" },
+      { "ru": "Речь профессионала", "en": "Professional voice" }
     ]
   }
 }

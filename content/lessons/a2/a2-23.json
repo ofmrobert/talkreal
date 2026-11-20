@@ -1,0 +1,164 @@
+{
+  "id": "a2-23",
+  "level": "A2",
+  "order": 23,
+  "title": { "ru": "Хочу сделать, люблю делать: глагол + to или -ing", "en": "Verb + to or -ing: first steps" },
+  "goal": { "ru": "Научитесь выбирать форму второго глагола после want, decide, hope, plan, enjoy, finish, mind и keep.", "en": "Learn which verb form follows want, decide, hope, plan, enjoy, finish, mind and keep." },
+  "theory": [
+    {
+      "title": "Глаголы, после которых идёт to",
+      "body": "Когда два глагола стоят подряд, форма второго зависит от первого. После want, decide, hope и plan (а также need и would like) второй глагол идёт с to: I want to go, We decided to stay. По-русски здесь просто инфинитив — «хочу пойти», — поэтому to легко потерять. «I want go» — ошибка.",
+      "examples": [
+        { "en": "I want to learn Spanish.", "ru": "Я хочу выучить испанский." },
+        { "en": "We decided to take a taxi.", "ru": "Мы решили взять такси." },
+        { "en": "I hope to visit Scotland next summer.", "ru": "Я надеюсь побывать в Шотландии следующим летом." }
+      ],
+      "tip": "Отрицание ставят перед to: We decided not to go — «Мы решили не ехать»."
+    },
+    {
+      "title": "Глаголы, после которых идёт -ing",
+      "body": "После enjoy, finish, mind и keep второй глагол получает -ing: I enjoy cooking, She finished reading. По-русски и здесь инфинитив — «люблю готовить», «закончила читать», — поэтому тянет сказать «enjoy to cook». Эти четыре глагола надо запомнить вместе с -ing.",
+      "examples": [
+        { "en": "I enjoy cooking for my friends.", "ru": "Мне нравится готовить для друзей." },
+        { "en": "She finished reading the book last night.", "ru": "Она дочитала книгу вчера вечером." },
+        { "en": "He keeps asking the same question.", "ru": "Он всё время задаёт один и тот же вопрос." }
+      ],
+      "tip": "Keep doing значит «продолжать» или «делать снова и снова»: Keep going! — «Продолжайте!»"
+    },
+    {
+      "title": "Mind: «я не против» и вежливые просьбы",
+      "body": "Mind значит «возражать, быть против». I don't mind getting up early — «Я не против вставать рано». Вопрос Do you mind closing the door? — вежливая просьба: «Вы не могли бы закрыть дверь?» Осторожно с ответом: если вы согласны, говорите No, not at all — «Нет, я не против». Ответ Yes значил бы, что вы возражаете.",
+      "examples": [
+        { "en": "I don't mind getting up early.", "ru": "Я не против вставать рано." },
+        { "en": "Do you mind closing the door?", "ru": "Вы не могли бы закрыть дверь?" },
+        { "en": "No, not at all.", "ru": "Нет, конечно (я не против)." }
+      ],
+      "tip": "После like и love возможны обе формы: I like cooking и I like to cook. А после enjoy — только -ing."
+    }
+  ],
+  "vocab": [
+    { "en": "to decide", "ru": "решать, принимать решение", "example": "We need to decide today." },
+    { "en": "to hope", "ru": "надеяться", "example": "I hope you feel better soon." },
+    { "en": "to plan", "ru": "планировать", "example": "Let's plan our weekend." },
+    { "en": "to enjoy", "ru": "получать удовольствие", "example": "Did you enjoy the concert?" },
+    { "en": "to finish", "ru": "заканчивать", "example": "I usually finish work at six." },
+    { "en": "to mind", "ru": "возражать, быть против", "example": "I don't mind the cold." },
+    { "en": "to keep", "ru": "продолжать; хранить", "example": "Keep going, you're doing well." },
+    { "en": "abroad", "ru": "за границей, за границу", "example": "My sister lives abroad." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to decide", "ru": "решать" },
+        { "en": "to hope", "ru": "надеяться" },
+        { "en": "to enjoy", "ru": "получать удовольствие" },
+        { "en": "to mind", "ru": "возражать" },
+        { "en": "abroad", "ru": "за границей" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я хочу поехать в Италию»?",
+      "options": ["I want to go to Italy.", "I want go to Italy.", "I want going to Italy.", "I want to going to Italy."],
+      "answer": 0,
+      "explanation": "После want второй глагол идёт с to: want to go. По-русски «хочу поехать» — два глагола подряд без связки, поэтому to часто теряют."
+    },
+    {
+      "type": "gap",
+      "sentence": "I enjoy ___ in the park in the morning.",
+      "translation": "Мне нравится бегать в парке по утрам.",
+      "options": ["running", "to run", "run", "to running"],
+      "answer": 0,
+      "explanation": "После enjoy глагол всегда с -ing: enjoy running. «Enjoy to run» — ошибка, хотя по-русски здесь инфинитив «бегать»."
+    },
+    {
+      "type": "listen",
+      "audio": "We've decided to move to a bigger flat next year.",
+      "question": "Что решили говорящие?",
+      "options": ["Переехать в квартиру побольше", "Купить дом", "Остаться в старой квартире", "Переехать в другой город"],
+      "answer": 0,
+      "explanation": "Decided to move — «решили переехать»: после decide идёт to + глагол. A bigger flat — «квартира побольше»."
+    },
+    {
+      "type": "translate",
+      "source": "Она решила купить новый телефон.",
+      "answer": "She decided to buy a new phone.",
+      "accept": ["She has decided to buy a new phone.", "She's decided to buy a new phone.", "She decided to buy a new mobile.", "She decided to buy a new mobile phone."],
+      "distractors": ["buying", "bought", "for"],
+      "explanation": "После decide нужен инфинитив с to: decided to buy. Прошедшее время получает только первый глагол, второй остаётся в начальной форме."
+    },
+    {
+      "type": "gap",
+      "sentence": "Have you finished ___ the kitchen?",
+      "translation": "Вы закончили убирать кухню?",
+      "options": ["cleaning", "to clean", "clean", "cleaned"],
+      "answer": 0,
+      "explanation": "После finish глагол идёт с -ing: finished cleaning. «Finished to clean» — калька с русского «закончили убирать»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I hope to see you again soon.", "I hope seeing you again soon.", "I hope see you again soon.", "I hope to seeing you again soon."],
+      "answer": 0,
+      "explanation": "После hope идёт to + начальная форма: hope to see. Форма с -ing после hope невозможна, а без to два глагола подряд не ставят."
+    },
+    {
+      "type": "speak",
+      "text": "I don't mind waiting for a few minutes.",
+      "translation": "Я не против подождать несколько минут."
+    },
+    {
+      "type": "type",
+      "source": "Мы планируем поехать в Лондон.",
+      "answer": "We plan to go to London.",
+      "accept": [
+        "We are planning to go to London.",
+        "We're planning to go to London.",
+        "We plan to travel to London.",
+        "We are planning to travel to London.",
+        "We're planning to travel to London.",
+        "We plan to visit London.",
+        "We are planning to visit London.",
+        "We're planning to visit London."
+      ],
+      "explanation": "После plan второй глагол идёт с to: plan to go. Второе to — предлог направления: to London."
+    },
+    {
+      "type": "listen",
+      "audio": "Do you mind opening the window? It's very hot in here.",
+      "question": "О чём просит говорящий?",
+      "options": ["Открыть окно", "Закрыть окно", "Включить отопление", "Выйти из комнаты"],
+      "answer": 0,
+      "explanation": "Do you mind opening…? — вежливая просьба: «Вы не могли бы открыть…?» После mind глагол стоит с -ing."
+    },
+    {
+      "type": "gap",
+      "sentence": "My neighbour keeps ___ loud music at night.",
+      "translation": "Мой сосед постоянно включает громкую музыку по ночам.",
+      "options": ["playing", "to play", "play", "plays"],
+      "answer": 0,
+      "explanation": "Keep + -ing значит «делать снова и снова»: keeps playing. После keep инфинитив с to не используют."
+    },
+    {
+      "type": "translate",
+      "source": "Он надеется найти работу за границей.",
+      "answer": "He hopes to find a job abroad.",
+      "accept": ["He hopes to find work abroad.", "He is hoping to find a job abroad.", "He's hoping to find a job abroad.", "He hopes to get a job abroad."],
+      "distractors": ["finding", "hope", "for"],
+      "explanation": "После hope — to + глагол: hopes to find. Окончание -s получает только hope, потому что подлежащее he. Abroad употребляют без предлога."
+    },
+    {
+      "type": "dictation",
+      "audio": "She enjoys travelling by train.",
+      "translation": "Ей нравится путешествовать на поезде."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спросили: «Do you mind waiting?» Вы не против подождать. Что ответить?",
+      "options": ["No, not at all.", "Yes, I do.", "Yes, please.", "No, I don't wait."],
+      "answer": 0,
+      "explanation": "Вопрос буквально значит «Вы возражаете?», поэтому согласие — это No, not at all: «Нет, не возражаю». Yes, I do значило бы «Да, я против»."
+    }
+  ]
+}

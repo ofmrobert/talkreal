@@ -1,0 +1,157 @@
+{
+  "id": "a1-25",
+  "level": "A1",
+  "order": 25,
+  "title": { "ru": "Здоровье: What's the matter? I've got a headache", "en": "Health: What's the matter? I've got a headache" },
+  "goal": { "ru": "Научитесь говорить, что у вас болит и как вы себя чувствуете.", "en": "Learn to say what hurts and how you feel." },
+  "theory": [
+    {
+      "title": "What's the matter? — I've got a headache",
+      "body": "Спросить «Что случилось?» можно так: What's the matter? О болезнях говорят с have got: I've got a headache, a cold, a temperature. По-русски «у меня болит голова», а по-английски — «у меня есть головная боль». Артикль a обязателен: «I've got headache» — ошибка.",
+      "examples": [
+        { "en": "What's the matter? — I've got a headache.", "ru": "Что случилось? — У меня болит голова." },
+        { "en": "She's got a cold.", "ru": "У неё простуда." },
+        { "en": "Have you got a temperature?", "ru": "У вас температура?" }
+      ],
+      "tip": "Ache читается [eɪk], как в слове cake: headache — [ˈhedeɪk]."
+    },
+    {
+      "title": "My leg hurts",
+      "body": "Второй способ — глагол hurt, «болеть»: My leg hurts. Часть тела называют с my, his, her: по-русски просто «болит нога», по-английски — «моя нога болит». Если болит одно — hurts, если два или больше — hurt: My legs hurt. В вопросе нужен does или do: Does your back hurt?",
+      "examples": [
+        { "en": "My arm hurts.", "ru": "У меня болит рука." },
+        { "en": "His legs hurt after running.", "ru": "У него болят ноги после бега." },
+        { "en": "Where does it hurt?", "ru": "Где болит?" }
+      ],
+      "tip": "«The leg hurts» звучит так, будто нога чужая. Говорите my leg, her arm, his back."
+    },
+    {
+      "title": "I feel…: как вы себя чувствуете",
+      "body": "Feel — «чувствовать себя». После него сразу идёт прилагательное: I feel tired, I feel ill, I feel better. Слово «себя» не переводится: «I feel myself bad» — частая ошибка. Вопрос: How do you feel? Если вам нехорошо, скажите I don't feel well.",
+      "examples": [
+        { "en": "How do you feel today? — I feel better, thanks.", "ru": "Как вы себя чувствуете сегодня? — Лучше, спасибо." },
+        { "en": "My wife doesn't feel well.", "ru": "Моя жена плохо себя чувствует." },
+        { "en": "He feels tired after work.", "ru": "После работы он чувствует себя уставшим." }
+      ],
+      "tip": "Заболевшему человеку говорят Get well soon! — «Выздоравливайте!»"
+    }
+  ],
+  "vocab": [
+    { "en": "headache", "ru": "головная боль", "example": "I often get a headache in the evening." },
+    { "en": "a cold", "ru": "простуда", "example": "My daughter has got a cold." },
+    { "en": "temperature", "ru": "температура", "example": "He's got a high temperature." },
+    { "en": "to hurt", "ru": "болеть", "example": "Does your arm hurt?" },
+    { "en": "to feel", "ru": "чувствовать себя", "example": "I feel fine today." },
+    { "en": "back", "ru": "спина", "example": "I sleep on my back." },
+    { "en": "leg", "ru": "нога", "example": "The dog has got short legs." },
+    { "en": "arm", "ru": "рука (от плеча до кисти)", "example": "She has got long arms." },
+    { "en": "head", "ru": "голова", "example": "Put a hat on your head." },
+    { "en": "better", "ru": "лучше", "example": "Today the weather is better." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "headache", "ru": "головная боль" },
+        { "en": "a cold", "ru": "простуда" },
+        { "en": "back", "ru": "спина" },
+        { "en": "leg", "ru": "нога" },
+        { "en": "to feel", "ru": "чувствовать себя" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «У меня болит голова»?",
+      "options": ["I've got headache.", "I've got a headache.", "My head is ill.", "I am a headache."],
+      "answer": 1,
+      "explanation": "О головной боли говорят I've got a headache, и артикль a здесь обязателен. Ill говорят о человеке, а не о части тела, а I am a headache значило бы «я — головная боль»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I can't play football today. My leg ___.",
+      "translation": "Я не могу сегодня играть в футбол. У меня болит нога.",
+      "options": ["hurt", "hurts", "hurting", "is hurts"],
+      "answer": 1,
+      "explanation": "My leg — это it, поэтому глагол получает -s: hurts. Hurt без -s нужно, когда болит несколько частей тела: my legs hurt."
+    },
+    {
+      "type": "listen",
+      "audio": "I can't come to work today. I've got a temperature.",
+      "question": "Почему человек не придёт на работу?",
+      "options": ["У него температура", "У него болит спина", "У него болит голова", "Он очень устал"],
+      "answer": 0,
+      "explanation": "I've got a temperature — «у меня температура». По-английски это слово само значит, что температура повышена."
+    },
+    {
+      "type": "translate",
+      "source": "У моего сына простуда.",
+      "answer": "My son has got a cold.",
+      "accept": ["My son's got a cold.", "My son has a cold."],
+      "distractors": ["have", "is", "the"],
+      "explanation": "О болезни — have got, а с he — has got. Простуда — a cold, с артиклем a. My son is cold значило бы «моему сыну холодно»."
+    },
+    {
+      "type": "gap",
+      "sentence": "How do you ___ today? — Not very well.",
+      "translation": "Как вы себя сегодня чувствуете? — Не очень хорошо.",
+      "options": ["feel", "feels", "feeling", "are"],
+      "answer": 0,
+      "explanation": "После do you глагол стоит в начальной форме: feel. Feels бывает только в утверждении с he, she, it: he feels."
+    },
+    {
+      "type": "speak",
+      "text": "What's the matter? Are you ill?",
+      "translation": "Что случилось? Вы заболели?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я плохо себя чувствую»?",
+      "options": ["I feel myself bad.", "I don't feel well.", "I'm not feel well.", "I don't feeling well."],
+      "answer": 1,
+      "explanation": "«Себя» по-английски не переводится: просто I don't feel well. Отрицание строится с don't и начальной формой глагола, без am и без -ing."
+    },
+    {
+      "type": "translate",
+      "source": "У меня болят ноги.",
+      "answer": "My legs hurt.",
+      "accept": ["My legs are hurting.", "My feet hurt.", "My feet are hurting."],
+      "distractors": ["hurts", "the", "have"],
+      "explanation": "Ног две, поэтому hurt без -s. По-английски обязательно говорят, чьи ноги: my legs, а не the legs."
+    },
+    {
+      "type": "listen",
+      "audio": "She's got a bad cold, but she feels better today.",
+      "question": "Как она себя чувствует сегодня?",
+      "options": ["Лучше", "Хуже", "Очень плохо", "Она уже здорова"],
+      "answer": 0,
+      "explanation": "She feels better — «она чувствует себя лучше». Простуда ещё не прошла: she's got a bad cold — «у неё сильная простуда»."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ she got a temperature?",
+      "translation": "У неё температура?",
+      "options": ["Does", "Is", "Has", "Have"],
+      "answer": 2,
+      "explanation": "В вопросе с have got вперёд выходит has или have: Has she got…? С she — has. Does здесь не нужен: в предложении уже есть got."
+    },
+    {
+      "type": "type",
+      "source": "У меня болит спина.",
+      "answer": "My back hurts.",
+      "accept": ["My back is hurting.", "My back aches.", "I have got backache.", "I've got backache.", "I have backache.", "I have got a backache.", "I've got a backache.", "I have a backache.", "I have got a bad back.", "I've got a bad back.", "I have a bad back."],
+      "explanation": "Часть тела с my и глагол hurts с -s: My back hurts. Русское «у меня» здесь превращается в my."
+    },
+    {
+      "type": "dictation",
+      "audio": "I feel tired and my head hurts.",
+      "translation": "Я чувствую себя уставшим, и у меня болит голова."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы видите, что коллеге нехорошо. Как спросить «Что случилось?»",
+      "options": ["What do you do?", "What's it like?", "What's the matter?", "How old are you?"],
+      "answer": 2,
+      "explanation": "What's the matter? — так спрашивают, когда видят, что с человеком что-то не так. What do you do? — вопрос о профессии, а What's it like? — «Какое оно?»"
+    }
+  ]
+}

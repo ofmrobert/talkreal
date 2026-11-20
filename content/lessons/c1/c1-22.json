@@ -1,0 +1,199 @@
+{
+  "id": "c1-22",
+  "level": "C1",
+  "order": 22,
+  "title": { "ru": "Будущее в новостях и бизнесе: be to, be due to, be set to", "en": "Formal ways of talking about the future" },
+  "goal": { "ru": "Научитесь говорить о будущем языком новостей и деловых отчётов: be to, be due to, be set to, be poised to, be on the verge of.", "en": "Learn to talk about the future in the style of news and business reports: be to, be due to, be set to, be poised to, be on the verge of." },
+  "theory": [
+    {
+      "title": "Be to: официальные планы и распоряжения",
+      "body": "Конструкция be + инфинитив с to сообщает об официально принятом решении или плане: так пишут в новостях и приказах. Она же передаёт распоряжение: You are to wait here. В газетных заголовках глагол be опускают, и остаётся один инфинитив: Minister to resign.",
+      "examples": [
+        { "en": "The Prime Minister is to meet union leaders on Friday.", "ru": "В пятницу премьер-министр встретится с лидерами профсоюзов." },
+        { "en": "The factory is to close next year.", "ru": "В следующем году завод закроют." },
+        { "en": "All visitors are to report to reception on arrival.", "ru": "Все посетители по прибытии должны отметиться на стойке регистрации." }
+      ],
+      "tip": "Не добавляйте will: «will be to meet» — ошибка, будущее уже заключено в самой конструкции. И не путайте с have to: is to meet — «встретится по плану», has to meet — «вынужден встретиться»."
+    },
+    {
+      "title": "Be due to и be set to",
+      "body": "Be due to + инфинитив — событие стоит в расписании или ожидается к определённому сроку: поезда, рейсы, публикации, роды. Be set to — всё готово, и событие, судя по всему, скоро произойдёт: любимый оборот журналистов для прогнозов о ценах, рекордах и выборах.",
+      "examples": [
+        { "en": "The train is due to arrive at six forty.", "ru": "Поезд должен прибыть в шесть сорок." },
+        { "en": "The report is due to be published in May.", "ru": "Доклад должен выйти в мае." },
+        { "en": "Fuel prices are set to rise again this winter.", "ru": "Этой зимой цены на топливо, судя по всему, снова вырастут." }
+      ],
+      "tip": "Due to с глаголом — «должен по графику», а due to с существительным — «из-за»: The delay was due to fog. Смотрите, что стоит после to."
+    },
+    {
+      "title": "Be poised to, be on the verge of, be about to",
+      "body": "Be poised to — кто-то занял выгодную позицию и готов сделать решительный шаг. Be on the verge of — событие совсем близко, часто драматичное: после of идёт форма на -ing или существительное. Be about to — нейтральное «вот-вот»; с ним не называют время, потому что оно и так означает «прямо сейчас».",
+      "examples": [
+        { "en": "The company is poised to become the market leader.", "ru": "Компания вот-вот станет лидером рынка." },
+        { "en": "The two sides are on the verge of signing a deal.", "ru": "Стороны находятся на пороге подписания соглашения." },
+        { "en": "Hurry up, the film is about to start.", "ru": "Поторопитесь, фильм вот-вот начнётся." }
+      ],
+      "tip": "«On the verge to sign» — калька с русского «на грани того, чтобы». После предлога of инфинитив невозможен: только on the verge of signing или on the verge of collapse."
+    }
+  ],
+  "vocab": [
+    { "en": "to be to do something", "ru": "должен сделать (по официальному плану)", "example": "The two leaders are to hold talks in Geneva." },
+    { "en": "to be due to", "ru": "должен (по графику)", "example": "The baby is due to be born in March." },
+    { "en": "to be set to", "ru": "судя по всему, скоро (сделает)", "example": "The film is set to break box-office records." },
+    { "en": "to be poised to", "ru": "быть готовым (вот-вот сделать)", "example": "The team is poised to win the title." },
+    { "en": "on the verge of", "ru": "на грани, на пороге", "example": "She was on the verge of tears." },
+    { "en": "to be about to", "ru": "вот-вот (сделать)", "example": "I was about to call you." },
+    { "en": "imminent", "ru": "неминуемый, близкий", "example": "An announcement is imminent." },
+    { "en": "to unveil", "ru": "представить публике", "example": "The firm will unveil its new model in Paris." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to be due to", "ru": "должен (по графику)" },
+        { "en": "to be poised to", "ru": "быть готовым (вот-вот сделать)" },
+        { "en": "on the verge of", "ru": "на грани, на пороге" },
+        { "en": "imminent", "ru": "неминуемый, близкий" },
+        { "en": "to unveil", "ru": "представить публике" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "The two airlines are on the verge to merge.",
+        "The two airlines are on the verge of merge.",
+        "The two airlines are on verge of merging.",
+        "The two airlines are on the verge of merging."
+      ],
+      "answer": 3,
+      "explanation": "После on the verge of идёт форма на -ing или существительное, потому что of — предлог. Инфинитив «to merge» — калька с русского, а артикль the в выражении обязателен."
+    },
+    {
+      "type": "gap",
+      "sentence": "The President ___ address the nation at nine o'clock this evening.",
+      "translation": "Сегодня в девять вечера президент обратится к нации.",
+      "options": ["will to", "is going", "is to", "is to be"],
+      "answer": 2,
+      "explanation": "Is to + инфинитив — официально объявленный план. После will частица to не ставится, после is going она, наоборот, пропущена, а «is to be address» грамматически невозможно."
+    },
+    {
+      "type": "translate",
+      "source": "Самолёт должен приземлиться через двадцать минут.",
+      "answer": "The plane is due to land in twenty minutes.",
+      "accept": [
+        "The plane is due to land in 20 minutes.",
+        "The aircraft is due to land in twenty minutes.",
+        "The flight is due to land in twenty minutes.",
+        "The plane is to land in twenty minutes.",
+        "The plane is scheduled to land in twenty minutes.",
+        "The plane is supposed to land in twenty minutes.",
+        "The plane should land in twenty minutes.",
+        "The plane is due to land in twenty minutes' time."
+      ],
+      "distractors": ["after", "landing", "must", "of"],
+      "explanation": "«Должен» здесь — по расписанию, а не по обязанности, поэтому is due to, а не must. «Через двадцать минут» от настоящего момента — in twenty minutes; after требует точки отсчёта: after the meeting."
+    },
+    {
+      "type": "listen",
+      "audio": "Unemployment is set to fall for the third year running.",
+      "question": "Что говорится о безработице?",
+      "options": [
+        "Она, судя по всему, снизится — уже третий год подряд",
+        "Она упала три года назад и с тех пор растёт",
+        "Правительство обязано снизить её за три года",
+        "Она третий год остаётся на прежнем уровне"
+      ],
+      "answer": 0,
+      "explanation": "Is set to fall — прогноз: всё указывает на то, что снижение произойдёт. For the third year running значит «третий год подряд»; running здесь не про бег."
+    },
+    {
+      "type": "choice",
+      "prompt": "Газетный заголовок: «Minister to resign». Что он означает?",
+      "options": [
+        "Министр ушёл в отставку",
+        "Министр уйдёт в отставку",
+        "Министра просят уйти в отставку",
+        "Министр отказался уходить в отставку"
+      ],
+      "answer": 1,
+      "explanation": "В заголовках из конструкции be to выбрасывают глагол be: полная фраза — The minister is to resign. Инфинитив с to в заголовке всегда говорит о будущем."
+    },
+    {
+      "type": "speak",
+      "text": "The new terminal is due to open next spring.",
+      "translation": "Новый терминал должен открыться следующей весной."
+    },
+    {
+      "type": "gap",
+      "sentence": "Scientists say they are on the ___ of a major discovery.",
+      "translation": "Учёные говорят, что стоят на пороге крупного открытия.",
+      "options": ["border", "verge", "margin", "limit"],
+      "answer": 1,
+      "explanation": "Устойчивое выражение — on the verge of. Border — граница между странами, margin — поле страницы или запас, limit — предел; в этом обороте они не употребляются."
+    },
+    {
+      "type": "type",
+      "source": "Он вот-вот уйдёт.",
+      "answer": "He is about to leave.",
+      "accept": [
+        "He's about to leave.",
+        "He is about to go.",
+        "He's about to go.",
+        "He is just about to leave.",
+        "He's just about to leave.",
+        "He is on the verge of leaving.",
+        "He's on the verge of leaving.",
+        "He is on the point of leaving.",
+        "He's on the point of leaving."
+      ],
+      "explanation": "Be about to + инфинитив — «вот-вот, с минуты на минуту». Will не нужен: будущее выражает сама конструкция, а глагол be стоит в настоящем времени."
+    },
+    {
+      "type": "listen",
+      "audio": "The Chancellor is to unveil the budget on Wednesday.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The Chancellor has to unveil the budget on Wednesday.",
+        "The Chancellor is to unveiling the budget on Wednesday.",
+        "The Chancellor is to unveil the budget in Wednesday.",
+        "The Chancellor is to unveil the budget on Wednesday."
+      ],
+      "answer": 3,
+      "explanation": "Is to unveil — официальный план, а has to означало бы вынужденность. После to идёт начальная форма глагола, а с днями недели употребляется предлог on."
+    },
+    {
+      "type": "translate",
+      "source": "Страна находится на грани экономического кризиса.",
+      "answer": "The country is on the verge of an economic crisis.",
+      "accept": [
+        "The country is on the verge of economic crisis.",
+        "The country is on the brink of an economic crisis.",
+        "The country is on the brink of economic crisis.",
+        "The country is on the edge of an economic crisis."
+      ],
+      "distractors": ["economical", "at", "border", "to"],
+      "explanation": "«На грани» — on the verge of или on the brink of, с предлогом on. Кризис экономический, то есть связан с экономикой, — economic; economical значит «экономный»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The museum is due ___ next month after a two-year renovation.",
+      "translation": "Музей должен вновь открыться в следующем месяце после двухлетней реконструкции.",
+      "options": ["to reopen", "reopening", "to reopening", "of reopening"],
+      "answer": 0,
+      "explanation": "После due в значении «должен по плану» идёт инфинитив с to: is due to reopen. Форма на -ing нужна после on the verge of, а не здесь."
+    },
+    {
+      "type": "dictation",
+      "audio": "Fuel prices are set to rise again this winter.",
+      "translation": "Этой зимой цены на топливо, судя по всему, снова вырастут."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое слово подходит: «After a record year, the firm is ___ to overtake its main rival»?",
+      "options": ["verge", "imminent", "poised", "pending"],
+      "answer": 2,
+      "explanation": "Be poised to — занять выгодную позицию и быть готовым к решительному шагу. Verge требует оборота on the verge of, а imminent и pending описывают само событие, а не того, кто действует: A decision is imminent."
+    }
+  ]
+}

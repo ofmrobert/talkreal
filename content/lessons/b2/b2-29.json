@@ -1,0 +1,206 @@
+{
+  "id": "b2-29",
+  "level": "B2",
+  "order": 29,
+  "title": { "ru": "Тенденции и цифры", "en": "Trends and numbers" },
+  "goal": { "ru": "Научитесь описывать изменения и графики: rise, fall, increase by 10%, drop sharply, remain stable, a slight increase in, peak at, double.", "en": "Learn to describe changes and charts: rise, fall, increase by 10%, drop sharply, remain stable, a slight increase in, peak at, double." },
+  "theory": [
+    {
+      "title": "Глаголы роста и падения",
+      "body": "Rise, increase, go up — расти; fall, decrease, drop, go down — снижаться. Remain stable — оставаться на одном уровне, double — удвоиться, peak — достичь пика. У rise и fall нет дополнения: что-то растёт или падает само. Если цены повышает кто-то, это raise или increase.",
+      "examples": [
+        { "en": "Fuel prices rose again last month.", "ru": "В прошлом месяце цены на топливо снова выросли." },
+        { "en": "The number of students has fallen.", "ru": "Число студентов снизилось." },
+        { "en": "The government has raised taxes.", "ru": "Правительство повысило налоги." }
+      ],
+      "tip": "Формы: rise — rose — risen, fall — fell — fallen. Не путайте fell («упал») с felt («почувствовал»)."
+    },
+    {
+      "title": "Предлоги с цифрами",
+      "body": "By показывает разницу: rise by 10% — вырасти на 10 %. To показывает итоговый уровень: rise to 50 — вырасти до 50. From … to — «с … до». После существительного: an increase in prices (рост чего), an increase of 10% (рост на сколько). Peak at — достичь пика на отметке.",
+      "examples": [
+        { "en": "Sales increased by 15% last year.", "ru": "В прошлом году продажи выросли на 15 %." },
+        { "en": "The temperature dropped to minus ten.", "ru": "Температура упала до минус десяти." },
+        { "en": "There was an increase of 3% in rents.", "ru": "Арендная плата выросла на 3 %." }
+      ],
+      "tip": "Русское «на 10 %» — не on и не for, а by. А «рост цен» — a rise in prices, не «a rise of prices»."
+    },
+    {
+      "title": "Насколько сильно: sharply, slightly, steadily",
+      "body": "Глагол описывают наречием: rise sharply (резко), slightly (немного), steadily (равномерно), gradually (постепенно). Существительное — прилагательным: a sharp rise, a slight fall, a steady increase. Одну мысль можно выразить двумя способами: Prices rose sharply = There was a sharp rise in prices.",
+      "examples": [
+        { "en": "Profits fell slightly in the second quarter.", "ru": "Во втором квартале прибыль немного снизилась." },
+        { "en": "There has been a steady increase in demand.", "ru": "Спрос стабильно растёт." },
+        { "en": "The number of visitors grew gradually.", "ru": "Число посетителей росло постепенно." }
+      ],
+      "tip": "После There was a… нужно прилагательное, а не наречие: a sharp rise, но не «a sharply rise»."
+    }
+  ],
+  "vocab": [
+    { "en": "to rise", "ru": "расти, повышаться", "example": "Temperatures will rise at the weekend." },
+    { "en": "to fall", "ru": "падать, снижаться", "example": "Interest rates are expected to fall." },
+    { "en": "to remain stable", "ru": "оставаться стабильным", "example": "The exchange rate has remained stable." },
+    { "en": "to peak", "ru": "достигать пика", "example": "Demand usually peaks in December." },
+    { "en": "to double", "ru": "удваиваться", "example": "The price of coffee has doubled." },
+    { "en": "slight", "ru": "небольшой, незначительный", "example": "There was a slight drop in sales." },
+    { "en": "sharply", "ru": "резко", "example": "Costs have risen sharply this year." },
+    { "en": "steadily", "ru": "стабильно, равномерно", "example": "The company has grown steadily." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to rise", "ru": "расти, повышаться" },
+        { "en": "to fall", "ru": "падать, снижаться" },
+        { "en": "to remain stable", "ru": "оставаться стабильным" },
+        { "en": "to peak", "ru": "достигать пика" },
+        { "en": "to double", "ru": "удваиваться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Продажи выросли на 10 %»?",
+      "options": [
+        "Sales rose by 10%.",
+        "Sales rose on 10%.",
+        "Sales rose for 10%.",
+        "Sales raised by 10%."
+      ],
+      "answer": 0,
+      "explanation": "Разницу показывает предлог by: rose by 10%. On и for — калька с русского «на». Raised не подходит: raise требует дополнения (кто-то повышает что-то), а продажи растут сами — rise."
+    },
+    {
+      "type": "gap",
+      "sentence": "There has been a slight increase ___ the number of visitors.",
+      "translation": "Число посетителей немного выросло.",
+      "options": ["in", "of", "on", "at"],
+      "answer": 0,
+      "explanation": "После существительных increase, rise, fall, drop то, что изменилось, вводится предлогом in: an increase in the number. Of ставят перед величиной изменения: an increase of 5%."
+    },
+    {
+      "type": "listen",
+      "audio": "Unemployment fell from eight to six per cent last year.",
+      "question": "Что произошло с безработицей?",
+      "options": [
+        "Она снизилась с восьми до шести процентов",
+        "Она снизилась на шесть процентов",
+        "Она выросла с шести до восьми процентов",
+        "Она осталась на уровне восьми процентов"
+      ],
+      "answer": 0,
+      "explanation": "From … to — «с … до»: названы начальный и конечный уровень. Если бы безработица упала на шесть процентов, сказали бы fell by six per cent."
+    },
+    {
+      "type": "translate",
+      "source": "Цены на жильё резко упали.",
+      "answer": "House prices fell sharply.",
+      "accept": [
+        "House prices dropped sharply.",
+        "House prices have fallen sharply.",
+        "House prices have dropped sharply.",
+        "House prices went down sharply.",
+        "Housing prices fell sharply.",
+        "Housing prices dropped sharply.",
+        "Property prices fell sharply.",
+        "The price of housing fell sharply."
+      ],
+      "distractors": ["sharp", "felt", "low"],
+      "explanation": "Глагол описывается наречием: fell sharply, а не «fell sharp». Прошедшее время от fall — fell; felt — это форма глагола feel, «чувствовать»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Visitor numbers peaked ___ two million in August.",
+      "translation": "В августе число посетителей достигло пика — двух миллионов.",
+      "options": ["at", "on", "by", "in"],
+      "answer": 0,
+      "explanation": "Отметку, на которой достигнут максимум, вводит at: peak at two million. By показало бы разницу («на два миллиона»), а on и in с этим глаголом перед числом не употребляются."
+    },
+    {
+      "type": "speak",
+      "text": "The number of users has doubled since January.",
+      "translation": "С января число пользователей удвоилось."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение описывает небольшой рост?",
+      "options": [
+        "Profits rose slightly.",
+        "Profits rose sharply.",
+        "Profits fell slightly.",
+        "Profits remained stable."
+      ],
+      "answer": 0,
+      "explanation": "Rose — «выросли», slightly — «немного». Sharply значит «резко», fell — «упали», а remained stable — «не изменились»."
+    },
+    {
+      "type": "type",
+      "source": "Цены остались стабильными.",
+      "answer": "Prices remained stable.",
+      "accept": [
+        "The prices remained stable.",
+        "Prices have remained stable.",
+        "Prices stayed stable.",
+        "The prices stayed stable.",
+        "Prices have stayed stable.",
+        "Prices remained steady.",
+        "Prices stayed the same."
+      ],
+      "explanation": "Remain stable — «оставаться на одном уровне». После remain стоит прилагательное, а не наречие: remained stable, но не «remained stably»."
+    },
+    {
+      "type": "listen",
+      "audio": "After a sharp rise in spring, sales remained stable for the rest of the year.",
+      "question": "Что происходило с продажами?",
+      "options": [
+        "Весной они резко выросли, а потом не менялись",
+        "Весной они резко упали, а потом росли",
+        "Они постепенно росли весь год",
+        "Весной они не менялись, а потом резко выросли"
+      ],
+      "answer": 0,
+      "explanation": "A sharp rise in spring — «резкий рост весной»; remained stable for the rest of the year — «до конца года оставались на том же уровне». Слово after задаёт порядок: сначала рост, потом стабильность."
+    },
+    {
+      "type": "gap",
+      "sentence": "The company ___ its prices by five per cent in March.",
+      "translation": "В марте компания повысила цены на пять процентов.",
+      "options": ["raised", "rose", "risen", "arose"],
+      "answer": 0,
+      "explanation": "Здесь есть дополнение (its prices): кто-то повышает что-то — это raise. Rise дополнения не имеет: Prices rose. По-русски «повысить» и «повыситься» различает -ся, по-английски — два разных глагола."
+    },
+    {
+      "type": "translate",
+      "source": "Население города удвоилось за десять лет.",
+      "answer": "The population of the city has doubled in ten years.",
+      "accept": [
+        "The population of the city doubled in ten years.",
+        "The city's population has doubled in ten years.",
+        "The city's population doubled in ten years.",
+        "The population of the city has doubled over ten years.",
+        "The population of the city doubled over ten years.",
+        "The city's population has doubled over ten years.",
+        "The population of the city has doubled in 10 years.",
+        "The population of the city doubled in 10 years."
+      ],
+      "distractors": ["twice", "double", "for"],
+      "explanation": "«Удвоиться» — глагол double: has doubled. Twice значит «дважды» и глаголом быть не может. «За десять лет» — in ten years: in называет срок, за который достигнут результат, а for говорит лишь о том, как долго длилось действие."
+    },
+    {
+      "type": "dictation",
+      "audio": "The number of tourists rose steadily last year.",
+      "translation": "В прошлом году число туристов стабильно росло."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "There was a sharp fall in oil prices.",
+        "There was a sharply fall in oil prices.",
+        "There was a sharp fall of oil prices.",
+        "There was a sharp falling in oil prices."
+      ],
+      "answer": 0,
+      "explanation": "Перед существительным fall стоит прилагательное sharp, а не наречие sharply. То, что упало, вводится предлогом in: a fall in prices. Существительное — fall, а не falling."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "a2-30",
+  "level": "A2",
+  "order": 30,
+  "title": { "ru": "Как рассказать историю: first, then, suddenly, in the end", "en": "Telling a story: first, then, suddenly, in the end" },
+  "goal": { "ru": "Научитесь связно рассказывать о событиях: что было сначала, что потом и чем всё закончилось.", "en": "Learn to tell a story in order: what happened first, what came next and how it ended." },
+  "theory": [
+    {
+      "title": "По порядку: first, then, after that",
+      "body": "Главные события истории идут в Past Simple, одно за другим. Порядок показывают слова first (сначала), then (потом) и after that (после этого). First и after that обычно стоят в начале и отделяются запятой, после then запятая не нужна. Не путайте after that с одним after: «After, we went home» — ошибка, нужно After that, we went home.",
+      "examples": [
+        { "en": "First, we checked in at the hotel.", "ru": "Сначала мы заселились в отель." },
+        { "en": "Then we went for a walk.", "ru": "Потом мы пошли гулять." },
+        { "en": "After that, we had dinner by the sea.", "ru": "После этого мы поужинали у моря." }
+      ],
+      "tip": "First — первый шаг по порядку. At first — «поначалу», когда потом всё изменилось: At first I didn't like the city."
+    },
+    {
+      "title": "Фон и неожиданность: while и suddenly",
+      "body": "Фон истории — то, что происходило в тот момент, — описывают в Past Continuous, часто со словом while (пока): While I was waiting for the bus, it started to rain. Событие, которое прервало фон, стоит в Past Simple. Suddenly значит «вдруг» и вводит неожиданное событие — тоже в Past Simple.",
+      "examples": [
+        { "en": "While I was walking home, I met an old friend.", "ru": "Пока я шёл домой, я встретил старого друга." },
+        { "en": "I was reading when someone knocked on the door.", "ru": "Я читал, когда кто-то постучал в дверь." },
+        { "en": "Suddenly, the door opened.", "ru": "Вдруг дверь открылась." }
+      ],
+      "tip": "После while обычно идёт длительное действие (was / were + -ing), после when — короткое событие."
+    },
+    {
+      "title": "Чем всё закончилось: in the end, finally",
+      "body": "In the end значит «в конце концов»: так говорят о результате после трудностей или долгих сомнений. Finally — «наконец», после долгого ожидания. Не путайте in the end с at the end: at the end — «в конце чего-то», и после него идёт of: at the end of the film.",
+      "examples": [
+        { "en": "We couldn't decide where to go. In the end, we stayed at home.", "ru": "Мы не могли решить, куда пойти. В конце концов мы остались дома." },
+        { "en": "We waited for an hour, and finally the bus came.", "ru": "Мы ждали час, и наконец автобус пришёл." },
+        { "en": "At the end of the day, we were very tired.", "ru": "К концу дня мы очень устали." }
+      ],
+      "tip": "Хорошая история держится на трёх вещах: порядок (first, then), фон (while) и развязка (in the end)."
+    }
+  ],
+  "vocab": [
+    { "en": "first", "ru": "сначала", "example": "First, turn on the computer." },
+    { "en": "then", "ru": "потом, затем", "example": "We had lunch and then went shopping." },
+    { "en": "after that", "ru": "после этого", "example": "I worked until six. After that, I went to the gym." },
+    { "en": "while", "ru": "пока, в то время как", "example": "I listened to music while I was cooking." },
+    { "en": "suddenly", "ru": "вдруг, внезапно", "example": "Suddenly, everyone stopped talking." },
+    { "en": "in the end", "ru": "в конце концов", "example": "In the end, everything was fine." },
+    { "en": "finally", "ru": "наконец", "example": "Finally, the rain stopped." },
+    { "en": "to get lost", "ru": "заблудиться (got lost)", "example": "It's easy to get lost in this city." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "then", "ru": "потом" },
+        { "en": "while", "ru": "пока" },
+        { "en": "suddenly", "ru": "вдруг" },
+        { "en": "in the end", "ru": "в конце концов" },
+        { "en": "to get lost", "ru": "заблудиться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «После этого мы пошли домой»?",
+      "options": ["After that, we went home.", "After, we went home.", "After that, we were going home.", "After that, we go home."],
+      "answer": 0,
+      "explanation": "«После этого» — after that: одно after так не используют. Событие по порядку стоит в Past Simple: went, а не were going."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ I was cooking dinner, the phone rang.",
+      "translation": "Пока я готовил ужин, зазвонил телефон.",
+      "options": ["While", "Suddenly", "Then", "After that"],
+      "answer": 0,
+      "explanation": "Was cooking — длительный фон, на котором произошло короткое событие. Такой фон вводит while — «пока». Остальные слова не соединяют две части предложения."
+    },
+    {
+      "type": "listen",
+      "audio": "First, we missed our train. Then we got lost. In the end, we arrived at midnight.",
+      "question": "Чем закончилась история?",
+      "options": ["Они приехали в полночь", "Они опоздали на поезд и остались дома", "Они приехали вовремя", "Они заблудились и вернулись домой"],
+      "answer": 0,
+      "explanation": "In the end — «в конце концов»: так вводят развязку. We arrived at midnight — «мы приехали в полночь»."
+    },
+    {
+      "type": "translate",
+      "source": "Вдруг пошёл дождь.",
+      "answer": "Suddenly it started to rain.",
+      "accept": ["Suddenly it started raining.", "Suddenly it began to rain.", "Suddenly it began raining.", "It suddenly started to rain.", "It suddenly started raining.", "It suddenly began to rain."],
+      "distractors": ["was", "starts", "while"],
+      "explanation": "«Вдруг» — suddenly. Неожиданное событие стоит в Past Simple: it started. Подлежащее it обязательно, хотя по-русски его нет."
+    },
+    {
+      "type": "gap",
+      "sentence": "We were walking along the beach when we ___ a dolphin.",
+      "translation": "Мы шли по пляжу, когда увидели дельфина.",
+      "options": ["saw", "were seeing", "see", "have seen"],
+      "answer": 0,
+      "explanation": "Were walking — фон, а «увидели» — короткое событие, которое произошло на этом фоне. Оно стоит в Past Simple: saw."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное продолжение: «We looked for the keys for an hour.»",
+      "options": ["In the end, we found them in the car.", "First, we found them in the car.", "While we found them in the car.", "At the end of we found them in the car."],
+      "answer": 0,
+      "explanation": "Нужна развязка после долгих поисков — in the end, «в конце концов». После at the end of должно идти существительное, а после while нужна вторая часть предложения."
+    },
+    {
+      "type": "speak",
+      "text": "While I was waiting, I read a magazine.",
+      "translation": "Пока я ждал, я читал журнал."
+    },
+    {
+      "type": "type",
+      "source": "В конце концов мы взяли такси.",
+      "answer": "In the end, we took a taxi.",
+      "accept": ["We took a taxi in the end.", "Finally, we took a taxi.", "Eventually, we took a taxi.", "In the end, we got a taxi.", "In the end, we took a cab.", "In the end, we caught a taxi."],
+      "explanation": "«В конце концов» — in the end, с предлогом in и артиклем the. «Взять такси» — take a taxi, в прошедшем времени took."
+    },
+    {
+      "type": "listen",
+      "audio": "I was sleeping when suddenly I heard a loud noise in the kitchen.",
+      "question": "Что делал говорящий, когда услышал шум?",
+      "options": ["Спал", "Готовил на кухне", "Смотрел телевизор", "Разговаривал по телефону"],
+      "answer": 0,
+      "explanation": "I was sleeping — фон в Past Continuous: «я спал». Suddenly I heard — неожиданное событие в Past Simple."
+    },
+    {
+      "type": "gap",
+      "sentence": "First, I had a shower. ___ I made breakfast.",
+      "translation": "Сначала я принял душ. Потом я приготовил завтрак.",
+      "options": ["Then", "While", "When", "During"],
+      "answer": 0,
+      "explanation": "Второе действие по порядку вводит then — «потом». While и when соединяют две части одного предложения, а после during нужно существительное."
+    },
+    {
+      "type": "translate",
+      "source": "Пока мы ужинали, погас свет.",
+      "answer": "While we were having dinner, the lights went out.",
+      "accept": ["While we were having dinner, the light went out.", "While we were eating dinner, the lights went out.", "While we were having supper, the lights went out.", "The lights went out while we were having dinner.", "The light went out while we were having dinner."],
+      "distractors": ["had", "during", "go"],
+      "explanation": "После while — длительный фон в Past Continuous: were having dinner. «Погас» — короткое событие в Past Simple: went out."
+    },
+    {
+      "type": "dictation",
+      "audio": "Finally, we found the right street.",
+      "translation": "Наконец мы нашли нужную улицу."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["While I was driving home, I saw an accident.", "While I drove home, I was seeing an accident.", "While I am driving home, I saw an accident.", "While I was drive home, I saw an accident."],
+      "answer": 0,
+      "explanation": "Фон — в Past Continuous (was driving), короткое событие — в Past Simple (saw). Глагол see в длительной форме здесь не используют."
+    }
+  ]
+}

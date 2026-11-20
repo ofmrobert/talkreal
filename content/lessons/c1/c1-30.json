@@ -1,0 +1,209 @@
+{
+  "id": "c1-30",
+  "level": "C1",
+  "order": 30,
+  "title": { "ru": "Язык переговоров: условия и уступки", "en": "The language of negotiation: conditions and concessions" },
+  "goal": { "ru": "Научитесь торговаться вежливо и твёрдо: We'd be prepared to… provided that…, That's a deal-breaker, Could we meet halfway?, I see your point, but…", "en": "Learn to bargain politely and firmly: We'd be prepared to… provided that…, That's a deal-breaker, Could we meet halfway?, I see your point, but…" },
+  "theory": [
+    {
+      "title": "Предложение с условием",
+      "body": "На переговорах уступку не дарят, а обменивают, поэтому её сразу связывают с условием: We'd be prepared to… provided that…, We could… as long as… Would и could делают предложение предварительным: вы ещё ничего не пообещали. После provided that и as long as, как и после if, стоит настоящее время, а не will.",
+      "examples": [
+        { "en": "We'd be prepared to lower the price, provided that you sign for two years.", "ru": "Мы были бы готовы снизить цену при условии, что вы подпишете договор на два года." },
+        { "en": "We could offer free delivery as long as you order in bulk.", "ru": "Мы могли бы предложить бесплатную доставку, если вы будете заказывать оптом." },
+        { "en": "If you increased the order, we might be able to go lower.", "ru": "Если бы вы увеличили заказ, мы, возможно, смогли бы ещё снизить цену." }
+      ],
+      "tip": "We are ready to звучит как готовое обещание, а We'd be prepared to — как осторожный шаг навстречу, от которого ещё можно отступить. На переговорах выбирают второе."
+    },
+    {
+      "title": "Твёрдая граница",
+      "body": "Отказ тоже формулируют вежливо, но однозначно. A deal-breaker — условие, из-за которого сделка не состоится. Out of the question — «об этом не может быть и речи». Non-negotiable — «не обсуждается». Предел уступок обозначают фразами That's our final offer и That's as far as we can go.",
+      "examples": [
+        { "en": "I'm afraid a six-month delay would be a deal-breaker for us.", "ru": "Боюсь, задержка на полгода стала бы для нас причиной отказаться от сделки." },
+        { "en": "That's as far as we can go on price.", "ru": "По цене это предел того, на что мы можем пойти." },
+        { "en": "The delivery date is non-negotiable.", "ru": "Дата поставки не обсуждается." }
+      ],
+      "tip": "В выражении out of the question артикль обязателен. «Out of question» — ошибка, а похожее without question значит совсем другое: «несомненно»."
+    },
+    {
+      "title": "Шаг навстречу",
+      "body": "Чтобы сдвинуть переговоры с мёртвой точки, предлагают компромисс: Could we meet halfway? What if we…? Сначала признают довод партнёра: I see your point, but… Согласие с оговоркой — We could live with that. Ответную уступку вводит in return, а итог скрепляют словами It's a deal.",
+      "examples": [
+        { "en": "Could we meet halfway and say ten per cent?", "ru": "Не могли бы мы сойтись посередине — скажем, на десяти процентах?" },
+        { "en": "I see your point, but we have our shareholders to think of.", "ru": "Я понимаю вашу мысль, но нам нужно думать о наших акционерах." },
+        { "en": "We could live with that if you covered the shipping in return.", "ru": "Нас бы это устроило, если бы вы взамен оплатили доставку." }
+      ],
+      "tip": "«Пойти навстречу» — meet someone halfway, а не «go towards you». А «Договорились!» — It's a deal; сказать «We are agree» нельзя, потому что agree — глагол."
+    }
+  ],
+  "vocab": [
+    { "en": "to be prepared to", "ru": "быть готовым (пойти на что-то)", "example": "Would you be prepared to accept a lower fee?" },
+    { "en": "as long as", "ru": "при условии, что; если только", "example": "You can borrow the car as long as you bring it back by six." },
+    { "en": "a deal-breaker", "ru": "условие, из-за которого сделка срывается", "example": "For most buyers, the lack of parking is a deal-breaker." },
+    { "en": "to meet halfway", "ru": "пойти навстречу, сойтись посередине", "example": "If you can meet us halfway, we can sign today." },
+    { "en": "a concession", "ru": "уступка", "example": "Neither side was willing to make concessions." },
+    { "en": "out of the question", "ru": "об этом не может быть и речи", "example": "A further discount is out of the question." },
+    { "en": "in return", "ru": "взамен", "example": "What are you offering in return?" },
+    { "en": "non-negotiable", "ru": "не подлежащий обсуждению", "example": "Safety standards are non-negotiable." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "a deal-breaker", "ru": "условие, из-за которого сделка срывается" },
+        { "en": "to meet halfway", "ru": "пойти навстречу, сойтись посередине" },
+        { "en": "a concession", "ru": "уступка" },
+        { "en": "out of the question", "ru": "об этом не может быть и речи" },
+        { "en": "in return", "ru": "взамен" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "We'd be prepared to place a larger order provided that you will cut the unit price.",
+        "We'd be prepared to place a larger order provided that you cut the unit price.",
+        "We'd be prepared placing a larger order provided that you cut the unit price.",
+        "We'd be prepared to place a larger order provided that you cutting the unit price."
+      ],
+      "answer": 1,
+      "explanation": "После provided that, как и после if, будущее действие выражают настоящим временем: you cut, а не you will cut. После be prepared идёт инфинитив с to."
+    },
+    {
+      "type": "gap",
+      "sentence": "We can't accept a three-month delay; I'm afraid that's a deal-___.",
+      "translation": "Мы не можем согласиться на трёхмесячную задержку; боюсь, при таком условии сделка не состоится.",
+      "options": ["stopper", "closer", "crasher", "breaker"],
+      "answer": 3,
+      "explanation": "A deal-breaker — буквально «то, что ломает сделку»: условие, при котором одна из сторон откажется от соглашения. Другие слова с deal так не сочетаются."
+    },
+    {
+      "type": "translate",
+      "source": "Не могли бы мы сойтись посередине?",
+      "answer": "Could we meet halfway?",
+      "accept": [
+        "Can we meet halfway?",
+        "Couldn't we meet halfway?",
+        "Could we meet half-way?",
+        "Could we meet half way?",
+        "Could we meet in the middle?",
+        "Can we meet in the middle?",
+        "Could we meet each other halfway?"
+      ],
+      "distractors": ["converge", "middle", "together", "agree"],
+      "explanation": "Meet halfway — «встретиться на полпути»: каждая сторона уступает половину разницы. Could делает вопрос мягче, чем can. Halfway — наречие, поэтому предлог перед ним не нужен."
+    },
+    {
+      "type": "listen",
+      "audio": "We could live with a later delivery date if you threw in free installation.",
+      "question": "На что готов согласиться говорящий?",
+      "options": [
+        "На бесплатную доставку вместо установки",
+        "Ни на какие изменения сроков",
+        "На более позднюю поставку, если установку сделают бесплатно",
+        "На более раннюю поставку за доплату"
+      ],
+      "answer": 2,
+      "explanation": "We could live with — «нас бы это устроило»: согласие без восторга. Throw in значит «добавить бесплатно, в придачу». Прошедшее время threw после if делает условие предварительным."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая фраза правильно сообщает, что условие вообще не обсуждается?",
+      "options": [
+        "That's out of question.",
+        "That's without question.",
+        "That's beside the question.",
+        "That's out of the question."
+      ],
+      "answer": 3,
+      "explanation": "Out of the question — «об этом не может быть и речи»; артикль the обязателен. Without question значит «несомненно», то есть почти противоположное."
+    },
+    {
+      "type": "speak",
+      "text": "I see your point, but our costs have risen too.",
+      "translation": "Я понимаю вашу мысль, но наши расходы тоже выросли."
+    },
+    {
+      "type": "gap",
+      "sentence": "We'll cover the shipping costs; ___ return, we'd like a longer contract.",
+      "translation": "Мы возьмём на себя расходы на доставку; взамен мы хотели бы более длительный контракт.",
+      "options": ["at", "for", "in", "on"],
+      "answer": 2,
+      "explanation": "In return — «взамен»: так вводят ответную уступку. Предлог for появляется дальше, когда называют, за что именно: in return for a longer contract."
+    },
+    {
+      "type": "type",
+      "source": "Это наше окончательное предложение.",
+      "answer": "That's our final offer.",
+      "accept": [
+        "That is our final offer.",
+        "This is our final offer.",
+        "It's our final offer.",
+        "It is our final offer.",
+        "That's our last offer.",
+        "That is our last offer.",
+        "This is our last offer.",
+        "That's our final proposal.",
+        "That is our final proposal.",
+        "This is our final proposal."
+      ],
+      "explanation": "Предложение цены или условий на переговорах — offer. Suggestion — это совет или идея, а не коммерческое предложение. Final показывает, что уступок больше не будет."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm afraid there isn't much room for manoeuvre on price.",
+      "question": "Что вы услышали?",
+      "options": [
+        "I'm afraid there isn't much place for manoeuvre on price.",
+        "I'm afraid there isn't much room for manoeuvre on price.",
+        "I'm afraid there aren't much room for manoeuvre on price.",
+        "I'm afraid there isn't many room for manoeuvre on price."
+      ],
+      "answer": 1,
+      "explanation": "Room for manoeuvre — «пространство для манёвра». Room в значении «место, простор» неисчисляемое: much room и глагол в единственном числе. Place в этом выражении не употребляется."
+    },
+    {
+      "type": "translate",
+      "source": "Мы были бы готовы снизить цену.",
+      "answer": "We would be prepared to lower the price.",
+      "accept": [
+        "We'd be prepared to lower the price.",
+        "We would be willing to lower the price.",
+        "We'd be willing to lower the price.",
+        "We would be ready to lower the price.",
+        "We'd be ready to lower the price.",
+        "We would be prepared to reduce the price.",
+        "We'd be prepared to reduce the price.",
+        "We would be willing to reduce the price.",
+        "We'd be willing to reduce the price.",
+        "We would be prepared to cut the price.",
+        "We'd be prepared to cut the price.",
+        "We would be prepared to drop the price.",
+        "We would be prepared to bring the price down.",
+        "We'd be prepared to bring the price down."
+      ],
+      "distractors": ["were", "lowering", "low", "preparing"],
+      "explanation": "«Были бы готовы» — would be prepared to: would делает предложение предварительным. «Снизить» — глагол lower; low — прилагательное. После prepared идёт инфинитив с to, а не форма на -ing."
+    },
+    {
+      "type": "gap",
+      "sentence": "We might be able to offer a discount, ___ long as you pay within thirty days.",
+      "translation": "Возможно, мы сможем предложить скидку — при условии, что вы оплатите в течение тридцати дней.",
+      "options": ["as", "how", "such", "that"],
+      "answer": 0,
+      "explanation": "As long as — «при условии, что». К длине и времени это выражение отношения не имеет. После него, как и после if, стоит настоящее время: you pay."
+    },
+    {
+      "type": "dictation",
+      "audio": "That's as far as we can go on price.",
+      "translation": "По цене это предел того, на что мы можем пойти."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы обо всём договорились. Какой фразой естественно скрепить сделку?",
+      "options": ["It's a deal.", "It's a bargain.", "We are agree.", "It's an arrangement."],
+      "answer": 0,
+      "explanation": "It's a deal — «договорились, по рукам». It's a bargain значит «это выгодная покупка», а «We are agree» — грамматическая ошибка: agree — глагол."
+    }
+  ]
+}

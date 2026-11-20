@@ -1,0 +1,155 @@
+{
+  "id": "b1-24",
+  "level": "B1",
+  "order": 24,
+  "title": { "ru": "Although, even though, despite, in spite of, however: «хотя» и «несмотря на»", "en": "Contrast: although, even though, despite, in spite of, however" },
+  "goal": { "ru": "Научитесь противопоставлять две мысли: «хотя шёл дождь», «несмотря на дождь», «однако».", "en": "Learn to contrast two ideas: although it rained, despite the rain, however." },
+  "theory": [
+    {
+      "title": "Although и even though + предложение",
+      "body": "Although и even though значат «хотя», и после них идёт целое предложение с подлежащим и глаголом: although it was late. Even though сильнее — «даже несмотря на то, что». В разговоре часто говорят просто though. Эта часть может стоять и в начале, и в конце фразы.",
+      "examples": [
+        { "en": "Although the flat is small, it's very comfortable.", "ru": "Хотя квартира маленькая, она очень уютная." },
+        { "en": "She agreed to help even though she was very busy.", "ru": "Она согласилась помочь, хотя была очень занята." },
+        { "en": "I enjoyed the book, though the ending was strange.", "ru": "Книга мне понравилась, хотя конец был странный." }
+      ],
+      "tip": "По-русски можно сказать «хотя…, но…», по-английски — нет. Although it was cold, but we went out — ошибка: выберите либо although, либо but."
+    },
+    {
+      "title": "Despite и in spite of + существительное или -ing",
+      "body": "Despite и in spite of значат «несмотря на». После них стоит не предложение, а существительное, местоимение или глагол с -ing: despite the rain, in spite of being tired. Оба варианта значат одно и то же; despite чуть короче и чаще встречается на письме. Если нужно целое предложение, добавьте the fact that: despite the fact that it was raining.",
+      "examples": [
+        { "en": "We enjoyed the trip despite the bad weather.", "ru": "Поездка нам понравилась, несмотря на плохую погоду." },
+        { "en": "In spite of the noise, the baby slept all night.", "ru": "Несмотря на шум, малыш проспал всю ночь." },
+        { "en": "Despite feeling tired, he finished the race.", "ru": "Несмотря на усталость, он закончил забег." }
+      ],
+      "tip": "Despite — без of, in spite of — всегда с of. «Despite of the rain» и «in spite the rain» — ошибки."
+    },
+    {
+      "title": "However: однако",
+      "body": "However значит «однако» и соединяет не части одного предложения, а два отдельных предложения. Обычно оно стоит в начале второго предложения и отделяется запятой. Это слово звучит более официально, чем but, и часто встречается в письмах, отчётах и на экзаменах.",
+      "examples": [
+        { "en": "The hotel was expensive. However, the service was terrible.", "ru": "Отель был дорогой. Однако обслуживание было ужасное." },
+        { "en": "I like the idea. However, we don't have enough money.", "ru": "Идея мне нравится. Однако у нас недостаточно денег." },
+        { "en": "Prices have gone up. However, people are still buying.", "ru": "Цены выросли. Однако люди по-прежнему покупают." }
+      ],
+      "tip": "Перед however ставят точку, а после — запятую. Соединить им два предложения через одну запятую, как словом but, нельзя."
+    }
+  ],
+  "vocab": [
+    { "en": "although", "ru": "хотя", "example": "Although it's old, the car runs well." },
+    { "en": "even though", "ru": "хотя, даже несмотря на то что", "example": "He came even though he wasn't invited." },
+    { "en": "despite", "ru": "несмотря на", "example": "Despite the cold, we went swimming." },
+    { "en": "in spite of", "ru": "несмотря на", "example": "In spite of his age, he plays tennis every day." },
+    { "en": "however", "ru": "однако", "example": "It's a good plan. However, it will take time." },
+    { "en": "a delay", "ru": "задержка", "example": "There will be a delay of twenty minutes." },
+    { "en": "traffic", "ru": "дорожное движение, пробки", "example": "The traffic is terrible on Friday evenings." },
+    { "en": "to manage", "ru": "суметь, справиться", "example": "I don't know how you manage to stay so calm." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "although", "ru": "хотя" },
+        { "en": "despite", "ru": "несмотря на" },
+        { "en": "however", "ru": "однако" },
+        { "en": "a delay", "ru": "задержка" },
+        { "en": "to manage", "ru": "суметь, справиться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Несмотря на дождь, мы пошли гулять»?",
+      "options": ["Despite the rain, we went for a walk.", "Despite of the rain, we went for a walk.", "Although the rain, we went for a walk.", "In spite the rain, we went for a walk."],
+      "answer": 0,
+      "explanation": "The rain — существительное, поэтому нужно despite или in spite of. Despite употребляется без of, in spite — только с of, а после although должно идти целое предложение: although it was raining."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ he studied hard, he didn't pass the exam.",
+      "translation": "Хотя он много занимался, экзамен он не сдал.",
+      "options": ["Although", "Despite", "However", "In spite of"],
+      "answer": 0,
+      "explanation": "После пропуска идёт предложение с подлежащим и глаголом (he studied), значит, нужно although. Despite и in spite of требуют существительного или -ing, а however не соединяет части одного предложения."
+    },
+    {
+      "type": "translate",
+      "source": "Хотя было поздно, мы продолжили работать.",
+      "answer": "Although it was late, we continued working.",
+      "accept": ["Even though it was late, we continued working.", "Though it was late, we continued working.", "Although it was late, we continued to work.", "Even though it was late, we continued to work.", "Although it was late, we kept working.", "Even though it was late, we kept working.", "Although it was late, we kept on working.", "Although it was late, we carried on working.", "Even though it was late, we carried on working.", "Although it was late, we went on working.", "We continued working although it was late.", "We continued working even though it was late.", "We kept working although it was late.", "We kept working even though it was late.", "We carried on working although it was late."],
+      "distractors": ["despite", "but", "of"],
+      "explanation": "«Хотя» + предложение — although it was late. Слово but во второй части не нужно: по-английски «хотя…, но…» не говорят. Despite здесь не подходит, потому что дальше идёт предложение, а не существительное."
+    },
+    {
+      "type": "listen",
+      "audio": "In spite of the long delay, the passengers stayed calm.",
+      "question": "Как вели себя пассажиры?",
+      "options": ["Сохраняли спокойствие, хотя ждать пришлось долго", "Сердились из-за долгой задержки", "Ушли, не дождавшись отправления", "Были спокойны, потому что задержки не было"],
+      "answer": 0,
+      "explanation": "In spite of the long delay — «несмотря на долгую задержку»: задержка была, но она не помешала пассажирам stay calm — сохранять спокойствие."
+    },
+    {
+      "type": "gap",
+      "sentence": "She got the job ___ having no experience.",
+      "translation": "Она получила эту работу, несмотря на отсутствие опыта.",
+      "options": ["despite", "although", "even though", "however"],
+      "answer": 0,
+      "explanation": "После пропуска стоит форма на -ing (having), а её требует despite. С although и even though нужно было бы целое предложение: although she had no experience."
+    },
+    {
+      "type": "speak",
+      "text": "Even though I was tired, I couldn't sleep.",
+      "translation": "Хотя я устал, я не мог уснуть."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Although it was cold, but we went swimming.", "Although it was cold, we went swimming.", "Despite it was cold, we went swimming.", "In spite of it was cold, we went swimming."],
+      "answer": 1,
+      "explanation": "Although + предложение, и никакого but во второй части. После despite и in spite of предложение стоять не может — только существительное или -ing: despite the cold."
+    },
+    {
+      "type": "type",
+      "source": "Несмотря на пробки, мы приехали вовремя.",
+      "answer": "Despite the traffic, we arrived on time.",
+      "accept": ["In spite of the traffic, we arrived on time.", "We arrived on time despite the traffic.", "We arrived on time in spite of the traffic.", "Despite the traffic, we got there on time.", "In spite of the traffic, we got there on time.", "We got there on time despite the traffic.", "We got there on time in spite of the traffic.", "Despite the traffic jams, we arrived on time.", "In spite of the traffic jams, we arrived on time.", "We arrived on time despite the traffic jams.", "Despite the heavy traffic, we arrived on time.", "In spite of the heavy traffic, we arrived on time.", "Despite the traffic, we came on time.", "Despite the traffic, we arrived in time.", "In spite of the traffic, we arrived in time."],
+      "explanation": "«Несмотря на» + существительное — despite the traffic или in spite of the traffic. Следите за of: после despite его нет, после in spite он обязателен."
+    },
+    {
+      "type": "gap",
+      "sentence": "The film was very long. ___, I enjoyed every minute of it.",
+      "translation": "Фильм был очень длинный. Однако мне понравилась каждая его минута.",
+      "options": ["However", "Although", "Despite", "Even though"],
+      "answer": 0,
+      "explanation": "Пропуск стоит в начале нового предложения и отделён запятой — так употребляется только however. Although и even though начинают придаточную часть без запятой после себя, а despite требует существительного."
+    },
+    {
+      "type": "listen",
+      "audio": "Despite the high price, we decided to buy it.",
+      "question": "Что вы услышали?",
+      "options": ["Despite the high price, we decided to buy it.", "Despite of the high price, we decided to buy it.", "Despite the high prices, we decided to buy it.", "Despite the high price, we decided to try it."],
+      "answer": 0,
+      "explanation": "После despite сразу идёт существительное, без of: despite the high price. Price стоит в единственном числе, а в конце звучит buy — «купить», а не try."
+    },
+    {
+      "type": "translate",
+      "source": "Он пошёл на работу, хотя был болен.",
+      "answer": "He went to work even though he was ill.",
+      "accept": ["He went to work although he was ill.", "He went to work though he was ill.", "He went to work even though he was sick.", "He went to work although he was sick.", "He went to work though he was sick.", "Even though he was ill, he went to work.", "Although he was ill, he went to work.", "Even though he was sick, he went to work.", "Although he was sick, he went to work.", "He went to work despite being ill.", "He went to work in spite of being ill.", "He went to work despite being sick."],
+      "distractors": ["despite", "but", "however"],
+      "explanation": "После «хотя» идёт предложение he was ill, поэтому нужно even though или although. С despite пришлось бы сказать despite being ill, а however начинает отдельное предложение."
+    },
+    {
+      "type": "dictation",
+      "audio": "Although the test was hard, everyone passed.",
+      "translation": "Хотя тест был трудный, все его сдали."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «Despite leaving early, we missed the train»?",
+      "options": ["Мы опоздали на поезд, хотя вышли рано", "Мы успели на поезд, потому что вышли рано", "Мы вышли рано, чтобы не опоздать на поезд"],
+      "answer": 0,
+      "explanation": "Despite + -ing — «несмотря на то, что»: вышли рано, но результат оказался неожиданным — missed the train, «опоздали на поезд». Причину выражало бы because, цель — to или so that."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "b1-25",
+  "level": "B1",
+  "order": 25,
+  "title": { "ru": "Myself, yourself, each other: «себя», «сам» и «друг друга»", "en": "Reflexive pronouns and each other" },
+  "goal": { "ru": "Научитесь говорить «я сам», «порезался», «друг друга» и не добавлять myself там, где английскому оно не нужно.", "en": "Learn to use myself, by myself and each other, and not to add a reflexive pronoun where English doesn't need one." },
+  "theory": [
+    {
+      "title": "Myself, yourself, themselves: когда действие направлено на себя",
+      "body": "Русское «себя» одно на всех, а в английском у каждого лица своя форма: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Они нужны, когда подлежащее и дополнение — один и тот же человек: I cut myself — «я порезался». Русским глаголам на -ся здесь часто соответствует глагол + возвратное местоимение.",
+      "examples": [
+        { "en": "I cut myself while I was cooking.", "ru": "Я порезался, когда готовил." },
+        { "en": "She taught herself to play the guitar.", "ru": "Она сама научилась играть на гитаре." },
+        { "en": "He sometimes talks to himself.", "ru": "Он иногда разговаривает сам с собой." }
+      ],
+      "tip": "Во множественном числе — -selves: ourselves, yourselves, themselves. Форм «hisself» и «theirselves» не существует."
+    },
+    {
+      "title": "«Сам», by myself и готовые выражения",
+      "body": "Те же слова передают русское «сам»: I made it myself — «я сделал это сам», без чьей-либо помощи. By myself значит «один, в одиночку». Несколько выражений стоит запомнить целиком: enjoy yourself — «хорошо проводить время», help yourself — «угощайтесь», behave yourself — «веди себя хорошо».",
+      "examples": [
+        { "en": "I made this cake myself.", "ru": "Я сам испёк этот торт." },
+        { "en": "He went on holiday by himself.", "ru": "Он поехал в отпуск один." },
+        { "en": "Did you enjoy yourselves at the concert?", "ru": "Вам понравилось на концерте?" }
+      ],
+      "tip": "После enjoy обязательно что-то стоит: I enjoyed myself или I enjoyed the party. Просто «I enjoyed» — ошибка."
+    },
+    {
+      "title": "Где «себя» не нужно, и each other",
+      "body": "Многие русские глаголы с «себя» и на -ся в английском обходятся без возвратного местоимения: feel — «чувствовать себя», relax — «расслабиться», concentrate — «сосредоточиться», meet — «встретиться», get dressed — «одеться». А взаимное действие передаёт each other — «друг друга»: they looked at each other. Сравните: they looked at themselves — каждый смотрел на себя, например в зеркало.",
+      "examples": [
+        { "en": "I don't feel well today.", "ru": "Я сегодня плохо себя чувствую." },
+        { "en": "Sit down and relax.", "ru": "Сядьте и расслабьтесь." },
+        { "en": "My sister and I phone each other every day.", "ru": "Мы с сестрой звоним друг другу каждый день." }
+      ],
+      "tip": "«I feel myself good» — одна из самых частых ошибок русскоговорящих. Правильно: I feel good или I feel well."
+    }
+  ],
+  "vocab": [
+    { "en": "by myself", "ru": "один, в одиночку", "example": "I like travelling by myself." },
+    { "en": "each other", "ru": "друг друга", "example": "They help each other a lot." },
+    { "en": "to enjoy yourself", "ru": "хорошо проводить время", "example": "Enjoy yourself at the wedding!" },
+    { "en": "to help yourself", "ru": "угощаться, брать самому", "example": "Help yourself to some cake." },
+    { "en": "to behave", "ru": "вести себя", "example": "I hope the children behave well today." },
+    { "en": "to concentrate", "ru": "сосредоточиться", "example": "I can't concentrate when I'm hungry." },
+    { "en": "to hurt yourself", "ru": "ушибиться, пораниться", "example": "Be careful, or you'll hurt yourself." },
+    { "en": "to introduce yourself", "ru": "представиться", "example": "Please introduce yourself to the group." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "each other", "ru": "друг друга" },
+        { "en": "to enjoy yourself", "ru": "хорошо проводить время" },
+        { "en": "to help yourself", "ru": "угощаться" },
+        { "en": "to behave", "ru": "вести себя" },
+        { "en": "to concentrate", "ru": "сосредоточиться" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Я чувствую себя хорошо»?",
+      "options": ["I feel well.", "I feel myself well.", "I feel me well.", "I'm feel well."],
+      "answer": 0,
+      "explanation": "Английский глагол feel уже значит «чувствовать себя», поэтому myself после него не нужно. Me здесь тоже лишнее, а I'm feel — смесь двух форм: либо I feel, либо I'm feeling."
+    },
+    {
+      "type": "gap",
+      "sentence": "Be careful with that knife, or you'll cut ___.",
+      "translation": "Осторожнее с этим ножом, а то порежешься.",
+      "options": ["yourself", "you", "your", "myself"],
+      "answer": 0,
+      "explanation": "Подлежащее и дополнение — один и тот же человек (you), значит, нужно возвратное местоимение yourself. You cut you по-английски не говорят, а myself относится только к I."
+    },
+    {
+      "type": "translate",
+      "source": "Мы знаем друг друга десять лет.",
+      "answer": "We have known each other for ten years.",
+      "accept": ["We've known each other for ten years.", "We have known one another for ten years.", "We've known one another for ten years."],
+      "distractors": ["ourselves", "know", "since"],
+      "explanation": "«Друг друга» — each other: действие взаимное. Ourselves значило бы «самих себя». Знакомство длится до сих пор, поэтому нужен Present Perfect, а с периодом времени ставится for."
+    },
+    {
+      "type": "listen",
+      "audio": "My grandmother is ninety, but she still lives by herself.",
+      "question": "Что мы узнали о бабушке?",
+      "options": ["Она до сих пор живёт одна", "Она живёт вместе с семьёй", "Она недавно переехала", "Ей девятнадцать лет"],
+      "answer": 0,
+      "explanation": "By herself — «одна, самостоятельно», а still — «до сих пор». Ninety — девяносто; девятнадцать было бы nineteen, с ударением на втором слоге."
+    },
+    {
+      "type": "gap",
+      "sentence": "The children really enjoyed ___ at the zoo.",
+      "translation": "Детям очень понравилось в зоопарке.",
+      "options": ["themselves", "them", "theirselves", "itself"],
+      "answer": 0,
+      "explanation": "Enjoy yourself — «хорошо проводить время»; подлежащее the children — множественное число, значит, themselves. Формы theirselves не существует, а them означало бы каких-то других людей."
+    },
+    {
+      "type": "speak",
+      "text": "Help yourself to anything in the fridge.",
+      "translation": "Берите из холодильника всё, что хотите."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I can't concentrate myself on my work.", "I can't concentrate on my work.", "I can't concentrate me on my work.", "I can't to concentrate on my work."],
+      "answer": 1,
+      "explanation": "Concentrate — «сосредоточиться»: русское -ся уже внутри глагола, поэтому ни myself, ни me не нужны. После can't глагол стоит без to."
+    },
+    {
+      "type": "type",
+      "source": "Я хорошо провёл время на вечеринке.",
+      "answer": "I enjoyed myself at the party.",
+      "accept": ["I really enjoyed myself at the party.", "I had a good time at the party.", "I had a great time at the party.", "I had a nice time at the party.", "I had a lovely time at the party.", "I had fun at the party.", "I enjoyed the party.", "I really enjoyed the party."],
+      "explanation": "«Хорошо провести время» — enjoy yourself: I enjoyed myself. После enjoy обязательно нужно дополнение, поэтому I enjoyed at the party — ошибка. Можно сказать и I had a good time."
+    },
+    {
+      "type": "gap",
+      "sentence": "Anna and Tom haven't spoken to ___ since their argument.",
+      "translation": "Анна и Том не разговаривают друг с другом после ссоры.",
+      "options": ["each other", "themselves", "them", "each others"],
+      "answer": 0,
+      "explanation": "Действие взаимное: Анна не говорит с Томом, а Том — с Анной. Это each other. Spoken to themselves значило бы «говорили сами с собой», а формы each others не существует."
+    },
+    {
+      "type": "listen",
+      "audio": "Did you hurt yourself when you fell?",
+      "question": "Что вы услышали?",
+      "options": ["Did you hurt yourself when you fell?", "Did you hurt your leg when you fell?", "Did he hurt himself when he fell?", "Do you hurt yourself when you fall?"],
+      "answer": 0,
+      "explanation": "Hurt yourself — «ушибиться, пораниться»: возвратное местоимение yourself относится к you. Did и fell показывают прошедшее время."
+    },
+    {
+      "type": "translate",
+      "source": "Мы сами покрасили кухню.",
+      "answer": "We painted the kitchen ourselves.",
+      "accept": ["We painted our kitchen ourselves.", "We painted the kitchen by ourselves.", "We painted our kitchen by ourselves.", "We ourselves painted the kitchen.", "We painted the kitchen on our own.", "We painted our kitchen on our own."],
+      "distractors": ["ourself", "us", "themselves"],
+      "explanation": "«Сами», то есть без чужой помощи, — возвратное местоимение в конце фразы: ourselves. К we относится только ourselves, с окончанием -selves во множественном числе."
+    },
+    {
+      "type": "dictation",
+      "audio": "She looked at herself in the mirror.",
+      "translation": "Она посмотрела на себя в зеркало."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «I'd like to be by myself for a while»?",
+      "options": ["Я хочу немного побыть один", "Я хочу всё сделать сам", "Я хочу немного побыть самим собой"],
+      "answer": 0,
+      "explanation": "By myself — «один, в одиночестве». «Сделать сам» — do it myself, без by, а «быть самим собой» — be myself."
+    }
+  ]
+}

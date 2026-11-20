@@ -1,0 +1,214 @@
+{
+  "id": "c1-29",
+  "level": "C1",
+  "order": 29,
+  "title": { "ru": "Язык презентаций: как вести слушателя", "en": "The language of presentations: signposting" },
+  "goal": { "ru": "Научитесь вести слушателей по выступлению: I'd like to start by…, Moving on to…, To put it another way…, This brings me to…, To sum up…", "en": "Learn to guide your audience through a talk: I'd like to start by…, Moving on to…, To put it another way…, This brings me to…, To sum up…" },
+  "theory": [
+    {
+      "title": "Начало: тема и план",
+      "body": "Слушатель, в отличие от читателя, не видит заголовков, поэтому структуру выступления проговаривают вслух. В начале называют тему и план: I'd like to start by + форма на -ing, My talk is divided into three parts, First…, then…, finally… Тут же договариваются о вопросах: по ходу или в конце.",
+      "examples": [
+        { "en": "I'd like to start by thanking you all for coming.", "ru": "Я хотел бы начать с того, что поблагодарю всех вас за то, что пришли." },
+        { "en": "My talk is divided into three parts.", "ru": "Моё выступление состоит из трёх частей." },
+        { "en": "I'll be happy to take questions at the end.", "ru": "Я с удовольствием отвечу на вопросы в конце." }
+      ],
+      "tip": "«Начать с того, что…» — start by doing: после предлога by идёт форма на -ing. Start with употребляется с существительным: start with an overview. «Start from» здесь — калька."
+    },
+    {
+      "title": "Середина: переходы и пояснения",
+      "body": "Переход к новой теме объявляют: Moving on to…, Let's turn to…, This brings me to my next point. К сказанному возвращаются словами As I mentioned earlier. Сложную мысль повторяют проще: To put it another way или In other words. К слайду отсылают фразой If you look at this chart, you'll see…",
+      "examples": [
+        { "en": "Moving on to the question of cost, there are two options.", "ru": "Переходя к вопросу о стоимости: есть два варианта." },
+        { "en": "This brings me to my next point: staffing.", "ru": "Это подводит меня к следующему пункту — кадрам." },
+        { "en": "To put it another way, we are spending more than we earn.", "ru": "Иначе говоря, мы тратим больше, чем зарабатываем." }
+      ],
+      "tip": "«Как я уже говорил» — as I mentioned earlier или as I said earlier. «As I told before» — ошибка: после tell обязательно называют слушателя (as I told you), а before без уточнения звучит незаконченно."
+    },
+    {
+      "title": "Конец: итог и вопросы",
+      "body": "Финал тоже объявляют заранее: To sum up, In conclusion, Let me recap the main points. Последний пункт перечисления вводят словом finally. Завершают выступление фразой That brings me to the end of my talk, после которой благодарят слушателей и приглашают задавать вопросы.",
+      "examples": [
+        { "en": "To sum up, the pilot project has been a success.", "ru": "Подводя итог: пилотный проект оказался успешным." },
+        { "en": "Let me briefly recap the main points.", "ru": "Позвольте кратко повторить основные тезисы." },
+        { "en": "That brings me to the end of my presentation.", "ru": "На этом моя презентация подходит к концу." }
+      ],
+      "tip": "Не путайте finally и at last. Finally вводит последний пункт, а at last значит «наконец-то!» и выражает облегчение после долгого ожидания. И in conclusion говорят без артикля."
+    }
+  ],
+  "vocab": [
+    { "en": "I'd like to start by", "ru": "я хотел бы начать с того, что", "example": "I'd like to start by introducing myself." },
+    { "en": "moving on to", "ru": "переходя к", "example": "Moving on to sales, the picture is more positive." },
+    { "en": "to put it another way", "ru": "иначе говоря", "example": "To put it another way, we have no choice." },
+    { "en": "this brings me to", "ru": "это подводит меня к", "example": "This brings me to the main question." },
+    { "en": "to sum up", "ru": "подводя итог", "example": "To sum up, there are three things to remember." },
+    { "en": "to recap", "ru": "кратко повторить", "example": "Let me recap what we have covered so far." },
+    { "en": "as I mentioned earlier", "ru": "как я уже говорил", "example": "As I mentioned earlier, the deadline is fixed." },
+    { "en": "an overview", "ru": "общий обзор", "example": "The first slide gives an overview of the project." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "moving on to", "ru": "переходя к" },
+        { "en": "to put it another way", "ru": "иначе говоря" },
+        { "en": "to sum up", "ru": "подводя итог" },
+        { "en": "to recap", "ru": "кратко повторить" },
+        { "en": "an overview", "ru": "общий обзор" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "I'd like to start by giving you some background.",
+        "I'd like to start by give you some background.",
+        "I'd like to start from giving you some background.",
+        "I'd like to start with to give you some background."
+      ],
+      "answer": 0,
+      "explanation": "После предлога by глагол стоит в форме на -ing: start by giving. «Start from» — калька с русского «начать с», а после with нужен не инфинитив, а существительное."
+    },
+    {
+      "type": "gap",
+      "sentence": "This ___ me to the final part of my talk: our plans for next year.",
+      "translation": "Это подводит меня к заключительной части выступления — нашим планам на следующий год.",
+      "options": ["carries", "moves", "brings", "gives"],
+      "answer": 2,
+      "explanation": "This brings me to… — устойчивая формула перехода: предыдущая мысль «приводит» докладчика к следующей. Другие глаголы в ней не употребляются."
+    },
+    {
+      "type": "translate",
+      "source": "Подводя итог, проект был успешным.",
+      "answer": "To sum up, the project was a success.",
+      "accept": [
+        "To sum up, the project was successful.",
+        "To sum up, the project has been a success.",
+        "To sum up, the project has been successful.",
+        "In conclusion, the project was a success.",
+        "In conclusion, the project was successful.",
+        "In summary, the project was a success.",
+        "In summary, the project was successful.",
+        "To summarise, the project was a success.",
+        "To summarise, the project was successful.",
+        "To summarize, the project was a success.",
+        "To summarize, the project was successful.",
+        "Summing up, the project was a success.",
+        "Summing up, the project was successful."
+      ],
+      "distractors": ["resume", "lucky", "result", "at"],
+      "explanation": "To sum up — стандартное начало итоговой части. Resume — ложный друг: это «возобновить», а не «резюмировать». «Успешный проект» — a success или successful; lucky значит «везучий»."
+    },
+    {
+      "type": "listen",
+      "audio": "I'll keep it brief and take any questions at the end.",
+      "question": "Что обещает докладчик?",
+      "options": [
+        "Отвечать на вопросы по ходу выступления",
+        "Говорить коротко и ответить на вопросы в конце",
+        "Раздать краткое резюме в конце",
+        "Говорить долго, поэтому вопросов не будет"
+      ],
+      "answer": 1,
+      "explanation": "Keep it brief — «буду краток». Take questions — «отвечать на вопросы», а не «брать» их. At the end — «в конце выступления»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы закончили говорить о ценах и хотите перейти к срокам. С чего начать фразу?",
+      "options": [
+        "To sum up the timeline, …",
+        "Going back to prices, …",
+        "Moving at the timeline, …",
+        "Moving on to the timeline, …"
+      ],
+      "answer": 3,
+      "explanation": "Moving on to… объявляет переход к новой теме. To sum up подводит итог, going back to возвращает к прежней теме, а сочетания «moving at» не существует."
+    },
+    {
+      "type": "speak",
+      "text": "Let me give you a quick overview first.",
+      "translation": "Позвольте сначала дать вам краткий обзор."
+    },
+    {
+      "type": "gap",
+      "sentence": "As I ___ earlier, sales have doubled since January.",
+      "translation": "Как я уже говорил, с января продажи выросли вдвое.",
+      "options": ["told", "mentioned", "talked", "spoke"],
+      "answer": 1,
+      "explanation": "As I mentioned earlier — готовая формула отсылки к сказанному. После told нужно назвать слушателя (as I told you), а talked и spoke требуют предлога about."
+    },
+    {
+      "type": "type",
+      "source": "Другими словами, нам нужно больше времени.",
+      "answer": "In other words, we need more time.",
+      "accept": [
+        "To put it another way, we need more time.",
+        "Put another way, we need more time.",
+        "To put it differently, we need more time.",
+        "Put differently, we need more time.",
+        "That is to say, we need more time.",
+        "In other words, we need some more time.",
+        "In other words, we require more time."
+      ],
+      "explanation": "In other words и to put it another way вводят ту же мысль, сказанную проще. Other стоит без артикля и без -s: «in another words» и «by other words» — ошибки."
+    },
+    {
+      "type": "listen",
+      "audio": "If you look at this chart, you'll see a clear upward trend.",
+      "question": "Что вы услышали?",
+      "options": [
+        "If you look on this chart, you'll see a clear upward trend.",
+        "If you will look at this chart, you'll see a clear upward trend.",
+        "If you look at this chart, you'll see a clear upward trend.",
+        "If you look at this chart, you'll see a clear upward trending."
+      ],
+      "answer": 2,
+      "explanation": "«Посмотреть на» — look at, а не look on. После if в условном предложении стоит настоящее время, will появляется только в главной части: you'll see."
+    },
+    {
+      "type": "translate",
+      "source": "Давайте перейдём к следующему вопросу.",
+      "answer": "Let's move on to the next point.",
+      "accept": [
+        "Let us move on to the next point.",
+        "Let's move on to the next question.",
+        "Let us move on to the next question.",
+        "Let's move on to the next issue.",
+        "Let's move on to the next item.",
+        "Let's move to the next point.",
+        "Let's move to the next question.",
+        "Let's turn to the next point.",
+        "Let's turn to the next question.",
+        "Let's go on to the next point.",
+        "Let's go on to the next question."
+      ],
+      "distractors": ["cross", "following", "at", "moving"],
+      "explanation": "«Перейти к» в выступлении — move on to: on показывает движение дальше, to — направление. После let's глагол стоит в начальной форме, без -ing."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ conclusion, I'd like to stress three things.",
+      "translation": "В заключение я хотел бы подчеркнуть три момента.",
+      "options": ["At", "As", "On", "In"],
+      "answer": 3,
+      "explanation": "In conclusion — устойчивое выражение с предлогом in и без артикля. Так объявляют, что выступление подходит к концу."
+    },
+    {
+      "type": "dictation",
+      "audio": "My talk is divided into three parts.",
+      "translation": "Моё выступление состоит из трёх частей."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какой фразой докладчик вводит последний пункт своего плана?",
+      "options": [
+        "At last, let's look at the budget.",
+        "Finally, let's look at the budget.",
+        "In the end, let's look at the budget.",
+        "At the end, let's look at the budget."
+      ],
+      "answer": 1,
+      "explanation": "Finally вводит последний пункт перечисления. At last значит «наконец-то!» и выражает облегчение, in the end — «в итоге, в конце концов», а at the end требует продолжения: at the end of the talk."
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "c1-28",
+  "level": "C1",
+  "order": 28,
+  "title": { "ru": "Академические и официальные словосочетания", "en": "Academic and formal collocations" },
+  "goal": { "ru": "Научитесь писать и говорить в академическом стиле: draw a conclusion, pose a threat, raise an issue, reach a consensus, conduct research, shed light on, address a problem.", "en": "Learn to write and speak in an academic style: draw a conclusion, pose a threat, raise an issue, reach a consensus, conduct research, shed light on, address a problem." },
+  "theory": [
+    {
+      "title": "Исследования и выводы",
+      "body": "В научной и официальной речи существительное «выбирает» себе глагол, и русский перевод тут плохой помощник. Исследование проводят глаголом conduct или carry out, выводы — draw, свет на проблему — shed, доказательства — provide. Слова research и evidence неисчисляемые: без артикля a и без множественного числа.",
+      "examples": [
+        { "en": "The team conducted research into sleep disorders.", "ru": "Группа провела исследование нарушений сна." },
+        { "en": "What conclusions can be drawn from these figures?", "ru": "Какие выводы можно сделать из этих цифр?" },
+        { "en": "The study sheds new light on the causes of the disease.", "ru": "Исследование проливает новый свет на причины болезни." }
+      ],
+      "tip": "«Сделать вывод» — draw, reach или come to a conclusion. «Make a conclusion» — калька. А одно исследование — a study или a piece of research, но не «a research»."
+    },
+    {
+      "title": "Проблемы и угрозы",
+      "body": "Угрозу, риск и трудность представляют глаголом pose: pose a threat to something. Вопрос или тему поднимают — raise an issue, raise concerns. За решение проблемы берутся глаголом address, и после него нет предлога: address a problem. Это ещё не «решить»: окончательно проблему решают глаголами solve и resolve.",
+      "examples": [
+        { "en": "Rising sea levels pose a serious threat to coastal cities.", "ru": "Повышение уровня моря представляет серьёзную угрозу для прибрежных городов." },
+        { "en": "Several members raised the issue of funding.", "ru": "Несколько членов комитета подняли вопрос о финансировании." },
+        { "en": "The government has failed to address the problem.", "ru": "Правительство так и не занялось этой проблемой." }
+      ],
+      "tip": "«Представлять угрозу» — не represent и тем более не imagine, а pose. И «address to a problem» — ошибка: предлог to появляется, только когда address значит «обращаться к кому-то»."
+    },
+    {
+      "title": "Согласие, роль, учёт",
+      "body": "К согласию, решению и компромиссу приходят глаголом reach, и он тоже обходится без предлога: reach a consensus, reach an agreement. Роль играют — play a role in something. Принять во внимание — take something into account, без артикля. Требованиям соответствуют глаголом meet: meet the requirements.",
+      "examples": [
+        { "en": "The committee failed to reach a consensus.", "ru": "Комитету не удалось прийти к единому мнению." },
+        { "en": "Diet plays a key role in preventing heart disease.", "ru": "Питание играет ключевую роль в профилактике болезней сердца." },
+        { "en": "All these factors must be taken into account.", "ru": "Все эти факторы необходимо принять во внимание." }
+      ],
+      "tip": "Русское «прийти к» тянет за собой предлог, но «reach to a consensus» — ошибка. С предлогом употребляются другие глаголы: come to an agreement, arrive at a decision."
+    }
+  ],
+  "vocab": [
+    { "en": "to draw a conclusion", "ru": "сделать вывод", "example": "It would be unwise to draw conclusions from a single case." },
+    { "en": "to pose a threat", "ru": "представлять угрозу", "example": "The virus poses no threat to humans." },
+    { "en": "to raise an issue", "ru": "поднять вопрос", "example": "She raised the issue at the last board meeting." },
+    { "en": "to reach a consensus", "ru": "прийти к единому мнению", "example": "Experts have yet to reach a consensus on the matter." },
+    { "en": "to conduct research", "ru": "проводить исследование", "example": "The institute conducts research into climate change." },
+    { "en": "to shed light on", "ru": "пролить свет на", "example": "The letters shed light on his early life." },
+    { "en": "to address a problem", "ru": "заняться решением проблемы", "example": "The new policy aims to address the problem of homelessness." },
+    { "en": "to take into account", "ru": "принимать во внимание", "example": "The price does not take delivery into account." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to draw a conclusion", "ru": "сделать вывод" },
+        { "en": "to pose a threat", "ru": "представлять угрозу" },
+        { "en": "to reach a consensus", "ru": "прийти к единому мнению" },
+        { "en": "to shed light on", "ru": "пролить свет на" },
+        { "en": "to address a problem", "ru": "заняться решением проблемы" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "She is doing a research on urban transport.",
+        "She is conducting researches into urban transport.",
+        "She is making research about urban transport.",
+        "She is conducting research into urban transport."
+      ],
+      "answer": 3,
+      "explanation": "Research — неисчисляемое слово: ни артикля a, ни окончания -s. Исследование «проводят» глаголом conduct или carry out, а его предмет вводят предлогом into или on."
+    },
+    {
+      "type": "gap",
+      "sentence": "The newly released documents ___ light on how the decision was made.",
+      "translation": "Недавно обнародованные документы проливают свет на то, как принималось решение.",
+      "options": ["shed", "spill", "pour", "drop"],
+      "answer": 0,
+      "explanation": "Свет «проливают» только глаголом shed: shed light on something. Spill и pour — проливать и лить жидкость в буквальном смысле; в этом выражении они не употребляются."
+    },
+    {
+      "type": "translate",
+      "source": "Загрязнение воздуха представляет серьёзную угрозу здоровью.",
+      "answer": "Air pollution poses a serious threat to health.",
+      "accept": [
+        "Air pollution poses a serious threat to our health.",
+        "Air pollution poses a serious threat to human health.",
+        "Air pollution poses a serious threat to people's health.",
+        "Air pollution poses a serious threat to public health.",
+        "Air pollution poses a major threat to health.",
+        "Air pollution poses a serious health threat.",
+        "Air pollution poses a serious danger to health.",
+        "Air pollution presents a serious threat to health.",
+        "Air pollution represents a serious threat to health.",
+        "Air pollution is a serious threat to health."
+      ],
+      "distractors": ["puts", "for", "imagines", "of"],
+      "explanation": "«Представлять угрозу» — pose a threat. Imagine значит «представлять себе» и сюда не подходит. Угроза чему-то — threat to, а не for."
+    },
+    {
+      "type": "listen",
+      "audio": "The report raises serious concerns about how the data was collected.",
+      "question": "Что говорится в отчёте?",
+      "options": [
+        "В нём хвалят способ сбора данных",
+        "В нём выражена серьёзная обеспокоенность тем, как собирались данные",
+        "В нём предлагают собрать больше данных",
+        "В нём сообщается, что данные были утеряны"
+      ],
+      "answer": 1,
+      "explanation": "Raise concerns — «выразить обеспокоенность»: тот же глагол, что в raise an issue. Concerns здесь — сомнения и тревога, а не «концерны»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "We need to address to this problem urgently.",
+        "We need to address on this problem urgently.",
+        "We need to address this problem urgently.",
+        "We need to address with this problem urgently."
+      ],
+      "answer": 2,
+      "explanation": "Address в значении «заняться проблемой» — переходный глагол: дополнение идёт сразу, без предлога. Русское «обратиться к проблеме» подсказывает лишнее to."
+    },
+    {
+      "type": "speak",
+      "text": "I'd like to raise the issue of staff training.",
+      "translation": "Я хотел бы поднять вопрос об обучении персонала."
+    },
+    {
+      "type": "gap",
+      "sentence": "After five hours of debate, the board finally ___ a consensus.",
+      "translation": "После пяти часов обсуждения совет директоров наконец пришёл к единому мнению.",
+      "options": ["arrived", "came", "reached", "went"],
+      "answer": 2,
+      "explanation": "Reach употребляется без предлога: reach a consensus. Arrive и come потребовали бы предлога — arrived at a consensus, came to a consensus, — а в предложении его нет."
+    },
+    {
+      "type": "type",
+      "source": "Мы должны принять это во внимание.",
+      "answer": "We must take this into account.",
+      "accept": [
+        "We must take it into account.",
+        "We must take that into account.",
+        "We have to take this into account.",
+        "We have to take it into account.",
+        "We have to take that into account.",
+        "We need to take this into account.",
+        "We need to take it into account.",
+        "We need to take that into account.",
+        "We should take this into account.",
+        "We should take it into account.",
+        "We've got to take this into account.",
+        "We must take this into consideration.",
+        "We must take it into consideration.",
+        "We have to take this into consideration.",
+        "We need to take this into consideration.",
+        "We must take account of this.",
+        "We must bear this in mind.",
+        "We must bear it in mind."
+      ],
+      "explanation": "Take something into account — «принять во внимание»: дополнение стоит между глаголом и into, а перед account нет артикля. «Take into attention» — калька."
+    },
+    {
+      "type": "listen",
+      "audio": "Trust plays a crucial role in any negotiation.",
+      "question": "Что вы услышали?",
+      "options": [
+        "Trust plays a crucial role on any negotiation.",
+        "Trust plays a crucial role in any negotiation.",
+        "Trust play a crucial role in any negotiation.",
+        "Trust plays a crucial rule in any negotiation."
+      ],
+      "answer": 1,
+      "explanation": "Play a role in — «играть роль в чём-то», с предлогом in. Role — «роль», rule — «правило». Trust — неисчисляемое существительное в единственном числе, поэтому plays."
+    },
+    {
+      "type": "translate",
+      "source": "Какие выводы мы можем сделать из этого?",
+      "answer": "What conclusions can we draw from this?",
+      "accept": [
+        "What conclusions can we draw from that?",
+        "What conclusions can we draw from it?",
+        "Which conclusions can we draw from this?",
+        "What conclusion can we draw from this?",
+        "What conclusions can we reach from this?",
+        "What conclusions can be drawn from this?",
+        "What can we conclude from this?"
+      ],
+      "distractors": ["make", "do", "of", "outputs"],
+      "explanation": "Выводы «делают» глаголом draw: draw conclusions from something. Make и do — калька с русского. Output — «выход продукции» или «вывод данных», но не логический вывод."
+    },
+    {
+      "type": "gap",
+      "sentence": "The study provides strong ___ that regular exercise improves memory.",
+      "translation": "Исследование даёт веские доказательства того, что регулярные физические нагрузки улучшают память.",
+      "options": ["evidences", "an evidence", "evidence", "proofs"],
+      "answer": 2,
+      "explanation": "Evidence — неисчисляемое существительное: без артикля a и без -s, хотя по-русски «доказательства» во множественном числе. Proof в этом значении тоже неисчисляемое."
+    },
+    {
+      "type": "dictation",
+      "audio": "The government has failed to address the problem.",
+      "translation": "Правительство так и не занялось этой проблемой."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «провести опрос» в официальном стиле?",
+      "options": ["to spend a survey", "to pass a survey", "to hold a research", "to conduct a survey"],
+      "answer": 3,
+      "explanation": "Опросы, исследования и эксперименты «проводят» глаголом conduct или carry out. Spend — проводить время, pass — проходить мимо или сдавать экзамен, а research неисчисляемое и артикля a не допускает."
+    }
+  ]
+}

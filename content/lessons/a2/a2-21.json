@@ -1,0 +1,171 @@
+{
+  "id": "a2-21",
+  "level": "A2",
+  "order": 21,
+  "title": { "ru": "Если и когда: условие и время в будущем", "en": "First conditional and time clauses" },
+  "goal": { "ru": "Научитесь говорить, что произойдёт, если или когда случится что-то другое.", "en": "Learn to say what will happen if or when something else happens." },
+  "theory": [
+    {
+      "title": "If + настоящее время, will — в главной части",
+      "body": "О реальном условии в будущем говорят так: в части с if — Present Simple, в главной части — will. If it rains, we'll stay at home — «Если пойдёт дождь, мы останемся дома». По-русски будущее время стоит в обеих частях, поэтому хочется сказать «if it will rain». Но после if will не ставят.",
+      "examples": [
+        { "en": "If it rains, we'll stay at home.", "ru": "Если пойдёт дождь, мы останемся дома." },
+        { "en": "If you are late, I'll wait for you.", "ru": "Если вы опоздаете, я вас подожду." },
+        { "en": "If she doesn't call, I'll write to her.", "ru": "Если она не позвонит, я ей напишу." }
+      ],
+      "tip": "Части можно поменять местами: We'll stay at home if it rains. Запятая нужна, только когда if стоит в начале."
+    },
+    {
+      "title": "When, as soon as, before, after, until",
+      "body": "То же правило действует после слов времени: when (когда), as soon as (как только), before (до того как), after (после того как), until (пока не). О будущем после них говорят в настоящем времени: When I get home, I'll call you. «When I will get home» — ошибка, хотя по-русски здесь «когда я приду».",
+      "examples": [
+        { "en": "When I get home, I'll call you.", "ru": "Когда я приду домой, я вам позвоню." },
+        { "en": "I'll text you as soon as the meeting finishes.", "ru": "Я напишу вам, как только закончится совещание." },
+        { "en": "We'll have dinner before the film starts.", "ru": "Мы поужинаем до того, как начнётся фильм." }
+      ],
+      "tip": "После until отрицание не нужно: until he comes — «пока он не придёт». «Until he doesn't come» — калька с русского."
+    },
+    {
+      "title": "If или when?",
+      "body": "If говорят, когда не уверены, что это случится: If I see Anna, I'll tell her — может быть, увижу, а может быть, нет. When — когда уверены, что это произойдёт, и вопрос только во времени: When I see Anna, I'll tell her. Отрицание и вопрос в главной части строятся как обычно: won't и Will you…?",
+      "examples": [
+        { "en": "If I find your keys, I'll bring them to you.", "ru": "Если я найду ваши ключи, я вам их принесу." },
+        { "en": "When I finish this book, I'll give it to you.", "ru": "Когда я дочитаю эту книгу, я дам её вам." },
+        { "en": "What will you do if the shop is closed?", "ru": "Что вы будете делать, если магазин будет закрыт?" }
+      ],
+      "tip": "Отрицание после if тоже в настоящем времени: If it doesn't rain, we'll go to the park."
+    }
+  ],
+  "vocab": [
+    { "en": "to miss", "ru": "опоздать на (транспорт), пропустить", "example": "Hurry up, or we'll miss the bus." },
+    { "en": "as soon as", "ru": "как только", "example": "Call me as soon as you can." },
+    { "en": "until", "ru": "до; пока не", "example": "The shop is open until nine." },
+    { "en": "to arrive", "ru": "приезжать, прибывать", "example": "The train arrives at six." },
+    { "en": "to pass", "ru": "сдать (экзамен)", "example": "I hope you pass your driving test." },
+    { "en": "umbrella", "ru": "зонт", "example": "Take an umbrella with you." },
+    { "en": "to hurry", "ru": "спешить, торопиться", "example": "We don't need to hurry." },
+    { "en": "to be late", "ru": "опаздывать", "example": "Sorry, I'm late." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to miss", "ru": "опоздать на (транспорт)" },
+        { "en": "as soon as", "ru": "как только" },
+        { "en": "until", "ru": "пока не" },
+        { "en": "to arrive", "ru": "прибывать" },
+        { "en": "umbrella", "ru": "зонт" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Если завтра пойдёт снег, мы никуда не поедем»?",
+      "options": ["If it snows tomorrow, we won't go anywhere.", "If it will snow tomorrow, we won't go anywhere.", "If it snow tomorrow, we won't go anywhere.", "If it will snow tomorrow, we don't go anywhere."],
+      "answer": 0,
+      "explanation": "После if о будущем говорят в Present Simple: if it snows. Будущее стоит только в главной части: we won't go. «If it will snow» — калька с русского «если пойдёт»."
+    },
+    {
+      "type": "gap",
+      "sentence": "If you ___ now, you'll catch the last train.",
+      "translation": "Если вы выйдете сейчас, вы успеете на последний поезд.",
+      "options": ["leave", "will leave", "left", "leaving"],
+      "answer": 0,
+      "explanation": "В части с if — настоящее время, хотя речь о будущем: if you leave. Will уже есть в главной части: you'll catch."
+    },
+    {
+      "type": "listen",
+      "audio": "I'll call you as soon as I get to the hotel.",
+      "question": "Когда говорящий позвонит?",
+      "options": ["Как только доберётся до отеля", "Перед тем как поедет в отель", "Завтра утром", "Когда уедет из отеля"],
+      "answer": 0,
+      "explanation": "As soon as — «как только». После него стоит настоящее время (I get), хотя действие в будущем: «как только доберусь»."
+    },
+    {
+      "type": "translate",
+      "source": "Если у меня будет время, я вам помогу.",
+      "answer": "If I have time, I'll help you.",
+      "accept": ["If I have time, I will help you.", "I'll help you if I have time.", "I will help you if I have time.", "If I have the time, I'll help you.", "If I have the time, I will help you."],
+      "distractors": ["will", "had", "am"],
+      "explanation": "«Будет время» после if — это if I have time, в настоящем. «If I will have time» — самая частая ошибка в таких предложениях."
+    },
+    {
+      "type": "gap",
+      "sentence": "We'll wait here until the rain ___.",
+      "translation": "Мы подождём здесь, пока дождь не закончится.",
+      "options": ["stops", "will stop", "doesn't stop", "won't stop"],
+      "answer": 0,
+      "explanation": "После until — настоящее время и без отрицания: until the rain stops. Русское «пока не закончится» подсказывает и will, и not, но в английском не нужно ни то, ни другое."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["When I get home, I'll cook dinner.", "When I will get home, I'll cook dinner.", "When I'll get home, I cook dinner.", "When I getting home, I'll cook dinner."],
+      "answer": 0,
+      "explanation": "После when о будущем говорят в Present Simple: when I get home. Will остаётся только в главной части: I'll cook."
+    },
+    {
+      "type": "speak",
+      "text": "If you're tired, we'll take a taxi.",
+      "translation": "Если вы устали, мы возьмём такси."
+    },
+    {
+      "type": "type",
+      "source": "Когда я приеду, я вам позвоню.",
+      "answer": "When I arrive, I'll call you.",
+      "accept": [
+        "When I arrive, I will call you.",
+        "I'll call you when I arrive.",
+        "I will call you when I arrive.",
+        "When I get there, I'll call you.",
+        "When I get there, I will call you.",
+        "I'll call you when I get there.",
+        "I will call you when I get there.",
+        "When I come, I'll call you.",
+        "When I come, I will call you.",
+        "When I arrive, I'll phone you.",
+        "When I arrive, I will phone you.",
+        "I'll phone you when I arrive.",
+        "I will phone you when I arrive.",
+        "When I arrive, I'll ring you.",
+        "I'll ring you when I arrive."
+      ],
+      "explanation": "«Когда приеду» — when I arrive, в настоящем времени. Будущее с will стоит только во второй части: I'll call you."
+    },
+    {
+      "type": "listen",
+      "audio": "If the weather is good on Saturday, we'll have lunch in the garden.",
+      "question": "Что будет в субботу, если погода будет хорошей?",
+      "options": ["Обед в саду", "Прогулка в парке", "Обед в ресторане", "Поездка за город"],
+      "answer": 0,
+      "explanation": "If the weather is good — «если погода будет хорошей»: после if стоит is, а не will be. We'll have lunch in the garden — «пообедаем в саду»."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ I see Anna tomorrow, I'll give her your book. I'm not sure she'll be at work.",
+      "translation": "Если я завтра увижу Анну, я отдам ей вашу книгу. Я не уверен, что она будет на работе.",
+      "options": ["If", "When", "Until", "Before"],
+      "answer": 0,
+      "explanation": "Говорящий не уверен, что встретит Анну, поэтому if. When значило бы, что встреча точно состоится."
+    },
+    {
+      "type": "translate",
+      "source": "Она не придёт, если вы её не пригласите.",
+      "answer": "She won't come if you don't invite her.",
+      "accept": ["She will not come if you do not invite her.", "She won't come if you do not invite her.", "She will not come if you don't invite her.", "If you don't invite her, she won't come.", "If you do not invite her, she will not come."],
+      "distractors": ["will", "doesn't", "didn't"],
+      "explanation": "В главной части — будущее: she won't come. После if — настоящее: if you don't invite, а не «if you won't invite»."
+    },
+    {
+      "type": "dictation",
+      "audio": "If we miss the bus, we'll walk.",
+      "translation": "Если мы опоздаем на автобус, мы пойдём пешком."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы точно закончите работу и после этого позвоните другу. Как это сказать?",
+      "options": ["I'll call you when I finish work.", "I'll call you if I finish work.", "I'll call you when I'll finish work.", "I call you when I will finish work."],
+      "answer": 0,
+      "explanation": "Вы уверены, что закончите работу, поэтому when, а не if. После when — настоящее время: when I finish, без will."
+    }
+  ]
+}

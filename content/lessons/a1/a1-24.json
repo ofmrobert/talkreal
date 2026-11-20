@@ -1,0 +1,157 @@
+{
+  "id": "a1-24",
+  "level": "A1",
+  "order": 24,
+  "title": { "ru": "Погода, времена года и месяцы", "en": "Weather, seasons and months" },
+  "goal": { "ru": "Научитесь говорить о погоде сегодня и в разное время года.", "en": "Learn to talk about the weather today and in different seasons." },
+  "theory": [
+    {
+      "title": "It's sunny: без it нельзя",
+      "body": "По-русски о погоде хватает одного слова: «Холодно», «Солнечно». В английском предложению нужны подлежащее и глагол, поэтому говорят It is cold. Слово it здесь ничего не значит, оно просто занимает место подлежащего. «Is cold» и «Cold today» — ошибки. Спросить о погоде: What's the weather like?",
+      "examples": [
+        { "en": "It's sunny today.", "ru": "Сегодня солнечно." },
+        { "en": "It's cold and windy.", "ru": "Холодно и ветрено." },
+        { "en": "What's the weather like in London? — It's cloudy.", "ru": "Какая погода в Лондоне? — Облачно." }
+      ],
+      "tip": "О вчерашней погоде — с was: It was hot yesterday."
+    },
+    {
+      "title": "It's raining и it rains",
+      "body": "Rain и snow в английском — глаголы. Если дождь идёт прямо сейчас, это Present Continuous: It's raining. Если так бывает обычно — Present Simple: It often rains in autumn. По-русски дождь «идёт», но с глаголом go о дожде не говорят: только it rains, it's raining.",
+      "examples": [
+        { "en": "Take an umbrella. It's raining.", "ru": "Возьми зонт. Идёт дождь." },
+        { "en": "It snows a lot here in winter.", "ru": "Зимой здесь часто идёт снег." },
+        { "en": "It isn't raining now.", "ru": "Сейчас дождя нет." }
+      ],
+      "tip": "Sunny, windy, cloudy — прилагательные, с ними просто is: It's windy. А rain — глагол: It's raining, а не «It's rain»."
+    },
+    {
+      "title": "In winter, in July",
+      "body": "Времена года — spring, summer, autumn, winter — и месяцы употребляются с in и без артикля: in winter, in July. Месяцы пишут с большой буквы: January, February, March, April, May, June, July, August, September, October, November, December. Времена года — с маленькой.",
+      "examples": [
+        { "en": "In winter it's cold and it snows.", "ru": "Зимой холодно и идёт снег." },
+        { "en": "Her birthday is in March.", "ru": "Её день рождения в марте." },
+        { "en": "It's very hot here in July.", "ru": "В июле здесь очень жарко." }
+      ],
+      "tip": "В Британии осень — autumn, в США говорят fall."
+    }
+  ],
+  "vocab": [
+    { "en": "weather", "ru": "погода", "example": "The weather is nice today." },
+    { "en": "sunny", "ru": "солнечный, солнечно", "example": "It's a sunny day." },
+    { "en": "windy", "ru": "ветреный, ветрено", "example": "It's always windy here." },
+    { "en": "cloudy", "ru": "облачный, облачно", "example": "It's cloudy in the morning." },
+    { "en": "warm", "ru": "тёплый, тепло", "example": "It's warm in the kitchen." },
+    { "en": "to snow", "ru": "идти (о снеге)", "example": "It never snows here." },
+    { "en": "spring", "ru": "весна", "example": "I love spring." },
+    { "en": "summer", "ru": "лето", "example": "Summer is my favourite season." },
+    { "en": "autumn", "ru": "осень", "example": "Autumn is beautiful here." },
+    { "en": "winter", "ru": "зима", "example": "Winter is long in Russia." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "weather", "ru": "погода" },
+        { "en": "sunny", "ru": "солнечно" },
+        { "en": "windy", "ru": "ветрено" },
+        { "en": "cloudy", "ru": "облачно" },
+        { "en": "warm", "ru": "тепло" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Сегодня холодно»?",
+      "options": ["Is cold today.", "Today cold.", "It's cold today.", "It cold today."],
+      "answer": 2,
+      "explanation": "В английском предложении должны быть подлежащее и глагол, поэтому о погоде говорят с it is: It's cold. По-русски хватает одного слова «холодно», а здесь нужны и it, и is."
+    },
+    {
+      "type": "gap",
+      "sentence": "Take your umbrella. It's ___.",
+      "translation": "Возьми зонт. Идёт дождь.",
+      "options": ["rain", "raining", "rains", "to rain"],
+      "answer": 1,
+      "explanation": "Дождь идёт прямо сейчас, поэтому Present Continuous: is и глагол с -ing — It's raining. «It's rain» сказать нельзя: rain здесь глагол."
+    },
+    {
+      "type": "listen",
+      "audio": "It's sunny today, but it's very cold.",
+      "question": "Какая сегодня погода?",
+      "options": ["Солнечно, но холодно", "Солнечно и тепло", "Облачно и холодно", "Ветрено, но тепло"],
+      "answer": 0,
+      "explanation": "Sunny — «солнечно», very cold — «очень холодно». Слово but соединяет хорошую новость с плохой."
+    },
+    {
+      "type": "translate",
+      "source": "Зимой здесь холодно.",
+      "answer": "It is cold here in winter.",
+      "accept": ["It's cold here in winter.", "In winter it is cold here.", "In winter it's cold here.", "It is cold in winter here.", "It's cold in winter here.", "Here it is cold in winter.", "Here it's cold in winter.", "It is cold here in the winter.", "It's cold here in the winter."],
+      "distractors": ["at", "on", "are"],
+      "explanation": "Со временами года — in: in winter. А «холодно» — это it is cold: без it и is предложения не получится."
+    },
+    {
+      "type": "gap",
+      "sentence": "It often ___ in autumn.",
+      "translation": "Осенью часто идёт дождь.",
+      "options": ["rain", "rains", "raining", "is rain"],
+      "answer": 1,
+      "explanation": "Often показывает, что так бывает обычно, значит, Present Simple. С it глагол получает -s: it rains."
+    },
+    {
+      "type": "speak",
+      "text": "What's the weather like today?",
+      "translation": "Какая сегодня погода?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["My birthday is on July.", "In summer is hot.", "It's snowing now.", "It's wind today."],
+      "answer": 2,
+      "explanation": "It's snowing — снег идёт сейчас, всё верно. В остальных ошибки: с месяцами нужен in — in July; после in summer пропущено it — it's hot; а «ветрено» — это прилагательное windy."
+    },
+    {
+      "type": "translate",
+      "source": "Мой день рождения в мае.",
+      "answer": "My birthday is in May.",
+      "accept": ["My birthday's in May."],
+      "distractors": ["on", "at", "the"],
+      "explanation": "С месяцами — in и без артикля: in May. On нужен для дней недели, at — для точного времени."
+    },
+    {
+      "type": "listen",
+      "audio": "In spring it's warm here, but it rains a lot.",
+      "question": "Какая здесь весна?",
+      "options": ["Тёплая, но дождливая", "Холодная и дождливая", "Тёплая и солнечная", "Жаркая и ветреная"],
+      "answer": 0,
+      "explanation": "It's warm — «тепло», it rains a lot — «часто идёт дождь». In spring — «весной»."
+    },
+    {
+      "type": "gap",
+      "sentence": "We usually go to the sea ___ August.",
+      "translation": "Обычно мы ездим на море в августе.",
+      "options": ["on", "at", "in", "to"],
+      "answer": 2,
+      "explanation": "Перед месяцем стоит in: in August. По-русски тоже «в августе», но в английском «в» бывает и in, и on, и at — с месяцами только in."
+    },
+    {
+      "type": "type",
+      "source": "Сейчас идёт снег.",
+      "answer": "It is snowing now.",
+      "accept": ["It's snowing now.", "It is snowing.", "It's snowing.", "Now it is snowing.", "Now it's snowing.", "It is snowing right now.", "It's snowing right now.", "It is snowing at the moment.", "It's snowing at the moment."],
+      "explanation": "«Сейчас» — значит, Present Continuous: It is snowing. Слова «снег» и «идёт» по отдельности не переводят: snow здесь глагол."
+    },
+    {
+      "type": "dictation",
+      "audio": "It was very windy yesterday.",
+      "translation": "Вчера было очень ветрено."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спрашивают: «What's the weather like?» Что ответить?",
+      "options": ["Yes, I like it.", "It's warm and sunny.", "I like summer.", "It's in winter."],
+      "answer": 1,
+      "explanation": "What's the weather like? значит «Какая погода?», и в ответ погоду описывают. Like здесь — не «нравиться», поэтому ответы с I like не подходят."
+    }
+  ]
+}

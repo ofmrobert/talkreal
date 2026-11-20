@@ -1,0 +1,155 @@
+{
+  "id": "a2-25",
+  "level": "A2",
+  "order": 25,
+  "title": { "ru": "Я тоже: So do I, Neither do I, Me too", "en": "So do I, Neither do I, Me too" },
+  "goal": { "ru": "Научитесь говорить «я тоже» и «я тоже нет» и подбирать правильный вспомогательный глагол.", "en": "Learn to say 'me too' and 'me neither' with the right auxiliary verb." },
+  "theory": [
+    {
+      "title": "So do I — «я тоже»",
+      "body": "С утверждением соглашаются так: So + помощник + I. Помощник берут из фразы собеседника: I'm hungry — So am I. I can swim — So can I. Если помощника во фразе нет, в Present Simple нужен do, в Past Simple — did: I love Italian food — So do I. I saw that film — So did I.",
+      "examples": [
+        { "en": "— I love Italian food. — So do I.", "ru": "— Я обожаю итальянскую еду. — Я тоже." },
+        { "en": "— I'm hungry. — So am I.", "ru": "— Я голоден. — Я тоже." },
+        { "en": "— I saw that film last week. — So did I.", "ru": "— Я видел этот фильм на прошлой неделе. — Я тоже." }
+      ],
+      "tip": "Порядок слов обратный: сначала помощник, потом подлежащее — So do I, а не «So I do»."
+    },
+    {
+      "title": "Neither do I — «я тоже нет»",
+      "body": "С отрицанием соглашаются через Neither + помощник + I: I don't drink coffee — Neither do I. Neither уже отрицательное слово, поэтому помощник стоит без not: «Neither don't I» — ошибка. По-русски в обоих случаях «я тоже», и это подводит: ответить So do I на отрицание нельзя.",
+      "examples": [
+        { "en": "— I don't drink coffee. — Neither do I.", "ru": "— Я не пью кофе. — Я тоже." },
+        { "en": "— I can't drive. — Neither can I.", "ru": "— Я не умею водить. — Я тоже." },
+        { "en": "— I haven't been to Paris. — Neither have I.", "ru": "— Я не был в Париже. — Я тоже." }
+      ],
+      "tip": "То же самое можно сказать полным предложением с either в конце: I don't either. I can't either."
+    },
+    {
+      "title": "Me too, Me neither и другие люди",
+      "body": "В разговоре проще: Me too — после утверждения, Me neither — после отрицания. Это неформально, но совершенно нормально. Вместо I можно подставить любого человека: So does my brother, Neither did we. В полном предложении «тоже» — это too в утверждении и either в отрицании: I like it too. I don't like it either.",
+      "examples": [
+        { "en": "— I'm from Russia. — Me too.", "ru": "— Я из России. — Я тоже." },
+        { "en": "— I didn't sleep well. — Me neither.", "ru": "— Я плохо спал. — Я тоже." },
+        { "en": "Anna works in a bank, and so does her husband.", "ru": "Анна работает в банке, и её муж тоже." }
+      ],
+      "tip": "Too — в утверждениях, either — в отрицаниях: I don't know either, а не «I don't know too»."
+    }
+  ],
+  "vocab": [
+    { "en": "neither", "ru": "тоже не", "example": "— I can't cook. — Neither can I." },
+    { "en": "either", "ru": "тоже (в отрицании)", "example": "I don't know him either." },
+    { "en": "too", "ru": "тоже (в утверждении)", "example": "My sister is a teacher too." },
+    { "en": "spicy", "ru": "острый (о еде)", "example": "This soup is very spicy." },
+    { "en": "to be afraid of", "ru": "бояться", "example": "I'm afraid of big dogs." },
+    { "en": "crowded", "ru": "людный, переполненный", "example": "The beach was crowded." },
+    { "en": "nervous", "ru": "нервный, взволнованный", "example": "I'm always nervous before exams." },
+    { "en": "to remember", "ru": "помнить", "example": "Do you remember our first teacher?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "spicy", "ru": "острый (о еде)" },
+        { "en": "to be afraid of", "ru": "бояться" },
+        { "en": "crowded", "ru": "людный" },
+        { "en": "nervous", "ru": "взволнованный" },
+        { "en": "to remember", "ru": "помнить" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Собеседник говорит: «I like spicy food». Как сказать «Я тоже»?",
+      "options": ["So do I.", "So am I.", "So I do.", "Neither do I."],
+      "answer": 0,
+      "explanation": "Во фразе I like нет помощника, это Present Simple, поэтому нужен do: So do I. So am I подошло бы к фразе с глаголом be, а Neither — к отрицанию."
+    },
+    {
+      "type": "gap",
+      "sentence": "— I'm really tired today. — So ___ I.",
+      "translation": "— Я сегодня очень устал. — Я тоже.",
+      "options": ["am", "do", "did", "have"],
+      "answer": 0,
+      "explanation": "В первой фразе стоит I'm, то есть I am, поэтому в ответе тот же глагол: So am I. Do нужен только там, где помощника нет."
+    },
+    {
+      "type": "listen",
+      "audio": "Tom doesn't like crowded places, and neither does his wife.",
+      "question": "Что мы узнаём о жене Тома?",
+      "options": ["Она тоже не любит людные места", "Она любит людные места", "Она любит путешествовать одна", "Она не согласна с Томом"],
+      "answer": 0,
+      "explanation": "Neither does his wife — «и его жена тоже нет». Помощник does повторяет doesn't из первой части, но без not."
+    },
+    {
+      "type": "translate",
+      "source": "Я тоже не умею плавать.",
+      "answer": "I can't swim either.",
+      "accept": ["I cannot swim either.", "I can not swim either."],
+      "distractors": ["too", "neither", "don't"],
+      "explanation": "В отрицательном предложении «тоже» — это either в конце. «I can't swim too» — ошибка: too бывает только в утверждениях."
+    },
+    {
+      "type": "gap",
+      "sentence": "— I didn't enjoy the film. — Neither ___ I.",
+      "translation": "— Мне не понравился фильм. — Мне тоже.",
+      "options": ["did", "do", "didn't", "was"],
+      "answer": 0,
+      "explanation": "Первая фраза в Past Simple (didn't), значит, помощник — did. Not не нужен: отрицание уже есть в слове neither."
+    },
+    {
+      "type": "choice",
+      "prompt": "Собеседник говорит: «I can't speak French». Вы тоже не говорите. Что ответить?",
+      "options": ["Neither can I.", "So can I.", "Neither can't I.", "Neither do I."],
+      "answer": 0,
+      "explanation": "Фраза отрицательная, поэтому neither, а помощник тот же, что у собеседника: can. Второе отрицание не нужно — «Neither can't I» сказать нельзя."
+    },
+    {
+      "type": "speak",
+      "text": "My brother loves football, and so do I.",
+      "translation": "Мой брат обожает футбол, и я тоже."
+    },
+    {
+      "type": "type",
+      "source": "Мне тоже это нравится.",
+      "answer": "I like it too.",
+      "accept": ["I like this too.", "I like that too.", "I also like it.", "I also like this.", "I like it as well.", "I like this as well.", "I love it too."],
+      "explanation": "В утвердительном предложении «тоже» — too в конце. «Мне нравится» по-английски строится от I: I like it."
+    },
+    {
+      "type": "listen",
+      "audio": "Anna went to bed late last night, and so did I.",
+      "question": "Что говорящий сообщает о себе?",
+      "options": ["Он тоже лёг поздно", "Он лёг рано", "Он не спал всю ночь", "Он не знает, когда легла Анна"],
+      "answer": 0,
+      "explanation": "So did I — «и я тоже». Went — это Past Simple, поэтому помощник did."
+    },
+    {
+      "type": "gap",
+      "sentence": "— I've been to London twice. — So ___ I.",
+      "translation": "— Я дважды был в Лондоне. — Я тоже.",
+      "options": ["have", "do", "did", "am"],
+      "answer": 0,
+      "explanation": "I've — это I have, Present Perfect. В ответе повторяют тот же помощник: So have I."
+    },
+    {
+      "type": "translate",
+      "source": "Я тоже не помню его имя.",
+      "answer": "I don't remember his name either.",
+      "accept": ["I do not remember his name either.", "I can't remember his name either.", "I cannot remember his name either."],
+      "distractors": ["too", "neither", "him"],
+      "explanation": "Предложение отрицательное, поэтому «тоже» — either в конце, а не too. Neither с don't дало бы два отрицания."
+    },
+    {
+      "type": "dictation",
+      "audio": "She doesn't eat meat, and neither do I.",
+      "translation": "Она не ест мясо, и я тоже."
+    },
+    {
+      "type": "choice",
+      "prompt": "Собеседник говорит: «I'm not hungry». Как коротко, по-разговорному сказать «Я тоже»?",
+      "options": ["Me neither.", "Me too.", "So am I.", "Me not too."],
+      "answer": 0,
+      "explanation": "Фраза отрицательная, поэтому Me neither. Me too и So am I значили бы «я тоже голоден» — они подходят только к утверждениям."
+    }
+  ]
+}

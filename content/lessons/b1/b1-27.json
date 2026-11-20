@@ -1,0 +1,155 @@
+{
+  "id": "b1-27",
+  "level": "B1",
+  "order": 27,
+  "title": { "ru": "Look, seem, sound, feel, taste: «выглядит», «кажется», «звучит»", "en": "Look, seem, sound, feel, taste: adjectives, like and as if" },
+  "goal": { "ru": "Научитесь описывать впечатления: «вы выглядите уставшим», «звучит отлично», «похоже на…», «как будто…».", "en": "Learn to describe impressions: you look tired, it sounds great, it looks like…, as if…" },
+  "theory": [
+    {
+      "title": "Look, sound, taste + прилагательное",
+      "body": "После глаголов look, seem, sound, feel, taste, smell стоит прилагательное, а не наречие. По-русски мы говорим «выглядит хорошо», «пахнет вкусно» — с наречием, и это главная ловушка. В английском эти глаголы работают как be: они описывают сам предмет, а не способ действия. Поэтому it smells good, а не «it smells well».",
+      "examples": [
+        { "en": "You look worried.", "ru": "Вы выглядите обеспокоенным." },
+        { "en": "This soup tastes wonderful.", "ru": "Этот суп замечательный на вкус." },
+        { "en": "Her voice sounded strange on the phone.", "ru": "По телефону её голос звучал странно." }
+      ],
+      "tip": "В этом значении глаголы не ставят в Continuous: It tastes good, а не «It is tasting good»."
+    },
+    {
+      "title": "Look like, sound like + существительное",
+      "body": "Если дальше идёт существительное, нужно like: look like, sound like, taste like, smell like — «быть похожим на, как». Сравните: he looks tired (прилагательное) и he looks like a doctor (существительное). Вопрос о внешности тоже строится с like: What does he look like?",
+      "examples": [
+        { "en": "He looks like his grandfather.", "ru": "Он похож на своего дедушку." },
+        { "en": "It sounds like a difficult job.", "ru": "Похоже, это трудная работа." },
+        { "en": "This tastes like chicken.", "ru": "По вкусу это похоже на курицу." }
+      ],
+      "tip": "Не ставьте like перед прилагательным: «he looks like tired» — ошибка. И не «How does he look like?», а What does he look like?"
+    },
+    {
+      "title": "As if и seem to",
+      "body": "Перед целым предложением стоит as if или as though — «как будто»: you look as if you need a holiday. В разговорной речи вместо них часто говорят like: it looks like it's going to rain. Глагол seem — самый общий, это впечатление в целом, а не только на вид; после него возможен и инфинитив: seem to + глагол.",
+      "examples": [
+        { "en": "You look as if you need a holiday.", "ru": "Вы выглядите так, будто вам нужен отпуск." },
+        { "en": "It sounds as though they're having a party.", "ru": "Судя по звукам, у них там вечеринка." },
+        { "en": "She seems to like her new school.", "ru": "Кажется, ей нравится новая школа." }
+      ],
+      "tip": "Русское «кажется, что он…» удобно переводить через seem to: He seems to be busy — «Кажется, он занят»."
+    }
+  ],
+  "vocab": [
+    { "en": "to seem", "ru": "казаться", "example": "They seem very friendly." },
+    { "en": "to sound", "ru": "звучать", "example": "You sound tired." },
+    { "en": "to taste", "ru": "иметь вкус", "example": "These apples taste sweet." },
+    { "en": "to smell", "ru": "пахнуть", "example": "The flowers smell lovely." },
+    { "en": "to look like", "ru": "быть похожим на", "example": "You look like your sister." },
+    { "en": "as if", "ru": "как будто", "example": "He talks as if he knows everything." },
+    { "en": "delicious", "ru": "очень вкусный", "example": "The cake was delicious." },
+    { "en": "familiar", "ru": "знакомый", "example": "Your face looks familiar." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to seem", "ru": "казаться" },
+        { "en": "to taste", "ru": "иметь вкус" },
+        { "en": "to smell", "ru": "пахнуть" },
+        { "en": "delicious", "ru": "очень вкусный" },
+        { "en": "familiar", "ru": "знакомый" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Этот хлеб вкусно пахнет»?",
+      "options": ["This bread smells delicious.", "This bread smells deliciously.", "This bread is smelling deliciously.", "This bread smells like delicious."],
+      "answer": 0,
+      "explanation": "После smell стоит прилагательное: smells delicious. Русское наречие «вкусно» подсказывает deliciously, но в английском слово описывает сам хлеб, а не действие. Like ставится только перед существительным."
+    },
+    {
+      "type": "gap",
+      "sentence": "Your new job sounds ___. Tell me more about it.",
+      "translation": "Судя по вашим словам, новая работа интересная. Расскажите о ней подробнее.",
+      "options": ["interesting", "interestingly", "like interesting", "interest"],
+      "answer": 0,
+      "explanation": "После sound нужно прилагательное: sounds interesting. Наречие interestingly — калька с русского «звучит интересно», а like перед прилагательным не ставится."
+    },
+    {
+      "type": "translate",
+      "source": "Она похожа на свою маму.",
+      "answer": "She looks like her mother.",
+      "accept": ["She looks like her mum.", "She looks like her mom.", "She is like her mother.", "She's like her mother.", "She is like her mum.", "She's like her mum.", "She takes after her mother.", "She takes after her mum.", "She resembles her mother."],
+      "distractors": ["as", "looking", "similar"],
+      "explanation": "«Быть похожим на кого-то» внешне — look like + существительное: looks like her mother. As в таком сравнении не используется, а similar потребовало бы другой конструкции: is similar to."
+    },
+    {
+      "type": "listen",
+      "audio": "You look as if you haven't slept all night.",
+      "question": "Что говорящий думает о собеседнике?",
+      "options": ["Он выглядит так, будто не спал всю ночь", "Он выглядит отдохнувшим", "Ему стоит лечь спать пораньше", "Он проспал всю ночь"],
+      "answer": 0,
+      "explanation": "Look as if + предложение — «выглядеть так, как будто». Haven't slept all night — «не спал всю ночь»: это предположение по внешнему виду, а не совет."
+    },
+    {
+      "type": "gap",
+      "sentence": "It looks ___ rain. Let's take an umbrella.",
+      "translation": "Похоже, будет дождь. Давайте возьмём зонт.",
+      "options": ["like", "as", "alike", "similar"],
+      "answer": 0,
+      "explanation": "Rain здесь существительное, а перед существительным нужно like: it looks like rain. As без if так не употребляется, alike и similar не ставятся перед существительным."
+    },
+    {
+      "type": "speak",
+      "text": "That sounds like a great idea.",
+      "translation": "По-моему, это отличная идея."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Our new neighbours seem very nicely.", "Our new neighbours seem very nice.", "Our new neighbours seem like very nice.", "Our new neighbours are seeming very nice."],
+      "answer": 1,
+      "explanation": "После seem стоит прилагательное: seem nice. Наречие nicely и like перед прилагательным — ошибки, а в Continuous глагол seem не употребляется."
+    },
+    {
+      "type": "type",
+      "source": "Вы выглядите уставшим.",
+      "answer": "You look tired.",
+      "accept": ["You are looking tired.", "You're looking tired.", "You seem tired."],
+      "explanation": "Look + прилагательное: you look tired. Ни like, ни возвратное местоимение здесь не нужны: «you look like tired» и «you look yourself tired» — ошибки."
+    },
+    {
+      "type": "gap",
+      "sentence": "This milk ___ strange. I don't think we should drink it.",
+      "translation": "У этого молока странный вкус. По-моему, его не стоит пить.",
+      "options": ["tastes", "is tasting", "tastes like", "taste"],
+      "answer": 0,
+      "explanation": "Taste в значении «иметь вкус» не ставят в Continuous, а после него идёт прилагательное: tastes strange. Like понадобилось бы перед существительным, а у подлежащего this milk глагол получает -s."
+    },
+    {
+      "type": "listen",
+      "audio": "He seems to know everyone here.",
+      "question": "Что вы услышали?",
+      "options": ["He seems to know everyone here.", "He seems to know everything here.", "He seemed to know everyone here.", "She seems to know everyone here."],
+      "answer": 0,
+      "explanation": "Seem to + глагол — «кажется, он…»: he seems to know. Окончание -s показывает настоящее время, а everyone — «все (люди)», в отличие от everything — «всё»."
+    },
+    {
+      "type": "translate",
+      "source": "Кажется, дом пустой.",
+      "answer": "The house seems empty.",
+      "accept": ["The house seems to be empty.", "The house looks empty.", "The house appears empty.", "The house appears to be empty.", "It seems the house is empty.", "It seems that the house is empty.", "It looks like the house is empty.", "It looks as if the house is empty."],
+      "distractors": ["emptily", "like", "seeming"],
+      "explanation": "Русское «кажется» в начале фразы по-английски переходит в глагол: the house seems + прилагательное empty. Наречие и like перед прилагательным не нужны."
+    },
+    {
+      "type": "dictation",
+      "audio": "This cake tastes better than it looks.",
+      "translation": "Этот торт на вкус лучше, чем на вид."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает вопрос «What does your boss look like?»",
+      "options": ["Как выглядит ваш начальник?", "Что нравится вашему начальнику?", "Как дела у вашего начальника?"],
+      "answer": 0,
+      "explanation": "What does… look like? — вопрос о внешности. Like здесь предлог «как, похож на», а не глагол «нравиться»; о вкусах спросили бы What does your boss like?"
+    }
+  ]
+}

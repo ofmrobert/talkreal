@@ -1,0 +1,155 @@
+{
+  "id": "a1-28",
+  "level": "A1",
+  "order": 28,
+  "title": { "ru": "Давайте…: Let's…, Shall we…?, How about…?", "en": "Suggestions: Let's…, Shall we…?, How about…?" },
+  "goal": { "ru": "Научитесь предлагать что-то сделать вместе, соглашаться и вежливо отказываться.", "en": "Learn to suggest doing something together, to agree and to say no politely." },
+  "theory": [
+    {
+      "title": "Let's + глагол",
+      "body": "Let's — это «давай» и «давайте» сразу: в английском разницы нет. После let's глагол стоит в начальной форме без to: Let's go. «Let's to go» и «Let's going» — ошибки. Если предлагаете чего-то не делать, добавьте not: Let's not wait.",
+      "examples": [
+        { "en": "Let's go to the park.", "ru": "Давай пойдём в парк." },
+        { "en": "Let's have a break.", "ru": "Давайте сделаем перерыв." },
+        { "en": "Let's not watch this film.", "ru": "Давай не будем смотреть этот фильм." }
+      ],
+      "tip": "Let's — сокращение от let us, но полную форму в разговоре почти не используют."
+    },
+    {
+      "title": "Shall we…? и How about…?",
+      "body": "Shall we…? — предложение в форме вопроса, после него тоже начальная форма без to: Shall we take a taxi? How about…? значит «Как насчёт…?». После about идёт существительное или глагол с -ing: How about a coffee? How about going to the cinema? «How about go» — ошибка.",
+      "examples": [
+        { "en": "Shall we meet at six?", "ru": "Встретимся в шесть?" },
+        { "en": "How about a pizza tonight?", "ru": "Как насчёт пиццы сегодня вечером?" },
+        { "en": "How about going to the cinema on Friday?", "ru": "Как насчёт того, чтобы сходить в кино в пятницу?" }
+      ],
+      "tip": "С вопросительным словом: What shall we do? — «Что будем делать?» Where shall we meet? — «Где встретимся?»"
+    },
+    {
+      "title": "Как согласиться и как отказаться",
+      "body": "Согласиться просто: Good idea! Great! OK! Отказать одним словом No невежливо. Скажите Sorry, I can't и назовите причину: I'm busy или I have to work. На Let's… нельзя ответить «Yes, I do» — здесь нет вопроса с do. Отвечают: Yes, let's.",
+      "examples": [
+        { "en": "Let's go for a walk. — Good idea!", "ru": "Давай прогуляемся. — Хорошая идея!" },
+        { "en": "Shall we go out tonight? — Sorry, I can't. I'm busy.", "ru": "Сходим куда-нибудь сегодня вечером? — Извини, не могу. Я занят." },
+        { "en": "How about Saturday? — Great!", "ru": "Как насчёт субботы? — Отлично!" }
+      ],
+      "tip": "После отказа предложите другое время: Sorry, I can't. How about tomorrow?"
+    }
+  ],
+  "vocab": [
+    { "en": "let's", "ru": "давай, давайте", "example": "Let's start." },
+    { "en": "idea", "ru": "идея", "example": "I have got an idea." },
+    { "en": "together", "ru": "вместе", "example": "We work together." },
+    { "en": "to meet", "ru": "встречаться", "example": "I meet my friends on Fridays." },
+    { "en": "to go for a walk", "ru": "пойти погулять", "example": "We often go for a walk in the evening." },
+    { "en": "to go out", "ru": "пойти куда-нибудь развлечься", "example": "They go out every Saturday." },
+    { "en": "great", "ru": "отлично; отличный", "example": "This is a great film." },
+    { "en": "sorry", "ru": "извините", "example": "Sorry, I'm late." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "idea", "ru": "идея" },
+        { "en": "together", "ru": "вместе" },
+        { "en": "to meet", "ru": "встречаться" },
+        { "en": "great", "ru": "отлично" },
+        { "en": "to go for a walk", "ru": "пойти погулять" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как предложить другу «Давай пойдём в кино»?",
+      "options": ["Let's to go to the cinema.", "Let's going to the cinema.", "Let's go to the cinema.", "Let's we go to the cinema."],
+      "answer": 2,
+      "explanation": "После let's глагол стоит в начальной форме без to и без -ing: Let's go. Слово we тоже лишнее: оно уже спрятано в let's — let us."
+    },
+    {
+      "type": "gap",
+      "sentence": "How about ___ tennis on Sunday?",
+      "translation": "Как насчёт того, чтобы поиграть в теннис в воскресенье?",
+      "options": ["play", "to play", "playing", "plays"],
+      "answer": 2,
+      "explanation": "About — предлог, а после предлога глагол получает -ing: How about playing? Начальная форма нужна после let's и shall we, но не здесь."
+    },
+    {
+      "type": "listen",
+      "audio": "Shall we meet at the station at five? — Good idea!",
+      "question": "Где они встретятся?",
+      "options": ["На вокзале", "В кафе", "В парке", "Дома"],
+      "answer": 0,
+      "explanation": "At the station — «на вокзале», at five — «в пять». Good idea! значит, что второй человек согласен."
+    },
+    {
+      "type": "translate",
+      "source": "Давай возьмём такси.",
+      "answer": "Let's take a taxi.",
+      "accept": ["Let us take a taxi.", "Let's get a taxi.", "Let's take a cab.", "Shall we take a taxi?"],
+      "distractors": ["to", "taking", "we"],
+      "explanation": "«Давай» — let's, после него сразу начальная форма: take. Ни to, ни -ing здесь не нужны."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ we have lunch together?",
+      "translation": "Пообедаем вместе?",
+      "options": ["Shall", "Let's", "How about", "Are"],
+      "answer": 0,
+      "explanation": "Перед we в вопросе-предложении стоит shall: Shall we have lunch? После let's слово we не ставят, а после how about был бы глагол с -ing."
+    },
+    {
+      "type": "speak",
+      "text": "Let's go for a walk after dinner.",
+      "translation": "Давай прогуляемся после ужина."
+    },
+    {
+      "type": "choice",
+      "prompt": "Друг говорит: «Let's go out tonight.» Вы заняты. Как вежливо отказаться?",
+      "options": ["No, I don't.", "Sorry, I can't. I have to work.", "OK, great!", "Yes, let's."],
+      "answer": 1,
+      "explanation": "Вежливый отказ — Sorry, I can't и причина. No, I don't не подходит: в предложении друга нет вопроса с do. OK, great! и Yes, let's — это согласие."
+    },
+    {
+      "type": "translate",
+      "source": "Как насчёт кофе?",
+      "answer": "How about a coffee?",
+      "accept": ["How about coffee?", "How about some coffee?", "How about a cup of coffee?", "What about a coffee?", "What about coffee?", "What about some coffee?"],
+      "distractors": ["to", "is", "drink"],
+      "explanation": "«Как насчёт…?» — How about…?, и после about сразу идёт существительное. Глагол is в этой фразе не нужен."
+    },
+    {
+      "type": "listen",
+      "audio": "How about going to the cinema on Saturday? — Sorry, I can't. How about Sunday?",
+      "question": "Какой день предлагает второй человек?",
+      "options": ["Воскресенье", "Субботу", "Пятницу", "Он совсем не хочет идти"],
+      "answer": 0,
+      "explanation": "Sorry, I can't — в субботу он не может. Но он предлагает другой день: How about Sunday? — «Как насчёт воскресенья?»"
+    },
+    {
+      "type": "gap",
+      "sentence": "Let's ___ at home tonight. I want to go out.",
+      "translation": "Давай не будем сидеть дома сегодня вечером. Я хочу куда-нибудь сходить.",
+      "options": ["stay", "not stay", "don't stay", "no stay"],
+      "answer": 1,
+      "explanation": "Человек хочет пойти куда-нибудь, значит, предлагает не оставаться дома. Отрицание после let's — просто not: Let's not stay. Don't и no здесь не используют."
+    },
+    {
+      "type": "type",
+      "source": "Хорошая идея!",
+      "answer": "Good idea!",
+      "accept": ["A good idea!", "That's a good idea!", "That is a good idea!", "It's a good idea!", "It is a good idea!", "Great idea!", "Nice idea!"],
+      "explanation": "Так коротко соглашаются с предложением: Good idea! Полная фраза — That's a good idea, с артиклем a."
+    },
+    {
+      "type": "dictation",
+      "audio": "Shall we go to the park tomorrow?",
+      "translation": "Пойдём завтра в парк?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["How about go to a café?", "Shall we to meet at eight?", "Let's cook dinner together.", "Let's not to be late."],
+      "answer": 2,
+      "explanation": "После let's — начальная форма без to: Let's cook. В остальных ошибки: нужно How about going, Shall we meet и Let's not be late — to нигде не ставится."
+    }
+  ]
+}

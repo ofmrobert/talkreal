@@ -1,0 +1,155 @@
+{
+  "id": "a1-23",
+  "level": "A1",
+  "order": 23,
+  "title": { "ru": "Вопросительные слова: what, where, when, who, why, how", "en": "Question words: what, where, when, who, why, how" },
+  "goal": { "ru": "Научитесь задавать вопросы о людях, местах, времени и причинах.", "en": "Learn to ask questions about people, places, times and reasons." },
+  "theory": [
+    {
+      "title": "Вопросительное слово стоит первым",
+      "body": "Порядок в вопросе всегда один: вопросительное слово, потом do или does, потом подлежащее и глагол — When do you get up? По-русски мы просто говорим «Когда ты встаёшь?», поэтому do часто теряется. «When you get up?» — ошибка.",
+      "examples": [
+        { "en": "When does the lesson start?", "ru": "Когда начинается урок?" },
+        { "en": "Where do your parents live?", "ru": "Где живут ваши родители?" },
+        { "en": "What do you usually have for lunch?", "ru": "Что вы обычно едите на обед?" }
+      ],
+      "tip": "С to be и can слово do не нужно: Where is the station? When can you come?"
+    },
+    {
+      "title": "Who, why и how",
+      "body": "Who — «кто», why — «почему», how — «как». Строятся они так же: Why do you like this city? How do you spell your name? С to be — без do: Who is that man? Why are you late? На вопрос с why отвечают словом because — «потому что».",
+      "examples": [
+        { "en": "Who is your English teacher?", "ru": "Кто ваш учитель английского?" },
+        { "en": "Why are you late? — Because my train was late.", "ru": "Почему ты опоздал? — Потому что мой поезд опоздал." },
+        { "en": "How do you say it in English?", "ru": "Как это сказать по-английски?" }
+      ],
+      "tip": "Когда who — это тот, кто делает действие, do не нужен: Who lives here? — «Кто здесь живёт?»"
+    },
+    {
+      "title": "How old и how many",
+      "body": "How соединяется с другими словами. How old — «сколько лет», и здесь нужен to be, а не have: How old are you? — I'm thirty. How many — «сколько» о том, что можно посчитать; существительное идёт сразу за ним и стоит во множественном числе: How many children have you got?",
+      "examples": [
+        { "en": "How old is your son? — He's seven.", "ru": "Сколько лет вашему сыну? — Ему семь." },
+        { "en": "How many cousins have you got?", "ru": "Сколько у тебя двоюродных братьев и сестёр?" },
+        { "en": "How many rooms are there in your flat?", "ru": "Сколько комнат в вашей квартире?" }
+      ],
+      "tip": "«How many have you got children?» — ошибка: how many и существительное не разрывают."
+    }
+  ],
+  "vocab": [
+    { "en": "what", "ru": "что; какой", "example": "What is your job?" },
+    { "en": "when", "ru": "когда", "example": "When is your English class?" },
+    { "en": "who", "ru": "кто", "example": "Who is this woman in the photo?" },
+    { "en": "why", "ru": "почему", "example": "Why is the shop closed?" },
+    { "en": "how", "ru": "как", "example": "How are you today?" },
+    { "en": "how old", "ru": "сколько лет", "example": "How old is your cat?" },
+    { "en": "how many", "ru": "сколько (о том, что считают)", "example": "How many days do you work?" },
+    { "en": "to spell", "ru": "произносить или писать по буквам", "example": "Can you spell this word, please?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "when", "ru": "когда" },
+        { "en": "who", "ru": "кто" },
+        { "en": "why", "ru": "почему" },
+        { "en": "how", "ru": "как" },
+        { "en": "how many", "ru": "сколько" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Когда ты заканчиваешь работу?»",
+      "options": ["When you finish work?", "When do you finish work?", "When are you finish work?", "When does you finish work?"],
+      "answer": 1,
+      "explanation": "После вопросительного слова нужен do: When do you finish? Без него вопрос неправильный. Does — только для he, she, it, а are с глаголом finish не сочетается."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ is that woman? — She's my boss.",
+      "translation": "Кто эта женщина? — Это моя начальница.",
+      "options": ["What", "Who", "Where", "Why"],
+      "answer": 1,
+      "explanation": "О человеке спрашивают who — «кто». В ответе называют, кто она: my boss. Where спросило бы о месте, а why — о причине."
+    },
+    {
+      "type": "listen",
+      "audio": "How old is your daughter? — She's twelve.",
+      "question": "О чём спрашивают?",
+      "options": ["Сколько лет дочери", "Как зовут дочь", "Где сейчас дочь", "Сколько в семье дочерей"],
+      "answer": 0,
+      "explanation": "How old — «сколько лет». Ответ She's twelve — «ей двенадцать»: о возрасте говорят с to be."
+    },
+    {
+      "type": "translate",
+      "source": "Почему ты изучаешь английский?",
+      "answer": "Why do you study English?",
+      "accept": ["Why are you studying English?", "Why do you learn English?", "Why are you learning English?"],
+      "distractors": ["does", "because", "who"],
+      "explanation": "«Почему» — why, а because — это уже ответ, «потому что». После why идёт do, потом you и глагол: Why do you study?"
+    },
+    {
+      "type": "gap",
+      "sentence": "How ___ brothers have you got? — Two.",
+      "translation": "Сколько у тебя братьев? — Двое.",
+      "options": ["much", "many", "old", "often"],
+      "answer": 1,
+      "explanation": "Братьев можно посчитать, и ответ — число, поэтому how many. How much спрашивает о цене, how old — о возрасте, how often — о том, как часто."
+    },
+    {
+      "type": "speak",
+      "text": "Where does your cousin live?",
+      "translation": "Где живёт ваш двоюродный брат?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Вам ответили: «Because I'm ill.» Какой был вопрос?",
+      "options": ["When do you go to bed?", "Why are you at home today?", "Who is at home today?", "Where are you today?"],
+      "answer": 1,
+      "explanation": "Because — «потому что», так отвечают только на вопрос why, «почему». На when ждут время, на who — человека, на where — место."
+    },
+    {
+      "type": "translate",
+      "source": "Сколько лет твоему брату?",
+      "answer": "How old is your brother?",
+      "accept": ["How old's your brother?", "What age is your brother?"],
+      "distractors": ["many", "has", "years"],
+      "explanation": "О возрасте спрашивают how old и ставят to be: How old is…? Слова years в вопросе нет, а has — калька с русского «сколько лет имеет»."
+    },
+    {
+      "type": "listen",
+      "audio": "When is your birthday party? — It's on Saturday.",
+      "question": "Что хочет узнать человек?",
+      "options": ["Когда будет праздник", "Где будет праздник", "Сколько лет имениннику", "Кто придёт на праздник"],
+      "answer": 0,
+      "explanation": "When — «когда». Ответ тоже о времени: on Saturday — «в субботу». О месте спросили бы where, о гостях — who."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ do you spell your name? — A-N-N-A.",
+      "translation": "Как пишется ваше имя? — A-N-N-A.",
+      "options": ["What", "Who", "How", "Where"],
+      "answer": 2,
+      "explanation": "О способе — «как?» — спрашивают how. How do you spell…? — готовая фраза, чтобы попросить назвать слово по буквам."
+    },
+    {
+      "type": "type",
+      "source": "Кто этот мужчина?",
+      "answer": "Who is this man?",
+      "accept": ["Who's this man?", "Who is that man?", "Who's that man?"],
+      "explanation": "В вопросе с to be do не нужен: Who is this man? Who is часто сокращают до Who's."
+    },
+    {
+      "type": "dictation",
+      "audio": "How many languages can you speak?",
+      "translation": "На скольких языках вы умеете говорить?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите вопрос без ошибки.",
+      "options": ["Where your sister works?", "How old has your son?", "Why do you get up early?", "How many child have you got?"],
+      "answer": 2,
+      "explanation": "В правильном вопросе после why стоит do. В остальных ошибки: нужно Where does your sister work?, How old is your son? и How many children — после how many идёт множественное число."
+    }
+  ]
+}

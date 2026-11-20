@@ -1,0 +1,207 @@
+{
+  "id": "c1-26",
+  "level": "C1",
+  "order": 26,
+  "title": { "ru": "Намеренная неточность: sort of, -ish, or so, and so on", "en": "Vague language" },
+  "goal": { "ru": "Научитесь говорить приблизительно и непринуждённо, как носители: sort of, kind of, -ish, or so, and so on, stuff, things like that, roughly, give or take.", "en": "Learn to be approximate and relaxed the way native speakers are: sort of, kind of, -ish, or so, and so on, stuff, things like that, roughly, give or take." },
+  "theory": [
+    {
+      "title": "Приблизительные числа: roughly, or so, give or take",
+      "body": "В живой речи точность часто не нужна и даже звучит педантично. Перед числом ставят about, around, roughly; после числа — or so. Give or take означает «плюс-минус» и стоит либо в конце, либо перед величиной погрешности. В официальном тексте вместо них пишут approximately.",
+      "examples": [
+        { "en": "There were roughly two hundred people at the conference.", "ru": "На конференции было примерно двести человек." },
+        { "en": "It'll take an hour or so.", "ru": "Это займёт час или около того." },
+        { "en": "The flight takes six hours, give or take.", "ru": "Перелёт длится шесть часов, плюс-минус." }
+      ],
+      "tip": "Or so стоит после числа с существительным: an hour or so, а не «or so an hour». И «около ста человек» — about a hundred people, но не «near a hundred people»: near говорит о расстоянии."
+    },
+    {
+      "title": "Sort of, kind of и суффикс -ish",
+      "body": "Sort of и kind of смягчают слово, которое идёт следом: «вроде, как бы, в каком-то смысле». Суффикс -ish добавляют к прилагательным (greenish — «зеленоватый», youngish — «довольно молодой»), к числам и времени (fortyish — «лет сорока», eightish — «часов в восемь»). В разговоре ish бывает и отдельным ответом: «более-менее».",
+      "examples": [
+        { "en": "It's sort of a mix between a café and a bookshop.", "ru": "Это что-то вроде смеси кафе и книжного магазина." },
+        { "en": "I was kind of hoping you'd say that.", "ru": "Я вроде как надеялся, что вы это скажете." },
+        { "en": "Let's meet at eightish.", "ru": "Давайте встретимся часов в восемь." }
+      ],
+      "tip": "Это разговорные средства: в отчёте или деловом письме вместо sort of пишут somewhat или rather, а вместо eightish — at about eight."
+    },
+    {
+      "title": "Размытые списки: and so on, stuff, things like that",
+      "body": "Чтобы не перечислять всё, список обрывают словами and so on, and things like that, and stuff, or something. Слово stuff заменяет почти любое неисчисляемое или собирательное понятие: вещи, дела, материал. Оно неисчисляемое: множественного числа нет, с ним сочетаются much и a lot of.",
+      "examples": [
+        { "en": "We talked about work, holidays and so on.", "ru": "Мы говорили о работе, отпуске и так далее." },
+        { "en": "He's into hiking, camping and things like that.", "ru": "Он увлекается походами, кемпингом и тому подобным." },
+        { "en": "I've got loads of stuff to sort out before we move.", "ru": "Мне нужно разобрать кучу вещей до переезда." }
+      ],
+      "tip": "Не говорите «and etc.»: et cetera уже содержит «и». В устной речи естественнее and so on. И не путайте stuff («вещи») со staff («персонал»)."
+    }
+  ],
+  "vocab": [
+    { "en": "roughly", "ru": "примерно, приблизительно", "example": "The two flats are roughly the same size." },
+    { "en": "or so", "ru": "или около того", "example": "I'll be ready in ten minutes or so." },
+    { "en": "give or take", "ru": "плюс-минус", "example": "The repairs will cost a thousand pounds, give or take." },
+    { "en": "sort of", "ru": "вроде, как бы", "example": "I sort of expected this to happen." },
+    { "en": "-ish", "ru": "примерно; -оватый", "example": "He's tallish, with greyish hair." },
+    { "en": "and so on", "ru": "и так далее", "example": "You'll need a passport, a visa and so on." },
+    { "en": "stuff", "ru": "вещи, всякая всячина", "example": "Whose stuff is this on the table?" },
+    { "en": "things like that", "ru": "и тому подобное", "example": "She writes about food, travel and things like that." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "roughly", "ru": "примерно, приблизительно" },
+        { "en": "give or take", "ru": "плюс-минус" },
+        { "en": "and so on", "ru": "и так далее" },
+        { "en": "stuff", "ru": "вещи, всякая всячина" },
+        { "en": "sort of", "ru": "вроде, как бы" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "I'll be there in or so twenty minutes.",
+        "I'll be there in twenty minutes or so.",
+        "I'll be there in twenty or so minute.",
+        "I'll be there in twenty minutes so or."
+      ],
+      "answer": 1,
+      "explanation": "Or so ставится после числа с существительным: twenty minutes or so. В начале группы, как русское «примерно», оно стоять не может — для этого есть about и roughly."
+    },
+    {
+      "type": "gap",
+      "sentence": "I've got so much ___ to do before the weekend.",
+      "translation": "Мне нужно сделать столько всего до выходных.",
+      "options": ["stuffs", "staff", "stuff", "thing"],
+      "answer": 2,
+      "explanation": "Stuff — неисчисляемое слово, поэтому much stuff и никакого -s. Staff — «персонал», а thing исчисляемое: с ним было бы so many things."
+    },
+    {
+      "type": "translate",
+      "source": "Это займёт примерно три часа.",
+      "answer": "It will take roughly three hours.",
+      "accept": [
+        "It will take about three hours.",
+        "It will take around three hours.",
+        "It will take approximately three hours.",
+        "It will take three hours or so.",
+        "It will take roughly 3 hours.",
+        "It will take about 3 hours.",
+        "It will take three hours, give or take.",
+        "That will take roughly three hours.",
+        "This will take roughly three hours.",
+        "It is going to take roughly three hours.",
+        "It's going to take roughly three hours.",
+        "It is going to take about three hours.",
+        "It's going to take about three hours."
+      ],
+      "distractors": ["near", "rough", "hour", "occupy"],
+      "explanation": "«Примерно» перед числом — roughly или about. Нужно наречие, поэтому roughly, а не rough. «Занять время» — take, а не occupy; near говорит о расстоянии, а не о количестве."
+    },
+    {
+      "type": "listen",
+      "audio": "She's fortyish, with darkish hair, and she works in marketing or something.",
+      "question": "Что говорящий знает об этой женщине?",
+      "options": [
+        "Точно знает её возраст, цвет волос и профессию",
+        "Ей ровно сорок, и она брюнетка",
+        "Ей за сорок, и она недавно ушла из маркетинга",
+        "Ей около сорока, волосы темноватые, а работает она вроде бы в маркетинге"
+      ],
+      "answer": 3,
+      "explanation": "Суффикс -ish делает слово приблизительным: fortyish — «лет сорока», darkish — «темноватые». Or something в конце показывает, что и в профессии говорящий не уверен."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы пишете официальный отчёт. Какой вариант подходит по стилю?",
+      "options": [
+        "Costs went up by ten per cent or something.",
+        "Costs went up by kind of ten per cent.",
+        "Costs went up by approximately ten per cent.",
+        "Costs went up by tennish per cent."
+      ],
+      "answer": 2,
+      "explanation": "Approximately — нейтрально-официальное «приблизительно». Or something, kind of и -ish уместны только в разговоре, а с процентами -ish и вовсе не употребляется."
+    },
+    {
+      "type": "speak",
+      "text": "It's sort of difficult to explain, to be honest.",
+      "translation": "Честно говоря, это как-то сложно объяснить."
+    },
+    {
+      "type": "gap",
+      "sentence": "The village has two thousand inhabitants, give or ___ a few dozen.",
+      "translation": "В деревне две тысячи жителей, плюс-минус несколько десятков.",
+      "options": ["take", "get", "bring", "add"],
+      "answer": 0,
+      "explanation": "Give or take — устойчивая пара: «можно прибавить, можно отнять». После неё называют размер погрешности: give or take a few dozen."
+    },
+    {
+      "type": "type",
+      "source": "Он вернётся через час или около того.",
+      "answer": "He will be back in an hour or so.",
+      "accept": [
+        "He will come back in an hour or so.",
+        "He will return in an hour or so.",
+        "He will be back in about an hour.",
+        "He will come back in about an hour.",
+        "He will return in about an hour.",
+        "He will be back in roughly an hour.",
+        "He will be back in around an hour.",
+        "He is going to be back in an hour or so.",
+        "He's going to be back in an hour or so.",
+        "He will be back in an hour or thereabouts."
+      ],
+      "explanation": "Or so стоит после an hour, а не перед ним. «Через час» от настоящего момента — in an hour, а не after an hour."
+    },
+    {
+      "type": "listen",
+      "audio": "She collects old maps, postcards and things like that.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She collects old maps, postcards and things like that.",
+        "She collects old maps, postcards and thing like that.",
+        "She collects old maps, postcards and things as that.",
+        "She collect old maps, postcards and things like that."
+      ],
+      "answer": 0,
+      "explanation": "And things like that — «и тому подобное»: things во множественном числе, сравнение через like, а не as. Так обрывают список, когда продолжать его незачем."
+    },
+    {
+      "type": "translate",
+      "source": "Мы говорили о музыке, фильмах и так далее.",
+      "answer": "We talked about music, films and so on.",
+      "accept": [
+        "We talked about music, movies and so on.",
+        "We spoke about music, films and so on.",
+        "We were talking about music, films and so on.",
+        "We talked about music, films and so forth.",
+        "We talked about music, films etc.",
+        "We talked about music, films, et cetera."
+      ],
+      "distractors": ["further", "far", "said", "next"],
+      "explanation": "«И так далее» — and so on. Дословное «and so further» — калька с русского. «Говорить о чём-то» — talk about; said требует прямого дополнения."
+    },
+    {
+      "type": "gap",
+      "sentence": "The walls were painted a pale, ___ colour that I couldn't quite name.",
+      "translation": "Стены были выкрашены в бледный зеленоватый цвет, который я не мог точно назвать.",
+      "options": ["greenly", "greenish", "greenlike", "greenful"],
+      "answer": 1,
+      "explanation": "Суффикс -ish у прилагательных цвета значит «-оватый»: greenish — «зеленоватый». Суффикс -ly образует наречия, а слов «greenlike» и «greenful» не существует."
+    },
+    {
+      "type": "dictation",
+      "audio": "It'll take an hour or so.",
+      "translation": "Это займёт час или около того."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спрашивают: «Are you hungry?» — и вы отвечаете: «Ish». Что это значит?",
+      "options": ["Очень", "Совсем нет", "Не знаю", "Немного, не то чтобы очень"],
+      "answer": 3,
+      "explanation": "Ish как отдельное слово — разговорное «более-менее, отчасти». Суффикс оторвался от прилагательного (hungry-ish) и стал самостоятельным ответом."
+    }
+  ]
+}

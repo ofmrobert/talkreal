@@ -1,0 +1,155 @@
+{
+  "id": "a1-27",
+  "level": "A1",
+  "order": 27,
+  "title": { "ru": "Want to, need to, have to: хочу, нужно, приходится", "en": "Want to, need to, have to: what you want and what you must do" },
+  "goal": { "ru": "Научитесь говорить, что вы хотите сделать, что вам нужно и что вы обязаны делать.", "en": "Learn to say what you want to do, what you need to do and what you have to do." },
+  "theory": [
+    {
+      "title": "Want to: хочу что-то сделать",
+      "body": "«Хочу» плюс действие — это want to и глагол в начальной форме: I want to sleep. По-русски между «хочу» и «спать» ничего нет, поэтому to часто теряют: «I want sleep» — ошибка. С he, she, it — wants to. Вопрос и отрицание строятся как обычно, с do и does.",
+      "examples": [
+        { "en": "I want to learn English.", "ru": "Я хочу выучить английский." },
+        { "en": "She wants to buy a new phone.", "ru": "Она хочет купить новый телефон." },
+        { "en": "Do you want to watch a film?", "ru": "Хочешь посмотреть фильм?" }
+      ],
+      "tip": "Want и вещь — без to: I want a coffee. Want и действие — с to: I want to drink a coffee."
+    },
+    {
+      "title": "Need to: мне нужно",
+      "body": "Need to — «нужно, необходимо что-то сделать». По-русски говорят «мне нужно», а в английском подлежащее — I: I need to go. «Me need» и «It is need» — ошибки. С he, she, it — needs to: He needs to sleep. Вопрос: Do you need to go now?",
+      "examples": [
+        { "en": "I need to buy some milk.", "ru": "Мне нужно купить молоко." },
+        { "en": "He needs to find a new job.", "ru": "Ему нужно найти новую работу." },
+        { "en": "We need to get up early tomorrow.", "ru": "Нам нужно завтра рано встать." }
+      ],
+      "tip": "Need и вещь — тоже без to: I need a taxi. I need some help."
+    },
+    {
+      "title": "Have to: должен, приходится",
+      "body": "Have to говорят, когда выбора нет: так требуют работа, правила или обстоятельства. I have to work on Saturday. С he, she, it — has to. Вопрос и отрицание — с do и does: Do you have to go? А don't have to значит «не обязательно», а вовсе не «нельзя».",
+      "examples": [
+        { "en": "I have to work on Saturday.", "ru": "Мне приходится работать в субботу." },
+        { "en": "She has to get up at five.", "ru": "Ей приходится вставать в пять." },
+        { "en": "You don't have to wait for me.", "ru": "Тебе не обязательно меня ждать." }
+      ],
+      "tip": "Сравните: I want to go — хочу пойти, I need to go — мне нужно идти, I have to go — я должен идти, выбора нет."
+    }
+  ],
+  "vocab": [
+    { "en": "to want", "ru": "хотеть", "example": "I want a new bike." },
+    { "en": "to need", "ru": "нуждаться", "example": "I need a new jacket." },
+    { "en": "to have to", "ru": "быть должным, приходиться", "example": "I have to go now." },
+    { "en": "to learn", "ru": "учить, учиться", "example": "Children learn very fast." },
+    { "en": "to pay", "ru": "платить", "example": "Can I pay by card?" },
+    { "en": "to leave", "ru": "уходить, уезжать", "example": "I leave home at eight." },
+    { "en": "tomorrow", "ru": "завтра", "example": "Tomorrow is Sunday." },
+    { "en": "tonight", "ru": "сегодня вечером", "example": "There is a good film on TV tonight." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to want", "ru": "хотеть" },
+        { "en": "to pay", "ru": "платить" },
+        { "en": "to leave", "ru": "уходить, уезжать" },
+        { "en": "tomorrow", "ru": "завтра" },
+        { "en": "tonight", "ru": "сегодня вечером" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я хочу спать»?",
+      "options": ["I want sleep.", "I want to sleep.", "I want sleeping.", "I'm want to sleep."],
+      "answer": 1,
+      "explanation": "Между want и вторым глаголом обязательно стоит to: want to sleep. По-русски такого слова нет, поэтому его легко пропустить. Am перед want не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "My son ___ to be a doctor.",
+      "translation": "Мой сын хочет стать врачом.",
+      "options": ["want", "wants", "is want", "wanting"],
+      "answer": 1,
+      "explanation": "My son — это he, поэтому want получает -s: wants to be. Второй глагол после to всегда остаётся в начальной форме."
+    },
+    {
+      "type": "listen",
+      "audio": "I can't go to the cinema tonight. I have to work.",
+      "question": "Почему человек не идёт в кино?",
+      "options": ["Ему нужно работать", "Он не хочет", "Он заболел", "У него нет билета"],
+      "answer": 0,
+      "explanation": "I have to work — «я должен работать». Have to показывает, что выбора нет: дело не в желании, а в обязанности."
+    },
+    {
+      "type": "translate",
+      "source": "Мне нужно купить хлеб.",
+      "answer": "I need to buy some bread.",
+      "accept": ["I need to buy bread.", "I have to buy some bread.", "I have to buy bread.", "I need to get some bread.", "I need to get bread."],
+      "distractors": ["me", "buying", "want"],
+      "explanation": "Русское «мне нужно» по-английски начинается с I: I need to. После to — начальная форма buy, а не buying."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ to get up at six every day.",
+      "translation": "Ей приходится вставать в шесть каждый день.",
+      "options": ["have", "has", "is", "having"],
+      "answer": 1,
+      "explanation": "С she — has to, как у обычного глагола have: I have, she has. Русское «ей» в английском становится подлежащим she."
+    },
+    {
+      "type": "speak",
+      "text": "What do you want to do tonight?",
+      "translation": "Что ты хочешь делать сегодня вечером?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит «You don't have to come»?",
+      "options": ["Вам нельзя приходить.", "Вам не обязательно приходить.", "Вы не пришли.", "Вы должны прийти."],
+      "answer": 1,
+      "explanation": "Don't have to значит «не обязательно»: можно прийти, а можно и нет. Это не запрет. Чтобы запретить, говорят Don't come или You can't come."
+    },
+    {
+      "type": "translate",
+      "source": "Ты хочешь пойти в кино?",
+      "answer": "Do you want to go to the cinema?",
+      "accept": ["Would you like to go to the cinema?", "Do you want to go to the movies?"],
+      "distractors": ["does", "are", "going"],
+      "explanation": "Вопрос с want строится через do: Do you want…? Дальше to и начальная форма go. Второе to — уже предлог «в»: to the cinema."
+    },
+    {
+      "type": "listen",
+      "audio": "We need to leave at seven. The train is at half past seven.",
+      "question": "Во сколько им нужно выйти?",
+      "options": ["В семь", "В половине восьмого", "В половине седьмого", "В восемь"],
+      "answer": 0,
+      "explanation": "We need to leave at seven — «нам нужно выйти в семь». Half past seven, половина восьмого, — это время поезда."
+    },
+    {
+      "type": "gap",
+      "sentence": "Does he ___ to work on Sundays?",
+      "translation": "Ему приходится работать по воскресеньям?",
+      "options": ["has", "have", "is", "having"],
+      "answer": 1,
+      "explanation": "После does глагол возвращается в начальную форму: Does he have to…? Окончание -s уже есть в слове does, второй раз оно не нужно."
+    },
+    {
+      "type": "type",
+      "source": "Я не хочу идти домой.",
+      "answer": "I don't want to go home.",
+      "accept": ["I do not want to go home."],
+      "explanation": "Отрицание — don't want, потом to и начальная форма go. Перед home предлога нет: go home, а не «go to home»."
+    },
+    {
+      "type": "dictation",
+      "audio": "I have to pay for the tickets today.",
+      "translation": "Мне нужно сегодня заплатить за билеты."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I need buy a ticket.", "He have to work tomorrow.", "We want to stay at home.", "She wants a learn English."],
+      "answer": 2,
+      "explanation": "Want to и начальная форма stay — всё верно. В остальных ошибки: нужно need to buy, he has to work, а между wants и глаголом стоит to, а не a."
+    }
+  ]
+}

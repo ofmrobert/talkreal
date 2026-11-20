@@ -1,0 +1,203 @@
+{
+  "id": "b2-21",
+  "level": "B2",
+  "order": 21,
+  "title": { "ru": "-ing или to: когда форма меняет смысл", "en": "-ing or to: when the form changes the meaning" },
+  "goal": { "ru": "Научитесь различать значения remember, forget, stop, try, regret, go on и mean с формой на -ing и с инфинитивом.", "en": "Learn to tell the difference in meaning between -ing and to after remember, forget, stop, try, regret, go on and mean." },
+  "theory": [
+    {
+      "title": "Remember, forget, regret: назад или вперёд",
+      "body": "После remember, forget и regret форма на -ing говорит о том, что уже было: это воспоминание или сожаление о сделанном. Инфинитив с to смотрит вперёд: не забыть сделать то, что нужно, или «с сожалением сообщить» новость.",
+      "examples": [
+        { "en": "I remember meeting her at a conference in Berlin.", "ru": "Я помню, как познакомился с ней на конференции в Берлине." },
+        { "en": "Remember to take your passport.", "ru": "Не забудь взять паспорт." },
+        { "en": "We regret to inform you that your application was unsuccessful.", "ru": "С сожалением сообщаем, что ваша заявка отклонена." }
+      ],
+      "tip": "По-русски «Я не помню, чтобы запирал дверь» и «Я забыл запереть дверь» — разные конструкции, а в английском разницу создаёт только форма глагола: I don't remember locking the door / I forgot to lock the door."
+    },
+    {
+      "title": "Stop и try",
+      "body": "Stop doing — прекратить действие. Stop to do — остановиться, чтобы сделать что-то другое: to здесь обозначает цель. Try to do — стараться, прилагать усилия, часто безуспешно. Try doing — попробовать что-то как способ решить проблему и посмотреть, поможет ли.",
+      "examples": [
+        { "en": "She stopped eating meat two years ago.", "ru": "Она перестала есть мясо два года назад." },
+        { "en": "On the way home I stopped to buy some bread.", "ru": "По дороге домой я остановился купить хлеба." },
+        { "en": "If you can't sleep, try drinking some warm milk.", "ru": "Если не можете уснуть, попробуйте выпить тёплого молока." }
+      ],
+      "tip": "«Он бросил курить» — He stopped smoking. He stopped to smoke значит обратное: он остановился, чтобы покурить."
+    },
+    {
+      "title": "Go on и mean",
+      "body": "Go on doing — продолжать то же самое. Go on to do — перейти к следующему делу или этапу. Mean to do — намереваться, хотеть сделать. Mean doing — означать, влечь за собой; подлежащим тогда обычно бывает не человек, а ситуация.",
+      "examples": [
+        { "en": "He went on working until midnight.", "ru": "Он продолжал работать до полуночи." },
+        { "en": "She started as a waitress and went on to open her own restaurant.", "ru": "Она начинала официанткой, а потом открыла собственный ресторан." },
+        { "en": "I didn't mean to upset you.", "ru": "Я не хотел вас расстроить." },
+        { "en": "Moving to London means finding a new school for the children.", "ru": "Переезд в Лондон означает, что придётся искать детям новую школу." }
+      ],
+      "tip": "Sorry, I didn't mean to… — готовая формула извинения: «Простите, я не хотел…». После неё всегда идёт инфинитив."
+    }
+  ],
+  "vocab": [
+    { "en": "to regret", "ru": "сожалеть", "example": "I regret not learning to swim as a child." },
+    { "en": "to go on", "ru": "продолжать; переходить к следующему", "example": "Please go on reading." },
+    { "en": "to mean", "ru": "намереваться; означать", "example": "I've been meaning to phone you all week." },
+    { "en": "to lock", "ru": "запирать", "example": "Did you lock the car?" },
+    { "en": "to inform", "ru": "сообщать, уведомлять", "example": "Please inform us of any changes." },
+    { "en": "to switch off", "ru": "выключать", "example": "Switch off your phone before the film starts." },
+    { "en": "to involve", "ru": "включать в себя, подразумевать", "example": "The job involves a lot of travelling." },
+    { "en": "a break", "ru": "перерыв", "example": "Let's have a short break." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to regret", "ru": "сожалеть" },
+        { "en": "to go on", "ru": "продолжать; переходить к следующему" },
+        { "en": "to mean", "ru": "намереваться; означать" },
+        { "en": "to lock", "ru": "запирать" },
+        { "en": "to inform", "ru": "сообщать, уведомлять" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение значит «Я не забыл запереть дверь»?",
+      "options": [
+        "I remembered to lock the door.",
+        "I remembered locking the door.",
+        "I remembered lock the door.",
+        "I remembered to locking the door."
+      ],
+      "answer": 0,
+      "explanation": "Remember to do — «не забыть сделать»: сначала вспомнил, потом запер. Remembered locking — уже воспоминание: «я помнил, как запирал дверь». Остальные два варианта построены неверно."
+    },
+    {
+      "type": "gap",
+      "sentence": "We had been driving for three hours, so we stopped ___ a coffee.",
+      "translation": "Мы ехали уже три часа, поэтому остановились выпить кофе.",
+      "options": ["to have", "having", "have", "to having"],
+      "answer": 0,
+      "explanation": "Stop to do — остановиться, чтобы что-то сделать: to обозначает цель. Stopped having a coffee значило бы «перестали пить кофе», а это не вяжется с долгой дорогой."
+    },
+    {
+      "type": "listen",
+      "audio": "I'll never forget seeing the ocean for the first time.",
+      "question": "Что говорит человек?",
+      "options": [
+        "Он навсегда запомнил, как впервые увидел океан",
+        "Он боится, что забудет съездить к океану",
+        "Он не помнит, когда впервые увидел океан",
+        "Он ещё ни разу не видел океан"
+      ],
+      "answer": 0,
+      "explanation": "Forget + -ing относится к прошлому: событие уже произошло и осталось в памяти. Never forget seeing — «никогда не забуду, как увидел». Forget to see значило бы «забыть посмотреть»."
+    },
+    {
+      "type": "translate",
+      "source": "Не забудь выключить свет.",
+      "answer": "Don't forget to turn off the light.",
+      "accept": [
+        "Do not forget to turn off the light.",
+        "Don't forget to turn the light off.",
+        "Don't forget to switch off the light.",
+        "Don't forget to switch the light off.",
+        "Don't forget to turn off the lights.",
+        "Don't forget to switch off the lights.",
+        "Remember to turn off the light.",
+        "Remember to switch off the light."
+      ],
+      "distractors": ["turning", "forgot", "for"],
+      "explanation": "Речь о деле, которое ещё предстоит, поэтому после forget нужен инфинитив: forget to turn off. Forget turning off относилось бы к прошлому: «забыть, как выключал»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The printer isn't working. — Try ___ it off and on again.",
+      "translation": "Принтер не работает. — Попробуй выключить его и снова включить.",
+      "options": ["turning", "to turning", "turned", "turns"],
+      "answer": 0,
+      "explanation": "Try doing — попробовать что-то как способ решить проблему: «а вдруг поможет». Выключить принтер нетрудно, вопрос лишь в том, сработает ли это, поэтому здесь -ing."
+    },
+    {
+      "type": "speak",
+      "text": "I regret to inform you that the flight is cancelled.",
+      "translation": "С сожалением сообщаю вам, что рейс отменён."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит «He stopped smoking»?",
+      "options": [
+        "Он бросил курить",
+        "Он остановился, чтобы покурить",
+        "Он попробовал закурить",
+        "Он продолжил курить"
+      ],
+      "answer": 0,
+      "explanation": "Stop + -ing — прекратить действие: «перестал, бросил курить». «Остановился, чтобы покурить» — это stopped to smoke, с инфинитивом цели."
+    },
+    {
+      "type": "type",
+      "source": "Я сожалею, что сказал это.",
+      "answer": "I regret saying that.",
+      "accept": [
+        "I regret saying it.",
+        "I regret saying this.",
+        "I regret having said that.",
+        "I regret having said it.",
+        "I regret that I said that.",
+        "I regret that I said it.",
+        "I regret I said that."
+      ],
+      "explanation": "Сожаление о том, что уже сделано, — regret + -ing: regret saying. Regret to say значит «с сожалением вынужден сказать» и вводит неприятную новость, которую вы только собираетесь сообщить."
+    },
+    {
+      "type": "listen",
+      "audio": "After a year as a nurse, she went on to study medicine.",
+      "question": "Что произошло?",
+      "options": [
+        "Сначала она работала медсестрой, а потом стала учиться на врача",
+        "Она целый год продолжала изучать медицину",
+        "Через год она бросила медицину",
+        "Она год училась на медсестру"
+      ],
+      "answer": 0,
+      "explanation": "Go on to do — перейти к следующему этапу: после работы медсестрой началось новое дело, учёба. «Продолжала изучать» было бы went on studying."
+    },
+    {
+      "type": "gap",
+      "sentence": "This job means ___ up at five every morning.",
+      "translation": "Эта работа означает, что каждое утро придётся вставать в пять.",
+      "options": ["getting", "to get", "get", "to getting"],
+      "answer": 0,
+      "explanation": "Mean + -ing — «означать, влечь за собой»; подлежащее здесь не человек, а работа. Mean to get значило бы «намереваться встать», а работа намереваться не может."
+    },
+    {
+      "type": "translate",
+      "source": "Я пытался открыть окно, но не смог.",
+      "answer": "I tried to open the window, but I couldn't.",
+      "accept": [
+        "I tried to open the window but couldn't.",
+        "I tried to open the window, but I could not.",
+        "I tried to open the window, but I failed.",
+        "I tried to open the window, but I wasn't able to."
+      ],
+      "distractors": ["opening", "try", "can't"],
+      "explanation": "Try to do — прилагать усилия, пытаться; результат часто неудачный, как здесь. Tried opening значило бы, что окно открыть удалось и вы проверяли, поможет ли это, например, от духоты."
+    },
+    {
+      "type": "dictation",
+      "audio": "She went on talking for another hour.",
+      "translation": "Она продолжала говорить ещё час."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы хотели позвонить другу, но это вылетело из головы. Как извиниться?",
+      "options": [
+        "Sorry, I meant to call you, but I forgot.",
+        "Sorry, I meant calling you, but I forgot.",
+        "Sorry, I meant call you, but I forgot.",
+        "Sorry, I meant to calling you, but I forgot."
+      ],
+      "answer": 0,
+      "explanation": "Mean to do — «намереваться, собираться»: I meant to call you — «я собирался тебе позвонить». Форма на -ing после mean даёт другое значение — «означать», и к человеку с его намерениями оно не подходит."
+    }
+  ]
+}

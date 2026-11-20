@@ -1,0 +1,194 @@
+{
+  "id": "b2-25",
+  "level": "B2",
+  "order": 25,
+  "title": { "ru": "Present Perfect Simple и Continuous: результат или процесс", "en": "Present Perfect Simple vs Continuous: result or process" },
+  "goal": { "ru": "Научитесь выбирать между I've painted и I've been painting: результат или процесс, «сколько» или «как долго», и почему глаголы состояния не стоят в Continuous.", "en": "Learn to choose between I've painted and I've been painting: result or process, how much or how long, and why state verbs don't take the continuous." },
+  "theory": [
+    {
+      "title": "Результат или процесс",
+      "body": "Present Perfect Simple показывает результат: дело сделано. Present Perfect Continuous показывает само занятие: оно длилось до настоящего момента и, возможно, не закончено, а его следы видны сейчас. I've painted the room — комната готова. I've been painting the room — я этим занимался и, например, весь в краске.",
+      "examples": [
+        { "en": "I've fixed the tap. You can use it now.", "ru": "Я починил кран. Теперь им можно пользоваться." },
+        { "en": "I've been fixing the tap, and my hands are still wet.", "ru": "Я чинил кран, и руки у меня до сих пор мокрые." },
+        { "en": "It has been raining: the pavements are wet.", "ru": "Шёл дождь: тротуары мокрые." }
+      ],
+      "tip": "В русском разницу передаёт вид глагола: «покрасил» — I've painted, «красил» — I've been painting."
+    },
+    {
+      "title": "Сколько или как долго",
+      "body": "Если названо количество или число раз — сколько страниц, писем, чашек, — нужен Simple. Если названа длительность (for two hours, since Monday, all day) и действие продолжается, обычно выбирают Continuous.",
+      "examples": [
+        { "en": "I've written ten emails this morning.", "ru": "За это утро я написал десять писем." },
+        { "en": "I've been writing emails all morning.", "ru": "Я всё утро пишу письма." },
+        { "en": "She's called him three times today.", "ru": "Сегодня она звонила ему три раза." }
+      ],
+      "tip": "«I've been drinking three cups of coffee» — ошибка: с количеством Continuous не сочетается. Правильно: I've drunk three cups of coffee."
+    },
+    {
+      "title": "Глаголы состояния",
+      "body": "Know, have (в значении «иметь»), be, like, believe, own и belong не употребляются в Continuous. С ними длительность выражает Simple: I've known her for years. Русское настоящее время («Я знаю её много лет») подталкивает к Present Simple, но в английском это ошибка.",
+      "examples": [
+        { "en": "We've been friends since school.", "ru": "Мы дружим со школы." },
+        { "en": "He's owned that shop for twenty years.", "ru": "Он владеет этим магазином двадцать лет." },
+        { "en": "I've always liked jazz.", "ru": "Мне всегда нравился джаз." }
+      ],
+      "tip": "С live и work возможны обе формы почти без разницы: I've lived here for ten years = I've been living here for ten years."
+    }
+  ],
+  "vocab": [
+    { "en": "so far", "ru": "на данный момент, пока", "example": "So far we've visited four cities." },
+    { "en": "lately", "ru": "в последнее время", "example": "I've been sleeping badly lately." },
+    { "en": "to own", "ru": "владеть", "example": "They own a small café by the sea." },
+    { "en": "to revise", "ru": "повторять (материал)", "example": "I've been revising for the exam all week." },
+    { "en": "out of breath", "ru": "запыхавшийся", "example": "He arrived out of breath." },
+    { "en": "a chapter", "ru": "глава (книги)", "example": "The first chapter is very short." },
+    { "en": "to redecorate", "ru": "делать косметический ремонт", "example": "We've redecorated the living room." },
+    { "en": "to belong to", "ru": "принадлежать", "example": "This bag belongs to my sister." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "so far", "ru": "на данный момент, пока" },
+        { "en": "lately", "ru": "в последнее время" },
+        { "en": "to own", "ru": "владеть" },
+        { "en": "to revise", "ru": "повторять (материал)" },
+        { "en": "out of breath", "ru": "запыхавшийся" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение сообщает, что спальня уже покрашена?",
+      "options": [
+        "I've painted the bedroom.",
+        "I've been painting the bedroom.",
+        "I'm painting the bedroom.",
+        "I'll paint the bedroom."
+      ],
+      "answer": 0,
+      "explanation": "Present Perfect Simple называет результат: работа закончена. I've been painting говорит только о занятии — возможно, оно не доведено до конца; I'm painting — процесс идёт сейчас, I'll paint — ещё только планы."
+    },
+    {
+      "type": "gap",
+      "sentence": "Sorry about the mess. I ___ all afternoon, and I haven't finished yet.",
+      "translation": "Простите за беспорядок. Я готовлю с самого обеда и ещё не закончил.",
+      "options": ["have been cooking", "have cooked", "cook", "am cooked"],
+      "answer": 0,
+      "explanation": "Занятие длится уже несколько часов (all afternoon), не закончено, а его следы видны — беспорядок. Всё это признаки Present Perfect Continuous. Simple подчеркнул бы готовый результат, а его пока нет."
+    },
+    {
+      "type": "listen",
+      "audio": "She's written three chapters of her book so far.",
+      "question": "Что вы узнали?",
+      "options": [
+        "На данный момент готовы три главы книги",
+        "Она пишет книгу уже три года",
+        "Она закончила книгу из трёх глав",
+        "Она собирается написать три главы"
+      ],
+      "answer": 0,
+      "explanation": "She's written three chapters — названо количество, значит, это результат на данный момент, и нужен Simple. So far («пока») подсказывает, что работа над книгой продолжается."
+    },
+    {
+      "type": "translate",
+      "source": "Я знаю его десять лет.",
+      "answer": "I have known him for ten years.",
+      "accept": [
+        "I've known him for ten years.",
+        "I have known him for 10 years.",
+        "I've known him for 10 years."
+      ],
+      "distractors": ["know", "since", "knowing"],
+      "explanation": "Know — глагол состояния, в Continuous он не употребляется, поэтому have known. Русское настоящее время («знаю») здесь переводится перфектом: состояние началось в прошлом и длится до сих пор. Со сроком — for, не since."
+    },
+    {
+      "type": "gap",
+      "sentence": "How many emails ___ today?",
+      "translation": "Сколько писем вы сегодня отправили?",
+      "options": ["have you sent", "have you been sending", "you have sent", "do you sent"],
+      "answer": 0,
+      "explanation": "How many спрашивает о количестве, то есть о результате, — нужен Simple: have you sent. Continuous отвечает на вопрос how long. В вопросе вспомогательный глагол стоит перед подлежащим."
+    },
+    {
+      "type": "speak",
+      "text": "We've been waiting here since nine o'clock.",
+      "translation": "Мы ждём здесь с девяти часов."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "We've had this car since 2019.",
+        "We've been having this car since 2019.",
+        "We have this car since 2019.",
+        "We are having this car since 2019."
+      ],
+      "answer": 0,
+      "explanation": "Have в значении «иметь» — глагол состояния, Continuous с ним невозможен. А Present Simple с since — калька с русского «у нас эта машина с 2019 года»: в английском нужен перфект."
+    },
+    {
+      "type": "type",
+      "source": "Как давно вы здесь живёте?",
+      "answer": "How long have you been living here?",
+      "accept": [
+        "How long have you lived here?"
+      ],
+      "explanation": "Вопрос о длительности — how long + Present Perfect. С глаголом live годятся обе формы: have you been living и have you lived. «How long do you live here?» — ошибка, вызванная русским настоящим временем."
+    },
+    {
+      "type": "listen",
+      "audio": "My hands are dirty because I've been repairing the bike.",
+      "question": "Почему у говорящего грязные руки?",
+      "options": [
+        "Он чинил велосипед",
+        "Он мыл велосипед",
+        "Он собирается чинить велосипед",
+        "Он упал с велосипеда"
+      ],
+      "answer": 0,
+      "explanation": "I've been repairing — недавнее занятие, следы которого видны сейчас: грязные руки. Continuous не сообщает, починен ли велосипед: важен сам процесс, а не результат."
+    },
+    {
+      "type": "gap",
+      "sentence": "I ___ this novel for two weeks, and I'm only on page fifty.",
+      "translation": "Я читаю этот роман уже две недели, а дошёл только до пятидесятой страницы.",
+      "options": ["have been reading", "have read", "am reading", "read"],
+      "answer": 0,
+      "explanation": "Действие началось две недели назад и продолжается: for two weeks + незаконченный процесс — это Present Perfect Continuous. Have read значило бы, что роман прочитан, а Present Continuous с for не употребляется."
+    },
+    {
+      "type": "translate",
+      "source": "Она с утра красит кухню.",
+      "answer": "She has been painting the kitchen since this morning.",
+      "accept": [
+        "She's been painting the kitchen since this morning.",
+        "She has been painting the kitchen since the morning.",
+        "She's been painting the kitchen since the morning.",
+        "She has been painting the kitchen since morning.",
+        "She's been painting the kitchen since morning.",
+        "She has been painting the kitchen all morning.",
+        "She's been painting the kitchen all morning."
+      ],
+      "distractors": ["paints", "from", "is"],
+      "explanation": "Процесс начался утром и ещё идёт — has been painting. Русское настоящее время («красит») с указанием начала действия переводится перфектом, а «с утра» — since, не from."
+    },
+    {
+      "type": "dictation",
+      "audio": "I have been working here since March.",
+      "translation": "Я работаю здесь с марта."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы устали, потому что весь день занимались уборкой. Что вы скажете?",
+      "options": [
+        "I'm tired because I've been cleaning all day.",
+        "I'm tired because I clean all day.",
+        "I'm tired because I'm cleaning all day.",
+        "I'm tired because I've been cleaned all day."
+      ],
+      "answer": 0,
+      "explanation": "Усталость — след занятия, которое длилось весь день: это Present Perfect Continuous. Present Simple описывал бы привычку, Present Continuous не сочетается с all day в значении «до этой минуты», а have been cleaned — пассив: «меня убирали»."
+    }
+  ]
+}

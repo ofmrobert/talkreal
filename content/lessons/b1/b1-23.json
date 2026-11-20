@@ -1,0 +1,155 @@
+{
+  "id": "b1-23",
+  "level": "B1",
+  "order": 23,
+  "title": { "ru": "Unless, as long as, in case, provided that: условия точнее, чем if", "en": "Unless, as long as, in case, provided that" },
+  "goal": { "ru": "Научитесь ставить условия точнее, чем просто с if: «если не», «при условии что», «на случай если».", "en": "Learn to state conditions more precisely than with \"if\": unless, as long as, provided that, in case." },
+  "theory": [
+    {
+      "title": "Unless = if… not",
+      "body": "Unless значит «если не», «разве что»: отрицание уже спрятано внутри слова. Поэтому глагол после unless стоит в утвердительной форме. Как и после if, о будущем здесь говорят в настоящем времени: unless it rains, а не «unless it will rain».",
+      "examples": [
+        { "en": "You can't get in unless you have a ticket.", "ru": "Вы не войдёте, если у вас нет билета." },
+        { "en": "Unless it rains, we'll eat outside.", "ru": "Если не пойдёт дождь, мы поедим на улице." },
+        { "en": "I never drive unless I have to.", "ru": "Я никогда не сажусь за руль, если в этом нет необходимости." }
+      ],
+      "tip": "«Unless you don't call» — двойное отрицание, калька с русского «если ты не позвонишь». Правильно: unless you call."
+    },
+    {
+      "title": "As long as и provided that: только при условии",
+      "body": "As long as и provided (that) значат «только при условии, что». Это сильнее, чем if: вы подчёркиваете, что без этого условия ничего не будет. As long as звучит разговорно, provided that — более официально; that можно опустить. После них тоже стоит настоящее время, а не will.",
+      "examples": [
+        { "en": "You can stay here as long as you keep quiet.", "ru": "Можете остаться здесь при условии, что не будете шуметь." },
+        { "en": "We'll sign the contract provided that the price doesn't change.", "ru": "Мы подпишем договор при условии, что цена не изменится." },
+        { "en": "I don't mind where we go as long as it's warm.", "ru": "Мне всё равно, куда мы поедем, лишь бы там было тепло." }
+      ],
+      "tip": "As long as часто удобно переводить как «лишь бы» или «главное, чтобы»."
+    },
+    {
+      "title": "In case: на случай если",
+      "body": "In case — это не «если», а «на случай, если»: вы делаете что-то заранее, потому что что-то может случиться. Charge your phone in case you need it — зарядите сейчас, вдруг понадобится. С if смысл другой: действие произойдёт только тогда, когда выполнится условие. После in case о будущем говорят в настоящем времени, о прошлом — в прошедшем.",
+      "examples": [
+        { "en": "Charge your phone in case you need it later.", "ru": "Зарядите телефон на случай, если он понадобится позже." },
+        { "en": "I'll leave a spare key with the neighbours in case I lose mine.", "ru": "Я оставлю запасной ключ у соседей на случай, если потеряю свой." },
+        { "en": "I took a jumper in case it got cold.", "ru": "Я взял свитер на случай, если станет холодно." }
+      ],
+      "tip": "In case of + существительное — «в случае чего-то», обычно на табличках: In case of fire, use the stairs."
+    }
+  ],
+  "vocab": [
+    { "en": "unless", "ru": "если не", "example": "I won't come unless you invite me." },
+    { "en": "as long as", "ru": "при условии что, лишь бы", "example": "You can come as long as you're on time." },
+    { "en": "provided that", "ru": "при условии что", "example": "You'll get a refund provided that you keep the receipt." },
+    { "en": "in case", "ru": "на случай если", "example": "Take some water in case you get thirsty." },
+    { "en": "spare", "ru": "запасной", "example": "Do you have a spare key?" },
+    { "en": "in advance", "ru": "заранее", "example": "It's cheaper if you book in advance." },
+    { "en": "a receipt", "ru": "чек", "example": "Ask for a receipt in case you want to return it." },
+    { "en": "to accept", "ru": "принимать", "example": "Do you accept credit cards?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "unless", "ru": "если не" },
+        { "en": "in case", "ru": "на случай если" },
+        { "en": "spare", "ru": "запасной" },
+        { "en": "in advance", "ru": "заранее" },
+        { "en": "a receipt", "ru": "чек" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Я не пойду, если ты не пойдёшь со мной»?",
+      "options": ["I won't go unless you come with me.", "I won't go unless you don't come with me.", "I won't go unless you will come with me.", "I won't go in case you come with me."],
+      "answer": 0,
+      "explanation": "Unless уже содержит отрицание («если не»), поэтому глагол после него утвердительный и стоит в настоящем времени: unless you come. Вариант с don't даёт двойное отрицание, а will после unless не ставится."
+    },
+    {
+      "type": "gap",
+      "sentence": "Take a jacket ___ it gets cold in the evening.",
+      "translation": "Возьмите куртку на случай, если вечером похолодает.",
+      "options": ["in case", "unless", "as long as", "provided that"],
+      "answer": 0,
+      "explanation": "Куртку берут заранее, потому что может похолодать, — это in case. Unless значило бы «если не похолодает», а as long as и provided that ставят условие, которого здесь нет."
+    },
+    {
+      "type": "translate",
+      "source": "Мы опоздаем, если не выйдем сейчас.",
+      "answer": "We will be late unless we leave now.",
+      "accept": ["We'll be late unless we leave now.", "Unless we leave now, we will be late.", "Unless we leave now, we'll be late.", "We will be late if we do not leave now.", "We'll be late if we don't leave now.", "If we don't leave now, we'll be late.", "If we do not leave now, we will be late.", "We are going to be late unless we leave now.", "We're going to be late unless we leave now.", "We will be late unless we go now.", "We'll be late unless we go now."],
+      "distractors": ["don't", "leaving", "in"],
+      "explanation": "«Если не» — unless, и глагол после него утвердительный: unless we leave. Добавить don't значит сказать «если мы не не выйдем». В главной части — will, в части с unless — настоящее время."
+    },
+    {
+      "type": "listen",
+      "audio": "You can use my laptop as long as you bring it back by six.",
+      "question": "При каком условии можно взять ноутбук?",
+      "options": ["Если вернуть его до шести", "Если пользоваться им не дольше шести часов", "Если прийти за ним в шесть", "Никаких условий нет"],
+      "answer": 0,
+      "explanation": "As long as — «при условии, что». Bring it back by six — «вернуть к шести»: by указывает крайний срок, а не продолжительность."
+    },
+    {
+      "type": "gap",
+      "sentence": "You can go to the party provided that you ___ home by eleven.",
+      "translation": "Можешь пойти на вечеринку при условии, что будешь дома к одиннадцати.",
+      "options": ["are", "will be", "would be", "were"],
+      "answer": 0,
+      "explanation": "После provided that, как и после if, о будущем говорят в настоящем времени: provided that you are home. Русское «будешь» подсказывает will be, но в условии will не ставится."
+    },
+    {
+      "type": "speak",
+      "text": "I'll take some cash in case they don't accept cards.",
+      "translation": "Я возьму наличные на случай, если там не принимают карты."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Unless you don't hurry, you'll miss the train.", "Unless you hurry, you'll miss the train.", "Unless you will hurry, you'll miss the train.", "Unless you hurried, you'll miss the train."],
+      "answer": 1,
+      "explanation": "Unless = if not, поэтому второе отрицание не нужно: unless you hurry — «если вы не поторопитесь». О будущем после unless говорят в настоящем времени, без will."
+    },
+    {
+      "type": "type",
+      "source": "Запишите мой номер на случай, если потеряетесь.",
+      "answer": "Write down my number in case you get lost.",
+      "accept": ["Write my number down in case you get lost.", "Write down my phone number in case you get lost.", "Write my phone number down in case you get lost.", "Take my number in case you get lost.", "Take down my number in case you get lost.", "Note down my number in case you get lost.", "Write down my number in case you lose your way.", "Write my number down in case you lose your way.", "Write down my number just in case you get lost."],
+      "explanation": "Номер записывают заранее, на всякий случай, — in case. После in case стоит настоящее время: in case you get lost, а не will get. С if получилось бы «запишите номер, когда уже потеряетесь»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The children can play in the garden ___ they don't make too much noise.",
+      "translation": "Дети могут играть в саду при условии, что не будут слишком шуметь.",
+      "options": ["as long as", "unless", "in case", "until"],
+      "answer": 0,
+      "explanation": "Разрешение дано с условием — «только если не будут шуметь»: as long as. Unless вместе с don't дало бы обратный смысл, а in case — «на случай, если не будут шуметь», что бессмысленно."
+    },
+    {
+      "type": "listen",
+      "audio": "I won't tell anyone unless you want me to.",
+      "question": "Что вы услышали?",
+      "options": ["I won't tell anyone unless you want me to.", "I won't tell anyone if you want me to.", "I won't tell anyone unless you ask me to.", "I don't tell anyone unless you want me to."],
+      "answer": 0,
+      "explanation": "Unless you want me to — «если только вы сами этого не захотите». Won't = will not, обещание на будущее; после to глагол tell не повторяется, он понятен из первой части."
+    },
+    {
+      "type": "translate",
+      "source": "Я возьму зонт на случай, если пойдёт дождь.",
+      "answer": "I will take an umbrella in case it rains.",
+      "accept": ["I'll take an umbrella in case it rains.", "I will take my umbrella in case it rains.", "I'll take my umbrella in case it rains.", "I am going to take an umbrella in case it rains.", "I'm going to take an umbrella in case it rains.", "I will bring an umbrella in case it rains.", "I'll bring an umbrella in case it rains.", "I'll take an umbrella just in case it rains."],
+      "distractors": ["if", "rain", "would"],
+      "explanation": "Зонт вы берёте заранее, ещё не зная, будет ли дождь, — это in case. I'll take an umbrella if it rains значило бы, что вы возьмёте его, только когда дождь уже пойдёт. После in case — настоящее время: it rains."
+    },
+    {
+      "type": "dictation",
+      "audio": "You won't pass unless you study harder.",
+      "translation": "Вы не сдадите, если не будете заниматься усерднее."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «I'll take a sandwich in case I get hungry»?",
+      "options": ["Я возьму бутерброд заранее: вдруг проголодаюсь", "Я возьму бутерброд, когда проголодаюсь", "Я не возьму бутерброд, если не проголодаюсь"],
+      "answer": 0,
+      "explanation": "In case — «на случай, если»: действие совершают заранее как меру предосторожности. «Когда проголодаюсь» — when I get hungry, а «если не» — unless."
+    }
+  ]
+}

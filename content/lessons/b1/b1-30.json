@@ -1,0 +1,155 @@
+{
+  "id": "b1-30",
+  "level": "B1",
+  "order": 30,
+  "title": { "ru": "Жалобы, извинения и решение проблем", "en": "Complaints, apologies and solving problems" },
+  "goal": { "ru": "Научитесь вежливо сообщать о проблеме, просить её решить, извиняться и отвечать на извинения.", "en": "Learn to point out a problem politely, ask for it to be solved, apologise and respond to an apology." },
+  "theory": [
+    {
+      "title": "Как вежливо сообщить о проблеме",
+      "body": "Русское «у меня не работает душ» в английском разговоре звучит резковато. Жалобу принято смягчать вступлением: I'm afraid there's a problem with…, I'm sorry to bother you, but…, There seems to be a mistake in… Тон при этом остаётся твёрдым: вы не извиняетесь, а вежливо обозначаете проблему.",
+      "examples": [
+        { "en": "I'm afraid there's a problem with my room.", "ru": "Боюсь, с моим номером возникла проблема." },
+        { "en": "I'm sorry to bother you, but the heating isn't working.", "ru": "Извините за беспокойство, но отопление не работает." },
+        { "en": "There seems to be a mistake in my order.", "ru": "Кажется, в моём заказе ошибка." }
+      ],
+      "tip": "I'm afraid здесь не про страх. Это «к сожалению»: так смягчают любую неприятную новость."
+    },
+    {
+      "title": "Как попросить решить проблему",
+      "body": "Чем больше неудобств вы доставляете просьбой, тем она длиннее и мягче: Could you…? — Could you possibly…? — Would you mind + глагол с -ing? Would you mind дословно значит «вы не против?», поэтому согласие звучит как No, not at all или Of course not. О своих требованиях говорят через I'd like: I'd like a refund.",
+      "examples": [
+        { "en": "Could you possibly change my room?", "ru": "Не могли бы вы поменять мне номер?" },
+        { "en": "Would you mind moving your bag?", "ru": "Вы не могли бы убрать свою сумку?" },
+        { "en": "I'd like to speak to the manager, please.", "ru": "Я хотел бы поговорить с управляющим." }
+      ],
+      "tip": "После mind глагол стоит только с -ing: «Would you mind to wait?» — ошибка. А ответ Yes на Would you mind…? означает отказ."
+    },
+    {
+      "title": "Как извиниться и ответить на извинение",
+      "body": "Извиняются так: I'm so sorry about + существительное, I'm sorry for + глагол с -ing, более официально — I apologise for… Хорошее извинение сразу предлагает решение: I'll sort it out right away. В ответ на извинение говорят Never mind, Don't worry about it, That's all right.",
+      "examples": [
+        { "en": "I'm so sorry about the noise last night.", "ru": "Простите, пожалуйста, за вчерашний шум." },
+        { "en": "I apologise for the mistake. I'll sort it out right away.", "ru": "Приношу извинения за ошибку. Я сейчас же всё улажу." },
+        { "en": "I'm sorry I'm late. — Don't worry about it.", "ru": "Простите, что опоздал. — Ничего страшного." }
+      ],
+      "tip": "Excuse me говорят до того, как побеспокоить человека, sorry — после того, как что-то случилось. И apologise идёт без дополнения-человека: не «I apologise you», а I apologise for the delay."
+    }
+  ],
+  "vocab": [
+    { "en": "to complain", "ru": "жаловаться", "example": "I would like to complain about the noise." },
+    { "en": "a refund", "ru": "возврат денег", "example": "Can I get a refund for this jacket?" },
+    { "en": "to apologise", "ru": "извиняться", "example": "I must apologise for being late." },
+    { "en": "my fault", "ru": "моя вина", "example": "Sorry, it was my fault." },
+    { "en": "to sort out", "ru": "уладить, разобраться", "example": "We need to sort out this problem today." },
+    { "en": "to bother", "ru": "беспокоить", "example": "Sorry to bother you so late." },
+    { "en": "never mind", "ru": "ничего страшного", "example": "Never mind, it wasn't important." },
+    { "en": "to turn down", "ru": "сделать тише", "example": "Could you turn down the volume a little?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to complain", "ru": "жаловаться" },
+        { "en": "a refund", "ru": "возврат денег" },
+        { "en": "to apologise", "ru": "извиняться" },
+        { "en": "to sort out", "ru": "уладить" },
+        { "en": "to bother", "ru": "беспокоить" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "В вашем номере не работает душ. Как вежливо сказать об этом на стойке регистрации?",
+      "options": ["I'm afraid there's a problem with the shower.", "I'm afraid of the shower.", "I afraid there's a problem with the shower.", "I'm afraid there's a problem of the shower."],
+      "answer": 0,
+      "explanation": "I'm afraid + предложение смягчает неприятную новость: «боюсь, что…». I'm afraid of the shower значило бы, что вы боитесь душа. Глагол be пропускать нельзя, а после problem стоит предлог with."
+    },
+    {
+      "type": "gap",
+      "sentence": "Would you mind ___ the window? It's rather cold in here.",
+      "translation": "Вы не могли бы закрыть окно? Здесь довольно холодно.",
+      "options": ["closing", "to close", "close", "closed"],
+      "answer": 0,
+      "explanation": "После Would you mind глагол всегда стоит с -ing: would you mind closing. Русский инфинитив «закрыть» подсказывает to close, но после mind он невозможен."
+    },
+    {
+      "type": "translate",
+      "source": "Прошу прощения за задержку.",
+      "answer": "I am sorry about the delay.",
+      "accept": ["I'm sorry about the delay.", "I am so sorry about the delay.", "I'm so sorry about the delay.", "I am very sorry about the delay.", "I'm very sorry about the delay.", "I am sorry for the delay.", "I'm sorry for the delay.", "I'm so sorry for the delay.", "Sorry about the delay.", "Sorry for the delay.", "I apologise for the delay.", "I apologize for the delay.", "I do apologise for the delay.", "My apologies for the delay."],
+      "distractors": ["excuse", "on", "delaying"],
+      "explanation": "За то, что уже случилось, извиняются словом sorry: I'm sorry about + существительное. Excuse me говорят заранее, чтобы привлечь внимание или пройти, а не чтобы извиниться за неудобство."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm sorry to bother you, but I think there's a mistake in my bill.",
+      "question": "Зачем говорящий обращается к собеседнику?",
+      "options": ["Он считает, что в счёте ошибка", "Он хочет оплатить счёт", "Он извиняется за свою ошибку", "Он просит принести счёт"],
+      "answer": 0,
+      "explanation": "I'm sorry to bother you, but… — это не извинение за проступок, а вежливое вступление перед жалобой. Суть — после but: a mistake in my bill, «ошибка в счёте»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I apologise ___ the misunderstanding.",
+      "translation": "Приношу извинения за недоразумение.",
+      "options": ["for", "at", "of", "on"],
+      "answer": 0,
+      "explanation": "Apologise for something — «извиняться за что-то». Русское «за» здесь всегда переводится как for; если нужно назвать человека, добавляют to: apologise to the customer."
+    },
+    {
+      "type": "speak",
+      "text": "Could you possibly check my order again?",
+      "translation": "Не могли бы вы ещё раз проверить мой заказ?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Would you mind to wait outside for a moment?", "Would you mind waiting outside for a moment?", "Would you mind wait outside for a moment?", "Do you mind to waiting outside for a moment?"],
+      "answer": 1,
+      "explanation": "После mind — только форма на -ing: would you mind waiting. Ни to wait, ни wait без окончания, ни to waiting здесь невозможны."
+    },
+    {
+      "type": "type",
+      "source": "Я хотел бы получить деньги обратно.",
+      "answer": "I would like a refund.",
+      "accept": ["I'd like a refund.", "I would like to get a refund.", "I'd like to get a refund.", "I would like to have a refund.", "I'd like to have a refund.", "I would like my money back.", "I'd like my money back.", "I would like to get my money back.", "I'd like to get my money back.", "I would like to have my money back.", "I'd like to have my money back.", "I would like to receive a refund.", "I'd like to receive a refund.", "I want a refund.", "I want my money back.", "I want to get my money back."],
+      "explanation": "«Возврат денег» — a refund, а вежливое требование начинают с I'd like, а не с I want: так вы звучите твёрдо, но не грубо. Подойдёт и I'd like my money back."
+    },
+    {
+      "type": "gap",
+      "sentence": "\"I'm so sorry, I've broken one of your cups.\" \"___. It was an old one.\"",
+      "translation": "— Простите, я разбил одну из ваших чашек. — Ничего страшного. Она была старая.",
+      "options": ["Never mind", "You're welcome", "Here you are", "Same to you"],
+      "answer": 0,
+      "explanation": "На извинение отвечают Never mind — «ничего страшного». You're welcome — ответ на «спасибо», here you are говорят, когда что-то передают, а same to you — в ответ на пожелание."
+    },
+    {
+      "type": "listen",
+      "audio": "It was my fault, and I'll sort it out today.",
+      "question": "Что вы услышали?",
+      "options": ["It was my fault, and I'll sort it out today.", "It wasn't my fault, and I'll sort it out today.", "It was my fault, and I'll sort it out tomorrow.", "It was my fault, and I sorted it out today."],
+      "answer": 0,
+      "explanation": "It was my fault — «это была моя вина», без отрицания. I'll sort it out — обещание на будущее: 'll = will, а не прошедшее sorted. В конце звучит today."
+    },
+    {
+      "type": "translate",
+      "source": "Не могли бы вы сделать музыку потише?",
+      "answer": "Would you mind turning the music down?",
+      "accept": ["Would you mind turning down the music?", "Do you mind turning the music down?", "Do you mind turning down the music?", "Could you turn the music down?", "Could you turn down the music?", "Could you please turn the music down?", "Could you please turn down the music?", "Could you possibly turn the music down?", "Could you possibly turn down the music?", "Can you turn the music down?", "Can you turn down the music?", "Would you turn the music down?"],
+      "distractors": ["to", "turn", "quiet"],
+      "explanation": "Would you mind + глагол с -ing: would you mind turning. «Сделать тише» — фразовый глагол turn down, и дополнение может стоять в середине: turn the music down."
+    },
+    {
+      "type": "dictation",
+      "audio": "I'm afraid this is not what I ordered.",
+      "translation": "Боюсь, это не то, что я заказывал."
+    },
+    {
+      "type": "choice",
+      "prompt": "На просьбу «Would you mind helping me?» вам ответили «Not at all». Что это значит?",
+      "options": ["Конечно, помогу", "Нет, не помогу", "Мне всё равно"],
+      "answer": 0,
+      "explanation": "Would you mind…? дословно — «вы не против?», поэтому Not at all значит «совсем не против», то есть согласие. Отказ начинался бы с I'm afraid или I'm sorry, but…"
+    }
+  ]
+}

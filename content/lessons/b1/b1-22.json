@@ -1,0 +1,155 @@
+{
+  "id": "b1-22",
+  "level": "B1",
+  "order": 22,
+  "title": { "ru": "Have / get something done: «я подстригся», «нам починили машину»", "en": "Have / get something done" },
+  "goal": { "ru": "Научитесь говорить об услугах, которые для вас выполняют другие: подстричься, отдать машину в ремонт, покрасить стены.", "en": "Learn to talk about things other people do for you: having your hair cut, your car repaired or your walls painted." },
+  "theory": [
+    {
+      "title": "Have + предмет + третья форма",
+      "body": "По-русски «я подстригся» и «я починил машину» не показывают, кто именно это сделал. В английском разница обязательна: I cut my hair — сам, ножницами; I had my hair cut — меня подстригли в парикмахерской. Схема: have + предмет + третья форма глагола. Так говорят обо всём, что вы заказываете или поручаете другим.",
+      "examples": [
+        { "en": "I had my hair cut yesterday.", "ru": "Я вчера подстригся." },
+        { "en": "We had the roof repaired last month.", "ru": "В прошлом месяце нам починили крышу." },
+        { "en": "She has her car serviced every year.", "ru": "Она каждый год отдаёт машину на техобслуживание." }
+      ],
+      "tip": "Порядок слов решает всё. I had my hair cut — «меня подстригли». I had cut my hair — это Past Perfect: «я (сам) подстригся ещё раньше»."
+    },
+    {
+      "title": "Get вместо have, вопросы и разные времена",
+      "body": "В разговорной речи вместо have часто говорят get: I got my hair cut. Смысл тот же. Have в этой конструкции — обычный смысловой глагол: он стоит в любом времени, а вопросы и отрицания строятся с do / does / did. Сама третья форма при этом не меняется.",
+      "examples": [
+        { "en": "We're getting the windows replaced next week.", "ru": "На следующей неделе нам меняют окна." },
+        { "en": "Where do you get your hair cut?", "ru": "Где вы стрижётесь?" },
+        { "en": "I didn't have the photos printed.", "ru": "Я не стал отдавать фотографии в печать." }
+      ],
+      "tip": "«Had you your car repaired?» — ошибка. Правильно: Did you have your car repaired?"
+    },
+    {
+      "title": "I had my bag stolen: когда это неприятность",
+      "body": "Та же конструкция с have описывает и неприятные события, которых вы не заказывали: у вас что-то украли, сломали, разбили. По-русски здесь стоит «у меня»: «у меня украли сумку». Можно сказать и обычным пассивом (my bag was stolen), но have подчёркивает, с кем это случилось.",
+      "examples": [
+        { "en": "I had my bag stolen on holiday.", "ru": "В отпуске у меня украли сумку." },
+        { "en": "He had his bike stolen last week.", "ru": "На прошлой неделе у него украли велосипед." },
+        { "en": "We had two windows broken during the storm.", "ru": "Во время бури у нас разбило два окна." }
+      ],
+      "tip": "В значении «неприятность» используйте have, а не get. И не переводите дословно: «At me stole a bag» по-английски невозможно."
+    }
+  ],
+  "vocab": [
+    { "en": "hairdresser's", "ru": "парикмахерская", "example": "I'm going to the hairdresser's after work." },
+    { "en": "to service", "ru": "проводить техобслуживание", "example": "The garage will service the car tomorrow." },
+    { "en": "to fix", "ru": "чинить", "example": "The mechanic couldn't fix my car." },
+    { "en": "to dry-clean", "ru": "чистить в химчистке", "example": "You have to dry-clean this coat." },
+    { "en": "to install", "ru": "устанавливать", "example": "They are coming to install the new cooker." },
+    { "en": "to decorate", "ru": "делать ремонт (красить, клеить обои)", "example": "We paid a company to decorate the living room." },
+    { "en": "to steal", "ru": "красть", "example": "Someone tried to steal my bike." },
+    { "en": "to test", "ru": "проверять", "example": "The optician will test your eyes." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "hairdresser's", "ru": "парикмахерская" },
+        { "en": "to service", "ru": "проводить техобслуживание" },
+        { "en": "to dry-clean", "ru": "чистить в химчистке" },
+        { "en": "to install", "ru": "устанавливать" },
+        { "en": "to steal", "ru": "красть" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы вернулись из парикмахерской. Как сказать «Я подстриглась»?",
+      "options": ["I had my hair cut.", "I cut my hair.", "I had cut my hair.", "I was cut my hair."],
+      "answer": 0,
+      "explanation": "Стриг парикмахер, а не вы, поэтому нужна конструкция have + предмет + третья форма: I had my hair cut. I cut my hair и I had cut my hair означают, что вы стриглись сами."
+    },
+    {
+      "type": "gap",
+      "sentence": "We're having a new shower ___ on Friday.",
+      "translation": "В пятницу нам устанавливают новый душ.",
+      "options": ["installed", "install", "installing", "to install"],
+      "answer": 0,
+      "explanation": "После have + предмет стоит третья форма глагола: having a shower installed. Душ не устанавливает сам — его устанавливают, отсюда форма с пассивным значением."
+    },
+    {
+      "type": "translate",
+      "source": "Мне нужно отдать телефон в ремонт.",
+      "answer": "I need to get my phone fixed.",
+      "accept": ["I need to have my phone fixed.", "I need to get my phone repaired.", "I need to have my phone repaired.", "I have to get my phone fixed.", "I have to get my phone repaired.", "I have to have my phone fixed.", "I have to have my phone repaired.", "I must get my phone fixed.", "I must get my phone repaired.", "I need to get my phone mended."],
+      "distractors": ["fix", "fixing", "myself"],
+      "explanation": "«Отдать в ремонт» значит, что чинить будет мастер: get + предмет + третья форма — get my phone fixed. I need to fix my phone означало бы, что вы почините его сами."
+    },
+    {
+      "type": "listen",
+      "audio": "We're getting the car serviced tomorrow, so I'll take the bus.",
+      "question": "Что будет с машиной завтра?",
+      "options": ["Её отдадут на техобслуживание", "Говорящий сам будет её чинить", "Её продадут", "На ней поедут на работу"],
+      "answer": 0,
+      "explanation": "Getting the car serviced — get + предмет + третья форма: машиной займутся в сервисе. Поэтому говорящий и поедет на автобусе."
+    },
+    {
+      "type": "gap",
+      "sentence": "Where ___ your hair cut?",
+      "translation": "Где вы стрижётесь?",
+      "options": ["do you get", "have you", "are you", "you get"],
+      "answer": 0,
+      "explanation": "Get в этой конструкции — обычный глагол, и вопрос о привычке строится с do: Where do you get your hair cut? Перенести have или are в начало, как вспомогательный глагол, нельзя."
+    },
+    {
+      "type": "speak",
+      "text": "I'm having my flat decorated next month.",
+      "translation": "В следующем месяце у меня в квартире делают ремонт."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I had my eyes test last week.", "I had my eyes tested last week.", "I had my eyes testing last week.", "I was had my eyes tested last week."],
+      "answer": 1,
+      "explanation": "Have + предмет + третья форма: had my eyes tested — «мне проверили зрение». Начальная форма и форма на -ing здесь невозможны, а was перед had лишнее."
+    },
+    {
+      "type": "type",
+      "source": "У меня украли кошелёк.",
+      "answer": "I had my wallet stolen.",
+      "accept": ["My wallet was stolen.", "My wallet has been stolen.", "I have had my wallet stolen.", "I've had my wallet stolen.", "Someone stole my wallet.", "Somebody stole my wallet.", "Someone has stolen my wallet.", "Somebody has stolen my wallet.", "My wallet got stolen.", "I had my purse stolen.", "My purse was stolen.", "My purse has been stolen.", "I've had my purse stolen.", "I have had my purse stolen.", "Someone stole my purse.", "Somebody stole my purse."],
+      "explanation": "Русское «у меня украли» передаётся конструкцией have + предмет + третья форма: I had my wallet stolen. Подойдёт и обычный пассив: My wallet was stolen. Дословный перевод с «at me» невозможен."
+    },
+    {
+      "type": "gap",
+      "sentence": "Did you ___ the windows cleaned, or did you clean them yourself?",
+      "translation": "Вам помыли окна или вы мыли их сами?",
+      "options": ["have", "had", "were", "be"],
+      "answer": 0,
+      "explanation": "После did глагол стоит в начальной форме: Did you have the windows cleaned? Прошедшее время уже показано словом did, поэтому had не нужно."
+    },
+    {
+      "type": "listen",
+      "audio": "She gets her nails done every two weeks.",
+      "question": "Что вы услышали?",
+      "options": ["She gets her nails done every two weeks.", "She got her nails done every two weeks.", "She does her nails every two weeks.", "She gets her nails done every few weeks."],
+      "answer": 0,
+      "explanation": "Gets her nails done — ей делают маникюр в салоне, и это привычка (Present Simple). She does her nails значило бы, что она делает его сама."
+    },
+    {
+      "type": "translate",
+      "source": "Нам покрасили кухню на прошлой неделе.",
+      "answer": "We had the kitchen painted last week.",
+      "accept": ["We had our kitchen painted last week.", "We got the kitchen painted last week.", "We got our kitchen painted last week.", "Last week we had the kitchen painted.", "Last week we had our kitchen painted.", "Our kitchen was painted last week."],
+      "distractors": ["paint", "painting", "were"],
+      "explanation": "Красили мастера, а не вы: had + предмет + третья форма — had the kitchen painted. We painted the kitchen означало бы, что вы красили сами."
+    },
+    {
+      "type": "dictation",
+      "audio": "I must get my suit cleaned before the wedding.",
+      "translation": "Мне нужно отдать костюм в чистку до свадьбы."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «He's having his car repaired»?",
+      "options": ["Его машину сейчас чинят в сервисе", "Он сам чинит свою машину", "Он уже починил машину"],
+      "answer": 0,
+      "explanation": "Have + предмет + третья форма — работу выполняет кто-то другой, а is having показывает, что это происходит сейчас. «Сам чинит» — he's repairing his car."
+    }
+  ]
+}

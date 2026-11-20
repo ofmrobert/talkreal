@@ -1,0 +1,155 @@
+{
+  "id": "a2-29",
+  "level": "A2",
+  "order": 29,
+  "title": { "ru": "Сказать, рассказать, говорить: say, tell, speak, talk, ask", "en": "Say, tell, speak, talk, ask" },
+  "goal": { "ru": "Научитесь выбирать нужный глагол речи и не путать say и tell.", "en": "Learn to choose the right speaking verb and not to mix up say and tell." },
+  "theory": [
+    {
+      "title": "Say something, tell somebody",
+      "body": "Главное различие: после tell сразу идёт человек, которому говорят: She told me the news. После say идёт то, что сказано: She said hello. Если после say нужно назвать человека, добавляют to: She said to me… Русское «сказал мне» тянет к «said me» — это ошибка. Правильно told me или said to me.",
+      "examples": [
+        { "en": "He said that he was tired.", "ru": "Он сказал, что устал." },
+        { "en": "He told me that he was tired.", "ru": "Он сказал мне, что устал." },
+        { "en": "What did you say?", "ru": "Что вы сказали?" }
+      ],
+      "tip": "Прошедшее время у обоих глаголов неправильное: say — said (звучит как «сед»), tell — told."
+    },
+    {
+      "title": "Выражения с tell и глагол ask",
+      "body": "Tell используют, когда сообщают или рассказывают: tell the truth, tell a story, tell the time. Tell somebody to do — «сказать кому-то что-то сделать». Ask — и «спрашивать», и «просить». После ask человек тоже идёт сразу, без предлога: I asked him, а не «asked to him» и не «asked from him». Попросить что-то — ask for.",
+      "examples": [
+        { "en": "My grandmother told us a story.", "ru": "Бабушка рассказала нам историю." },
+        { "en": "The doctor told me to rest.", "ru": "Врач сказал мне отдыхать." },
+        { "en": "I asked the waiter for the bill.", "ru": "Я попросил у официанта счёт." }
+      ],
+      "tip": "«Задать вопрос» — ask a question. «Make a question» и «give a question» — ошибки."
+    },
+    {
+      "title": "Speak и talk",
+      "body": "Speak и talk оба значат «говорить, разговаривать». С языками — только speak: I speak English. Speak звучит чуть официальнее: Can I speak to Mr Brown? Talk — обычный разговор: We talked about work. С кем говорят — to, о чём — about: talk to a friend about a film.",
+      "examples": [
+        { "en": "Do you speak German?", "ru": "Вы говорите по-немецки?" },
+        { "en": "We talked about our holiday plans.", "ru": "Мы говорили о планах на отпуск." },
+        { "en": "Can I speak to Mr Brown, please?", "ru": "Можно поговорить с мистером Брауном?" }
+      ],
+      "tip": "«Говорить по-английски» — speak English, без предлога. «Speak on English» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "to say", "ru": "сказать, говорить (said)", "example": "How do you say this in English?" },
+    { "en": "to tell", "ru": "сказать, рассказать кому-то (told)", "example": "Tell me about your family." },
+    { "en": "to speak", "ru": "говорить, разговаривать (spoke)", "example": "She speaks three languages." },
+    { "en": "to talk", "ru": "разговаривать, беседовать", "example": "We need to talk." },
+    { "en": "to ask", "ru": "спрашивать; просить", "example": "Can I ask you something?" },
+    { "en": "truth", "ru": "правда", "example": "Is that the truth?" },
+    { "en": "joke", "ru": "шутка, анекдот", "example": "He told us a funny joke." },
+    { "en": "secret", "ru": "секрет", "example": "Can you keep a secret?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to talk", "ru": "разговаривать" },
+        { "en": "to ask", "ru": "спрашивать" },
+        { "en": "truth", "ru": "правда" },
+        { "en": "joke", "ru": "шутка" },
+        { "en": "secret", "ru": "секрет" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Она сказала мне своё имя»?",
+      "options": ["She told me her name.", "She said me her name.", "She told to me her name.", "She spoke me her name."],
+      "answer": 0,
+      "explanation": "Сразу после глагола стоит человек (me), значит, нужен tell: told me. После say человека без to не ставят, а после tell предлог to не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "He ___ that the shop was closed.",
+      "translation": "Он сказал, что магазин закрыт.",
+      "options": ["said", "told", "talked", "spoke"],
+      "answer": 0,
+      "explanation": "Человек, которому говорят, не назван, поэтому said. После told обязательно шло бы «кому»: He told me that…"
+    },
+    {
+      "type": "listen",
+      "audio": "The teacher told us to read the text again.",
+      "question": "Что сказал сделать учитель?",
+      "options": ["Ещё раз прочитать текст", "Закрыть книги", "Написать текст", "Выйти из класса"],
+      "answer": 0,
+      "explanation": "Told us to read — «сказал нам прочитать»: tell + человек + to + глагол. Again — «ещё раз»."
+    },
+    {
+      "type": "translate",
+      "source": "Вы говорите по-английски?",
+      "answer": "Do you speak English?",
+      "accept": ["Can you speak English?"],
+      "distractors": ["talk", "say", "on"],
+      "explanation": "С языками используют только speak, и без предлога: speak English. «Speak on English» — калька с русского «по-английски»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Excuse me, can you ___ me the time, please?",
+      "translation": "Извините, не подскажете, который час?",
+      "options": ["tell", "say", "speak", "talk"],
+      "answer": 0,
+      "explanation": "После пропуска сразу стоит me, поэтому tell. Tell the time — устойчивое выражение. «Say me» сказать нельзя."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I asked him a question.", "I asked to him a question.", "I said him a question.", "I made him a question."],
+      "answer": 0,
+      "explanation": "«Задать вопрос» — ask a question. Человек после ask идёт без предлога: asked him, а не «asked to him»."
+    },
+    {
+      "type": "speak",
+      "text": "We talked about the film for an hour.",
+      "translation": "Мы целый час говорили о фильме."
+    },
+    {
+      "type": "type",
+      "source": "Скажите мне правду.",
+      "answer": "Tell me the truth.",
+      "accept": ["Please tell me the truth.", "Tell me the truth, please."],
+      "explanation": "«Сказать правду» — tell the truth, только с tell и с артиклем the. «Say me the truth» — ошибка сразу в двух местах."
+    },
+    {
+      "type": "listen",
+      "audio": "I'd like to speak to the manager about my room, please.",
+      "question": "Чего хочет говорящий?",
+      "options": ["Поговорить с менеджером о своём номере", "Забронировать номер", "Оплатить номер", "Переехать в другой отель"],
+      "answer": 0,
+      "explanation": "Speak to — «поговорить с кем-то», about — «о чём-то». Speak звучит официальнее, чем talk, и подходит для такой просьбы."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ goodbye to everyone and went home.",
+      "translation": "Она со всеми попрощалась и пошла домой.",
+      "options": ["said", "told", "talked", "asked"],
+      "answer": 0,
+      "explanation": "Say goodbye, say hello, say sorry — устойчивые выражения с say. Человека здесь вводит to: said goodbye to everyone."
+    },
+    {
+      "type": "translate",
+      "source": "Он попросил меня помочь.",
+      "answer": "He asked me to help.",
+      "accept": ["He asked me to help him.", "He asked me for help."],
+      "distractors": ["said", "told", "for"],
+      "explanation": "«Попросить кого-то сделать» — ask + человек + to + глагол: asked me to help. Told me to help значило бы «велел мне помочь»."
+    },
+    {
+      "type": "dictation",
+      "audio": "Don't tell anyone, it's a secret.",
+      "translation": "Никому не говорите, это секрет."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Что он сказал?»",
+      "options": ["What did he say?", "What did he tell?", "What did he speak?", "What did he talk?"],
+      "answer": 0,
+      "explanation": "Спрашивают о словах, а не о том, кому их сказали, поэтому say. После tell нужен человек: What did he tell you?"
+    }
+  ]
+}
