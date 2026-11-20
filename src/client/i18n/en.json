@@ -201,7 +201,7 @@
     "keepGoing": "Keep going",
     "exit": "Leave",
     "limitTitle": "That's all for today",
-    "limitText": "You have used today's free lessons. Come back tomorrow and your streak will continue. Unlimited lessons are coming with Pro.",
+    "limitText": "You have used today's free lessons. Come back tomorrow and your streak will continue. Or study without limits on a paid plan.",
     "errorTitle": "Couldn't open the lesson",
     "errorText": "Check your connection and try again.",
     "backToCourse": "Back to the course",
@@ -444,5 +444,68 @@
     "limit": "No messages left for today. Come back tomorrow!",
     "failed": "The teacher didn't answer. Try again.",
     "retry": "Try again"
+  },
+  "plans": {
+    "title": "Plans",
+    "subtitle": "The course, review and tests are always free. A paid plan removes the daily limits and gives you more live practice with the teachers.",
+    "name": {
+      "free": "Free",
+      "pro": "Pro",
+      "max": "Max"
+    },
+    "for": {
+      "free": "To try it out",
+      "pro": "For daily practice",
+      "max": "For those who talk a lot"
+    },
+    "popular": "Most popular",
+    "period": "Payment term",
+    "year": "Yearly",
+    "month": "Monthly",
+    "perMonth": "mo",
+    "billedYear": "{{price}} for the year, paid once",
+    "billedMonth": "One payment for 30 days",
+    "buy": "Pay {{price}}",
+    "opening": "Opening the payment…",
+    "soon": "Payment is coming very soon",
+    "error": "Couldn't open the payment. Please try again.",
+    "current": "Your plan is {{plan}}, valid until {{date}}. Paying for the same plan adds time.",
+    "currentForever": "Your plan is {{plan}}.",
+    "f": {
+      "lessons_one": "{{count}} lesson a day",
+      "lessons_other": "{{count}} lessons a day",
+      "lessonsAll": "Lessons with no daily limit",
+      "voice_one": "{{count}} minute of conversation with a teacher per month",
+      "voice_other": "{{count}} minutes of conversation with a teacher per month",
+      "chat_one": "{{count}} message to a teacher per day",
+      "chat_other": "{{count}} messages to a teacher per day",
+      "chatAll": "Unlimited text chat with the teachers",
+      "reviews": "A review of your mistakes after every call",
+      "course": "The whole course, review and tests",
+      "everything": "Everything in the free plan"
+    },
+    "howTitle": "How it works",
+    "how1": "Payment is one-off: for 30 days or for a year. Nothing is charged automatically.",
+    "how2": "You pay on the secure YooKassa page: by card, through SBP and other methods. Access opens at once.",
+    "how3": "You can cancel at any time and get the money back for the unused term. See the offer for details.",
+    "offer": "Public offer",
+    "yourPlan": "Plan: {{plan}}",
+    "manage": "Term and renewal",
+    "upgradeHint": "More lessons and conversations with the teachers",
+    "unlimited": "Study without limits",
+    "more": "More conversations on a paid plan"
+  },
+  "billing": {
+    "checkingTitle": "Checking the payment…",
+    "checkingText": "This usually takes a few seconds.",
+    "paidTitle": "{{plan}} is on!",
+    "paidText": "It is valid until {{date}}. Thank you for learning with Talkreal!",
+    "pendingTitle": "The payment is still being processed",
+    "pendingText": "The bank has not confirmed it yet. The plan will switch on by itself as soon as the money arrives. You can check again a little later.",
+    "failedTitle": "The payment didn't go through",
+    "failedText": "No money was taken. You can try again or choose another payment method.",
+    "start": "Keep learning",
+    "checkAgain": "Check again",
+    "tryAgain": "Try again"
   }
 }

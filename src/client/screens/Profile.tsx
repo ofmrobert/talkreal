@@ -43,6 +43,22 @@ export default function Profile() {
         ))}
       </div>
 
+      <Link
+        to="/plans"
+        className={`flex items-center gap-3 rounded-3xl p-4 active:translate-y-0.5 ${user?.plan && user.plan !== 'free' ? 'bg-ink text-white' : 'bg-white shadow-[0_5px_0_0_rgba(31,27,58,0.07)]'}`}
+      >
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sun text-2xl" aria-hidden="true">
+          👑
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-lg font-extrabold leading-tight">{t('plans.yourPlan', { plan: t(`plans.name.${user?.plan ?? 'free'}`) })}</span>
+          <span className="block text-sm font-semibold opacity-65">{user?.plan && user.plan !== 'free' ? t('plans.manage') : t('plans.upgradeHint')}</span>
+        </span>
+        <span className="text-2xl font-extrabold opacity-40" aria-hidden="true">
+          ›
+        </span>
+      </Link>
+
       <Achievements />
 
       <Reminders />
@@ -80,9 +96,17 @@ export default function Profile() {
         {t('profile.logout')}
       </Button>
 
-      <Link to="/privacy" className="pb-2 text-center text-sm font-bold text-ink/50 underline">
-        {t('privacy.link')}
-      </Link>
+      <p className="flex flex-wrap justify-center gap-x-4 gap-y-1 pb-2 text-sm font-bold text-ink/50">
+        <Link to="/plans" className="underline">
+          {t('plans.title')}
+        </Link>
+        <Link to="/offer" className="underline">
+          {t('plans.offer')}
+        </Link>
+        <Link to="/privacy" className="underline">
+          {t('privacy.link')}
+        </Link>
+      </p>
     </div>
   )
 }

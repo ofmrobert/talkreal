@@ -2,7 +2,7 @@ import { and, desc, eq } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { textAiAvailable } from '../ai/text'
 import { requireUser, type AuthEnv } from '../auth/sessions'
-import { limitsFor } from '../billing/plans'
+import { limitsFor, planOf } from '../billing/plans'
 import { lessonById } from '../content/lessons'
 import { db } from '../db/client'
 import { dailyUsage, lessonProgress, users, voiceSessions } from '../db/schema'
@@ -18,7 +18,7 @@ voiceRoutes.get('/status', async (c) => {
   const [user] = await db.select().from(users).where(eq(users.id, c.get('userId'))).limit(1)
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   const today = localDay(safeTimezone(c.req.query('tz') ?? user.timezone))
-  const limits = limitsFor(user.plan)
+  const limits = limitsFor(planOf(user))
 
   const [usage] = await db
     .select({ textMessages: dailyUsage.textMessages })
@@ -38,7 +38,7 @@ voiceRoutes.get('/status', async (c) => {
 
   return c.json({
     available: voiceProvider() !== null,
-    remainingSeconds: await remainingVoiceSeconds(user.id, user.plan, today),
+    remainingSeconds: await remainingVoiceSeconds(user.id, planOf(user), today),
     dailySeconds: limits.voiceSecondsPerDay,
     chatAvailable: textAiAvailable(),
     /** Text messages left today; null = no limit. */

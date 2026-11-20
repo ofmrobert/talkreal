@@ -41,6 +41,18 @@ export const env = {
     voiceProvider: process.env.VOICE_PROVIDER ?? 'gemini',
   },
 
+  billing: {
+    /** From the ЮKassa dashboard. Both empty = payments are switched off and plans cannot be bought. */
+    shopId: process.env.YOOKASSA_SHOP_ID ?? '',
+    secretKey: process.env.YOOKASSA_SECRET_KEY ?? '',
+    /** "mock" replaces ЮKassa with a stand-in that pays at once, for testing without money. */
+    provider: process.env.BILLING_PROVIDER ?? 'yookassa',
+    /** Send a receipt with every payment (needed by companies and sole traders, not by the self-employed). */
+    receipts: process.env.YOOKASSA_RECEIPTS === '1',
+    /** The VAT code for receipts; 1 = "without VAT" (simplified tax system). */
+    vatCode: Number(process.env.YOOKASSA_VAT_CODE ?? 1),
+  },
+
   telegram: {
     /** From @BotFather. Empty = Telegram login is switched off. */
     botToken: process.env.TELEGRAM_BOT_TOKEN ?? '',

@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router'
 import { AuthProvider, useAuth } from './auth/AuthContext'
 import AppLayout from './components/AppLayout'
+import BillingReturn from './screens/BillingReturn'
 import Call from './screens/Call'
 import Chat from './screens/Chat'
 import Chai from './components/Chai'
@@ -12,6 +13,8 @@ import Placement from './screens/Placement'
 import Privacy from './screens/Privacy'
 import Review from './screens/Review'
 import Test from './screens/Test'
+import Offer from './screens/Offer'
+import Plans from './screens/Plans'
 import Profile from './screens/Profile'
 import Talk from './screens/Talk'
 import { load } from './lib/storage'
@@ -45,8 +48,11 @@ export default function App() {
           <Route path="/welcome" element={<Onboarding />} />
           <Route path="/login" element={<Login />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/offer" element={<Offer />} />
+          <Route path="/plans" element={<Plans />} />
           <Route element={<RequireUser />}>
             <Route path="/placement" element={<Placement />} />
+            <Route path="/billing/return" element={<BillingReturn />} />
             <Route element={<RequireLevel />}>
               <Route path="/lesson/:id" element={<Lesson />} />
               <Route path="/review" element={<Review />} />

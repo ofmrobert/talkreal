@@ -1,5 +1,7 @@
 import { Hono } from 'hono'
-import { dbStatus } from '../db/client'
+import { desc, isNotNull } from 'drizzle-orm'
+import { db, dbStatus } from '../db/client'
+import { voiceSessions } from '../db/schema'
 import { env } from '../env'
 import { emailConfigured } from '../auth/email'
 import { askJson } from '../ai/text'
@@ -90,6 +92,27 @@ diagRoutes.get('/text', async (c) => {
   } catch (err) {
     return c.json({ ok: false, model: env.ai.textModel, ms: Date.now() - started, error: err instanceof Error ? err.message : String(err) })
   }
+})
+
+/** What voice calls really use: tokens counted by the AI company, per call and per minute. Multiply by the price list to get the cost. */
+diagRoutes.get('/costs', async (c) => {
+  if (!env.showCodes) return c.json({ error: 'not_found' }, 404)
+  const calls = await db
+    .select({ seconds: voiceSessions.seconds, usage: voiceSessions.usage })
+    .from(voiceSessions)
+    .where(isNotNull(voiceSessions.usage))
+    .orderBy(desc(voiceSessions.startedAt))
+    .limit(200)
+  const seconds = calls.reduce((sum, call) => sum + call.seconds, 0)
+  const sum = (key: string) => calls.reduce((total, call) => total + (call.usage?.[key] ?? 0), 0)
+  const perMinute = (tokens: number) => (seconds > 0 ? Math.round((tokens / seconds) * 60) : 0)
+  return c.json({
+    calls: calls.length,
+    minutes: Math.round(seconds / 60),
+    promptTokensPerMinute: perMinute(sum('prompt')),
+    responseTokensPerMinute: perMinute(sum('response')),
+    totalTokensPerMinute: perMinute(sum('total')),
+  })
 })
 
 /** What is configured, without revealing any secret values. */

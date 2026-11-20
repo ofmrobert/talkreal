@@ -50,6 +50,13 @@
       "when": 1795138577001,
       "tag": "0006_slow_monster_badoon",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1795141355355,
+      "tag": "0007_slim_rawhide_kid",
+      "breakpoints": true
     }
   ]
 }

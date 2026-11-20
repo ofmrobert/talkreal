@@ -75,7 +75,16 @@ export default function Lesson() {
           <h1 className="text-3xl font-extrabold">{t(stage === 'limit' ? 'lesson.limitTitle' : 'lesson.errorTitle')}</h1>
           <p className="mt-2 text-lg text-ink/65">{t(stage === 'limit' ? 'lesson.limitText' : 'lesson.errorText')}</p>
         </div>
-        <Button onClick={leave}>{t('lesson.backToCourse')}</Button>
+        {stage === 'limit' ? (
+          <div className="flex w-full flex-col gap-2">
+            <Button onClick={() => navigate('/plans')}>{t('plans.unlimited')}</Button>
+            <Button variant="ghost" onClick={leave}>
+              {t('lesson.backToCourse')}
+            </Button>
+          </div>
+        ) : (
+          <Button onClick={leave}>{t('lesson.backToCourse')}</Button>
+        )}
       </div>
     )
   }

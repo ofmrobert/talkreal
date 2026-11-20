@@ -6,6 +6,7 @@ import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
 import { aiRoutes } from './routes/ai'
 import { authRoutes } from './routes/auth'
+import { billingRoutes } from './routes/billing'
 import { courseRoutes } from './routes/course'
 import { diagRoutes } from './routes/diag'
 import { meRoutes } from './routes/me'
@@ -70,6 +71,7 @@ app.route('/api/me', meRoutes)
 app.route('/api/placement', placementRoutes)
 app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
+app.route('/api/billing', billingRoutes)
 app.route('/api/reminders', reminderRoutes)
 app.route('/api', reviewRoutes)
 app.route('/api', aiRoutes)

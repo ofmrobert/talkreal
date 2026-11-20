@@ -1,0 +1,10 @@
+{
+  "_readme": "Who sells the paid plans. Fill these in before applying to the payment service: they are shown on the pricing page and in the offer. An empty field is simply not shown.",
+  "name": "",
+  "status": "",
+  "taxId": "",
+  "registration": "",
+  "address": "",
+  "email": "",
+  "phone": ""
+}

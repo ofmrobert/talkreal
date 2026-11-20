@@ -6,7 +6,7 @@ import { isScenario } from '../../shared/scenarios'
 import { TEACHERS, type TeacherId } from '../../shared/teachers'
 import { askJson, clip, textAiAvailable, type Turn } from '../ai/text'
 import { requireUser, type AuthEnv } from '../auth/sessions'
-import { limitsFor } from '../billing/plans'
+import { limitsFor, planOf } from '../billing/plans'
 import { lessonById } from '../content/lessons'
 import { db } from '../db/client'
 import { dailyUsage, users } from '../db/schema'
@@ -48,7 +48,7 @@ aiRoutes.post('/chat', async (c) => {
 
   // Only the student's own messages count towards the daily allowance.
   const today = localDay(safeTimezone(body.tz ?? user.timezone))
-  const limit = limitsFor(user.plan).textMessagesPerDay
+  const limit = limitsFor(planOf(user)).textMessagesPerDay
   const [usage] = await db
     .select({ textMessages: dailyUsage.textMessages })
     .from(dailyUsage)

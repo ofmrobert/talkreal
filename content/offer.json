@@ -1,0 +1,175 @@
+{
+  "updated": "2026-11-20",
+  "ru": {
+    "title": "Публичная оферта",
+    "intro": "Этот документ — предложение заключить договор об оказании услуг доступа к платным возможностям сервиса Talkreal (talk-real.ru). Оплачивая тариф, вы принимаете условия оферты полностью.",
+    "sections": [
+      {
+        "heading": "1. Термины",
+        "items": [
+          "Сервис — приложение и сайт Talkreal для изучения английского языка, доступные по адресу talk-real.ru.",
+          "Продавец — лицо, оказывающее услуги; его реквизиты указаны в конце документа.",
+          "Пользователь — человек, зарегистрировавшийся в Сервисе и оплативший тариф.",
+          "Тариф — набор платных возможностей Сервиса на определённый срок. Действующие тарифы и цены опубликованы на странице «Тарифы» (talk-real.ru/plans)."
+        ]
+      },
+      {
+        "heading": "2. Предмет договора",
+        "items": [
+          "Продавец предоставляет Пользователю доступ к платным возможностям Сервиса в объёме выбранного тарифа на оплаченный срок, а Пользователь оплачивает этот доступ.",
+          "Платные возможности включают уроки без дневного ограничения, увеличенное время разговоров с ИИ-преподавателями и переписку с ними. Точный состав каждого тарифа указан на странице «Тарифы».",
+          "Бесплатная часть Сервиса доступна без оплаты и без заключения этого договора."
+        ]
+      },
+      {
+        "heading": "3. Цена и порядок оплаты",
+        "items": [
+          "Цены указаны в российских рублях на странице «Тарифы» и включают все применимые налоги.",
+          "Оплата проходит на защищённой странице платёжного сервиса ЮKassa: банковской картой, через Систему быстрых платежей и другими способами, которые предлагает ЮKassa. Продавец не получает и не хранит данные банковских карт.",
+          "Оплата разовая: за один месяц (30 дней) или за один год (365 дней). Автоматического продления и повторных списаний нет. Чтобы продолжить пользоваться тарифом после окончания срока, его нужно оплатить снова.",
+          "Договор считается заключённым в момент поступления оплаты."
+        ]
+      },
+      {
+        "heading": "4. Предоставление доступа",
+        "items": [
+          "Доступ к возможностям тарифа открывается сразу после подтверждения оплаты платёжным сервисом и действует в течение оплаченного срока.",
+          "Если оплачен тот же тариф, который уже действует, новый срок добавляется к оставшемуся. Если оплачен другой тариф, он начинает действовать с момента оплаты.",
+          "Услуга считается оказанной надлежащим образом, если в течение оплаченного срока Пользователь имел доступ к возможностям тарифа."
+        ]
+      },
+      {
+        "heading": "5. Отказ от услуги и возврат денег",
+        "items": [
+          "Пользователь вправе отказаться от услуги в любой момент. Для этого нужно написать на адрес электронной почты Продавца с адреса, на который зарегистрирован аккаунт.",
+          "При отказе возвращается стоимость неиспользованной части оплаченного срока, считая со дня получения обращения.",
+          "Если после оплаты платные возможности не использовались, а обращение направлено в течение 7 дней со дня оплаты, возвращается вся сумма.",
+          "Деньги возвращаются тем же способом, которым была сделана оплата, в течение 10 дней со дня получения обращения. После возврата тариф отключается."
+        ]
+      },
+      {
+        "heading": "6. Правила использования",
+        "items": [
+          "Аккаунт предназначен для одного человека. Передавать доступ другим людям и перепродавать его нельзя.",
+          "Нельзя вмешиваться в работу Сервиса, обходить ограничения тарифов и использовать Сервис для целей, не связанных с изучением языка.",
+          "При нарушении этих правил Продавец вправе приостановить доступ, предварительно уведомив Пользователя по электронной почте."
+        ]
+      },
+      {
+        "heading": "7. Особенности сервиса и ответственность",
+        "items": [
+          "Преподаватели в Сервисе — это программы на основе искусственного интеллекта, а не люди. Их ответы, исправления и разборы создаются автоматически и могут содержать неточности.",
+          "Сервис не является образовательной организацией и не выдаёт документов об образовании или уровне владения языком.",
+          "Продавец стремится к бесперебойной работе Сервиса, но не отвечает за перерывы, вызванные причинами вне его контроля: сбоями связи, работой сторонних сервисов, техническими работами. Если Сервис был недоступен дольше 24 часов подряд, оплаченный срок по обращению Пользователя продлевается на время недоступности.",
+          "Ответственность Продавца ограничена суммой, уплаченной Пользователем за текущий оплаченный срок."
+        ]
+      },
+      {
+        "heading": "8. Персональные данные",
+        "items": [
+          "Продавец обрабатывает персональные данные Пользователя в соответствии с Политикой конфиденциальности (talk-real.ru/privacy)."
+        ]
+      },
+      {
+        "heading": "9. Изменение условий и споры",
+        "items": [
+          "Продавец вправе менять условия оферты и цены. Новая редакция действует с момента публикации и не затрагивает уже оплаченные сроки.",
+          "Споры решаются путём переговоров. Срок ответа на претензию — 10 дней. Если договориться не удалось, спор рассматривается в суде в соответствии с законодательством Российской Федерации."
+        ]
+      }
+    ],
+    "sellerLabel": "Продавец",
+    "taxIdLabel": "ИНН",
+    "contactLabel": "Электронная почта",
+    "phoneLabel": "Телефон",
+    "addressLabel": "Адрес",
+    "updatedLabel": "Дата публикации",
+    "pending": "Реквизиты продавца будут опубликованы перед началом продаж."
+  },
+  "en": {
+    "title": "Public offer",
+    "intro": "This document is an offer to enter into an agreement for access to the paid features of the Talkreal service (talk-real.ru). By paying for a plan you accept these terms in full. The Russian version is the binding one.",
+    "sections": [
+      {
+        "heading": "1. Terms",
+        "items": [
+          "The Service is the Talkreal app and website for learning English, available at talk-real.ru.",
+          "The Seller is the party providing the services; its details are given at the end of this document.",
+          "The User is a person who has registered in the Service and paid for a plan.",
+          "A Plan is a set of paid features of the Service for a fixed term. Current plans and prices are published on the Plans page (talk-real.ru/plans)."
+        ]
+      },
+      {
+        "heading": "2. Subject of the agreement",
+        "items": [
+          "The Seller gives the User access to the paid features of the Service within the chosen plan for the paid term, and the User pays for this access.",
+          "Paid features include lessons without a daily limit, more conversation time with AI teachers, and text chat with them. What each plan includes is listed on the Plans page.",
+          "The free part of the Service is available without payment and without entering into this agreement."
+        ]
+      },
+      {
+        "heading": "3. Price and payment",
+        "items": [
+          "Prices are given in Russian roubles on the Plans page and include all applicable taxes.",
+          "Payment is made on the secure page of the YooKassa payment service: by bank card, through the Faster Payments System and by other methods YooKassa offers. The Seller does not receive or store card details.",
+          "Payment is one-off: for one month (30 days) or one year (365 days). There is no automatic renewal and no repeat charge. To keep the plan after the term ends, it has to be paid for again.",
+          "The agreement is concluded when the payment is received."
+        ]
+      },
+      {
+        "heading": "4. Access",
+        "items": [
+          "Access to the plan's features opens as soon as the payment service confirms the payment and lasts for the paid term.",
+          "If the plan paid for is the one already active, the new term is added to the remaining one. If a different plan is paid for, it starts at the moment of payment.",
+          "The service is considered properly provided if the User had access to the plan's features during the paid term."
+        ]
+      },
+      {
+        "heading": "5. Cancelling and refunds",
+        "items": [
+          "The User may cancel at any time by writing to the Seller's email address from the address the account is registered to.",
+          "On cancellation, the cost of the unused part of the paid term is refunded, counted from the day the request is received.",
+          "If the paid features were not used and the request is sent within 7 days of payment, the full amount is refunded.",
+          "The money is returned by the same method used for payment within 10 days of receiving the request. After a refund the plan is switched off."
+        ]
+      },
+      {
+        "heading": "6. Rules of use",
+        "items": [
+          "An account is for one person. Access may not be passed on to others or resold.",
+          "It is not allowed to interfere with the Service, get round plan limits or use the Service for purposes unrelated to language learning.",
+          "If these rules are broken, the Seller may suspend access after notifying the User by email."
+        ]
+      },
+      {
+        "heading": "7. Nature of the service and liability",
+        "items": [
+          "The teachers in the Service are programs based on artificial intelligence, not people. Their answers, corrections and reviews are produced automatically and may contain inaccuracies.",
+          "The Service is not an educational institution and does not issue documents on education or language level.",
+          "The Seller aims for uninterrupted operation but is not responsible for interruptions caused by reasons beyond its control: connection failures, third-party services, maintenance. If the Service was unavailable for more than 24 hours in a row, the paid term is extended by that time at the User's request.",
+          "The Seller's liability is limited to the amount the User paid for the current paid term."
+        ]
+      },
+      {
+        "heading": "8. Personal data",
+        "items": [
+          "The Seller processes the User's personal data in accordance with the Privacy Policy (talk-real.ru/privacy)."
+        ]
+      },
+      {
+        "heading": "9. Changes and disputes",
+        "items": [
+          "The Seller may change these terms and the prices. A new version applies from publication and does not affect terms already paid for.",
+          "Disputes are settled by negotiation. A complaint is answered within 10 days. Failing agreement, the dispute is heard in court under the law of the Russian Federation."
+        ]
+      }
+    ],
+    "sellerLabel": "Seller",
+    "taxIdLabel": "Tax number (INN)",
+    "contactLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "updatedLabel": "Published",
+    "pending": "The seller's details will be published before sales begin."
+  }
+}

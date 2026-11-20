@@ -2,7 +2,7 @@ import { and, eq, gte } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { isLevel } from '../../shared/levels'
 import { requireUser, type AuthEnv } from '../auth/sessions'
-import { DAILY_XP_GOAL, limitsFor } from '../billing/plans'
+import { DAILY_XP_GOAL, limitsFor, planOf } from '../billing/plans'
 import { lessonById } from '../content/lessons'
 import { courseState, examId, LEVEL_EXAM, nextLevel, UNIT_TEST, unitsFor } from '../content/units'
 import { db } from '../db/client'
@@ -47,7 +47,7 @@ courseRoutes.get('/course', async (c) => {
     bestAccuracy: best.get(l.id) ?? null,
   })
   const exam = examId(user.level)
-  const limit = limitsFor(user.plan).lessonsPerDay
+  const limit = limitsFor(planOf(user)).lessonsPerDay
 
   // The last seven days, oldest first, for the week strip on the home screen.
   const days: string[] = [today]
@@ -108,7 +108,7 @@ courseRoutes.get('/lessons/:id', async (c) => {
 
   const today = localDay(safeTimezone(c.req.query('tz') ?? user.timezone))
   const usage = await usageToday(user.id, today)
-  if (usage.lessonsDone >= limitsFor(user.plan).lessonsPerDay) return c.json({ error: 'daily_limit' }, 403)
+  if (usage.lessonsDone >= limitsFor(planOf(user)).lessonsPerDay) return c.json({ error: 'daily_limit' }, 403)
 
   return c.json({ lesson })
 })
@@ -135,7 +135,7 @@ courseRoutes.post('/lessons/:id/complete', async (c) => {
   const today = localDay(timezone)
 
   const usage = await usageToday(user.id, today)
-  if (usage.lessonsDone >= limitsFor(user.plan).lessonsPerDay) return c.json({ error: 'daily_limit' }, 403)
+  if (usage.lessonsDone >= limitsFor(planOf(user)).lessonsPerDay) return c.json({ error: 'daily_limit' }, 403)
 
   const [existing] = await db
     .select()

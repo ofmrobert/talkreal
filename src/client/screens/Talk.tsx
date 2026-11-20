@@ -91,6 +91,17 @@ export default function Talk() {
         </section>
       )}
 
+      {((available && outOfTime) || (chatAvailable && messagesLeft === 0)) && (
+        <button
+          type="button"
+          onClick={() => navigate('/plans')}
+          className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-ink px-4 text-base font-extrabold text-white shadow-[0_5px_0_0_rgba(31,27,58,0.3)] active:translate-y-1"
+        >
+          <span aria-hidden="true">👑</span>
+          {t('plans.more')}
+        </button>
+      )}
+
       {TEACHERS.map((teacher) => (
         <Card key={teacher.id} className="flex flex-col gap-3">
           <div className="flex items-start gap-4">

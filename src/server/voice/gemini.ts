@@ -15,6 +15,7 @@ interface ServerMessage {
     turnComplete?: boolean
   }
   goAway?: object
+  usageMetadata?: { promptTokenCount?: number; responseTokenCount?: number; totalTokenCount?: number }
   error?: { message?: string }
 }
 
@@ -86,6 +87,10 @@ export const geminiProvider: VoiceProvider = {
           return
         }
 
+        if (message.usageMetadata) {
+          const u = message.usageMetadata
+          handlers.onUsage?.({ prompt: u.promptTokenCount ?? 0, response: u.responseTokenCount ?? 0, total: u.totalTokenCount ?? 0 })
+        }
         const content = message.serverContent
         if (!content) return
         for (const part of content.modelTurn?.parts ?? []) {

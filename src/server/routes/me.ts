@@ -1,6 +1,7 @@
 import { eq } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { renewSession, requireUser, type AuthEnv } from '../auth/sessions'
+import { planOf } from '../billing/plans'
 import { db } from '../db/client'
 import { users } from '../db/schema'
 import { getPii } from '../pii'
@@ -22,7 +23,9 @@ meRoutes.get('/', requireUser, async (c) => {
     email: pii.email,
     displayName: pii.displayName,
     level: user.level,
-    plan: user.plan,
+    plan: planOf(user),
+    /** When the paid plan runs out; null on the free plan. */
+    planUntil: planOf(user) === 'free' ? null : user.planUntil,
     xp: user.xp,
     currentStreak: streakNow(user.currentStreak, user.lastActiveDate, localDay(safeTimezone(user.timezone)), user.streakFreezes).streak,
     freezes: user.streakFreezes,

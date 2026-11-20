@@ -23,6 +23,7 @@ import { TEACHERS, type TeacherId } from '../../shared/teachers'
 import type { Turn } from '../ai/text'
 import { userIdFromCookieHeader } from '../auth/sessions'
 import { lessonById } from '../content/lessons'
+import { planOf } from '../billing/plans'
 import { db } from '../db/client'
 import { users, voiceSessions } from '../db/schema'
 import { env } from '../env'
@@ -67,6 +68,8 @@ function runCall(socket: WebSocket, userId: string) {
   const transcript: Turn[] = []
   let transcriptChars = 0
   let newTurn = true
+  /** Tokens the AI company counted during the call, added up turn by turn. */
+  const usage = { prompt: 0, response: 0, total: 0, turns: 0 }
 
   function hear(role: Turn['role'], text: string) {
     if (transcriptChars >= MAX_TRANSCRIPT_CHARS) return
@@ -94,7 +97,7 @@ function runCall(socket: WebSocket, userId: string) {
       if (callId) {
         await db
           .update(voiceSessions)
-          .set({ endedAt: new Date(), seconds: elapsed, endReason: reason, reportStatus: review ? 'pending' : 'none' })
+          .set({ endedAt: new Date(), seconds: elapsed, endReason: reason, reportStatus: review ? 'pending' : 'none', usage: usage.turns > 0 ? usage : null })
           .where(eq(voiceSessions.id, callId))
       }
       if (callId && elapsed >= PRACTICE_SECONDS) {
@@ -118,7 +121,7 @@ function runCall(socket: WebSocket, userId: string) {
     day = localDay(timezone)
     const lesson = typeof message.lessonId === 'string' ? lessonById(message.lessonId) : undefined
     const scenario = !lesson && isScenario(message.scenario) ? message.scenario : undefined
-    allowance = Math.min(await remainingVoiceSeconds(userId, user.plan, day), MAX_CALL_SECONDS)
+    allowance = Math.min(await remainingVoiceSeconds(userId, planOf(user), day), MAX_CALL_SECONDS)
     if (allowance <= 0) return finish('limit')
 
     try {
@@ -131,6 +134,12 @@ function runCall(socket: WebSocket, userId: string) {
             send({ type: 'transcript', role, text })
           },
           onInterrupted: () => send({ type: 'interrupted' }),
+          onUsage: (tokens) => {
+            usage.prompt += tokens.prompt
+            usage.response += tokens.response
+            usage.total += tokens.total
+            usage.turns++
+          },
           onTurnComplete: () => {
             newTurn = true
             send({ type: 'turnComplete' })

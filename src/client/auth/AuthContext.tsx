@@ -8,6 +8,8 @@ export interface User {
   displayName: string | null
   level: string | null
   plan: string
+  /** When the paid plan runs out (ISO date); null on the free plan. */
+  planUntil?: string | null
   xp: number
   currentStreak: number
   longestStreak: number

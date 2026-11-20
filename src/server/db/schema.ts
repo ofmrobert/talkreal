@@ -12,6 +12,8 @@ export const users = pgTable('users', {
   level: text('level'),
   timezone: text('timezone'),
   plan: text('plan').notNull().default('free'),
+  /** When the paid plan runs out. Empty = the free plan, or a paid plan given by hand with no end. */
+  planUntil: timestamptz('plan_until'),
   xp: integer('xp').notNull().default(0),
   currentStreak: integer('current_streak').notNull().default(0),
   longestStreak: integer('longest_streak').notNull().default(0),
@@ -159,6 +161,8 @@ export const voiceSessions = pgTable(
     lessonId: text('lesson_id'),
     /** The teacher's written review of the call (see src/shared/report.ts). The conversation itself is not kept. */
     report: jsonb('report').$type<CallReport>(),
+    /** What the AI company counted for this call (tokens), to know what a minute really costs. */
+    usage: jsonb('usage').$type<Record<string, number>>(),
     /** 'none' | 'pending' | 'ready' | 'failed' */
     reportStatus: text('report_status').notNull().default('none'),
   },
@@ -203,4 +207,28 @@ export const reviewItems = pgTable(
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.key] }), index('review_items_due_idx').on(t.userId, t.dueDay)],
+)
+
+/** Every purchase of a plan. A row is created when the student presses "pay" and updated when the money arrives. */
+export const payments = pgTable(
+  'payments',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    /** 'yookassa' | 'mock' */
+    provider: text('provider').notNull(),
+    /** The payment's id at the payment service. */
+    providerPaymentId: text('provider_payment_id').unique(),
+    plan: text('plan').notNull(),
+    /** 'month' | 'year' */
+    period: text('period').notNull(),
+    amountRub: integer('amount_rub').notNull(),
+    /** 'pending' | 'paid' | 'canceled' */
+    status: text('status').notNull().default('pending'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+    paidAt: timestamptz('paid_at'),
+  },
+  (t) => [index('payments_user_idx').on(t.userId, t.createdAt)],
 )

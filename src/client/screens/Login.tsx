@@ -228,6 +228,19 @@ export default function Login() {
           <Button type="submit" disabled={busy || (step === 'email' && !consent) || (step === 'code' && code.length < 6)}>
             {step === 'email' ? t('login.getCode') : t('login.enter')}
           </Button>
+          {step === 'email' && (
+            <p className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm font-bold text-ink/50">
+              <Link to="/plans" className="underline">
+                {t('plans.title')}
+              </Link>
+              <Link to="/offer" className="underline">
+                {t('plans.offer')}
+              </Link>
+              <Link to="/privacy" className="underline">
+                {t('privacy.link')}
+              </Link>
+            </p>
+          )}
         </div>
       </form>
     </div>

@@ -11,6 +11,8 @@ export interface VoiceHandlers {
   /** The student started talking over the teacher: stop playing queued audio. */
   onInterrupted(): void
   onTurnComplete(): void
+  /** What the AI company counted for the latest turn, in tokens. Used to learn what a call really costs. */
+  onUsage?(tokens: { prompt: number; response: number; total: number }): void
   onClose(reason: 'provider_closed' | 'provider_error'): void
 }
 
