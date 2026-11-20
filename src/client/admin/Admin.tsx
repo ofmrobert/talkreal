@@ -1,5 +1,6 @@
 import { NavLink, Navigate, Route, Routes } from 'react-router'
 import { useAuth } from '../auth/AuthContext'
+import { save } from '../lib/storage'
 import { AiPage, OverviewPage, TrafficPage } from './Insights'
 import { PaymentsPage, PromosPage, UserPage, UsersPage } from './People'
 import { LearningPage, SystemPage } from './Product'
@@ -23,8 +24,26 @@ const TABS = [
 export default function Admin() {
   const { user } = useAuth()
   if (user === undefined) return <p className="p-6 text-sm text-slate-500">Loading…</p>
-  if (!user) return <Navigate to="/login" replace />
-  if (!user.isAdmin) return <Navigate to="/" replace />
+  if (!user) {
+    // After logging in, come straight back here instead of landing in the app.
+    save('afterLogin', '/admin')
+    return <Navigate to="/login" replace />
+  }
+  // Say why, instead of silently showing the app: otherwise a missing setting looks like a broken link.
+  if (!user.isAdmin) {
+    return (
+      <div className="mx-auto flex h-full max-w-md select-text flex-col items-center justify-center gap-3 p-6 text-center font-[system-ui,sans-serif] text-slate-700">
+        <h1 className="text-xl font-extrabold text-slate-900">This account cannot open the admin panel</h1>
+        <p className="text-sm">
+          You are logged in as <b>{user.email ?? user.displayName ?? 'an account without an email'}</b>. The panel opens only for the emails listed in the
+          ADMIN_EMAILS setting on the hosting. Add this email there, restart the app, and reload this page.
+        </p>
+        <NavLink to="/" className="text-sm font-bold text-violet-700 underline">
+          Back to the app
+        </NavLink>
+      </div>
+    )
+  }
 
   return (
     <div className="flex h-full select-text flex-col bg-slate-50 font-[system-ui,sans-serif] text-slate-800 md:flex-row" style={{ userSelect: 'text' }}>

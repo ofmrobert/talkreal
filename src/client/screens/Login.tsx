@@ -56,7 +56,12 @@ export default function Login() {
     [t],
   )
 
-  if (user) return <Navigate to="/" replace />
+  if (user) {
+    // Someone who was sent here from another screen (the admin panel) goes back to it.
+    const next = load('afterLogin')
+    if (next) save('afterLogin', '')
+    return <Navigate to={next && next.startsWith('/') ? next : '/'} replace />
+  }
 
   function showError(err: unknown) {
     const apiError = err instanceof ApiError ? err : null
