@@ -41,8 +41,8 @@ export const PLANS: Record<PlanId, PlanLimits> = {
 
 /** Prices in whole rubles for one month and for one year paid at once. */
 export const PRICES: Record<PaidPlanId, Record<Period, number>> = {
-  pro: { month: 990, year: 6990 },
-  max: { month: 1990, year: 13990 },
+  pro: { month: 1290, year: 8990 },
+  max: { month: 2590, year: 17990 },
 }
 
 /** How many days of access one payment buys. */
