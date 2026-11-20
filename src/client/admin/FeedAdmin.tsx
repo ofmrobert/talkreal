@@ -46,6 +46,7 @@ export function FeedPage() {
   const [editing, setEditing] = useState<AdminPost | null>(null)
   const [form, setForm] = useState({ titleRu: '', titleEn: '', textRu: '', textEn: '', english: '' })
   const [note, setNote] = useState<string | null>(null)
+  const [test, setTest] = useState<string | null>(null)
 
   if (!data) return <Loading failed={failed} />
   const now = Date.now()
@@ -75,6 +76,15 @@ export function FeedPage() {
     setNote(null)
     const result = await api<{ removed: number; written: number; failed: number }>('/admin/feed/rewrite', {}).catch(() => null)
     setNote(result ? `${result.removed} waiting post(s) removed, ${result.written} written${result.failed ? `, ${result.failed} could not be written` : ''}.` : 'Could not reach the server.')
+    setBusy(null)
+    reload()
+  }
+
+  async function testClaude() {
+    setBusy('test')
+    setTest(null)
+    const result = await api<object>('/admin/feed/test-claude', {}).catch(() => ({ ok: false, problem: 'Could not reach the server' }))
+    setTest(JSON.stringify(result, null, 2))
     setBusy(null)
     reload()
   }
@@ -170,6 +180,9 @@ export function FeedPage() {
       hint="The Talkreal account posts once a day at 09:00 Moscow time. Posts are written a week ahead, so you can read, edit or remove any of them before students see it."
       actions={
         <div className="flex gap-2">
+          <button type="button" className={ghostButtonClass} disabled={busy !== null} onClick={testClaude}>
+            {busy === 'test' ? 'Testing…' : 'Test Claude'}
+          </button>
           <button type="button" className={ghostButtonClass} disabled={busy !== null || !data.writer} onClick={rewrite}>
             Rewrite the waiting posts
           </button>
@@ -188,6 +201,11 @@ export function FeedPage() {
         <Stat label="Quiz answers" value={num(data.counts.votes)} />
       </Stats>
       {note && <p className="text-sm font-semibold text-slate-600">{note}</p>}
+      {test && (
+        <Card title="Claude test" hint="One tiny request, and the route it took. Copy this whole box when asking for help; it contains no keys.">
+          <pre className="select-text overflow-x-auto rounded-lg bg-slate-100 p-3 font-mono text-xs text-slate-700">{test}</pre>
+        </Card>
+      )}
       {data.claudeProblem.reason && (
         <Card title="Claude was asked to write the posts and could not, so Gemini wrote them">
           <p className="text-sm text-slate-700">{claudeAdvice(data.claudeProblem.status, data.claudeProblem.viaRelay)}</p>

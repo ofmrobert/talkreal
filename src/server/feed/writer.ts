@@ -53,6 +53,34 @@ async function askClaude<T>(system: string, prompt: string): Promise<T> {
   return parse<T>(text)
 }
 
+/**
+ * Sends Claude one tiny request and reports everything that helps to see why it fails:
+ * the address used, the answer, and the notes the relay adds about the route.
+ */
+export async function testClaude() {
+  const address = process.env.ANTHROPIC_BASE_URL ?? claudeAddress() ?? 'https://api.anthropic.com (direct)'
+  if (!claude) return { ok: false, address, problem: 'ANTHROPIC_API_KEY is not set on the server' }
+  const route = (headers: Headers | undefined | null) => ({
+    relayRanAt: headers?.get('x-relay-colo') || null,
+    relayPlacement: headers?.get('cf-placement') || null,
+    relaySentTo: headers?.get('x-relay-to') || null,
+    anthropicRay: headers?.get('x-upstream-ray') || headers?.get('cf-ray') || null,
+    requestId: headers?.get('request-id') || null,
+  })
+  try {
+    const { data, response } = await claude.messages
+      .create({ model: env.feed.claudeModel, max_tokens: 200, messages: [{ role: 'user', content: 'Reply with the single word: hello' }] })
+      .withResponse()
+    const text = data.content.map((block) => (block.type === 'text' ? block.text : '')).join('')
+    return { ok: true, address, model: data.model, said: text.slice(0, 80), route: route(response.headers) }
+  } catch (err) {
+    if (err instanceof Anthropic.APIError) {
+      return { ok: false, address, status: err.status ?? null, problem: err.message.slice(0, 300), route: route(err.headers as Headers | undefined) }
+    }
+    return { ok: false, address, problem: err instanceof Error ? err.message : String(err) }
+  }
+}
+
 /** Asks the writer for one JSON object. Returns it together with who wrote it. */
 export async function write<T>(system: string, prompt: string, mock: () => T): Promise<{ value: T; by: string }> {
   const name = writerName()

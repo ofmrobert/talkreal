@@ -40,6 +40,15 @@ export default {
     for (const name of STRIP) headers.delete(name)
 
     // Passing the request to fetch() also carries WebSocket upgrades through.
-    return fetch(new Request(url, { method: request.method, headers, body: request.body }))
+    const upstream = await fetch(new Request(url, { method: request.method, headers, body: request.body }))
+    // A live voice connection is handed back untouched.
+    if (upstream.status === 101 || upstream.webSocket) return upstream
+
+    // A few notes for troubleshooting: where this relay ran, and what the other side answered.
+    const answer = new Response(upstream.body, upstream)
+    answer.headers.set('x-relay-colo', request.cf?.colo ?? '')
+    answer.headers.set('x-relay-to', url.hostname)
+    answer.headers.set('x-upstream-ray', upstream.headers.get('cf-ray') ?? '')
+    return answer
   },
 }
