@@ -66,7 +66,7 @@ function databaseErrorSafe(): string | null {
 }
 
 app.get('/api/health', (c) =>
-  c.json({ ok: true, time: new Date().toISOString(), database: dbStatus.kind, databaseProblem: databaseProblem(), databaseError: databaseErrorSafe(), databaseUrlShape: dbStatus.kind === 'postgresql' ? undefined : env.databaseUrlShape }),
+  c.json({ ok: true, time: new Date().toISOString(), admins: env.adminEmails.length, database: dbStatus.kind, databaseProblem: databaseProblem(), databaseError: databaseErrorSafe(), databaseUrlShape: dbStatus.kind === 'postgresql' ? undefined : env.databaseUrlShape }),
 )
 app.route('/api/auth', authRoutes)
 app.route('/api/me', meRoutes)

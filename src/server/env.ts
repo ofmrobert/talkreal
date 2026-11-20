@@ -45,10 +45,11 @@ export const env = {
    * Emails of the people who may open the admin panel (/admin), separated by commas.
    * Empty = nobody can. They log in the normal way, with a code sent to that email.
    */
-  adminEmails: (process.env.ADMIN_EMAILS ?? '')
-    .split(',')
-    .map((email) => email.trim().toLowerCase())
-    .filter(Boolean),
+  // Forgiving about how it was typed: quotes, spaces, semicolons or new lines between emails are all fine.
+  adminEmails: (process.env.ADMIN_EMAILS ?? process.env.ADMIN_EMAIL ?? '')
+    .split(/[\s,;]+/)
+    .map((email) => email.replace(/^['"<]+|['">]+$/g, '').trim().toLowerCase())
+    .filter((email) => email.includes('@')),
 
   billing: {
     /** From the ЮKassa dashboard. Both empty = payments are switched off and plans cannot be bought. */
