@@ -1,0 +1,155 @@
+{
+  "id": "a1-14",
+  "level": "A1",
+  "order": 14,
+  "title": { "ru": "Like, love, hate + -ing: хобби и свободное время", "en": "Like / love / hate + -ing: hobbies and free time" },
+  "goal": { "ru": "Научитесь рассказывать, что вы любите и не любите делать.", "en": "Learn to say what you like and don't like doing." },
+  "theory": [
+    {
+      "title": "Like + глагол с -ing",
+      "body": "После like, love и hate второй глагол получает окончание -ing: I like reading — «Я люблю читать». В русском здесь обычная начальная форма («люблю читать»), поэтому хочется сказать «I like read» — это ошибка. С существительным всё просто: I like music.",
+      "examples": [
+        { "en": "I like cooking.", "ru": "Я люблю готовить." },
+        { "en": "She loves travelling.", "ru": "Она обожает путешествовать." },
+        { "en": "We hate waiting.", "ru": "Мы терпеть не можем ждать." }
+      ],
+      "tip": "От сильного к слабому: love (обожаю) → like (люблю) → don't like (не люблю) → hate (терпеть не могу)."
+    },
+    {
+      "title": "Как добавить -ing",
+      "body": "Обычно просто добавляем -ing: read → reading, cook → cooking. Если глагол кончается на -e, эта буква исчезает: dance → dancing, drive → driving. В коротких глаголах с одной гласной последняя согласная удваивается: swim → swimming, run → running.",
+      "examples": [
+        { "en": "He likes dancing.", "ru": "Он любит танцевать." },
+        { "en": "I love swimming in the sea.", "ru": "Я обожаю плавать в море." },
+        { "en": "They like running in the park.", "ru": "Они любят бегать в парке." }
+      ],
+      "tip": "Удвоение чаще всего встречается в словах swimming, running, shopping, sitting."
+    },
+    {
+      "title": "Вопросы и отрицания",
+      "body": "Like — обычный глагол, поэтому вопросы и отрицания строятся с do и does, а -ing у второго глагола остаётся: Do you like cooking? She doesn't like shopping. Чтобы спросить о хобби, говорят: What do you like doing in your free time?",
+      "examples": [
+        { "en": "Do you like cooking?", "ru": "Вы любите готовить?" },
+        { "en": "He doesn't like shopping.", "ru": "Он не любит ходить по магазинам." },
+        { "en": "What do you like doing at the weekend?", "ru": "Что вы любите делать на выходных?" }
+      ],
+      "tip": "После does глагол like без -s, а второй глагол по-прежнему с -ing: Does she like reading?"
+    }
+  ],
+  "vocab": [
+    { "en": "to love", "ru": "любить, обожать", "example": "I love Italian films." },
+    { "en": "to hate", "ru": "ненавидеть, терпеть не мочь", "example": "I hate cold coffee." },
+    { "en": "reading", "ru": "чтение", "example": "I like reading in bed." },
+    { "en": "travelling", "ru": "путешествия", "example": "She loves travelling by train." },
+    { "en": "running", "ru": "бег", "example": "He likes running in the morning." },
+    { "en": "shopping", "ru": "походы по магазинам", "example": "My husband hates shopping." },
+    { "en": "free time", "ru": "свободное время", "example": "I don't have a lot of free time." },
+    { "en": "to listen to music", "ru": "слушать музыку", "example": "I listen to music on the train." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to love", "ru": "обожать" },
+        { "en": "to hate", "ru": "ненавидеть" },
+        { "en": "reading", "ru": "чтение" },
+        { "en": "running", "ru": "бег" },
+        { "en": "free time", "ru": "свободное время" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я люблю читать»?",
+      "options": ["I like read.", "I like reading.", "I like reads.", "I am like reading."],
+      "answer": 1,
+      "explanation": "После like второй глагол получает -ing: like reading. «I like read» — калька с русского «люблю читать», а am перед like не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "My wife loves ___ in the sea.",
+      "translation": "Моя жена обожает плавать в море.",
+      "options": ["swim", "swimming", "swiming", "swims"],
+      "answer": 1,
+      "explanation": "После loves нужен глагол с -ing. Swim — короткий глагол с одной гласной, поэтому m удваивается: swimming."
+    },
+    {
+      "type": "listen",
+      "audio": "I like cooking, but I hate shopping.",
+      "question": "Что человек не любит?",
+      "options": ["Ходить по магазинам", "Готовить", "Читать", "Бегать"],
+      "answer": 0,
+      "explanation": "I hate shopping — «терпеть не могу ходить по магазинам». А готовить (cooking) человек как раз любит: I like cooking."
+    },
+    {
+      "type": "translate",
+      "source": "Мой брат любит водить машину.",
+      "answer": "My brother likes driving.",
+      "accept": ["My brother loves driving.", "My brother likes to drive.", "My brother likes driving a car.", "My brother likes to drive a car."],
+      "distractors": ["drive", "like", "drives"],
+      "explanation": "Brother — это he, поэтому likes с -s. Второй глагол с -ing: drive теряет e и получает driving. Слово car можно не добавлять: drive уже значит «водить машину»."
+    },
+    {
+      "type": "gap",
+      "sentence": "She doesn't ___ getting up early.",
+      "translation": "Она не любит рано вставать.",
+      "options": ["like", "likes", "liking", "to like"],
+      "answer": 0,
+      "explanation": "После doesn't глагол стоит в начальной форме: like, без -s. Окончание -ing получает только второй глагол: getting up."
+    },
+    {
+      "type": "speak",
+      "text": "I like listening to music in the evening.",
+      "translation": "Я люблю слушать музыку вечером."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно добавить -ing к глаголу dance?",
+      "options": ["danceing", "dancing", "dancying"],
+      "answer": 1,
+      "explanation": "Если глагол кончается на -e, эта буква исчезает перед -ing: dance → dancing, drive → driving, write → writing."
+    },
+    {
+      "type": "translate",
+      "source": "Что ты любишь делать в свободное время?",
+      "answer": "What do you like doing in your free time?",
+      "accept": ["What do you like to do in your free time?", "What do you like doing in your spare time?"],
+      "distractors": ["does", "make", "at"],
+      "explanation": "Вопрос строится с do: What do you like…? После like — doing с -ing. «Делать» в значении «заниматься чем-то» — это do, а не make."
+    },
+    {
+      "type": "listen",
+      "audio": "Does your husband like running?",
+      "question": "Что вы услышали?",
+      "options": ["Does your husband like running?", "Does your husband like reading?", "Is your husband running?", "Do your friends like running?"],
+      "answer": 0,
+      "explanation": "«Ваш муж любит бегать?» Вопрос о вкусах начинается с does, а like после него стоит без -s. Running и reading легко спутать: слушайте гласный звук."
+    },
+    {
+      "type": "gap",
+      "sentence": "We hate ___ for the bus in winter.",
+      "translation": "Мы терпеть не можем ждать автобус зимой.",
+      "options": ["wait", "waiting", "waits", "to waiting"],
+      "answer": 1,
+      "explanation": "После hate глагол с -ing: hate waiting. В слове wait две гласные подряд, поэтому t не удваивается."
+    },
+    {
+      "type": "type",
+      "source": "Я не люблю готовить.",
+      "answer": "I don't like cooking.",
+      "accept": ["I don't like to cook.", "I dislike cooking."],
+      "explanation": "Отрицание — don't перед like, а второй глагол остаётся с -ing: cooking. «I not like» и «I don't like cook» — ошибки."
+    },
+    {
+      "type": "dictation",
+      "audio": "He likes reading in the evening.",
+      "translation": "Он любит читать по вечерам."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She like dancing.", "Do you like swimming?", "I hate get up early.", "He doesn't likes running."],
+      "answer": 1,
+      "explanation": "В вопросе do стоит первым, а после like идёт глагол с -ing. В остальных вариантах ошибки: нужно she likes, hate getting up и doesn't like без -s."
+    }
+  ]
+}

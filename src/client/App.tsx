@@ -10,6 +10,7 @@ import Onboarding from './screens/Onboarding'
 import Placement from './screens/Placement'
 import Privacy from './screens/Privacy'
 import Review from './screens/Review'
+import Test from './screens/Test'
 import Profile from './screens/Profile'
 import Talk from './screens/Talk'
 import { load } from './lib/storage'
@@ -17,7 +18,6 @@ import { load } from './lib/storage'
 /** New visitors see the introduction first, then log in. */
 function RequireUser() {
   const { user } = useAuth()
-  if (!load('onboarded')) return <Navigate to="/welcome" replace />
   if (user === undefined) {
     return (
       <div className="flex h-full items-center justify-center">
@@ -25,6 +25,8 @@ function RequireUser() {
       </div>
     )
   }
+  // Someone who is already logged in never sees the introduction again, even on a phone that forgot it was shown.
+  if (!user && !load('onboarded')) return <Navigate to="/welcome" replace />
   return user ? <Outlet /> : <Navigate to="/login" replace />
 }
 
@@ -47,6 +49,7 @@ export default function App() {
             <Route element={<RequireLevel />}>
               <Route path="/lesson/:id" element={<Lesson />} />
               <Route path="/review" element={<Review />} />
+              <Route path="/test/:id" element={<Test />} />
               <Route path="/talk/:teacherId" element={<Call />} />
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Home />} />

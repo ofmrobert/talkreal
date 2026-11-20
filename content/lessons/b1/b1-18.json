@@ -1,0 +1,155 @@
+{
+  "id": "b1-18",
+  "level": "B1",
+  "order": 18,
+  "title": { "ru": "Артикли с географическими названиями и местами", "en": "Articles with places and geographical names" },
+  "goal": { "ru": "Научитесь понимать, где нужен the: the Volga, но Lake Baikal; in hospital, by car.", "en": "Learn where \"the\" is needed: the Volga but Lake Baikal; in hospital, by car." },
+  "theory": [
+    {
+      "title": "Без артикля: страны, города, озёра, отдельные горы",
+      "body": "Большинство географических названий обходится без артикля: континенты, почти все страны, города, улицы, отдельные озёра и вершины. Перед названием озера ставят слово Lake, перед названием горы — Mount. В русском артиклей нет, поэтому мы или забываем их, или ставим the перед каждым названием «на всякий случай».",
+      "examples": [
+        { "en": "Lake Baikal is the deepest lake in the world.", "ru": "Озеро Байкал — самое глубокое в мире." },
+        { "en": "We spent our holiday in Italy.", "ru": "Мы провели отпуск в Италии." },
+        { "en": "Her office is in Oxford Street.", "ru": "Её офис находится на Оксфорд-стрит." }
+      ],
+      "tip": "Подсказка: название одной страны, одного города, одного озера или одной горы — без артикля."
+    },
+    {
+      "title": "С the: реки, моря, горные цепи, страны-«союзы»",
+      "body": "The нужен перед названиями рек, морей, океанов, пустынь, горных цепей и групп островов. Его же ставят перед странами, в названии которых есть слова States, Kingdom, Republic, Federation, и перед названиями во множественном числе.",
+      "examples": [
+        { "en": "The Volga flows into the Caspian Sea.", "ru": "Волга впадает в Каспийское море." },
+        { "en": "My brother works in the USA.", "ru": "Мой брат работает в США." },
+        { "en": "We went skiing in the Alps.", "ru": "Мы ездили кататься на лыжах в Альпы." }
+      ],
+      "tip": "Сравните: Russia — без артикля, но the Russian Federation; Holland, но the Netherlands; Everest, но the Himalayas."
+    },
+    {
+      "title": "In hospital, at work, by car: устойчивые сочетания",
+      "body": "Когда место названо ради своего прямого назначения, артикля нет: in hospital (лечиться), at school (учиться), at work, at home, in bed. Если же вы пришли в это здание по другому делу, появляется the. Способ передвижения тоже без артикля: by car, by train, by plane, а «пешком» — on foot.",
+      "examples": [
+        { "en": "He's been in hospital since Monday.", "ru": "Он лежит в больнице с понедельника." },
+        { "en": "I went to the hospital to visit a friend.", "ru": "Я ходил в больницу навестить друга." },
+        { "en": "I usually go to work by bus.", "ru": "Я обычно езжу на работу на автобусе." }
+      ],
+      "tip": "После by артикль и местоимение не ставятся. Если нужно уточнить, какой именно транспорт, меняется предлог: in my car, on the morning train."
+    }
+  ],
+  "vocab": [
+    { "en": "an island", "ru": "остров", "example": "Sicily is an island in the Mediterranean." },
+    { "en": "the coast", "ru": "побережье", "example": "We spent a week on the coast." },
+    { "en": "a desert", "ru": "пустыня", "example": "The Sahara is a desert in Africa." },
+    { "en": "a mountain range", "ru": "горный хребет, горная цепь", "example": "The Urals are a mountain range in Russia." },
+    { "en": "an ocean", "ru": "океан", "example": "The Pacific is an ocean, not a sea." },
+    { "en": "in hospital", "ru": "в больнице (на лечении)", "example": "My father is in hospital." },
+    { "en": "by car", "ru": "на машине", "example": "We went there by car." },
+    { "en": "on foot", "ru": "пешком", "example": "It's ten minutes on foot." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "an island", "ru": "остров" },
+        { "en": "the coast", "ru": "побережье" },
+        { "en": "a desert", "ru": "пустыня" },
+        { "en": "a mountain range", "ru": "горный хребет" },
+        { "en": "on foot", "ru": "пешком" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Volga is the longest river in Europe.", "The Volga is the longest river in Europe.", "The Volga is the longest river in the Europe.", "A Volga is the longest river in Europe."],
+      "answer": 1,
+      "explanation": "Названия рек всегда употребляются с the: the Volga. А вот континенты — без артикля, поэтому in Europe, а не «in the Europe»."
+    },
+    {
+      "type": "gap",
+      "sentence": "My sister has lived in ___ for five years.",
+      "translation": "Моя сестра уже пять лет живёт в США.",
+      "options": ["the USA", "USA", "a USA", "an USA"],
+      "answer": 0,
+      "explanation": "В названии страны есть слово States (the United States of America), поэтому нужен определённый артикль: the USA. Без артикля или с a / an так не говорят."
+    },
+    {
+      "type": "translate",
+      "source": "Мы поехали на озеро Байкал на поезде.",
+      "answer": "We went to Lake Baikal by train.",
+      "accept": ["We travelled to Lake Baikal by train.", "We went by train to Lake Baikal.", "We took a train to Lake Baikal.", "We took the train to Lake Baikal."],
+      "distractors": ["the", "with", "at"],
+      "explanation": "Название озера со словом Lake идёт без артикля: Lake Baikal. Способ передвижения — by + транспорт, тоже без артикля: by train, а не «by the train» и не «with train»."
+    },
+    {
+      "type": "listen",
+      "audio": "My grandmother is in hospital, so I visit her every day.",
+      "question": "Что вы узнали о бабушке?",
+      "options": ["Она лежит в больнице", "Она работает в больнице", "Она живёт рядом с больницей", "Она каждый день ходит к врачу"],
+      "answer": 0,
+      "explanation": "In hospital без артикля означает «в больнице как пациент». О сотруднице сказали бы she works at a hospital."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's not far. We can go there ___.",
+      "translation": "Это недалеко. Мы можем дойти туда пешком.",
+      "options": ["on foot", "by foot", "on the foot", "with foot"],
+      "answer": 0,
+      "explanation": "«Пешком» — устойчивое выражение on foot: это исключение из правила by + транспорт. Артикль внутри выражения не нужен."
+    },
+    {
+      "type": "speak",
+      "text": "My father has been in hospital since Monday.",
+      "translation": "Мой отец лежит в больнице с понедельника."
+    },
+    {
+      "type": "choice",
+      "prompt": "Перед каким названием артикль the НЕ нужен?",
+      "options": ["Lake Baikal", "Black Sea", "Alps", "Netherlands"],
+      "answer": 0,
+      "explanation": "Отдельные озёра со словом Lake идут без артикля: Lake Baikal. Моря (the Black Sea), горные цепи (the Alps) и названия во множественном числе (the Netherlands) требуют the."
+    },
+    {
+      "type": "type",
+      "source": "Он сейчас на работе.",
+      "answer": "He is at work now.",
+      "accept": ["He's at work now.", "He is at work right now.", "He's at work right now.", "He is at work at the moment.", "He's at work at the moment.", "He is at work.", "He's at work.", "He is now at work.", "He's now at work.", "Now he is at work.", "Now he's at work.", "He is currently at work.", "He's currently at work."],
+      "explanation": "At work — устойчивое сочетание без артикля, как at home и at school. «On work» и «at the work» — частые ошибки: предлог здесь at, а артикль не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "Last summer we went hiking in ___.",
+      "translation": "Прошлым летом мы ходили в поход в Альпы.",
+      "options": ["the Alps", "Alps", "an Alps", "the Alp"],
+      "answer": 0,
+      "explanation": "Горные цепи — множественное число и артикль the: the Alps, the Urals, the Himalayas. Без артикля называют только отдельные вершины: Everest, Mount Elbrus."
+    },
+    {
+      "type": "listen",
+      "audio": "She works in the Netherlands.",
+      "question": "Что вы услышали?",
+      "options": ["She works in the Netherlands.", "She works in Netherlands.", "She worked in the Netherlands.", "She walks in the Netherlands."],
+      "answer": 0,
+      "explanation": "Название страны во множественном числе требует артикля: the Netherlands. Окончание -s в works показывает настоящее время, а work и walk различаются гласным звуком."
+    },
+    {
+      "type": "translate",
+      "source": "Волга впадает в Каспийское море.",
+      "answer": "The Volga flows into the Caspian Sea.",
+      "accept": ["The Volga River flows into the Caspian Sea.", "The River Volga flows into the Caspian Sea.", "The Volga runs into the Caspian Sea."],
+      "distractors": ["a", "in", "at"],
+      "explanation": "И реки, и моря употребляются с the: the Volga, the Caspian Sea. «Впадать в» — flow into: предлог into показывает движение внутрь."
+    },
+    {
+      "type": "dictation",
+      "audio": "We usually go to work by car.",
+      "translation": "Мы обычно ездим на работу на машине."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы пришли в школу поговорить с учителем сына. Как сказать?",
+      "options": ["I went to the school to talk to my son's teacher.", "I went to school to talk to my son's teacher.", "I went in school to talk to my son's teacher.", "I went at the school to talk to my son's teacher."],
+      "answer": 0,
+      "explanation": "Вы пришли в здание школы по делу, а не учиться, поэтому нужен артикль: to the school. Go to school без артикля значит «ходить в школу как ученик»."
+    }
+  ]
+}

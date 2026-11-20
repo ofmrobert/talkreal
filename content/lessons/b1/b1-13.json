@@ -1,0 +1,155 @@
+{
+  "id": "b1-13",
+  "level": "B1",
+  "order": 13,
+  "title": { "ru": "Вопросы-«хвостики» и короткие ответы", "en": "Question tags and short answers" },
+  "goal": { "ru": "Научитесь поддерживать разговор: переспрашивать с «не так ли?» и говорить «я тоже».", "en": "Learn to keep a conversation going with question tags and \"So do I\" / \"Neither do I\"." },
+  "theory": [
+    {
+      "title": "Question tags: «не так ли?»",
+      "body": "Короткий вопрос в конце фразы помогает завязать разговор или проверить, правы ли вы. Правило зеркальное: утвердительное предложение — отрицательный «хвостик», отрицательное — утвердительный. В «хвостике» повторяется вспомогательный глагол предложения и местоимение. По-русски мы на все случаи говорим «да?» или «правда?», а в английском «хвостик» каждый раз свой.",
+      "examples": [
+        { "en": "It's cold today, isn't it?", "ru": "Сегодня холодно, правда?" },
+        { "en": "You don't eat meat, do you?", "ru": "Вы ведь не едите мясо, да?" },
+        { "en": "She can drive, can't she?", "ru": "Она ведь умеет водить, да?" }
+      ],
+      "tip": "Не добавляйте ко всему подряд «…, yes?» или «…, isn't it?». You work here, isn't it? — ошибка: нужно don't you?"
+    },
+    {
+      "title": "Когда вспомогательного глагола не видно",
+      "body": "В Present Simple и Past Simple вспомогательный глагол в утверждении спрятан, поэтому в «хвостике» появляются do, does или did. После I am «хвостик» особый: aren't I? Отвечают на такой вопрос по факту: если вы не курите, ответ No, I don't — даже там, где по-русски сказали бы «Да, не курю».",
+      "examples": [
+        { "en": "You work in marketing, don't you?", "ru": "Вы ведь работаете в маркетинге?" },
+        { "en": "He called you yesterday, didn't he?", "ru": "Он ведь звонил тебе вчера?" },
+        { "en": "I'm late, aren't I?", "ru": "Я опоздал, да?" }
+      ],
+      "tip": "Yes всегда идёт с утвердительным глаголом, no — с отрицательным: Yes, I do. / No, I don't. «Yes, I don't» не бывает."
+    },
+    {
+      "title": "So do I и Neither do I: «я тоже»",
+      "body": "Чтобы согласиться с утверждением, говорят So + вспомогательный глагол + I. Чтобы согласиться с отрицанием — Neither + вспомогательный глагол + I. Глагол берётся из фразы собеседника: am, have, can, а если его нет — do или did.",
+      "examples": [
+        { "en": "— I love Italian food. — So do I.", "ru": "— Я люблю итальянскую кухню. — Я тоже." },
+        { "en": "— I can't swim. — Neither can I.", "ru": "— Я не умею плавать. — Я тоже." },
+        { "en": "— I've been to Rome. — So have I.", "ru": "— Я был в Риме. — Я тоже." }
+      ],
+      "tip": "В neither уже есть отрицание, поэтому глагол после него утвердительный: Neither do I, а не «Neither don't I»."
+    }
+  ],
+  "vocab": [
+    { "en": "So do I", "ru": "Я тоже (в ответ на утверждение)", "example": "— I love jazz. — So do I." },
+    { "en": "Neither do I", "ru": "Я тоже нет (в ответ на отрицание)", "example": "— I don't eat meat. — Neither do I." },
+    { "en": "I hope so", "ru": "Надеюсь, что да", "example": "— Will you be on time? — I hope so." },
+    { "en": "I'm afraid not", "ru": "Боюсь, что нет", "example": "— Is there any coffee left? — I'm afraid not." },
+    { "en": "I don't think so", "ru": "Не думаю", "example": "— Is the bank open today? — I don't think so." },
+    { "en": "small talk", "ru": "светская беседа, разговор о пустяках", "example": "I'm not very good at small talk." },
+    { "en": "lovely", "ru": "чудесный, прекрасный", "example": "It's a lovely day, isn't it?" },
+    { "en": "awful", "ru": "ужасный", "example": "The weather is awful today, isn't it?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "So do I", "ru": "Я тоже" },
+        { "en": "Neither do I", "ru": "Я тоже нет" },
+        { "en": "I hope so", "ru": "Надеюсь, что да" },
+        { "en": "I'm afraid not", "ru": "Боюсь, что нет" },
+        { "en": "small talk", "ru": "разговор о пустяках" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Закончите фразу: «You're from Spain, …»",
+      "options": ["aren't you?", "isn't it?", "don't you?", "are you?"],
+      "answer": 0,
+      "explanation": "В предложении стоит are (You're = You are), значит, «хвостик» — тот же глагол с отрицанием: aren't you? Универсального isn't it в английском нет, а are you? подошло бы только к отрицательному предложению."
+    },
+    {
+      "type": "gap",
+      "sentence": "Your sister works in a bank, ___ she?",
+      "translation": "Твоя сестра ведь работает в банке?",
+      "options": ["doesn't", "isn't", "don't", "does"],
+      "answer": 0,
+      "explanation": "Works — Present Simple, третье лицо, поэтому в «хвостике» does; предложение утвердительное, значит, нужно отрицание: doesn't she? Isn't подошло бы только к глаголу is."
+    },
+    {
+      "type": "translate",
+      "source": "Вы ведь не говорите по-французски, да?",
+      "answer": "You don't speak French, do you?",
+      "accept": ["You do not speak French, do you?"],
+      "distractors": ["yes", "aren't", "does"],
+      "explanation": "Предложение отрицательное (don't speak), поэтому «хвостик» утвердительный: do you? Русское «да?» нельзя перевести словом yes — нужен вспомогательный глагол."
+    },
+    {
+      "type": "listen",
+      "audio": "You haven't seen my keys, have you?",
+      "question": "Что хочет узнать говорящий?",
+      "options": ["Не видели ли вы его ключи", "Есть ли у вас свои ключи", "Зачем вы взяли его ключи", "Когда вы вернёте ему ключи"],
+      "answer": 0,
+      "explanation": "Отрицание с утвердительным «хвостиком» (haven't seen…, have you?) — мягкий, вежливый способ спросить: «Вы случайно не видели…?»"
+    },
+    {
+      "type": "gap",
+      "sentence": "— I don't like horror films. — ___ do I.",
+      "translation": "— Я не люблю фильмы ужасов. — Я тоже.",
+      "options": ["Neither", "So", "Too", "Also"],
+      "answer": 0,
+      "explanation": "Собеседник сказал отрицательную фразу, поэтому соглашаемся через Neither do I. So do I значило бы «а я люблю»; too и also в этой конструкции не используются."
+    },
+    {
+      "type": "speak",
+      "text": "It's a lovely day, isn't it?",
+      "translation": "Чудесный день, правда?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спрашивают: «You don't smoke, do you?» Вы не курите. Как ответить?",
+      "options": ["No, I don't.", "Yes, I don't.", "Yes, I'm not.", "No, I do."],
+      "answer": 0,
+      "explanation": "В английском отвечают по факту: не курю — значит, No, I don't. Русское «Да, не курю» при дословном переводе даёт невозможное сочетание «Yes, I don't»."
+    },
+    {
+      "type": "type",
+      "source": "Ты ведь устал, да?",
+      "answer": "You're tired, aren't you?",
+      "accept": ["You are tired, aren't you?"],
+      "explanation": "В утверждении стоит are, поэтому «хвостик» — aren't you? Русское «да?» в конце фразы не переводится словом yes."
+    },
+    {
+      "type": "gap",
+      "sentence": "— I've already had lunch. — So ___ I.",
+      "translation": "— Я уже пообедал. — Я тоже.",
+      "options": ["have", "do", "am", "did"],
+      "answer": 0,
+      "explanation": "В ответе повторяется вспомогательный глагол собеседника: I've = I have, значит, So have I. Do понадобился бы только после Present Simple: I like it. — So do I."
+    },
+    {
+      "type": "listen",
+      "audio": "He didn't call you yesterday, did he?",
+      "question": "Что вы услышали?",
+      "options": ["He didn't call you yesterday, did he?", "He didn't call you yesterday, didn't he?", "He didn't call you yesterday, does he?", "He didn't tell you yesterday, did he?"],
+      "answer": 0,
+      "explanation": "После отрицания didn't call идёт утвердительный «хвостик» в том же времени: did he? Два отрицания подряд или другое время в «хвостике» — ошибка."
+    },
+    {
+      "type": "translate",
+      "source": "— Я не люблю понедельники. — Я тоже.",
+      "answer": "I don't like Mondays. Neither do I.",
+      "accept": ["I do not like Mondays. Neither do I.", "I don't like Mondays. Nor do I.", "I don't like Mondays. Me neither.", "I don't like Mondays. I don't either."],
+      "distractors": ["So", "too", "am"],
+      "explanation": "С отрицательной фразой соглашаются через Neither do I. So do I и too подходят только для утверждений, а am был бы нужен после фразы с глаголом be: I'm not hungry. — Neither am I."
+    },
+    {
+      "type": "dictation",
+      "audio": "You work in marketing, don't you?",
+      "translation": "Вы ведь работаете в маркетинге?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега говорит: «I'm really tired today.» Как сказать «Я тоже»?",
+      "options": ["So am I.", "So do I.", "Neither am I.", "So I am."],
+      "answer": 0,
+      "explanation": "Во фразе коллеги глагол am, поэтому So am I. So do I подошло бы после обычного глагола (I feel tired), Neither — после отрицания, а So I am — это уже не «я тоже», а «и правда»."
+    }
+  ]
+}

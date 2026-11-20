@@ -1,0 +1,154 @@
+{
+  "id": "a1-11",
+  "level": "A1",
+  "order": 11,
+  "title": { "ru": "Предлоги in, on, at: время и место", "en": "Prepositions in, on, at: time and place" },
+  "goal": { "ru": "Научитесь говорить, когда и где что-то происходит.", "en": "Learn to say when and where things happen." },
+  "theory": [
+    {
+      "title": "Время: at, on, in",
+      "body": "At — с точным временем: at five, at half past seven. On — с днями: on Monday, on Friday. In — с частями дня, месяцами и временами года: in the morning, in July, in summer. По-русски почти везде «в», поэтому хочется всегда говорить in, а в английском нужно выбирать.",
+      "examples": [
+        { "en": "The meeting is at ten.", "ru": "Встреча в десять." },
+        { "en": "I don't work on Saturday.", "ru": "В субботу я не работаю." },
+        { "en": "We have dinner in the evening.", "ru": "Мы ужинаем вечером." }
+      ],
+      "tip": "Запомните отдельно: at night — «ночью» и at the weekend — «на выходных»."
+    },
+    {
+      "title": "Место: in и at",
+      "body": "In — внутри чего-то: in the city, in the office, in Russia. At — когда важно не помещение, а то, чем человек там занят: at work, at home, at school. Сравните: I'm in the office — я внутри офиса; I'm at work — я на работе, занят делом.",
+      "examples": [
+        { "en": "My sister lives in a small city.", "ru": "Моя сестра живёт в маленьком городе." },
+        { "en": "I'm at work now.", "ru": "Я сейчас на работе." },
+        { "en": "The children are at school.", "ru": "Дети в школе." }
+      ],
+      "tip": "At home и at work — без артикля. «At the home» и «in home» — ошибки."
+    },
+    {
+      "title": "Когда предлог не нужен",
+      "body": "Перед словами every и this предлог не ставится: every Monday, this morning — без on и in. И ещё одно: с глаголом go слово home идёт без предлога. Мы говорим go home, но be at home.",
+      "examples": [
+        { "en": "I have English every Tuesday.", "ru": "У меня английский каждый вторник." },
+        { "en": "She is at home this evening.", "ru": "Сегодня вечером она дома." },
+        { "en": "We go home at six.", "ru": "Мы идём домой в шесть." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "at home", "ru": "дома", "example": "I'm at home today." },
+    { "en": "at work", "ru": "на работе", "example": "My husband is at work." },
+    { "en": "at night", "ru": "ночью", "example": "The city is quiet at night." },
+    { "en": "in the afternoon", "ru": "днём, после обеда", "example": "We have a break in the afternoon." },
+    { "en": "city", "ru": "город", "example": "Kazan is a big city." },
+    { "en": "office", "ru": "офис", "example": "Our office is next to the bank." },
+    { "en": "meeting", "ru": "встреча, совещание", "example": "The meeting starts at ten." },
+    { "en": "Friday", "ru": "пятница", "example": "I don't work on Friday." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "at home", "ru": "дома" },
+        { "en": "at work", "ru": "на работе" },
+        { "en": "at night", "ru": "ночью" },
+        { "en": "city", "ru": "город" },
+        { "en": "meeting", "ru": "встреча" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я работаю в понедельник»?",
+      "options": ["I work in Monday.", "I work on Monday.", "I work at Monday.", "I work in the Monday."],
+      "answer": 1,
+      "explanation": "С днями недели всегда on: on Monday. Русское «в» подсказывает in, но in нужен для частей дня и месяцев, а at — для точного времени."
+    },
+    {
+      "type": "gap",
+      "sentence": "The film starts ___ seven.",
+      "translation": "Фильм начинается в семь.",
+      "options": ["at", "in", "on"],
+      "answer": 0,
+      "explanation": "Точное время по часам — всегда at: at seven, at half past nine. On — для дней, in — для частей дня."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm at work in the morning and at home in the evening.",
+      "question": "Где человек вечером?",
+      "options": ["Дома", "На работе", "В офисе", "В городе"],
+      "answer": 0,
+      "explanation": "At home in the evening — «дома вечером». At work относится к утру: in the morning."
+    },
+    {
+      "type": "translate",
+      "source": "Мои родители живут в большом городе.",
+      "answer": "My parents live in a big city.",
+      "accept": ["My parents live in a large city."],
+      "distractors": ["at", "on", "lives"],
+      "explanation": "Люди живут внутри города, поэтому in a city. Parents — это they, поэтому live без -s."
+    },
+    {
+      "type": "gap",
+      "sentence": "She isn't in the office. She's ___ home today.",
+      "translation": "Её нет в офисе. Сегодня она дома.",
+      "options": ["at", "in", "on", "to"],
+      "answer": 0,
+      "explanation": "«Дома» — это at home, готовое выражение без артикля. «In home» и «on home» по-английски не говорят, а to показывает движение."
+    },
+    {
+      "type": "speak",
+      "text": "I'm at work on Friday.",
+      "translation": "В пятницу я на работе."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I go to work on every Tuesday.", "We are at the home now.", "The shop is closed at night.", "My class is in Friday."],
+      "answer": 2,
+      "explanation": "«Ночью» — at night. В остальных вариантах ошибки: перед every предлог не нужен, at home говорят без the, а с днями недели нужен on: on Friday."
+    },
+    {
+      "type": "translate",
+      "source": "Встреча в пятницу в десять.",
+      "answer": "The meeting is on Friday at ten.",
+      "accept": ["The meeting is at ten on Friday.", "The meeting's on Friday at ten.", "The meeting's at ten on Friday."],
+      "distractors": ["in", "to", "of"],
+      "explanation": "Два русских «в» — два разных предлога: день — on Friday, время по часам — at ten. И не забудьте is: в английском без глагола нельзя."
+    },
+    {
+      "type": "listen",
+      "audio": "We have a meeting on Friday afternoon.",
+      "question": "Когда встреча?",
+      "options": ["В пятницу днём", "В пятницу утром", "В четверг днём", "В пятницу вечером"],
+      "answer": 0,
+      "explanation": "On Friday afternoon — «в пятницу днём». Обратите внимание: когда рядом стоят день и часть дня, предлог один — on."
+    },
+    {
+      "type": "gap",
+      "sentence": "My brother works ___ night.",
+      "translation": "Мой брат работает ночью.",
+      "options": ["at", "in", "on"],
+      "answer": 0,
+      "explanation": "At night — исключение, которое нужно запомнить. С другими частями дня in и артикль: in the morning, in the evening, но at night."
+    },
+    {
+      "type": "type",
+      "source": "Я сейчас на работе.",
+      "answer": "I'm at work now.",
+      "accept": ["Now I'm at work.", "I'm now at work.", "I'm at work right now.", "I'm at work at the moment."],
+      "explanation": "«На работе» — at work, без артикля. Русское «на» не переводится как on: «on work» — ошибка."
+    },
+    {
+      "type": "dictation",
+      "audio": "We have dinner at home in the evening.",
+      "translation": "Мы ужинаем дома вечером."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить: «Ты дома в субботу?»",
+      "options": ["Are you at home on Saturday?", "Are you in home on Saturday?", "Are you at home in Saturday?", "Are you at home at Saturday?"],
+      "answer": 0,
+      "explanation": "«Дома» — at home, а день недели — on Saturday. В одном предложении два разных предлога, хотя по-русски перед «дома» предлога нет вообще."
+    }
+  ]
+}

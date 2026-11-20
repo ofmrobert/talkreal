@@ -1,0 +1,202 @@
+{
+  "id": "c1-20",
+  "level": "C1",
+  "order": 20,
+  "title": { "ru": "Слова, которые легко перепутать", "en": "Easily confused pairs" },
+  "goal": { "ru": "Научитесь различать economic и economical, historic и historical, affect и effect, lie и lay, rise и raise, sensible и sensitive.", "en": "Learn to tell apart economic and economical, historic and historical, affect and effect, lie and lay, rise and raise, sensible and sensitive." },
+  "theory": [
+    {
+      "title": "Прилагательные-близнецы",
+      "body": "Economic значит «связанный с экономикой», economical — «экономный, экономичный». Historic — «знаменательный, вошедший в историю», historical — «относящийся к прошлому или к истории как науке». Sensible — «разумный», sensitive — «чувствительный» или «деликатный».",
+      "examples": [
+        { "en": "The country is going through an economic crisis.", "ru": "Страна переживает экономический кризис." },
+        { "en": "A smaller car would be more economical to run.", "ru": "Машина поменьше была бы экономичнее в эксплуатации." },
+        { "en": "It was a sensible decision to book in advance.", "ru": "Забронировать заранее было разумным решением." }
+      ],
+      "tip": "Sensible — ложный друг: это не «чувствительный», а «благоразумный». «Чувствительная кожа» — sensitive skin."
+    },
+    {
+      "title": "Affect и effect",
+      "body": "Affect — глагол «влиять на», и после него нет предлога: affect the result. Effect — существительное «влияние, результат»: have an effect on something. Русское «влиять на» подталкивает к ошибке «affect on».",
+      "examples": [
+        { "en": "The strike will affect thousands of passengers.", "ru": "Забастовка затронет тысячи пассажиров." },
+        { "en": "The new rules had little effect on prices.", "ru": "Новые правила почти не повлияли на цены." },
+        { "en": "Tiredness affects your concentration.", "ru": "Усталость влияет на концентрацию." }
+      ],
+      "tip": "Запомните по первым буквам: Affect — Action (действие, глагол), Effect — End result (итог, существительное)."
+    },
+    {
+      "title": "Lie / lay и rise / raise",
+      "body": "Lie (lay, lain) — «лежать»: действие без дополнения. Lay (laid, laid) — «класть» что-то. Rise (rose, risen) — «подниматься» самому, raise (raised, raised) — «поднимать» что-то. Главная ловушка: прошедшее время от lie совпадает с начальной формой lay.",
+      "examples": [
+        { "en": "I lay awake for hours last night.", "ru": "Прошлой ночью я часами лежал без сна." },
+        { "en": "She laid the documents on the desk.", "ru": "Она положила документы на стол." },
+        { "en": "Prices have risen, so the landlord has raised the rent.", "ru": "Цены выросли, поэтому хозяин квартиры поднял арендную плату." }
+      ],
+      "tip": "Есть дополнение — lay и raise, нет дополнения — lie и rise. А lie в значении «лгать» — правильный глагол: lied, lied."
+    }
+  ],
+  "vocab": [
+    { "en": "economic", "ru": "экономический", "example": "The report describes the economic situation in the region." },
+    { "en": "economical", "ru": "экономный, экономичный", "example": "This heating system is very economical." },
+    { "en": "historic", "ru": "знаменательный, исторически важный", "example": "The two leaders signed a historic agreement." },
+    { "en": "historical", "ru": "относящийся к истории, к прошлому", "example": "She enjoys reading historical novels." },
+    { "en": "sensible", "ru": "разумный, благоразумный", "example": "Wear sensible shoes for the walk." },
+    { "en": "sensitive", "ru": "чувствительный; деликатный", "example": "This is a sensitive subject for the family." },
+    { "en": "to affect", "ru": "влиять на", "example": "The delay will affect all our customers." },
+    { "en": "to lay", "ru": "класть, положить", "example": "Please lay the map on the table." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "economical", "ru": "экономный, экономичный" },
+        { "en": "historic", "ru": "знаменательный, исторически важный" },
+        { "en": "sensible", "ru": "разумный, благоразумный" },
+        { "en": "sensitive", "ru": "чувствительный; деликатный" },
+        { "en": "to affect", "ru": "влиять на" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "The new tax will affect on small businesses.",
+        "The new tax will effect small businesses.",
+        "The new tax will affect small businesses.",
+        "The new tax will have an affect on small businesses."
+      ],
+      "answer": 2,
+      "explanation": "Affect — глагол, после которого дополнение идёт без предлога: affect small businesses. Предлог on нужен только после существительного effect: have an effect on."
+    },
+    {
+      "type": "gap",
+      "sentence": "A hybrid car is far more ___ to run than a petrol one.",
+      "translation": "Гибридный автомобиль гораздо экономичнее в эксплуатации, чем бензиновый.",
+      "options": ["economical", "economic", "economy", "economics"],
+      "answer": 0,
+      "explanation": "Economical — «экономичный, требующий мало затрат». Economic относится к экономике как сфере жизни: economic growth, economic policy."
+    },
+    {
+      "type": "translate",
+      "source": "Цены на жильё выросли в прошлом году.",
+      "answer": "House prices rose last year.",
+      "accept": [
+        "Housing prices rose last year.",
+        "Property prices rose last year.",
+        "House prices went up last year.",
+        "House prices increased last year.",
+        "Housing prices went up last year.",
+        "Housing prices increased last year.",
+        "The price of housing rose last year.",
+        "Last year house prices rose."
+      ],
+      "distractors": ["raised", "risen", "rised", "arose"],
+      "explanation": "Цены растут сами, дополнения нет — значит, rise, в прошедшем времени rose. Raised потребовало бы того, кто поднимает: The landlord raised the rent."
+    },
+    {
+      "type": "listen",
+      "audio": "It was a sensible choice, given how sensitive the topic is.",
+      "question": "Что говорящий думает о выборе?",
+      "options": [
+        "Он был эмоциональным, хотя тема простая",
+        "Он был разумным, потому что тема деликатная",
+        "Он был неразумным, потому что тема деликатная",
+        "Он был разумным, потому что тема несложная"
+      ],
+      "answer": 1,
+      "explanation": "Sensible — «разумный», sensitive — «деликатный, чувствительный». Given how… значит «учитывая, насколько…»: выбор разумен именно потому, что тема требует осторожности."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком предложении слово historic употреблено правильно?",
+      "options": [
+        "I love historic novels about the Middle Ages.",
+        "She teaches historic linguistics at the university.",
+        "For historic accuracy, the director hired a consultant.",
+        "The vote was a historic moment for the country."
+      ],
+      "answer": 3,
+      "explanation": "Historic — «знаменательный, вошедший в историю»: a historic moment. Романы о прошлом, раздел лингвистики и точность в изображении прошлого — всё это historical."
+    },
+    {
+      "type": "speak",
+      "text": "She laid the documents on the desk.",
+      "translation": "Она положила документы на стол."
+    },
+    {
+      "type": "gap",
+      "sentence": "I was so tired that I ___ down on the sofa and fell asleep at once.",
+      "translation": "Я так устал, что лёг на диван и сразу уснул.",
+      "options": ["laid", "lay", "lied", "lain"],
+      "answer": 1,
+      "explanation": "«Лёг» — прошедшее время от lie: lay. Laid — прошедшее от lay («класть что-то») и требует дополнения, lied значит «солгал», а lain — третья форма, которой нужен вспомогательный глагол have."
+    },
+    {
+      "type": "type",
+      "source": "Это было разумное решение.",
+      "answer": "It was a sensible decision.",
+      "accept": [
+        "That was a sensible decision.",
+        "This was a sensible decision.",
+        "It was a reasonable decision.",
+        "That was a reasonable decision.",
+        "This was a reasonable decision.",
+        "It was a wise decision.",
+        "That was a wise decision."
+      ],
+      "explanation": "«Разумный» — sensible. Sensitive значит «чувствительный», и «a sensitive decision» понималось бы как «деликатное решение»."
+    },
+    {
+      "type": "listen",
+      "audio": "The company raised its prices after costs rose sharply.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The company rose its prices after costs raised sharply.",
+        "The company raised its prices after costs raised sharply.",
+        "The company raised its prices after costs rose sharply.",
+        "The company rised its prices after costs rose sharply."
+      ],
+      "answer": 2,
+      "explanation": "Компания подняла цены — есть дополнение, поэтому raised. Издержки выросли сами — дополнения нет, поэтому rose, прошедшее время от rise."
+    },
+    {
+      "type": "translate",
+      "source": "Шум влияет на мою концентрацию.",
+      "answer": "The noise affects my concentration.",
+      "accept": [
+        "Noise affects my concentration.",
+        "The noise is affecting my concentration.",
+        "The noise has an effect on my concentration.",
+        "Noise has an effect on my concentration."
+      ],
+      "distractors": ["effects", "on", "at", "affect"],
+      "explanation": "Глагол «влиять» — affect, с буквой a и без предлога: affects my concentration. Effect с буквой e — существительное, а «affect on» — калька с русского «влиять на»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Use this cream if you have ___ skin.",
+      "translation": "Используйте этот крем, если у вас чувствительная кожа.",
+      "options": ["sensible", "sensual", "sensing", "sensitive"],
+      "answer": 3,
+      "explanation": "«Чувствительная кожа» — sensitive skin. Sensible значит «разумный», а sensual — «чувственный»."
+    },
+    {
+      "type": "dictation",
+      "audio": "The strike will affect thousands of passengers.",
+      "translation": "Забастовка затронет тысячи пассажиров."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "Please raise your hand if you have a question.",
+        "Please rise your hand if you have a question.",
+        "Please arise your hand if you have a question.",
+        "Please risen your hand if you have a question."
+      ],
+      "answer": 0,
+      "explanation": "Руку поднимают — у глагола есть дополнение your hand, значит, raise. Rise употребляется без дополнения: The sun rises, prices rise."
+    }
+  ]
+}

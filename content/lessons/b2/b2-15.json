@@ -1,0 +1,200 @@
+{
+  "id": "b2-15",
+  "level": "B2",
+  "order": 15,
+  "title": { "ru": "Связки причины, следствия и цели", "en": "Linking words of cause, result and purpose" },
+  "goal": { "ru": "Научитесь объяснять причины, следствия и цели с помощью due to, owing to, therefore, as a result, in order to, so as to и so that.", "en": "Learn to explain causes, results and purposes using due to, owing to, therefore, as a result, in order to, so as to and so that." },
+  "theory": [
+    {
+      "title": "Причина: due to, owing to, because of",
+      "body": "Due to, owing to и because of («из-за, вследствие») — предлоги: после них идёт существительное или форма на -ing, но не целое предложение. Перед предложением с подлежащим и глаголом ставят because. Due to и owing to звучат официальнее и типичны для объявлений и деловых писем.",
+      "examples": [
+        { "en": "The flight was cancelled due to bad weather.", "ru": "Рейс отменили из-за плохой погоды." },
+        { "en": "Owing to a technical fault, the site is unavailable.", "ru": "Из-за технической неисправности сайт недоступен." },
+        { "en": "The match was cancelled because it was raining.", "ru": "Матч отменили, потому что шёл дождь." }
+      ],
+      "tip": "«Due to it was raining» — ошибка. Если нужно предложение, говорите because it was raining или due to the fact that it was raining."
+    },
+    {
+      "title": "Следствие: therefore, as a result, so",
+      "body": "Therefore («поэтому, следовательно») и as a result («в результате») — наречия: они начинают новое предложение или стоят после точки с запятой и отделяются запятой. So — союз попроще: он соединяет две части одного предложения через запятую.",
+      "examples": [
+        { "en": "Sales fell sharply. As a result, the company closed two shops.", "ru": "Продажи резко упали. В результате компания закрыла два магазина." },
+        { "en": "The road was closed; therefore, we took the train.", "ru": "Дорога была закрыта; поэтому мы поехали на поезде." },
+        { "en": "I was tired, so I went to bed early.", "ru": "Я устал, поэтому рано лёг спать." }
+      ],
+      "tip": "Русское «так как…, то…» не переносится в английский: «Because it was late, so we left» — ошибка. Нужна одна связка: либо because, либо so."
+    },
+    {
+      "title": "Цель: in order to, so as to, so that",
+      "body": "Цель выражается инфинитивом: to, in order to или более официальным so as to. Отрицание — in order not to и so as not to. Если у цели своё подлежащее, нужно so that + подлежащее + can, could, will или would.",
+      "examples": [
+        { "en": "I left early in order to avoid the traffic.", "ru": "Я выехал пораньше, чтобы не попасть в пробки." },
+        { "en": "She spoke quietly so as not to wake the baby.", "ru": "Она говорила тихо, чтобы не разбудить ребёнка." },
+        { "en": "I'll send you the file so that you can check it.", "ru": "Я пришлю вам файл, чтобы вы могли его проверить." }
+      ],
+      "tip": "Русское «для того чтобы» не переводится через for: «I came for to learn» и «I came for learning» — ошибки. Говорите I came to learn."
+    }
+  ],
+  "vocab": [
+    { "en": "due to", "ru": "из-за, вследствие", "example": "The road is closed due to an accident." },
+    { "en": "owing to", "ru": "по причине, ввиду", "example": "All trains were delayed owing to the strike." },
+    { "en": "therefore", "ru": "поэтому, следовательно", "example": "He was ill and therefore missed the exam." },
+    { "en": "as a result", "ru": "в результате", "example": "Prices rose, and as a result, sales fell." },
+    { "en": "in order to", "ru": "для того чтобы", "example": "We hired more staff in order to serve customers faster." },
+    { "en": "so as not to", "ru": "чтобы не", "example": "I wrote it down so as not to forget." },
+    { "en": "so that", "ru": "чтобы (кто-то мог что-то сделать)", "example": "Speak slowly so that everyone can follow." },
+    { "en": "shortage", "ru": "нехватка, дефицит", "example": "There is a shortage of drivers in the city." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "due to", "ru": "из-за, вследствие" },
+        { "en": "therefore", "ru": "поэтому, следовательно" },
+        { "en": "as a result", "ru": "в результате" },
+        { "en": "in order to", "ru": "для того чтобы" },
+        { "en": "shortage", "ru": "нехватка, дефицит" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "The concert was cancelled due to the storm.",
+        "The concert was cancelled due to there was a storm.",
+        "The concert was cancelled due the storm.",
+        "The concert was cancelled because the storm."
+      ],
+      "answer": 0,
+      "explanation": "После due to идёт существительное: due to the storm. Целое предложение после due to поставить нельзя, а because без of требует подлежащего и глагола: because there was a storm."
+    },
+    {
+      "type": "gap",
+      "sentence": "I set three alarms so as ___ oversleep.",
+      "translation": "Я поставил три будильника, чтобы не проспать.",
+      "options": ["not to", "to don't", "don't", "not"],
+      "answer": 0,
+      "explanation": "Отрицательная цель — so as not to + глагол: not стоит перед to. Don't с инфинитивом не употребляется."
+    },
+    {
+      "type": "listen",
+      "audio": "Owing to a shortage of staff, the café now closes at six.",
+      "question": "Почему кафе теперь закрывается в шесть?",
+      "options": [
+        "Не хватает сотрудников",
+        "Не хватает посетителей",
+        "В кафе идёт ремонт",
+        "Так попросили сами сотрудники"
+      ],
+      "answer": 0,
+      "explanation": "Owing to вводит причину, а a shortage of staff — «нехватка персонала». Staff — это сотрудники, а не посетители."
+    },
+    {
+      "type": "translate",
+      "source": "Я пришёл пораньше, чтобы занять хорошее место.",
+      "answer": "I came early in order to get a good seat.",
+      "accept": [
+        "I came early to get a good seat.",
+        "I came early so as to get a good seat.",
+        "I arrived early in order to get a good seat.",
+        "I arrived early to get a good seat.",
+        "I came earlier in order to get a good seat.",
+        "In order to get a good seat, I came early."
+      ],
+      "distractors": ["for", "that", "getting"],
+      "explanation": "Цель того же человека выражается инфинитивом: in order to get. For перед инфинитивом — калька с русского «для того чтобы», а после to нужна начальная форма, не getting."
+    },
+    {
+      "type": "gap",
+      "sentence": "Demand fell sharply. ___, the factory had to cut production.",
+      "translation": "Спрос резко упал. В результате заводу пришлось сократить производство.",
+      "options": ["As a result", "Due to", "So that", "In order to"],
+      "answer": 0,
+      "explanation": "Новое предложение называет следствие и начинается со связки, после которой стоит запятая: As a result. Due to требует существительного, а so that и in order to выражают цель, а не результат."
+    },
+    {
+      "type": "speak",
+      "text": "I wrote it down so as not to forget.",
+      "translation": "Я записал это, чтобы не забыть."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "I'll give you my number so that you can call me.",
+        "I'll give you my number so that you to call me.",
+        "I'll give you my number in order to you can call me.",
+        "I'll give you my number for you can call me."
+      ],
+      "answer": 0,
+      "explanation": "У цели своё подлежащее (you), поэтому нужно so that + подлежащее + can. После in order to идёт только глагол, а for не вводит придаточное цели."
+    },
+    {
+      "type": "type",
+      "source": "Рейс задержали из-за тумана.",
+      "answer": "The flight was delayed due to fog.",
+      "accept": [
+        "The flight was delayed due to the fog.",
+        "The flight was delayed because of fog.",
+        "The flight was delayed because of the fog.",
+        "The flight was delayed owing to fog.",
+        "The flight was delayed owing to the fog.",
+        "The flight was delayed by fog.",
+        "The flight has been delayed due to fog."
+      ],
+      "explanation": "Причина, выраженная существительным, вводится предлогом: due to fog, because of fog или owing to fog. Because без of потребовало бы целого предложения: because it was foggy."
+    },
+    {
+      "type": "listen",
+      "audio": "She took an evening course in order to change careers.",
+      "question": "Зачем она пошла на вечерние курсы?",
+      "options": [
+        "Чтобы сменить профессию",
+        "Потому что уже сменила профессию",
+        "Чтобы получить повышение на нынешней работе",
+        "Потому что этого потребовал работодатель"
+      ],
+      "answer": 0,
+      "explanation": "In order to вводит цель, а не причину: она училась, чтобы сменить профессию. To change careers — «сменить сферу деятельности»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The road was flooded; ___, we had to find another route.",
+      "translation": "Дорогу затопило; поэтому нам пришлось искать другой маршрут.",
+      "options": ["therefore", "because", "due to", "so that"],
+      "answer": 0,
+      "explanation": "После точки с запятой и перед запятой стоит наречие-связка со значением следствия: therefore. Because и due to вводят причину, а so that — цель."
+    },
+    {
+      "type": "translate",
+      "source": "Говорите медленнее, чтобы все могли вас понять.",
+      "answer": "Speak more slowly so that everyone can understand you.",
+      "accept": [
+        "Speak more slowly so everyone can understand you.",
+        "Speak more slowly so that everybody can understand you.",
+        "Speak slower so that everyone can understand you.",
+        "Please speak more slowly so that everyone can understand you."
+      ],
+      "distractors": ["slow", "because", "what"],
+      "explanation": "У цели своё подлежащее (everyone), поэтому нужно so that + can. Русское «чтобы» здесь не what и не because, а «медленнее» — наречие more slowly, не прилагательное slow."
+    },
+    {
+      "type": "dictation",
+      "audio": "The road is closed due to an accident.",
+      "translation": "Дорога закрыта из-за аварии."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение построено правильно?",
+      "options": [
+        "Because the train was late, I missed the meeting.",
+        "Because the train was late, so I missed the meeting.",
+        "Because of the train was late, I missed the meeting.",
+        "Because the train was late, therefore I missed the meeting."
+      ],
+      "answer": 0,
+      "explanation": "Причину и следствие соединяет одна связка: если есть because, то so и therefore уже не нужны. Because of употребляется только перед существительным: because of the delay."
+    }
+  ]
+}

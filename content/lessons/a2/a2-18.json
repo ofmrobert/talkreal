@@ -1,0 +1,155 @@
+{
+  "id": "a2-18",
+  "level": "A2",
+  "order": 18,
+  "title": { "ru": "Чей это? Mine, yours, hers и вопрос whose", "en": "Possessive pronouns and whose" },
+  "goal": { "ru": "Научитесь говорить «это моё», «это ваше» и спрашивать, чья это вещь.", "en": "Learn to say that something is mine or yours and to ask who it belongs to." },
+  "theory": [
+    {
+      "title": "My или mine?",
+      "body": "В русском «мой» одно: «это мой чемодан» и «этот чемодан мой». В английском форм две. My, your, her, our, their стоят перед существительным: my suitcase. Mine, yours, hers, ours, theirs заменяют его и стоят сами по себе: this suitcase is mine. Ставить после них существительное нельзя.",
+      "examples": [
+        { "en": "This is my suitcase. That one is yours.", "ru": "Это мой чемодан. Вон тот — ваш." },
+        { "en": "Their flat is bigger than ours.", "ru": "Их квартира больше нашей." },
+        { "en": "Is this pen yours or mine?", "ru": "Эта ручка ваша или моя?" }
+      ],
+      "tip": "Проверка: если дальше идёт существительное — my, если существительного нет — mine."
+    },
+    {
+      "title": "Все формы",
+      "body": "Пары такие: my — mine, your — yours, her — hers, our — ours, their — theirs. У his форма одна: his car — the car is his. Все эти слова пишутся без апострофа: yours, а не «your's».",
+      "examples": [
+        { "en": "The red car is his.", "ru": "Красная машина — его." },
+        { "en": "The keys on the table are hers.", "ru": "Ключи на столе — её." },
+        { "en": "The house on the corner is theirs.", "ru": "Дом на углу — их." }
+      ],
+      "tip": "«Один мой друг» по-английски — a friend of mine, а не «a friend of me»."
+    },
+    {
+      "title": "Whose: чей?",
+      "body": "О владельце спрашивают словом whose. Оно может стоять перед существительным или отдельно: Whose bag is this? или Whose is this bag? В ответе — mine, yours или имя с 's: It's Anna's. Whose не меняется по родам и числам, как русское «чей, чья, чьи».",
+      "examples": [
+        { "en": "Whose umbrella is this?", "ru": "Чей это зонт?" },
+        { "en": "Whose are these keys? — They're ours.", "ru": "Чьи это ключи? — Наши." },
+        { "en": "Whose phone is ringing? — It's Tom's.", "ru": "Чей телефон звонит? — Тома." }
+      ],
+      "tip": "Не путайте whose (чей) и who's (= who is). Звучат они одинаково, но Who's that man? значит «Кто этот мужчина?»."
+    }
+  ],
+  "vocab": [
+    { "en": "mine", "ru": "мой, моя, моё (без существительного)", "example": "That coat is mine." },
+    { "en": "yours", "ru": "ваш, твой (без существительного)", "example": "Is this seat yours?" },
+    { "en": "hers", "ru": "её (без существительного)", "example": "The idea was hers." },
+    { "en": "ours", "ru": "наш (без существительного)", "example": "Their garden is bigger than ours." },
+    { "en": "theirs", "ru": "их (без существительного)", "example": "The white car is theirs." },
+    { "en": "whose", "ru": "чей, чья, чьи", "example": "Excuse me, whose jacket is this?" },
+    { "en": "umbrella", "ru": "зонт", "example": "Don't forget your umbrella." },
+    { "en": "to belong to", "ru": "принадлежать", "example": "These books belong to the hotel." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "mine", "ru": "мой" },
+        { "en": "ours", "ru": "наш" },
+        { "en": "theirs", "ru": "их" },
+        { "en": "whose", "ru": "чей" },
+        { "en": "umbrella", "ru": "зонт" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Эта сумка моя»?",
+      "options": ["This bag is mine.", "This bag is my.", "This bag is me.", "This bag is mine's."],
+      "answer": 0,
+      "explanation": "После слова нет существительного, поэтому нужна самостоятельная форма mine. My без существительного стоять не может."
+    },
+    {
+      "type": "gap",
+      "sentence": "My phone isn't working. Can I use ___?",
+      "translation": "Мой телефон не работает. Можно воспользоваться вашим?",
+      "options": ["yours", "your", "you", "your's"],
+      "answer": 0,
+      "explanation": "Существительное phone не повторяется, поэтому yours. Пишется оно без апострофа: «your's» — ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "This isn't my coat. Mine is black.",
+      "question": "Какого цвета пальто говорящего?",
+      "options": ["Чёрное", "Белое", "Синее", "Коричневое"],
+      "answer": 0,
+      "explanation": "Mine is black — «моё чёрное». Mine заменяет my coat, чтобы не повторять существительное."
+    },
+    {
+      "type": "translate",
+      "source": "Чей это зонт?",
+      "answer": "Whose umbrella is this?",
+      "accept": ["Whose is this umbrella?"],
+      "distractors": ["who's", "who", "which"],
+      "explanation": "«Чей» — whose. Who's — это сокращение от who is, оно только звучит так же, а which значит «который»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Our flat is small, but ___ is even smaller.",
+      "translation": "Наша квартира маленькая, а их — ещё меньше.",
+      "options": ["theirs", "their", "them", "they"],
+      "answer": 0,
+      "explanation": "Слово flat не повторяется, поэтому нужна самостоятельная форма theirs. Their требует существительного после себя: their flat."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She is a friend of mine.", "She is a friend of me.", "She is a friend of my.", "She is mine friend."],
+      "answer": 0,
+      "explanation": "«Одна моя подруга» — a friend of mine: после of стоит самостоятельная форма. А перед существительным нужно my: my friend, не «mine friend»."
+    },
+    {
+      "type": "speak",
+      "text": "Is this seat yours or mine?",
+      "translation": "Это место ваше или моё?"
+    },
+    {
+      "type": "type",
+      "source": "Эти ключи наши.",
+      "answer": "These keys are ours.",
+      "accept": ["Those keys are ours.", "The keys are ours.", "These are our keys."],
+      "explanation": "После are существительного нет, поэтому ours, а не our. Our нужно только перед существительным: our keys."
+    },
+    {
+      "type": "listen",
+      "audio": "The blue suitcase is mine, and the red one is hers.",
+      "question": "Чей красный чемодан?",
+      "options": ["Её", "Мой", "Его", "Наш"],
+      "answer": 0,
+      "explanation": "The red one is hers — «красный — её». Mine относится к синему чемодану, а one заменяет слово suitcase."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ jacket is this? — It's mine.",
+      "translation": "Чья это куртка? — Моя.",
+      "options": ["Whose", "Who's", "Who", "Whom"],
+      "answer": 0,
+      "explanation": "Ответ It's mine называет владельца, значит, вопрос был «чья?» — whose. Who's только звучит так же, но значит who is."
+    },
+    {
+      "type": "translate",
+      "source": "Эта машина не моя, а его.",
+      "answer": "This car isn't mine, it's his.",
+      "accept": ["This car is not mine, it is his.", "This car isn't mine, it is his.", "This car is not mine, it's his.", "This car isn't mine, but his.", "This car is not mine, but his."],
+      "distractors": ["my", "him", "he"],
+      "explanation": "После isn't существительного нет — нужна форма mine. У his самостоятельная форма такая же, а him — это «его» после глагола: I see him."
+    },
+    {
+      "type": "dictation",
+      "audio": "The keys on the table are hers.",
+      "translation": "Ключи на столе — её."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое слово нельзя поставить перед существительным?",
+      "options": ["mine", "my", "our", "their"],
+      "answer": 0,
+      "explanation": "Mine всегда стоит без существительного: The seat is mine. Перед существительным нужны my, our, their: my seat."
+    }
+  ]
+}

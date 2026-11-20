@@ -1,0 +1,162 @@
+{
+  "id": "a2-14",
+  "level": "A2",
+  "order": 14,
+  "title": { "ru": "Вежливые просьбы и предложения: Could you…? Shall I…?", "en": "Polite requests and offers" },
+  "goal": { "ru": "Научитесь вежливо просить о помощи и предлагать её в отеле, аэропорту и ресторане.", "en": "Learn to ask for help politely and to offer it at a hotel, an airport and a restaurant." },
+  "theory": [
+    {
+      "title": "Could you…? и Could I…?",
+      "body": "По-русски «Принесите счёт, пожалуйста» звучит нормально, но английское «Bring the bill, please» кажется резким. Вежливая просьба — это вопрос: Can you…? или более вежливое Could you…? Когда просите что-то для себя — Could I have…? После could глагол стоит без to.",
+      "examples": [
+        { "en": "Could you help me with my bags, please?", "ru": "Вы не могли бы помочь мне с сумками?" },
+        { "en": "Can you call a taxi for me?", "ru": "Можете вызвать мне такси?" },
+        { "en": "Could I have the bill, please?", "ru": "Можно счёт, пожалуйста?" }
+      ],
+      "tip": "Could I have…? — универсальная формула в кафе, отеле и магазине: Could I have a coffee? Could I have another towel?"
+    },
+    {
+      "title": "Would you mind…?",
+      "body": "Would you mind + глагол с -ing — очень вежливая просьба, дословно «Вы не возражаете…?». Из-за этого ответ устроен непривычно: если вы согласны, говорите Not at all или Of course not — «совсем не возражаю». Ответ Yes значил бы «да, возражаю».",
+      "examples": [
+        { "en": "Would you mind opening the window?", "ru": "Вы не могли бы открыть окно?" },
+        { "en": "Would you mind waiting a few minutes?", "ru": "Вы не могли бы подождать несколько минут?" },
+        { "en": "Would you mind helping me? — Not at all.", "ru": "Вы не могли бы мне помочь? — Конечно." }
+      ],
+      "tip": "После mind всегда форма с -ing: Would you mind closing the door? «Would you mind to close» — ошибка."
+    },
+    {
+      "title": "Предлагаем помощь: Shall I…? и I'll…",
+      "body": "Shall I…? — вопрос-предложение: «Давайте я…?», «Мне…?». I'll… — готовность помочь прямо сейчас: «Я сделаю». По-русски мы говорим «Я помогу» или «Открыть окно?», и отсюда ошибки «I help you» и «Do I open the window?».",
+      "examples": [
+        { "en": "Shall I open the window?", "ru": "Открыть окно?" },
+        { "en": "I'll carry your suitcase.", "ru": "Я понесу ваш чемодан." },
+        { "en": "Shall we take a taxi?", "ru": "Может, возьмём такси?" }
+      ],
+      "tip": "Shall в вопросах используется только с I и we. Shall we…? — это предложение сделать что-то вместе."
+    }
+  ],
+  "vocab": [
+    { "en": "bill", "ru": "счёт (в ресторане, отеле)", "example": "Could we have the bill, please?" },
+    { "en": "receipt", "ru": "чек", "example": "Here is your receipt." },
+    { "en": "to carry", "ru": "нести", "example": "I'll carry your bag." },
+    { "en": "of course", "ru": "конечно", "example": "Yes, of course, come in." },
+    { "en": "not at all", "ru": "совсем нет, ничуть", "example": "No, not at all." },
+    { "en": "reception", "ru": "стойка регистрации (в отеле)", "example": "Please leave your key at reception." },
+    { "en": "towel", "ru": "полотенце", "example": "There isn't a towel in my room." },
+    { "en": "to mind", "ru": "возражать, быть против", "example": "Do you mind if I sit here?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "bill", "ru": "счёт" },
+        { "en": "receipt", "ru": "чек" },
+        { "en": "to carry", "ru": "нести" },
+        { "en": "towel", "ru": "полотенце" },
+        { "en": "of course", "ru": "конечно" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы в ресторане. Как вежливо попросить счёт?",
+      "options": ["Could we have the bill, please?", "Give us the bill.", "Could we to have the bill, please?", "We want the bill."],
+      "answer": 0,
+      "explanation": "Вежливая просьба строится как вопрос с could, и глагол после него идёт без to. «Give us the bill» и «We want the bill» звучат как приказ и требование."
+    },
+    {
+      "type": "gap",
+      "sentence": "Would you mind ___ the window? It's cold in here.",
+      "translation": "Вы не могли бы закрыть окно? Здесь холодно.",
+      "options": ["closing", "to close", "close", "closed"],
+      "answer": 0,
+      "explanation": "После Would you mind глагол всегда стоит в форме с -ing: closing. «To close» — самая частая ошибка в этой конструкции."
+    },
+    {
+      "type": "listen",
+      "audio": "Could you call a taxi for me, please?",
+      "question": "О чём просит гость?",
+      "options": ["Вызвать ему такси", "Позвонить ему позже", "Отменить такси", "Помочь с багажом"],
+      "answer": 0,
+      "explanation": "Call a taxi — «вызвать такси», for me — «для меня». Could you…? — вежливая просьба к другому человеку."
+    },
+    {
+      "type": "translate",
+      "source": "Помочь вам с сумками?",
+      "answer": "Shall I help you with your bags?",
+      "accept": ["Shall I help you with the bags?"],
+      "distractors": ["do", "will", "to"],
+      "explanation": "Когда мы предлагаем что-то сделать, вопрос начинается с Shall I…? «Do I help you?» и «Will I help you?» так не используются."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's very hot in this room. ___ I open the window?",
+      "translation": "В этой комнате очень жарко. Открыть окно?",
+      "options": ["Shall", "Do", "Will", "Am"],
+      "answer": 0,
+      "explanation": "Предложение помощи в форме вопроса — Shall I…? Do I open…? спрашивало бы о привычке, а не предлагало бы открыть окно сейчас."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спросили: «Would you mind waiting a few minutes?» Вы готовы подождать. Что ответить?",
+      "options": ["Not at all.", "Yes, I would.", "Yes, I mind.", "No, I wouldn't wait."],
+      "answer": 0,
+      "explanation": "Вопрос дословно значит «Вы не возражаете?», поэтому согласие — Not at all, «ничуть не возражаю». Ответ Yes значил бы, что вы против."
+    },
+    {
+      "type": "speak",
+      "text": "Could I have a glass of water, please?",
+      "translation": "Можно мне стакан воды, пожалуйста?"
+    },
+    {
+      "type": "type",
+      "source": "Вы не могли бы мне помочь?",
+      "answer": "Could you help me?",
+      "accept": ["Could you help me, please?", "Could you please help me?", "Can you help me?", "Can you help me, please?", "Can you please help me?", "Would you mind helping me?"],
+      "explanation": "Could you + глагол без to — вежливая просьба. Не пишите «Could you to help me»: после could частица to не нужна."
+    },
+    {
+      "type": "listen",
+      "audio": "Your bag looks heavy. I'll carry it for you.",
+      "question": "Что предлагает говорящий?",
+      "options": ["Понести сумку", "Купить новую сумку", "Вызвать такси", "Оставить сумку на ресепшене"],
+      "answer": 0,
+      "explanation": "I'll carry it — «я её понесу»: решение помочь принято прямо сейчас, поэтому I'll. Просто «I carry it» было бы ошибкой."
+    },
+    {
+      "type": "gap",
+      "sentence": "Don't worry about the tickets. ___ book them online tonight.",
+      "translation": "Не волнуйтесь насчёт билетов. Я забронирую их онлайн сегодня вечером.",
+      "options": ["I'll", "I", "Shall I", "I'm"],
+      "answer": 0,
+      "explanation": "Когда вы берёте дело на себя, говорите I'll + глагол. «I book them» — калька с русского: настоящее время здесь не подходит."
+    },
+    {
+      "type": "translate",
+      "source": "Вы не могли бы говорить помедленнее, пожалуйста?",
+      "answer": "Could you speak more slowly, please?",
+      "accept": [
+        "Could you speak more slowly?",
+        "Could you please speak more slowly?",
+        "Could you speak slowly, please?",
+        "Could you please speak slowly?",
+        "Can you speak more slowly, please?",
+        "Would you mind speaking more slowly, please?"
+      ],
+      "distractors": ["to", "speaking", "slow"],
+      "explanation": "После could глагол стоит без to и без -ing: Could you speak. Действие описывает наречие slowly, а не прилагательное slow."
+    },
+    {
+      "type": "dictation",
+      "audio": "Would you mind waiting a few minutes?",
+      "translation": "Вы не могли бы подождать несколько минут?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Could you tell me the time, please?", "Could you to tell me the time, please?", "Could you telling me the time, please?", "Could you told me the time, please?"],
+      "answer": 0,
+      "explanation": "После could всегда идёт глагол в начальной форме без to: could tell. Форма с -ing нужна только после Would you mind."
+    }
+  ]
+}

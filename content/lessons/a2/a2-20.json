@@ -1,0 +1,174 @@
+{
+  "id": "a2-20",
+  "level": "A2",
+  "order": 20,
+  "title": { "ru": "Мнение и причины: I think, I agree, because, so, although", "en": "Giving opinions and reasons" },
+  "goal": { "ru": "Научитесь высказывать мнение, соглашаться, возражать и объяснять почему.", "en": "Learn to give your opinion, agree, disagree and explain why." },
+  "theory": [
+    {
+      "title": "Как сказать, что вы думаете",
+      "body": "Мнение начинают с I think… или In my opinion,… Think здесь — глагол состояния, поэтому I think, а не «I'm thinking». Отрицание в английском переносят в начало: говорят I don't think it's a good idea, а не «I think it isn't a good idea», как подсказывает русский.",
+      "examples": [
+        { "en": "I think this hotel is too expensive.", "ru": "Я думаю, этот отель слишком дорогой." },
+        { "en": "In my opinion, the train is more comfortable.", "ru": "По-моему, на поезде удобнее." },
+        { "en": "I don't think it's a good idea.", "ru": "Не думаю, что это хорошая идея." }
+      ],
+      "tip": "«По-моему» — in my opinion. Предлог только in: «on my opinion» и «by my opinion» — ошибки."
+    },
+    {
+      "title": "Согласие и несогласие",
+      "body": "Agree — это глагол, а не прилагательное. Русское «я согласен» тянет сказать «I am agree», но правильно I agree. В отрицании и вопросе нужен помощник do: I don't agree, Do you agree? Мягко возразить помогает I'm not sure.",
+      "examples": [
+        { "en": "I agree with you.", "ru": "Я с вами согласен." },
+        { "en": "I'm sorry, but I don't agree.", "ru": "Простите, но я не согласен." },
+        { "en": "Maybe you are right, but I'm not sure.", "ru": "Может быть, вы правы, но я не уверен." }
+      ],
+      "tip": "А вот «вы правы» строится с be: You are right. Сказать «You have right» нельзя."
+    },
+    {
+      "title": "Because, so, but, although",
+      "body": "Because вводит причину (потому что), so — результат (поэтому), but — противопоставление (но). Although значит «хотя» и стоит в начале той части, которая не помешала главному. В русском можно сказать «хотя…, но…», а в английском although и but вместе не ставят.",
+      "examples": [
+        { "en": "I like this flat because it's quiet.", "ru": "Мне нравится эта квартира, потому что она тихая." },
+        { "en": "It was late, so we took a taxi.", "ru": "Было поздно, поэтому мы взяли такси." },
+        { "en": "Although the film was long, I enjoyed it.", "ru": "Хотя фильм был длинным, он мне понравился." }
+      ],
+      "tip": "После although нужны подлежащее и глагол: although it was cold. «Although was cold» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "opinion", "ru": "мнение", "example": "What is your opinion about this film?" },
+    { "en": "to agree", "ru": "соглашаться", "example": "I agree with my colleagues." },
+    { "en": "although", "ru": "хотя", "example": "We went for a walk, although it was cold." },
+    { "en": "reason", "ru": "причина", "example": "Is there a reason for this rule?" },
+    { "en": "right", "ru": "правый (о человеке), правильный", "example": "I think you are right." },
+    { "en": "sure", "ru": "уверенный", "example": "Are you sure about the time?" },
+    { "en": "useful", "ru": "полезный", "example": "English is useful for my job." },
+    { "en": "boring", "ru": "скучный", "example": "The meeting was long and boring." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "opinion", "ru": "мнение" },
+        { "en": "to agree", "ru": "соглашаться" },
+        { "en": "although", "ru": "хотя" },
+        { "en": "reason", "ru": "причина" },
+        { "en": "useful", "ru": "полезный" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я согласен с вами»?",
+      "options": ["I agree with you.", "I am agree with you.", "I agree you.", "I am agreed you."],
+      "answer": 0,
+      "explanation": "Agree — глагол, поэтому am перед ним не нужен: I agree. «I am agree» — калька с русского «я согласен». И не забудьте предлог with."
+    },
+    {
+      "type": "gap",
+      "sentence": "We stayed at home ___ it was raining.",
+      "translation": "Мы остались дома, потому что шёл дождь.",
+      "options": ["because", "so", "although", "but"],
+      "answer": 0,
+      "explanation": "Дождь — причина, по которой остались дома, поэтому because. So вводит результат и стояло бы наоборот: It was raining, so we stayed at home."
+    },
+    {
+      "type": "listen",
+      "audio": "In my opinion, the book is better than the film.",
+      "question": "Что думает говорящий?",
+      "options": ["Книга лучше фильма", "Фильм лучше книги", "Книга и фильм одинаково хороши", "Он не читал книгу"],
+      "answer": 0,
+      "explanation": "In my opinion — «по-моему». The book is better than the film — книга лучше, чем фильм."
+    },
+    {
+      "type": "translate",
+      "source": "Я не думаю, что это хорошая идея.",
+      "answer": "I don't think it's a good idea.",
+      "accept": [
+        "I do not think it is a good idea.",
+        "I don't think it is a good idea.",
+        "I do not think it's a good idea.",
+        "I don't think that it's a good idea.",
+        "I don't think that it is a good idea.",
+        "I don't think this is a good idea.",
+        "I don't think that's a good idea.",
+        "I don't think that is a good idea."
+      ],
+      "distractors": ["am", "thinks", "on"],
+      "explanation": "Отрицание ставится к think: I don't think. Think — глагол состояния, поэтому форма «I'm not thinking» здесь не подходит."
+    },
+    {
+      "type": "gap",
+      "sentence": "The restaurant was full, ___ we went to another one.",
+      "translation": "Ресторан был полон, поэтому мы пошли в другой.",
+      "options": ["so", "because", "although", "or"],
+      "answer": 0,
+      "explanation": "Вторая часть — результат первой, поэтому so. Because вводит причину и стояло бы перед словами the restaurant was full."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Although it was late, we went for a walk.", "Although it was late, but we went for a walk.", "Although was late, we went for a walk.", "Although it late, we went for a walk."],
+      "answer": 0,
+      "explanation": "С although не используют but: одного слова достаточно. После although нужны и подлежащее, и глагол: it was late."
+    },
+    {
+      "type": "speak",
+      "text": "I think you are right about that.",
+      "translation": "Я думаю, в этом вы правы."
+    },
+    {
+      "type": "type",
+      "source": "По-моему, это полезно.",
+      "answer": "In my opinion, it's useful.",
+      "accept": [
+        "In my opinion, it is useful.",
+        "In my opinion, this is useful.",
+        "In my opinion, that's useful.",
+        "In my opinion, that is useful.",
+        "I think it's useful.",
+        "I think it is useful.",
+        "I think this is useful.",
+        "I think that's useful.",
+        "I think that is useful."
+      ],
+      "explanation": "«По-моему» — in my opinion, с предлогом in. В английском предложении обязателен глагол: it is useful, а не «it useful»."
+    },
+    {
+      "type": "listen",
+      "audio": "I like my job, but I don't agree with my manager about working from home.",
+      "question": "В чём говорящий не согласен с руководителем?",
+      "options": ["В вопросе работы из дома", "В вопросе зарплаты", "В вопросе отпуска", "Он во всём с ним согласен"],
+      "answer": 0,
+      "explanation": "I don't agree with my manager about… — «я не согласен с руководителем насчёт…». Отрицание от agree строится с don't, а не с am not."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ the hotel was expensive, the room was small and noisy.",
+      "translation": "Хотя отель был дорогим, номер был маленьким и шумным.",
+      "options": ["Although", "Because", "So", "But"],
+      "answer": 0,
+      "explanation": "Высокая цена и плохой номер противоречат друг другу, поэтому although — «хотя». But не может стоять в начале такого предложения, а because вводит причину."
+    },
+    {
+      "type": "translate",
+      "source": "Я думаю, что вы правы.",
+      "answer": "I think you are right.",
+      "accept": ["I think you're right.", "I think that you are right.", "I think that you're right."],
+      "distractors": ["am", "have", "true"],
+      "explanation": "«Быть правым» — be right: you are right. «You have right» — калька с русского, а true говорят о фактах, а не о людях."
+    },
+    {
+      "type": "dictation",
+      "audio": "We took a taxi because it was late.",
+      "translation": "Мы взяли такси, потому что было поздно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «По-моему, на поезде удобнее»?",
+      "options": ["In my opinion, the train is more comfortable.", "On my opinion, the train is more comfortable.", "By my opinion, the train is more comfortable.", "For my opinion, the train is more comfortable."],
+      "answer": 0,
+      "explanation": "Устойчивое выражение — in my opinion, только с предлогом in. «On my opinion» и «by my opinion» — кальки с русского «по моему мнению»."
+    }
+  ]
+}

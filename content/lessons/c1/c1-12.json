@@ -1,0 +1,183 @@
+{
+  "id": "c1-12",
+  "level": "C1",
+  "order": 12,
+  "title": { "ru": "Эллипсис и замещение: как не повторяться", "en": "Ellipsis and substitution" },
+  "goal": { "ru": "Научитесь опускать и заменять слова так, как это делают носители: so do I, I hope so, do so, one / ones.", "en": "Learn to leave out and replace words the way native speakers do: so do I, I hope so, do so, one / ones." },
+  "theory": [
+    {
+      "title": "So do I, neither have I: согласие без повторов",
+      "body": "Чтобы сказать «и я тоже», английский повторяет не всю фразу, а только вспомогательный глагол: so + вспомогательный глагол + подлежащее. После отрицания вместо so стоит neither или nor. Глагол берётся из исходной фразы: am → so am I, have → so have I, would → so would I, а если вспомогательного глагола нет — do, does или did.",
+      "examples": [
+        { "en": "I work from home on Fridays. – So do I.", "ru": "По пятницам я работаю из дома. – Я тоже." },
+        { "en": "We haven't received the invoice. – Neither have we.", "ru": "Мы не получили счёт. – Мы тоже." },
+        { "en": "She'd like to move abroad, and so would her husband.", "ru": "Она хотела бы переехать за границу, и её муж тоже." }
+      ],
+      "tip": "Русское «я тоже» одно на все случаи, поэтому после отрицания часто говорят «me too» или «so do I». Правильно: I don't like it. – Neither do I."
+    },
+    {
+      "title": "I hope so, I'm afraid not: so и not вместо целой фразы",
+      "body": "После think, hope, expect, suppose и be afraid слово so заменяет целое придаточное предложение. Отрицание образуется по-разному: I hope not, I'm afraid not, I suppose not, но с think обычно говорят I don't think so. Местоимение it и слова yes / no здесь невозможны.",
+      "examples": [
+        { "en": "Will the flight be on time? – I hope so.", "ru": "Рейс прибудет вовремя? – Надеюсь, что да." },
+        { "en": "Is there any coffee left? – I'm afraid not.", "ru": "Кофе ещё остался? – Боюсь, что нет." },
+        { "en": "Has he signed the contract? – I don't think so.", "ru": "Он подписал договор? – Не думаю." }
+      ],
+      "tip": "«I think yes», «I hope no» и «I don't hope so» — кальки с русского. Запомните пары: I think so / I don't think so, I hope so / I hope not."
+    },
+    {
+      "title": "One / ones, do so и пропуск слов",
+      "body": "One заменяет исчисляемое существительное в единственном числе, ones — во множественном; неисчисляемые так заменить нельзя. Do so в формальном стиле заменяет глагол вместе с дополнением. После to и после вспомогательных глаголов повтор просто опускают: I'd love to; He said he would call, but he hasn't.",
+      "examples": [
+        { "en": "This charger is broken. Have you got a spare one?", "ru": "Эта зарядка сломана. У тебя есть запасная?" },
+        { "en": "Anyone wishing to cancel should do so in writing.", "ru": "Желающие отменить заказ должны сделать это письменно." },
+        { "en": "I didn't want to work late, but I had to.", "ru": "Я не хотел задерживаться на работе, но пришлось." }
+      ],
+      "tip": "Частицу to опускать нельзя: Would you like to join us? – I'd love to. Ответ «I'd love» звучит оборванно."
+    }
+  ],
+  "vocab": [
+    { "en": "so do I", "ru": "и я тоже", "example": "My sister loves the sea, and so do I." },
+    { "en": "neither do I", "ru": "и я тоже не", "example": "He doesn't trust the forecast, and neither do I." },
+    { "en": "I'm afraid not", "ru": "боюсь, что нет", "example": "Can you stay a little longer? – I'm afraid not." },
+    { "en": "I suppose so", "ru": "пожалуй, да", "example": "Shall we take a taxi? – I suppose so." },
+    { "en": "to do so", "ru": "сделать это (формально)", "example": "If you wish to cancel, please do so in writing." },
+    { "en": "spare", "ru": "запасной", "example": "Take a spare battery just in case." },
+    { "en": "likewise", "ru": "так же, аналогично", "example": "She thanked the hosts, and we did likewise." },
+    { "en": "the latter", "ru": "последний из двух названных", "example": "We offer tea and coffee, but most guests prefer the latter." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "so do I", "ru": "и я тоже" },
+        { "en": "neither do I", "ru": "и я тоже не" },
+        { "en": "I'm afraid not", "ru": "боюсь, что нет" },
+        { "en": "spare", "ru": "запасной" },
+        { "en": "the latter", "ru": "последний из двух названных" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега говорит: «I haven't seen the new schedule yet». Как сказать, что вы тоже его не видели?",
+      "options": ["So have I.", "Neither do I.", "Neither have I.", "So haven't I."],
+      "answer": 2,
+      "explanation": "После отрицательной фразы нужно neither, а вспомогательный глагол повторяет исходный: haven't seen → neither have I. So have I означало бы согласие с утверждением, а do не подходит к Present Perfect."
+    },
+    {
+      "type": "gap",
+      "sentence": "Will the meeting finish by six? – I hope ___.",
+      "translation": "Встреча закончится к шести? – Надеюсь, что да.",
+      "options": ["so", "it", "yes", "that"],
+      "answer": 0,
+      "explanation": "После hope целое предложение («что встреча закончится к шести») заменяется словом so. «I hope yes» — калька с русского «надеюсь, что да», а it не может заменить придаточное."
+    },
+    {
+      "type": "translate",
+      "source": "Она не ест мясо, и я тоже.",
+      "answer": "She doesn't eat meat, and neither do I.",
+      "accept": [
+        "She doesn't eat meat and nor do I.",
+        "She doesn't eat meat, neither do I.",
+        "She doesn't eat meat, and I don't either.",
+        "She doesn't eat meat, and nor do I."
+      ],
+      "distractors": ["so", "too", "am", "does"],
+      "explanation": "К отрицательной фразе присоединяются через neither + вспомогательный глагол + подлежащее: neither do I. So do I и too годятся только после утверждения."
+    },
+    {
+      "type": "listen",
+      "audio": "I asked whether the refund had arrived, and she said she didn't think so.",
+      "question": "Что ответила сотрудница?",
+      "options": [
+        "Она уверена, что деньги уже пришли",
+        "По её мнению, деньги ещё не пришли",
+        "Она не захотела об этом думать",
+        "Она пообещала вернуть деньги позже"
+      ],
+      "answer": 1,
+      "explanation": "She didn't think so — косвенная форма ответа I don't think so: so заменяет «что возврат пришёл». Отрицание стоит при think, но относится ко всей мысли: «думаю, что нет»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спрашивают: «Is it going to rain at the weekend?» Как ответить «Надеюсь, что нет»?",
+      "options": ["I hope no.", "I don't hope so.", "I hope it not.", "I hope not."],
+      "answer": 3,
+      "explanation": "С hope отрицание выражается словом not после глагола: I hope not. Форма «I don't hope so» невозможна, хотя с think говорят именно так: I don't think so."
+    },
+    {
+      "type": "speak",
+      "text": "I didn't want to work late, but I had to.",
+      "translation": "Я не хотел задерживаться на работе, но пришлось."
+    },
+    {
+      "type": "gap",
+      "sentence": "These headphones are too heavy. Have you got any lighter ___?",
+      "translation": "Эти наушники слишком тяжёлые. У вас есть полегче?",
+      "options": ["one", "them", "ones", "it"],
+      "answer": 2,
+      "explanation": "Headphones — множественное число, поэтому существительное заменяется на ones. По-русски после прилагательного можно ничего не ставить («полегче»), а в английском после lighter нужно слово-заместитель."
+    },
+    {
+      "type": "type",
+      "source": "Боюсь, что нет.",
+      "answer": "I'm afraid not.",
+      "accept": ["I am afraid not.", "Afraid not."],
+      "explanation": "Not заменяет целое отрицательное предложение: I'm afraid not = I'm afraid it isn't possible. «I'm afraid no» — калька; слово no здесь не используется."
+    },
+    {
+      "type": "listen",
+      "audio": "Anyone wishing to change their booking should do so before Friday.",
+      "question": "Что вы услышали?",
+      "options": [
+        "Anyone wishing to change their booking should do it so before Friday.",
+        "Anyone wishing to change their booking should do so before Friday.",
+        "Anyone wishing to change their booking should so do before Friday.",
+        "Anyone wishing to change their booking should to do so before Friday."
+      ],
+      "answer": 1,
+      "explanation": "Do so заменяет change their booking, чтобы не повторять глагол с дополнением; это типично для объявлений и официальных писем. It и so вместе не употребляются: либо do it, либо do so."
+    },
+    {
+      "type": "translate",
+      "source": "Он обещал позвонить, но так и не позвонил.",
+      "answer": "He promised to call, but he never did.",
+      "accept": [
+        "He promised to call but never did.",
+        "He promised to call, but he never did so.",
+        "He promised to call, but he didn't.",
+        "He promised to call, but he never called.",
+        "He promised to ring, but he never did.",
+        "He promised to phone, but he never did.",
+        "He promised he would call, but he never did."
+      ],
+      "distractors": ["do", "so", "made", "was"],
+      "explanation": "Вместо повтора глагола call достаточно вспомогательного did: he never did. Русский язык повторяет глагол («не позвонил»), английский предпочитает его опустить."
+    },
+    {
+      "type": "gap",
+      "sentence": "Would you like to join us for dinner? – Thanks, I'd love ___.",
+      "translation": "Хотите поужинать с нами? – Спасибо, с удовольствием.",
+      "options": ["so", "to", "too", "do"],
+      "answer": 1,
+      "explanation": "Глагол join us опускается, но частица to остаётся и заменяет весь инфинитив: I'd love to. Слово so после love не употребляется, а too означало бы «тоже»."
+    },
+    {
+      "type": "dictation",
+      "audio": "She loves the sea, and so does her husband.",
+      "translation": "Она любит море, и её муж тоже."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "I prefer red wine to white one.",
+        "I prefer red wine to white ones.",
+        "I prefer red wine to the white it.",
+        "I prefer red wine to white."
+      ],
+      "answer": 3,
+      "explanation": "One и ones заменяют только исчисляемые существительные, а wine неисчисляемое, поэтому слово просто опускается: red wine to white. Сравните: a red apple and a green one."
+    }
+  ]
+}

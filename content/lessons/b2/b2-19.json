@@ -1,0 +1,203 @@
+{
+  "id": "b2-19",
+  "level": "B2",
+  "order": 19,
+  "title": { "ru": "It и there в роли подлежащего", "en": "It and there as preparatory subjects" },
+  "goal": { "ru": "Научитесь строить фразы It's worth…, It's no use…, There's no point in…, It takes… и It turns out that….", "en": "Learn to build sentences with It's worth…, It's no use…, There's no point in…, It takes… and It turns out that…." },
+  "theory": [
+    {
+      "title": "It как формальное подлежащее",
+      "body": "В английском предложении обязательно есть подлежащее, поэтому русские безличные фразы («Трудно сказать», «Стоит сходить») начинаются с it. После It's worth и It's no use идёт форма на -ing, а после It takes + время — инфинитив с to.",
+      "examples": [
+        { "en": "It's worth visiting the old town.", "ru": "Старый город стоит посетить." },
+        { "en": "It's no use complaining.", "ru": "Жаловаться бесполезно." },
+        { "en": "It took me two hours to get home.", "ru": "У меня ушло два часа на дорогу домой." }
+      ],
+      "tip": "«It's worth to visit» — типичная ошибка: после worth всегда -ing. И не начинайте фразу с глагола: «Is difficult to say» — ошибка, нужно It is difficult to say."
+    },
+    {
+      "title": "There's no point, no need, no doubt",
+      "body": "There вводит существительное: There's no point (in) + -ing («нет смысла»), There's no need to + глагол («нет необходимости»), There's no doubt that… («нет сомнений, что…»). It в этих выражениях не используется.",
+      "examples": [
+        { "en": "There's no point in waiting any longer.", "ru": "Нет смысла больше ждать." },
+        { "en": "There's no need to hurry.", "ru": "Нет необходимости торопиться." },
+        { "en": "There is no doubt that she will win.", "ru": "Нет сомнений, что она победит." }
+      ],
+      "tip": "Подсказка: перед существительным (no point, no need) — there, перед прилагательным (pointless, necessary) — it. There's no point in arguing = It's pointless to argue."
+    },
+    {
+      "title": "It turns out, it seems",
+      "body": "Русские «оказывается, что…» и «кажется, что…» обходятся без подлежащего, а в английском его место занимает it: It turns out that…, It seems that…. Время глагола меняется как обычно: It turned out that….",
+      "examples": [
+        { "en": "It turns out that we went to the same school.", "ru": "Оказывается, мы учились в одной школе." },
+        { "en": "It seems that nobody read the email.", "ru": "Похоже, письмо никто не прочитал." },
+        { "en": "It turned out that the flight had been cancelled.", "ru": "Оказалось, что рейс отменили." }
+      ],
+      "tip": "«Turned out that…» без it и «It turned out what…» — ошибки: подлежащее it обязательно, а «что» здесь — that."
+    }
+  ],
+  "vocab": [
+    { "en": "worth", "ru": "стоящий, заслуживающий (чего-то)", "example": "The museum is worth a visit." },
+    { "en": "no use", "ru": "бесполезно, без толку", "example": "It's no use calling him; his phone is off." },
+    { "en": "no point", "ru": "нет смысла", "example": "There's no point in arguing." },
+    { "en": "no need", "ru": "нет необходимости", "example": "There's no need to print the tickets." },
+    { "en": "no doubt", "ru": "нет сомнений", "example": "There is no doubt that prices will rise." },
+    { "en": "it seems", "ru": "кажется, похоже", "example": "From the outside it seems that nobody lives there." },
+    { "en": "worthwhile", "ru": "стоящий затраченных усилий", "example": "The course was hard but worthwhile." },
+    { "en": "to complain", "ru": "жаловаться", "example": "Guests have the right to complain about the noise." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "worth", "ru": "стоящий, заслуживающий (чего-то)" },
+        { "en": "no use", "ru": "бесполезно, без толку" },
+        { "en": "no point", "ru": "нет смысла" },
+        { "en": "no need", "ru": "нет необходимости" },
+        { "en": "no doubt", "ru": "нет сомнений" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "It's worth reading the contract carefully.",
+        "It's worth to read the contract carefully.",
+        "It worth reading the contract carefully.",
+        "There's worth reading the contract carefully."
+      ],
+      "answer": 0,
+      "explanation": "После It's worth глагол стоит в форме на -ing: worth reading. Инфинитив — самая частая ошибка; кроме того, нужен глагол is, а there не сочетается с прилагательным worth."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ no point in calling the office now: everyone has gone home.",
+      "translation": "Нет смысла звонить в офис сейчас: все уже ушли домой.",
+      "options": ["There's", "It's", "Is", "It has"],
+      "answer": 0,
+      "explanation": "Перед существительным point нужно there: There's no point in + -ing. С it используют прилагательное: It's pointless to call. Начинать предложение прямо с is нельзя."
+    },
+    {
+      "type": "listen",
+      "audio": "It took us three hours to get through passport control.",
+      "question": "Что вы узнали?",
+      "options": [
+        "На паспортный контроль ушло три часа",
+        "До паспортного контроля ехали три часа",
+        "Паспортный контроль откроется через три часа",
+        "Из-за паспортного контроля рейс задержали на три часа"
+      ],
+      "answer": 0,
+      "explanation": "It takes + кому + время + to do — «у кого-то уходит столько-то времени на что-то». It took us three hours — «у нас ушло три часа»."
+    },
+    {
+      "type": "translate",
+      "source": "Оказывается, они знакомы много лет.",
+      "answer": "It turns out that they have known each other for years.",
+      "accept": [
+        "It turns out they have known each other for years.",
+        "It turns out that they've known each other for years.",
+        "It turns out they've known each other for years.",
+        "It turns out that they have known each other for many years.",
+        "It turns out they have known each other for many years."
+      ],
+      "distractors": ["know", "there", "since"],
+      "explanation": "«Оказывается» — It turns out that…: без it предложение неполное. Действие началось в прошлом и продолжается, поэтому have known с for, а не know и не since."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's no use ___ about the weather; we can't change it.",
+      "translation": "Бесполезно жаловаться на погоду: мы не можем её изменить.",
+      "options": ["complaining", "to complain", "complain", "complained"],
+      "answer": 0,
+      "explanation": "После It's no use глагол стоит в форме на -ing: no use complaining. Инфинитив здесь — калька с русского «бесполезно жаловаться»."
+    },
+    {
+      "type": "speak",
+      "text": "There's no need to print the tickets.",
+      "translation": "Нет необходимости распечатывать билеты."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Трудно найти парковку в центре»?",
+      "options": [
+        "It is hard to find parking in the centre.",
+        "Is hard to find parking in the centre.",
+        "There is hard to find parking in the centre.",
+        "It hard to find parking in the centre."
+      ],
+      "answer": 0,
+      "explanation": "Русское безличное «трудно…» в английском требует подлежащего it и глагола is: It is hard to… There вводит существительные, а не прилагательные."
+    },
+    {
+      "type": "type",
+      "source": "Этот фильм стоит посмотреть.",
+      "answer": "This film is worth watching.",
+      "accept": [
+        "This film is worth seeing.",
+        "This movie is worth watching.",
+        "This movie is worth seeing.",
+        "The film is worth watching.",
+        "The film is worth seeing.",
+        "It's worth watching this film.",
+        "It is worth watching this film.",
+        "It's worth seeing this film.",
+        "It is worth seeing this film."
+      ],
+      "explanation": "После worth глагол стоит в форме на -ing: worth watching. «Worth to watch» — ошибка. Подлежащим может быть и сам фильм, и формальное it: It's worth watching this film."
+    },
+    {
+      "type": "listen",
+      "audio": "It seems that nobody told the new manager about the meeting.",
+      "question": "Что, по-видимому, произошло?",
+      "options": [
+        "Новому руководителю не сообщили о встрече",
+        "Новый руководитель отменил встречу",
+        "Новый руководитель никому не сказал о встрече",
+        "О встрече знали все, включая нового руководителя"
+      ],
+      "answer": 0,
+      "explanation": "It seems that… — «похоже, что…». Nobody told the new manager — «никто не сказал новому руководителю»: руководитель здесь дополнение, а не подлежащее."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ takes about forty minutes to get to the airport by train.",
+      "translation": "Дорога до аэропорта на поезде занимает около сорока минут.",
+      "options": ["It", "There", "Here", "It's"],
+      "answer": 0,
+      "explanation": "В конструкции «занимает столько-то времени» подлежащим служит it: It takes forty minutes to… There и here подлежащим здесь быть не могут, а It's takes — два глагола подряд."
+    },
+    {
+      "type": "translate",
+      "source": "Нет сомнений, что цены вырастут.",
+      "answer": "There is no doubt that prices will rise.",
+      "accept": [
+        "There's no doubt that prices will rise.",
+        "There is no doubt prices will rise.",
+        "There is no doubt that prices will go up.",
+        "There's no doubt that prices will go up.",
+        "There is no doubt that prices will increase.",
+        "There is no doubt that the prices will rise."
+      ],
+      "distractors": ["it", "doubts", "raise"],
+      "explanation": "«Нет сомнений» — There is no doubt: существительное вводится словом there, а не it. Цены растут сами — rise; raise требует дополнения (raise prices)."
+    },
+    {
+      "type": "dictation",
+      "audio": "There is no point in waiting any longer.",
+      "translation": "Нет смысла больше ждать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "It turned out that the restaurant was closed.",
+        "Turned out that the restaurant was closed.",
+        "There turned out that the restaurant was closed.",
+        "It turned out what the restaurant was closed."
+      ],
+      "answer": 0,
+      "explanation": "«Оказалось, что…» — It turned out that…: место подлежащего занимает it, а «что» переводится как that. Без it или с what фраза построена неверно."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "id": "a1-18",
+  "level": "A1",
+  "order": 18,
+  "title": { "ru": "Покупки: How much is it? Цены и одежда", "en": "Shopping: How much is it? Prices and clothes" },
+  "goal": { "ru": "Научитесь спрашивать цену, выбирать одежду и говорить, что вещь слишком большая или дорогая.", "en": "Learn to ask about prices, choose clothes and say something is too big or too expensive." },
+  "theory": [
+    {
+      "title": "How much is it? / How much are they?",
+      "body": "Цену спрашивают так: How much is…? — об одной вещи, How much are…? — о нескольких. В ответе тоже It's… или They're… Jeans и shoes — множественное число, даже если это одна пара: How much are these jeans?",
+      "examples": [
+        { "en": "How much is this jacket? — It's fifty pounds.", "ru": "Сколько стоит эта куртка? — Пятьдесят фунтов." },
+        { "en": "How much are these shoes?", "ru": "Сколько стоят эти туфли?" },
+        { "en": "They're thirty euros.", "ru": "Они стоят тридцать евро." }
+      ],
+      "tip": "Не переводите дословно: «How much costs it?» — ошибка. Проще всего — How much is it?"
+    },
+    {
+      "title": "It или them",
+      "body": "Про одну вещь говорим it, про несколько — them. Про джинсы и туфли — тоже them: в английском они во множественном числе. Две готовые фразы для магазина: Can I try it on? — «Можно примерить?» и I'll take it — «Я это возьму».",
+      "examples": [
+        { "en": "I like this shirt. Can I try it on?", "ru": "Мне нравится эта рубашка. Можно её примерить?" },
+        { "en": "These shoes are nice. Can I try them on?", "ru": "Эти туфли красивые. Можно их примерить?" },
+        { "en": "I'll take them.", "ru": "Я их возьму." }
+      ],
+      "tip": "It и them стоят в середине: try it on, try them on."
+    },
+    {
+      "title": "Too + прилагательное",
+      "body": "Too перед прилагательным значит «слишком»: too big, too small, too expensive. Это всегда «больше, чем нужно», то есть вещь не подходит. Не путайте с very («очень»): very big — просто очень большой, too big — велик.",
+      "examples": [
+        { "en": "This jacket is too big.", "ru": "Эта куртка слишком большая." },
+        { "en": "These jeans are too long.", "ru": "Эти джинсы слишком длинные." },
+        { "en": "It's very nice, but it's too expensive.", "ru": "Она очень красивая, но слишком дорогая." }
+      ],
+      "tip": "Too в конце предложения значит «тоже»: I like it too. Перед прилагательным — «слишком»."
+    }
+  ],
+  "vocab": [
+    { "en": "how much", "ru": "сколько (стоит)", "example": "Excuse me, how much is this bag?" },
+    { "en": "jacket", "ru": "куртка, пиджак", "example": "This jacket is very warm." },
+    { "en": "shirt", "ru": "рубашка", "example": "He has got a white shirt." },
+    { "en": "jeans", "ru": "джинсы", "example": "These jeans are too long." },
+    { "en": "shoes", "ru": "туфли, обувь", "example": "My shoes are new." },
+    { "en": "size", "ru": "размер", "example": "This is my size." },
+    { "en": "cheap", "ru": "дешёвый", "example": "This café is good and cheap." },
+    { "en": "to try on", "ru": "примерять", "example": "Can I try on this jacket?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "jacket", "ru": "куртка" },
+        { "en": "shirt", "ru": "рубашка" },
+        { "en": "shoes", "ru": "туфли" },
+        { "en": "size", "ru": "размер" },
+        { "en": "cheap", "ru": "дешёвый" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить, сколько стоит куртка?",
+      "options": ["How much is this jacket?", "How much are this jacket?", "How many is this jacket?", "How much costs this jacket?"],
+      "answer": 0,
+      "explanation": "Куртка одна, поэтому How much is…? How many спрашивает о количестве предметов, а «How much costs» — калька с русского «сколько стоит»."
+    },
+    {
+      "type": "gap",
+      "sentence": "How much ___ these jeans?",
+      "translation": "Сколько стоят эти джинсы?",
+      "options": ["is", "are", "does", "do"],
+      "answer": 1,
+      "explanation": "Jeans в английском — множественное число, как и в русском, поэтому these и are. Do и does понадобились бы только с глаголом cost."
+    },
+    {
+      "type": "listen",
+      "audio": "The shirt is twenty pounds and the shoes are sixty.",
+      "question": "Сколько стоит рубашка?",
+      "options": ["Двадцать фунтов", "Двенадцать фунтов", "Шестьдесят фунтов", "Шестнадцать фунтов"],
+      "answer": 0,
+      "explanation": "The shirt is twenty pounds — рубашка стоит двадцать фунтов. Не спутайте twenty (20) и twelve (12); sixty — это цена туфель."
+    },
+    {
+      "type": "translate",
+      "source": "Эти туфли слишком маленькие.",
+      "answer": "These shoes are too small.",
+      "distractors": ["this", "is", "very"],
+      "explanation": "Shoes — множественное число: these и are. «Слишком» — too; very small значило бы просто «очень маленькие», без смысла «не подходят»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I like these shoes. Can I try ___ on?",
+      "translation": "Мне нравятся эти туфли. Можно их примерить?",
+      "options": ["it", "them", "they", "their"],
+      "answer": 1,
+      "explanation": "Shoes — множественное число, поэтому them. It было бы об одной вещи, а they после глагола не ставится."
+    },
+    {
+      "type": "speak",
+      "text": "How much is this jacket?",
+      "translation": "Сколько стоит эта куртка?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Куртка вам велика. Как сказать «Она слишком большая»?",
+      "options": ["It's too big.", "It's big too.", "It's to big.", "It's too much big."],
+      "answer": 0,
+      "explanation": "«Слишком» — too перед прилагательным: too big. В конце предложения too значит «тоже», to — другое слово, а much между too и прилагательным не нужно."
+    },
+    {
+      "type": "translate",
+      "source": "Сколько стоят эти джинсы?",
+      "answer": "How much are these jeans?",
+      "accept": ["How much do these jeans cost?"],
+      "distractors": ["is", "many", "this"],
+      "explanation": "О цене спрашивают How much, а не How many. Jeans — множественное число, поэтому are и these."
+    },
+    {
+      "type": "listen",
+      "audio": "It's a nice shirt, but it's too expensive.",
+      "question": "Почему человек не покупает рубашку?",
+      "options": ["Она слишком дорогая", "Она слишком большая", "Она ему не нравится", "Она слишком маленькая"],
+      "answer": 0,
+      "explanation": "Too expensive — «слишком дорогая». Сама рубашка человеку нравится: it's a nice shirt."
+    },
+    {
+      "type": "gap",
+      "sentence": "This bag is only ten euros. It's very ___.",
+      "translation": "Эта сумка стоит всего десять евро. Она очень дешёвая.",
+      "options": ["cheap", "expensive", "too", "much"],
+      "answer": 0,
+      "explanation": "Only ten euros — «всего десять евро», значит, сумка дешёвая: cheap. Expensive — наоборот, «дорогая»."
+    },
+    {
+      "type": "type",
+      "source": "Сколько это стоит?",
+      "answer": "How much is it?",
+      "accept": ["How much is this?", "How much is that?", "How much does it cost?", "How much does this cost?", "How much does that cost?"],
+      "explanation": "Самый простой вопрос о цене — How much is it? Глагол «стоить» переводить не обязательно: достаточно is."
+    },
+    {
+      "type": "dictation",
+      "audio": "These shoes are too small for me.",
+      "translation": "Эти туфли мне малы."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["These jeans is too long.", "How much is these shoes?", "This shirt is too small.", "I like this jacket. Can I try them on?"],
+      "answer": 2,
+      "explanation": "Shirt — одна вещь: this и is. В остальных вариантах ошибки: jeans are, How much are these shoes, а про одну куртку — try it on."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "a2-16",
+  "level": "A2",
+  "order": 16,
+  "title": { "ru": "Планы и договорённости: Present Continuous о будущем", "en": "Present Continuous for future arrangements" },
+  "goal": { "ru": "Научитесь говорить о встречах и поездках, о которых вы уже договорились.", "en": "Learn to talk about meetings and trips you have already arranged." },
+  "theory": [
+    {
+      "title": "Уже договорились — Present Continuous",
+      "body": "О будущих делах, которые уже организованы — назначено время, куплены билеты, есть договорённость с другим человеком, — говорят в Present Continuous: am / is / are + глагол с -ing. В русском то же самое: «В пятницу я встречаюсь с Анной». Обязательно назовите время, иначе получится действие, которое происходит сейчас.",
+      "examples": [
+        { "en": "I'm meeting Anna on Friday.", "ru": "В пятницу я встречаюсь с Анной." },
+        { "en": "We're flying to Rome next week.", "ru": "На следующей неделе мы летим в Рим." },
+        { "en": "What are you doing tonight?", "ru": "Что вы делаете сегодня вечером?" }
+      ],
+      "tip": "Проверка: если это можно записать в ежедневник с датой и временем — берите Present Continuous."
+    },
+    {
+      "title": "Договорённость или намерение?",
+      "body": "Going to говорит о намерении: вы решили, но, возможно, ещё ничего не организовали. Present Continuous говорит о договорённости: всё уже назначено. Сравните: I'm going to see a doctor (решил сходить) и I'm seeing the doctor at ten tomorrow (уже записан).",
+      "examples": [
+        { "en": "I'm going to look for a new job.", "ru": "Я собираюсь искать новую работу." },
+        { "en": "I'm having lunch with a client tomorrow.", "ru": "Завтра я обедаю с клиентом." },
+        { "en": "She's going to learn Spanish next year.", "ru": "В следующем году она собирается учить испанский." }
+      ],
+      "tip": "Для прогнозов Present Continuous не подходит: It's going to rain tomorrow, а не «It's raining tomorrow»."
+    },
+    {
+      "title": "Вопросы, отказы и приглашения",
+      "body": "Вопрос о планах начинается с be: Are you doing anything on Saturday? Этим же временем удобно вежливо отказаться от приглашения: Sorry, I'm working on Saturday. Не теряйте am / is / are: «I meeting Anna» и «I'm meet Anna» — ошибки.",
+      "examples": [
+        { "en": "Are you doing anything on Saturday?", "ru": "Вы что-нибудь делаете в субботу?" },
+        { "en": "I'm not working tomorrow.", "ru": "Завтра я не работаю." },
+        { "en": "They're coming at seven.", "ru": "Они приходят в семь." }
+      ],
+      "tip": "С днями недели — on (on Friday), со временем — at (at seven), а перед tomorrow, tonight и next week предлог не нужен."
+    }
+  ],
+  "vocab": [
+    { "en": "appointment", "ru": "запись, приём (у врача, специалиста)", "example": "I have an appointment with the dentist." },
+    { "en": "meeting", "ru": "совещание, деловая встреча", "example": "The meeting starts at ten." },
+    { "en": "to arrange", "ru": "договариваться, организовывать", "example": "Let's arrange a time for the call." },
+    { "en": "to invite", "ru": "приглашать", "example": "We want to invite our neighbours to dinner." },
+    { "en": "busy", "ru": "занятой", "example": "I'm busy on Thursday evening." },
+    { "en": "next week", "ru": "на следующей неделе", "example": "We're flying to Rome next week." },
+    { "en": "the day after tomorrow", "ru": "послезавтра", "example": "They are leaving the day after tomorrow." },
+    { "en": "to pick up", "ru": "забирать, заезжать (за кем-то)", "example": "I can pick up the tickets after work." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "appointment", "ru": "запись к врачу" },
+        { "en": "meeting", "ru": "совещание" },
+        { "en": "busy", "ru": "занятой" },
+        { "en": "to invite", "ru": "приглашать" },
+        { "en": "the day after tomorrow", "ru": "послезавтра" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "В вашем ежедневнике записано: пятница, 19:00, ужин с Анной. Как об этом сказать?",
+      "options": ["I'm having dinner with Anna on Friday.", "I having dinner with Anna on Friday.", "I'm have dinner with Anna on Friday.", "I will having dinner with Anna on Friday."],
+      "answer": 0,
+      "explanation": "Встреча уже назначена — это договорённость, поэтому Present Continuous: am + having. Нужны обе части: и am, и -ing."
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ to Rome next Tuesday. I bought the tickets yesterday.",
+      "translation": "В следующий вторник мы летим в Рим. Я вчера купил билеты.",
+      "options": ["are flying", "flying", "is flying", "flew"],
+      "answer": 0,
+      "explanation": "Билеты куплены — поездка организована, поэтому Present Continuous. С we нужна форма are, а без be («we flying») предложение неправильное."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm seeing the dentist at nine tomorrow morning.",
+      "question": "Что запланировано на завтрашнее утро?",
+      "options": ["Визит к стоматологу", "Встреча с клиентом", "Поездка в аэропорт", "Совещание на работе"],
+      "answer": 0,
+      "explanation": "I'm seeing the dentist — «я иду к стоматологу»: время назначено, поэтому Present Continuous. See здесь значит «быть на приёме»."
+    },
+    {
+      "type": "translate",
+      "source": "Что ты делаешь в субботу?",
+      "answer": "What are you doing on Saturday?",
+      "accept": ["What are you doing this Saturday?", "What are you going to do on Saturday?"],
+      "distractors": ["does", "is", "at"],
+      "explanation": "Вопрос о планах: are выходит вперёд, глагол с -ing. С днями недели нужен предлог on, а не at."
+    },
+    {
+      "type": "gap",
+      "sentence": "Look at those dark clouds! It ___ soon.",
+      "translation": "Посмотрите на эти тёмные тучи! Скоро пойдёт дождь.",
+      "options": ["is going to rain", "is raining", "rains", "going to rain"],
+      "answer": 0,
+      "explanation": "Это прогноз по тому, что мы видим, а не договорённость, поэтому going to. Present Continuous для будущего подходит только для планов людей."
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега зовёт вас в кино в субботу, но у вас рабочая смена. Как отказаться?",
+      "options": ["Sorry, I can't. I'm working on Saturday.", "Sorry, I can't. I working on Saturday.", "Sorry, I can't. I worked on Saturday.", "Sorry, I can't. I'm work on Saturday."],
+      "answer": 0,
+      "explanation": "Смена уже стоит в графике — это договорённость, поэтому I'm working. Без am («I working») или без -ing («I'm work») фраза неправильная."
+    },
+    {
+      "type": "speak",
+      "text": "We're flying to Rome next week.",
+      "translation": "На следующей неделе мы летим в Рим."
+    },
+    {
+      "type": "type",
+      "source": "Я не работаю завтра.",
+      "answer": "I'm not working tomorrow.",
+      "accept": ["I am not working tomorrow.", "Tomorrow I'm not working.", "I don't work tomorrow.", "I'm not going to work tomorrow."],
+      "explanation": "Отрицание в Present Continuous — not после am: I'm not working. Перед tomorrow предлог не нужен."
+    },
+    {
+      "type": "listen",
+      "audio": "Tom is going to look for a new flat, but he hasn't started yet.",
+      "question": "Что мы знаем о планах Тома?",
+      "options": ["Он решил искать квартиру, но ещё не начал", "Он уже нашёл новую квартиру", "Он переезжает завтра", "Он не хочет переезжать"],
+      "answer": 0,
+      "explanation": "Is going to look — намерение: решение есть, но ничего ещё не организовано. Hasn't started yet — «ещё не начал»."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you doing anything tomorrow evening?",
+      "translation": "Вы что-нибудь делаете завтра вечером?",
+      "options": ["Are", "Do", "Will", "Is"],
+      "answer": 0,
+      "explanation": "Перед глаголом с -ing в вопросе стоит be, а для you это are. Do и will с формой doing не сочетаются."
+    },
+    {
+      "type": "translate",
+      "source": "Они приезжают послезавтра.",
+      "answer": "They are coming the day after tomorrow.",
+      "accept": ["They're coming the day after tomorrow.", "They are arriving the day after tomorrow.", "They're arriving the day after tomorrow."],
+      "distractors": ["came", "next", "yesterday"],
+      "explanation": "Приезд уже запланирован, поэтому Present Continuous: are coming. «Послезавтра» — the day after tomorrow, дословно «день после завтра»."
+    },
+    {
+      "type": "dictation",
+      "audio": "We are having dinner with friends tonight.",
+      "translation": "Сегодня вечером мы ужинаем с друзьями."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение говорит о твёрдой договорённости, а не просто о намерении?",
+      "options": ["I'm meeting my lawyer at three tomorrow.", "I'm going to find a lawyer.", "I want to talk to a lawyer.", "I think I'll call a lawyer."],
+      "answer": 0,
+      "explanation": "Present Continuous с точным временем (at three tomorrow) показывает, что встреча назначена. Going to — только намерение, а I think I'll — решение, принятое в момент речи."
+    }
+  ]
+}

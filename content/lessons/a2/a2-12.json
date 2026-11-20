@@ -1,0 +1,154 @@
+{
+  "id": "a2-12",
+  "level": "A2",
+  "order": 12,
+  "title": { "ru": "Наречия образа действия: quickly, carefully, well", "en": "Adverbs of manner" },
+  "goal": { "ru": "Научитесь говорить, как именно происходит действие, и не путать прилагательное с наречием.", "en": "Learn to say how something is done and not to mix up adjectives and adverbs." },
+  "theory": [
+    {
+      "title": "Какой или как?",
+      "body": "Прилагательное описывает предмет или человека (какой?): a careful driver. Наречие описывает действие (как?): he drives carefully. Большинство наречий образуется от прилагательного с помощью -ly. В русском «осторожный» и «осторожно» тоже различаются, но в английском это часто забывают и говорят «He drives careful» — это ошибка.",
+      "examples": [
+        { "en": "She is a careful driver.", "ru": "Она осторожный водитель." },
+        { "en": "She drives carefully.", "ru": "Она водит осторожно." },
+        { "en": "Please walk slowly, I'm tired.", "ru": "Пожалуйста, идите медленно, я устал." }
+      ],
+      "tip": "Если прилагательное кончается на -y, буква меняется на i: easy → easily, happy → happily."
+    },
+    {
+      "title": "Исключения: well, fast, hard",
+      "body": "У good наречие особое — well: a good cook, но she cooks well. Fast и hard не меняются совсем: a fast car — he drives fast, hard work — she works hard. Слова «fastly» не существует, а hardly значит «едва, почти не» — это совсем другое слово.",
+      "examples": [
+        { "en": "He speaks English well.", "ru": "Он хорошо говорит по-английски." },
+        { "en": "She works hard.", "ru": "Она много и усердно работает." },
+        { "en": "Don't drive so fast.", "ru": "Не езжай так быстро." }
+      ],
+      "tip": "После be ставится прилагательное, а не наречие: Be careful! The food is good."
+    },
+    {
+      "title": "Где стоит наречие",
+      "body": "Наречие образа действия обычно стоит после глагола, а если есть дополнение — после дополнения. Между глаголом и дополнением его не ставят. По-русски можно сказать «Она хорошо говорит по-английски», но «She speaks well English» — ошибка.",
+      "examples": [
+        { "en": "I read the contract carefully.", "ru": "Я внимательно прочитал договор." },
+        { "en": "He closed the door quietly.", "ru": "Он тихо закрыл дверь." },
+        { "en": "You speak Russian very well.", "ru": "Вы очень хорошо говорите по-русски." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "en": "quickly", "ru": "быстро", "example": "She quickly packed her suitcase." },
+    { "en": "carefully", "ru": "внимательно, осторожно", "example": "Please read the instructions carefully." },
+    { "en": "well", "ru": "хорошо", "example": "My colleague speaks German well." },
+    { "en": "hard", "ru": "усердно, много", "example": "They work hard all week." },
+    { "en": "fast", "ru": "быстро, на большой скорости", "example": "Don't drive so fast." },
+    { "en": "slowly", "ru": "медленно", "example": "Please walk slowly, I'm tired." },
+    { "en": "quietly", "ru": "тихо", "example": "He closed the door quietly." },
+    { "en": "easily", "ru": "легко, без труда", "example": "You can easily find the hotel." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "carefully", "ru": "осторожно" },
+        { "en": "hard", "ru": "усердно" },
+        { "en": "slowly", "ru": "медленно" },
+        { "en": "quietly", "ru": "тихо" },
+        { "en": "easily", "ru": "легко" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Она хорошо говорит по-английски»?",
+      "options": ["She speaks English well.", "She speaks English good.", "She speaks well English.", "She speaks English goodly."],
+      "answer": 0,
+      "explanation": "Наречие от good — well, а good описывает только предмет или человека. Стоит оно после дополнения: speaks English well, а не «speaks well English»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The taxi driver drove very ___ and we arrived on time.",
+      "translation": "Таксист ехал очень быстро, и мы приехали вовремя.",
+      "options": ["fast", "fastly", "speed", "faster"],
+      "answer": 0,
+      "explanation": "Fast — и прилагательное, и наречие, окончание -ly к нему не добавляется: слова «fastly» нет. Faster после very не ставится."
+    },
+    {
+      "type": "listen",
+      "audio": "Please drive carefully, the roads are wet.",
+      "question": "О чём просят водителя?",
+      "options": ["Ехать осторожно", "Ехать быстрее", "Не опаздывать", "Остановиться"],
+      "answer": 0,
+      "explanation": "Drive carefully — «ехать осторожно». Carefully — наречие от careful, оно описывает действие drive."
+    },
+    {
+      "type": "translate",
+      "source": "Он работает очень усердно.",
+      "answer": "He works very hard.",
+      "accept": ["He works really hard."],
+      "distractors": ["hardly", "good", "is"],
+      "explanation": "Наречие от hard — тоже hard. Hardly значит «едва, почти не»: He hardly works — «Он почти не работает», то есть смысл обратный."
+    },
+    {
+      "type": "gap",
+      "sentence": "Be ___! The floor is wet.",
+      "translation": "Осторожно! Пол мокрый.",
+      "options": ["careful", "carefully", "care", "carefuly"],
+      "answer": 0,
+      "explanation": "После be нужно прилагательное, а не наречие: be careful. Carefully описывало бы действие, например walk carefully."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I read the email carefully.", "I read carefully the email.", "I read the email careful.", "I read the email carefuly."],
+      "answer": 0,
+      "explanation": "Действие описывает наречие carefully (с двумя l), и стоит оно после дополнения the email. Ставить наречие между глаголом и дополнением нельзя."
+    },
+    {
+      "type": "speak",
+      "text": "You speak English very well.",
+      "translation": "Вы очень хорошо говорите по-английски."
+    },
+    {
+      "type": "type",
+      "source": "Говорите медленно, пожалуйста.",
+      "answer": "Speak slowly, please.",
+      "accept": ["Please speak slowly.", "Talk slowly, please.", "Please talk slowly."],
+      "explanation": "Slowly — наречие от slow: оно описывает, как нужно говорить. «Speak slow» в учебной норме считается ошибкой."
+    },
+    {
+      "type": "listen",
+      "audio": "Anna is a good cook, but she cooks very slowly.",
+      "question": "Что мы узнали об Анне?",
+      "options": ["Она готовит хорошо, но медленно", "Она готовит быстро, но плохо", "Она готовит редко", "Она не умеет готовить"],
+      "answer": 0,
+      "explanation": "A good cook — прилагательное good описывает человека. Cooks slowly — наречие slowly описывает действие."
+    },
+    {
+      "type": "gap",
+      "sentence": "She studied ___ for the exam and passed it.",
+      "translation": "Она усердно готовилась к экзамену и сдала его.",
+      "options": ["hard", "hardly", "heavy", "strong"],
+      "answer": 0,
+      "explanation": "«Усердно» — hard, без -ly. Hardly значит «едва»: с ним получилось бы, что она почти не готовилась."
+    },
+    {
+      "type": "translate",
+      "source": "Мы легко нашли отель.",
+      "answer": "We found the hotel easily.",
+      "accept": ["We easily found the hotel."],
+      "distractors": ["easy", "find", "light"],
+      "explanation": "Наречие от easy — easily: y меняется на i. Light — это «лёгкий по весу», а не «без труда»."
+    },
+    {
+      "type": "dictation",
+      "audio": "He closed the door quietly.",
+      "translation": "Он тихо закрыл дверь."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как правильно образовать наречие от слова easy?",
+      "options": ["easily", "easyly", "easly", "easy"],
+      "answer": 0,
+      "explanation": "Если прилагательное кончается на -y, она меняется на i, и добавляется -ly: easy → easily. Так же: happy → happily."
+    }
+  ]
+}

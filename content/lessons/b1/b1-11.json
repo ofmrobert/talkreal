@@ -1,0 +1,155 @@
+{
+  "id": "b1-11",
+  "level": "B1",
+  "order": 11,
+  "title": { "ru": "Будущее: will, going to, Present Continuous и Present Simple", "en": "Future forms compared" },
+  "goal": { "ru": "Научитесь выбирать нужную форму будущего: решение, план, договорённость или расписание.", "en": "Learn to choose the right future form: a decision, a plan, an arrangement or a timetable." },
+  "theory": [
+    {
+      "title": "Will: решение сейчас, прогноз, обещание",
+      "body": "Will используют, когда решение рождается прямо в момент разговора, когда вы обещаете или предлагаете помощь, а также когда высказываете своё мнение о будущем (часто с I think, probably, I'm sure). По-русски всё это просто будущее время, поэтому will хочется ставить везде, но для заранее обдуманных планов он не подходит.",
+      "examples": [
+        { "en": "The phone is ringing. — I'll get it.", "ru": "Телефон звонит. — Я отвечу." },
+        { "en": "Don't worry, I won't tell anyone.", "ru": "Не волнуйся, я никому не скажу." },
+        { "en": "I think she'll probably be late.", "ru": "Думаю, она, скорее всего, опоздает." }
+      ],
+      "tip": "Если решение принято только что, на ваших глазах, — это will. Если вы уже думали об этом раньше — выбирайте going to."
+    },
+    {
+      "title": "Going to: намерение и очевидный прогноз",
+      "body": "Be going to показывает, что решение принято заранее: вы уже собираетесь это сделать. Вторая роль — прогноз по явным признакам: вы видите тучи и понимаете, что будет дождь. Не забывайте глагол be: am, is или are перед going to.",
+      "examples": [
+        { "en": "I'm going to look for a new job this year.", "ru": "В этом году я собираюсь искать новую работу." },
+        { "en": "We're going to move to a bigger office.", "ru": "Мы собираемся переехать в офис побольше." },
+        { "en": "Look at those clouds! It's going to rain.", "ru": "Посмотри на эти тучи! Сейчас пойдёт дождь." }
+      ],
+      "tip": "«I going to» и «I'm going buy» — частые ошибки: нужны и be, и to."
+    },
+    {
+      "title": "Договорённости и расписания",
+      "body": "О личных договорённостях, где уже известны время, место или люди, говорят в Present Continuous: это почти запись в ежедневнике. О расписаниях транспорта, сеансов и мероприятий говорят в Present Simple: от нас они не зависят. В русском мы тоже говорим «завтра я встречаюсь» и «поезд уходит в шесть».",
+      "examples": [
+        { "en": "I'm meeting the client tomorrow at ten.", "ru": "Я встречаюсь с клиентом завтра в десять." },
+        { "en": "We're having dinner with my parents on Friday.", "ru": "В пятницу мы ужинаем с моими родителями." },
+        { "en": "The train leaves at six fifteen.", "ru": "Поезд отправляется в шесть пятнадцать." }
+      ],
+      "tip": "В Present Continuous о будущем обязательно нужно указание на время (tomorrow, on Friday), иначе вас поймут так, будто это происходит сейчас."
+    }
+  ],
+  "vocab": [
+    { "en": "a deadline", "ru": "крайний срок", "example": "We have a deadline on Friday." },
+    { "en": "an appointment", "ru": "запись, назначенный приём (у врача, специалиста)", "example": "I have an appointment with the dentist at ten." },
+    { "en": "to attend", "ru": "посещать, присутствовать", "example": "Are you going to attend the conference?" },
+    { "en": "a timetable", "ru": "расписание", "example": "You can find a timetable on the website." },
+    { "en": "to depart", "ru": "отправляться (о транспорте)", "example": "The train departs from platform four." },
+    { "en": "to arrange", "ru": "договориться, организовать", "example": "I've arranged a meeting with the client." },
+    { "en": "a weather forecast", "ru": "прогноз погоды", "example": "Have you seen a weather forecast for the weekend?" },
+    { "en": "probably", "ru": "вероятно, скорее всего", "example": "I'll probably be late tonight." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "a deadline", "ru": "крайний срок" },
+        { "en": "an appointment", "ru": "назначенный приём" },
+        { "en": "to attend", "ru": "присутствовать" },
+        { "en": "a timetable", "ru": "расписание" },
+        { "en": "to arrange", "ru": "договориться, организовать" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "В офисе звонит телефон, и вы решаете ответить. Что вы скажете коллегам?",
+      "options": ["I'll get it.", "I'm going to get it.", "I get it.", "I'm getting it."],
+      "answer": 0,
+      "explanation": "Решение принято в момент речи, поэтому нужен will: I'll get it. Going to и Present Continuous означали бы, что вы запланировали это заранее, а I get it значит «я понял»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Look at those clouds! It ___ rain.",
+      "translation": "Посмотри на эти тучи! Сейчас пойдёт дождь.",
+      "options": ["is going to", "will", "is", "goes to"],
+      "answer": 0,
+      "explanation": "Прогноз по явным признакам (мы видим тучи) делают с be going to. Will подходит для мнения без видимых доказательств: I think it will rain tomorrow."
+    },
+    {
+      "type": "translate",
+      "source": "Я встречаюсь с клиентом завтра в десять.",
+      "answer": "I am meeting the client tomorrow at ten.",
+      "accept": ["I'm meeting the client tomorrow at ten.", "I am meeting the client at ten tomorrow.", "I'm meeting the client at ten tomorrow.", "Tomorrow I am meeting the client at ten.", "Tomorrow I'm meeting the client at ten.", "I am meeting with the client tomorrow at ten.", "I'm meeting with the client tomorrow at ten."],
+      "distractors": ["will", "meets", "in"],
+      "explanation": "Встреча уже назначена: известны и время, и человек. Для таких договорённостей нужен Present Continuous: am meeting. Время на часах — с предлогом at, а не in."
+    },
+    {
+      "type": "listen",
+      "audio": "The train to the airport leaves at six fifteen.",
+      "question": "Что вы узнали?",
+      "options": ["Поезд в аэропорт отправляется в 6:15", "Поезд в аэропорт уже ушёл в 6:15", "Поезд из аэропорта прибывает в 6:15", "Поезд в аэропорт отправляется в 6:50"],
+      "answer": 0,
+      "explanation": "Leaves — Present Simple: так говорят о расписании, хотя событие ещё впереди. Прошедшее время звучало бы как left, а fifteen (15) не путайте с fifty (50)."
+    },
+    {
+      "type": "gap",
+      "sentence": "My flight ___ at seven tomorrow morning.",
+      "translation": "Мой рейс вылетает завтра в семь утра.",
+      "options": ["leaves", "will leaves", "is going leave", "leaving"],
+      "answer": 0,
+      "explanation": "Рейс — это расписание, поэтому Present Simple: leaves. После will глагол стоит без -s, в going to нельзя пропускать to, а leaving без is — не сказуемое."
+    },
+    {
+      "type": "speak",
+      "text": "I'm seeing the dentist on Thursday morning.",
+      "translation": "В четверг утром я иду к стоматологу."
+    },
+    {
+      "type": "choice",
+      "prompt": "В каком ответе решение принято только что, в момент разговора?",
+      "options": ["— There's no milk. — OK, I'll get some.", "— There's no milk. — I know, I'm going to get some.", "— There's no milk. — I know, I'm getting some after work."],
+      "answer": 0,
+      "explanation": "Will показывает мгновенную реакцию: человек узнал о проблеме и тут же решил. I know вместе с going to или Present Continuous говорит о том, что план был заранее."
+    },
+    {
+      "type": "type",
+      "source": "Подожди, я тебе помогу.",
+      "answer": "Wait, I'll help you.",
+      "accept": ["Wait, I will help you.", "Hold on, I'll help you.", "Hold on, I will help you.", "Hang on, I'll help you.", "Hang on, I will help you.", "Wait, let me help you."],
+      "explanation": "Предложение помощи, возникшее прямо сейчас, — это will: I'll help you. «I help you» в настоящем времени — калька, которая по-английски не работает."
+    },
+    {
+      "type": "gap",
+      "sentence": "I think our team ___ the match on Saturday.",
+      "translation": "Думаю, наша команда выиграет матч в субботу.",
+      "options": ["will win", "is winning", "wins", "will to win"],
+      "answer": 0,
+      "explanation": "Мнение о будущем после I think выражают через will: will win. Present Continuous и Present Simple годятся только для договорённостей и расписаний, а после will частица to не ставится."
+    },
+    {
+      "type": "listen",
+      "audio": "We're going to move to a bigger office next year.",
+      "question": "Что вы услышали?",
+      "options": ["We're going to move to a bigger office next year.", "We were going to move to a bigger office next year.", "We're going to move to a big office next year.", "We go to move to a bigger office next year."],
+      "answer": 0,
+      "explanation": "We're going to move — намерение на будущее: решение уже принято. We were going to означало бы «собирались, но передумали», а bigger — сравнительная степень: «побольше»."
+    },
+    {
+      "type": "translate",
+      "source": "Я собираюсь искать новую работу.",
+      "answer": "I am going to look for a new job.",
+      "accept": ["I'm going to look for a new job."],
+      "distractors": ["looking", "work", "go"],
+      "explanation": "«Собираюсь» — заранее принятое решение, то есть be going to + начальная форма: am going to look. «Работа» как место, должность — это job (исчисляемое), а не work."
+    },
+    {
+      "type": "dictation",
+      "audio": "The meeting starts at nine tomorrow morning.",
+      "translation": "Совещание начинается завтра в девять утра."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I'm going visit my parents at the weekend.", "I'm going to visit my parents at the weekend.", "I will to visit my parents at the weekend.", "I going to visit my parents at the weekend."],
+      "answer": 1,
+      "explanation": "Правильная схема — am / is / are + going to + глагол: I'm going to visit. Нельзя пропускать ни be, ни to, а после will частица to, наоборот, не нужна."
+    }
+  ]
+}

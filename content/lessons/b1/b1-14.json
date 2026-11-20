@@ -1,0 +1,155 @@
+{
+  "id": "b1-14",
+  "level": "B1",
+  "order": 14,
+  "title": { "ru": "Вежливые вопросы: Could you tell me…? Do you know…?", "en": "Indirect questions" },
+  "goal": { "ru": "Научитесь вежливо спрашивать незнакомых людей и не путать порядок слов.", "en": "Learn to ask strangers politely and keep the right word order." },
+  "theory": [
+    {
+      "title": "Вступление + прямой порядок слов",
+      "body": "Вопрос «в лоб» незнакомому человеку звучит резковато, поэтому его начинают с вежливой фразы: Could you tell me…, Do you know…, I'd like to know…. После такого вступления вопрос перестаёт быть вопросом по форме: сначала идёт подлежащее, потом глагол, как в обычном утверждении. В русском порядок слов не меняется, поэтому хочется оставить его «вопросительным».",
+      "examples": [
+        { "en": "Could you tell me where the station is?", "ru": "Не подскажете, где находится вокзал? (Прямой вопрос: Where is the station?)" },
+        { "en": "Do you know who that man is?", "ru": "Вы не знаете, кто этот мужчина? (Прямой вопрос: Who is that man?)" },
+        { "en": "Do you have any idea how far it is?", "ru": "Вы не знаете, насколько это далеко? (Прямой вопрос: How far is it?)" }
+      ],
+      "tip": "Главная ошибка — «Could you tell me where is the station?». Вопросом здесь является только начало: Could you tell me."
+    },
+    {
+      "title": "Без do, does и did",
+      "body": "Раз порядок слов прямой, вспомогательные do, does и did исчезают, а глагол возвращает себе окончание -s или форму прошедшего времени. Остальные глаголы (is, can, will, have) просто встают после подлежащего.",
+      "examples": [
+        { "en": "Do you know where he lives?", "ru": "Вы знаете, где он живёт? (Прямой вопрос: Where does he live?)" },
+        { "en": "Do you know when the meeting started?", "ru": "Вы не знаете, когда началось совещание? (Прямой вопрос: When did the meeting start?)" },
+        { "en": "Could you tell me what time the shop closes?", "ru": "Не подскажете, во сколько закрывается магазин? (Прямой вопрос: What time does the shop close?)" }
+      ],
+      "tip": "Проверяйте себя: в середине фразы не должно остаться ни does, ни did."
+    },
+    {
+      "title": "If и whether: вопросы без вопросительного слова",
+      "body": "Если на прямой вопрос можно ответить «да» или «нет», в вежливом варианте появляется if или whether. Это русское «ли»: «Вы не знаете, свободно ли это место?» После I wonder и I'd like to know вопросительный знак не ставится: формально это утверждения.",
+      "examples": [
+        { "en": "Do you know if this seat is free?", "ru": "Вы не знаете, свободно ли это место? (Прямой вопрос: Is this seat free?)" },
+        { "en": "Could you tell me if this bus goes to the centre?", "ru": "Не подскажете, идёт ли этот автобус в центр? (Прямой вопрос: Does this bus go to the centre?)" },
+        { "en": "I wonder whether they've received my email.", "ru": "Интересно, получили ли они моё письмо." }
+      ],
+      "tip": "If здесь не «если», а «ли». Пропускать его нельзя: «Do you know is this seat free?» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "Could you tell me", "ru": "Не могли бы вы сказать, не подскажете", "example": "Could you tell me where the station is?" },
+    { "en": "Do you know", "ru": "Вы не знаете…", "example": "Do you know if this seat is free?" },
+    { "en": "I wonder", "ru": "Интересно…", "example": "I wonder why he hasn't replied." },
+    { "en": "Do you have any idea", "ru": "Вы случайно не знаете…", "example": "Do you have any idea how long it takes?" },
+    { "en": "whether", "ru": "ли", "example": "I don't know whether she's coming." },
+    { "en": "the nearest", "ru": "ближайший", "example": "Excuse me, where is the nearest chemist's?" },
+    { "en": "a cash machine", "ru": "банкомат", "example": "Is there a cash machine near here?" },
+    { "en": "a queue", "ru": "очередь", "example": "There was a queue at the ticket office." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "Could you tell me", "ru": "Не подскажете" },
+        { "en": "I wonder", "ru": "Интересно" },
+        { "en": "whether", "ru": "ли" },
+        { "en": "a cash machine", "ru": "банкомат" },
+        { "en": "a queue", "ru": "очередь" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Could you tell me where is the bank?", "Could you tell me where the bank is?", "Could you tell me where does the bank is?", "Could you tell me where the bank it is?"],
+      "answer": 1,
+      "explanation": "После Could you tell me порядок слов прямой: подлежащее (the bank), затем глагол (is). Where is the bank — порядок прямого вопроса, внутри вежливого он не сохраняется."
+    },
+    {
+      "type": "gap",
+      "sentence": "Do you know what time the museum ___?",
+      "translation": "Вы не знаете, во сколько открывается музей?",
+      "options": ["opens", "does it open", "open", "is opens"],
+      "answer": 0,
+      "explanation": "В косвенном вопросе нет does: глагол сам получает окончание -s — the museum opens. Does it open — кусок прямого вопроса, здесь он не нужен."
+    },
+    {
+      "type": "translate",
+      "source": "Вы не знаете, где ближайший банкомат?",
+      "answer": "Do you know where the nearest cash machine is?",
+      "accept": ["Do you know where the nearest ATM is?", "Could you tell me where the nearest cash machine is?", "Do you know where the nearest cashpoint is?"],
+      "distractors": ["does", "are", "it"],
+      "explanation": "После Do you know глагол is уходит в самый конец: where the nearest cash machine is. Русское «не» в «не знаете» на английский не переносится — это просто форма вежливости."
+    },
+    {
+      "type": "listen",
+      "audio": "Excuse me, do you know if there's a chemist's near here?",
+      "question": "Что спрашивает человек?",
+      "options": ["Есть ли поблизости аптека", "Как пройти к ближайшей больнице", "Во сколько закрывается аптека", "Где можно найти врача"],
+      "answer": 0,
+      "explanation": "Do you know if… — «не знаете, … ли»: человек спрашивает, есть ли рядом аптека (a chemist's). If здесь значит «ли», а не «если»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Could you tell me ___ this train stops at the airport?",
+      "translation": "Не подскажете, останавливается ли этот поезд в аэропорту?",
+      "options": ["if", "does", "that", "what"],
+      "answer": 0,
+      "explanation": "Прямой вопрос был бы Does this train stop…? — на него отвечают «да» или «нет», поэтому нужно if («ли»). Does в косвенном вопросе исчезает, а that не передаёт вопроса."
+    },
+    {
+      "type": "speak",
+      "text": "Could you tell me where the station is?",
+      "translation": "Не подскажете, где находится вокзал?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Как вежливо спросить в кассе: «Сколько стоит билет?»",
+      "options": ["Could you tell me how much a ticket costs?", "Could you tell me how much does a ticket cost?", "Could you tell me how much costs a ticket?", "Could you tell me how much a ticket cost?"],
+      "answer": 0,
+      "explanation": "Порядок слов прямой, does исчезает, а глагол получает -s: how much a ticket costs. Без -s будет ошибка в согласовании, а «costs a ticket» — русский порядок слов."
+    },
+    {
+      "type": "type",
+      "source": "Вы знаете, где она работает?",
+      "answer": "Do you know where she works?",
+      "accept": ["Do you know where she is working?", "Do you know where she's working?"],
+      "explanation": "После Do you know — подлежащее и глагол с окончанием -s: where she works. «Where does she work» остаётся только в прямом вопросе."
+    },
+    {
+      "type": "gap",
+      "sentence": "I wonder why ___ so late yesterday.",
+      "translation": "Интересно, почему он вчера пришёл так поздно.",
+      "options": ["he came", "did he come", "came he", "he did came"],
+      "answer": 0,
+      "explanation": "После I wonder — прямой порядок слов и никакого did: глагол сам стоит в прошедшем времени, he came. Did he come — порядок прямого вопроса."
+    },
+    {
+      "type": "listen",
+      "audio": "I'd like to know when the next train leaves.",
+      "question": "Что вы услышали?",
+      "options": ["I'd like to know when the next train leaves.", "I'd like to know when does the next train leave.", "I'd like to know when the next train left.", "I like to know when the next train leaves."],
+      "answer": 0,
+      "explanation": "I'd like to know — вежливое «я хотел бы узнать», после него порядок слов прямой: the next train leaves. Leaves — настоящее время: речь о расписании."
+    },
+    {
+      "type": "translate",
+      "source": "Интересно, придёт ли он на встречу.",
+      "answer": "I wonder if he will come to the meeting.",
+      "accept": ["I wonder if he'll come to the meeting.", "I wonder whether he will come to the meeting.", "I wonder whether he'll come to the meeting.", "I wonder if he is coming to the meeting.", "I wonder if he's coming to the meeting.", "I wonder whether he is coming to the meeting.", "I wonder if he is going to come to the meeting.", "I wonder if he's going to come to the meeting."],
+      "distractors": ["does", "that", "on"],
+      "explanation": "Русское «ли» передаётся словом if (или whether), а дальше идёт прямой порядок: he will come. «I wonder will he come» и «I wonder that» — ошибки."
+    },
+    {
+      "type": "dictation",
+      "audio": "Do you know where the manager is?",
+      "translation": "Вы не знаете, где руководитель?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Прямой вопрос: «Did she get my message?» Как он звучит после Do you know…?",
+      "options": ["Do you know if she got my message?", "Do you know did she get my message?", "Do you know if did she get my message?", "Do you know if she get my message?"],
+      "answer": 0,
+      "explanation": "Вопрос без вопросительного слова присоединяется через if, did исчезает, а глагол сам встаёт в прошедшее время: if she got. Сохранять did или оставлять get без времени нельзя."
+    }
+  ]
+}

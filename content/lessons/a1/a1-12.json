@@ -1,0 +1,154 @@
+{
+  "id": "a1-12",
+  "level": "A1",
+  "order": 12,
+  "title": { "ru": "Местоимения me, you, him, her, it, us, them", "en": "Object pronouns: me, you, him, her, it, us, them" },
+  "goal": { "ru": "Научитесь говорить «меня», «его», «её», «нас», «их» после глагола и предлога.", "en": "Learn to say me, him, her, us and them after a verb or a preposition." },
+  "theory": [
+    {
+      "title": "Кто делает и кого касается действие",
+      "body": "I, he, she, we, they стоят перед глаголом — это тот, кто действует. После глагола нужна другая форма: me, him, her, us, them. You и it не меняются. В русском у слова много форм (меня, мне, мной), а в английском одна на все случаи: me.",
+      "examples": [
+        { "en": "I know him.", "ru": "Я его знаю." },
+        { "en": "She calls me every day.", "ru": "Она звонит мне каждый день." },
+        { "en": "Can you help us?", "ru": "Вы можете нам помочь?" }
+      ],
+      "tip": "Пары: I → me, he → him, she → her, we → us, they → them."
+    },
+    {
+      "title": "После предлогов",
+      "body": "После предлогов (with, for, to, about, next to) стоит та же форма: with me, for her, to them. Сказать «with I» или «for she» нельзя, хотя по-русски формы здесь разные: «со мной», «для неё».",
+      "examples": [
+        { "en": "I work with him.", "ru": "Я работаю с ним." },
+        { "en": "This present is for her.", "ru": "Этот подарок для неё." },
+        { "en": "They live next to us.", "ru": "Они живут рядом с нами." }
+      ],
+      "tip": "Her — это и «её чья-то» (her bag), и «её, ей» после глагола (I know her). Форма одна."
+    },
+    {
+      "title": "It и them о вещах",
+      "body": "Об одной вещи говорим it, о нескольких — them. По-русски предметы бывают «он» и «она» (телефон — его, сумка — её), но в английском him и her — только о людях. Вещь — всегда it.",
+      "examples": [
+        { "en": "Where is my phone? I can't find it.", "ru": "Где мой телефон? Я не могу его найти." },
+        { "en": "These shoes are nice. I like them.", "ru": "Эти туфли красивые. Они мне нравятся." },
+        { "en": "I love this film. I watch it every year.", "ru": "Я обожаю этот фильм. Я смотрю его каждый год." }
+      ],
+      "tip": "После like обязательно что-то стоит: «Мне нравится» — I like it, а не просто «I like»."
+    }
+  ],
+  "vocab": [
+    { "en": "to call", "ru": "звонить", "example": "I call my mum every evening." },
+    { "en": "to help", "ru": "помогать", "example": "Can you help me, please?" },
+    { "en": "to know", "ru": "знать", "example": "I know this city well." },
+    { "en": "to find", "ru": "находить", "example": "I can't find my keys." },
+    { "en": "to wait for", "ru": "ждать", "example": "We wait for the bus here." },
+    { "en": "with", "ru": "с, вместе с", "example": "She lives with her parents." },
+    { "en": "about", "ru": "о, об", "example": "This book is about Italy." },
+    { "en": "colleague", "ru": "коллега", "example": "My colleague speaks Spanish." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to call", "ru": "звонить" },
+        { "en": "to help", "ru": "помогать" },
+        { "en": "to know", "ru": "знать" },
+        { "en": "to find", "ru": "находить" },
+        { "en": "with", "ru": "с, вместе с" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я его знаю» о человеке?",
+      "options": ["I know he.", "I know him.", "I know his.", "I him know."],
+      "answer": 1,
+      "explanation": "После глагола нужна форма him, а не he. His значит «его чей-то» (his car). И порядок слов строгий: местоимение стоит после глагола, а не перед ним, как в русском."
+    },
+    {
+      "type": "gap",
+      "sentence": "This is my sister. Do you know ___?",
+      "translation": "Это моя сестра. Ты её знаешь?",
+      "options": ["she", "her", "him", "hers"],
+      "answer": 1,
+      "explanation": "Sister — это она, а после глагола know форма she меняется на her. She может стоять только перед глаголом: She is my sister."
+    },
+    {
+      "type": "listen",
+      "audio": "My boss calls me every morning.",
+      "question": "Кто кому звонит?",
+      "options": ["Начальник звонит мне", "Я звоню начальнику", "Начальник звонит ему", "Мы звоним начальнику"],
+      "answer": 0,
+      "explanation": "My boss стоит перед глаголом — значит, звонит он. Me после глагола — «мне». В английском роли видны по месту слова в предложении."
+    },
+    {
+      "type": "translate",
+      "source": "Ты можешь мне помочь?",
+      "answer": "Can you help me?",
+      "accept": ["Could you help me?"],
+      "distractors": ["I", "my", "to"],
+      "explanation": "После help стоит me: I бывает только перед глаголом, а my значит «мой». Предлог to здесь не нужен: help me, а не «help to me»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Where are my glasses? I can't find ___.",
+      "translation": "Где мои очки? Я не могу их найти.",
+      "options": ["it", "them", "they", "their"],
+      "answer": 1,
+      "explanation": "Glasses — множественное число, поэтому them. They стоит только перед глаголом (They are here), а their значит «их чей-то»."
+    },
+    {
+      "type": "speak",
+      "text": "Can you help us, please?",
+      "translation": "Вы можете нам помочь, пожалуйста?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Ваш телефон лежит на столе. Как сказать «Я его вижу»?",
+      "options": ["I see him.", "I see it.", "I see he.", "I see its."],
+      "answer": 1,
+      "explanation": "Телефон — вещь, а о вещах говорят it. Him — только о мужчине: I see him значило бы, что вы видите какого-то человека."
+    },
+    {
+      "type": "translate",
+      "source": "Она работает с ними.",
+      "answer": "She works with them.",
+      "distractors": ["they", "their", "work"],
+      "explanation": "После предлога with нужна форма them, а не they. She — третье лицо, поэтому works с окончанием -s."
+    },
+    {
+      "type": "listen",
+      "audio": "We don't know them, but they know us.",
+      "question": "Что вы услышали?",
+      "options": ["We don't know them, but they know us.", "We don't know him, but he knows us.", "They don't know us, but we know them.", "We know them, but they don't know us."],
+      "answer": 0,
+      "explanation": "«Мы их не знаем, но они знают нас». Перед глаголом стоят we и they, после глагола — them и us."
+    },
+    {
+      "type": "gap",
+      "sentence": "My parents live in Omsk. I call ___ every Sunday.",
+      "translation": "Мои родители живут в Омске. Я звоню им каждое воскресенье.",
+      "options": ["they", "their", "them", "him"],
+      "answer": 2,
+      "explanation": "Parents — это «они», а после глагола call форма they меняется на them. Предлог не нужен: call them, а не «call to them»."
+    },
+    {
+      "type": "type",
+      "source": "Я её не знаю.",
+      "answer": "I don't know her.",
+      "accept": ["I do not know her."],
+      "explanation": "После know стоит her, а не she. Отрицание — don't перед глаголом, а местоимение идёт в самом конце."
+    },
+    {
+      "type": "dictation",
+      "audio": "I work with him every day.",
+      "translation": "Я работаю с ним каждый день."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["This coffee is for she.", "Can you wait for we?", "My friends are here. I like they.", "He is my colleague. I work with him."],
+      "answer": 3,
+      "explanation": "После предлога with стоит him. В остальных вариантах нужны те же формы после предлога и глагола: for her, wait for us, I like them."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "a1-16",
+  "level": "A1",
+  "order": 16,
+  "title": { "ru": "Was / were: где вы были вчера?", "en": "Was / were: where were you yesterday?" },
+  "goal": { "ru": "Научитесь говорить о прошлом с глаголом to be: где вы были и как всё прошло.", "en": "Learn to talk about the past with to be: where you were and how it was." },
+  "theory": [
+    {
+      "title": "Was и were — прошедшее время to be",
+      "body": "У am, is и are в прошедшем времени всего две формы. Was — для I, he, she, it. Were — для you, we, they. По-русски «был, была, было» меняются по роду, а в английском рода нет: и «он был», и «она была» — was.",
+      "examples": [
+        { "en": "I was at home yesterday.", "ru": "Вчера я был дома." },
+        { "en": "The film was very good.", "ru": "Фильм был очень хороший." },
+        { "en": "We were in Sochi last week.", "ru": "На прошлой неделе мы были в Сочи." }
+      ],
+      "tip": "Am и is → was. Are → were."
+    },
+    {
+      "title": "Отрицание и вопрос",
+      "body": "Отрицание: wasn't (was not) и weren't (were not). В вопросе was и were выходят на первое место, как is и are. Краткий ответ: Yes, I was. / No, we weren't.",
+      "examples": [
+        { "en": "I wasn't at work on Friday.", "ru": "В пятницу меня не было на работе." },
+        { "en": "Were you at the meeting? — Yes, I was.", "ru": "Вы были на встрече? — Да." },
+        { "en": "Where were you last night?", "ru": "Где ты был вчера вечером?" }
+      ],
+      "tip": "С you всегда were, даже если это один человек: Where were you?"
+    },
+    {
+      "title": "Слова о прошлом",
+      "body": "Yesterday — «вчера», last night — «вчера вечером», last week — «на прошлой неделе», two days ago — «два дня назад». Перед last и yesterday предлог не ставится: last week, а не «in last week». Ago стоит после срока.",
+      "examples": [
+        { "en": "She was ill last week.", "ru": "На прошлой неделе она болела." },
+        { "en": "They were here an hour ago.", "ru": "Они были здесь час назад." },
+        { "en": "It was cold yesterday morning.", "ru": "Вчера утром было холодно." }
+      ],
+      "tip": "«Вчера вечером» — last night или yesterday evening, но не «yesterday night»."
+    }
+  ],
+  "vocab": [
+    { "en": "yesterday", "ru": "вчера", "example": "I was at work yesterday." },
+    { "en": "last night", "ru": "вчера вечером, прошлой ночью", "example": "We were at a concert last night." },
+    { "en": "last week", "ru": "на прошлой неделе", "example": "She was in Paris last week." },
+    { "en": "ago", "ru": "назад", "example": "He was here ten minutes ago." },
+    { "en": "ill", "ru": "больной", "example": "My son is ill today." },
+    { "en": "late", "ru": "поздний; опоздавший", "example": "Sorry, I was late for the meeting." },
+    { "en": "busy", "ru": "занятой", "example": "I was very busy on Monday." },
+    { "en": "concert", "ru": "концерт", "example": "The concert was great." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "yesterday", "ru": "вчера" },
+        { "en": "last week", "ru": "на прошлой неделе" },
+        { "en": "ago", "ru": "назад" },
+        { "en": "ill", "ru": "больной" },
+        { "en": "busy", "ru": "занятой" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Вчера я был дома»?",
+      "options": ["I am at home yesterday.", "I was at home yesterday.", "I were at home yesterday.", "I did be at home yesterday."],
+      "answer": 1,
+      "explanation": "Yesterday — это прошлое, поэтому am меняется на was. С I всегда was, а were — для you, we, they."
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ at a concert last night.",
+      "translation": "Вчера вечером мы были на концерте.",
+      "options": ["was", "were", "are", "be"],
+      "answer": 1,
+      "explanation": "С we в прошедшем времени — were. Was подходит только для I, he, she, it, а are — это настоящее время."
+    },
+    {
+      "type": "listen",
+      "audio": "I wasn't at work yesterday. I was ill.",
+      "question": "Почему человека не было на работе?",
+      "options": ["Он болел", "Он был занят", "Он был на концерте", "Он опоздал"],
+      "answer": 0,
+      "explanation": "I was ill — «я болел». По-русски здесь глагол «болеть», а по-английски — was и прилагательное ill."
+    },
+    {
+      "type": "translate",
+      "source": "Где ты был вчера вечером?",
+      "answer": "Where were you last night?",
+      "accept": ["Where were you yesterday evening?"],
+      "distractors": ["was", "did", "are"],
+      "explanation": "С you всегда were, и в вопросе оно стоит перед you. «Вчера вечером» — last night; did в вопросах с was и were не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "My colleagues ___ at the meeting last Friday.",
+      "translation": "Моих коллег не было на встрече в прошлую пятницу.",
+      "options": ["wasn't", "weren't", "didn't", "don't"],
+      "answer": 1,
+      "explanation": "Colleagues — это they, поэтому weren't. Wasn't подошло бы для одного человека, а didn't и don't с глаголом to be не используются."
+    },
+    {
+      "type": "speak",
+      "text": "Where were you last week?",
+      "translation": "Где вы были на прошлой неделе?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Ты был на работе вчера?»",
+      "options": ["Did you be at work yesterday?", "Were you at work yesterday?", "Was you at work yesterday?", "Are you at work yesterday?"],
+      "answer": 1,
+      "explanation": "В вопросе were выходит на первое место: Were you…? С you всегда were, а не was, и did здесь не нужен."
+    },
+    {
+      "type": "translate",
+      "source": "Фильм был не очень хороший.",
+      "answer": "The film was not very good.",
+      "accept": ["The film wasn't very good."],
+      "distractors": ["were", "is", "did"],
+      "explanation": "Film — это it, поэтому was. Отрицание — not сразу после was: was not, коротко wasn't."
+    },
+    {
+      "type": "listen",
+      "audio": "They were in the office two days ago.",
+      "question": "Когда они были в офисе?",
+      "options": ["Два дня назад", "Вчера", "Две недели назад", "Через два дня"],
+      "answer": 0,
+      "explanation": "Two days ago — «два дня назад». Ago стоит после срока, как и русское «назад»: сначала two days, потом ago."
+    },
+    {
+      "type": "gap",
+      "sentence": "She was here five minutes ___.",
+      "translation": "Она была здесь пять минут назад.",
+      "options": ["ago", "last", "yesterday"],
+      "answer": 0,
+      "explanation": "«Назад» — ago, и стоит оно после срока: five minutes ago. Last ставится перед словом: last week, last night."
+    },
+    {
+      "type": "type",
+      "source": "Вчера я была занята.",
+      "answer": "I was busy yesterday.",
+      "accept": ["Yesterday I was busy."],
+      "explanation": "С I в прошедшем времени — was; форма одна и для «был», и для «была». Yesterday обычно стоит в конце, но может быть и в начале."
+    },
+    {
+      "type": "dictation",
+      "audio": "It was very cold last night.",
+      "translation": "Вчера вечером было очень холодно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["My parents was at home.", "It were cold yesterday.", "Were you busy last week?", "I wasn't at work in last week."],
+      "answer": 2,
+      "explanation": "С you — were, и в вопросе оно стоит первым. В остальных вариантах ошибки: parents were, it was, а перед last week предлог in не нужен."
+    }
+  ]
+}

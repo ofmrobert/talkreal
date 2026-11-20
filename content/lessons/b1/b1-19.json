@@ -1,0 +1,155 @@
+{
+  "id": "b1-19",
+  "level": "B1",
+  "order": 19,
+  "title": { "ru": "Bored или boring? Прилагательные на -ed и -ing и предлоги после них", "en": "Adjectives ending in -ed / -ing and adjective + preposition" },
+  "goal": { "ru": "Научитесь не путать «мне скучно» и «я скучный» и выбирать предлог: interested in, good at, afraid of.", "en": "Learn to tell \"bored\" from \"boring\" and to choose the preposition: interested in, good at, afraid of." },
+  "theory": [
+    {
+      "title": "-ed — что я чувствую, -ing — что вызывает чувство",
+      "body": "Прилагательные на -ed описывают состояние человека: I'm bored — «мне скучно». Прилагательные на -ing описывают то, что вызывает это состояние: the film is boring — «фильм скучный». По-русски мы часто говорим безлично («мне скучно», «мне интересно»), а в английском подлежащим становится сам человек.",
+      "examples": [
+        { "en": "I'm bored. This film is really boring.", "ru": "Мне скучно. Этот фильм очень скучный." },
+        { "en": "The trip was tiring, so we were all tired.", "ru": "Поездка была утомительной, и мы все устали." },
+        { "en": "I was surprised by the news. It was really surprising.", "ru": "Меня удивила эта новость. Она была действительно неожиданной." }
+      ],
+      "tip": "Осторожно: I'm boring значит «я скучный человек», а не «мне скучно»."
+    },
+    {
+      "title": "Частые пары",
+      "body": "Так устроены десятки прилагательных: interested / interesting, confused / confusing, disappointed / disappointing, embarrassed / embarrassing, excited / exciting. О вещах, событиях и ситуациях почти всегда говорят с -ing: вещь ничего не чувствует. О человеке возможны оба варианта, но смысл разный.",
+      "examples": [
+        { "en": "The instructions are confusing. I'm confused.", "ru": "Инструкция запутанная. Я запутался." },
+        { "en": "It was an embarrassing mistake.", "ru": "Это была неловкая ошибка." },
+        { "en": "We're excited about the new project.", "ru": "Мы с нетерпением ждём нового проекта." }
+      ],
+      "tip": "Проверка: если можно спросить «кто это чувствует?» — нужно -ed; если «какой он, какое оно?» — нужно -ing."
+    },
+    {
+      "title": "Прилагательное + предлог",
+      "body": "После многих прилагательных идёт свой предлог, и его нужно запоминать вместе со словом: interested in, good at, bad at, afraid of, proud of, tired of, keen on, worried about, disappointed with. Русские падежи и предлоги здесь не помогают. Глагол после предлога всегда стоит с -ing.",
+      "examples": [
+        { "en": "I'm interested in learning Spanish.", "ru": "Мне интересно выучить испанский." },
+        { "en": "She's good at explaining difficult things.", "ru": "Она хорошо умеет объяснять сложные вещи." },
+        { "en": "Are you afraid of dogs?", "ru": "Ты боишься собак?" }
+      ],
+      "tip": "Ловушки из русского: «good in», «afraid from», «interested by». Правильно: good at, afraid of, interested in."
+    }
+  ],
+  "vocab": [
+    { "en": "interested in", "ru": "интересующийся (чем-то)", "example": "I'm interested in modern art." },
+    { "en": "good at", "ru": "хорошо умеющий, способный к", "example": "She's good at solving problems." },
+    { "en": "afraid of", "ru": "боящийся (чего-то)", "example": "He's afraid of flying." },
+    { "en": "proud of", "ru": "гордящийся (кем-то, чем-то)", "example": "We're proud of our team." },
+    { "en": "keen on", "ru": "увлекающийся (чем-то)", "example": "I'm not very keen on football." },
+    { "en": "disappointed with", "ru": "разочарованный (чем-то)", "example": "We were disappointed with the hotel." },
+    { "en": "confusing", "ru": "запутанный, непонятный", "example": "The instructions were confusing." },
+    { "en": "embarrassed", "ru": "смущённый, чувствующий неловкость", "example": "I felt embarrassed when I forgot her name." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "afraid of", "ru": "боящийся" },
+        { "en": "proud of", "ru": "гордящийся" },
+        { "en": "keen on", "ru": "увлекающийся" },
+        { "en": "confusing", "ru": "запутанный" },
+        { "en": "embarrassed", "ru": "смущённый" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Совещание тянется третий час, вам скучно. Что вы напишете другу?",
+      "options": ["I'm bored.", "I'm boring.", "I'm bore.", "I bored."],
+      "answer": 0,
+      "explanation": "Своё состояние описывают прилагательным на -ed: I'm bored. I'm boring означало бы «я скучный человек»; без глагола be или без окончания фраза неправильна."
+    },
+    {
+      "type": "gap",
+      "sentence": "The lecture was so ___ that half the students left.",
+      "translation": "Лекция была такой скучной, что половина студентов ушла.",
+      "options": ["boring", "bored", "bore", "boringly"],
+      "answer": 0,
+      "explanation": "Лекция вызывает скуку, а не испытывает её, поэтому нужно -ing: boring. Bored можно сказать только о людях — о студентах, которые ушли."
+    },
+    {
+      "type": "translate",
+      "source": "Меня интересует история.",
+      "answer": "I am interested in history.",
+      "accept": ["I'm interested in history.", "History interests me."],
+      "distractors": ["interesting", "at", "by"],
+      "explanation": "О своём интересе говорят I'm interested, с -ed, и с предлогом in. Interesting описывало бы сам предмет: history is interesting."
+    },
+    {
+      "type": "listen",
+      "audio": "I was really disappointed with the service at that restaurant.",
+      "question": "Что говорящий думает о ресторане?",
+      "options": ["Обслуживание его разочаровало", "Обслуживание его приятно удивило", "Еда оказалась слишком дорогой", "Он хочет прийти туда снова"],
+      "answer": 0,
+      "explanation": "Disappointed with — «разочарован чем-то». Форма на -ed показывает чувство самого говорящего, а service — это обслуживание."
+    },
+    {
+      "type": "gap",
+      "sentence": "My daughter is very good ___ maths.",
+      "translation": "Моя дочь очень сильна в математике.",
+      "options": ["at", "in", "on", "with"],
+      "answer": 0,
+      "explanation": "«Способный к чему-то, сильный в чём-то» — good at. Предлог in — калька с русского «хорош в»."
+    },
+    {
+      "type": "speak",
+      "text": "I'm interested in learning new languages.",
+      "translation": "Мне интересно учить новые языки."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I'm very exciting about the trip.", "I'm very excited about the trip.", "I very excited about the trip.", "I'm very excite about the trip."],
+      "answer": 1,
+      "explanation": "Человек испытывает чувство, значит, нужна форма на -ed: I'm excited. Exciting можно сказать о самой поездке: the trip is exciting. Глагол be пропускать нельзя."
+    },
+    {
+      "type": "type",
+      "source": "Она боится летать.",
+      "answer": "She is afraid of flying.",
+      "accept": ["She's afraid of flying.", "She is scared of flying.", "She's scared of flying.", "She is afraid to fly.", "She's afraid to fly.", "She is frightened of flying.", "She's frightened of flying.", "She is scared to fly.", "She's scared to fly."],
+      "explanation": "«Бояться чего-то» — be afraid of, а глагол после предлога стоит с -ing: afraid of flying. Обратите внимание на глагол be: she is afraid, а не «she afraids»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The instructions were so ___ that nobody knew what to do.",
+      "translation": "Инструкция была такой запутанной, что никто не знал, что делать.",
+      "options": ["confusing", "confused", "confuse", "confusion"],
+      "answer": 0,
+      "explanation": "Инструкция сбивает с толку — это причина, поэтому -ing: confusing. Confused были бы люди, которые её читали; confusion — существительное."
+    },
+    {
+      "type": "listen",
+      "audio": "She's proud of her daughter.",
+      "question": "Что вы услышали?",
+      "options": ["She's proud of her daughter.", "She's proud for her daughter.", "She was proud of her daughter.", "She's proud of her daughters."],
+      "answer": 0,
+      "explanation": "«Гордиться кем-то» — be proud of: предлог of, а не for. She's = she is, настоящее время, а daughter стоит в единственном числе."
+    },
+    {
+      "type": "translate",
+      "source": "Мы устали ждать.",
+      "answer": "We are tired of waiting.",
+      "accept": ["We're tired of waiting."],
+      "distractors": ["tiring", "from", "wait"],
+      "explanation": "«Устать от чего-то, надоело» — tired of + глагол с -ing: tired of waiting. Предлог from — калька с русского «от», а tiring описывает то, что утомляет."
+    },
+    {
+      "type": "dictation",
+      "audio": "The film was boring and I was bored.",
+      "translation": "Фильм был скучный, и мне было скучно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «He is boring»?",
+      "options": ["Он скучный человек, с ним скучно", "Ему скучно", "Он скучает по кому-то"],
+      "answer": 0,
+      "explanation": "Форма на -ing описывает того, кто вызывает скуку: he is boring — «он скучный». «Ему скучно» — he is bored, а «скучать по кому-то» — глагол miss."
+    }
+  ]
+}

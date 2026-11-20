@@ -102,12 +102,14 @@ function wordExercise(word: VocabItem, lesson: Lesson, box: number): Exercise | 
   const explanation = `${word.en} — ${word.ru}.${word.example ? ` Например: ${word.example}` : ''}`
 
   if (box >= 3 && word.example) {
-    const inSentence = new RegExp(`\\b${escapeRegExp(word.en)}\\b`, 'i')
+    // Verbs are listed as "to carry", but the sentence has just "carry".
+    const bare = word.en.replace(/^to\s+/i, '')
+    const inSentence = new RegExp(`\\b${escapeRegExp(bare)}\\b`, 'i')
     if (inSentence.test(word.example)) {
       return {
         type: 'type',
         source: `Впишите слово «${word.ru}»: ${word.example.replace(inSentence, '___')}`,
-        answer: word.en,
+        answer: bare,
         explanation,
       }
     }

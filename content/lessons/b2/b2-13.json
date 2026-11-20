@@ -1,0 +1,198 @@
+{
+  "id": "b2-13",
+  "level": "B2",
+  "order": 13,
+  "title": { "ru": "Будущее в прошедшем", "en": "The future seen from the past" },
+  "goal": { "ru": "Научитесь говорить о планах и ожиданиях, которые были у вас в прошлом: was going to, was about to, was supposed to и would.", "en": "Learn to talk about plans and expectations you had in the past: was going to, was about to, was supposed to and would." },
+  "theory": [
+    {
+      "title": "Was going to: собирался, но…",
+      "body": "Was / were going to + глагол описывает намерение или план, который был у нас в прошлом. Чаще всего дальше следует but: план не осуществился. Этой же формой передают прогноз, сделанный в прошлом.",
+      "examples": [
+        { "en": "I was going to call you, but my phone died.", "ru": "Я собирался тебе позвонить, но у меня сел телефон." },
+        { "en": "They were going to sign the contract on Friday.", "ru": "Они собирались подписать договор в пятницу." },
+        { "en": "I thought it was going to rain, so I took an umbrella.", "ru": "Я думал, что пойдёт дождь, и взял зонт." }
+      ],
+      "tip": "Не теряйте to и не оставляйте be в настоящем времени: «I was going call» и «I am going to call you, but I forgot» — ошибки."
+    },
+    {
+      "title": "Was about to и was supposed to",
+      "body": "Was about to + глагол — «вот-вот, уже собирался»: действие должно было произойти в следующую минуту. Was supposed to + глагол — «должен был» по плану, расписанию или договорённости; обычно этого не случилось или случилось не так.",
+      "examples": [
+        { "en": "I was about to leave when the phone rang.", "ru": "Я уже собирался уходить, когда зазвонил телефон." },
+        { "en": "The train was supposed to arrive at six, but it was delayed.", "ru": "Поезд должен был прийти в шесть, но опоздал." },
+        { "en": "You were supposed to send me the file yesterday.", "ru": "Ты должен был прислать мне файл вчера." }
+      ],
+      "tip": "В supposed не забывайте -d и глагол be: «I suppose to come» — ошибка. После about to идёт начальная форма глагола, а не -ing."
+    },
+    {
+      "title": "Would — будущее с точки зрения прошлого",
+      "body": "После said, knew, thought, hoped, promised в прошедшем времени will превращается в would. В русском здесь остаётся будущее время («Он сказал, что позвонит»), поэтому так хочется сказать will.",
+      "examples": [
+        { "en": "She said she would call back.", "ru": "Она сказала, что перезвонит." },
+        { "en": "I knew he would be late.", "ru": "Я знал, что он опоздает." },
+        { "en": "Nobody thought the project would take two years.", "ru": "Никто не думал, что проект займёт два года." }
+      ],
+      "tip": "Проверка: если главный глагол стоит в прошедшем времени (said, knew, thought), то после него — would, а не will."
+    }
+  ],
+  "vocab": [
+    { "en": "about to", "ru": "вот-вот (сделает что-то)", "example": "Hurry up, the film is about to start." },
+    { "en": "supposed to", "ru": "должен (по плану, по правилам)", "example": "You are supposed to wear a helmet here." },
+    { "en": "to postpone", "ru": "отложить, перенести на потом", "example": "We had to postpone the meeting until Monday." },
+    { "en": "to call off", "ru": "отменить (мероприятие)", "example": "They decided to call off the strike." },
+    { "en": "second thoughts", "ru": "сомнения (в уже принятом решении)", "example": "I'm having second thoughts about the move." },
+    { "en": "last-minute", "ru": "сделанный в последний момент", "example": "There was a last-minute change to the schedule." },
+    { "en": "intention", "ru": "намерение", "example": "I had no intention of leaving the company." },
+    { "en": "to fall through", "ru": "сорваться (о планах, сделке)", "example": "The deal is likely to fall through if we wait." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to postpone", "ru": "отложить, перенести на потом" },
+        { "en": "to call off", "ru": "отменить (мероприятие)" },
+        { "en": "second thoughts", "ru": "сомнения (в уже принятом решении)" },
+        { "en": "intention", "ru": "намерение" },
+        { "en": "to fall through", "ru": "сорваться (о планах, сделке)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы собирались написать коллеге, но забыли. Как об этом сказать?",
+      "options": [
+        "I was going to email you, but I completely forgot.",
+        "I will going to email you, but I completely forgot.",
+        "I am going to email you, but I completely forgot.",
+        "I was going email you, but I completely forgot."
+      ],
+      "answer": 0,
+      "explanation": "Намерение в прошлом, которое не осуществилось, — was going to + глагол. Am going to говорит о планах на будущее, а пропуск to или сочетание will going — грамматические ошибки."
+    },
+    {
+      "type": "gap",
+      "sentence": "I ___ leave the office when my boss asked me to stay.",
+      "translation": "Я уже собирался уходить из офиса, когда начальник попросил меня остаться.",
+      "options": ["was about to", "was about", "am about to", "was about leaving"],
+      "answer": 0,
+      "explanation": "Was about to + начальная форма глагола — «вот-вот собирался». Частицу to терять нельзя, а настоящее время am не сочетается с прошедшим asked."
+    },
+    {
+      "type": "listen",
+      "audio": "The meeting was supposed to start at ten, but half the team was late.",
+      "question": "Что вы узнали о встрече?",
+      "options": [
+        "По плану она начиналась в десять, но половина команды опоздала",
+        "Она началась ровно в десять, как и планировали",
+        "Её перенесли на десять часов",
+        "Половина команды пришла раньше десяти"
+      ],
+      "answer": 0,
+      "explanation": "Was supposed to — «должна была» по плану. Эта форма почти всегда подсказывает, что вышло иначе, и часть с but это подтверждает."
+    },
+    {
+      "type": "translate",
+      "source": "Она сказала, что перезвонит после обеда.",
+      "answer": "She said she would call back after lunch.",
+      "accept": [
+        "She said that she would call back after lunch.",
+        "She said she'd call back after lunch.",
+        "She said that she'd call back after lunch.",
+        "She said she would call me back after lunch.",
+        "She said she would ring back after lunch."
+      ],
+      "distractors": ["will", "calls", "told"],
+      "explanation": "После said в прошедшем времени будущее передаётся через would: she would call back. По-русски здесь будущее время («перезвонит»), отсюда ошибка с will. Told требует указать, кому сказали: told me."
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ to fly to Rome in May, but the trip fell through.",
+      "translation": "Мы собирались лететь в Рим в мае, но поездка сорвалась.",
+      "options": ["were going", "are going", "will go", "were go"],
+      "answer": 0,
+      "explanation": "План из прошлого, который не осуществился, — were going to fly. Are going и will go относятся к будущему и не сочетаются с прошедшим fell through."
+    },
+    {
+      "type": "speak",
+      "text": "I was just about to call you!",
+      "translation": "Я как раз собирался тебе позвонить!"
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "I knew she would get the job.",
+        "I knew she will get the job.",
+        "I knew she would got the job.",
+        "I knew she gets the job."
+      ],
+      "answer": 0,
+      "explanation": "После knew в прошедшем времени будущее выражается через would + начальная форма: would get. Will здесь — калька с русского «знал, что получит», а после would вторая форма got невозможна."
+    },
+    {
+      "type": "type",
+      "source": "Я собирался тебе позвонить.",
+      "answer": "I was going to call you.",
+      "accept": [
+        "I was going to phone you.",
+        "I was going to ring you.",
+        "I was going to give you a call.",
+        "I was about to call you.",
+        "I meant to call you.",
+        "I intended to call you."
+      ],
+      "explanation": "«Собирался» о прошлом намерении — was going to + глагол. Глагол be обязательно в прошедшем времени: I am going to call you означало бы план на будущее."
+    },
+    {
+      "type": "listen",
+      "audio": "They were going to postpone the launch, but in the end everything was ready on time.",
+      "question": "Перенесли ли запуск?",
+      "options": [
+        "Нет: собирались перенести, но всё успели вовремя",
+        "Да, запуск перенесли на более поздний срок",
+        "Да, запуск совсем отменили",
+        "Неизвестно: решение ещё не принято"
+      ],
+      "answer": 0,
+      "explanation": "Were going to postpone сообщает только о намерении, а часть после but показывает, что оно не понадобилось: everything was ready on time. Postpone — «перенести», а не «отменить»."
+    },
+    {
+      "type": "gap",
+      "sentence": "You ___ to send me the figures yesterday. What happened?",
+      "translation": "Ты должен был прислать мне цифры вчера. Что случилось?",
+      "options": ["were supposed", "supposed", "were suppose", "are supposing"],
+      "answer": 0,
+      "explanation": "«Должен был по договорённости» — were supposed to: нужен и глагол be в прошедшем времени, и окончание -d. Без be или без -d конструкция не работает."
+    },
+    {
+      "type": "translate",
+      "source": "Никто не думал, что ремонт займёт три месяца.",
+      "answer": "Nobody thought the renovation would take three months.",
+      "accept": [
+        "Nobody thought that the renovation would take three months.",
+        "No one thought the renovation would take three months.",
+        "No one thought that the renovation would take three months.",
+        "Nobody thought the repairs would take three months."
+      ],
+      "distractors": ["will", "takes", "anybody"],
+      "explanation": "После thought будущее с точки зрения прошлого — would take. Will и takes нарушают согласование времён: это калька с русского «думал, что займёт»."
+    },
+    {
+      "type": "dictation",
+      "audio": "The train was supposed to arrive at six.",
+      "translation": "Поезд должен был прийти в шесть."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «He was going to resign, but he had second thoughts»?",
+      "options": [
+        "Он собирался уволиться, но засомневался и не стал",
+        "Он уволился, а потом пожалел об этом",
+        "Он уволится, когда всё ещё раз обдумает",
+        "Он подумал дважды и уволился"
+      ],
+      "answer": 0,
+      "explanation": "Was going to resign — намерение в прошлом, а but показывает, что оно не осуществилось. To have second thoughts — засомневаться в уже принятом решении."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "b1-12",
+  "level": "B1",
+  "order": 12,
+  "title": { "ru": "Past Perfect: то, что случилось ещё раньше", "en": "Past Perfect: the earlier past" },
+  "goal": { "ru": "Научитесь показывать, какое из двух прошлых событий произошло раньше.", "en": "Learn to show which of two past events happened first." },
+  "theory": [
+    {
+      "title": "Had + третья форма: прошлое перед прошлым",
+      "body": "Past Perfect (had + третья форма глагола) показывает, что одно действие в прошлом закончилось раньше другого. В русском такого времени нет: мы говорим «когда я пришёл, он ушёл», и порядок событий понятен только из контекста. В английском разницу показывает сама форма глагола. Had одинаков для всех лиц, в разговоре сокращается до 'd.",
+      "examples": [
+        { "en": "When I got to the station, the train had left.", "ru": "Когда я добрался до вокзала, поезд уже ушёл." },
+        { "en": "She was upset because she had lost her phone.", "ru": "Она была расстроена, потому что потеряла телефон." },
+        { "en": "He didn't want to watch the film because he'd seen it before.", "ru": "Он не хотел смотреть фильм, потому что уже видел его раньше." }
+      ],
+      "tip": "Сравните: When I arrived, he left — я пришёл, и после этого он ушёл. When I arrived, he had left — к моему приходу его уже не было."
+    },
+    {
+      "title": "Слова-помощники: by the time, already, before, after",
+      "body": "Past Perfect часто стоит рядом с by the time (к тому времени как), after, before, а также с already, just и never. Эти наречия ставятся между had и основным глаголом: had already finished, had never seen.",
+      "examples": [
+        { "en": "By the time we arrived, the meeting had already finished.", "ru": "К тому времени как мы приехали, совещание уже закончилось." },
+        { "en": "After she had sent the email, she noticed a mistake.", "ru": "После того как она отправила письмо, она заметила ошибку." },
+        { "en": "I had never flown before that trip.", "ru": "До той поездки я никогда не летал." }
+      ],
+      "tip": "После by the time стоит Past Simple (we arrived), а Past Perfect — в другой части предложения."
+    },
+    {
+      "title": "Когда Past Perfect не нужен",
+      "body": "Если события просто идут одно за другим в том порядке, в котором вы их называете, достаточно Past Simple. Не нужен Past Perfect и тогда, когда прошлое событие всего одно: этой форме обязательно требуется вторая точка в прошлом, раньше которой всё произошло.",
+      "examples": [
+        { "en": "I came home, had dinner and went to bed.", "ru": "Я пришёл домой, поужинал и лёг спать." },
+        { "en": "He opened the letter and read it twice.", "ru": "Он открыл письмо и дважды его прочитал." },
+        { "en": "I bought this car three years ago.", "ru": "Я купил эту машину три года назад." }
+      ],
+      "tip": "Не ставьте had done только потому, что событие было давно. «Давно» — это всё равно Past Simple."
+    }
+  ],
+  "vocab": [
+    { "en": "by the time", "ru": "к тому времени как", "example": "The film had started by the time we arrived." },
+    { "en": "to notice", "ru": "заметить", "example": "I didn't notice the mistake at first." },
+    { "en": "to board", "ru": "садиться (на самолёт, поезд, корабль)", "example": "We boarded the plane an hour late." },
+    { "en": "luggage", "ru": "багаж", "example": "The airline lost our luggage." },
+    { "en": "to lock", "ru": "запирать", "example": "Did you lock the door?" },
+    { "en": "to expire", "ru": "истекать (о сроке действия)", "example": "My passport expires next month." },
+    { "en": "a delay", "ru": "задержка", "example": "There was a delay of two hours." },
+    { "en": "earlier", "ru": "раньше, ранее", "example": "I had met him earlier that week." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "by the time", "ru": "к тому времени как" },
+        { "en": "to notice", "ru": "заметить" },
+        { "en": "luggage", "ru": "багаж" },
+        { "en": "to expire", "ru": "истекать" },
+        { "en": "a delay", "ru": "задержка" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает предложение «When we got to the cinema, the film had started»?",
+      "options": ["Фильм начался до того, как мы пришли", "Мы пришли до начала фильма", "Фильм начался в тот момент, когда мы вошли"],
+      "answer": 0,
+      "explanation": "Had started — Past Perfect: это действие завершилось раньше, чем мы добрались до кинотеатра. Если бы фильм начался после нашего прихода, было бы the film started."
+    },
+    {
+      "type": "gap",
+      "sentence": "When I got to the airport, I realised I ___ my passport at home.",
+      "translation": "Когда я приехал в аэропорт, я понял, что оставил паспорт дома.",
+      "options": ["had left", "have left", "was leaving", "leave"],
+      "answer": 0,
+      "explanation": "Паспорт остался дома раньше, чем я это понял, — значит, Past Perfect: had left. Have left связано с настоящим и не сочетается с рассказом о прошлом (got, realised)."
+    },
+    {
+      "type": "translate",
+      "source": "Когда мы приехали, поезд уже ушёл.",
+      "answer": "When we arrived, the train had already left.",
+      "accept": ["The train had already left when we arrived.", "When we arrived, the train had left already.", "When we arrived, the train had left.", "The train had left when we arrived.", "By the time we arrived, the train had already left."],
+      "distractors": ["has", "leave", "was"],
+      "explanation": "Поезд ушёл раньше нашего приезда, поэтому had left, а already встаёт между had и основным глаголом. Has left — ошибка: Present Perfect не используют рядом с Past Simple (arrived)."
+    },
+    {
+      "type": "listen",
+      "audio": "She had never been abroad before she got that job.",
+      "question": "Что вы узнали?",
+      "options": ["До этой работы она ни разу не была за границей", "Она до сих пор ни разу не была за границей", "Она нашла эту работу за границей", "После этой работы она больше не ездила за границу"],
+      "answer": 0,
+      "explanation": "Had never been описывает опыт до определённого момента в прошлом — до того, как она получила работу. О том, что было потом и что происходит сейчас, предложение ничего не говорит."
+    },
+    {
+      "type": "gap",
+      "sentence": "By the time the manager arrived, we ___ the presentation.",
+      "translation": "К тому времени как пришёл руководитель, мы уже закончили презентацию.",
+      "options": ["had finished", "have finished", "finish", "were finished"],
+      "answer": 0,
+      "explanation": "By the time + Past Simple задаёт точку в прошлом, а то, что завершилось до неё, стоит в Past Perfect: had finished. Have finished относилось бы к настоящему моменту."
+    },
+    {
+      "type": "speak",
+      "text": "The meeting had already started when I arrived.",
+      "translation": "Когда я пришёл, совещание уже началось."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы просто сообщаете факт о прошлом, других прошлых событий в рассказе нет. Какое предложение правильное?",
+      "options": ["I had bought this car three years ago.", "I bought this car three years ago.", "I have bought this car three years ago.", "I had buy this car three years ago."],
+      "answer": 1,
+      "explanation": "Событие одно, и время названо (three years ago) — это Past Simple: bought. Past Perfect нужен только тогда, когда есть второе прошлое событие, раньше которого всё случилось."
+    },
+    {
+      "type": "type",
+      "source": "Он уже ушёл, когда я позвонил.",
+      "answer": "He had already left when I called.",
+      "accept": ["He'd already left when I called.", "When I called, he had already left.", "When I called, he'd already left.", "He had already left when I phoned.", "He'd already left when I phoned.", "He had already left when I rang.", "He'd already left when I rang.", "He had already gone when I called.", "He'd already gone when I called.", "He had left already when I called."],
+      "explanation": "Сначала он ушёл, потом я позвонил: более раннее действие — в Past Perfect (had left), более позднее — в Past Simple (called). Already стоит между had и left."
+    },
+    {
+      "type": "gap",
+      "sentence": "After she ___ the email, she noticed a mistake in it.",
+      "translation": "После того как она отправила письмо, она заметила в нём ошибку.",
+      "options": ["had sent", "has sent", "was sent", "sends"],
+      "answer": 0,
+      "explanation": "Письмо было отправлено до того, как она заметила ошибку, поэтому had sent. Has sent — настоящее время, а was sent — пассив: получилось бы, что отправили её саму."
+    },
+    {
+      "type": "listen",
+      "audio": "I couldn't pay because I'd left my wallet at home.",
+      "question": "Что вы услышали?",
+      "options": ["I couldn't pay because I'd left my wallet at home.", "I couldn't pay because I'd lost my wallet at home.", "I can't pay because I've left my wallet at home.", "I couldn't play because I'd left my wallet at home."],
+      "answer": 0,
+      "explanation": "I'd left = I had left: кошелёк остался дома раньше, чем наступил момент платить. Left (оставил) и lost (потерял) звучат похоже, но значат разное."
+    },
+    {
+      "type": "translate",
+      "source": "Я был голоден, потому что ничего не ел.",
+      "answer": "I was hungry because I had not eaten anything.",
+      "accept": ["I was hungry because I hadn't eaten anything.", "I was hungry because I had eaten nothing.", "I was hungry as I had not eaten anything.", "I was hungry because I'd not eaten anything."],
+      "distractors": ["ate", "did", "have"],
+      "explanation": "Причина (не ел) возникла раньше, чем состояние (был голоден), поэтому had not eaten. После had нужна третья форма eaten, а не ate; have здесь не подходит, потому что рассказ идёт о прошлом."
+    },
+    {
+      "type": "dictation",
+      "audio": "By the time we arrived, the film had started.",
+      "translation": "К тому времени как мы приехали, фильм уже начался."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильный перевод: «Я пришёл домой, поужинал и лёг спать».",
+      "options": ["I came home, had dinner and went to bed.", "I had come home, had had dinner and had gone to bed.", "I came home, had had dinner and went to bed.", "I have come home, had dinner and went to bed."],
+      "answer": 0,
+      "explanation": "Действия идут по порядку, одно за другим, поэтому везде Past Simple. Past Perfect нужен, только когда вы возвращаетесь назад, к более раннему событию."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "a2-19",
+  "level": "A2",
+  "order": 19,
+  "title": { "ru": "Кто звонил и кому звонили: два типа вопросов", "en": "Subject and object questions" },
+  "goal": { "ru": "Научитесь различать вопросы «Кто вам звонил?» и «Кому вы звонили?».", "en": "Learn the difference between Who called you? and Who did you call?" },
+  "theory": [
+    {
+      "title": "Обычный вопрос: с do, does, did",
+      "body": "Когда мы спрашиваем о дополнении — кого, кому, что, — вопрос строится как обычно: вопросительное слово, помощник do / does / did, подлежащее и глагол в начальной форме. Who did you call? — «Кому вы звонили?». Здесь действие совершаете вы, а who — тот, кому звонили.",
+      "examples": [
+        { "en": "Who did you call?", "ru": "Кому вы звонили?" },
+        { "en": "What did she buy?", "ru": "Что она купила?" },
+        { "en": "Who do you work with?", "ru": "С кем вы работаете?" }
+      ],
+      "tip": "Предлог в таких вопросах обычно уходит в конец: Who are you waiting for? — «Кого вы ждёте?»."
+    },
+    {
+      "title": "Вопрос к подлежащему: без do, does, did",
+      "body": "Если who или what — это тот, кто совершает действие, помощник не нужен. Порядок слов как в утверждении: Who called you? — «Кто вам звонил?». Глагол стоит в нужном времени, в прошедшем — во второй форме. «Who did call you?» — типичная ошибка.",
+      "examples": [
+        { "en": "Who called you?", "ru": "Кто вам звонил?" },
+        { "en": "What happened?", "ru": "Что случилось?" },
+        { "en": "Who lives in this flat?", "ru": "Кто живёт в этой квартире?" }
+      ],
+      "tip": "В настоящем времени глагол после who идёт с -s, даже если в ответе несколько человек: Who knows the answer?"
+    },
+    {
+      "title": "Как понять, какой вопрос нужен",
+      "body": "Помогает русский падеж. «Кто?» и «что?» в именительном падеже — вопрос к подлежащему, без помощника. «Кого?», «кому?», «с кем?» — обычный вопрос с do / does / did. То же правило работает с which и how many, если они относятся к подлежащему.",
+      "examples": [
+        { "en": "Who saw you?", "ru": "Кто вас видел?" },
+        { "en": "Who did you see?", "ru": "Кого вы видели?" },
+        { "en": "Which bus goes to the airport?", "ru": "Какой автобус идёт в аэропорт?" }
+      ],
+      "tip": "Мысленно ответьте на вопрос. «Anna called me» — Anna стоит на месте who, значит, did не нужен."
+    }
+  ],
+  "vocab": [
+    { "en": "to call", "ru": "звонить (по телефону)", "example": "I will call you after lunch." },
+    { "en": "to send", "ru": "отправлять (sent)", "example": "Please send me the address." },
+    { "en": "to pay for", "ru": "платить за", "example": "Who is going to pay for the taxi?" },
+    { "en": "to break", "ru": "ломать, разбивать (broke)", "example": "Be careful, don't break the glass." },
+    { "en": "to win", "ru": "выигрывать, побеждать (won)", "example": "I hope our team will win." },
+    { "en": "to tell", "ru": "говорить, рассказывать (told)", "example": "Can you tell me the way to the station?" },
+    { "en": "message", "ru": "сообщение", "example": "Did you get my message?" },
+    { "en": "manager", "ru": "руководитель, менеджер", "example": "The manager wants to see you." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to send", "ru": "отправлять" },
+        { "en": "to break", "ru": "разбивать" },
+        { "en": "to win", "ru": "выигрывать" },
+        { "en": "message", "ru": "сообщение" },
+        { "en": "manager", "ru": "руководитель" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Кто вам звонил?»",
+      "options": ["Who called you?", "Who did call you?", "Who did you call?", "Who you called?"],
+      "answer": 0,
+      "explanation": "«Кто?» — вопрос к подлежащему: помощник did не нужен, глагол сразу в прошедшем времени. Who did you call? значит «Кому вы звонили?»."
+    },
+    {
+      "type": "gap",
+      "sentence": "What ___ at the meeting yesterday?",
+      "translation": "Что произошло вчера на совещании?",
+      "options": ["happened", "did happen", "did happened", "was happen"],
+      "answer": 0,
+      "explanation": "What здесь подлежащее, поэтому did не нужен: What happened? «What did happen?» — самая частая ошибка в таких вопросах."
+    },
+    {
+      "type": "listen",
+      "audio": "Who did Maria invite to the party?",
+      "question": "О чём спрашивают?",
+      "options": ["Кого пригласила Мария", "Кто пригласил Марию", "Когда будет вечеринка", "Куда пригласили Марию"],
+      "answer": 0,
+      "explanation": "В вопросе есть did, а Maria стоит перед глаголом: приглашала она. Вопрос «Кто пригласил Марию?» звучал бы Who invited Maria?"
+    },
+    {
+      "type": "translate",
+      "source": "Кого вы видели в офисе?",
+      "answer": "Who did you see at the office?",
+      "accept": ["Who did you see in the office?", "Whom did you see at the office?", "Whom did you see in the office?"],
+      "distractors": ["saw", "does", "on"],
+      "explanation": "«Кого?» — вопрос к дополнению: нужен did, а глагол возвращается в начальную форму see. Who saw you? значило бы «Кто вас видел?»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Who ___ in the flat next door?",
+      "translation": "Кто живёт в соседней квартире?",
+      "options": ["lives", "does live", "live", "do lives"],
+      "answer": 0,
+      "explanation": "Who — подлежащее, поэтому без does, а глагол в настоящем времени идёт с -s: lives. Так делают, даже если в квартире живёт несколько человек."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы хотите узнать, кому Том отправил письмо. Какой вопрос задать?",
+      "options": ["Who did Tom send the email to?", "Who sent Tom the email?", "Who did send Tom the email?", "Who Tom sent the email to?"],
+      "answer": 0,
+      "explanation": "Отправлял Том, а спрашиваем о получателе — это вопрос к дополнению: did + Tom + send. Who sent Tom the email? спрашивало бы, кто написал Тому."
+    },
+    {
+      "type": "speak",
+      "text": "Who told you about this restaurant?",
+      "translation": "Кто рассказал вам об этом ресторане?"
+    },
+    {
+      "type": "type",
+      "source": "Кто разбил окно?",
+      "answer": "Who broke the window?",
+      "accept": ["Who has broken the window?", "Who broke a window?"],
+      "explanation": "«Кто?» — подлежащее, поэтому без did: сразу вторая форма broke. «Who did break the window?» — ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "Who paid for the tickets, you or your brother?",
+      "question": "Что хочет узнать говорящий?",
+      "options": ["Кто заплатил за билеты", "Сколько стоили билеты", "Кому купили билеты", "Где купили билеты"],
+      "answer": 0,
+      "explanation": "Who paid — вопрос к подлежащему, без did: «Кто заплатил?». Pay for — «платить за что-то»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Which bus ___ to the airport?",
+      "translation": "Какой автобус идёт в аэропорт?",
+      "options": ["goes", "does go", "go", "is go"],
+      "answer": 0,
+      "explanation": "Which bus — подлежащее: действие совершает автобус. Поэтому помощник не нужен, а глагол получает -es: goes."
+    },
+    {
+      "type": "translate",
+      "source": "Кто выиграл матч?",
+      "answer": "Who won the match?",
+      "accept": ["Who won the game?", "Who has won the match?"],
+      "distractors": ["did", "win", "wins"],
+      "explanation": "Вопрос к подлежащему: помощник did не нужен, глагол сразу во второй форме won. «Who did win?» — ошибка."
+    },
+    {
+      "type": "dictation",
+      "audio": "Who sent you this message?",
+      "translation": "Кто отправил вам это сообщение?"
+    },
+    {
+      "type": "choice",
+      "prompt": "На какой вопрос отвечает фраза «Anna called me»?",
+      "options": ["Who called you?", "Who did you call?", "Who do you call?", "Who are you calling?"],
+      "answer": 0,
+      "explanation": "В ответе Anna — подлежащее, она совершила действие. Значит, вопрос был к подлежащему: Who called you? Ответом на Who did you call? было бы I called Anna."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "a2-15",
+  "level": "A2",
+  "order": 15,
+  "title": { "ru": "Как давно? Present Perfect с for и since", "en": "How long have you…? Present Perfect with for and since" },
+  "goal": { "ru": "Научитесь говорить, как давно длится то, что началось в прошлом и продолжается сейчас.", "en": "Learn to say how long something that started in the past has continued." },
+  "theory": [
+    {
+      "title": "Началось раньше и продолжается сейчас",
+      "body": "Если ситуация началась в прошлом и не закончилась, в английском нужен Present Perfect: have / has + третья форма глагола. По-русски здесь настоящее время («Я живу здесь пять лет»), поэтому русскоговорящие часто говорят «I live here for five years» — это ошибка.",
+      "examples": [
+        { "en": "I have lived in this city for ten years.", "ru": "Я живу в этом городе десять лет." },
+        { "en": "She has worked here since March.", "ru": "Она работает здесь с марта." },
+        { "en": "We have known each other for a long time.", "ru": "Мы давно знаем друг друга." }
+      ],
+      "tip": "Особенно часто так используют be, have и know: I've been here for an hour, I've had this car for a year, I've known him for years."
+    },
+    {
+      "title": "For или since?",
+      "body": "For называет отрезок времени — сколько это длится: for two hours, for a week, for a long time. Since называет точку начала — с какого момента: since Monday, since 2020, since last year. Сказать «since two years» нельзя: два года — это отрезок, а не начало.",
+      "examples": [
+        { "en": "He has been in the hotel for three days.", "ru": "Он в отеле уже три дня." },
+        { "en": "He has been in the hotel since Sunday.", "ru": "Он в отеле с воскресенья." },
+        { "en": "I haven't seen her since the wedding.", "ru": "Я не видел её со свадьбы." }
+      ],
+      "tip": "Проверка: если по-русски можно сказать «с…» (с понедельника, с мая) — нужен since. Если «уже столько-то» — for."
+    },
+    {
+      "title": "Вопрос How long…?",
+      "body": "О том, сколько длится ситуация, спрашивают How long have you…? Вопрос «How long do you live here?» — калька с русского «Как давно вы здесь живёте?» и ошибка. Если же ситуация уже закончилась, используйте Past Simple.",
+      "examples": [
+        { "en": "How long have you lived here?", "ru": "Как давно вы здесь живёте?" },
+        { "en": "How long has she had this car?", "ru": "Как давно у неё эта машина?" },
+        { "en": "How long have you been married?", "ru": "Как давно вы женаты?" }
+      ],
+      "tip": "Сравните: I lived in Kazan for two years (больше там не живу) — I have lived in Kazan for two years (живу и сейчас)."
+    }
+  ],
+  "vocab": [
+    { "en": "for", "ru": "в течение (какого-то времени)", "example": "We waited for two hours." },
+    { "en": "since", "ru": "с (какого-то момента)", "example": "I have been here since Monday." },
+    { "en": "how long", "ru": "как долго, сколько времени", "example": "Tell me, how long is the flight?" },
+    { "en": "known", "ru": "знал (третья форма know)", "example": "I have known Olga for ten years." },
+    { "en": "married", "ru": "женатый, замужем", "example": "They have been married for twenty years." },
+    { "en": "for ages", "ru": "целую вечность, очень давно", "example": "I haven't seen you for ages!" },
+    { "en": "colleague", "ru": "коллега", "example": "This is my colleague from the Berlin office." },
+    { "en": "childhood", "ru": "детство", "example": "We have been friends since childhood." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "since", "ru": "с (какого-то момента)" },
+        { "en": "how long", "ru": "как долго" },
+        { "en": "married", "ru": "женатый, замужем" },
+        { "en": "colleague", "ru": "коллега" },
+        { "en": "childhood", "ru": "детство" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы живёте здесь пять лет и никуда не уезжаете. Как об этом сказать?",
+      "options": ["I have lived here for five years.", "I live here for five years.", "I have lived here since five years.", "I am living here five years."],
+      "answer": 0,
+      "explanation": "Ситуация началась в прошлом и продолжается — нужен Present Perfect: have lived. «I live here for five years» — калька с русского настоящего времени, а five years — отрезок, поэтому for, а не since."
+    },
+    {
+      "type": "gap",
+      "sentence": "She has worked at this company ___ 2019.",
+      "translation": "Она работает в этой компании с 2019 года.",
+      "options": ["since", "for", "from", "in"],
+      "answer": 0,
+      "explanation": "2019 — это точка начала, поэтому since. For нужен для отрезка времени (for five years), а from в Present Perfect в этом значении не используется."
+    },
+    {
+      "type": "listen",
+      "audio": "We have been in London for three days.",
+      "question": "Что вы услышали?",
+      "options": [
+        "We have been in London for three days.",
+        "We have been in London for three weeks.",
+        "We were in London for three days.",
+        "We have been in London since Thursday."
+      ],
+      "answer": 0,
+      "explanation": "Have been … for three days — они в Лондоне уже три дня и всё ещё там. We were in London значило бы, что поездка закончилась."
+    },
+    {
+      "type": "translate",
+      "source": "Как давно вы здесь работаете?",
+      "answer": "How long have you worked here?",
+      "accept": ["How long have you been working here?"],
+      "distractors": ["do", "work", "since"],
+      "explanation": "Вопрос о ситуации, которая продолжается, строится в Present Perfect: How long have you worked…? «How long do you work here?» — калька с русского."
+    },
+    {
+      "type": "gap",
+      "sentence": "I have known my best friend ___ twenty years.",
+      "translation": "Я знаю своего лучшего друга двадцать лет.",
+      "options": ["for", "since", "during", "already"],
+      "answer": 0,
+      "explanation": "Twenty years — отрезок времени, поэтому for. Since требует точки начала: since childhood, since 2005."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["We have been married since 2015.", "We are married since 2015.", "We have been married for 2015.", "We married since 2015."],
+      "answer": 0,
+      "explanation": "С since нужен Present Perfect: have been married. «We are married since…» — ошибка из-за русского настоящего времени, а for не сочетается с точкой начала."
+    },
+    {
+      "type": "speak",
+      "text": "How long have you lived here?",
+      "translation": "Как давно вы здесь живёте?"
+    },
+    {
+      "type": "type",
+      "source": "Я здесь с понедельника.",
+      "answer": "I have been here since Monday.",
+      "accept": ["I've been here since Monday."],
+      "explanation": "По-русски глагола нет вообще, а в английском нужен Present Perfect от be: have been. Понедельник — точка начала, поэтому since."
+    },
+    {
+      "type": "listen",
+      "audio": "My sister moved to Spain in May, so she has lived there for six months.",
+      "question": "Как долго сестра живёт в Испании?",
+      "options": ["Шесть месяцев", "Шесть лет", "С прошлого года", "Она уже вернулась"],
+      "answer": 0,
+      "explanation": "Has lived there for six months — живёт там уже шесть месяцев и сейчас. Moved in May — законченное действие в прошлом, поэтому Past Simple."
+    },
+    {
+      "type": "gap",
+      "sentence": "How long ___ this phone? — For about a year.",
+      "translation": "Как давно у вас этот телефон? — Около года.",
+      "options": ["have you had", "do you have", "are you having", "you have"],
+      "answer": 0,
+      "explanation": "Телефон у человека до сих пор, поэтому Present Perfect: have you had. Первое have — помощник, второе слово had — третья форма глагола have."
+    },
+    {
+      "type": "translate",
+      "source": "Я не видел её с прошлой недели.",
+      "answer": "I haven't seen her since last week.",
+      "accept": ["I have not seen her since last week."],
+      "distractors": ["for", "saw", "from"],
+      "explanation": "Last week — точка, с которой идёт отсчёт, поэтому since. После have нужна третья форма seen, а не saw."
+    },
+    {
+      "type": "dictation",
+      "audio": "We have known each other for ages.",
+      "translation": "Мы знаем друг друга целую вечность."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение значит, что человек больше НЕ живёт в Москве?",
+      "options": ["He lived in Moscow for three years.", "He has lived in Moscow for three years.", "He has lived in Moscow since 2020.", "He has been in Moscow for three years."],
+      "answer": 0,
+      "explanation": "Past Simple (lived) говорит о законченном периоде: жил три года и уехал. Present Perfect в остальных вариантах значит, что он в Москве до сих пор."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "a1-20",
+  "level": "A1",
+  "order": 20,
+  "title": { "ru": "Описываем людей и вещи: прилагательные", "en": "Describing people and things: adjectives" },
+  "goal": { "ru": "Научитесь описывать людей, вещи и места и усиливать слова с very, quite и really.", "en": "Learn to describe people, things and places and use very, quite and really." },
+  "theory": [
+    {
+      "title": "Прилагательное стоит перед существительным",
+      "body": "В английском прилагательное стоит перед существительным: a tall man, a quiet street. Оно не меняется ни по числам, ни по родам: new car, new cars — никакого -s. Артикль ставится перед прилагательным: a new car, an old house.",
+      "examples": [
+        { "en": "She has got long hair.", "ru": "У неё длинные волосы." },
+        { "en": "It's a quiet street.", "ru": "Это тихая улица." },
+        { "en": "They are friendly people.", "ru": "Они дружелюбные люди." }
+      ],
+      "tip": "«News cars» и «a car new» — ошибки. Правильно: new cars, a new car."
+    },
+    {
+      "title": "После to be — без артикля",
+      "body": "Второй способ описать — to be + прилагательное: My boss is friendly. Артикль тогда не нужен: «He is a tall» — ошибка, потому что a относится к существительному, а его здесь нет. Сравните: He is tall. / He is a tall man.",
+      "examples": [
+        { "en": "The hotel is clean.", "ru": "Отель чистый." },
+        { "en": "Our teacher is young.", "ru": "Наш учитель молодой." },
+        { "en": "This is a clean hotel.", "ru": "Это чистый отель." }
+      ],
+      "tip": "Спросить, какой человек или место: What is he like? — «Какой он?» What is your city like? — «Какой у вас город?»"
+    },
+    {
+      "title": "Very, quite, really",
+      "body": "Эти слова стоят перед прилагательным и меняют его силу. Quite — «довольно», very — «очень», really — «очень, действительно», звучит чуть эмоциональнее. С артиклем порядок такой: a very nice flat, a really good film.",
+      "examples": [
+        { "en": "The film is quite long.", "ru": "Фильм довольно длинный." },
+        { "en": "Her brother is very tall.", "ru": "Её брат очень высокий." },
+        { "en": "It's a really beautiful city.", "ru": "Это очень красивый город." }
+      ],
+      "tip": "«Очень нравится» — really like, а не «very like»: I really like this city."
+    }
+  ],
+  "vocab": [
+    { "en": "tall", "ru": "высокий (о человеке)", "example": "My brother is very tall." },
+    { "en": "short", "ru": "короткий; невысокий", "example": "She has got short hair." },
+    { "en": "young", "ru": "молодой", "example": "Our teacher is quite young." },
+    { "en": "friendly", "ru": "дружелюбный", "example": "The people here are really friendly." },
+    { "en": "quiet", "ru": "тихий, спокойный", "example": "We live in a quiet street." },
+    { "en": "clean", "ru": "чистый", "example": "The hotel is clean and cheap." },
+    { "en": "hair", "ru": "волосы", "example": "She has got long hair." },
+    { "en": "quite", "ru": "довольно", "example": "The film is quite long." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "tall", "ru": "высокий" },
+        { "en": "young", "ru": "молодой" },
+        { "en": "friendly", "ru": "дружелюбный" },
+        { "en": "quiet", "ru": "тихий" },
+        { "en": "clean", "ru": "чистый" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «У меня новая машина»?",
+      "options": ["I have got a car new.", "I have got a new car.", "I have got new a car.", "I have got new car."],
+      "answer": 1,
+      "explanation": "Порядок такой: артикль, прилагательное, существительное — a new car. Артикль нельзя ни пропустить, ни поставить после прилагательного."
+    },
+    {
+      "type": "gap",
+      "sentence": "They are very ___ people.",
+      "translation": "Они очень дружелюбные люди.",
+      "options": ["friendly", "friendlys", "friendlies", "a friendly"],
+      "answer": 0,
+      "explanation": "Прилагательное в английском не меняется по числам: friendly people, без -s. Артикль a перед множественным числом тоже не ставится."
+    },
+    {
+      "type": "listen",
+      "audio": "My sister is tall and she has got short hair.",
+      "question": "Как выглядит сестра?",
+      "options": ["Высокая, с короткими волосами", "Высокая, с длинными волосами", "Невысокая, с короткими волосами", "Невысокая, с длинными волосами"],
+      "answer": 0,
+      "explanation": "Tall — «высокая», short hair — «короткие волосы». Слово short здесь относится к волосам, а не к росту."
+    },
+    {
+      "type": "translate",
+      "source": "Это очень тихая улица.",
+      "answer": "It is a very quiet street.",
+      "accept": ["It's a very quiet street.", "This is a very quiet street.", "It is a really quiet street.", "It's a really quiet street.", "This is a really quiet street."],
+      "distractors": ["an", "streets", "much"],
+      "explanation": "Порядок: a, потом very, потом прилагательное и существительное — a very quiet street. Артикль a, а не an: слово very начинается с согласного звука."
+    },
+    {
+      "type": "gap",
+      "sentence": "My new boss is ___.",
+      "translation": "Мой новый начальник молодой.",
+      "options": ["a young", "young", "youngs", "the young"],
+      "answer": 1,
+      "explanation": "После to be прилагательное стоит одно, без артикля: is young. Артикль нужен только существительному: a young man."
+    },
+    {
+      "type": "speak",
+      "text": "She has got long hair.",
+      "translation": "У неё длинные волосы."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Мне очень нравится этот город»?",
+      "options": ["I very like this city.", "I really like this city.", "I like very this city.", "I am very like this city."],
+      "answer": 1,
+      "explanation": "Very ставится только перед прилагательным: very nice. Перед глаголом like «очень» — это really: I really like."
+    },
+    {
+      "type": "translate",
+      "source": "Отель довольно чистый.",
+      "answer": "The hotel is quite clean.",
+      "accept": ["The hotel's quite clean.", "The hotel is pretty clean.", "The hotel is fairly clean."],
+      "distractors": ["a", "very", "cleans"],
+      "explanation": "«Довольно» — quite, оно стоит перед прилагательным. После is артикль не нужен, а very clean значило бы «очень чистый»."
+    },
+    {
+      "type": "listen",
+      "audio": "It's a really nice flat, but it's quite small.",
+      "question": "Что человек говорит о квартире?",
+      "options": ["Она хорошая, но довольно маленькая", "Она хорошая и довольно большая", "Она плохая и очень маленькая", "Она хорошая, но слишком дорогая"],
+      "answer": 0,
+      "explanation": "A really nice flat — «очень хорошая квартира», quite small — «довольно маленькая». But («но») соединяет плюс и минус."
+    },
+    {
+      "type": "gap",
+      "sentence": "He has got two ___.",
+      "translation": "У него двое маленьких детей.",
+      "options": ["small children", "smalls children", "children small", "small childrens"],
+      "answer": 0,
+      "explanation": "Прилагательное стоит перед существительным и не получает -s: small children. Children — уже множественное число, второе -s ему не нужно."
+    },
+    {
+      "type": "type",
+      "source": "Мой брат очень высокий.",
+      "answer": "My brother is very tall.",
+      "accept": ["My brother's very tall.", "My brother is really tall.", "My brother's really tall."],
+      "explanation": "О росте человека говорят tall, а не high или big. После is прилагательное стоит без артикля: is very tall."
+    },
+    {
+      "type": "dictation",
+      "audio": "We live in a quiet street.",
+      "translation": "Мы живём на тихой улице."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["He is a tall.", "She has got a hair long.", "It's a very clean city.", "They are youngs."],
+      "answer": 2,
+      "explanation": "Порядок a very clean city правильный: артикль, very, прилагательное, существительное. В остальных вариантах ошибки: is tall без артикля, long hair, young без -s."
+    }
+  ]
+}

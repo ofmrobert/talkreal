@@ -1,0 +1,155 @@
+{
+  "id": "a2-17",
+  "level": "A2",
+  "order": 17,
+  "title": { "ru": "Кто-то, что-нибудь, никто, все: something, anything, nothing, everyone", "en": "Indefinite pronouns: something, anything, nothing, everyone" },
+  "goal": { "ru": "Научитесь говорить о людях и вещах, не называя их точно, и не ставить два отрицания.", "en": "Learn to talk about people and things without naming them, and to avoid double negatives." },
+  "theory": [
+    {
+      "title": "Some- и any-",
+      "body": "Эти слова работают так же, как some и any. В утверждениях — something (что-то), someone (кто-то), somewhere (где-то). В вопросах и отрицаниях — anything, anyone, anywhere. Сказать «I didn't buy something» — ошибка: после not нужно слово с any-.",
+      "examples": [
+        { "en": "There is something in my shoe.", "ru": "У меня что-то в ботинке." },
+        { "en": "Did anyone call?", "ru": "Кто-нибудь звонил?" },
+        { "en": "I didn't buy anything.", "ru": "Я ничего не купил." }
+      ],
+      "tip": "Слова на -one и -body значат одно и то же: someone = somebody, anyone = anybody, everyone = everybody."
+    },
+    {
+      "title": "Только одно отрицание",
+      "body": "В русском отрицаний два: «Я ничего не знаю». В английском оно одно. Либо отрицательное слово с обычным глаголом: I know nothing, Nobody called. Либо глагол с not и слово на any-: I don't know anything. «I don't know nothing» — самая частая ошибка русскоговорящих.",
+      "examples": [
+        { "en": "Nobody knows the answer.", "ru": "Никто не знает ответа." },
+        { "en": "I have nothing to wear.", "ru": "Мне нечего надеть." },
+        { "en": "We didn't go anywhere at the weekend.", "ru": "В выходные мы никуда не ездили." }
+      ],
+      "tip": "В начале предложения используйте nobody и nothing: Nobody came. «Anybody didn't come» сказать нельзя."
+    },
+    {
+      "title": "Everyone и everything: единственное число",
+      "body": "«Все» о людях — everyone или everybody, «всё» — everything. По-русски «все знают» — множественное число, но в английском после этих слов глагол стоит в единственном: everyone knows, everything is. То же самое с nobody, someone и anything.",
+      "examples": [
+        { "en": "Everyone is ready.", "ru": "Все готовы." },
+        { "en": "Everything was delicious.", "ru": "Всё было очень вкусно." },
+        { "en": "Does everybody have a ticket?", "ru": "У всех есть билет?" }
+      ],
+      "tip": "Слово all само по себе в значении «все» не используют: «All know him» — ошибка, правильно Everyone knows him."
+    }
+  ],
+  "vocab": [
+    { "en": "something", "ru": "что-то, что-нибудь", "example": "I need something to eat." },
+    { "en": "anything", "ru": "что-нибудь (в вопросе); ничего (после not)", "example": "Do you need anything from the shop?" },
+    { "en": "nothing", "ru": "ничего, ничто", "example": "There is nothing in the fridge." },
+    { "en": "someone", "ru": "кто-то, кто-нибудь", "example": "There is someone at the door." },
+    { "en": "everyone", "ru": "все (о людях)", "example": "I think everyone is here." },
+    { "en": "nobody", "ru": "никто", "example": "There was nobody at home." },
+    { "en": "everything", "ru": "всё", "example": "Thank you for everything." },
+    { "en": "somewhere", "ru": "где-то, куда-нибудь", "example": "Let's go somewhere warm this winter." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "something", "ru": "что-то" },
+        { "en": "nothing", "ru": "ничего" },
+        { "en": "someone", "ru": "кто-то" },
+        { "en": "nobody", "ru": "никто" },
+        { "en": "everything", "ru": "всё" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Я ничего не купил»?",
+      "options": ["I didn't buy anything.", "I didn't buy nothing.", "I didn't buy something.", "I not bought anything."],
+      "answer": 0,
+      "explanation": "В английском предложении одно отрицание: didn't уже отрицает, поэтому дальше anything. «Didn't buy nothing» — калька с русского двойного отрицания."
+    },
+    {
+      "type": "gap",
+      "sentence": "Listen! There is ___ at the door.",
+      "translation": "Послушайте! Кто-то стоит у двери.",
+      "options": ["someone", "anyone", "everyone", "some"],
+      "answer": 0,
+      "explanation": "Это утверждение, и речь о человеке — нужно someone. Anyone ставится в вопросах и отрицаниях: Is there anyone at the door?"
+    },
+    {
+      "type": "listen",
+      "audio": "Nobody told me about the meeting.",
+      "question": "Что случилось?",
+      "options": ["Говорящему никто не сказал о совещании", "Говорящий никому не сказал о совещании", "Совещание отменили", "На совещание никто не пришёл"],
+      "answer": 0,
+      "explanation": "Nobody told me — «никто мне не сказал». Nobody уже отрицательное слово, поэтому глагол без not: told, а не «didn't tell»."
+    },
+    {
+      "type": "translate",
+      "source": "Все знают этот ресторан.",
+      "answer": "Everyone knows this restaurant.",
+      "accept": ["Everybody knows this restaurant."],
+      "distractors": ["know", "all", "are"],
+      "explanation": "После everyone глагол стоит в единственном числе: knows, с -s. All в значении «все люди» само по себе не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "Is there ___ interesting on TV tonight?",
+      "translation": "Сегодня вечером по телевизору есть что-нибудь интересное?",
+      "options": ["anything", "anyone", "anywhere", "any"],
+      "answer": 0,
+      "explanation": "Речь о вещи, а не о человеке или месте, поэтому anything. Просто any не может стоять без существительного перед прилагательным."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Everyone is waiting for you.", "Everyone are waiting for you.", "Everyone waiting for you.", "All is waiting for you."],
+      "answer": 0,
+      "explanation": "Everyone требует глагола в единственном числе: is, а не are. Русское «все ждут» во множественном числе здесь подводит."
+    },
+    {
+      "type": "speak",
+      "text": "I have nothing to wear tonight.",
+      "translation": "Мне нечего надеть сегодня вечером."
+    },
+    {
+      "type": "type",
+      "source": "Никто не знает ответ.",
+      "answer": "Nobody knows the answer.",
+      "accept": ["No one knows the answer.", "No-one knows the answer."],
+      "explanation": "Nobody уже содержит отрицание, поэтому глагол без not и с -s: knows. «Nobody doesn't know» — двойное отрицание и ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "I looked everywhere, but I didn't find my keys anywhere.",
+      "question": "Нашёл ли говорящий ключи?",
+      "options": ["Нет, он нигде их не нашёл", "Да, они были в сумке", "Да, их кто-то принёс", "Он ещё не искал"],
+      "answer": 0,
+      "explanation": "Didn't find … anywhere — «нигде не нашёл»: после didn't идёт anywhere, а не nowhere. Everywhere значит «везде»."
+    },
+    {
+      "type": "gap",
+      "sentence": "We didn't go ___ at the weekend. We stayed at home.",
+      "translation": "В выходные мы никуда не ездили. Мы остались дома.",
+      "options": ["anywhere", "nowhere", "somewhere", "nothing"],
+      "answer": 0,
+      "explanation": "После didn't нужно слово на any-: anywhere. Nowhere дало бы второе отрицание, а somewhere используется в утверждениях."
+    },
+    {
+      "type": "translate",
+      "source": "В холодильнике ничего нет.",
+      "answer": "There is nothing in the fridge.",
+      "accept": ["There's nothing in the fridge.", "There isn't anything in the fridge.", "There is not anything in the fridge."],
+      "distractors": ["isn't", "anything", "no"],
+      "explanation": "Правильны два варианта: is nothing или isn't anything. А вот «isn't nothing» — двойное отрицание, в английском так нельзя."
+    },
+    {
+      "type": "dictation",
+      "audio": "I did not buy anything at the airport.",
+      "translation": "Я ничего не купил в аэропорту."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Кто-нибудь звонил?»",
+      "options": ["Did anyone call?", "Did anyone called?", "Did nobody called?", "Anyone did call?"],
+      "answer": 0,
+      "explanation": "В вопросе используем anyone, а после did глагол стоит в начальной форме: call, а не called."
+    }
+  ]
+}

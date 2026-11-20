@@ -1,0 +1,197 @@
+{
+  "id": "b2-18",
+  "level": "B2",
+  "order": 18,
+  "title": { "ru": "Предлоги после глаголов, прилагательных и существительных", "en": "Dependent prepositions" },
+  "goal": { "ru": "Научитесь выбирать верный предлог в сочетаниях вроде depend on, capable of, a reason for, succeed in и object to.", "en": "Learn to choose the right preposition in combinations like depend on, capable of, a reason for, succeed in and object to." },
+  "theory": [
+    {
+      "title": "Глагол + предлог",
+      "body": "Многие глаголы требуют своего предлога, и он редко совпадает с русским: depend on («зависеть от»), succeed in («преуспеть в»), object to («возражать против»), apply for («подавать заявку на»). После предлога глагол стоит в форме на -ing.",
+      "examples": [
+        { "en": "It depends on the weather.", "ru": "Это зависит от погоды." },
+        { "en": "She succeeded in finding a new job.", "ru": "Ей удалось найти новую работу." },
+        { "en": "I object to being treated like this.", "ru": "Я возражаю против такого обращения со мной." }
+      ],
+      "tip": "«Depend from» — калька с русского «зависеть от». А to в object to — предлог, а не частица инфинитива, поэтому object to paying, а не «object to pay»."
+    },
+    {
+      "title": "Прилагательное + предлог",
+      "body": "У прилагательных тоже есть свои предлоги: capable of, aware of, responsible for, keen on, similar to, married to. Угадать их по русскому переводу нельзя, поэтому запоминайте прилагательное сразу вместе с предлогом.",
+      "examples": [
+        { "en": "He is capable of working under pressure.", "ru": "Он способен работать в условиях стресса." },
+        { "en": "Who is responsible for this project?", "ru": "Кто отвечает за этот проект?" },
+        { "en": "She is married to a doctor.", "ru": "Она замужем за врачом." }
+      ],
+      "tip": "«Married with a doctor» — частая ошибка: правильно married to. А married with two children значит «женат (замужем), двое детей»."
+    },
+    {
+      "title": "Существительное + предлог",
+      "body": "Там, где в русском стоит родительный падеж, в английском не всегда of: a reason for («причина чего-то»), a solution to («решение чего-то»), an increase in («рост чего-то»), demand for («спрос на»), an effect on («влияние на»).",
+      "examples": [
+        { "en": "What was the reason for the delay?", "ru": "В чём была причина задержки?" },
+        { "en": "There is no easy solution to this problem.", "ru": "У этой проблемы нет простого решения." },
+        { "en": "There has been an increase in prices.", "ru": "Цены выросли." }
+      ],
+      "tip": "«The reason of the delay» и «the solution of the problem» — кальки с русского родительного падежа. Правильно: the reason for, the solution to."
+    }
+  ],
+  "vocab": [
+    { "en": "to depend on", "ru": "зависеть от", "example": "The price is going to depend on the season." },
+    { "en": "capable of", "ru": "способный (на что-то)", "example": "She is capable of running the whole department." },
+    { "en": "a reason for", "ru": "причина (чего-то)", "example": "Is there a reason for the delay?" },
+    { "en": "to succeed in", "ru": "добиться успеха в, суметь", "example": "Few people manage to succeed in changing their habits." },
+    { "en": "to object to", "ru": "возражать против", "example": "Nobody is likely to object to the new schedule." },
+    { "en": "responsible for", "ru": "ответственный за", "example": "Who is responsible for the budget?" },
+    { "en": "aware of", "ru": "знающий о, в курсе", "example": "I wasn't aware of the new rules." },
+    { "en": "a solution to", "ru": "решение (проблемы)", "example": "We need a solution to the parking problem." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to depend on", "ru": "зависеть от" },
+        { "en": "capable of", "ru": "способный (на что-то)" },
+        { "en": "to object to", "ru": "возражать против" },
+        { "en": "responsible for", "ru": "ответственный за" },
+        { "en": "aware of", "ru": "знающий о, в курсе" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "Everything depends on the client's decision.",
+        "Everything depends from the client's decision.",
+        "Everything depends of the client's decision.",
+        "Everything is depend on the client's decision."
+      ],
+      "answer": 0,
+      "explanation": "«Зависеть от» — depend on. From и of — кальки с русского «от»; depend — обычный глагол, поэтому is перед ним не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "She finally succeeded ___ the bank to lower the interest rate.",
+      "translation": "Ей наконец удалось убедить банк снизить процентную ставку.",
+      "options": ["in persuading", "to persuade", "in persuade", "on persuading"],
+      "answer": 0,
+      "explanation": "Succeed требует предлога in, а после предлога глагол стоит в форме на -ing: succeeded in persuading. Инфинитив здесь — частая ошибка по аналогии с manage to do."
+    },
+    {
+      "type": "listen",
+      "audio": "Most of the staff objected to working on Saturdays.",
+      "question": "Как сотрудники отнеслись к работе по субботам?",
+      "options": [
+        "Большинство было против",
+        "Большинство согласилось",
+        "Они сами это предложили",
+        "Им было всё равно"
+      ],
+      "answer": 0,
+      "explanation": "Object to — «возражать против». To здесь предлог, поэтому после него форма на -ing: objected to working."
+    },
+    {
+      "type": "translate",
+      "source": "Кто отвечает за этот проект?",
+      "answer": "Who is responsible for this project?",
+      "accept": [
+        "Who's responsible for this project?",
+        "Who is in charge of this project?",
+        "Who's in charge of this project?"
+      ],
+      "distractors": ["of", "responds", "about"],
+      "explanation": "«Отвечать за что-то» — be responsible for. Глагол respond означает «отвечать на вопрос или письмо» и здесь не подходит, а предлоги of и about с responsible в этом значении не употребляются."
+    },
+    {
+      "type": "gap",
+      "sentence": "What was the reason ___ the delay?",
+      "translation": "В чём была причина задержки?",
+      "options": ["for", "of", "to", "about"],
+      "answer": 0,
+      "explanation": "После reason ставится for: the reason for the delay. Of — калька с русского родительного падежа «причина задержки»."
+    },
+    {
+      "type": "speak",
+      "text": "It depends on how much time we have.",
+      "translation": "Это зависит от того, сколько у нас времени."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "My sister is married to an engineer.",
+        "My sister is married with an engineer.",
+        "My sister is married on an engineer.",
+        "My sister is married for an engineer."
+      ],
+      "answer": 0,
+      "explanation": "«Замужем за кем-то, женат на ком-то» — married to. With, on и for — кальки с русских предлогов «с», «на» и «за»."
+    },
+    {
+      "type": "type",
+      "source": "Я не знал об этой проблеме.",
+      "answer": "I wasn't aware of this problem.",
+      "accept": [
+        "I wasn't aware of the problem.",
+        "I wasn't aware of this issue.",
+        "I was unaware of this problem.",
+        "I didn't know about this problem.",
+        "I didn't know about the problem.",
+        "I didn't know about this issue."
+      ],
+      "explanation": "«Знать о чём-то, быть в курсе» — be aware of. С глаголом know предлог другой: know about."
+    },
+    {
+      "type": "listen",
+      "audio": "There has been a sharp increase in rents, so many families are looking for a solution to the housing problem.",
+      "question": "Что произошло с арендной платой?",
+      "options": [
+        "Она резко выросла",
+        "Она резко упала",
+        "Она осталась прежней",
+        "Её отменили для семей"
+      ],
+      "answer": 0,
+      "explanation": "A sharp increase in rents — «резкий рост арендной платы»: после increase ставится in. Обратите внимание и на a solution to — «решение проблемы»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I don't think he is capable ___ a team of twenty people.",
+      "translation": "Не думаю, что он способен руководить командой из двадцати человек.",
+      "options": ["of managing", "to manage", "of manage", "for managing"],
+      "answer": 0,
+      "explanation": "Capable требует предлога of и формы на -ing: capable of managing. Инфинитив употребляется после able: he is able to manage."
+    },
+    {
+      "type": "translate",
+      "source": "У этой проблемы нет простого решения.",
+      "answer": "There is no simple solution to this problem.",
+      "accept": [
+        "There's no simple solution to this problem.",
+        "There is no easy solution to this problem.",
+        "There's no easy solution to this problem.",
+        "This problem has no simple solution.",
+        "This problem has no easy solution."
+      ],
+      "distractors": ["of", "decision", "isn't"],
+      "explanation": "«Решение проблемы» — a solution to a problem: предлог to, а не of. Decision — это решение, которое кто-то принял, а не способ справиться с проблемой."
+    },
+    {
+      "type": "dictation",
+      "audio": "She is capable of working under pressure.",
+      "translation": "Она способна работать в условиях стресса."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Я возражаю против того, чтобы платить дважды»?",
+      "options": [
+        "I object to paying twice.",
+        "I object to pay twice.",
+        "I object against paying twice.",
+        "I object paying twice."
+      ],
+      "answer": 0,
+      "explanation": "Object to + форма на -ing: to здесь предлог, а не часть инфинитива. Against — калька с русского «против», а совсем без предлога object с формой на -ing не употребляется."
+    }
+  ]
+}

@@ -137,8 +137,28 @@ body {
 .chai-steam-2 { animation-delay: 0.8s; }
 .chai-steam-3 { animation-delay: 1.6s; }
 
+/* The course path: round, chunky nodes that press down like buttons. */
+.path-node {
+  box-shadow: 0 7px 0 0 var(--node-dark);
+  transition: transform 0.07s, box-shadow 0.07s;
+}
+.path-node:active {
+  transform: translateY(5px);
+  box-shadow: 0 2px 0 0 var(--node-dark);
+}
+@keyframes path-ring {
+  0% { box-shadow: 0 0 0 0 var(--node-ring); }
+  100% { box-shadow: 0 0 0 16px transparent; }
+}
+.path-ring { animation: path-ring 1.6s ease-out infinite; }
+@keyframes path-hop {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -6px); }
+}
+.path-hop { animation: path-hop 1.4s ease-in-out infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   .chai-bob, .chai-steam, .slide-in, .sheet-up, .shake, .pulse-ring,
-  .avatar-blink, .avatar-talk, .avatar-breathe, .bubble-in, .float-slow, .pop-in, .pulse-soft { animation: none; }
+  .avatar-blink, .avatar-talk, .avatar-breathe, .bubble-in, .float-slow, .pop-in, .pulse-soft, .path-ring, .path-hop { animation: none; }
   .confetti { display: none; }
 }

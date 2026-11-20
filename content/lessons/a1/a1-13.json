@@ -1,0 +1,155 @@
+{
+  "id": "a1-13",
+  "level": "A1",
+  "order": 13,
+  "title": { "ru": "Как пройти? Turn left, go straight on, don't…", "en": "Imperatives and directions" },
+  "goal": { "ru": "Научитесь спрашивать дорогу в городе и объяснять, как пройти.", "en": "Learn to ask the way in a city and give directions." },
+  "theory": [
+    {
+      "title": "Указание: просто глагол",
+      "body": "Чтобы сказать «сделай» или «сделайте», возьмите глагол в начальной форме, без to: Go! Wait! Turn left. Форма одна и для «ты», и для «вы». Со словом please фраза звучит вежливо.",
+      "examples": [
+        { "en": "Turn left at the bank.", "ru": "Поверните налево у банка." },
+        { "en": "Go straight on.", "ru": "Идите прямо." },
+        { "en": "Wait here, please.", "ru": "Подождите здесь, пожалуйста." }
+      ],
+      "tip": "Глагол стоит первым и без to: «To turn left» — ошибка."
+    },
+    {
+      "title": "Don't: «не делайте»",
+      "body": "Запрет или совет «не делай» — это don't + глагол: Don't turn right. Don't всегда один и тот же, doesn't здесь не бывает. Сказать «No turn» или «Not go» нельзя.",
+      "examples": [
+        { "en": "Don't cross the street here.", "ru": "Не переходите улицу здесь." },
+        { "en": "Don't take the bus. It's slow.", "ru": "Не садитесь на автобус. Он едет медленно." },
+        { "en": "Please don't be late.", "ru": "Пожалуйста, не опаздывайте." }
+      ],
+      "tip": "С глаголом be тоже don't: Don't be late."
+    },
+    {
+      "title": "Как спросить дорогу",
+      "body": "Начните с Excuse me, а потом спросите: Where is…? или Is there… near here? В ответе вы услышите left (налево), right (направо) и straight on (прямо). «У банка», «у светофора» — с предлогом at: at the bank, at the traffic lights.",
+      "examples": [
+        { "en": "Excuse me, where is the station?", "ru": "Извините, где вокзал?" },
+        { "en": "Is there a pharmacy near here?", "ru": "Здесь поблизости есть аптека?" },
+        { "en": "It's on the left, next to the bank.", "ru": "Она слева, рядом с банком." }
+      ],
+      "tip": "«Слева» и «справа» — on the left, on the right: с предлогом on и артиклем the."
+    }
+  ],
+  "vocab": [
+    { "en": "turn left", "ru": "повернуть налево", "example": "At the bank, turn left." },
+    { "en": "turn right", "ru": "повернуть направо", "example": "Then turn right at the park." },
+    { "en": "go straight on", "ru": "идти прямо", "example": "Please go straight on." },
+    { "en": "street", "ru": "улица", "example": "This street is very long." },
+    { "en": "corner", "ru": "угол", "example": "There is a café on the corner." },
+    { "en": "traffic lights", "ru": "светофор", "example": "The bank is next to the traffic lights." },
+    { "en": "station", "ru": "вокзал, станция", "example": "The station is next to the park." },
+    { "en": "near here", "ru": "поблизости, недалеко отсюда", "example": "Is there a bank near here?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "turn left", "ru": "повернуть налево" },
+        { "en": "turn right", "ru": "повернуть направо" },
+        { "en": "go straight on", "ru": "идти прямо" },
+        { "en": "street", "ru": "улица" },
+        { "en": "corner", "ru": "угол" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать прохожему «Поверните направо»?",
+      "options": ["To turn right.", "Turn right.", "Turning right.", "Turns right."],
+      "answer": 1,
+      "explanation": "Указание — это глагол в начальной форме, без to, без -s и без -ing. Русское «поверните» и «поверни» по-английски звучат одинаково: Turn right."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ straight on and then turn left.",
+      "translation": "Идите прямо, а потом поверните налево.",
+      "options": ["Go", "To go", "Goes", "Going"],
+      "answer": 0,
+      "explanation": "Указание начинается с глагола в начальной форме: Go. Частица to и окончания -es, -ing здесь не нужны."
+    },
+    {
+      "type": "listen",
+      "audio": "Go straight on and turn right at the traffic lights.",
+      "question": "Где нужно повернуть направо?",
+      "options": ["У светофора", "У банка", "На углу", "У вокзала"],
+      "answer": 0,
+      "explanation": "At the traffic lights — «у светофора». Предлог at показывает точку, в которой нужно повернуть."
+    },
+    {
+      "type": "translate",
+      "source": "Не поворачивайте здесь налево.",
+      "answer": "Don't turn left here.",
+      "accept": ["Do not turn left here.", "Don't turn left here, please.", "Please don't turn left here."],
+      "distractors": ["no", "not", "right"],
+      "explanation": "«Не делайте» — это don't + глагол. Одного not или no недостаточно: «Not turn left» и «No turn left» — ошибки."
+    },
+    {
+      "type": "gap",
+      "sentence": "Please ___ be late.",
+      "translation": "Пожалуйста, не опаздывайте.",
+      "options": ["don't", "doesn't", "not", "no"],
+      "answer": 0,
+      "explanation": "В просьбе «не делайте» всегда don't, даже с глаголом be: Don't be late. Doesn't в указаниях не используется, а not и no без do не работают."
+    },
+    {
+      "type": "speak",
+      "text": "Excuse me, where is the station?",
+      "translation": "Извините, где вокзал?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы ищете аптеку. Как спросить прохожего?",
+      "options": ["Excuse me, is there a pharmacy near here?", "Excuse me, there is a pharmacy near here?", "Excuse me, is it a pharmacy near here?", "Excuse me, where a pharmacy is?"],
+      "answer": 0,
+      "explanation": "Вопрос о том, есть ли что-то поблизости, — Is there…? В вопросе is выходит вперёд, а it is не сообщает о наличии предмета."
+    },
+    {
+      "type": "translate",
+      "source": "Банк находится слева.",
+      "answer": "The bank is on the left.",
+      "accept": ["The bank's on the left.", "The bank is on the left side."],
+      "distractors": ["in", "at", "from"],
+      "explanation": "«Слева» — on the left: предлог on и артикль the. Русское «слева» подсказывает from, но «from the left» здесь ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "Don't take the bus. The station is near here.",
+      "question": "Что советует человек?",
+      "options": ["Не ехать на автобусе", "Ехать на автобусе", "Взять такси", "Идти на вокзал завтра"],
+      "answer": 0,
+      "explanation": "Don't take the bus — «не садитесь на автобус». Причина во второй фразе: вокзал near here, то есть совсем близко."
+    },
+    {
+      "type": "gap",
+      "sentence": "The café is ___ the corner of this street.",
+      "translation": "Кафе на углу этой улицы.",
+      "options": ["on", "in", "to"],
+      "answer": 0,
+      "explanation": "«На углу улицы» — on the corner. In the corner говорят про угол внутри комнаты, а to показывает движение."
+    },
+    {
+      "type": "type",
+      "source": "Поверните налево у банка.",
+      "answer": "Turn left at the bank.",
+      "accept": ["Turn left by the bank.", "Turn left near the bank.", "Turn left at the bank, please.", "Please turn left at the bank.", "Take a left at the bank."],
+      "explanation": "Указание начинается с глагола: Turn left. «У банка» как точка на маршруте — at the bank."
+    },
+    {
+      "type": "dictation",
+      "audio": "Turn right at the traffic lights.",
+      "translation": "Поверните направо у светофора."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Not cross the street here.", "Don't cross the street here.", "Doesn't cross the street here.", "No cross the street here."],
+      "answer": 1,
+      "explanation": "«Не переходите» — don't cross. Запрет всегда строится с don't: not и no без do перед глаголом не ставятся, а doesn't в указаниях не бывает."
+    }
+  ]
+}

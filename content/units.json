@@ -1,0 +1,36 @@
+{
+  "_readme": "The units of each level's course, in order. A unit is 5 lessons in a row (lessons 1-5 are unit 1, 6-10 are unit 2, and so on) and ends with a unit test. To add a unit: write 5 more lessons and add its name here.",
+  "lessonsPerUnit": 5,
+  "units": {
+    "A1": [
+      { "ru": "Знакомство", "en": "First steps" },
+      { "ru": "Мой день", "en": "My day" },
+      { "ru": "В городе", "en": "Around town" },
+      { "ru": "Вчера и сейчас", "en": "Then and now" }
+    ],
+    "A2": [
+      { "ru": "Прошлое и планы", "en": "Past and plans" },
+      { "ru": "Точнее и увереннее", "en": "Getting precise" },
+      { "ru": "В поездке", "en": "On the move" },
+      { "ru": "Люди и мнения", "en": "People and opinions" }
+    ],
+    "B1": [
+      { "ru": "Опыт и привычки", "en": "Experience and habits" },
+      { "ru": "Сложные мысли", "en": "Complex ideas" },
+      { "ru": "Работа и общение", "en": "Work and communication" },
+      { "ru": "Говорим точно", "en": "Saying it precisely" }
+    ],
+    "B2": [
+      { "ru": "Времена и сожаления", "en": "Tenses and regrets" },
+      { "ru": "Связная речь", "en": "Joined-up English" },
+      { "ru": "Аргументы и нюансы", "en": "Arguing a point" },
+      { "ru": "Естественная речь", "en": "Natural English" }
+    ],
+    "C1": [
+      { "ru": "Акцент и выразительность", "en": "Emphasis" },
+      { "ru": "Тонкости", "en": "Nuance" },
+      { "ru": "Стиль и регистр", "en": "Style and register" },
+      { "ru": "Убеждение", "en": "Persuasion" }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "c1-15",
+  "level": "C1",
+  "order": 15,
+  "title": { "ru": "Фразовые глаголы и их формальные эквиваленты", "en": "Phrasal verbs and their formal equivalents" },
+  "goal": { "ru": "Научитесь выбирать между разговорным фразовым глаголом и его формальной парой: put up with — tolerate, look into — investigate.", "en": "Learn to choose between a conversational phrasal verb and its formal partner: put up with – tolerate, look into – investigate." },
+  "theory": [
+    {
+      "title": "Два слоя английской лексики",
+      "body": "У многих действий в английском два названия: фразовый глагол германского происхождения и однословный глагол латинского. Put up with и tolerate, look into и investigate, set up и establish значат одно и то же, но принадлежат разным стилям. Фразовые глаголы естественны в разговоре и обычной переписке, однословные — в отчётах, договорах и официальных письмах.",
+      "examples": [
+        { "en": "I can't put up with this noise any longer.", "ru": "Я больше не могу терпеть этот шум." },
+        { "en": "The management will not tolerate bullying of any kind.", "ru": "Руководство не потерпит травли в любой форме." },
+        { "en": "We'll look into it. → The complaint will be investigated.", "ru": "Мы разберёмся. → Жалоба будет рассмотрена." }
+      ],
+      "tip": "Латинский глагол часто похож на русское слово, поэтому его хочется выбрать всегда. Но в разговоре «I cannot tolerate it» звучит как строчка из официального письма."
+    },
+    {
+      "title": "Пары, которые стоит знать",
+      "body": "Запоминайте глаголы парами: turn down — reject, call off — cancel, carry out — conduct, cut down on — reduce, make up for — compensate for, leave out — omit, get rid of — eliminate, put forward — propose. В формальном тексте однословный глагол часто стоит в пассиве, потому что исполнитель не важен.",
+      "examples": [
+        { "en": "They turned down our offer. → Our offer was rejected.", "ru": "Они отказались от нашего предложения. → Наше предложение было отклонено." },
+        { "en": "We need to cut down on travel. → Travel costs must be reduced.", "ru": "Надо поменьше ездить. → Расходы на поездки должны быть сокращены." },
+        { "en": "They called off the match. → The match was cancelled.", "ru": "Матч отменили. → Матч был отменён." }
+      ],
+      "tip": "Не смешивайте две модели: предлог от фразового глагола не переносится на формальный. Investigate the matter, а не «investigate into the matter»."
+    },
+    {
+      "title": "Куда поставить дополнение",
+      "body": "У разделяемых фразовых глаголов существительное может стоять и после частицы, и перед ней, но местоимение — только в середине: turn it down, call it off, set it up. Глаголы из трёх слов и глаголы с предлогом не разделяются: put up with it, look into it, make up for it.",
+      "examples": [
+        { "en": "It was a generous offer, but she turned it down.", "ru": "Предложение было щедрым, но она его отклонила." },
+        { "en": "The figures look wrong; could you look into it?", "ru": "Цифры выглядят неправильно; вы не могли бы разобраться?" },
+        { "en": "Nothing can make up for the time we lost.", "ru": "Потерянное нами время ничем не возместить." }
+      ],
+      "tip": "Русское «отменить его» подсказывает порядок «call off it». Правильно только call it off."
+    }
+  ],
+  "vocab": [
+    { "en": "to put up with", "ru": "терпеть, мириться", "example": "I don't know how you put up with the commute." },
+    { "en": "to tolerate", "ru": "терпеть, допускать (формально)", "example": "We do not tolerate rude behaviour towards staff." },
+    { "en": "to look into", "ru": "разобраться, изучить вопрос", "example": "I'll look into the delay and call you back." },
+    { "en": "to investigate", "ru": "расследовать", "example": "The bank promised to investigate the error." },
+    { "en": "to set up", "ru": "основать, организовать", "example": "They plan to set up a branch in the north." },
+    { "en": "to establish", "ru": "учреждать (формально)", "example": "The aim is to establish a new research centre." },
+    { "en": "to turn down", "ru": "отклонить, отказаться", "example": "I had to turn down the invitation." },
+    { "en": "to call off", "ru": "отменить", "example": "They decided to call off the strike." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to put up with", "ru": "терпеть, мириться" },
+        { "en": "to look into", "ru": "разобраться, изучить вопрос" },
+        { "en": "to set up", "ru": "основать, организовать" },
+        { "en": "to turn down", "ru": "отклонить, отказаться" },
+        { "en": "to call off", "ru": "отменить" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какой глагол — формальный эквивалент look into?",
+      "options": ["overlook", "invest", "investigate", "look after"],
+      "answer": 2,
+      "explanation": "Look into a problem — investigate a problem: «разобраться, расследовать». Overlook значит «упустить из виду», то есть почти противоположное, а look after — «присматривать»."
+    },
+    {
+      "type": "gap",
+      "sentence": "It was a generous offer, but in the end she turned ___.",
+      "translation": "Предложение было щедрым, но в итоге она его отклонила.",
+      "options": ["it down", "down it", "it off", "it out"],
+      "answer": 0,
+      "explanation": "Turn down — разделяемый фразовый глагол, и местоимение ставится только между глаголом и частицей: turned it down. Turn off значит «выключить», а turn out — «оказаться»."
+    },
+    {
+      "type": "translate",
+      "source": "Я больше не могу терпеть этот шум.",
+      "answer": "I can't put up with this noise any longer.",
+      "accept": [
+        "I can't put up with this noise any more.",
+        "I can't put up with this noise anymore.",
+        "I can no longer put up with this noise.",
+        "I can't tolerate this noise any longer.",
+        "I can't stand this noise any longer.",
+        "I can't bear this noise any longer."
+      ],
+      "distractors": ["on", "down", "for", "it"],
+      "explanation": "В разговорной жалобе естественно звучит put up with — глагол из трёх слов, которые не разделяются и не переставляются. Tolerate здесь возможно, но звучит официально."
+    },
+    {
+      "type": "listen",
+      "audio": "The committee has been established to investigate the causes of the accident.",
+      "question": "Зачем создан комитет?",
+      "options": [
+        "Чтобы устранить последствия аварии",
+        "Чтобы расследовать причины аварии",
+        "Чтобы выплатить компенсации пострадавшим",
+        "Чтобы предотвратить новые аварии"
+      ],
+      "answer": 1,
+      "explanation": "Это формальный стиль: established вместо set up и investigate вместо look into. В разговоре то же самое прозвучало бы так: They've set up a committee to look into what caused the accident."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение правильно и уместно в официальном письме клиенту?",
+      "options": [
+        "We're gonna look into what went wrong and get back to you ASAP.",
+        "We are investigating into the matter and will contact with you shortly.",
+        "We look into the matter and contact you shortly.",
+        "We are investigating the matter and will contact you shortly."
+      ],
+      "answer": 3,
+      "explanation": "Investigate и contact — переходные глаголы, после них сразу идёт дополнение: investigate the matter, contact you. Предлоги into и with попадают сюда из look into и get in touch with, а первый вариант слишком разговорный."
+    },
+    {
+      "type": "speak",
+      "text": "I'll look into it and call you back.",
+      "translation": "Я разберусь и перезвоню вам."
+    },
+    {
+      "type": "gap",
+      "sentence": "Because of the storm, the organisers had to call ___ the outdoor concert.",
+      "translation": "Из-за грозы организаторам пришлось отменить концерт под открытым небом.",
+      "options": ["out", "down", "off", "up"],
+      "answer": 2,
+      "explanation": "Call off — «отменить» запланированное событие; формальный эквивалент — cancel. Call up значит «позвонить», а call out — «вызвать» или «выкрикнуть»."
+    },
+    {
+      "type": "type",
+      "source": "Они отклонили наше предложение.",
+      "answer": "They turned down our offer.",
+      "accept": [
+        "They turned our offer down.",
+        "They rejected our offer.",
+        "They declined our offer.",
+        "They refused our offer.",
+        "They turned down our proposal.",
+        "They turned our proposal down.",
+        "They rejected our proposal.",
+        "They declined our proposal.",
+        "They have turned down our offer.",
+        "They have rejected our offer."
+      ],
+      "explanation": "Turn down — нейтральный разговорный вариант, reject и decline — его формальные пары. Существительное может стоять и после частицы, и перед ней: turned down our offer или turned our offer down."
+    },
+    {
+      "type": "listen",
+      "audio": "We simply cannot tolerate this kind of behaviour in the workplace.",
+      "question": "Что вы услышали?",
+      "options": [
+        "We simply cannot tolerate with this kind of behaviour in the workplace.",
+        "We simply cannot tolerate this kind of behaviour in the workplace.",
+        "We simply cannot to tolerate this kind of behaviour in the workplace.",
+        "We simply cannot tolerant this kind of behaviour in the workplace."
+      ],
+      "answer": 1,
+      "explanation": "Tolerate — переходный глагол: дополнение идёт сразу, без предлога. With появляется по ошибке из фразового put up with, а tolerant — прилагательное «терпимый»."
+    },
+    {
+      "type": "translate",
+      "source": "Фонд был учреждён, чтобы помогать молодым учёным.",
+      "answer": "The fund was established to help young scientists.",
+      "accept": [
+        "The foundation was established to help young scientists.",
+        "The fund was set up to help young scientists.",
+        "The foundation was set up to help young scientists.",
+        "The fund was established to support young scientists.",
+        "The fund was founded to help young scientists.",
+        "The fund was established in order to help young scientists."
+      ],
+      "distractors": ["up", "for", "helping", "found"],
+      "explanation": "«Учреждён» — слово официального стиля, поэтому подходит established, формальная пара к set up. Цель выражается инфинитивом to help; «for helping» и «for to help» — ошибки."
+    },
+    {
+      "type": "gap",
+      "sentence": "A small bonus will hardly ___ six months of unpaid overtime.",
+      "translation": "Небольшая премия вряд ли компенсирует полгода неоплаченных переработок.",
+      "options": ["make up for", "make up", "make for", "make out"],
+      "answer": 0,
+      "explanation": "Make up for — «возместить, компенсировать»; формальный эквивалент — compensate for. Без for глагол make up значит «выдумать» или «составлять», а make out — «разобрать, различить»."
+    },
+    {
+      "type": "dictation",
+      "audio": "They decided to call off the strike.",
+      "translation": "Они решили отменить забастовку."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "The meeting isn't necessary, so let's call it off.",
+        "The meeting isn't necessary, so let's call off it.",
+        "The meeting isn't necessary, so let's call it out.",
+        "The meeting isn't necessary, so let's cancel off it."
+      ],
+      "answer": 0,
+      "explanation": "Местоимение у разделяемого фразового глагола стоит только в середине: call it off. У глагола cancel никакой частицы нет: cancel it."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "b1-20",
+  "level": "B1",
+  "order": 20,
+  "title": { "ru": "Make, let, allow и «хочу, чтобы ты…»", "en": "Make, let, allow and verb + object + infinitive" },
+  "goal": { "ru": "Научитесь говорить «меня заставили», «мне разрешили» и «я хочу, чтобы вы…».", "en": "Learn to say that someone made you, let you or wants you to do something." },
+  "theory": [
+    {
+      "title": "Make и let: глагол без to",
+      "body": "Make в значении «заставить» и let в значении «позволить» строятся одинаково: make / let + кого + глагол без to. Русский инфинитив («заставил меня ждать») подсказывает to wait, но после этих двух глаголов to не ставится никогда.",
+      "examples": [
+        { "en": "My boss made me rewrite the report.", "ru": "Начальник заставил меня переписать отчёт." },
+        { "en": "They let us leave early.", "ru": "Нам разрешили уйти пораньше." },
+        { "en": "Let me think about it.", "ru": "Дайте мне подумать." }
+      ],
+      "tip": "«Made me to wait» и «let me to go» — ошибки. Запомните пару готовых фраз: They made me wait. Let me go."
+    },
+    {
+      "title": "Allow, ask, tell, expect: глагол с to",
+      "body": "Почти все остальные глаголы этого типа требуют to: allow, ask, tell, expect, encourage, force, convince + кого + to + глагол. Let и allow близки по смыслу, но устроены по-разному: let me go, но allow me to go. В отрицании not стоит перед to.",
+      "examples": [
+        { "en": "They don't allow us to work from home.", "ru": "Нам не разрешают работать из дома." },
+        { "en": "She asked him to help with the boxes.", "ru": "Она попросила его помочь с коробками." },
+        { "en": "The doctor told me not to lift heavy things.", "ru": "Врач сказал мне не поднимать тяжести." }
+      ],
+      "tip": "После этих глаголов стоит объектное местоимение: me, him, her, us, them, — а не I, he, she, we, they."
+    },
+    {
+      "title": "I want you to…: «хочу, чтобы ты…»",
+      "body": "Русское «хочу, чтобы ты пришёл» нельзя переводить через that. В английском схема та же, что с ask и tell: want / would like / expect + кого + to + глагол. Никакого that и никакого прошедшего времени.",
+      "examples": [
+        { "en": "I want you to come to the meeting.", "ru": "Я хочу, чтобы ты пришёл на совещание." },
+        { "en": "Would you like me to call a taxi?", "ru": "Хотите, я вызову такси?" },
+        { "en": "We expect them to reply by Friday.", "ru": "Мы ожидаем, что они ответят к пятнице." }
+      ],
+      "tip": "«I want that you come» — одна из самых заметных ошибок русскоговорящих. Правильно: I want you to come."
+    }
+  ],
+  "vocab": [
+    { "en": "to make", "ru": "заставлять", "example": "Don't make me wait too long." },
+    { "en": "to let", "ru": "позволять, разрешать", "example": "My boss let me leave early." },
+    { "en": "to allow", "ru": "разрешать", "example": "They don't allow dogs in the hotel." },
+    { "en": "to expect", "ru": "ожидать, рассчитывать", "example": "We expect you to arrive by nine." },
+    { "en": "to encourage", "ru": "поощрять, подталкивать", "example": "My parents always encourage me to try new things." },
+    { "en": "to force", "ru": "вынуждать, принуждать", "example": "Nobody can force you to sign it." },
+    { "en": "to convince", "ru": "убедить", "example": "How did you convince him to stay?" },
+    { "en": "to stay late", "ru": "задержаться допоздна", "example": "I had to stay late at the office." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to let", "ru": "позволять" },
+        { "en": "to expect", "ru": "ожидать, рассчитывать" },
+        { "en": "to encourage", "ru": "поощрять" },
+        { "en": "to force", "ru": "вынуждать" },
+        { "en": "to convince", "ru": "убедить" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Я хочу, чтобы ты пришёл»?",
+      "options": ["I want you to come.", "I want that you come.", "I want you come.", "I want that you will come."],
+      "answer": 0,
+      "explanation": "После want схема такая: кого + to + глагол — I want you to come. Конструкция с that — прямая калька с русского «хочу, чтобы», в английском она невозможна."
+    },
+    {
+      "type": "gap",
+      "sentence": "The customs officer made us ___ all our bags.",
+      "translation": "Таможенник заставил нас открыть все сумки.",
+      "options": ["open", "to open", "opening", "opened"],
+      "answer": 0,
+      "explanation": "После make в значении «заставить» глагол стоит без to: made us open. To open — самая частая ошибка: русский инфинитив «заставил открыть» тянет за собой to."
+    },
+    {
+      "type": "translate",
+      "source": "Мой начальник разрешает мне работать из дома.",
+      "answer": "My boss lets me work from home.",
+      "accept": ["My boss allows me to work from home.", "My manager lets me work from home.", "My boss lets me work at home.", "My boss permits me to work from home."],
+      "distractors": ["to", "I", "working"],
+      "explanation": "После let идёт объектное местоимение (me, а не I) и глагол без to: lets me work. С to нужен был бы другой глагол: allows me to work."
+    },
+    {
+      "type": "listen",
+      "audio": "Would you like me to send you the details?",
+      "question": "Что предлагает говорящий?",
+      "options": ["Отправить вам подробности", "Чтобы вы отправили ему подробности", "Обсудить подробности при встрече", "Узнать подробности у кого-то другого"],
+      "answer": 0,
+      "explanation": "Would you like me to…? — «Хотите, я…?»: действие выполнит сам говорящий, потому что после like стоит me. Если бы отправлять должны были вы, сказали бы Could you send me the details?"
+    },
+    {
+      "type": "gap",
+      "sentence": "They don't allow visitors ___ photos in the museum.",
+      "translation": "Посетителям не разрешают фотографировать в музее.",
+      "options": ["to take", "take", "taking", "took"],
+      "answer": 0,
+      "explanation": "После allow + кого нужен инфинитив с to: allow visitors to take. Без to глагол стоит только после let и make."
+    },
+    {
+      "type": "speak",
+      "text": "I want you to come to the meeting.",
+      "translation": "Я хочу, чтобы ты пришёл на совещание."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She asked him help her.", "She asked him to help her.", "She asked he to help her.", "She asked to him to help her."],
+      "answer": 1,
+      "explanation": "Ask + кого + to + глагол: asked him to help. Местоимение стоит в объектной форме (him, а не he), а предлог to перед ним не нужен."
+    },
+    {
+      "type": "type",
+      "source": "Этот фильм заставил меня плакать.",
+      "answer": "This film made me cry.",
+      "accept": ["That film made me cry.", "The film made me cry.", "This movie made me cry.", "That movie made me cry.", "The movie made me cry."],
+      "explanation": "Make + кого + глагол без to: made me cry. Прошедшее время показывает только made, а cry остаётся в начальной форме."
+    },
+    {
+      "type": "gap",
+      "sentence": "We expect ___ to finish the project by Friday.",
+      "translation": "Мы ожидаем, что они закончат проект к пятнице.",
+      "options": ["them", "they", "that they", "their"],
+      "answer": 0,
+      "explanation": "После expect стоит объектное местоимение и инфинитив: expect them to finish. They — форма подлежащего, а that they не сочетается с to finish."
+    },
+    {
+      "type": "listen",
+      "audio": "My parents didn't let me stay out late.",
+      "question": "Что вы услышали?",
+      "options": ["My parents didn't let me stay out late.", "My parents didn't let me to stay out late.", "My parents don't let me stay out late.", "My parents didn't let me stay up late."],
+      "answer": 0,
+      "explanation": "После let глагол идёт без to: let me stay. Didn't показывает прошедшее время, а stay out — «гулять, не возвращаться домой», в отличие от stay up — «не ложиться спать»."
+    },
+    {
+      "type": "translate",
+      "source": "Я хочу, чтобы вы прочитали этот документ.",
+      "answer": "I want you to read this document.",
+      "accept": ["I would like you to read this document.", "I'd like you to read this document.", "I want you to read through this document."],
+      "distractors": ["that", "will", "your"],
+      "explanation": "«Хочу, чтобы вы…» — I want you to + глагол. That и will здесь не нужны: английский обходится инфинитивом."
+    },
+    {
+      "type": "dictation",
+      "audio": "They made me wait for an hour.",
+      "translation": "Меня заставили ждать целый час."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «My boss made me stay late»?",
+      "options": ["Начальник заставил меня задержаться", "Начальник разрешил мне задержаться", "Начальник попросил меня не задерживаться"],
+      "answer": 0,
+      "explanation": "Make + кого + глагол — «заставить». «Разрешил» было бы let me stay, а просьба не задерживаться — asked me not to stay late."
+    }
+  ]
+}

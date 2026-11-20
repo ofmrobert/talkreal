@@ -1,0 +1,193 @@
+{
+  "id": "c1-18",
+  "level": "C1",
+  "order": 18,
+  "title": { "ru": "Метафоры в повседневном английском", "en": "Metaphor in everyday English" },
+  "goal": { "ru": "Научитесь замечать скрытые метафоры — время как деньги, идеи как еда, спор как война — и подбирать к ним правильные слова.", "en": "Learn to notice hidden metaphors – time is money, ideas are food, arguments are war – and choose the right words for them." },
+  "theory": [
+    {
+      "title": "Time is money: время как деньги",
+      "body": "О времени английский говорит теми же глаголами, что и о деньгах: spend, save, waste, invest, run out of. Русское «проводить время» — это spend time, а «экономить время» — save time. После spend time и waste time глагол стоит в форме на -ing.",
+      "examples": [
+        { "en": "I spent the whole morning answering emails.", "ru": "Я всё утро отвечал на письма." },
+        { "en": "Taking the motorway will save us at least an hour.", "ru": "По автомагистрали мы сэкономим минимум час." },
+        { "en": "We're running out of time, so let's move on.", "ru": "У нас заканчивается время, давайте двигаться дальше." }
+      ],
+      "tip": "После spend time нужен не инфинитив, а форма на -ing: spend time doing something. «Spend time to do» — ошибка. Перед существительным ставится on: spend time on a project."
+    },
+    {
+      "title": "Ideas are food: идеи как еда",
+      "body": "Идеи в английском «едят»: их можно digest (переварить), swallow (проглотить, то есть принять на веру) и chew over (обдумать). Непродуманный план — half-baked, а повод задуматься — food for thought. Во многом образы совпадают с русскими, но слова другие.",
+      "examples": [
+        { "en": "Give me a day or two to digest the report.", "ru": "Дайте мне день-два, чтобы переварить этот отчёт." },
+        { "en": "It's a half-baked idea that nobody has thought through.", "ru": "Это сырая идея, которую никто не продумал." },
+        { "en": "I find his explanation hard to swallow.", "ru": "Мне трудно поверить в его объяснение." }
+      ],
+      "tip": "Русская «сырая идея» — это a half-baked idea, буквально «недопечённая». «A raw idea» так не употребляется."
+    },
+    {
+      "title": "Arguments are war: спор как война",
+      "body": "Спор описывается военной лексикой: позицию защищают (defend), аргументы атакуют (attack), идею могут shoot down — «сбить», то есть разгромить. В споре можно win или lose, stand your ground (не уступить) или back down (отступить).",
+      "examples": [
+        { "en": "She defended her position calmly and convincingly.", "ru": "Она отстаивала свою позицию спокойно и убедительно." },
+        { "en": "My proposal was shot down in the first five minutes.", "ru": "Моё предложение разгромили в первые пять минут." },
+        { "en": "Neither side was prepared to back down.", "ru": "Ни одна из сторон не была готова уступить." }
+      ],
+      "tip": "Если понять, из какой области взята метафора, соседние слова легко угадать: раз спор — это война, то в нём есть attack, defend, win и lose."
+    }
+  ],
+  "vocab": [
+    { "en": "to waste time", "ru": "тратить время впустую", "example": "Let's not waste time on details." },
+    { "en": "to run out of", "ru": "израсходовать, остаться без", "example": "We may run out of money before the summer." },
+    { "en": "to digest", "ru": "переварить, осмыслить", "example": "It took me a while to digest the news." },
+    { "en": "half-baked", "ru": "сырой, непродуманный", "example": "It sounded like a half-baked plan." },
+    { "en": "food for thought", "ru": "пища для размышлений", "example": "Her talk gave us plenty of food for thought." },
+    { "en": "hard to swallow", "ru": "трудно поверить, трудно принять", "example": "The official version is hard to swallow." },
+    { "en": "to shoot down", "ru": "разгромить (идею)", "example": "They will shoot down any idea that costs money." },
+    { "en": "to stand your ground", "ru": "стоять на своём", "example": "You need to stand your ground in negotiations." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to digest", "ru": "переварить, осмыслить" },
+        { "en": "half-baked", "ru": "сырой, непродуманный" },
+        { "en": "food for thought", "ru": "пища для размышлений" },
+        { "en": "to shoot down", "ru": "разгромить (идею)" },
+        { "en": "to stand your ground", "ru": "стоять на своём" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "I spent the whole weekend to paint the kitchen.",
+        "I passed the whole weekend with painting the kitchen.",
+        "I conducted the whole weekend painting the kitchen.",
+        "I spent the whole weekend painting the kitchen."
+      ],
+      "answer": 3,
+      "explanation": "Время в английском «тратят», как деньги: spend time, а действие после него стоит в форме на -ing. Pass и conduct — кальки с русского «провести», инфинитив после spend time тоже ошибка."
+    },
+    {
+      "type": "gap",
+      "sentence": "We're ___ time, so I'll skip the last three slides.",
+      "translation": "У нас заканчивается время, поэтому последние три слайда я пропущу.",
+      "options": ["running out of", "running away from", "going out of", "spending out"],
+      "answer": 0,
+      "explanation": "Run out of — «израсходовать запас»: так говорят о деньгах, бензине и времени. Подлежащим становится человек: we are running out of time, а не «the time is ending»."
+    },
+    {
+      "type": "translate",
+      "source": "Мне нужно время, чтобы переварить эту информацию.",
+      "answer": "I need time to digest this information.",
+      "accept": [
+        "I need some time to digest this information.",
+        "I need time to digest the information.",
+        "I need time to digest that information.",
+        "I need time to take in this information.",
+        "I need time to process this information."
+      ],
+      "distractors": ["cook", "eat", "for", "informations"],
+      "explanation": "Метафора та же, что в русском: информацию «переваривают» — digest. Information неисчисляемое, поэтому у него нет множественного числа, а цель выражается инфинитивом to digest."
+    },
+    {
+      "type": "listen",
+      "audio": "His proposal was shot down before he had even finished explaining it.",
+      "question": "Что произошло с предложением?",
+      "options": [
+        "Его приняли без обсуждения",
+        "Его резко отвергли, не дослушав",
+        "Его отложили до следующей встречи",
+        "Автор сам от него отказался"
+      ],
+      "answer": 1,
+      "explanation": "Shoot down — буквально «сбить»: идею разгромили, как сбивают самолёт. Это часть метафоры «спор — война», в которой идеи атакуют и защищают."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает «a half-baked idea»?",
+      "options": [
+        "наполовину реализованная идея",
+        "устаревшая идея",
+        "непродуманная, сырая идея",
+        "идея, от которой отказались"
+      ],
+      "answer": 2,
+      "explanation": "Half-baked — «недопечённый»: идею не довели до готовности, не продумали. Речь о качестве замысла, а не о том, какая часть работы уже сделана."
+    },
+    {
+      "type": "speak",
+      "text": "Her talk gave us plenty of food for thought.",
+      "translation": "Её выступление дало нам много пищи для размышлений."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ her position so convincingly that nobody dared to argue.",
+      "translation": "Она отстаивала свою позицию так убедительно, что никто не решился спорить.",
+      "options": ["protected", "defended", "guarded", "saved"],
+      "answer": 1,
+      "explanation": "В споре позицию и точку зрения защищают глаголом defend, как в бою. Protect значит «оберегать от вреда» и с position, argument, view в этом смысле не сочетается."
+    },
+    {
+      "type": "type",
+      "source": "Мы зря тратим время.",
+      "answer": "We're wasting time.",
+      "accept": ["We are wasting time.", "We're wasting our time.", "We are wasting our time."],
+      "explanation": "Waste time — «тратить время впустую»: в самом глаголе waste уже есть значение «зря». Действие происходит сейчас, поэтому Present Continuous."
+    },
+    {
+      "type": "listen",
+      "audio": "I find it hard to swallow that nobody knew about the problem.",
+      "question": "Что имеет в виду говорящий?",
+      "options": [
+        "Ему трудно поверить, что никто не знал",
+        "Ему трудно говорить об этой проблеме",
+        "Ему обидно, что его не предупредили",
+        "Он согласен, что никто не знал"
+      ],
+      "answer": 0,
+      "explanation": "Hard to swallow — «трудно проглотить», то есть трудно принять на веру. Это метафора «идеи — еда»: утверждение, в которое не верится, «не лезет в горло»."
+    },
+    {
+      "type": "translate",
+      "source": "Ни одна из сторон не была готова уступить.",
+      "answer": "Neither side was prepared to back down.",
+      "accept": [
+        "Neither side was ready to back down.",
+        "Neither side was willing to back down.",
+        "Neither side was prepared to give in.",
+        "Neither side was prepared to give way.",
+        "Neither of the sides was prepared to back down.",
+        "Neither party was prepared to back down."
+      ],
+      "distractors": ["out", "none", "sides", "both"],
+      "explanation": "Back down — «отступить» в споре. Не путайте с back out («выйти из сделки»). После neither существительное стоит в единственном числе: neither side was."
+    },
+    {
+      "type": "gap",
+      "sentence": "Taking the ring road will ___ us at least twenty minutes.",
+      "translation": "По кольцевой дороге мы сэкономим минимум двадцать минут.",
+      "options": ["win", "economise", "save", "keep"],
+      "answer": 2,
+      "explanation": "Время, как и деньги, «сберегают»: save time. Win — калька с русского «выиграть время», а economise не принимает такого дополнения: говорят economise on something."
+    },
+    {
+      "type": "dictation",
+      "audio": "We must not waste time on small details.",
+      "translation": "Нам нельзя тратить время на мелочи."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «She stood her ground»?",
+      "options": [
+        "Она осталась стоять на месте",
+        "Она не уступила и осталась при своём мнении",
+        "Она признала свою ошибку",
+        "Она заняла нейтральную позицию"
+      ],
+      "answer": 1,
+      "explanation": "Stand your ground — «удержать позицию», как солдат, который не отступает. В споре это значит не поддаться давлению и не изменить своего мнения."
+    }
+  ]
+}

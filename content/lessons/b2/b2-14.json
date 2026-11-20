@@ -1,0 +1,200 @@
+{
+  "id": "b2-14",
+  "level": "B2",
+  "order": 14,
+  "title": { "ru": "Фразовые глаголы для работы и учёбы", "en": "Phrasal verbs for work and study" },
+  "goal": { "ru": "Научитесь использовать разделяемые, неразделяемые и трёхсоставные фразовые глаголы и правильно ставить дополнение.", "en": "Learn to use separable, inseparable and three-part phrasal verbs and to put the object in the right place." },
+  "theory": [
+    {
+      "title": "Разделяемые глаголы: put it off",
+      "body": "У многих фразовых глаголов дополнение-существительное может стоять и после частицы, и между глаголом и частицей: hand in the report = hand the report in. Но если дополнение — местоимение (it, them, him), оно ставится только в середину.",
+      "examples": [
+        { "en": "Can we put the meeting off until Thursday?", "ru": "Можем отложить встречу до четверга?" },
+        { "en": "I've written the essay, and I'll hand it in tomorrow.", "ru": "Я написал эссе и сдам его завтра." },
+        { "en": "He brought up the budget at the meeting.", "ru": "Он поднял вопрос о бюджете на совещании." }
+      ],
+      "tip": "«Put off it» и «hand in them» — ошибки: местоимение всегда встаёт между глаголом и частицей: put it off, hand them in."
+    },
+    {
+      "title": "Неразделяемые глаголы: look into it",
+      "body": "У других глаголов частица на самом деле является предлогом и не отрывается от глагола. Дополнение, даже местоимение, идёт только после неё: look into the problem, look into it.",
+      "examples": [
+        { "en": "We'll look into the complaint this week.", "ru": "Мы разберёмся с этой жалобой на этой неделе." },
+        { "en": "I'm looking into it right now.", "ru": "Я как раз этим занимаюсь." },
+        { "en": "I came across an interesting article yesterday.", "ru": "Вчера мне попалась интересная статья." }
+      ],
+      "tip": "По внешнему виду тип глагола не определить. Запоминайте глагол вместе с примером; в словарях пишут put sth off (разделяемый) и look into sth (неразделяемый)."
+    },
+    {
+      "title": "Трёхсоставные глаголы: come up with",
+      "body": "Некоторые глаголы состоят из трёх слов: глагол, наречие и предлог. Они никогда не разделяются, и дополнение всегда стоит в конце: come up with an idea, fall behind with work, catch up on emails.",
+      "examples": [
+        { "en": "We need to come up with a better plan.", "ru": "Нам нужно придумать план получше." },
+        { "en": "I've fallen behind with my reports.", "ru": "Я не успеваю с отчётами." },
+        { "en": "I'm looking forward to hearing from you.", "ru": "С нетерпением жду вашего ответа." }
+      ],
+      "tip": "Не теряйте последний предлог: «come up a plan» — ошибка. Если после предлога идёт глагол, он стоит в форме на -ing: looking forward to hearing."
+    }
+  ],
+  "vocab": [
+    { "en": "to bring up", "ru": "поднять (тему, вопрос)", "example": "I'd like to bring up one more issue." },
+    { "en": "to look into", "ru": "разобраться, изучить (вопрос)", "example": "We promise to look into the problem." },
+    { "en": "to come up with", "ru": "придумать, предложить (идею)", "example": "She always manages to come up with a solution." },
+    { "en": "to fall behind with", "ru": "отстать, не успевать (с работой, учёбой)", "example": "I don't want to fall behind with my coursework." },
+    { "en": "to put off", "ru": "отложить на потом", "example": "It's tempting to put off difficult tasks." },
+    { "en": "to hand in", "ru": "сдать (работу, документ)", "example": "You need to hand in your reports by Friday." },
+    { "en": "to catch up on", "ru": "наверстать (упущенное)", "example": "I need to catch up on my emails." },
+    { "en": "to take on", "ru": "взять на себя (работу, обязанности)", "example": "I can't afford to take on any more projects." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to bring up", "ru": "поднять (тему, вопрос)" },
+        { "en": "to look into", "ru": "разобраться, изучить (вопрос)" },
+        { "en": "to come up with", "ru": "придумать, предложить (идею)" },
+        { "en": "to put off", "ru": "отложить на потом" },
+        { "en": "to hand in", "ru": "сдать (работу, документ)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "This report is urgent, so I can't put it off any longer.",
+        "This report is urgent, so I can't put off it any longer.",
+        "This report is urgent, so I can't put it of any longer.",
+        "This report is urgent, so I can't to put it off any longer."
+      ],
+      "answer": 0,
+      "explanation": "Put off — разделяемый глагол, и местоимение ставится только в середину: put it off. «Put off it» — самая частая ошибка; частица пишется off, а после can't частица to не нужна."
+    },
+    {
+      "type": "gap",
+      "sentence": "The IT department is going to look ___ the problem this afternoon.",
+      "translation": "ИТ-отдел разберётся с этой проблемой сегодня днём.",
+      "options": ["into", "in", "onto", "out"],
+      "answer": 0,
+      "explanation": "«Разобраться, изучить вопрос» — look into. Русское «в» подсказывает in, но фразового глагола look in с таким значением нет."
+    },
+    {
+      "type": "listen",
+      "audio": "I've fallen behind with my coursework, so I'll have to catch up on it at the weekend.",
+      "question": "Что говорящий будет делать в выходные?",
+      "options": [
+        "Навёрстывать учёбу, с которой он отстал",
+        "Отдыхать: учёба идёт с опережением",
+        "Помогать однокурсникам, которые отстали",
+        "Сдавать уже готовую курсовую работу"
+      ],
+      "answer": 0,
+      "explanation": "Fall behind with — «отстать», catch up on — «наверстать». Оба глагола трёхсоставные и неразделяемые, поэтому местоимение стоит в конце: catch up on it."
+    },
+    {
+      "type": "translate",
+      "source": "Нам нужно придумать новое название для продукта.",
+      "answer": "We need to come up with a new name for the product.",
+      "accept": [
+        "We have to come up with a new name for the product.",
+        "We need to think of a new name for the product.",
+        "We need to come up with a new product name.",
+        "We need to come up with a new name for this product."
+      ],
+      "distractors": ["on", "came", "down"],
+      "explanation": "«Придумать» — come up with, все три слова обязательны и идут подряд. После need to глагол стоит в начальной форме: come, а не came."
+    },
+    {
+      "type": "gap",
+      "sentence": "Nobody wanted to bring ___ the subject of pay cuts at the meeting.",
+      "translation": "Никто не хотел поднимать тему сокращения зарплат на совещании.",
+      "options": ["up", "on", "over", "off"],
+      "answer": 0,
+      "explanation": "«Поднять тему» — bring up: здесь английский совпадает с русским «поднять». С другими частицами значение меняется или глагола не существует."
+    },
+    {
+      "type": "speak",
+      "text": "I'll look into it and get back to you.",
+      "translation": "Я разберусь с этим и вернусь к вам с ответом."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вас спрашивают: «What about the customer's complaint?» Какой ответ верен?",
+      "options": [
+        "We're looking into it.",
+        "We're looking it into.",
+        "We're looking into.",
+        "We're looking in it."
+      ],
+      "answer": 0,
+      "explanation": "Look into — неразделяемый глагол: местоимение идёт только после into. Опустить дополнение тоже нельзя: look into всегда требует, чтобы было сказано, с чем разбираются."
+    },
+    {
+      "type": "type",
+      "source": "Я сдам отчёт завтра.",
+      "answer": "I will hand in the report tomorrow.",
+      "accept": [
+        "I will hand the report in tomorrow.",
+        "I will hand in my report tomorrow.",
+        "I will hand my report in tomorrow.",
+        "I'm going to hand in the report tomorrow.",
+        "I'm going to hand the report in tomorrow.",
+        "I'm handing in the report tomorrow.",
+        "I will submit the report tomorrow.",
+        "Tomorrow I will hand in the report."
+      ],
+      "explanation": "«Сдать работу» — hand in. Глагол разделяемый, поэтому существительное может стоять и после частицы, и перед ней: hand in the report или hand the report in."
+    },
+    {
+      "type": "listen",
+      "audio": "Dana has taken on too much work, and now she keeps putting off her holiday.",
+      "question": "Что происходит с Даной?",
+      "options": [
+        "Она взяла на себя слишком много работы и всё откладывает отпуск",
+        "Она ушла в отпуск и отложила всю работу",
+        "Она наняла помощников и уехала отдыхать",
+        "Она отказалась от лишней работы ради отпуска"
+      ],
+      "answer": 0,
+      "explanation": "Take on work — «взять на себя работу», put off — «откладывать». Keeps putting off значит, что отпуск переносится снова и снова."
+    },
+    {
+      "type": "gap",
+      "sentence": "If you miss a week of classes, it's hard to catch ___ the material.",
+      "translation": "Если пропустить неделю занятий, трудно наверстать материал.",
+      "options": ["up on", "up", "on", "in on"],
+      "answer": 0,
+      "explanation": "«Наверстать что-то» — catch up on: глагол трёхсоставный, и перед дополнением нужен предлог. «Catch up the material» — ошибка: потерян последний предлог."
+    },
+    {
+      "type": "translate",
+      "source": "Она подняла этот вопрос на вчерашнем совещании.",
+      "answer": "She brought up this issue at yesterday's meeting.",
+      "accept": [
+        "She brought this issue up at yesterday's meeting.",
+        "She brought up the issue at yesterday's meeting.",
+        "She brought up this question at yesterday's meeting.",
+        "She brought this up at yesterday's meeting.",
+        "She raised this issue at yesterday's meeting."
+      ],
+      "distractors": ["rose", "on", "bring"],
+      "explanation": "«Поднять вопрос» — bring up, в прошедшем времени brought up. Rose — форма глагола rise («подниматься самому»), у него не бывает дополнения. «На совещании» — at the meeting, а не on."
+    },
+    {
+      "type": "dictation",
+      "audio": "We need to come up with a better plan.",
+      "translation": "Нам нужно придумать план получше."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "I've fallen behind with my studies this term.",
+        "I've fallen behind my studies with this term.",
+        "I've fallen with my studies behind this term.",
+        "I've fell behind with my studies this term."
+      ],
+      "answer": 0,
+      "explanation": "Fall behind with — трёхсоставный глагол: его части идут подряд, а дополнение стоит после with. После have нужна третья форма fallen, а не fell."
+    }
+  ]
+}

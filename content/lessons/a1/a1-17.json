@@ -1,0 +1,155 @@
+{
+  "id": "a1-17",
+  "level": "A1",
+  "order": 17,
+  "title": { "ru": "Always, usually, often, sometimes, never: как часто?", "en": "Adverbs of frequency: always, usually, often, sometimes, never" },
+  "goal": { "ru": "Научитесь говорить, как часто вы что-то делаете, и ставить эти слова на правильное место.", "en": "Learn to say how often you do things and put these words in the right place." },
+  "theory": [
+    {
+      "title": "Пять слов о частоте",
+      "body": "Always — всегда, usually — обычно, often — часто, sometimes — иногда, never — никогда. Они стоят перед основным глаголом: I always get up at seven. В русском порядок свободный («Я встаю всегда в семь»), а в английском у этих слов постоянное место.",
+      "examples": [
+        { "en": "I always have breakfast at home.", "ru": "Я всегда завтракаю дома." },
+        { "en": "She often works on Saturday.", "ru": "Она часто работает в субботу." },
+        { "en": "We sometimes go to the cinema.", "ru": "Мы иногда ходим в кино." }
+      ],
+      "tip": "Схема: кто + always / often / never + глагол."
+    },
+    {
+      "title": "С глаголом to be — после него",
+      "body": "Если в предложении am, is или are, слово о частоте стоит после него: He is always late. Запомните: перед обычным глаголом, но после to be.",
+      "examples": [
+        { "en": "The train is usually on time.", "ru": "Поезд обычно приходит вовремя." },
+        { "en": "I am never late for work.", "ru": "Я никогда не опаздываю на работу." },
+        { "en": "They are often at home in the evening.", "ru": "Вечером они часто дома." }
+      ],
+      "tip": "Сравните: She is often tired. — She often works late."
+    },
+    {
+      "title": "Never и вопрос How often…?",
+      "body": "Never уже значит «никогда не», поэтому второе отрицание не нужно: I never drink coffee, а не «I don't never drink». В русском отрицаний два («никогда не пью»), в английском — одно. Спросить о частоте: How often do you…? Ответить можно и точно: every day, once a week.",
+      "examples": [
+        { "en": "He never eats meat.", "ru": "Он никогда не ест мясо." },
+        { "en": "How often do you go to the gym?", "ru": "Как часто вы ходите в спортзал?" },
+        { "en": "I call my mum once a week.", "ru": "Я звоню маме раз в неделю." }
+      ],
+      "tip": "После never глагол с he и she сохраняет -s: She never drinks coffee."
+    }
+  ],
+  "vocab": [
+    { "en": "always", "ru": "всегда", "example": "I always walk to work." },
+    { "en": "often", "ru": "часто", "example": "We often have dinner at eight." },
+    { "en": "sometimes", "ru": "иногда", "example": "I sometimes work at the weekend." },
+    { "en": "never", "ru": "никогда", "example": "She never eats meat." },
+    { "en": "how often", "ru": "как часто", "example": "Tell me, how often do you cook?" },
+    { "en": "once a week", "ru": "раз в неделю", "example": "I call my parents once a week." },
+    { "en": "on time", "ru": "вовремя", "example": "The train is always on time." },
+    { "en": "gym", "ru": "спортзал", "example": "I often go to the gym after work." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "always", "ru": "всегда" },
+        { "en": "often", "ru": "часто" },
+        { "en": "sometimes", "ru": "иногда" },
+        { "en": "never", "ru": "никогда" },
+        { "en": "on time", "ru": "вовремя" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите предложение с правильным порядком слов.",
+      "options": ["I get up always at seven.", "I always get up at seven.", "Always I get up at seven.", "I get always up at seven."],
+      "answer": 1,
+      "explanation": "Always стоит перед основным глаголом: I always get up. Ставить его после глагола или в начало предложения, как в русском, нельзя."
+    },
+    {
+      "type": "gap",
+      "sentence": "My boss ___ late. He is always on time.",
+      "translation": "Мой начальник никогда не опаздывает. Он всегда приходит вовремя.",
+      "options": ["is never", "never is", "isn't never", "never"],
+      "answer": 0,
+      "explanation": "С глаголом to be слово о частоте стоит после него: is never. Never уже содержит отрицание, поэтому isn't never — ошибка, а совсем без is нельзя."
+    },
+    {
+      "type": "listen",
+      "audio": "I usually go to work by bus, but sometimes I walk.",
+      "question": "Как человек обычно добирается до работы?",
+      "options": ["На автобусе", "Пешком", "На машине", "На поезде"],
+      "answer": 0,
+      "explanation": "Usually… by bus — «обычно на автобусе». Пешком (I walk) он ходит только иногда: sometimes."
+    },
+    {
+      "type": "translate",
+      "source": "Я никогда не пью кофе вечером.",
+      "answer": "I never drink coffee in the evening.",
+      "accept": ["In the evening I never drink coffee.", "I never drink coffee in the evenings.", "I never have coffee in the evening."],
+      "distractors": ["don't", "not", "at"],
+      "explanation": "Never само значит «никогда не», поэтому don't и not не нужны. Русское двойное отрицание в английском превращается в одно."
+    },
+    {
+      "type": "gap",
+      "sentence": "She ___ lunch at home.",
+      "translation": "Она часто обедает дома.",
+      "options": ["often has", "has often", "often have", "is often has"],
+      "answer": 0,
+      "explanation": "Often стоит перед основным глаголом, а глагол с she получает -s: often has. Слово о частоте на окончание не влияет."
+    },
+    {
+      "type": "speak",
+      "text": "I always have breakfast at home.",
+      "translation": "Я всегда завтракаю дома."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Как часто ты ходишь в спортзал?»",
+      "options": ["How often you go to the gym?", "How often do you go to the gym?", "How many often do you go to the gym?", "How often are you go to the gym?"],
+      "answer": 1,
+      "explanation": "После How often идёт обычный вопрос с do: do you go. Без do вопрос не построить, а are с глаголом go в Present Simple не используется."
+    },
+    {
+      "type": "translate",
+      "source": "Поезд обычно приходит вовремя.",
+      "answer": "The train is usually on time.",
+      "accept": ["The train usually arrives on time.", "The train usually comes on time.", "The train's usually on time."],
+      "distractors": ["at", "in", "always"],
+      "explanation": "«Приходит вовремя» по-английски проще всего сказать через to be: is on time. Usually стоит после is, а always значило бы «всегда»."
+    },
+    {
+      "type": "listen",
+      "audio": "We often go to the cinema on Friday.",
+      "question": "Что вы услышали?",
+      "options": ["We often go to the cinema on Friday.", "We never go to the cinema on Friday.", "We often go to the cinema on Monday.", "We always go to the cinema on Friday."],
+      "answer": 0,
+      "explanation": "Often — «часто». Оно стоит между we и go, перед основным глаголом, поэтому слушайте именно это место в предложении."
+    },
+    {
+      "type": "gap",
+      "sentence": "I ___ eat meat. I don't like it.",
+      "translation": "Я никогда не ем мясо. Я его не люблю.",
+      "options": ["never", "don't never", "am never", "not"],
+      "answer": 0,
+      "explanation": "Never ставится перед глаголом без don't: I never eat. Don't never — двойное отрицание, а am перед eat здесь не нужен."
+    },
+    {
+      "type": "type",
+      "source": "Она всегда занята.",
+      "answer": "She is always busy.",
+      "accept": ["She's always busy."],
+      "explanation": "В предложении есть to be, поэтому always стоит после is: is always busy. По-русски глагола нет, а по-английски без is нельзя."
+    },
+    {
+      "type": "dictation",
+      "audio": "I often call my parents in the evening.",
+      "translation": "Я часто звоню родителям вечером."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["He always is tired.", "He doesn't never cook.", "He sometimes cooks dinner.", "He cooks never dinner."],
+      "answer": 2,
+      "explanation": "Sometimes стоит перед основным глаголом, а cooks сохраняет -s. В остальных вариантах ошибки: нужно is always, never без doesn't и never перед глаголом."
+    }
+  ]
+}

@@ -52,6 +52,38 @@ export const BoltIcon = (p: SVGProps<SVGSVGElement>) => (
   </Icon>
 )
 
+export const CheckIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon strokeWidth="3.4" {...p}>
+    <path d="M5 12.5l4.5 4.5L19 7.5" />
+  </Icon>
+)
+
+export const StarIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon fill="currentColor" strokeWidth="1.6" {...p}>
+    <path d="M12 2.8l2.8 5.9 6.4.9-4.7 4.5 1.2 6.4L12 17.4l-5.700 3.100 1.200-6.400-4.700-4.500 6.400-.9z" />
+  </Icon>
+)
+
+export const LockIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <rect x="5" y="11" width="14" height="10" rx="2.5" fill="currentColor" />
+    <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+  </Icon>
+)
+
+export const TrophyIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon {...p}>
+    <path d="M7 4h10v4.500a5 5 0 0 1-10 0z" fill="currentColor" />
+    <path d="M7 5.500H4V7a3.500 3.500 0 0 0 3.500 3.500M17 5.500h3V7a3.500 3.500 0 0 1-3.500 3.500M12 13.500V17M8 20h8" />
+  </Icon>
+)
+
+export const CrownIcon = (p: SVGProps<SVGSVGElement>) => (
+  <Icon fill="currentColor" strokeWidth="1.6" {...p}>
+    <path d="M3 8l4.500 4L12 5l4.500 7L21 8l-2 10.500H5z" />
+  </Icon>
+)
+
 export const ChevronRightIcon = (p: SVGProps<SVGSVGElement>) => (
   <Icon {...p}>
     <path d="m9 5 7 7-7 7" />

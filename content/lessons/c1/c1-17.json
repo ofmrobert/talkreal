@@ -1,0 +1,194 @@
+{
+  "id": "c1-17",
+  "level": "C1",
+  "order": 17,
+  "title": { "ru": "Устойчивые пары «наречие + прилагательное»", "en": "Adverb + adjective collocations" },
+  "goal": { "ru": "Научитесь усиливать прилагательные так, как это делают носители: bitterly disappointed, highly unlikely, utterly ridiculous.", "en": "Learn to intensify adjectives the way native speakers do: bitterly disappointed, highly unlikely, utterly ridiculous." },
+  "theory": [
+    {
+      "title": "Не только very",
+      "body": "В английском усилительные наречия привязаны к определённым прилагательным: bitterly disappointed, deeply concerned, highly unlikely, fully aware, strongly opposed, painfully slow. Very грамматически подходит почти везде, но звучит бесцветно. Такие пары нельзя вывести логически — их запоминают целиком.",
+      "examples": [
+        { "en": "We were bitterly disappointed with the result.", "ru": "Мы были горько разочарованы результатом." },
+        { "en": "It is highly unlikely that the deadline will be extended.", "ru": "Крайне маловероятно, что срок продлят." },
+        { "en": "I'm deeply concerned about the delays.", "ru": "Меня серьёзно беспокоят задержки." }
+      ],
+      "tip": "Русское «сильно» сочетается почти с чем угодно, а strongly — в основном с мнениями: strongly agree, strongly opposed, strongly recommend. «Strongly disappointed» — калька."
+    },
+    {
+      "title": "Обычные и «предельные» прилагательные",
+      "body": "Обычные прилагательные (tired, cold, important) усиливаются словами very, extremely, fairly. Предельные (exhausted, freezing, essential, ridiculous, impossible) уже содержат значение «очень», поэтому с ними употребляют absolutely, utterly, completely. Слово really подходит к обоим типам.",
+      "examples": [
+        { "en": "The idea is utterly ridiculous.", "ru": "Идея совершенно нелепая." },
+        { "en": "By the end of the week I was absolutely exhausted.", "ru": "К концу недели я был совершенно без сил." },
+        { "en": "The instructions were extremely confusing.", "ru": "Инструкции были крайне запутанными." }
+      ],
+      "tip": "Utterly чаще всего несёт отрицательную оценку: utterly ridiculous, utterly useless, utterly miserable."
+    },
+    {
+      "title": "Perfectly, highly и quite",
+      "body": "Perfectly сочетается с положительными и нейтральными словами: perfectly clear, perfectly normal, perfectly capable. Highly говорит о вероятности и оценке: highly likely, highly effective, highly qualified. Quite с предельным прилагательным значит «совершенно» (quite right, quite impossible), а с обычным в британском английском — «довольно».",
+      "examples": [
+        { "en": "I made it perfectly clear that the price was final.", "ru": "Я ясно дал понять, что цена окончательная." },
+        { "en": "She is a highly qualified engineer.", "ru": "Она высококвалифицированный инженер." },
+        { "en": "You're quite right; I should have checked.", "ru": "Вы совершенно правы: мне следовало проверить." }
+      ],
+      "tip": "Perfectly может звучать раздражённо: «I'm perfectly capable of doing it myself» — «Я прекрасно справлюсь сам, спасибо»."
+    }
+  ],
+  "vocab": [
+    { "en": "bitterly disappointed", "ru": "горько разочарованный", "example": "Fans were bitterly disappointed when the concert was cancelled." },
+    { "en": "highly unlikely", "ru": "крайне маловероятный", "example": "It's highly unlikely that prices will fall." },
+    { "en": "deeply concerned", "ru": "глубоко обеспокоенный", "example": "Parents are deeply concerned about the changes." },
+    { "en": "utterly ridiculous", "ru": "совершенно нелепый", "example": "Paying that much for a sandwich is utterly ridiculous." },
+    { "en": "perfectly clear", "ru": "абсолютно ясный", "example": "The rules are perfectly clear to everyone." },
+    { "en": "fully aware", "ru": "прекрасно осознающий", "example": "I'm fully aware of the risks involved." },
+    { "en": "strongly opposed", "ru": "решительно против", "example": "Many employees are strongly opposed to the merger." },
+    { "en": "painfully slow", "ru": "мучительно медленный", "example": "Progress has been painfully slow." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "bitterly disappointed", "ru": "горько разочарованный" },
+        { "en": "highly unlikely", "ru": "крайне маловероятный" },
+        { "en": "utterly ridiculous", "ru": "совершенно нелепый" },
+        { "en": "fully aware", "ru": "прекрасно осознающий" },
+        { "en": "painfully slow", "ru": "мучительно медленный" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое сочетание звучит естественно?",
+      "options": ["strongly disappointed", "bitterly disappointed", "heavily disappointed", "highly disappointed"],
+      "answer": 1,
+      "explanation": "Разочарование в английском «горькое»: bitterly disappointed. Strongly и heavily — дословные переводы русского «сильно», но с disappointed они не сочетаются."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's ___ unlikely that the flight will leave on time in this weather.",
+      "translation": "Крайне маловероятно, что в такую погоду рейс вылетит вовремя.",
+      "options": ["highly", "strongly", "bitterly", "deeply"],
+      "answer": 0,
+      "explanation": "Со словами о вероятности — likely, unlikely, probable — употребляется highly. Deeply сочетается с чувствами (deeply concerned), а bitterly — с разочарованием и сожалением."
+    },
+    {
+      "type": "translate",
+      "source": "Мы глубоко обеспокоены задержкой.",
+      "answer": "We are deeply concerned about the delay.",
+      "accept": [
+        "We're deeply concerned about the delay.",
+        "We are deeply concerned by the delay.",
+        "We are deeply concerned at the delay.",
+        "We are deeply worried about the delay."
+      ],
+      "distractors": ["strongly", "highly", "on", "deep"],
+      "explanation": "Беспокойство усиливается наречием deeply: deeply concerned. После concerned в значении «обеспокоен» идёт предлог about; форма deep без -ly — прилагательное и здесь не подходит."
+    },
+    {
+      "type": "listen",
+      "audio": "To be honest, I found the whole presentation utterly pointless.",
+      "question": "Как говорящий оценивает презентацию?",
+      "options": [
+        "Считает её местами полезной",
+        "Считает её слишком длинной",
+        "Считает её совершенно бессмысленной",
+        "Считает её неожиданно интересной"
+      ],
+      "answer": 2,
+      "explanation": "Utterly — «совершенно, полностью», обычно с резкой отрицательной оценкой. Pointless означает «бессмысленный»: буквально «без смысла, без цели»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "After the night shift I was absolutely exhausted.",
+        "After the night shift I was very exhausted.",
+        "After the night shift I was absolutely tired.",
+        "After the night shift I was utterly tired."
+      ],
+      "answer": 0,
+      "explanation": "Exhausted — предельное прилагательное, оно уже значит «очень усталый», поэтому усиливается словом absolutely, а не very. С обычным tired, наоборот, говорят very или extremely."
+    },
+    {
+      "type": "speak",
+      "text": "I made it perfectly clear that the price was final.",
+      "translation": "Я ясно дал понять, что цена окончательная."
+    },
+    {
+      "type": "gap",
+      "sentence": "Local residents are ___ opposed to the plan to build a car park here.",
+      "translation": "Местные жители решительно против плана построить здесь парковку.",
+      "options": ["highly", "painfully", "perfectly", "strongly"],
+      "answer": 3,
+      "explanation": "С мнениями и позициями употребляется strongly: strongly opposed, strongly in favour, strongly agree. Highly говорит о степени качества или вероятности, а не о силе убеждения."
+    },
+    {
+      "type": "type",
+      "source": "Это крайне маловероятно.",
+      "answer": "It's highly unlikely.",
+      "accept": [
+        "It is highly unlikely.",
+        "That's highly unlikely.",
+        "That is highly unlikely.",
+        "This is highly unlikely.",
+        "It's extremely unlikely.",
+        "It is extremely unlikely.",
+        "That's extremely unlikely.",
+        "That is extremely unlikely.",
+        "This is extremely unlikely."
+      ],
+      "explanation": "«Крайне маловероятно» — highly unlikely: это устойчивая пара. «Маловероятно» передаётся одним словом unlikely, а не сочетанием «little probable»."
+    },
+    {
+      "type": "listen",
+      "audio": "She was bitterly disappointed not to get the promotion.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She was bitterly disappointing not to get the promotion.",
+        "She was bitter disappointed not to get the promotion.",
+        "She was better disappointed not to get the promotion.",
+        "She was bitterly disappointed not to get the promotion."
+      ],
+      "answer": 3,
+      "explanation": "Перед прилагательным стоит наречие на -ly: bitterly disappointed. О чувствах человека говорит форма на -ed; disappointing описывало бы то, что вызывает разочарование."
+    },
+    {
+      "type": "translate",
+      "source": "Ждать три часа в очереди — это совершенно нелепо.",
+      "answer": "Waiting three hours in a queue is utterly ridiculous.",
+      "accept": [
+        "Waiting three hours in the queue is utterly ridiculous.",
+        "Waiting for three hours in a queue is utterly ridiculous.",
+        "Waiting in a queue for three hours is utterly ridiculous.",
+        "Waiting three hours in a queue is absolutely ridiculous.",
+        "Waiting three hours in line is utterly ridiculous.",
+        "Queuing for three hours is utterly ridiculous.",
+        "It's utterly ridiculous to wait three hours in a queue.",
+        "It is utterly ridiculous to wait three hours in a queue."
+      ],
+      "distractors": ["very", "highly", "wait", "deeply"],
+      "explanation": "Ridiculous — предельное прилагательное, поэтому его усиливают utterly или absolutely, но не very. В роли подлежащего стоит форма на -ing: waiting."
+    },
+    {
+      "type": "gap",
+      "sentence": "Don't worry, it's ___ normal to feel nervous before an interview.",
+      "translation": "Не волнуйтесь, нервничать перед собеседованием совершенно нормально.",
+      "options": ["utterly", "perfectly", "bitterly", "highly"],
+      "answer": 1,
+      "explanation": "С нейтральными и положительными словами — normal, clear, safe, reasonable — употребляется perfectly. Utterly тяготеет к отрицательным оценкам, поэтому «utterly normal» звучит странно."
+    },
+    {
+      "type": "dictation",
+      "audio": "Progress has been painfully slow this year.",
+      "translation": "В этом году дело продвигается мучительно медленно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает quite во фразе «You're quite right»?",
+      "options": ["довольно, отчасти", "не совсем", "совершенно, полностью", "слишком"],
+      "answer": 2,
+      "explanation": "С предельными прилагательными — right, wrong, impossible, sure — quite означает «совершенно». Значение «довольно» появляется только с обычными прилагательными: quite cold, quite tired."
+    }
+  ]
+}

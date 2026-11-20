@@ -1,0 +1,155 @@
+{
+  "id": "b1-17",
+  "level": "B1",
+  "order": 17,
+  "title": { "ru": "Had to, will be able to, was allowed to: модальные значения в других временах", "en": "Obligation and ability in other tenses" },
+  "goal": { "ru": "Научитесь говорить «пришлось», «смогу», «разрешили» в прошлом и будущем.", "en": "Learn to talk about obligation, ability and permission in the past and the future." },
+  "theory": [
+    {
+      "title": "Must в прошлом и будущем: have to",
+      "body": "У must нет ни прошедшего, ни будущего времени, поэтому за него работает have to: had to (пришлось), will have to (придётся). В отрицании didn't have to значит «не было необходимости», а не «было нельзя». Вопрос строится с did: Did you have to wait?",
+      "examples": [
+        { "en": "I had to work last Saturday.", "ru": "В прошлую субботу мне пришлось работать." },
+        { "en": "We didn't have to wait long.", "ru": "Нам не пришлось долго ждать." },
+        { "en": "You'll have to show your passport.", "ru": "Вам придётся показать паспорт." }
+      ],
+      "tip": "«I musted», «I will must» и «I hadn't to» — формы, которых не существует. Правильно: I had to, I'll have to, I didn't have to."
+    },
+    {
+      "title": "Can в прошлом и будущем: be able to",
+      "body": "После will нельзя поставить can, поэтому «смогу» — это will be able to. В прошлом could говорит об умении вообще (умел плавать), а когда что-то удалось сделать в конкретной ситуации, используют was / were able to. В отрицании разницы нет: couldn't подходит в обоих случаях.",
+      "examples": [
+        { "en": "I'll be able to help you tomorrow.", "ru": "Я смогу помочь тебе завтра." },
+        { "en": "I could swim when I was five.", "ru": "Я умел плавать, когда мне было пять лет." },
+        { "en": "The traffic was terrible, but we were able to catch our flight.", "ru": "Пробки были ужасные, но мы смогли успеть на рейс." }
+      ],
+      "tip": "«I will can» — одна из самых частых ошибок. Два модальных глагола рядом не стоят: I will be able to."
+    },
+    {
+      "title": "Разрешение: be allowed to",
+      "body": "«Мне разрешили» и «мне не разрешали» передаются через be allowed to в нужном времени: was allowed to, wasn't allowed to, will be allowed to. По-русски это безличная фраза («мне разрешили»), а в английском подлежащим становится сам человек: I was allowed.",
+      "examples": [
+        { "en": "We were allowed to leave early on Friday.", "ru": "В пятницу нам разрешили уйти пораньше." },
+        { "en": "I wasn't allowed to go out late as a teenager.", "ru": "В подростковом возрасте мне не разрешали гулять допоздна." },
+        { "en": "You won't be allowed to board without a ticket.", "ru": "Без билета вас не пустят на посадку." }
+      ],
+      "tip": "Не начинайте с me: «Me allowed to leave» — ошибка. Нужны подлежащее I и глагол be: I was allowed to leave."
+    }
+  ],
+  "vocab": [
+    { "en": "to have to", "ru": "быть вынужденным, приходиться", "example": "I have to get up at six tomorrow." },
+    { "en": "to be able to", "ru": "мочь, быть в состоянии", "example": "I'd like to be able to speak Italian." },
+    { "en": "to be allowed to", "ru": "иметь разрешение", "example": "Dogs should be allowed to travel on trains." },
+    { "en": "overtime", "ru": "сверхурочно; сверхурочная работа", "example": "I had to work overtime last week." },
+    { "en": "a permit", "ru": "разрешение, пропуск (документ)", "example": "You need a permit to park here." },
+    { "en": "a uniform", "ru": "форма (одежда)", "example": "We had to wear a uniform at school." },
+    { "en": "in the end", "ru": "в конце концов, в итоге", "example": "We were able to find a hotel in the end." },
+    { "en": "to fill in", "ru": "заполнять (форму, анкету)", "example": "You'll have to fill in this form." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to be able to", "ru": "быть в состоянии" },
+        { "en": "to be allowed to", "ru": "иметь разрешение" },
+        { "en": "overtime", "ru": "сверхурочно" },
+        { "en": "a permit", "ru": "пропуск, разрешение" },
+        { "en": "to fill in", "ru": "заполнять" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Вчера мне пришлось работать допоздна»?",
+      "options": ["I had to work late yesterday.", "I must work late yesterday.", "I musted work late yesterday.", "I had work late yesterday."],
+      "answer": 0,
+      "explanation": "У must нет прошедшего времени, вместо него используют had to. Формы «musted» не существует, а без to (had work) конструкция разваливается."
+    },
+    {
+      "type": "gap",
+      "sentence": "It was Sunday, so I ___ get up early.",
+      "translation": "Было воскресенье, так что мне не нужно было рано вставать.",
+      "options": ["didn't have to", "mustn't", "hadn't to", "haven't to"],
+      "answer": 0,
+      "explanation": "«Не было необходимости» в прошлом — didn't have to. Mustn't означает запрет и относится к настоящему, а «hadn't to» и «haven't to» — неправильные формы: отрицание строится с do / did."
+    },
+    {
+      "type": "translate",
+      "source": "Тебе придётся заполнить эту форму.",
+      "answer": "You will have to fill in this form.",
+      "accept": ["You'll have to fill in this form.", "You will have to fill this form in.", "You'll have to fill this form in.", "You will have to fill out this form.", "You'll have to fill out this form.", "You will need to fill in this form.", "You'll need to fill in this form."],
+      "distractors": ["had", "having", "shall"],
+      "explanation": "«Придётся» — will have to: must после will стоять не может. По-русски фраза безличная («тебе придётся»), а по-английски нужно обычное подлежащее: you."
+    },
+    {
+      "type": "listen",
+      "audio": "We weren't allowed to use our phones during the exam.",
+      "question": "Что вы узнали?",
+      "options": ["Пользоваться телефонами на экзамене было запрещено", "Телефонами на экзамене можно было пользоваться", "На экзамене телефоны никому не понадобились", "Телефоны на экзамене не работали"],
+      "answer": 0,
+      "explanation": "Weren't allowed to — «нам не разрешали»: это запрет в прошлом. Если бы телефоны были просто не нужны, сказали бы we didn't have to use them."
+    },
+    {
+      "type": "gap",
+      "sentence": "After the course, you ___ speak to customers in English.",
+      "translation": "После курса вы сможете разговаривать с клиентами по-английски.",
+      "options": ["will be able to", "will can", "will able to", "can to"],
+      "answer": 0,
+      "explanation": "«Сможете» в будущем — will be able to. «Will can» невозможно: два модальных глагола подряд не стоят; нельзя и пропускать be, и ставить to после can."
+    },
+    {
+      "type": "speak",
+      "text": "I had to work overtime last week.",
+      "translation": "На прошлой неделе мне пришлось работать сверхурочно."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «You didn't have to come»?",
+      "options": ["Тебе было необязательно приходить", "Тебе нельзя было приходить", "Ты не смог прийти"],
+      "answer": 0,
+      "explanation": "Didn't have to — отсутствие необходимости: можно было и не приходить. Запрет в прошлом — weren't allowed to, а «не смог» — couldn't."
+    },
+    {
+      "type": "type",
+      "source": "Мне пришлось ждать два часа.",
+      "answer": "I had to wait for two hours.",
+      "accept": ["I had to wait two hours."],
+      "explanation": "«Пришлось» — had to + глагол. Подлежащее в английском — I, хотя по-русски фраза безличная («мне пришлось»)."
+    },
+    {
+      "type": "gap",
+      "sentence": "The door was locked, but in the end we ___ open it.",
+      "translation": "Дверь была заперта, но в конце концов мы смогли её открыть.",
+      "options": ["were able to", "could to", "can", "were able"],
+      "answer": 0,
+      "explanation": "Когда что-то удалось сделать в конкретной ситуации, говорят were able to. Can — настоящее время, после could не ставят to, а в were able без to конструкция неполная."
+    },
+    {
+      "type": "listen",
+      "audio": "You'll have to wait a few minutes.",
+      "question": "Что вы услышали?",
+      "options": ["You'll have to wait a few minutes.", "You have to wait a few minutes.", "You had to wait a few minutes.", "You'll have to wait five minutes."],
+      "answer": 0,
+      "explanation": "You'll = you will: речь о будущем — «вам придётся подождать». Короткое 'll легко пропустить на слух; a few означает «несколько»."
+    },
+    {
+      "type": "translate",
+      "source": "Нам разрешили уйти пораньше.",
+      "answer": "We were allowed to leave early.",
+      "accept": ["We were allowed to go early.", "We were allowed to leave earlier.", "They allowed us to leave early.", "They let us leave early.", "We were allowed to go home early."],
+      "distractors": ["us", "could", "did"],
+      "explanation": "«Нам разрешили» — we were allowed to: подлежащим становится we, а не us. Could означало бы просто возможность, а не чьё-то разрешение."
+    },
+    {
+      "type": "dictation",
+      "audio": "We didn't have to wait long.",
+      "translation": "Нам не пришлось долго ждать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["I will can help you tomorrow.", "I will be able to help you tomorrow.", "I will able to help you tomorrow.", "I will be able help you tomorrow."],
+      "answer": 1,
+      "explanation": "Будущее от can — will be able to + глагол. В этой цепочке нельзя пропускать ни be, ни to, а «will can» не говорят никогда."
+    }
+  ]
+}

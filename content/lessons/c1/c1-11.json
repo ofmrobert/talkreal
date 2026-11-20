@@ -1,0 +1,201 @@
+{
+  "id": "c1-11",
+  "level": "C1",
+  "order": 11,
+  "title": { "ru": "Номинализация: существительные вместо глаголов", "en": "Nominalisation" },
+  "goal": { "ru": "Научитесь превращать глаголы и прилагательные в существительные, чтобы писать в сжатом официальном стиле.", "en": "Learn to turn verbs and adjectives into nouns to write in a concise formal style." },
+  "theory": [
+    {
+      "title": "They decided → The decision to…",
+      "body": "В отчётах, деловых письмах и статьях действие часто выражают не глаголом, а существительным: decide → decision, fail → failure, grow → growth. Текст становится более сжатым и безличным: важно не кто это сделал, а что произошло. Исполнитель действия превращается в притяжательную форму или исчезает совсем.",
+      "examples": [
+        { "en": "The board's decision to close the factory surprised everyone.", "ru": "Решение совета директоров закрыть завод удивило всех." },
+        { "en": "The failure of the talks led to a strike.", "ru": "Провал переговоров привёл к забастовке." },
+        { "en": "There has been a sharp increase in demand.", "ru": "Спрос резко вырос." }
+      ],
+      "tip": "Существительное сохраняет модель своего глагола: decide to do → the decision to do, refuse to do → the refusal to do. «The decision of closing» — ошибка."
+    },
+    {
+      "title": "Предлоги и прилагательные при существительном",
+      "body": "У каждого такого существительного свой предлог, и он редко совпадает с русским родительным падежом. Increase, rise, fall и reduction требуют in, когда мы называем то, что изменилось: a rise in prices. Demand и need — for, impact и effect — on, solution — to. Наречие при глаголе превращается в прилагательное: prices rose sharply → a sharp rise in prices.",
+      "examples": [
+        { "en": "The reduction in costs was achieved without job losses.", "ru": "Сокращения расходов удалось добиться без увольнений." },
+        { "en": "There is a growing demand for flexible working.", "ru": "Спрос на гибкий график работы растёт." },
+        { "en": "The new law had a serious impact on small businesses.", "ru": "Новый закон серьёзно ударил по малому бизнесу." }
+      ],
+      "tip": "Русское «рост цен» подсказывает of, но of после rise и increase называет размер изменения: a rise of five per cent in prices."
+    },
+    {
+      "title": "Прилагательные тоже становятся существительными",
+      "body": "Той же дорогой идут прилагательные: able → ability, aware → awareness, reluctant → reluctance. Фраза She was reluctant to comment превращается в Her reluctance to comment. Номинализация уместна в письменной формальной речи; в разговоре цепочки существительных звучат тяжело и по-канцелярски.",
+      "examples": [
+        { "en": "Her reluctance to comment only increased suspicion.", "ru": "Её нежелание давать комментарии только усилило подозрения." },
+        { "en": "His ability to stay calm under pressure is remarkable.", "ru": "Его способность сохранять спокойствие под давлением поразительна." },
+        { "en": "The campaign aims to raise awareness of the problem.", "ru": "Цель кампании — привлечь внимание к проблеме." }
+      ],
+      "tip": "В разговоре скажите We decided to move, а в отчёте — The decision to relocate was taken in May."
+    }
+  ],
+  "vocab": [
+    { "en": "refusal", "ru": "отказ", "example": "Her refusal to sign the agreement delayed the project." },
+    { "en": "failure", "ru": "провал; невыполнение", "example": "The failure of the talks led to a strike." },
+    { "en": "reluctance", "ru": "нежелание, неохота", "example": "I understand your reluctance to change suppliers." },
+    { "en": "awareness", "ru": "осведомлённость", "example": "The campaign raised public awareness of the risks." },
+    { "en": "reduction", "ru": "сокращение, снижение", "example": "We achieved a ten per cent reduction in costs." },
+    { "en": "growth", "ru": "рост", "example": "The rapid growth of the city has put pressure on transport." },
+    { "en": "shortage", "ru": "нехватка", "example": "There is a serious shortage of qualified nurses." },
+    { "en": "approval", "ru": "одобрение", "example": "The plan cannot go ahead without the board's approval." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "refusal", "ru": "отказ" },
+        { "en": "reluctance", "ru": "нежелание, неохота" },
+        { "en": "awareness", "ru": "осведомлённость" },
+        { "en": "shortage", "ru": "нехватка" },
+        { "en": "approval", "ru": "одобрение" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как передать в формальном стиле мысль «They decided to close the branch, and everyone was surprised»?",
+      "options": [
+        "The decision of closing the branch came as a surprise to everyone.",
+        "The decision to close the branch came as a surprise to everyone.",
+        "The deciding to close the branch came as a surprise to everyone.",
+        "The decision for close the branch came as a surprise to everyone."
+      ],
+      "answer": 1,
+      "explanation": "Глагол decide требует инфинитива, и существительное decision наследует эту модель: the decision to close. «The decision of closing» — калька с русского «решение о закрытии»."
+    },
+    {
+      "type": "gap",
+      "sentence": "There has been a sharp increase ___ the number of complaints since January.",
+      "translation": "С января число жалоб резко выросло.",
+      "options": ["in", "of", "at", "for"],
+      "answer": 0,
+      "explanation": "После increase то, что выросло, вводится предлогом in: an increase in the number. Предлог of, который подсказывает русский родительный падеж, называет размер роста: an increase of ten per cent."
+    },
+    {
+      "type": "translate",
+      "source": "Его отказ сотрудничать усложнил расследование.",
+      "answer": "His refusal to cooperate complicated the investigation.",
+      "accept": [
+        "His refusal to co-operate complicated the investigation.",
+        "His refusal to cooperate made the investigation more difficult.",
+        "His refusal to cooperate made the investigation harder.",
+        "His refusal to cooperate made the investigation more complicated."
+      ],
+      "distractors": ["refuse", "of", "cooperating", "refused"],
+      "explanation": "He refused to cooperate → his refusal to cooperate: подлежащее становится притяжательным местоимением, а инфинитив сохраняется. «Refusal of cooperating» — ошибка: после refusal нужен to."
+    },
+    {
+      "type": "listen",
+      "audio": "The company's failure to meet safety standards resulted in a heavy fine.",
+      "question": "Почему компанию оштрафовали?",
+      "options": [
+        "Она слишком поздно заплатила предыдущий штраф",
+        "Она провалила проверку финансовой отчётности",
+        "Она не выполнила требования безопасности",
+        "Она отказалась вводить новые стандарты"
+      ],
+      "answer": 2,
+      "explanation": "Failure to do something — не «провал», а «невыполнение»: the failure to meet standards означает, что компания не выполнила требования. Это номинализация фразы The company failed to meet safety standards."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как превратить фразу «Prices rose sharply» в конструкцию с существительным?",
+      "options": [
+        "There was a sharply rise in prices.",
+        "There was a sharp rise of prices.",
+        "There was a sharp rising in prices.",
+        "There was a sharp rise in prices."
+      ],
+      "answer": 3,
+      "explanation": "Глагол rose становится существительным rise, наречие sharply — прилагательным sharp, а то, что выросло, вводится предлогом in. Наречие перед существительным и предлог of — две типичные ошибки."
+    },
+    {
+      "type": "speak",
+      "text": "There is a growing demand for flexible working.",
+      "translation": "Спрос на гибкий график работы растёт."
+    },
+    {
+      "type": "gap",
+      "sentence": "Her ___ to comment on the rumours only made journalists more suspicious.",
+      "translation": "Её нежелание комментировать слухи только усилило подозрения журналистов.",
+      "options": ["reluctance", "reluctant", "reluctantly", "unwilling"],
+      "answer": 0,
+      "explanation": "После притяжательного her нужно существительное: reluctance. Reluctant и unwilling — прилагательные, reluctantly — наречие; ни одно из них не может быть подлежащим."
+    },
+    {
+      "type": "type",
+      "source": "Спрос на жильё растёт.",
+      "answer": "The demand for housing is growing.",
+      "accept": [
+        "Demand for housing is growing.",
+        "The demand for housing is rising.",
+        "Demand for housing is rising.",
+        "The demand for housing is increasing.",
+        "Demand for housing is increasing.",
+        "Housing demand is growing.",
+        "The demand for housing is on the rise.",
+        "The demand for homes is growing.",
+        "Demand for homes is growing."
+      ],
+      "explanation": "После demand всегда стоит предлог for: demand for housing. Русское «спрос на» подталкивает к on, а родительный падеж — к of; оба варианта неверны."
+    },
+    {
+      "type": "listen",
+      "audio": "The introduction of the new system caused considerable confusion among staff.",
+      "question": "Что вы услышали?",
+      "options": [
+        "The introducing of the new system caused considerable confusion among staff.",
+        "The introduction the new system caused considerable confusion among staff.",
+        "The introduction of the new system caused considerable confusion among staff.",
+        "The introduction of the new system caused considerably confusion among staff."
+      ],
+      "answer": 2,
+      "explanation": "Introduce → introduction, а дополнение присоединяется предлогом of: the introduction of the new system. Перед существительным confusion стоит прилагательное considerable, а не наречие."
+    },
+    {
+      "type": "translate",
+      "source": "Рост цен сказался на наших продажах.",
+      "answer": "The rise in prices had an impact on our sales.",
+      "accept": [
+        "The increase in prices had an impact on our sales.",
+        "The rise in prices had an effect on our sales.",
+        "The rise in prices affected our sales.",
+        "The price rise had an impact on our sales.",
+        "Rising prices had an impact on our sales."
+      ],
+      "distractors": ["of", "at", "rose", "to"],
+      "explanation": "Два существительных — два разных предлога: a rise in prices, но an impact on sales. Русские «рост цен» и «сказаться на» здесь не помогают: предлог нужно запоминать вместе со словом."
+    },
+    {
+      "type": "gap",
+      "sentence": "Without the board's ___, the project cannot go ahead.",
+      "translation": "Без одобрения совета директоров проект не может быть запущен.",
+      "options": ["approve", "approval", "approving", "approvement"],
+      "answer": 1,
+      "explanation": "От глагола approve существительное образуется с суффиксом -al: approval, как refuse → refusal и arrive → arrival. Слова «approvement» в английском нет."
+    },
+    {
+      "type": "dictation",
+      "audio": "There is a serious shortage of qualified nurses.",
+      "translation": "Квалифицированных медсестёр серьёзно не хватает."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение правильно и уместно в официальном отчёте?",
+      "options": [
+        "We looked at the numbers and saw that people buy less now.",
+        "An analyse of the figures revealed a declining in consumer spending.",
+        "The analysis the figures revealed a decline of consumer spending.",
+        "An analysis of the figures revealed a decline in consumer spending."
+      ],
+      "answer": 3,
+      "explanation": "В отчёте действия названы существительными: analysis и decline, каждое со своим предлогом — analysis of, decline in. Первый вариант грамматически верен, но слишком разговорный; в остальных перепутаны формы слов и предлоги."
+    }
+  ]
+}

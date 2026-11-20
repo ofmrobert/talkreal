@@ -1,0 +1,184 @@
+{
+  "id": "b2-17",
+  "level": "B2",
+  "order": 17,
+  "title": { "ru": "Словообразование: приставки и суффиксы", "en": "Word formation: prefixes and suffixes" },
+  "goal": { "ru": "Научитесь образовывать новые слова с помощью приставок un-, mis-, over-, under-, re- и суффиксов -ness, -ment, -able, -less, -ful.", "en": "Learn to build new words with the prefixes un-, mis-, over-, under-, re- and the suffixes -ness, -ment, -able, -less, -ful." },
+  "theory": [
+    {
+      "title": "Приставки меняют значение",
+      "body": "Un- даёт противоположное значение (unclear, unhelpful), mis- означает «неправильно» (misleading, misspell), over- — «слишком много» (overpriced, overestimate), under- — «слишком мало» (underpaid, underestimate), re- — «снова, заново» (rewrite, reschedule). Часть речи при этом не меняется.",
+      "examples": [
+        { "en": "The report was unclear and misleading.", "ru": "Отчёт был неясным и вводил в заблуждение." },
+        { "en": "I think we underestimated the cost.", "ru": "Думаю, мы недооценили стоимость." },
+        { "en": "Could we reschedule the meeting?", "ru": "Мы могли бы перенести встречу?" }
+      ],
+      "tip": "Un- подходит не ко всем словам: impossible, illegal, irregular, dishonest. «Unpossible» — ошибка; такие слова лучше запоминать сразу в паре."
+    },
+    {
+      "title": "Существительные на -ness и -ment",
+      "body": "-ness делает из прилагательного название качества или состояния: aware — awareness, weak — weakness. -ment делает из глагола название процесса или результата: improve — improvement, agree — agreement.",
+      "examples": [
+        { "en": "There is growing awareness of the problem.", "ru": "Проблему осознаёт всё больше людей." },
+        { "en": "We finally reached an agreement.", "ru": "Мы наконец достигли соглашения." },
+        { "en": "There is still room for improvement.", "ru": "Ещё есть что улучшать." }
+      ],
+      "tip": "Не ставьте форму на -ing там, где есть готовое существительное: «an improving in sales» — ошибка, нужно an improvement in sales."
+    },
+    {
+      "title": "Прилагательные на -able, -ful и -less",
+      "body": "-able значит «такой, что можно сделать»: affordable — «можно себе позволить». -ful — «полный чего-то, с чем-то»: useful, stressful. -less — «без»: useless, careless, pointless. Суффикс -ful пишется с одной l.",
+      "examples": [
+        { "en": "The flat is small but affordable.", "ru": "Квартира маленькая, зато доступная по цене." },
+        { "en": "It was a careless mistake.", "ru": "Это была ошибка по невнимательности." },
+        { "en": "Moving house is always stressful.", "ru": "Переезд — это всегда стресс." }
+      ],
+      "tip": "Пара -ful / -less есть не у всех слов: useful — useless, но «stressless» не говорят (говорят stress-free). И значения не всегда зеркальны: helpless — «беспомощный», а «не желающий помочь» — unhelpful."
+    }
+  ],
+  "vocab": [
+    { "en": "to underestimate", "ru": "недооценить", "example": "It's a mistake to underestimate your competitors." },
+    { "en": "overpriced", "ru": "неоправданно дорогой", "example": "The restaurants near the square are overpriced." },
+    { "en": "misleading", "ru": "вводящий в заблуждение", "example": "The advert was misleading." },
+    { "en": "to reschedule", "ru": "перенести на другое время", "example": "We need to reschedule our call for Thursday." },
+    { "en": "awareness", "ru": "осведомлённость, понимание", "example": "The campaign raised awareness of the problem." },
+    { "en": "improvement", "ru": "улучшение", "example": "There has been a real improvement in sales." },
+    { "en": "affordable", "ru": "доступный по цене", "example": "It's hard to find affordable housing in the capital." },
+    { "en": "pointless", "ru": "бессмысленный", "example": "It's pointless to argue with him." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to underestimate", "ru": "недооценить" },
+        { "en": "overpriced", "ru": "неоправданно дорогой" },
+        { "en": "misleading", "ru": "вводящий в заблуждение" },
+        { "en": "awareness", "ru": "осведомлённость, понимание" },
+        { "en": "affordable", "ru": "доступный по цене" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Учителям платят слишком мало. Как закончить фразу «Teachers are…»?",
+      "options": ["underpaid", "overpaid", "unpaid", "repaid"],
+      "answer": 0,
+      "explanation": "Under- означает «меньше, чем нужно»: underpaid — «получающий слишком мало». Overpaid — наоборот, «слишком много», unpaid — «неоплачиваемый совсем», а repaid — «возвращённый» (о долге)."
+    },
+    {
+      "type": "gap",
+      "sentence": "The instructions were so ___ that we put the wardrobe together upside down.",
+      "translation": "Инструкция настолько вводила в заблуждение, что мы собрали шкаф вверх ногами.",
+      "options": ["misleading", "misled", "unleading", "mislead"],
+      "answer": 0,
+      "explanation": "Нужно прилагательное: misleading — «вводящий в заблуждение». Приставка mis- значит «неправильно»; misled и mislead — формы глагола, а слова «unleading» не существует."
+    },
+    {
+      "type": "listen",
+      "audio": "The hotel was overpriced, and the staff were unhelpful.",
+      "question": "Что говорящий думает об отеле?",
+      "options": [
+        "Цены завышены, а персонал не хотел помогать",
+        "Недорого, но персонал был беспомощным",
+        "Дорого, зато персонал очень старался",
+        "Цена справедливая, и персонал отличный"
+      ],
+      "answer": 0,
+      "explanation": "Overpriced — «стоит больше, чем заслуживает»: over- значит «слишком». Unhelpful — «не желающий помочь»; «беспомощный» было бы helpless."
+    },
+    {
+      "type": "translate",
+      "source": "Мы недооценили стоимость ремонта.",
+      "answer": "We underestimated the cost of the renovation.",
+      "accept": [
+        "We underestimated the cost of renovation.",
+        "We underestimated the cost of the repairs.",
+        "We underestimated the cost of the repair.",
+        "We have underestimated the cost of the renovation."
+      ],
+      "distractors": ["overestimated", "expensive", "under"],
+      "explanation": "«Недооценить» — underestimate: приставка under- пишется слитно и значит «меньше, чем на самом деле». Overestimate — наоборот, «переоценить»."
+    },
+    {
+      "type": "gap",
+      "sentence": "There has been a noticeable ___ in the quality of the service.",
+      "translation": "Качество обслуживания заметно улучшилось.",
+      "options": ["improvement", "improving", "improve", "improvness"],
+      "answer": 0,
+      "explanation": "После артикля и прилагательного нужно существительное. От глагола improve оно образуется суффиксом -ment: improvement. Суффикс -ness присоединяется к прилагательным, а не к глаголам."
+    },
+    {
+      "type": "speak",
+      "text": "It's hard to find affordable housing here.",
+      "translation": "Здесь трудно найти доступное жильё."
+    },
+    {
+      "type": "choice",
+      "prompt": "Встреча оказалась бесполезной. Как закончить фразу «The meeting was…»?",
+      "options": ["useless", "unuseful", "usefulless", "disuseful"],
+      "answer": 0,
+      "explanation": "Суффикс -less значит «без»: useless — «бесполезный». Он заменяет -ful, а не добавляется к нему, а приставки un- и dis- со словом useful не используются."
+    },
+    {
+      "type": "type",
+      "source": "Это была ошибка по невнимательности.",
+      "answer": "It was a careless mistake.",
+      "accept": [
+        "That was a careless mistake.",
+        "This was a careless mistake.",
+        "It was a careless error."
+      ],
+      "explanation": "Careless — «невнимательный, небрежный»: care + -less, буквально «без внимания». Слова «uncareful» в английском нет."
+    },
+    {
+      "type": "listen",
+      "audio": "Could we reschedule the interview? I'm afraid Thursday is impossible for me.",
+      "question": "О чём просит говорящий?",
+      "options": [
+        "Перенести собеседование на другой день",
+        "Отменить собеседование совсем",
+        "Провести собеседование в четверг",
+        "Провести собеседование ещё раз"
+      ],
+      "answer": 0,
+      "explanation": "Reschedule — «назначить заново, на другое время»: re- значит «снова», schedule — «назначать». Речь не о повторении встречи и не об отмене, а о новой дате."
+    },
+    {
+      "type": "gap",
+      "sentence": "Arguing with the airline is ___: they never give refunds.",
+      "translation": "Спорить с авиакомпанией бессмысленно: деньги они никогда не возвращают.",
+      "options": ["pointless", "pointful", "unpoint", "pointness"],
+      "answer": 0,
+      "explanation": "Point — «смысл», pointless — «без смысла». Слов «pointful» и «unpoint» не существует, а после is здесь нужно прилагательное, а не существительное."
+    },
+    {
+      "type": "translate",
+      "source": "Кампания повысила осведомлённость о проблеме.",
+      "answer": "The campaign raised awareness of the problem.",
+      "accept": [
+        "The campaign raised awareness about the problem.",
+        "The campaign increased awareness of the problem.",
+        "The campaign has raised awareness of the problem.",
+        "The campaign raised awareness of the issue."
+      ],
+      "distractors": ["aware", "rose", "knowledge"],
+      "explanation": "От прилагательного aware существительное образуется суффиксом -ness: awareness. Устойчивое сочетание — raise awareness; rose — форма глагола rise («подниматься самому»), у него не бывает дополнения."
+    },
+    {
+      "type": "dictation",
+      "audio": "There is still room for improvement.",
+      "translation": "Ещё есть что улучшать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Где оба прилагательных написаны правильно?",
+      "options": [
+        "a helpful colleague and a useful tip",
+        "a helpfull colleague and a usefull tip",
+        "a helpfull colleague and a useful tip",
+        "a helpful colleague and a usefull tip"
+      ],
+      "answer": 0,
+      "explanation": "Суффикс -ful всегда пишется с одной l: helpful, useful. Две l — только в отдельном слове full и в наречиях: usefully."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "b1-15",
+  "level": "B1",
+  "order": 15,
+  "title": { "ru": "Both, either, neither, all, none, each", "en": "Both, either, neither, all, none, each" },
+  "goal": { "ru": "Научитесь говорить о двух и о нескольких предметах: оба, любой, ни один, все, каждый.", "en": "Learn to talk about two things and about more than two: both, either, neither, all, none, each." },
+  "theory": [
+    {
+      "title": "Когда предметов два: both, either, neither",
+      "body": "Для двух предметов или людей в английском есть особые слова. Both — «оба», после него множественное число. Either — «любой из двух, тот или другой», neither — «ни тот, ни другой»; после них существительное и глагол стоят в единственном числе. Глагол после neither утвердительный: отрицание уже внутри слова.",
+      "examples": [
+        { "en": "Both flats are near the metro.", "ru": "Обе квартиры рядом с метро." },
+        { "en": "Monday or Tuesday? — Either day is fine.", "ru": "В понедельник или во вторник? — Подойдёт любой день." },
+        { "en": "Neither flat has a balcony.", "ru": "Ни в одной из двух квартир нет балкона." }
+      ],
+      "tip": "В русском два отрицания — норма («ни один не подошёл»), в английском оно одно: Neither flat has…, а не «Neither flat doesn't have…»."
+    },
+    {
+      "title": "Когда их больше двух: all, none, each",
+      "body": "Если предметов три и больше, вместо both говорят all (все), вместо neither — none (ни один). Each — «каждый по отдельности», после него единственное число. После none of глагол тоже утвердительный.",
+      "examples": [
+        { "en": "All my colleagues speak English.", "ru": "Все мои коллеги говорят по-английски." },
+        { "en": "None of the shops were open.", "ru": "Ни один из магазинов не работал." },
+        { "en": "Each employee has a personal password.", "ru": "У каждого сотрудника есть личный пароль." }
+      ],
+      "tip": "Both и neither — только о двух. О трёх друзьях скажите all of them или none of them."
+    },
+    {
+      "title": "Of us, of them и парные союзы",
+      "body": "Перед местоимениями нужен предлог of: both of us, neither of them, all of you, none of us, each of them. Эти же слова образуют парные союзы: both… and (и… и), either… or (или… или), neither… nor (ни… ни).",
+      "examples": [
+        { "en": "Both of us work from home.", "ru": "Мы оба работаем из дома." },
+        { "en": "She speaks both English and German.", "ru": "Она говорит и по-английски, и по-немецки." },
+        { "en": "You can either call or send an email.", "ru": "Можно либо позвонить, либо отправить письмо." }
+      ],
+      "tip": "«Мы оба» — это both of us или we both, но не «both we» и не «we both of»."
+    }
+  ],
+  "vocab": [
+    { "en": "both", "ru": "оба, обе", "example": "I like both restaurants." },
+    { "en": "either", "ru": "любой из двух; или", "example": "We can meet on either day." },
+    { "en": "neither", "ru": "ни тот ни другой; ни", "example": "I tried two hotels, but neither had a free room." },
+    { "en": "none", "ru": "ни один (из нескольких)", "example": "I have three brothers, and none of them lives in Russia." },
+    { "en": "each", "ru": "каждый (по отдельности)", "example": "The tickets cost twenty pounds each." },
+    { "en": "the whole", "ru": "весь, целый", "example": "I spent the whole day in meetings." },
+    { "en": "an option", "ru": "вариант", "example": "Working from home is not an option for me." },
+    { "en": "to suit", "ru": "подходить, устраивать", "example": "Does Friday suit you?" }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "both", "ru": "оба" },
+        { "en": "neither", "ru": "ни тот ни другой" },
+        { "en": "none", "ru": "ни один из нескольких" },
+        { "en": "each", "ru": "каждый" },
+        { "en": "an option", "ru": "вариант" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вам предлагают встретиться в понедельник или во вторник. Вам всё равно, подходит любой из двух дней. Что вы скажете?",
+      "options": ["Either day is fine.", "Neither day is fine.", "None day is fine.", "Both day is fine."],
+      "answer": 0,
+      "explanation": "Either — «любой из двух, тот или другой». Neither значило бы, что не подходит ни один день, none не ставится прямо перед существительным, а после both нужно множественное число и смысл был бы другим: «оба дня»."
+    },
+    {
+      "type": "gap",
+      "sentence": "I have two sisters. ___ of them live in Moscow.",
+      "translation": "У меня две сестры. Обе живут в Москве.",
+      "options": ["Both", "All", "Either", "Every"],
+      "answer": 0,
+      "explanation": "Сестёр две, и речь об обеих сразу — both, с глаголом во множественном числе (live). All используют для трёх и больше, после either глагол стоял бы в единственном числе, а «every of» по-английски не говорят."
+    },
+    {
+      "type": "translate",
+      "source": "Ни один из моих друзей не курит.",
+      "answer": "None of my friends smoke.",
+      "accept": ["None of my friends smokes."],
+      "distractors": ["don't", "nobody", "not"],
+      "explanation": "None уже содержит отрицание, поэтому глагол утвердительный: none of my friends smoke. Русское двойное отрицание («ни один… не») в английском превращается в одно."
+    },
+    {
+      "type": "listen",
+      "audio": "Neither of my parents can drive.",
+      "question": "Что вы узнали?",
+      "options": ["Ни мама, ни папа не водят машину", "Оба родителя водят машину", "Машину водит только один из родителей", "Родители не разрешают говорящему водить"],
+      "answer": 0,
+      "explanation": "Neither of my parents — «ни один из двух родителей». Глагол can стоит без not, потому что отрицание уже заключено в слове neither."
+    },
+    {
+      "type": "gap",
+      "sentence": "We looked at two flats, but ___ of them had a balcony.",
+      "translation": "Мы посмотрели две квартиры, но ни в одной не было балкона.",
+      "options": ["neither", "none", "no", "any"],
+      "answer": 0,
+      "explanation": "Квартир две, поэтому «ни одна из них» — neither of them. None — это «ни один из трёх и более», а no и any так с of them не употребляются."
+    },
+    {
+      "type": "speak",
+      "text": "Both of us work from home.",
+      "translation": "Мы оба работаем из дома."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Neither of them doesn't speak English.", "Neither of them speaks English.", "Neither from them speaks English.", "Neither them speaks English."],
+      "answer": 1,
+      "explanation": "После neither глагол утвердительный, потому что отрицание уже есть: neither of them speaks. Перед местоимением нужен предлог of, а не from, и пропускать его нельзя."
+    },
+    {
+      "type": "type",
+      "source": "Мы оба устали.",
+      "answer": "We are both tired.",
+      "accept": ["We're both tired.", "Both of us are tired.", "We both are tired."],
+      "explanation": "Both ставится после глагола be: we are both tired. Второй вариант — both of us are tired; а вот «both we» по-английски не говорят."
+    },
+    {
+      "type": "gap",
+      "sentence": "You can pay ___ by card or in cash.",
+      "translation": "Можно заплатить либо картой, либо наличными.",
+      "options": ["either", "neither", "both", "each"],
+      "answer": 0,
+      "explanation": "Парный союз «либо… либо» — either… or. Neither требует nor, а both — and: both by card and in cash."
+    },
+    {
+      "type": "listen",
+      "audio": "Each ticket costs fifteen pounds.",
+      "question": "Что вы услышали?",
+      "options": ["Each ticket costs fifteen pounds.", "Each ticket costs fifty pounds.", "Each tickets cost fifteen pounds.", "All ticket costs fifteen pounds."],
+      "answer": 0,
+      "explanation": "После each — существительное и глагол в единственном числе: each ticket costs. В fifteen (15) ударение на конце слова, в fifty (50) — на первом слоге."
+    },
+    {
+      "type": "translate",
+      "source": "Она говорит и по-английски, и по-немецки.",
+      "answer": "She speaks both English and German.",
+      "accept": ["She speaks both German and English.", "She speaks English and German.", "She speaks German and English."],
+      "distractors": ["either", "or", "all"],
+      "explanation": "«И… и» — это both… and. Either… or означало бы «или по-английски, или по-немецки», а all используют, когда предметов больше двух."
+    },
+    {
+      "type": "dictation",
+      "audio": "None of the shops were open.",
+      "translation": "Ни один из магазинов не работал."
+    },
+    {
+      "type": "choice",
+      "prompt": "В отделе десять человек, и никто из них не пришёл. Как сказать?",
+      "options": ["None of them came.", "Neither of them came.", "None of them didn't come.", "Nobody of them came."],
+      "answer": 0,
+      "explanation": "Людей больше двух, значит, none of them, а глагол утвердительный: came. Neither — только о двоих, второе отрицание после none лишнее, а nobody с of не сочетается."
+    }
+  ]
+}

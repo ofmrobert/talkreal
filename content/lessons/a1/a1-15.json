@@ -1,0 +1,155 @@
+{
+  "id": "a1-15",
+  "level": "A1",
+  "order": 15,
+  "title": { "ru": "Would like: заказ в кафе", "en": "Would like: ordering in a café" },
+  "goal": { "ru": "Научитесь вежливо заказывать еду и напитки.", "en": "Learn to order food and drinks politely." },
+  "theory": [
+    {
+      "title": "I'd like — «я бы хотел»",
+      "body": "I would like (коротко I'd like) — вежливое «я хочу», «мне, пожалуйста». В кафе, магазине и отеле говорят именно так: I want звучит резко, как требование. После I'd like идёт существительное или to + глагол.",
+      "examples": [
+        { "en": "I'd like a coffee, please.", "ru": "Мне кофе, пожалуйста." },
+        { "en": "We'd like a table for two.", "ru": "Нам столик на двоих." },
+        { "en": "I'd like to pay by card.", "ru": "Я бы хотел заплатить картой." }
+      ],
+      "tip": "Would не меняется: I'd like, she'd like, we'd like — без -s и без do."
+    },
+    {
+      "title": "Would you like…? — вежливое предложение",
+      "body": "Would you like…? — «Не хотите ли…?», «Вам…?». Так официант предлагает что-то вам, а вы — своим гостям. Отвечают: Yes, please. / No, thank you. Не путайте с Do you like…? — это вопрос о вкусах вообще: «Вы любите…?»",
+      "examples": [
+        { "en": "Would you like a dessert? — Yes, please.", "ru": "Хотите десерт? — Да, пожалуйста." },
+        { "en": "Would you like a cup of tea? — No, thank you.", "ru": "Хотите чашку чая? — Нет, спасибо." },
+        { "en": "Would you like to sit here?", "ru": "Хотите сесть здесь?" }
+      ],
+      "tip": "I like coffee — я вообще люблю кофе. I'd like a coffee — я хочу кофе сейчас."
+    },
+    {
+      "title": "Can I have…?",
+      "body": "Ещё один вежливый способ заказать — Can I have…? Дословно «Могу я получить…?», а по-русски просто «Можно мне…?». Не переводите «дайте мне» как Give me: это звучит грубо. В конце добавьте please.",
+      "examples": [
+        { "en": "Can I have the menu, please?", "ru": "Можно мне меню, пожалуйста?" },
+        { "en": "Can I have a glass of water?", "ru": "Можно мне стакан воды?" },
+        { "en": "Can we have the bill, please?", "ru": "Можно нам счёт, пожалуйста?" }
+      ],
+      "tip": "Счёт в кафе — the bill. Попросить его: Can I have the bill, please?"
+    }
+  ],
+  "vocab": [
+    { "en": "menu", "ru": "меню", "example": "Can I have the menu, please?" },
+    { "en": "bill", "ru": "счёт", "example": "Can we have the bill, please?" },
+    { "en": "a cup of tea", "ru": "чашка чая", "example": "I'd like a cup of tea." },
+    { "en": "a glass of water", "ru": "стакан воды", "example": "Can I have a glass of water?" },
+    { "en": "sandwich", "ru": "сэндвич, бутерброд", "example": "I'd like a cheese sandwich." },
+    { "en": "soup", "ru": "суп", "example": "The soup is very hot." },
+    { "en": "dessert", "ru": "десерт", "example": "Would you like a dessert?" },
+    { "en": "waiter", "ru": "официант", "example": "The waiter is very friendly." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "menu", "ru": "меню" },
+        { "en": "bill", "ru": "счёт" },
+        { "en": "soup", "ru": "суп" },
+        { "en": "dessert", "ru": "десерт" },
+        { "en": "waiter", "ru": "официант" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как заказать кофе в кафе?",
+      "options": ["I'd like a coffee, please.", "I like a coffee, please.", "I would a coffee, please.", "I'd like to a coffee, please."],
+      "answer": 0,
+      "explanation": "Заказ — это I'd like, то есть I would like. Без 'd получается I like — «я люблю», а это рассказ о вкусах, не заказ. To нужно только перед глаголом: I'd like to pay."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you like a dessert?",
+      "translation": "Хотите десерт?",
+      "options": ["Would", "Do", "Are", "Does"],
+      "answer": 0,
+      "explanation": "Когда что-то предлагают прямо сейчас, вопрос начинается с Would: Would you like…? Do you like…? спрашивает о вкусах вообще, и после него не бывает a dessert."
+    },
+    {
+      "type": "listen",
+      "audio": "I'd like a cheese sandwich and a cup of tea, please.",
+      "question": "Что заказывает человек?",
+      "options": ["Сэндвич с сыром и чай", "Сэндвич с сыром и кофе", "Суп и чай", "Сэндвич с мясом и чай"],
+      "answer": 0,
+      "explanation": "A cheese sandwich — сэндвич с сыром, a cup of tea — чашка чая. I'd like в начале показывает, что это заказ."
+    },
+    {
+      "type": "translate",
+      "source": "Можно мне меню, пожалуйста?",
+      "answer": "Can I have the menu, please?",
+      "accept": ["Could I have the menu, please?", "May I have the menu, please?", "Please can I have the menu?", "Can I have a menu, please?", "Can I have the menu?"],
+      "distractors": ["give", "me", "to"],
+      "explanation": "«Можно мне…?» — Can I have…? Русское «мне» здесь не переводится: тот, кто просит, уже назван словом I."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'd like ___ pay by card, please.",
+      "translation": "Я бы хотел заплатить картой, пожалуйста.",
+      "options": ["to", "for", "at"],
+      "answer": 0,
+      "explanation": "После would like перед глаголом ставится to: I'd like to pay. Перед существительным to не нужно: I'd like a coffee."
+    },
+    {
+      "type": "speak",
+      "text": "Can I have the bill, please?",
+      "translation": "Можно счёт, пожалуйста?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Официант спрашивает: «Would you like a dessert?» Как согласиться?",
+      "options": ["Yes, I do.", "Yes, please.", "Yes, I like.", "Yes, I am."],
+      "answer": 1,
+      "explanation": "На предложение Would you like…? отвечают Yes, please или No, thank you. Yes, I do — ответ на вопрос с do, а в этом вопросе его нет."
+    },
+    {
+      "type": "translate",
+      "source": "Я бы хотел стакан воды.",
+      "answer": "I would like a glass of water.",
+      "accept": ["I'd like a glass of water.", "I would like a glass of water, please.", "I'd like a glass of water, please."],
+      "distractors": ["likes", "cup", "am"],
+      "explanation": "«Я бы хотел» — I would like. Glass — стакан, cup — чашка; между ними и словом water стоит of: a glass of water."
+    },
+    {
+      "type": "listen",
+      "audio": "Would you like a table next to the window?",
+      "question": "Что предлагает официант?",
+      "options": ["Столик у окна", "Столик у двери", "Стакан воды", "Меню"],
+      "answer": 0,
+      "explanation": "A table next to the window — «столик у окна». Would you like…? — вежливое предложение: «Хотите…?»"
+    },
+    {
+      "type": "gap",
+      "sentence": "Can I ___ a cup of tea, please?",
+      "translation": "Можно мне чашку чая, пожалуйста?",
+      "options": ["have", "has", "having", "to have"],
+      "answer": 0,
+      "explanation": "После can глагол стоит в начальной форме без to: Can I have…? Окончания -s и -ing после can не бывает."
+    },
+    {
+      "type": "type",
+      "source": "Я бы хотела чашку чая.",
+      "answer": "I'd like a cup of tea.",
+      "accept": ["I would like a cup of tea.", "I'd like a cup of tea, please.", "I would like a cup of tea, please."],
+      "explanation": "«Я бы хотела» — I'd like или I would like; форма одна и для мужчин, и для женщин. Чашка чая — a cup of tea, с артиклем a и предлогом of."
+    },
+    {
+      "type": "dictation",
+      "audio": "Can I have a glass of water?",
+      "translation": "Можно мне стакан воды?"
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит вопрос «Would you like a cup of tea?»",
+      "options": ["Вы любите чай?", "Хотите чашку чая?", "Вы пьёте чай?", "У вас есть чай?"],
+      "answer": 1,
+      "explanation": "Would you like…? — это предложение: «Хотите…?» Вопрос о вкусах звучал бы иначе: Do you like tea? — «Вы любите чай?»"
+    }
+  ]
+}

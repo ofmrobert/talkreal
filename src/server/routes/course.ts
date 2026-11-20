@@ -3,7 +3,8 @@ import { Hono } from 'hono'
 import { isLevel } from '../../shared/levels'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { DAILY_XP_GOAL, limitsFor } from '../billing/plans'
-import { lessonById, lessonsFor } from '../content/lessons'
+import { lessonById } from '../content/lessons'
+import { courseState, examId, LEVEL_EXAM, nextLevel, UNIT_TEST, unitsFor } from '../content/units'
 import { db } from '../db/client'
 import { dailyUsage, lessonProgress, users } from '../db/schema'
 import { awardAchievements, listAchievements } from '../progress/achievements'
@@ -20,12 +21,6 @@ async function loadUser(userId: string) {
   return user
 }
 
-/** A lesson is open if it is the first one or the one before it has been completed. */
-function isUnlocked(lessonId: string, courseIds: string[], done: Set<string>): boolean {
-  const index = courseIds.indexOf(lessonId)
-  return index === 0 || (index > 0 && done.has(courseIds[index - 1]))
-}
-
 export const courseRoutes = new Hono<AuthEnv>()
 courseRoutes.use('*', requireUser)
 
@@ -36,12 +31,22 @@ courseRoutes.get('/course', async (c) => {
 
   const timezone = safeTimezone(c.req.query('tz') ?? user.timezone)
   const today = localDay(timezone)
-  const course = lessonsFor(user.level)
+  const units = unitsFor(user.level)
   const progress = await db.select().from(lessonProgress).where(eq(lessonProgress.userId, user.id))
   const best = new Map(progress.map((p) => [p.lessonId, p.bestAccuracy]))
   const done = new Set(best.keys())
-  const ids = course.map((l) => l.id)
+  const status = courseState(user.level, done)
   const usage = await usageToday(user.id, today)
+  const lessonNode = (l: (typeof units)[number]['lessons'][number]) => ({
+    id: l.id,
+    order: l.order,
+    title: l.title,
+    goal: l.goal,
+    exercises: l.exercises.length,
+    status: status.get(l.id) ?? 'locked',
+    bestAccuracy: best.get(l.id) ?? null,
+  })
+  const exam = examId(user.level)
   const limit = limitsFor(user.plan).lessonsPerDay
 
   // The last seven days, oldest first, for the week strip on the home screen.
@@ -71,15 +76,16 @@ courseRoutes.get('/course', async (c) => {
       lessonsDone: usage.lessonsDone,
       lessonsLimit: Number.isFinite(limit) ? limit : null,
     },
-    lessons: course.map((l) => ({
-      id: l.id,
-      order: l.order,
-      title: l.title,
-      goal: l.goal,
-      exercises: l.exercises.length,
-      status: done.has(l.id) ? 'done' : isUnlocked(l.id, ids, done) ? 'open' : 'locked',
-      bestAccuracy: best.get(l.id) ?? null,
+    /** The course as a path: units of lessons, each closed by a test, and the level exam at the end. */
+    units: units.map((unit) => ({
+      number: unit.number,
+      title: unit.title,
+      lessons: unit.lessons.map(lessonNode),
+      test: { id: unit.testId, status: status.get(unit.testId) ?? 'locked', bestAccuracy: best.get(unit.testId) ?? null, questions: UNIT_TEST.size, passMark: UNIT_TEST.passMark },
     })),
+    exam: { id: exam, status: status.get(exam) ?? 'locked', bestAccuracy: best.get(exam) ?? null, nextLevel: nextLevel(user.level), questions: LEVEL_EXAM.size, passMark: LEVEL_EXAM.passMark },
+    /** The same lessons as one flat list, for app versions from before the path. */
+    lessons: units.flatMap((unit) => unit.lessons.map(lessonNode)),
   })
 })
 
@@ -98,8 +104,7 @@ courseRoutes.get('/lessons/:id', async (c) => {
 
   const progress = await db.select().from(lessonProgress).where(eq(lessonProgress.userId, user.id))
   const done = new Set(progress.map((p) => p.lessonId))
-  const ids = lessonsFor(lesson.level).map((l) => l.id)
-  if (!done.has(lesson.id) && !isUnlocked(lesson.id, ids, done)) return c.json({ error: 'locked' }, 403)
+  if (courseState(lesson.level, done).get(lesson.id) === 'locked') return c.json({ error: 'locked' }, 403)
 
   const today = localDay(safeTimezone(c.req.query('tz') ?? user.timezone))
   const usage = await usageToday(user.id, today)

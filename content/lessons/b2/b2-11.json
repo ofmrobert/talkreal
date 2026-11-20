@@ -1,0 +1,204 @@
+{
+  "id": "b2-11",
+  "level": "B2",
+  "order": 11,
+  "title": { "ru": "Придаточные определительные: тонкости", "en": "Advanced relative clauses" },
+  "goal": { "ru": "Научитесь добавлять уточнения с who, which и whose, правильно ставить предлог и комментировать целую фразу с помощью which.", "en": "Learn to add extra information with who, which and whose, place the preposition correctly and comment on a whole clause with which." },
+  "theory": [
+    {
+      "title": "Уточнение в запятых: non-defining clauses",
+      "body": "Если придаточное лишь добавляет сведения о том, кто или что уже понятно, оно выделяется запятыми. В таком придаточном нельзя использовать that и нельзя опускать who или which. Без запятых смысл другой: придаточное выбирает одного из нескольких.",
+      "examples": [
+        { "en": "My manager, who joined the company last year, is leaving.", "ru": "Мой руководитель, который пришёл в компанию в прошлом году, уходит." },
+        { "en": "The flat, which we rented for a month, was right in the centre.", "ru": "Квартира, которую мы сняли на месяц, была в самом центре." },
+        { "en": "We spent a week in Kazan, where my wife grew up.", "ru": "Мы провели неделю в Казани, где выросла моя жена." }
+      ],
+      "tip": "В русском запятая перед «который» стоит всегда, поэтому она ничего не сообщает. В английском запятые меняют смысл: My brother, who lives in London, … — брат один; My brother who lives in London … — тот из братьев, что живёт в Лондоне."
+    },
+    {
+      "title": "Предлог и whose",
+      "body": "В разговорной речи предлог уходит в конец придаточного, а who или which обычно опускается: the person I spoke to. В официальном стиле предлог стоит впереди, и тогда возможны только whom и which: the person to whom I spoke. Whose («чей, у которого») подходит и для людей, и для предметов.",
+      "examples": [
+        { "en": "The colleague I spoke to was very helpful.", "ru": "Коллега, с которым я говорил, очень мне помог." },
+        { "en": "The client to whom we sent the offer has not replied.", "ru": "Клиент, которому мы отправили предложение, не ответил." },
+        { "en": "I have a neighbour whose dog barks all night.", "ru": "У меня есть сосед, собака которого лает всю ночь." }
+      ],
+      "tip": "Не теряйте предлог: «the hotel we stayed» — ошибка, нужно the hotel we stayed in. И не говорите «to who» или «to that»: после предлога — только whom или which."
+    },
+    {
+      "title": "Which обо всей фразе",
+      "body": "Which после запятой может относиться не к одному слову, а ко всему предыдущему высказыванию. По-русски здесь стоит «что»: «Он опоздал, что всех разозлило». Глагол после такого which — в единственном числе.",
+      "examples": [
+        { "en": "He was late again, which annoyed everyone.", "ru": "Он опять опоздал, что всех разозлило." },
+        { "en": "She speaks three languages, which helps her a lot at work.", "ru": "Она говорит на трёх языках, что очень помогает ей на работе." },
+        { "en": "They cancelled the meeting, which meant I could go home early.", "ru": "Встречу отменили, а это значило, что я мог уйти домой пораньше." }
+      ],
+      "tip": "Русское «что» тянет сказать what, но what никогда не относится к предыдущей фразе. «He was late, what annoyed everyone» — ошибка."
+    }
+  ],
+  "vocab": [
+    { "en": "whose", "ru": "чей, у которого", "example": "That's the woman whose car was stolen." },
+    { "en": "to whom", "ru": "которому, кому (официально)", "example": "The person to whom you spoke is my boss." },
+    { "en": "landlord", "ru": "хозяин съёмной квартиры, арендодатель", "example": "Our landlord, who lives abroad, never answers emails." },
+    { "en": "to annoy", "ru": "раздражать", "example": "Loud phone calls tend to annoy everyone in the office." },
+    { "en": "reliable", "ru": "надёжный", "example": "We need a reliable partner in the region." },
+    { "en": "supplier", "ru": "поставщик", "example": "The supplier we work with is based in Turkey." },
+    { "en": "to rely on", "ru": "полагаться на", "example": "It's good to have a colleague to rely on." },
+    { "en": "neighbourhood", "ru": "район (где живут)", "example": "This is the neighbourhood I grew up in." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "landlord", "ru": "хозяин съёмной квартиры, арендодатель" },
+        { "en": "to annoy", "ru": "раздражать" },
+        { "en": "reliable", "ru": "надёжный" },
+        { "en": "supplier", "ru": "поставщик" },
+        { "en": "neighbourhood", "ru": "район (где живут)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "My sister, who lives in Sochi, is a doctor.",
+        "My sister, that lives in Sochi, is a doctor.",
+        "My sister, which lives in Sochi, is a doctor.",
+        "My sister, who she lives in Sochi, is a doctor."
+      ],
+      "answer": 0,
+      "explanation": "В уточняющем придаточном (в запятых) о человеке говорим who: that здесь невозможно, а which относится только к предметам. Who уже является подлежащим, поэтому второе подлежащее she лишнее."
+    },
+    {
+      "type": "gap",
+      "sentence": "He forgot my birthday again, ___ really upset me.",
+      "translation": "Он опять забыл про мой день рождения, что меня очень расстроило.",
+      "options": ["which", "what", "that", "who"],
+      "answer": 0,
+      "explanation": "Which после запятой относится ко всей предыдущей фразе: расстроило то, что он забыл. Русское «что» здесь не переводится как what или that."
+    },
+    {
+      "type": "listen",
+      "audio": "Our landlord, whose son lives next door, is selling the flat.",
+      "question": "Кто живёт по соседству?",
+      "options": [
+        "Сын хозяина квартиры",
+        "Сам хозяин квартиры",
+        "Сын говорящего",
+        "Покупатель квартиры"
+      ],
+      "answer": 0,
+      "explanation": "Whose son — «сын которого»: whose относится к слову landlord, значит, рядом живёт сын хозяина. Главная мысль предложения — хозяин продаёт квартиру."
+    },
+    {
+      "type": "translate",
+      "source": "Это коллега, с которым я работал в Берлине.",
+      "answer": "This is the colleague I worked with in Berlin.",
+      "accept": [
+        "This is the colleague who I worked with in Berlin.",
+        "This is the colleague that I worked with in Berlin.",
+        "This is the colleague whom I worked with in Berlin.",
+        "This is the colleague with whom I worked in Berlin.",
+        "That is the colleague I worked with in Berlin."
+      ],
+      "distractors": ["which", "what", "to"],
+      "explanation": "В разговорной речи предлог with стоит после глагола, а who опускается: the colleague I worked with. Which о людях не говорят, а пропустить предлог нельзя: «работать с кем-то» — work with."
+    },
+    {
+      "type": "gap",
+      "sentence": "The company ___ offices we visited last week has just gone bankrupt.",
+      "translation": "Компания, офисы которой мы посетили на прошлой неделе, только что обанкротилась.",
+      "options": ["whose", "which", "who's", "that"],
+      "answer": 0,
+      "explanation": "Whose выражает принадлежность и подходит не только для людей, но и для компаний и предметов: whose offices — «офисы которой». Who's — это сокращение от who is, а не «чей»."
+    },
+    {
+      "type": "speak",
+      "text": "He was late again, which annoyed everyone.",
+      "translation": "Он опять опоздал, что всех разозлило."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какой вариант подходит для официального письма и при этом верен?",
+      "options": [
+        "The client to whom we sent the contract has not replied.",
+        "The client to who we sent the contract has not replied.",
+        "The client to that we sent the contract has not replied.",
+        "The client whom we sent the contract to him has not replied."
+      ],
+      "answer": 0,
+      "explanation": "Если предлог стоит перед относительным местоимением, о человеке возможно только whom: to whom. Who и that после предлога не употребляются, а him дублирует whom и потому лишнее."
+    },
+    {
+      "type": "type",
+      "source": "Это отель, в котором мы останавливались.",
+      "answer": "This is the hotel we stayed in.",
+      "accept": [
+        "This is the hotel we stayed at.",
+        "This is the hotel that we stayed in.",
+        "This is the hotel that we stayed at.",
+        "This is the hotel which we stayed in.",
+        "This is the hotel which we stayed at.",
+        "This is the hotel in which we stayed.",
+        "This is the hotel at which we stayed.",
+        "This is the hotel where we stayed.",
+        "That is the hotel we stayed in.",
+        "That's the hotel we stayed in.",
+        "It is the hotel we stayed in.",
+        "It's the hotel we stayed in."
+      ],
+      "explanation": "Stay требует предлога: stay in / at a hotel, и он остаётся в конце придаточного — the hotel we stayed in. Без предлога можно обойтись только со словом where: the hotel where we stayed."
+    },
+    {
+      "type": "listen",
+      "audio": "The supplier we usually rely on has raised its prices, which is a real problem.",
+      "question": "Что именно стало проблемой?",
+      "options": [
+        "То, что поставщик поднял цены",
+        "То, что поставщик оказался ненадёжным",
+        "То, что компания сменила поставщика",
+        "То, что цены поставщика упали"
+      ],
+      "answer": 0,
+      "explanation": "Which после запятой относится ко всей фразе: проблема — сам факт повышения цен. The supplier we usually rely on — «поставщик, на которого мы обычно полагаемся»: предлог on стоит в конце придаточного."
+    },
+    {
+      "type": "gap",
+      "sentence": "The neighbourhood ___ is very quiet.",
+      "translation": "Район, в котором мы живём, очень тихий.",
+      "options": ["we live in", "we live", "which we live", "where we live in"],
+      "answer": 0,
+      "explanation": "«Жить в районе» — live in, и предлог нельзя потерять: the neighbourhood we live in. Со словом where предлог уже не нужен: where we live, но не where we live in."
+    },
+    {
+      "type": "translate",
+      "source": "Она говорит на трёх языках, что очень помогает ей на работе.",
+      "answer": "She speaks three languages, which helps her a lot at work.",
+      "accept": [
+        "She speaks three languages, which helps her at work a lot.",
+        "She speaks three languages, which really helps her at work.",
+        "She speaks three languages, which helps her a lot in her work.",
+        "She speaks three languages, which helps her a lot in her job."
+      ],
+      "distractors": ["what", "that", "help"],
+      "explanation": "Which относится ко всей первой части, поэтому глагол стоит в единственном числе: which helps. What и that в этой роли не используются."
+    },
+    {
+      "type": "dictation",
+      "audio": "The colleague I spoke to was very helpful.",
+      "translation": "Коллега, с которым я говорил, очень мне помог."
+    },
+    {
+      "type": "choice",
+      "prompt": "Из какого предложения ясно, что у говорящего только один брат?",
+      "options": [
+        "My brother, who works in a bank, has bought a flat.",
+        "My brother who works in a bank has bought a flat.",
+        "My brother, that works in a bank, has bought a flat.",
+        "My brother which works in a bank has bought a flat."
+      ],
+      "answer": 0,
+      "explanation": "Запятые показывают, что придаточное лишь добавляет сведения о единственном брате. Без запятых получается «тот из моих братьев, который работает в банке», а that в запятых и which о человеке — ошибки."
+    }
+  ]
+}

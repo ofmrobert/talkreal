@@ -1,0 +1,155 @@
+{
+  "id": "b1-16",
+  "level": "B1",
+  "order": 16,
+  "title": { "ru": "Косвенная речь: вопросы и просьбы", "en": "Reported questions and commands" },
+  "goal": { "ru": "Научитесь пересказывать чужие вопросы, просьбы и указания.", "en": "Learn to report other people's questions, requests and instructions." },
+  "theory": [
+    {
+      "title": "Вопросы с вопросительным словом",
+      "body": "Пересказывая вопрос, мы превращаем его в обычное предложение: после asked идёт вопросительное слово, затем подлежащее и глагол в прямом порядке. Do, does и did исчезают, время сдвигается на шаг назад, как в косвенных утверждениях, а вопросительный знак не ставится.",
+      "examples": [
+        { "en": "He asked me where I lived.", "ru": "Он спросил меня, где я живу. (Прямой вопрос: Where do you live?)" },
+        { "en": "She asked what I was doing.", "ru": "Она спросила, что я делаю. (Прямой вопрос: What are you doing?)" },
+        { "en": "They asked when I had arrived.", "ru": "Они спросили, когда я приехал. (Прямой вопрос: When did you arrive?)" }
+      ],
+      "tip": "Типичная ошибка — сохранить порядок вопроса: «He asked where did I live». Правильно: He asked where I lived."
+    },
+    {
+      "title": "Вопросы «да или нет»: asked if",
+      "body": "Если в вопросе нет вопросительного слова, после asked ставят if или whether — это русское «ли». Дальше снова прямой порядок слов и сдвиг времени: do you speak превращается в I spoke, can — в could, have worked — в had worked.",
+      "examples": [
+        { "en": "She asked if I spoke English.", "ru": "Она спросила, говорю ли я по-английски." },
+        { "en": "They asked whether I could start on Monday.", "ru": "Они спросили, могу ли я начать в понедельник." },
+        { "en": "He asked if I had worked abroad.", "ru": "Он спросил, работал ли я за границей." }
+      ],
+      "tip": "Не говорите «asked that»: that вводит утверждения (He said that…), а для вопросов нужны if или whether."
+    },
+    {
+      "title": "Просьбы и указания: told me to, asked me not to",
+      "body": "Просьбы и приказы передаются инфинитивом: told или asked + кому + to + глагол. Told звучит как указание, asked — как просьба. В отрицании not стоит перед to. Русское «чтобы» здесь не переводится: никаких that и никакого прошедшего времени.",
+      "examples": [
+        { "en": "He told me to sit down.", "ru": "Он сказал мне сесть." },
+        { "en": "She asked us to wait outside.", "ru": "Она попросила нас подождать снаружи." },
+        { "en": "My boss told me not to be late.", "ru": "Начальник сказал мне не опаздывать." }
+      ],
+      "tip": "«Он сказал, чтобы я подождал» — He told me to wait, а не «He said that I waited»."
+    }
+  ],
+  "vocab": [
+    { "en": "to remind", "ru": "напомнить", "example": "Please remind me to call the bank." },
+    { "en": "to warn", "ru": "предупредить", "example": "They warned us not to swim there." },
+    { "en": "to advise", "ru": "посоветовать", "example": "The doctor advised me to rest." },
+    { "en": "to order", "ru": "приказать", "example": "The police ordered him to stop." },
+    { "en": "to persuade", "ru": "уговорить, убедить", "example": "I persuaded her to come with us." },
+    { "en": "to invite", "ru": "пригласить", "example": "They invited us to stay for dinner." },
+    { "en": "a request", "ru": "просьба", "example": "I have a request: please don't be late." },
+    { "en": "an interview", "ru": "собеседование", "example": "I have an interview at a bank tomorrow." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "to remind", "ru": "напомнить" },
+        { "en": "to warn", "ru": "предупредить" },
+        { "en": "to advise", "ru": "посоветовать" },
+        { "en": "to persuade", "ru": "уговорить" },
+        { "en": "a request", "ru": "просьба" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Она спросила: «Where do you work?» Как передать её вопрос?",
+      "options": ["She asked me where I worked.", "She asked me where did I work.", "She asked me where do I work.", "She asked me where I did worked."],
+      "answer": 0,
+      "explanation": "В косвенном вопросе порядок слов прямой, do исчезает, а время сдвигается назад: where I worked. Варианты с did I и do I сохраняют порядок прямого вопроса — это главная ошибка."
+    },
+    {
+      "type": "gap",
+      "sentence": "The interviewer asked me ___ I had any experience in sales.",
+      "translation": "На собеседовании меня спросили, есть ли у меня опыт в продажах.",
+      "options": ["if", "that", "did", "what"],
+      "answer": 0,
+      "explanation": "Вопрос «да или нет» присоединяется через if — русское «ли». That вводит утверждения, а не вопросы, а did в косвенном вопросе не используется."
+    },
+    {
+      "type": "translate",
+      "source": "Он попросил меня подождать снаружи.",
+      "answer": "He asked me to wait outside.",
+      "accept": ["He asked me to wait outdoors."],
+      "distractors": ["that", "waited", "for"],
+      "explanation": "Просьба передаётся схемой asked + кого + to + глагол: asked me to wait. Конструкция с that и прошедшим временем («asked that I waited») — калька с русского «попросил, чтобы я подождал»."
+    },
+    {
+      "type": "listen",
+      "audio": "She told me not to worry about the deadline.",
+      "question": "Что она сказала?",
+      "options": ["Не волноваться из-за срока", "Что она волнуется из-за срока", "Что срок уже прошёл", "Поторопиться, потому что срок близко"],
+      "answer": 0,
+      "explanation": "Told me not to worry — «сказала мне не волноваться»: not стоит перед to. Прямая речь была бы: Don't worry about the deadline."
+    },
+    {
+      "type": "gap",
+      "sentence": "My boss told me ___ late for the meeting.",
+      "translation": "Начальник сказал мне не опаздывать на совещание.",
+      "options": ["not to be", "to not being", "don't be", "that I'm not"],
+      "answer": 0,
+      "explanation": "Отрицательное указание — not + to + глагол: told me not to be late. Don't be — это прямая речь, в пересказе она превращается в инфинитив."
+    },
+    {
+      "type": "speak",
+      "text": "She asked me where I worked.",
+      "translation": "Она спросила меня, где я работаю."
+    },
+    {
+      "type": "choice",
+      "prompt": "Врач сказал: «Don't eat after eight.» Как передать его слова?",
+      "options": ["He told me not to eat after eight.", "He told me don't eat after eight.", "He said me not to eat after eight.", "He told me to not eating after eight."],
+      "answer": 0,
+      "explanation": "Запрет передаётся через told me not to + глагол. После said нельзя сразу ставить me (нужно told me), а don't остаётся только в прямой речи."
+    },
+    {
+      "type": "type",
+      "source": "Она спросила, устал ли я.",
+      "answer": "She asked if I was tired.",
+      "accept": ["She asked me if I was tired.", "She asked whether I was tired.", "She asked me whether I was tired."],
+      "explanation": "«Ли» — это if или whether, после него прямой порядок слов: I was tired. Настоящее время прямого вопроса (Are you tired?) сдвигается в прошедшее."
+    },
+    {
+      "type": "gap",
+      "sentence": "They asked me when ___ start.",
+      "translation": "Они спросили меня, когда я смогу начать.",
+      "options": ["I could", "could I", "can I", "I could to"],
+      "answer": 0,
+      "explanation": "После вопросительного слова — прямой порядок: подлежащее, затем глагол, I could start. Can сдвигается в could, а после модального глагола частица to не нужна."
+    },
+    {
+      "type": "listen",
+      "audio": "He asked me if I could work at weekends.",
+      "question": "Что вы услышали?",
+      "options": ["He asked me if I could work at weekends.", "He asked me if could I work at weekends.", "He asked me if I couldn't work at weekends.", "He asked me if I could walk at weekends."],
+      "answer": 0,
+      "explanation": "Asked me if I could work — «спросил, могу ли я работать»: после if порядок слов прямой. Не путайте work (работать) и walk (гулять): гласные в них разные."
+    },
+    {
+      "type": "translate",
+      "source": "Он спросил меня, где я живу.",
+      "answer": "He asked me where I lived.",
+      "accept": ["He asked me where I live.", "He asked where I lived.", "He asked where I live."],
+      "distractors": ["did", "do", "that"],
+      "explanation": "После asked — вопросительное слово и прямой порядок: where I lived. Do и did в пересказанном вопросе не нужны, а that с вопросами не используется."
+    },
+    {
+      "type": "dictation",
+      "audio": "He told me to sit down and wait.",
+      "translation": "Он сказал мне сесть и подождать."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["She asked me what was my name.", "She asked me what my name was.", "She asked me what is my name.", "She asked to me what my name was."],
+      "answer": 1,
+      "explanation": "В косвенном вопросе глагол стоит после подлежащего: what my name was. После ask предлог to не нужен: asked me, а не «asked to me»."
+    }
+  ]
+}

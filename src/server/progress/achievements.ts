@@ -1,7 +1,7 @@
 import { and, eq, gte, sql } from 'drizzle-orm'
 import { ACHIEVEMENTS, type AchievementKey } from '../../shared/achievements'
 import { isLevel } from '../../shared/levels'
-import { lessonsFor } from '../content/lessons'
+import { lessonById, lessonsFor } from '../content/lessons'
 import { db } from '../db/client'
 import { lessonProgress, userAchievements, users, voiceSessions } from '../db/schema'
 
@@ -23,10 +23,13 @@ export async function awardAchievements(userId: string): Promise<AchievementKey[
   )
   if (have.size >= ACHIEVEMENTS.length) return []
 
-  const progress = await db
-    .select({ lessonId: lessonProgress.lessonId, bestAccuracy: lessonProgress.bestAccuracy })
-    .from(lessonProgress)
-    .where(eq(lessonProgress.userId, userId))
+  // Unit tests and exams are kept in the same table; the badges count real lessons only.
+  const progress = (
+    await db
+      .select({ lessonId: lessonProgress.lessonId, bestAccuracy: lessonProgress.bestAccuracy })
+      .from(lessonProgress)
+      .where(eq(lessonProgress.userId, userId))
+  ).filter((p) => lessonById(p.lessonId) !== undefined)
   const done = new Set(progress.map((p) => p.lessonId))
   const [calls] = await db
     .select({ count: sql<number>`count(*)::int` })

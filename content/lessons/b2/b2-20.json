@@ -1,0 +1,194 @@
+{
+  "id": "b2-20",
+  "level": "B2",
+  "order": 20,
+  "title": { "ru": "Идиомы для повседневных разговоров", "en": "Idioms for everyday conversation" },
+  "goal": { "ru": "Научитесь понимать и к месту использовать популярные идиомы: a piece of cake, on the fence, call it a day, get cold feet и другие.", "en": "Learn to understand and naturally use common idioms: a piece of cake, on the fence, call it a day, get cold feet and others." },
+  "theory": [
+    {
+      "title": "Идиому нельзя перевести по словам",
+      "body": "Идиома — устойчивое выражение, смысл которого не складывается из значений отдельных слов. Дословный перевод не работает ни в одну сторону: «проще пареной репы» по-английски — a piece of cake. Слова внутри идиомы нельзя заменять, даже близкими по смыслу.",
+      "examples": [
+        { "en": "The interview was a piece of cake.", "ru": "Собеседование оказалось проще простого." },
+        { "en": "Tickets for the final cost an arm and a leg.", "ru": "Билеты на финал стоят бешеных денег." },
+        { "en": "We go to the theatre once in a blue moon.", "ru": "В театр мы ходим раз в сто лет." }
+      ],
+      "tip": "«A slice of cake», «a hand and a leg», «once in a red moon» — уже не идиомы. Запоминайте выражение целиком, вместе с артиклями и предлогами."
+    },
+    {
+      "title": "О решениях и самочувствии",
+      "body": "To be on the fence — колебаться, не выбрать ни одну из сторон. To get cold feet — струсить в последний момент перед важным шагом. To feel under the weather — неважно себя чувствовать, слегка приболеть. Глагол в идиоме меняется по временам как обычно, остальные слова остаются на месте.",
+      "examples": [
+        { "en": "I'm on the fence about moving abroad.", "ru": "Я никак не решу, переезжать ли за границу." },
+        { "en": "He got cold feet and called off the wedding.", "ru": "Он струсил и отменил свадьбу." },
+        { "en": "I'm feeling a bit under the weather, so I'll stay at home.", "ru": "Мне немного нездоровится, так что я останусь дома." }
+      ],
+      "tip": "Cold feet — не про холод, а under the weather — не про погоду. Если фраза в контексте звучит странно, скорее всего, перед вами идиома."
+    },
+    {
+      "title": "В разговоре с коллегами",
+      "body": "To call it a day — закончить работу на сегодня. To hit the nail on the head — попасть в точку, сказать именно то, что нужно. Идиомы принадлежат разговорной речи: они уместны с коллегами и друзьями, но не в официальном отчёте или договоре.",
+      "examples": [
+        { "en": "It's nearly seven. Let's call it a day.", "ru": "Уже почти семь. Давайте на сегодня закончим." },
+        { "en": "You've hit the nail on the head: the problem is the price.", "ru": "Ты попал в точку: проблема в цене." },
+        { "en": "Shall we call it a day and continue tomorrow?", "ru": "Может, закончим на сегодня и продолжим завтра?" }
+      ],
+      "tip": "Не перегружайте речь: одна идиома к месту звучит естественно, а пять подряд — как цитата из учебника."
+    }
+  ],
+  "vocab": [
+    { "en": "a piece of cake", "ru": "проще простого, пара пустяков", "example": "The driving test was a piece of cake." },
+    { "en": "on the fence", "ru": "в нерешительности, не определился", "example": "I'm still on the fence about the job offer." },
+    { "en": "to call it a day", "ru": "закончить на сегодня", "example": "It's late; I think it's time to call it a day." },
+    { "en": "to get cold feet", "ru": "струсить в последний момент", "example": "It's normal to get cold feet before a big decision." },
+    { "en": "once in a blue moon", "ru": "очень редко, раз в сто лет", "example": "We eat out once in a blue moon." },
+    { "en": "under the weather", "ru": "нездоровится, неважно себя чувствует", "example": "I'm feeling a bit under the weather today." },
+    { "en": "to cost an arm and a leg", "ru": "стоить бешеных денег", "example": "A flat in the centre is going to cost an arm and a leg." },
+    { "en": "to hit the nail on the head", "ru": "попасть в точку", "example": "She always manages to hit the nail on the head." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "a piece of cake", "ru": "проще простого, пара пустяков" },
+        { "en": "on the fence", "ru": "в нерешительности, не определился" },
+        { "en": "to call it a day", "ru": "закончить на сегодня" },
+        { "en": "to get cold feet", "ru": "струсить в последний момент" },
+        { "en": "under the weather", "ru": "нездоровится, неважно себя чувствует" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега говорит: «The exam was a piece of cake». Что это значит?",
+      "options": [
+        "Экзамен был очень лёгким",
+        "На экзамене угощали тортом",
+        "Экзамен был лишь частью испытания",
+        "Экзамен был очень трудным"
+      ],
+      "answer": 0,
+      "explanation": "A piece of cake — идиома со значением «очень легко, проще простого». Дословный перевод «кусок торта» здесь не имеет смысла."
+    },
+    {
+      "type": "gap",
+      "sentence": "I was going to ask for a pay rise, but I got cold ___ at the last moment.",
+      "translation": "Я собирался попросить прибавку, но в последний момент струсил.",
+      "options": ["feet", "legs", "hands", "foot"],
+      "answer": 0,
+      "explanation": "Идиома — get cold feet, и слова в ней не меняются: только feet, во множественном числе. Русское «ноги» подсказывает legs, но с legs идиомы не получится."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm still on the fence about buying a car.",
+      "question": "Что говорит человек?",
+      "options": [
+        "Он ещё не решил, покупать ли машину",
+        "Он уже купил машину",
+        "Он твёрдо решил не покупать машину",
+        "Ему не нравится машина, которую он купил"
+      ],
+      "answer": 0,
+      "explanation": "To be on the fence — буквально «сидеть на заборе», то есть не выбрать ни одну из сторон. Still подчёркивает, что решения пока нет."
+    },
+    {
+      "type": "translate",
+      "source": "Мы ходим в кино раз в сто лет.",
+      "answer": "We go to the cinema once in a blue moon.",
+      "accept": [
+        "We go to the movies once in a blue moon.",
+        "We only go to the cinema once in a blue moon.",
+        "Once in a blue moon we go to the cinema."
+      ],
+      "distractors": ["red", "sun", "at"],
+      "explanation": "«Очень редко» — once in a blue moon. Дословный перевод «once in a hundred years» понятен, но это не идиома; цвет и слово moon менять нельзя."
+    },
+    {
+      "type": "gap",
+      "sentence": "We've been working since eight. Let's call it a ___ and go home.",
+      "translation": "Мы работаем с восьми. Давайте на сегодня закончим и пойдём домой.",
+      "options": ["day", "time", "end", "work"],
+      "answer": 0,
+      "explanation": "Call it a day — «закончить на сегодня», буквально «назвать это днём». Другие слова в эту идиому подставить нельзя."
+    },
+    {
+      "type": "speak",
+      "text": "Let's call it a day and continue tomorrow.",
+      "translation": "Давайте на сегодня закончим и продолжим завтра."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать, что вам немного нездоровится?",
+      "options": [
+        "I'm feeling a bit under the weather.",
+        "I'm feeling a bit below the weather.",
+        "I'm feeling a bit under the climate.",
+        "I'm feeling a bit under weather."
+      ],
+      "answer": 0,
+      "explanation": "Идиома звучит только так: under the weather, с артиклем the. Заменить under на below, weather на climate или убрать артикль нельзя — выражение перестанет быть идиомой."
+    },
+    {
+      "type": "type",
+      "source": "Это было проще простого.",
+      "answer": "It was a piece of cake.",
+      "accept": [
+        "That was a piece of cake.",
+        "This was a piece of cake.",
+        "It was as easy as pie."
+      ],
+      "explanation": "«Проще простого» — a piece of cake, с артиклем a. Слово piece заменить на slice или part нельзя."
+    },
+    {
+      "type": "listen",
+      "audio": "The repairs cost an arm and a leg, but the flat looks great now.",
+      "question": "Что говорящий думает о ремонте?",
+      "options": [
+        "Он обошёлся очень дорого, но результат отличный",
+        "Он обошёлся дёшево, и результат отличный",
+        "Во время ремонта кто-то получил травму",
+        "Он обошёлся дорого, а результат плохой"
+      ],
+      "answer": 0,
+      "explanation": "To cost an arm and a leg — «стоить бешеных денег»; о травмах речи нет. Часть после but сообщает, что результатом говорящий доволен."
+    },
+    {
+      "type": "gap",
+      "sentence": "You've hit the ___ on the head: the real problem is the lack of time.",
+      "translation": "Ты попал в точку: настоящая проблема — нехватка времени.",
+      "options": ["nail", "hammer", "point", "needle"],
+      "answer": 0,
+      "explanation": "Hit the nail on the head — буквально «ударить по шляпке гвоздя», то есть попасть точно. Русское «в точку» подсказывает point, но в английской идиоме — nail."
+    },
+    {
+      "type": "translate",
+      "source": "Билеты на концерт стоили бешеных денег.",
+      "answer": "The tickets for the concert cost an arm and a leg.",
+      "accept": [
+        "Tickets for the concert cost an arm and a leg.",
+        "The tickets to the concert cost an arm and a leg.",
+        "Tickets to the concert cost an arm and a leg.",
+        "The concert tickets cost an arm and a leg.",
+        "The tickets for the concert cost a fortune."
+      ],
+      "distractors": ["hand", "foot", "costed"],
+      "explanation": "«Стоить бешеных денег» — cost an arm and a leg: именно arm и leg, а не hand и foot. Прошедшее время от cost — тоже cost, формы «costed» в этом значении нет."
+    },
+    {
+      "type": "dictation",
+      "audio": "The driving test was a piece of cake.",
+      "translation": "Экзамен по вождению был проще простого."
+    },
+    {
+      "type": "choice",
+      "prompt": "В какой ситуации уместно сказать «He got cold feet»?",
+      "options": [
+        "Он испугался и в последний момент отказался от задуманного",
+        "Он простудился после долгой прогулки",
+        "Он холодно встретил гостей",
+        "Он долго ждал автобус на морозе"
+      ],
+      "answer": 0,
+      "explanation": "To get cold feet — «струсить в последний момент перед важным шагом». К холоду и простуде идиома отношения не имеет."
+    }
+  ]
+}

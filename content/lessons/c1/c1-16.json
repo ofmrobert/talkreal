@@ -1,0 +1,190 @@
+{
+  "id": "c1-16",
+  "level": "C1",
+  "order": 16,
+  "title": { "ru": "Усиление и смягчение сравнений", "en": "Modifying comparisons" },
+  "goal": { "ru": "Научитесь уточнять, насколько велика разница: by far, nowhere near, not nearly as… as, the more… the more.", "en": "Learn to say how big a difference is: by far, nowhere near, not nearly as… as, the more… the more." },
+  "theory": [
+    {
+      "title": "Насколько больше: far, considerably, slightly",
+      "body": "Перед сравнительной степенью ставят слово, которое показывает размер разницы. Большая разница — much, far, a lot, considerably, significantly; небольшая — slightly, a bit, marginally. Слово very перед сравнительной степенью невозможно, а more не добавляется к форме на -er.",
+      "examples": [
+        { "en": "The new office is considerably larger than the old one.", "ru": "Новый офис значительно больше старого." },
+        { "en": "Flights are slightly cheaper if you book midweek.", "ru": "Билеты на самолёт немного дешевле, если бронировать в середине недели." },
+        { "en": "This version is far more reliable than the previous one.", "ru": "Эта версия гораздо надёжнее предыдущей." }
+      ],
+      "tip": "Русское «гораздо» и «намного» — это much или far, но не very. «Very better» и «much more better» — самые частые ошибки в этой теме."
+    },
+    {
+      "title": "By far, nowhere near, not nearly as… as",
+      "body": "By far усиливает превосходную степень: by far the best — «безусловно лучший». В конструкции as… as разницу показывают слова перед первым as: just as (точно такой же), nearly as (почти такой же), not nearly as и nowhere near as (далеко не такой). Туда же ставятся twice, three times и half.",
+      "examples": [
+        { "en": "It's by far the most expensive city I've ever lived in.", "ru": "Это безусловно самый дорогой город, в котором я жил." },
+        { "en": "The sequel is nowhere near as good as the original.", "ru": "Продолжение далеко не так хорошо, как оригинал." },
+        { "en": "The journey wasn't nearly as tiring as I had expected.", "ru": "Поездка оказалась далеко не такой утомительной, как я ожидал." }
+      ],
+      "tip": "«В два раза дороже» — twice as expensive as. «Twice more expensive» — калька: после twice нужна конструкция as… as."
+    },
+    {
+      "title": "The more…, the more…",
+      "body": "Русское «чем…, тем…» строится так: the + сравнительная степень + подлежащее + глагол, и то же самое во второй части. Артикль the обязателен в обеих частях, а сравнительная степень выносится в начало. В коротких фразах глагол опускают: The sooner, the better.",
+      "examples": [
+        { "en": "The more I learn about the project, the less I like it.", "ru": "Чем больше я узнаю о проекте, тем меньше он мне нравится." },
+        { "en": "The longer we wait, the more expensive it will get.", "ru": "Чем дольше мы ждём, тем дороже это обойдётся." },
+        { "en": "The sooner we start, the better.", "ru": "Чем раньше мы начнём, тем лучше." }
+      ],
+      "tip": "Не переводите «чем… тем» словами than и then. «Than more I work, then more I earn» — ошибка: нужно The more I work, the more I earn."
+    }
+  ],
+  "vocab": [
+    { "en": "by far", "ru": "безусловно, с большим отрывом", "example": "This is by far the best restaurant in town." },
+    { "en": "nowhere near", "ru": "далеко не", "example": "The flat is nowhere near as big as it looked in the photos." },
+    { "en": "considerably", "ru": "значительно", "example": "Rents have risen considerably over the past year." },
+    { "en": "slightly", "ru": "слегка, немного", "example": "The train was slightly late this morning." },
+    { "en": "marginally", "ru": "незначительно, едва", "example": "Sales were only marginally higher than last year." },
+    { "en": "twice as", "ru": "в два раза (более)", "example": "The repairs took twice as long as planned." },
+    { "en": "significantly", "ru": "существенно", "example": "The new model is significantly quieter." },
+    { "en": "the sooner, the better", "ru": "чем раньше, тем лучше", "example": "Please send the documents; the sooner, the better." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "by far", "ru": "безусловно, с большим отрывом" },
+        { "en": "nowhere near", "ru": "далеко не" },
+        { "en": "slightly", "ru": "слегка, немного" },
+        { "en": "marginally", "ru": "незначительно, едва" },
+        { "en": "twice as", "ru": "в два раза (более)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "The second interview was very easier than the first.",
+        "The second interview was much more easier than the first.",
+        "The second interview was far easier than the first.",
+        "The second interview was far easy than the first."
+      ],
+      "answer": 2,
+      "explanation": "Сравнительную степень усиливают far, much или a lot: far easier. Very с ней не сочетается, а more при форме на -er лишнее: сравнение уже выражено окончанием."
+    },
+    {
+      "type": "gap",
+      "sentence": "It's ___ the most beautiful beach on the island.",
+      "translation": "Это безусловно самый красивый пляж на острове.",
+      "options": ["by far", "by much", "very", "more"],
+      "answer": 0,
+      "explanation": "Превосходную степень усиливает by far: by far the most beautiful. Very перед the most не ставится, а «by much» в английском так не употребляется."
+    },
+    {
+      "type": "translate",
+      "source": "Чем больше я об этом думаю, тем меньше мне это нравится.",
+      "answer": "The more I think about it, the less I like it.",
+      "accept": [
+        "The more I think of it, the less I like it.",
+        "The more I think about this, the less I like it.",
+        "The more I think about it, the less I like this."
+      ],
+      "distractors": ["than", "then", "much", "most"],
+      "explanation": "«Чем… тем» — the more…, the less…: артикль the и сравнительная степень стоят в начале каждой части. Слова than и then в этой конструкции не участвуют."
+    },
+    {
+      "type": "listen",
+      "audio": "The hotel was nowhere near as comfortable as the website suggested.",
+      "question": "Что говорящий думает об отеле?",
+      "options": [
+        "Он оказался почти таким же удобным, как на сайте",
+        "Он находился далеко от места, указанного на сайте",
+        "Он оказался удобнее, чем ожидалось",
+        "Он оказался гораздо менее удобным, чем обещали"
+      ],
+      "answer": 3,
+      "explanation": "Nowhere near as… as — «далеко не такой… как»: разница большая и не в пользу отеля. К расстоянию это выражение здесь отношения не имеет, хотя буквально nowhere near значит «совсем не рядом»."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать: «Билеты в выходные в два раза дороже, чем в будни»?",
+      "options": [
+        "Weekend tickets are twice more expensive than weekday ones.",
+        "Weekend tickets are twice as expensive as weekday ones.",
+        "Weekend tickets are twice expensive than weekday ones.",
+        "Weekend tickets are twice so expensive as weekday ones."
+      ],
+      "answer": 1,
+      "explanation": "После twice используется конструкция as + прилагательное + as: twice as expensive as. «Twice more expensive than» — дословный перевод русского «в два раза дороже»."
+    },
+    {
+      "type": "speak",
+      "text": "This is by far the best restaurant in town.",
+      "translation": "Это безусловно лучший ресторан в городе."
+    },
+    {
+      "type": "gap",
+      "sentence": "Living in the suburbs isn't ___ as expensive as living in the centre.",
+      "translation": "Жить в пригороде далеко не так дорого, как в центре.",
+      "options": ["nowhere", "nearly", "closely", "by far"],
+      "answer": 1,
+      "explanation": "Not nearly as… as — «далеко не такой… как». Nowhere после isn't дало бы двойное отрицание: правильно либо isn't nearly as, либо is nowhere near as."
+    },
+    {
+      "type": "type",
+      "source": "Чем раньше, тем лучше.",
+      "answer": "The sooner, the better.",
+      "accept": ["The earlier, the better."],
+      "explanation": "В короткой форме остаются только артикли и сравнительные степени: the sooner, the better. Без the фраза невозможна, и than здесь не используется."
+    },
+    {
+      "type": "listen",
+      "audio": "The new model is considerably lighter and slightly more expensive.",
+      "question": "Чем новая модель отличается от прежней?",
+      "options": [
+        "Она намного легче и немного дороже",
+        "Она немного легче и намного дороже",
+        "Она намного легче и намного дороже",
+        "Она немного легче и немного дороже"
+      ],
+      "answer": 0,
+      "explanation": "Considerably означает большую разницу («значительно»), slightly — маленькую («слегка»). Эти наречия стоят прямо перед сравнительной степенью, к которой относятся."
+    },
+    {
+      "type": "translate",
+      "source": "Вторая часть далеко не так хороша, как первая.",
+      "answer": "The second part is nowhere near as good as the first.",
+      "accept": [
+        "The second part is nowhere near as good as the first one.",
+        "The second part isn't nearly as good as the first.",
+        "The second part is not nearly as good as the first.",
+        "The second part isn't nearly as good as the first one.",
+        "The second part is not nearly as good as the first one."
+      ],
+      "distractors": ["than", "better", "most", "by"],
+      "explanation": "«Далеко не так… как» — nowhere near as… as. Прилагательное внутри as… as стоит в обычной форме (good, не better), и than здесь не нужен."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ you practise, the more confident you will feel.",
+      "translation": "Чем больше вы практикуетесь, тем увереннее будете себя чувствовать.",
+      "options": ["More", "Than more", "The more", "The most"],
+      "answer": 2,
+      "explanation": "Обе части конструкции начинаются с the + сравнительная степень: the more…, the more confident. Без артикля или с than предложение не складывается."
+    },
+    {
+      "type": "dictation",
+      "audio": "The more I learn, the less I know.",
+      "translation": "Чем больше я узнаю, тем меньше знаю."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает фраза «She is by far the most experienced candidate»?",
+      "options": [
+        "Она пока что самый опытный кандидат",
+        "Она далеко не самый опытный кандидат",
+        "Она чуть опытнее остальных кандидатов",
+        "Она с большим отрывом самый опытный кандидат"
+      ],
+      "answer": 3,
+      "explanation": "By far усиливает превосходную степень: «безусловно, с большим отрывом». Не путайте с so far («пока что») и с nowhere near («далеко не»)."
+    }
+  ]
+}

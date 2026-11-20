@@ -1,0 +1,193 @@
+{
+  "id": "c1-14",
+  "level": "C1",
+  "order": 14,
+  "title": { "ru": "Whatever, whoever, whereby, all of whom: сложные придаточные", "en": "Advanced relative and noun clauses" },
+  "goal": { "ru": "Научитесь строить придаточные с whatever, whoever, whichever и формальные обороты whereby, of which, all of whom.", "en": "Learn to build clauses with whatever, whoever, whichever and the formal whereby, of which, all of whom." },
+  "theory": [
+    {
+      "title": "Whatever, whoever, whichever, however",
+      "body": "Слова на -ever значат «что бы ни», «кто бы ни», «какой бы ни» или «всё, что», «любой, кто». Whichever выбирает из ограниченного набора, whatever — из чего угодно. Глагол после них стоит в обычном настоящем времени, без will и would, а после whoever — в единственном числе.",
+      "examples": [
+        { "en": "Whatever you decide, I'll support you.", "ru": "Что бы ты ни решил, я тебя поддержу." },
+        { "en": "Whoever left this bag should collect it from reception.", "ru": "Тот, кто оставил эту сумку, должен забрать её на стойке администратора." },
+        { "en": "Take whichever seat you like; they're all free.", "ru": "Садитесь на любое место, они все свободны." }
+      ],
+      "tip": "В русском «что бы ни случилось» есть «бы» и «ни», а в английском нет ни would, ни not: whatever happens."
+    },
+    {
+      "title": "All of whom, none of which",
+      "body": "В придаточных, отделённых запятой, слово количества (all, both, most, some, none, two) соединяется с of whom для людей и of which для предметов: это русское «…, многие из которых». Форма whom здесь обязательна: «of who» и «of that» невозможны.",
+      "examples": [
+        { "en": "We interviewed ten candidates, two of whom were excellent.", "ru": "Мы провели собеседование с десятью кандидатами, двое из которых были превосходны." },
+        { "en": "She has written five novels, none of which I have read.", "ru": "Она написала пять романов, ни одного из которых я не читал." },
+        { "en": "The company has three offices, the largest of which is in the capital.", "ru": "У компании три офиса, самый большой из которых находится в столице." }
+      ],
+      "tip": "Если после запятой нет союза, нужно whom или which, а не them. «…ten candidates, two of them were excellent» — ошибка: с them требуется and или новое предложение."
+    },
+    {
+      "title": "Whereby, whose, in which case",
+      "body": "Whereby значит «посредством которого», «согласно которому»: оно описывает, как работает система, схема или договорённость, и характерно для формального стиля. Whose относится не только к людям, но и к предметам и организациям. In which case — «и в этом случае»: оборот присоединяет вывод из всей предыдущей части.",
+      "examples": [
+        { "en": "They introduced a system whereby staff can work four days a week.", "ru": "Они ввели систему, при которой сотрудники могут работать четыре дня в неделю." },
+        { "en": "It's a company whose reputation depends on trust.", "ru": "Это компания, репутация которой держится на доверии." },
+        { "en": "The flight may be cancelled, in which case we'll take the train.", "ru": "Рейс могут отменить, и в этом случае мы поедем на поезде." }
+      ],
+      "tip": "Whereby не заменяет where: оно говорит о механизме, а не о месте."
+    }
+  ],
+  "vocab": [
+    { "en": "whatever", "ru": "что бы ни; всё, что", "example": "You can order whatever you like." },
+    { "en": "whoever", "ru": "кто бы ни; тот, кто", "example": "I'd like to thank whoever found my wallet." },
+    { "en": "whichever", "ru": "какой бы ни; любой из", "example": "Choose whichever date suits you best." },
+    { "en": "whereby", "ru": "посредством которого, при котором", "example": "We have an arrangement whereby I work from home twice a week." },
+    { "en": "all of whom", "ru": "все из которых", "example": "He has three sisters, all of whom live abroad." },
+    { "en": "none of which", "ru": "ни один из которых", "example": "I tried four keys, none of which fitted the lock." },
+    { "en": "in which case", "ru": "и в этом случае", "example": "It may rain, in which case we'll eat indoors." },
+    { "en": "scheme", "ru": "программа, схема", "example": "The city has launched a bike rental scheme." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "whoever", "ru": "кто бы ни; тот, кто" },
+        { "en": "whereby", "ru": "посредством которого, при котором" },
+        { "en": "all of whom", "ru": "все из которых" },
+        { "en": "in which case", "ru": "и в этом случае" },
+        { "en": "scheme", "ru": "программа, схема" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "Whatever would happen, don't open this door.",
+        "Whatever wouldn't happen, don't open this door.",
+        "Whatever happens, don't open this door.",
+        "What ever it happens, don't open this door."
+      ],
+      "answer": 2,
+      "explanation": "После whatever глагол стоит в настоящем времени: whatever happens. Would и отрицание — кальки с русского «что бы ни случилось»: в английском нет ни «бы», ни «ни»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The department has twelve employees, most ___ joined in the last two years.",
+      "translation": "В отделе двенадцать сотрудников, большинство из которых пришли за последние два года.",
+      "options": ["of whom", "of them", "of who", "of which"],
+      "answer": 0,
+      "explanation": "Речь о людях, а после предлога нужна форма whom: most of whom. Of them не может соединить две части без союза, а which относится только к предметам."
+    },
+    {
+      "type": "translate",
+      "source": "Кто бы ни позвонил, скажи, что я занят.",
+      "answer": "Whoever calls, tell them I'm busy.",
+      "accept": [
+        "Whoever calls, tell them that I'm busy.",
+        "Whoever calls, say I'm busy.",
+        "Whoever calls, say that I'm busy.",
+        "Whoever rings, tell them I'm busy.",
+        "Whoever phones, tell them I'm busy.",
+        "Whoever calls, tell him I'm busy.",
+        "No matter who calls, tell them I'm busy."
+      ],
+      "distractors": ["will", "would", "whatever", "called"],
+      "explanation": "После whoever глагол стоит в настоящем времени и в единственном числе: whoever calls. Ни will, ни would не нужны, хотя звонок ещё только может случиться."
+    },
+    {
+      "type": "listen",
+      "audio": "We tested six laptops, none of which lasted more than four hours on battery.",
+      "question": "Сколько ноутбуков проработало от батареи больше четырёх часов?",
+      "options": ["Все шесть", "Только один", "Четыре", "Ни один"],
+      "answer": 3,
+      "explanation": "None of which — «ни один из которых». Отрицание заключено в самом слове none, поэтому глагол lasted стоит в утвердительной форме."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает whereby в предложении «They signed an agreement whereby both sides share the costs»?",
+      "options": ["в месте, где", "согласно которому", "в то время как", "из-за которого"],
+      "answer": 1,
+      "explanation": "Whereby = by which, according to which: оно объясняет, как устроено соглашение. Со словом where его связывает только внешнее сходство."
+    },
+    {
+      "type": "speak",
+      "text": "Whatever you decide, I'll support you.",
+      "translation": "Что бы ты ни решил, я тебя поддержу."
+    },
+    {
+      "type": "gap",
+      "sentence": "Take ___ route you prefer; both get you there in about an hour.",
+      "translation": "Езжайте любым маршрутом, какой вам больше нравится: оба занимают около часа.",
+      "options": ["whoever", "whichever", "however", "whenever"],
+      "answer": 1,
+      "explanation": "Выбор идёт из двух известных маршрутов, поэтому whichever — «любой из». Whoever относится к людям, however — к способу или степени, whenever — ко времени."
+    },
+    {
+      "type": "type",
+      "source": "Что бы ни случилось, позвони мне.",
+      "answer": "Whatever happens, call me.",
+      "accept": [
+        "Whatever happens, ring me.",
+        "Whatever happens, phone me.",
+        "Whatever happens, give me a call.",
+        "Whatever happens, give me a ring.",
+        "No matter what happens, call me.",
+        "Call me whatever happens.",
+        "Call me no matter what happens."
+      ],
+      "explanation": "«Что бы ни случилось» — whatever happens: настоящее время без would и без отрицания. Перед me предлог не нужен: call me, а не «call to me»."
+    },
+    {
+      "type": "listen",
+      "audio": "She has two brothers, both of whom work in finance.",
+      "question": "Что вы услышали?",
+      "options": [
+        "She has two brothers, both of whom work in finance.",
+        "She has two brothers, both of who work in finance.",
+        "She has two brothers, both of which work in finance.",
+        "She has two brothers, both of whose work in finance."
+      ],
+      "answer": 0,
+      "explanation": "Для людей после предлога of используется whom: both of whom. Which годится только для предметов, а who после предлога не употребляется."
+    },
+    {
+      "type": "translate",
+      "source": "У нас три поставщика, все из которых находятся за границей.",
+      "answer": "We have three suppliers, all of whom are based abroad.",
+      "accept": [
+        "We have three suppliers, all of which are based abroad.",
+        "We have three suppliers, all of whom are abroad.",
+        "We have three suppliers, all of whom are located abroad.",
+        "We have three suppliers, all of whom are based overseas.",
+        "We've got three suppliers, all of whom are based abroad.",
+        "We have got three suppliers, all of whom are based abroad."
+      ],
+      "distractors": ["them", "who", "that", "what"],
+      "explanation": "«Все из которых» — all of whom: количество + of + whom. Them не может присоединить придаточное, а who и that после предлога не употребляются."
+    },
+    {
+      "type": "gap",
+      "sentence": "The lift may be out of order, in ___ case we'll have to use the stairs.",
+      "translation": "Лифт может не работать, и в этом случае нам придётся идти по лестнице.",
+      "options": ["what", "whose", "which", "whom"],
+      "answer": 2,
+      "explanation": "In which case — устойчивый оборот: which относится ко всей предыдущей части предложения. Русское «в каком случае» подсказывает what, но what не может отсылать к уже сказанному."
+    },
+    {
+      "type": "dictation",
+      "audio": "Choose whichever date suits you best.",
+      "translation": "Выберите любую дату, которая вам больше подходит."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "It's a company whose reputation depends on trust.",
+        "It's a company which reputation depends on trust.",
+        "It's a company that its reputation depends on trust.",
+        "It's a company who's reputation depends on trust."
+      ],
+      "answer": 0,
+      "explanation": "Whose выражает принадлежность и для людей, и для предметов: a company whose reputation. Which само принадлежность не передаёт, а who's — это сокращение от who is."
+    }
+  ]
+}

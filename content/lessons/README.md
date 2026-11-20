@@ -64,3 +64,16 @@ Students see a lesson's words and the exercises they got wrong again on later da
 itself: every word in `vocab` joins the review cycle when the lesson is finished. A word with an
 `example` sentence that contains the word gets a harder "write the word" exercise later on, so
 examples are worth adding.
+
+## Units, tests and the exam
+
+The course map shows each level as a path of units. A unit is five lessons in a row, by `order`:
+lessons 1–5 are unit 1, 6–10 are unit 2, and so on. The unit names are in `content/units.json`.
+
+- After a unit's five lessons comes a **unit test**: 10 questions picked from those lessons. The next
+  unit opens when the test is passed (70% right on the first try).
+- After the last unit comes the **level exam**: 15 questions from the whole level. Passing it (80%)
+  moves the student to the next level.
+
+The questions are taken from the lessons' own exercises, so there is nothing extra to write. To grow a
+level, add five lessons and one more name in `content/units.json`.

@@ -11,6 +11,7 @@ import { meRoutes } from './routes/me'
 import { placementRoutes } from './routes/placement'
 import { reminderRoutes } from './routes/reminders'
 import { reviewRoutes } from './routes/review'
+import { testRoutes } from './routes/tests'
 import { startReminders } from './reminders/scheduler'
 import { voiceRoutes } from './routes/voice'
 import { attachVoiceSocket } from './voice/socket'
@@ -70,6 +71,7 @@ app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
 app.route('/api/reminders', reminderRoutes)
 app.route('/api', reviewRoutes)
+app.route('/api', testRoutes)
 app.route('/api', courseRoutes)
 app.all('/api/*', (c) => c.json({ error: 'not_found' }, 404))
 

@@ -1,0 +1,195 @@
+{
+  "id": "b2-12",
+  "level": "B2",
+  "order": 12,
+  "title": { "ru": "Усиление: do, so / such и сильные прилагательные", "en": "Emphasis: do, so / such and strong adjectives" },
+  "goal": { "ru": "Научитесь подчёркивать свою мысль с помощью do / does / did, so и such и сочетать наречия с обычными и «сильными» прилагательными.", "en": "Learn to stress your point with do / does / did, so and such, and to combine adverbs with gradable and strong adjectives." },
+  "theory": [
+    {
+      "title": "Усилительное do / does / did",
+      "body": "В утвердительном предложении можно поставить do, does или did перед глаголом, чтобы подчеркнуть: это действительно так, вопреки сомнениям собеседника. По-русски это «действительно», «всё-таки», «же». Основной глагол при этом стоит в начальной форме, а ударение в речи падает на do.",
+      "examples": [
+        { "en": "I do understand your concerns.", "ru": "Я действительно понимаю ваши опасения." },
+        { "en": "She does work hard, but the results are poor.", "ru": "Работает она действительно много, но результаты слабые." },
+        { "en": "We did send the invoice last week.", "ru": "Мы же отправили счёт на прошлой неделе." }
+      ],
+      "tip": "После do / does / did окончания и вторая форма не нужны: «she does works» и «we did sent» — ошибки. Время и лицо уже показывает do."
+    },
+    {
+      "title": "So и such",
+      "body": "So ставится перед прилагательным или наречием без существительного: so boring, so quickly. Such — перед существительным (с прилагательным или без): such a boring film, such good weather. С исчисляемым существительным в единственном числе артикль идёт после such.",
+      "examples": [
+        { "en": "The film was so boring that we left.", "ru": "Фильм был таким скучным, что мы ушли." },
+        { "en": "It was such a boring film that we left.", "ru": "Это был такой скучный фильм, что мы ушли." },
+        { "en": "We had such good weather in Georgia.", "ru": "В Грузии у нас была такая хорошая погода." }
+      ],
+      "tip": "В русском одно слово «такой», поэтому легко сказать «so good idea» или «a such good idea». Правильно: such a good idea."
+    },
+    {
+      "title": "Very tired, но absolutely exhausted",
+      "body": "Обычные прилагательные (tired, cold, good, angry) имеют степени, и их усиливает very. «Сильные» прилагательные (exhausted, freezing, brilliant, furious) уже означают крайнюю степень, поэтому с ними используют absolutely или completely. Really подходит к обоим типам.",
+      "examples": [
+        { "en": "I'm very tired, but Anna is absolutely exhausted.", "ru": "Я очень устал, а Анна совершенно без сил." },
+        { "en": "The view was absolutely stunning.", "ru": "Вид был совершенно потрясающий." },
+        { "en": "It's really freezing outside.", "ru": "На улице жуткий холод." }
+      ],
+      "tip": "«Very delicious» и «very exhausted» звучат неестественно: в этих словах «очень» уже заложено. И наоборот, «absolutely tired» не говорят."
+    }
+  ],
+  "vocab": [
+    { "en": "absolutely", "ru": "абсолютно, совершенно", "example": "The concert was absolutely brilliant." },
+    { "en": "freezing", "ru": "ледяной, очень холодный", "example": "It's freezing in here; can you close the window?" },
+    { "en": "furious", "ru": "в ярости", "example": "The customers were furious about the delay." },
+    { "en": "delighted", "ru": "в восторге, очень рад", "example": "We're delighted with the results." },
+    { "en": "starving", "ru": "ужасно голодный", "example": "I'm starving. Let's get something to eat." },
+    { "en": "terrified", "ru": "в ужасе", "example": "She is terrified of flying." },
+    { "en": "stunning", "ru": "потрясающий (о красоте)", "example": "The view from the hotel was stunning." },
+    { "en": "such a shame", "ru": "как жаль, очень жаль", "example": "It's such a shame you can't come." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "freezing", "ru": "ледяной, очень холодный" },
+        { "en": "furious", "ru": "в ярости" },
+        { "en": "delighted", "ru": "в восторге, очень рад" },
+        { "en": "starving", "ru": "ужасно голодный" },
+        { "en": "stunning", "ru": "потрясающий (о красоте)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "She does know the answer; she's just nervous.",
+        "She does knows the answer; she's just nervous.",
+        "She do know the answer; she's just nervous.",
+        "She is know the answer; she's just nervous."
+      ],
+      "answer": 0,
+      "explanation": "Усилительное does уже несёт окончание третьего лица, поэтому основной глагол стоит в начальной форме: does know. «Does knows» — двойное окончание, а is с начальной формой глагола не сочетается."
+    },
+    {
+      "type": "gap",
+      "sentence": "It was ___ interesting lecture that nobody looked at their phone.",
+      "translation": "Лекция была такой интересной, что никто не смотрел в телефон.",
+      "options": ["such an", "so", "a such", "so an"],
+      "answer": 0,
+      "explanation": "После пропуска идёт прилагательное с существительным (interesting lecture), значит, нужно such, а артикль ставится после него: such an. So употребляется, когда существительного нет: the lecture was so interesting."
+    },
+    {
+      "type": "listen",
+      "audio": "I did call the bank, but nobody answered.",
+      "question": "Что говорящий хочет подчеркнуть?",
+      "options": [
+        "Что он действительно звонил в банк",
+        "Что он забыл позвонить в банк",
+        "Что он только собирается позвонить в банк",
+        "Что в банке ему сразу ответили"
+      ],
+      "answer": 0,
+      "explanation": "Did перед глаголом в утвердительном предложении усиливает его: «я же звонил». Так отвечают, когда собеседник сомневается, что действие было выполнено."
+    },
+    {
+      "type": "translate",
+      "source": "Вид из нашего номера был совершенно потрясающий.",
+      "answer": "The view from our room was absolutely stunning.",
+      "accept": [
+        "The view from our room was really stunning.",
+        "The view from our room was absolutely amazing.",
+        "The view from our room was absolutely breathtaking.",
+        "The view from our room was absolutely gorgeous."
+      ],
+      "distractors": ["very", "such", "look"],
+      "explanation": "Stunning — «сильное» прилагательное, поэтому его усиливают словом absolutely, а не very. «Вид из окна или номера» — the view from, а look означает «взгляд» или «внешний вид»."
+    },
+    {
+      "type": "gap",
+      "sentence": "By the time we got to the restaurant, I was absolutely ___.",
+      "translation": "К тому времени как мы добрались до ресторана, я умирал с голоду.",
+      "options": ["starving", "hungry", "more hungry", "hunger"],
+      "answer": 0,
+      "explanation": "Absolutely сочетается с «сильными» прилагательными: absolutely starving. Hungry — обычное прилагательное, с ним говорят very hungry, а hunger — существительное."
+    },
+    {
+      "type": "speak",
+      "text": "It's such a shame you can't come.",
+      "translation": "Так жаль, что ты не сможешь прийти."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение звучит естественно?",
+      "options": [
+        "The food was absolutely delicious.",
+        "The food was very delicious.",
+        "The food was absolutely tasty.",
+        "The food was such delicious."
+      ],
+      "answer": 0,
+      "explanation": "Delicious уже значит «очень вкусный», поэтому с ним говорят absolutely, а не very. С обычным tasty наоборот: very tasty. Such без существительного не употребляется."
+    },
+    {
+      "type": "type",
+      "source": "Это была такая хорошая идея!",
+      "answer": "It was such a good idea!",
+      "accept": [
+        "It was such a great idea!",
+        "That was such a good idea!",
+        "That was such a great idea!",
+        "This was such a good idea!"
+      ],
+      "explanation": "Перед прилагательным с существительным нужно such, и артикль стоит после него: such a good idea. «So good idea» и «a such good idea» — типичные ошибки."
+    },
+    {
+      "type": "listen",
+      "audio": "The manager was absolutely furious when he saw the report.",
+      "question": "Как руководитель отреагировал на отчёт?",
+      "options": [
+        "Он пришёл в ярость",
+        "Он был слегка недоволен",
+        "Он был в восторге",
+        "Он пришёл в ужас"
+      ],
+      "answer": 0,
+      "explanation": "Furious — «в ярости», это крайняя степень angry, и absolutely её ещё усиливает. «В восторге» — delighted, «в ужасе» — terrified."
+    },
+    {
+      "type": "gap",
+      "sentence": "We ___ the documents on Monday; I have the receipt.",
+      "translation": "Мы действительно отправили документы в понедельник: у меня есть квитанция.",
+      "options": ["did send", "did sent", "do sent", "were send"],
+      "answer": 0,
+      "explanation": "Для усиления в прошедшем времени берём did и начальную форму глагола: did send. Вторая форма sent после did — ошибка: прошедшее время уже показано словом did."
+    },
+    {
+      "type": "translate",
+      "source": "Было так холодно, что мы остались дома.",
+      "answer": "It was so cold that we stayed at home.",
+      "accept": [
+        "It was so cold we stayed at home.",
+        "It was so cold that we stayed home.",
+        "It was so cold we stayed home.",
+        "It was so cold that we stayed in."
+      ],
+      "distractors": ["such", "very", "much"],
+      "explanation": "Перед прилагательным без существительного стоит so: so cold that… Such потребовало бы существительного (such cold weather), а very не образует конструкцию с that."
+    },
+    {
+      "type": "dictation",
+      "audio": "I do understand why you are worried.",
+      "translation": "Я действительно понимаю, почему вы беспокоитесь."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "They are such friendly people.",
+        "They are so friendly people.",
+        "They are such a friendly people.",
+        "They are a such friendly people."
+      ],
+      "answer": 0,
+      "explanation": "Перед прилагательным с существительным нужно such, а не so. People — множественное число, поэтому артикль a не ставится: such friendly people."
+    }
+  ]
+}

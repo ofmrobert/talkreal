@@ -1,0 +1,155 @@
+{
+  "id": "a1-19",
+  "level": "A1",
+  "order": 19,
+  "title": { "ru": "Present Continuous: что вы делаете сейчас?", "en": "Present Continuous: what are you doing now?" },
+  "goal": { "ru": "Научитесь говорить о том, что происходит прямо сейчас.", "en": "Learn to talk about what is happening right now." },
+  "theory": [
+    {
+      "title": "Am / is / are + глагол с -ing",
+      "body": "Чтобы сказать, что действие идёт прямо сейчас, нужны две части: to be (am, is, are) и глагол с -ing. В русском одно слово — «работаю», в английском два: I am working. Забыть to be — самая частая ошибка: «I working» сказать нельзя.",
+      "examples": [
+        { "en": "I'm working now.", "ru": "Я сейчас работаю." },
+        { "en": "She's talking on the phone.", "ru": "Она разговаривает по телефону." },
+        { "en": "We're waiting for a taxi.", "ru": "Мы ждём такси." }
+      ],
+      "tip": "Правила для -ing те же, что после like: write → writing, sit → sitting."
+    },
+    {
+      "title": "Отрицание и вопрос",
+      "body": "Отрицание — not после to be: I'm not working, he isn't sleeping. В вопросе am, is, are выходят вперёд: Are you listening? What are you doing? Do и does здесь не нужны, ведь в предложении уже есть to be.",
+      "examples": [
+        { "en": "What are you doing? — I'm cooking dinner.", "ru": "Что ты делаешь? — Готовлю ужин." },
+        { "en": "He isn't sleeping.", "ru": "Он не спит." },
+        { "en": "Is it raining?", "ru": "Идёт дождь?" }
+      ],
+      "tip": "Краткий ответ — тоже с to be: Yes, I am. / No, she isn't."
+    },
+    {
+      "title": "Сейчас или обычно?",
+      "body": "Present Simple — то, что бывает обычно, регулярно: I work in a bank. Present Continuous — то, что происходит в эту минуту: I'm working now. Подсказки для Continuous: now, at the moment, Look! В русском разницы нет: «я работаю» — это и то и другое.",
+      "examples": [
+        { "en": "I usually drink tea, but today I'm drinking coffee.", "ru": "Обычно я пью чай, но сегодня пью кофе." },
+        { "en": "He works in an office. Now he's having lunch.", "ru": "Он работает в офисе. Сейчас он обедает." },
+        { "en": "Look! It's raining.", "ru": "Смотри! Идёт дождь." }
+      ],
+      "tip": "Like, love, hate, know в Continuous не ставят: I like it, а не «I'm liking it»."
+    }
+  ],
+  "vocab": [
+    { "en": "now", "ru": "сейчас", "example": "I'm busy now." },
+    { "en": "at the moment", "ru": "в данный момент", "example": "He isn't here at the moment." },
+    { "en": "to talk", "ru": "разговаривать", "example": "I talk to my sister every day." },
+    { "en": "to sleep", "ru": "спать", "example": "I sleep eight hours." },
+    { "en": "to rain", "ru": "идти (о дожде)", "example": "It doesn't rain here in summer." },
+    { "en": "to wear", "ru": "носить (одежду)", "example": "I wear jeans at the weekend." },
+    { "en": "to sit", "ru": "сидеть", "example": "We sit next to the window." },
+    { "en": "to write", "ru": "писать", "example": "I write a lot of emails at work." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "now", "ru": "сейчас" },
+        { "en": "to talk", "ru": "разговаривать" },
+        { "en": "to sleep", "ru": "спать" },
+        { "en": "to wear", "ru": "носить (одежду)" },
+        { "en": "to write", "ru": "писать" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы на работе, и вам звонит друг. Как сказать «Я сейчас работаю»?",
+      "options": ["I working now.", "I'm working now.", "I'm work now.", "I do working now."],
+      "answer": 1,
+      "explanation": "Действие идёт прямо сейчас, поэтому нужны обе части: am и глагол с -ing. Без am или без -ing предложение неправильное, а do здесь не используется."
+    },
+    {
+      "type": "gap",
+      "sentence": "Look! It ___ raining.",
+      "translation": "Смотри! Идёт дождь.",
+      "options": ["is", "are", "does", "do"],
+      "answer": 0,
+      "explanation": "С it — is: It is raining. Look! показывает, что это происходит сейчас, а do и does с формой на -ing не сочетаются."
+    },
+    {
+      "type": "listen",
+      "audio": "I can't talk now. I'm driving.",
+      "question": "Почему человек не может говорить?",
+      "options": ["Он за рулём", "Он на работе", "Он спит", "Он обедает"],
+      "answer": 0,
+      "explanation": "I'm driving — «я веду машину» прямо сейчас. Поэтому и говорить он не может именно now."
+    },
+    {
+      "type": "translate",
+      "source": "Что ты сейчас делаешь?",
+      "answer": "What are you doing now?",
+      "accept": ["What are you doing?", "What are you doing right now?", "What are you doing at the moment?"],
+      "distractors": ["do", "does", "make"],
+      "explanation": "Вопрос о том, что происходит сейчас: are перед you и doing с -ing. What do you do? значит другое — «Кем вы работаете?»"
+    },
+    {
+      "type": "gap",
+      "sentence": "The children ___ sleeping. They are watching a film.",
+      "translation": "Дети не спят. Они смотрят фильм.",
+      "options": ["isn't", "aren't", "don't", "doesn't"],
+      "answer": 1,
+      "explanation": "Children — это they, поэтому aren't. Don't и doesn't не подходят: перед глаголом с -ing в отрицании стоит to be с not."
+    },
+    {
+      "type": "speak",
+      "text": "We're waiting for a taxi.",
+      "translation": "Мы ждём такси."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["Are you wait for me?", "She working at the moment.", "He's talking on the phone at the moment.", "We're go home now."],
+      "answer": 2,
+      "explanation": "В правильном предложении есть обе части: is и talking. В остальных чего-то не хватает: нужно Are you waiting, She is working, We're going."
+    },
+    {
+      "type": "translate",
+      "source": "Моя жена сейчас готовит ужин.",
+      "answer": "My wife is cooking dinner now.",
+      "accept": ["My wife's cooking dinner now.", "Now my wife is cooking dinner.", "My wife is now cooking dinner.", "My wife is cooking dinner right now.", "My wife is cooking dinner at the moment.", "My wife is making dinner now."],
+      "distractors": ["cooks", "cook", "are"],
+      "explanation": "«Сейчас» — действие в эту минуту, поэтому is cooking. Cooks значило бы, что она готовит ужин обычно, каждый день."
+    },
+    {
+      "type": "listen",
+      "audio": "She's wearing a white shirt and jeans.",
+      "question": "Во что она одета?",
+      "options": ["Белая рубашка и джинсы", "Белая куртка и джинсы", "Чёрная рубашка и джинсы", "Белая рубашка и туфли"],
+      "answer": 0,
+      "explanation": "A white shirt and jeans — белая рубашка и джинсы. О том, во что человек одет сейчас, говорят в Continuous: She's wearing."
+    },
+    {
+      "type": "gap",
+      "sentence": "He usually drinks tea, but today he ___ coffee.",
+      "translation": "Обычно он пьёт чай, но сегодня он пьёт кофе.",
+      "options": ["drinks", "is drinking", "drinking", "are drinking"],
+      "answer": 1,
+      "explanation": "Usually — привычка, поэтому drinks. А today — то, что происходит сейчас, не как обычно, поэтому is drinking; с he — is, а не are."
+    },
+    {
+      "type": "type",
+      "source": "Я не сплю.",
+      "answer": "I'm not sleeping.",
+      "accept": ["I am not sleeping.", "I'm not asleep.", "I'm awake."],
+      "explanation": "Отрицание — not после am: I'm not sleeping. «I don't sleeping» — ошибка: don't с формой на -ing не сочетается."
+    },
+    {
+      "type": "dictation",
+      "audio": "She is talking to her boss now.",
+      "translation": "Она сейчас разговаривает со своим начальником."
+    },
+    {
+      "type": "choice",
+      "prompt": "Как спросить «Ты меня слушаешь?»",
+      "options": ["Do you listening to me?", "Are you listening to me?", "You listening to me?", "Are you listen to me?"],
+      "answer": 1,
+      "explanation": "Вопрос о том, что происходит сейчас, начинается с are, а глагол остаётся с -ing: Are you listening? Do с формой на -ing не сочетается."
+    }
+  ]
+}

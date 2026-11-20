@@ -1,0 +1,199 @@
+{
+  "id": "b2-16",
+  "level": "B2",
+  "order": 16,
+  "title": { "ru": "Слова количества: each, either, few, plenty of", "en": "Quantifiers" },
+  "goal": { "ru": "Научитесь точно говорить о количестве: each и every, either и neither, few и a few, little и a little, plenty of и hardly any.", "en": "Learn to talk precisely about quantity: each and every, either and neither, few and a few, little and a little, plenty of and hardly any." },
+  "theory": [
+    {
+      "title": "Each, every, either, neither",
+      "body": "Every и each ставятся перед существительным в единственном числе, и глагол тоже в единственном. Each можно использовать с of (each of us), every — нельзя. Either («любой из двух») и neither («ни один из двух») говорят ровно о двух предметах или людях; после of идёт множественное число: neither of them.",
+      "examples": [
+        { "en": "Every employee has a pass.", "ru": "У каждого сотрудника есть пропуск." },
+        { "en": "Each of the candidates was interviewed separately.", "ru": "С каждым из кандидатов беседовали отдельно." },
+        { "en": "Neither of my parents speaks English.", "ru": "Ни один из моих родителей не говорит по-английски." }
+      ],
+      "tip": "В русском двойное отрицание: «ни один не говорит». В английском neither уже отрицание, поэтому глагол утвердительный: «Neither of them doesn't speak» — ошибка."
+    },
+    {
+      "title": "Few и a few, little и a little",
+      "body": "Few и a few употребляются с исчисляемыми существительными, little и a little — с неисчисляемыми. Артикль меняет оценку: a few и a little — «немного, но есть, и этого хватает»; few и little без артикля — «мало, почти нет».",
+      "examples": [
+        { "en": "I have a few friends in Berlin, so I won't be lonely.", "ru": "У меня в Берлине есть несколько друзей, так что одиноко мне не будет." },
+        { "en": "Few people understand this topic.", "ru": "Мало кто разбирается в этой теме." },
+        { "en": "There's little hope of a quick decision.", "ru": "Надежды на быстрое решение мало." }
+      ],
+      "tip": "Quite a few — это не «довольно мало», а «довольно много»: Quite a few people came."
+    },
+    {
+      "title": "Plenty of и hardly any",
+      "body": "Plenty of — «более чем достаточно, полно»; подходит и к исчисляемым, и к неисчисляемым существительным. Hardly any — «почти нет». Слово hardly уже отрицательное, поэтому глагол остаётся утвердительным. О людях говорят hardly anyone.",
+      "examples": [
+        { "en": "Don't rush, we've got plenty of time.", "ru": "Не торопись, у нас полно времени." },
+        { "en": "There were hardly any taxis at the station.", "ru": "У вокзала почти не было такси." },
+        { "en": "Hardly anyone came to the meeting.", "ru": "На собрание почти никто не пришёл." }
+      ],
+      "tip": "«There isn't hardly any milk» и «hardly no milk» — ошибки: получается двойное отрицание. Правильно: There is hardly any milk."
+    }
+  ],
+  "vocab": [
+    { "en": "plenty of", "ru": "более чем достаточно, полно", "example": "There's plenty of room in the car." },
+    { "en": "hardly any", "ru": "почти нет", "example": "There's hardly any coffee left." },
+    { "en": "a few", "ru": "несколько (и этого хватает)", "example": "I need a few minutes to think." },
+    { "en": "either", "ru": "любой из двух", "example": "You can take either road." },
+    { "en": "neither", "ru": "ни тот ни другой", "example": "I've read both reports, and neither is useful." },
+    { "en": "each", "ru": "каждый (по отдельности)", "example": "We gave each guest a small gift." },
+    { "en": "the majority of", "ru": "большинство", "example": "These days the majority of our customers pay by card." },
+    { "en": "a great deal of", "ru": "очень много (с неисчисляемыми)", "example": "The job requires a great deal of patience." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "plenty of", "ru": "более чем достаточно, полно" },
+        { "en": "hardly any", "ru": "почти нет" },
+        { "en": "neither", "ru": "ни тот ни другой" },
+        { "en": "the majority of", "ru": "большинство" },
+        { "en": "a great deal of", "ru": "очень много (с неисчисляемыми)" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": [
+        "Neither of my brothers lives in Moscow.",
+        "Neither of my brothers doesn't live in Moscow.",
+        "Neither my brothers lives in Moscow.",
+        "Neither of my brother lives in Moscow."
+      ],
+      "answer": 0,
+      "explanation": "Neither уже содержит отрицание, поэтому глагол утвердительный: neither … lives. Двойное отрицание — калька с русского «ни один не живёт»; после neither of нужно множественное число: of my brothers."
+    },
+    {
+      "type": "gap",
+      "sentence": "Let's go out for dinner: there's ___ food in the fridge.",
+      "translation": "Давай поужинаем где-нибудь: в холодильнике почти нет еды.",
+      "options": ["hardly any", "hardly no", "plenty of", "a few"],
+      "answer": 0,
+      "explanation": "«Почти нет» — hardly any: hardly уже отрицательное слово, поэтому no после него не ставится. Plenty of значило бы, что еды полно, а a few не сочетается с неисчисляемым food."
+    },
+    {
+      "type": "listen",
+      "audio": "I've got a few ideas for the presentation, but very little time to prepare.",
+      "question": "Что говорит выступающий?",
+      "options": [
+        "Идеи есть, а времени на подготовку почти нет",
+        "Идей почти нет, зато времени достаточно",
+        "Нет ни идей, ни времени",
+        "И идей, и времени достаточно"
+      ],
+      "answer": 0,
+      "explanation": "A few ideas — «несколько идей»: с артиклем оценка положительная. Very little time — «очень мало времени»: без артикля little означает нехватку."
+    },
+    {
+      "type": "translate",
+      "source": "У нас полно времени до поезда.",
+      "answer": "We have plenty of time before the train.",
+      "accept": [
+        "We've got plenty of time before the train.",
+        "We have got plenty of time before the train.",
+        "We have plenty of time until the train.",
+        "We have plenty of time before the train leaves.",
+        "We have lots of time before the train.",
+        "We have a lot of time before the train."
+      ],
+      "distractors": ["many", "few", "full"],
+      "explanation": "«Полно, более чем достаточно» — plenty of, и оно подходит к неисчисляемому time. Many употребляется только с исчисляемыми, а full — «полный, заполненный» — количество не обозначает."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ student has to hand in the essay by Friday.",
+      "translation": "Каждый студент должен сдать эссе до пятницы.",
+      "options": ["Every", "All", "Each of", "Both"],
+      "answer": 0,
+      "explanation": "Существительное и глагол стоят в единственном числе (student has), значит, нужно every. После all, both и each of идёт множественное число: all students, each of the students."
+    },
+    {
+      "type": "speak",
+      "text": "Don't rush, we've got plenty of time.",
+      "translation": "Не торопись, у нас полно времени."
+    },
+    {
+      "type": "choice",
+      "prompt": "Из какого предложения ясно, что друзей в городе почти нет и человеку одиноко?",
+      "options": [
+        "I have few friends in this city.",
+        "I have a few friends in this city.",
+        "I have little friends in this city.",
+        "I have quite a few friends in this city."
+      ],
+      "answer": 0,
+      "explanation": "Few без артикля — «мало, почти нет». A few — «несколько, и этого достаточно», quite a few — «довольно много», а little с исчисляемым friends значило бы «маленькие друзья»."
+    },
+    {
+      "type": "type",
+      "source": "Ни один из двух ответов не верен.",
+      "answer": "Neither answer is correct.",
+      "accept": [
+        "Neither answer is right.",
+        "Neither of the answers is correct.",
+        "Neither of the answers is right.",
+        "Neither of the answers are correct.",
+        "Neither of the two answers is correct.",
+        "Neither of the two answers is right."
+      ],
+      "explanation": "О двух предметах — neither + существительное в единственном числе, и глагол утвердительный: neither answer is correct. «Neither answer isn't correct» — двойное отрицание."
+    },
+    {
+      "type": "listen",
+      "audio": "There are two trains in the morning, and either of them will get you there on time.",
+      "question": "Каким поездом нужно ехать, чтобы успеть?",
+      "options": [
+        "Любым из двух",
+        "Только первым",
+        "Ни один из них не подходит",
+        "Сначала одним, потом другим"
+      ],
+      "answer": 0,
+      "explanation": "Either of them — «любой из двух»: подойдёт и тот, и другой поезд. «Ни один из двух» было бы neither of them."
+    },
+    {
+      "type": "gap",
+      "sentence": "Unfortunately, there is ___ chance that the bank will approve the loan.",
+      "translation": "К сожалению, шансов на то, что банк одобрит кредит, мало.",
+      "options": ["little", "few", "a few", "hardly"],
+      "answer": 0,
+      "explanation": "Chance в значении «вероятность» — неисчисляемое существительное в единственном числе, поэтому little, а не few. Hardly без any здесь стоять не может: нужно hardly any chance."
+    },
+    {
+      "type": "translate",
+      "source": "На собрание почти никто не пришёл.",
+      "answer": "Hardly anyone came to the meeting.",
+      "accept": [
+        "Hardly anybody came to the meeting.",
+        "Almost nobody came to the meeting.",
+        "Almost no one came to the meeting.",
+        "Hardly anyone attended the meeting."
+      ],
+      "distractors": ["no", "didn't", "on"],
+      "explanation": "«Почти никто» — hardly anyone, и глагол остаётся утвердительным: came. «Hardly anyone didn't come» — двойное отрицание, калька с русского «никто не пришёл»; «на собрание» — to the meeting."
+    },
+    {
+      "type": "dictation",
+      "audio": "There were hardly any taxis at the station.",
+      "translation": "У вокзала почти не было такси."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение верно?",
+      "options": [
+        "Each of the rooms has its own bathroom.",
+        "Every of the rooms has its own bathroom.",
+        "Each of the room has its own bathroom.",
+        "Every rooms has its own bathroom."
+      ],
+      "answer": 0,
+      "explanation": "С of употребляется each, а не every, и после of идёт множественное число: each of the rooms. Сам every требует единственного числа: every room has."
+    }
+  ]
+}

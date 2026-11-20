@@ -1,0 +1,160 @@
+{
+  "id": "a2-11",
+  "level": "A2",
+  "order": 11,
+  "title": { "ru": "Предлоги движения: across, through, along, past, into, out of", "en": "Prepositions of movement" },
+  "goal": { "ru": "Научитесь объяснять, куда идти и как вы добрались: через, вдоль, мимо, внутрь и наружу.", "en": "Learn to say where to go and how you got there: across, through, along, past, into and out of." },
+  "theory": [
+    {
+      "title": "Across или through: два разных «через»",
+      "body": "Русское «через» в английском делится на два слова. Across — с одной стороны на другую по поверхности: через дорогу, мост, площадь. Through — сквозь что-то, когда вы находитесь внутри: через туннель, парк, толпу, паспортный контроль. Сказать «across the tunnel» — типичная ошибка.",
+      "examples": [
+        { "en": "We walked across the bridge.", "ru": "Мы перешли через мост." },
+        { "en": "The train goes through a long tunnel.", "ru": "Поезд идёт через длинный туннель." },
+        { "en": "You have to go through passport control.", "ru": "Вам нужно пройти через паспортный контроль." }
+      ],
+      "tip": "Across — вы на поверхности, through — что-то окружает вас со всех сторон: стены, деревья, люди."
+    },
+    {
+      "title": "Along и past: вдоль и мимо",
+      "body": "Along — вдоль чего-то длинного: улицы, реки, коридора. Past — мимо: вы проходите рядом и идёте дальше, не заходя внутрь. После past сразу идёт существительное, без of и to. Не путайте past с глаголом pass («проходить»): go past the bank, но pass the bank.",
+      "examples": [
+        { "en": "Go along this street.", "ru": "Идите по этой улице." },
+        { "en": "We walked along the river.", "ru": "Мы шли вдоль реки." },
+        { "en": "Go past the bank and turn left.", "ru": "Пройдите мимо банка и поверните налево." }
+      ],
+      "tip": "Русское «идите по улице» — это go along the street, а не «go on the street»."
+    },
+    {
+      "title": "Into и out of: внутрь и наружу",
+      "body": "In отвечает на вопрос «где?», а into — «куда?»: это движение внутрь. Обратное движение — out of, из двух слов. По-русски мы говорим просто «из», поэтому of часто теряют или заменяют на from: «He went out from the room» — ошибка.",
+      "examples": [
+        { "en": "She walked into the room.", "ru": "Она вошла в комнату." },
+        { "en": "He took his passport out of his bag.", "ru": "Он достал паспорт из сумки." },
+        { "en": "We got out of the taxi near the hotel.", "ru": "Мы вышли из такси возле отеля." }
+      ],
+      "tip": "В машину и такси — get into, из них — get out of. В автобус, поезд и самолёт — get on, из них — get off."
+    }
+  ],
+  "vocab": [
+    { "en": "across", "ru": "через (с одной стороны на другую)", "example": "We walked across the square." },
+    { "en": "through", "ru": "через, сквозь", "example": "The train goes through a long tunnel." },
+    { "en": "along", "ru": "вдоль, по", "example": "We walked along the river." },
+    { "en": "past", "ru": "мимо", "example": "Go past the bank and turn left." },
+    { "en": "out of", "ru": "из (изнутри наружу)", "example": "He got out of the taxi." },
+    { "en": "bridge", "ru": "мост", "example": "There is an old bridge near the hotel." },
+    { "en": "gate", "ru": "выход на посадку", "example": "Which gate does our flight leave from?" },
+    { "en": "platform", "ru": "платформа", "example": "The train leaves from this platform." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "through", "ru": "сквозь" },
+        { "en": "along", "ru": "вдоль" },
+        { "en": "past", "ru": "мимо" },
+        { "en": "bridge", "ru": "мост" },
+        { "en": "gate", "ru": "выход на посадку" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Мы прошли через паспортный контроль»?",
+      "options": ["We went through passport control.", "We went across passport control.", "We went along passport control.", "We went past passport control."],
+      "answer": 0,
+      "explanation": "Паспортный контроль — это зона, внутри которой вы находитесь, пока её проходите, поэтому through. Across — только про переход по поверхности с одной стороны на другую, а past значило бы «мимо»."
+    },
+    {
+      "type": "gap",
+      "sentence": "Be careful when you walk ___ the road.",
+      "translation": "Будьте осторожны, когда переходите дорогу.",
+      "options": ["across", "through", "into", "out of"],
+      "answer": 0,
+      "explanation": "Дорогу переходят с одной стороны на другую по поверхности — это across. Through подошло бы, если бы вы двигались внутри чего-то, например через туннель."
+    },
+    {
+      "type": "listen",
+      "audio": "Go along this street and turn left at the bank.",
+      "question": "Что вы услышали?",
+      "options": [
+        "Go along this street and turn left at the bank.",
+        "Go across this street and turn left at the bank.",
+        "Go along this street and turn right at the bank.",
+        "Go along this street and turn left at the bridge."
+      ],
+      "answer": 0,
+      "explanation": "Along this street — «по этой улице, вдоль неё». Across the street значило бы «перейдите улицу» — это совсем другой маршрут."
+    },
+    {
+      "type": "translate",
+      "source": "Она вошла в комнату.",
+      "answer": "She walked into the room.",
+      "accept": ["She came into the room.", "She went into the room."],
+      "distractors": ["in", "at", "on"],
+      "explanation": "Движение внутрь — это into. In отвечает на вопрос «где?»: She is in the room — «Она в комнате»."
+    },
+    {
+      "type": "gap",
+      "sentence": "He took his passport ___ his bag and gave it to the officer.",
+      "translation": "Он достал паспорт из сумки и отдал его сотруднику.",
+      "options": ["out of", "out", "off", "out from"],
+      "answer": 0,
+      "explanation": "Движение изнутри наружу — out of, из двух слов. Без of или с from («out from») предложение неправильное."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["We drove past the airport.", "We drove past of the airport.", "We drove pass the airport.", "We drove past to the airport."],
+      "answer": 0,
+      "explanation": "После past сразу идёт существительное — без of и без to. Pass — это глагол «проходить», а предлог «мимо» пишется past."
+    },
+    {
+      "type": "speak",
+      "text": "Go past the bank and turn left.",
+      "translation": "Пройдите мимо банка и поверните налево."
+    },
+    {
+      "type": "type",
+      "source": "Идите вдоль реки.",
+      "answer": "Walk along the river.",
+      "accept": ["Go along the river."],
+      "explanation": "«Вдоль» — along, и после него сразу идёт существительное с артиклем: along the river. Предлог of здесь не нужен."
+    },
+    {
+      "type": "listen",
+      "audio": "We got out of the taxi and walked across the bridge to the hotel.",
+      "question": "Как они добрались от такси до отеля?",
+      "options": ["Пешком через мост", "На такси через мост", "Пешком через туннель", "Пешком вдоль реки"],
+      "answer": 0,
+      "explanation": "Got out of the taxi — «вышли из такси», walked across the bridge — «перешли мост пешком». Across показывает движение с одного берега на другой."
+    },
+    {
+      "type": "gap",
+      "sentence": "It was dark when we drove ___ the tunnel.",
+      "translation": "Было темно, когда мы ехали через туннель.",
+      "options": ["through", "across", "along", "out"],
+      "answer": 0,
+      "explanation": "Туннель окружает вас со всех сторон, вы движетесь внутри него — это through. Across здесь — типичная ошибка: оно только про поверхность, как у дороги или моста."
+    },
+    {
+      "type": "translate",
+      "source": "Пройдите мимо аптеки и поверните налево.",
+      "answer": "Go past the pharmacy and turn left.",
+      "accept": ["Walk past the pharmacy and turn left.", "Go past the chemist's and turn left."],
+      "distractors": ["pass", "across", "through"],
+      "explanation": "«Мимо» — past: вы проходите рядом с аптекой и идёте дальше. Pass — это глагол, после go он не ставится."
+    },
+    {
+      "type": "dictation",
+      "audio": "We walked along the river to the bridge.",
+      "translation": "Мы шли вдоль реки к мосту."
+    },
+    {
+      "type": "choice",
+      "prompt": "Вы сели в такси. Как об этом сказать?",
+      "options": ["I got into the taxi.", "I got on the taxi.", "I got to the taxi.", "I got at the taxi."],
+      "answer": 0,
+      "explanation": "В машину и такси садятся get into: вы оказываетесь внутри небольшого пространства. Get on говорят про автобус, поезд и самолёт, а got to the taxi значит только «дошёл до такси»."
+    }
+  ]
+}

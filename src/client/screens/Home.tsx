@@ -1,22 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import type { Text } from '../../shared/lesson'
 import Chai from '../components/Chai'
 import { BoltIcon, FlameIcon } from '../components/icons'
+import CoursePath, { type PathExam, type PathUnit } from '../components/home/CoursePath'
 import { MascotSays, PhraseOfDay, TeacherOfDay, WeekStrip } from '../components/home/HomeExtras'
-import Button from '../components/ui/Button'
 import { api } from '../lib/api'
-
-interface CourseLesson {
-  id: string
-  order: number
-  title: Text
-  goal: Text
-  exercises: number
-  status: 'done' | 'open' | 'locked'
-  bestAccuracy: number | null
-}
 
 interface Course {
   level: string
@@ -27,7 +16,8 @@ interface Course {
   reviewDue?: number
   today: { xp: number; xpGoal: number; lessonsDone: number; lessonsLimit: number | null }
   week: { day: string; xp: number }[]
-  lessons: CourseLesson[]
+  units: PathUnit[]
+  exam: PathExam
 }
 
 /** The daily goal as a ring that fills up. */
@@ -58,24 +48,10 @@ function GoalRing({ value }: { value: number }) {
   )
 }
 
-function Stars({ accuracy }: { accuracy: number }) {
-  const stars = accuracy >= 95 ? 3 : accuracy >= 75 ? 2 : 1
-  return (
-    <span className="text-sm tracking-tight" aria-label={`${accuracy}%`}>
-      {[1, 2, 3].map((n) => (
-        <span key={n} className={n <= stars ? 'text-sun' : 'text-ink/15'}>
-          ★
-        </span>
-      ))}
-    </span>
-  )
-}
-
-/** Learn tab: today's goal, the next lesson, and the course path for the student's level. */
+/** Learn tab: today's numbers on top, then the course path for the student's level. */
 export default function Home() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const navigate = useNavigate()
-  const lang = i18n.language === 'en' ? 'en' : 'ru'
   const [course, setCourse] = useState<Course | null>(null)
   const [failed, setFailed] = useState(false)
 
@@ -95,14 +71,15 @@ export default function Home() {
     )
   }
 
-  const next = course.lessons.find((l) => l.status === 'open')
-  const doneCount = course.lessons.filter((l) => l.status === 'done').length
+  const lessons = course.units.flatMap((u) => u.lessons)
+  const doneCount = lessons.filter((l) => l.status === 'done').length
   const limit = course.today.lessonsLimit
   const lessonsLeft = limit === null ? null : Math.max(0, limit - course.today.lessonsDone)
 
   return (
     <div className="flex flex-col gap-5">
-      <header className="flex items-center justify-between pt-1">
+      {/* Stays in view while the path scrolls underneath */}
+      <header className="sticky top-0 z-[5] -mx-5 flex items-center justify-between bg-cream px-5 pb-2 pt-1 before:absolute before:inset-x-0 before:bottom-full before:h-24 before:bg-cream">
         <Link to="/placement" className="flex items-center gap-2 rounded-full bg-white py-1.5 pl-1.5 pr-3 text-sm font-extrabold active:translate-y-0.5">
           <span className="rounded-full bg-coral px-2.5 py-1 text-white">{course.level}</span>
           {t(`levels.${course.level}.name`)}
@@ -155,33 +132,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The next lesson */}
-      {next ? (
-        <section className="relative overflow-hidden rounded-3xl bg-ink p-5 text-white shadow-[0_6px_0_0_rgba(31,27,58,0.25)]">
-          <div className="absolute -right-3 -top-2 opacity-90">
-            <Chai size={96} />
-          </div>
-          <p className="text-xs font-extrabold uppercase tracking-wide text-sun">
-            {t('lesson.lessonNumber', { number: next.order })} · {t('home.minutes')}
-          </p>
-          <h2 className="mt-1 max-w-[75%] text-2xl font-extrabold leading-tight">{next.title[lang]}</h2>
-          <p className="mt-1 max-w-[85%] text-base text-white/75">{next.goal[lang]}</p>
-          <Button className="mt-4" onClick={() => navigate(`/lesson/${next.id}`)}>
-            {doneCount === 0 ? t('home.startCourse') : t('home.continue')}
-          </Button>
-        </section>
-      ) : (
-        course.lessons.length > 0 && (
-          <section className="rounded-3xl bg-mint/20 p-5 text-center">
-            <h2 className="text-2xl font-extrabold">{t('home.levelDoneTitle')}</h2>
-            <p className="mt-1 text-base text-ink/70">{t('home.levelDoneText')}</p>
-            <Button className="mt-4" onClick={() => navigate('/placement')}>
-              {t('home.nextLevel')}
-            </Button>
-          </section>
-        )
-      )}
-
       {/* Words and mistakes that are due to be repeated */}
       {(course.reviewDue ?? 0) > 0 && (
         <section className="flex items-center gap-4 rounded-3xl bg-[#EDE8FF] p-4 shadow-[0_5px_0_0_rgba(124,92,255,0.18)]">
@@ -202,63 +152,22 @@ export default function Home() {
         </section>
       )}
 
+      {/* The course path */}
+      <div className="flex items-baseline justify-between">
+        <h2 className="text-xl font-extrabold">{t('home.courseTitle', { level: course.level })}</h2>
+        <span className="text-sm font-bold text-ink/50">
+          {doneCount} / {lessons.length}
+        </span>
+      </div>
+      {lessons.length === 0 ? (
+        <p className="rounded-2xl bg-white p-4 text-base text-ink/65">{t('home.noLessons')}</p>
+      ) : (
+        <CoursePath level={course.level} units={course.units} exam={course.exam} />
+      )}
+
       <WeekStrip week={course.week} />
       <PhraseOfDay />
       <TeacherOfDay />
-
-      {/* The course path */}
-      <section>
-        <div className="mb-3 flex items-baseline justify-between">
-          <h2 className="text-xl font-extrabold">{t('home.courseTitle', { level: course.level })}</h2>
-          <span className="text-sm font-bold text-ink/50">
-            {doneCount} / {course.lessons.length}
-          </span>
-        </div>
-
-        {course.lessons.length === 0 && <p className="rounded-2xl bg-white p-4 text-base text-ink/65">{t('home.noLessons')}</p>}
-
-        <ol className="relative flex flex-col gap-3">
-          {/* The line connecting the lessons */}
-          <span className="absolute bottom-8 left-[1.6875rem] top-8 w-1 rounded-full bg-ink/10" aria-hidden="true" />
-          {course.lessons.map((lesson) => {
-            const locked = lesson.status === 'locked'
-            const done = lesson.status === 'done'
-            const isNext = lesson.id === next?.id
-            const badge = done
-              ? 'bg-mint text-white shadow-[0_4px_0_0_#1FA283]'
-              : isNext
-                ? 'bg-coral text-white shadow-[0_4px_0_0_var(--color-coral-dark)] pulse-ring'
-                : 'bg-[#E9E4DE] text-ink/40'
-            return (
-              <li key={lesson.id}>
-                <button
-                  type="button"
-                  disabled={locked}
-                  onClick={() => navigate(`/lesson/${lesson.id}`)}
-                  className="relative flex w-full items-center gap-4 text-left active:translate-y-0.5 disabled:active:translate-y-0"
-                >
-                  <span className={`relative z-[1] flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-xl font-extrabold ${badge}`}>
-                    {done ? '✓' : locked ? '🔒' : lesson.order}
-                  </span>
-                  <span className={`min-w-0 flex-1 rounded-2xl p-3.5 ${locked ? 'bg-white/50' : 'bg-white shadow-[0_4px_0_0_rgba(31,27,58,0.06)]'}`}>
-                    <span className={`block text-base font-extrabold leading-snug ${locked ? 'text-ink/40' : ''}`}>{lesson.title[lang]}</span>
-                    <span className="mt-0.5 flex items-center gap-2 text-sm font-semibold text-ink/50">
-                      {done && lesson.bestAccuracy !== null ? (
-                        <>
-                          <Stars accuracy={lesson.bestAccuracy} />
-                          {t('home.repeat')}
-                        </>
-                      ) : (
-                        t('home.exerciseCount', { count: lesson.exercises })
-                      )}
-                    </span>
-                  </span>
-                </button>
-              </li>
-            )
-          })}
-        </ol>
-      </section>
     </div>
   )
 }

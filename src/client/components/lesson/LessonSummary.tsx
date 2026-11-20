@@ -24,6 +24,8 @@ interface Props {
   onContinue: () => void
   /** Replaces the usual "lesson complete" headline when the result is not perfect or great. */
   title?: string
+  /** Always shown as the headline, whatever the result (a passed test, a new level). */
+  headline?: string
   /** A second button above "Continue", e.g. another round of review. */
   extraAction?: { label: string; onClick: () => void }
 }
@@ -35,10 +37,11 @@ function formatTime(seconds: number): string {
 }
 
 /** The celebration after a lesson: XP, accuracy, time, streak and the daily goal. */
-export default function LessonSummary({ result, seconds, onContinue, title, extraAction }: Props) {
+export default function LessonSummary({ result, seconds, onContinue, title, headline: fixedHeadline, extraAction }: Props) {
   const { t } = useTranslation()
   const headline =
-    result.accuracy === 100 ? t('summary.perfect') : result.accuracy >= 80 ? t('summary.great') : (title ?? t('summary.done'))
+    fixedHeadline ??
+    (result.accuracy === 100 ? t('summary.perfect') : result.accuracy >= 80 ? t('summary.great') : (title ?? t('summary.done')))
 
   const stats = [
     { label: t('summary.xp'), value: `+${result.xpEarned}`, color: 'bg-sun/30' },

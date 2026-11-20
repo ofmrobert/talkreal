@@ -1,0 +1,207 @@
+{
+  "id": "c1-13",
+  "level": "C1",
+  "order": 13,
+  "title": { "ru": "Уступка: как бы ни, хотя и, и всё же", "en": "Concession" },
+  "goal": { "ru": "Научитесь признавать чужой довод и всё-таки возражать: however hard, much as, strange as it may seem, even so.", "en": "Learn to concede a point and still disagree: however hard, much as, strange as it may seem, even so." },
+  "theory": [
+    {
+      "title": "However + прилагательное, no matter how",
+      "body": "Русское «как бы ни…» передаётся оборотом however или no matter how + прилагательное или наречие + подлежащее + глагол. Прилагательное стоит сразу после however, а не в конце. Глагол остаётся в обычном настоящем времени или употребляется с may: будущее время и would здесь не нужны.",
+      "examples": [
+        { "en": "However hard I try, I can't remember his name.", "ru": "Как бы я ни старался, я не могу вспомнить его имя." },
+        { "en": "No matter how busy she is, she always replies the same day.", "ru": "Как бы она ни была занята, она всегда отвечает в тот же день." },
+        { "en": "However tempting the offer may be, we should read the small print.", "ru": "Каким бы заманчивым ни было предложение, стоит прочитать мелкий шрифт." }
+      ],
+      "tip": "В русском «как бы ни» есть «бы» и «ни», поэтому рука тянется к would и not. В английском нет ни того ни другого: however difficult it is."
+    },
+    {
+      "title": "Much as и прилагательное + as / though",
+      "body": "Much as + предложение означает «как бы сильно ни», «хотя и очень»; оно сочетается с глаголами отношения: like, admire, respect, would like. В более книжном варианте прилагательное или наречие выносится вперёд: Strange as it may seem, Tired though she was. В этой конструкции возможны as и though, но не although.",
+      "examples": [
+        { "en": "Much as I admire her work, I can't support this proposal.", "ru": "Как бы я ни восхищался её работой, это предложение я поддержать не могу." },
+        { "en": "Strange as it may seem, I actually enjoy long flights.", "ru": "Как ни странно, мне действительно нравятся долгие перелёты." },
+        { "en": "Try as he might, he couldn't get the engine to start.", "ru": "Как он ни старался, завести двигатель не удалось." }
+      ],
+      "tip": "Порядок слов строгий: прилагательное + as + подлежащее + глагол. «As strange it may seem» — ошибка."
+    },
+    {
+      "title": "Even so, even though, even if",
+      "body": "Even so и all the same значат «и всё же»: они начинают новое предложение или идут после but. Не путайте их с союзами: even though вводит реальный факт («хотя»), а even if — предположение («даже если»). Само слово even союзом не является.",
+      "examples": [
+        { "en": "The hotel was expensive. Even so, I'd stay there again.", "ru": "Отель был дорогой. И всё же я бы остановился там снова." },
+        { "en": "Even though he apologised, she is still upset.", "ru": "Хотя он извинился, она до сих пор расстроена." },
+        { "en": "I'll finish the report tonight even if it takes me until midnight.", "ru": "Я закончу отчёт сегодня, даже если придётся сидеть до полуночи." }
+      ],
+      "tip": "Although и but в одном предложении не сочетаются: «Although it was late, but we continued» — калька с русского «хотя…, но…»."
+    }
+  ],
+  "vocab": [
+    { "en": "much as", "ru": "как бы сильно ни", "example": "I can't lend you the car, much as I would like to help." },
+    { "en": "no matter how", "ru": "как бы ни", "example": "We'll find a solution, no matter how long it takes." },
+    { "en": "even so", "ru": "и всё же", "example": "The risks are small, but even so we should be careful." },
+    { "en": "all the same", "ru": "всё равно, тем не менее", "example": "I knew he was joking, but I felt hurt all the same." },
+    { "en": "even though", "ru": "хотя, несмотря на то что", "example": "She took the job even though the salary was lower." },
+    { "en": "albeit", "ru": "хотя и (формально)", "example": "The talks ended in agreement, albeit a fragile one." },
+    { "en": "tempting", "ru": "заманчивый", "example": "It's a tempting offer, but I need time to think." },
+    { "en": "to admit", "ru": "признавать", "example": "I must admit the plan worked better than I expected." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "much as", "ru": "как бы сильно ни" },
+        { "en": "even so", "ru": "и всё же" },
+        { "en": "albeit", "ru": "хотя и (формально)" },
+        { "en": "tempting", "ru": "заманчивый" },
+        { "en": "to admit", "ru": "признавать" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "However the task is difficult, we will finish it on time.",
+        "However difficult the task is, we will finish it on time.",
+        "However difficult would be the task, we will finish it on time.",
+        "No matter difficult the task is, we will finish it on time."
+      ],
+      "answer": 1,
+      "explanation": "Прилагательное стоит сразу после however, а затем идут подлежащее и глагол в настоящем времени: however difficult the task is. Would здесь не нужен, хотя в русском «какой бы ни была» есть «бы»."
+    },
+    {
+      "type": "gap",
+      "sentence": "___ I respect his experience, I think he is wrong this time.",
+      "translation": "Как бы я ни уважал его опыт, думаю, на этот раз он неправ.",
+      "options": ["Much as", "As much", "However", "Even so"],
+      "answer": 0,
+      "explanation": "Much as + предложение с глаголом отношения (respect, admire, like) означает «как бы сильно ни». После however обязательно нужно прилагательное или наречие (however much), а even so не соединяет две части предложения."
+    },
+    {
+      "type": "translate",
+      "source": "Как бы странно это ни звучало, я скучаю по офису.",
+      "answer": "Strange as it may sound, I miss the office.",
+      "accept": [
+        "Strange as it sounds, I miss the office.",
+        "Strange as it might sound, I miss the office.",
+        "Strange though it may sound, I miss the office.",
+        "Strange as it may seem, I miss the office.",
+        "As strange as it may sound, I miss the office.",
+        "However strange it may sound, I miss the office.",
+        "However strange it sounds, I miss the office."
+      ],
+      "distractors": ["although", "would", "how", "strangely"],
+      "explanation": "Прилагательное выносится в начало: strange + as + it may sound. После глагола sound стоит прилагательное, а не наречие, а русское «бы» передаётся глаголом may, не would."
+    },
+    {
+      "type": "listen",
+      "audio": "Much as I'd like to join you, I have to finish this report tonight.",
+      "question": "Что имеет в виду говорящий?",
+      "options": [
+        "Он не очень хочет идти и рад, что есть отговорка",
+        "Он придёт, как только немного поработает",
+        "Он очень хотел бы пойти, но не может",
+        "Он уже закончил отчёт и скоро присоединится"
+      ],
+      "answer": 2,
+      "explanation": "Much as I'd like to — «как бы мне ни хотелось»: желание искреннее, но обстоятельства сильнее. Это вежливая формула отказа, после которой всегда следует причина."
+    },
+    {
+      "type": "choice",
+      "prompt": "Что означает even so во фразе «The flat is tiny. Even so, I love living there»?",
+      "options": ["Именно поэтому", "И всё же, несмотря на это", "Даже если так будет", "Точно так же"],
+      "answer": 1,
+      "explanation": "Even so отсылает к только что сказанному и вводит неожиданный вывод: «и всё же». Это не союз, поэтому оно стоит в начале нового предложения, а не соединяет две части, как even though."
+    },
+    {
+      "type": "speak",
+      "text": "No matter how busy she is, she always replies.",
+      "translation": "Как бы она ни была занята, она всегда отвечает."
+    },
+    {
+      "type": "gap",
+      "sentence": "Tired ___ she was, she stayed to help us clear up.",
+      "translation": "Как она ни устала, она осталась помочь нам с уборкой.",
+      "options": ["however", "although", "as", "even"],
+      "answer": 2,
+      "explanation": "В конструкции с прилагательным в начале используется as или though: tired as she was. Although в этой позиции невозможно, а however требует другого порядка слов: however tired she was."
+    },
+    {
+      "type": "type",
+      "source": "Хотя было поздно, мы продолжили.",
+      "answer": "Although it was late, we continued.",
+      "accept": [
+        "Even though it was late, we continued.",
+        "Though it was late, we continued.",
+        "Although it was late, we carried on.",
+        "Even though it was late, we carried on.",
+        "Though it was late, we carried on.",
+        "Although it was late, we went on.",
+        "Even though it was late, we went on.",
+        "Although it was late, we kept going.",
+        "Late as it was, we continued.",
+        "Late though it was, we continued.",
+        "We continued although it was late.",
+        "We continued even though it was late.",
+        "We continued though it was late.",
+        "We carried on although it was late.",
+        "We carried on even though it was late.",
+        "It was late, but we continued.",
+        "It was late, but we carried on."
+      ],
+      "explanation": "Уступку вводит одно слово: либо although в начале, либо but в середине. Русское «хотя…, но…» нельзя переносить целиком: «Although it was late, but we continued» — ошибка."
+    },
+    {
+      "type": "listen",
+      "audio": "However tempting the offer may be, we should read the small print first.",
+      "question": "Что вы услышали?",
+      "options": [
+        "However tempting the offer may be, we should read the small print first.",
+        "However the tempting offer may be, we should read the small print first.",
+        "How tempting the offer may be, we should read the small print first.",
+        "However tempted the offer may be, we should read the small print first."
+      ],
+      "answer": 0,
+      "explanation": "However + прилагательное + подлежащее + may be: «каким бы заманчивым ни было». Tempting описывает само предложение; tempted можно сказать только о человеке, которого что-то соблазняет."
+    },
+    {
+      "type": "translate",
+      "source": "Даже если пойдёт дождь, матч состоится.",
+      "answer": "Even if it rains, the match will take place.",
+      "accept": [
+        "The match will take place even if it rains.",
+        "Even if it rains, the match will go ahead.",
+        "The match will go ahead even if it rains.",
+        "Even if it rains, the game will take place.",
+        "Even if it is raining, the match will take place."
+      ],
+      "distractors": ["though", "would", "although", "rained"],
+      "explanation": "Дождь — только предположение, поэтому even if; even though означало бы, что дождь идёт на самом деле. После if будущее время не ставится: it rains, а не «it will rain»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The reviews were terrible. ___, the film made a fortune.",
+      "translation": "Рецензии были ужасные. И всё же фильм собрал огромную кассу.",
+      "options": ["Even though", "Even if", "Much as", "Even so"],
+      "answer": 3,
+      "explanation": "В начале отдельного предложения перед запятой может стоять только even so — «и всё же». Even though, even if и much as — союзы: после них нужно придаточное с подлежащим и глаголом."
+    },
+    {
+      "type": "dictation",
+      "audio": "Strange as it may seem, I enjoy long flights.",
+      "translation": "Как ни странно, мне нравятся долгие перелёты."
+    },
+    {
+      "type": "choice",
+      "prompt": "Выберите правильное предложение.",
+      "options": [
+        "Although the hotel was expensive, but we enjoyed our stay.",
+        "Despite the hotel was expensive, we enjoyed our stay.",
+        "Even though the hotel was expensive, we enjoyed our stay.",
+        "Even the hotel was expensive, we enjoyed our stay."
+      ],
+      "answer": 2,
+      "explanation": "Even though — союз, после которого идёт целое предложение. Although не сочетается с but, после despite нужно существительное или форма на -ing, а одно слово even союзом не является."
+    }
+  ]
+}

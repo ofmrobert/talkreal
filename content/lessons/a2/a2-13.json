@@ -1,0 +1,155 @@
+{
+  "id": "a2-13",
+  "level": "A2",
+  "order": 13,
+  "title": { "ru": "Слишком и достаточно: too, enough, too much / too many", "en": "Too and enough" },
+  "goal": { "ru": "Научитесь говорить, что чего-то слишком много или, наоборот, недостаточно.", "en": "Learn to say that there is too much of something or not enough." },
+  "theory": [
+    {
+      "title": "Too: больше, чем нужно",
+      "body": "Too ставится перед прилагательным или наречием и значит «слишком»: too heavy, too late. Это не то же самое, что very. Very просто усиливает, а too говорит о проблеме: из-за этого что-то невозможно или неприятно.",
+      "examples": [
+        { "en": "This suitcase is too heavy.", "ru": "Этот чемодан слишком тяжёлый." },
+        { "en": "It's too late to call him.", "ru": "Слишком поздно, чтобы ему звонить." },
+        { "en": "The tea is very hot, but I like it.", "ru": "Чай очень горячий, но мне так нравится." }
+      ],
+      "tip": "Удобная схема: too + прилагательное + to + глагол. I'm too tired to cook — «Я слишком устал, чтобы готовить»."
+    },
+    {
+      "title": "Enough: место в предложении",
+      "body": "Enough значит «достаточно». С прилагательным оно стоит после него: warm enough, big enough. С существительным — перед ним: enough time, enough money. По-русски мы говорим «достаточно тёплый», поэтому хочется сказать «enough warm» — это ошибка.",
+      "examples": [
+        { "en": "The room isn't big enough.", "ru": "Номер недостаточно большой." },
+        { "en": "We have enough time.", "ru": "У нас достаточно времени." },
+        { "en": "She is old enough to drive.", "ru": "Она достаточно взрослая, чтобы водить машину." }
+      ],
+      "tip": "Запомните пару: big enough (после прилагательного) — enough space (перед существительным)."
+    },
+    {
+      "title": "Too much и too many",
+      "body": "«Слишком много» перед существительным — это too much с неисчисляемыми словами (too much noise, too much coffee) и too many с исчисляемыми во множественном числе (too many people, too many cars). Перед прилагательным нужно только too: «too much expensive» — ошибка.",
+      "examples": [
+        { "en": "There are too many people on the platform.", "ru": "На платформе слишком много людей." },
+        { "en": "I drank too much coffee today.", "ru": "Я выпил сегодня слишком много кофе." },
+        { "en": "This hotel is too expensive.", "ru": "Этот отель слишком дорогой." }
+      ],
+      "tip": "People — исчисляемое слово во множественном числе, поэтому too many people, а не «too much people»."
+    }
+  ],
+  "vocab": [
+    { "en": "heavy", "ru": "тяжёлый", "example": "This box is very heavy." },
+    { "en": "noisy", "ru": "шумный", "example": "The street is noisy at night." },
+    { "en": "tired", "ru": "уставший", "example": "I'm tired after the flight." },
+    { "en": "spicy", "ru": "острый (о еде)", "example": "I don't like spicy food." },
+    { "en": "space", "ru": "место, свободное пространство", "example": "There isn't much space in the car." },
+    { "en": "traffic", "ru": "дорожное движение, поток машин", "example": "There is a lot of traffic in the morning." },
+    { "en": "enough", "ru": "достаточно", "example": "Do we have enough time?" },
+    { "en": "too much", "ru": "слишком много (с неисчисляемыми)", "example": "There is too much salt in this soup." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "heavy", "ru": "тяжёлый" },
+        { "en": "noisy", "ru": "шумный" },
+        { "en": "tired", "ru": "уставший" },
+        { "en": "spicy", "ru": "острый" },
+        { "en": "enough", "ru": "достаточно" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать «Этот чемодан слишком тяжёлый»?",
+      "options": ["This suitcase is too heavy.", "This suitcase is too much heavy.", "This suitcase is heavy too.", "This suitcase is enough heavy."],
+      "answer": 0,
+      "explanation": "Перед прилагательным ставится просто too, без much. А too в конце предложения значит «тоже»: heavy too — «тоже тяжёлый»."
+    },
+    {
+      "type": "gap",
+      "sentence": "The room isn't ___ for four people.",
+      "translation": "Номер недостаточно большой для четырёх человек.",
+      "options": ["big enough", "enough big", "bigger enough", "too much big"],
+      "answer": 0,
+      "explanation": "Enough стоит после прилагательного: big enough. «Enough big» — калька с русского порядка слов «достаточно большой»."
+    },
+    {
+      "type": "listen",
+      "audio": "The restaurant was too noisy, so we went to a quiet café.",
+      "question": "Почему они ушли из ресторана?",
+      "options": ["Там было слишком шумно", "Там было слишком дорого", "Там не было свободных столиков", "Еда была слишком острой"],
+      "answer": 0,
+      "explanation": "Too noisy — «слишком шумно». Too показывает, что это была проблема, поэтому они и пошли в тихое кафе."
+    },
+    {
+      "type": "translate",
+      "source": "У нас достаточно времени.",
+      "answer": "We have enough time.",
+      "accept": ["We've got enough time.", "We have got enough time."],
+      "distractors": ["too", "many", "times"],
+      "explanation": "С существительным enough стоит перед ним: enough time. Time в значении «время» неисчисляемое, поэтому без -s."
+    },
+    {
+      "type": "gap",
+      "sentence": "I can't sleep. There is too ___ noise in this hotel.",
+      "translation": "Я не могу уснуть. В этом отеле слишком шумно.",
+      "options": ["much", "many", "lot", "enough"],
+      "answer": 0,
+      "explanation": "Noise здесь неисчисляемое, поэтому too much. Too many ставится только перед множественным числом: too many guests."
+    },
+    {
+      "type": "choice",
+      "prompt": "Найдите предложение без ошибки.",
+      "options": ["There are too many cars in the centre.", "There are too much cars in the centre.", "There are too cars in the centre.", "There are many too cars in the centre."],
+      "answer": 0,
+      "explanation": "Cars — исчисляемое слово во множественном числе, поэтому too many. Too much — для неисчисляемых слов, а просто too перед существительным не ставится."
+    },
+    {
+      "type": "speak",
+      "text": "I'm too tired to cook tonight.",
+      "translation": "Я слишком устал, чтобы готовить сегодня вечером."
+    },
+    {
+      "type": "type",
+      "source": "Этот кофе слишком горячий.",
+      "answer": "This coffee is too hot.",
+      "accept": ["This coffee's too hot.", "The coffee is too hot.", "The coffee's too hot."],
+      "explanation": "Перед прилагательным — просто too: too hot. Very hot значило бы «очень горячий», но без намёка на проблему."
+    },
+    {
+      "type": "listen",
+      "audio": "We don't have enough money for a taxi, so let's take the bus.",
+      "question": "Что они решили?",
+      "options": ["Поехать на автобусе", "Поехать на такси", "Пойти пешком", "Остаться дома"],
+      "answer": 0,
+      "explanation": "Don't have enough money — «не хватает денег». Enough стоит перед существительным money."
+    },
+    {
+      "type": "gap",
+      "sentence": "My son is only fifteen. He isn't old ___ to drive a car.",
+      "translation": "Моему сыну всего пятнадцать. Он недостаточно взрослый, чтобы водить машину.",
+      "options": ["enough", "too", "much", "very"],
+      "answer": 0,
+      "explanation": "«Недостаточно взрослый» — not old enough: enough идёт после прилагательного. Too ставится только перед прилагательным."
+    },
+    {
+      "type": "translate",
+      "source": "Я съел слишком много хлеба.",
+      "answer": "I ate too much bread.",
+      "accept": ["I have eaten too much bread.", "I've eaten too much bread."],
+      "distractors": ["many", "breads", "very"],
+      "explanation": "Bread — неисчисляемое слово, поэтому too much и без -s. Too many подошло бы, например, к sandwiches."
+    },
+    {
+      "type": "dictation",
+      "audio": "This soup is too spicy for me.",
+      "translation": "Этот суп слишком острый для меня."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какое предложение говорит о проблеме: чай невозможно пить?",
+      "options": ["The tea is very hot.", "The tea is too hot.", "The tea is hot enough.", "The tea is really hot."],
+      "answer": 1,
+      "explanation": "Too значит «больше, чем нужно»: такой чай пить нельзя. Very и really только усиливают, а hot enough значит «достаточно горячий» — то есть всё в порядке."
+    }
+  ]
+}

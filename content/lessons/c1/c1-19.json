@@ -1,0 +1,191 @@
+{
+  "id": "c1-19",
+  "level": "C1",
+  "order": 19,
+  "title": { "ru": "Дипломатичный английский: смягчение и вежливое несогласие", "en": "Diplomatic language" },
+  "goal": { "ru": "Научитесь возражать и критиковать так, чтобы не обидеть собеседника: I'm not entirely convinced, With respect, It's not ideal.", "en": "Learn to disagree and criticise without causing offence: I'm not entirely convinced, With respect, It's not ideal." },
+  "theory": [
+    {
+      "title": "Смягчение: might, a bit, I'm afraid",
+      "body": "Прямое утверждение, которое по-русски звучит просто по-деловому, по-английски может показаться грубым. Его смягчают модальными глаголами (would, might, could), прошедшим временем (I was wondering, I wanted to ask), словами a bit, slightly, rather и вводными I'm afraid, it seems. Сравните: That is a problem и That might be a bit of a problem.",
+      "examples": [
+        { "en": "I'm afraid that might be a bit of a problem.", "ru": "Боюсь, с этим может возникнуть небольшая проблема." },
+        { "en": "I was wondering if we could move the deadline.", "ru": "Я хотел спросить, нельзя ли перенести срок." },
+        { "en": "It seems there has been a slight misunderstanding.", "ru": "Похоже, произошло небольшое недоразумение." }
+      ],
+      "tip": "Дословные «This is impossible» и «You are wrong» звучат как нападение. Смягчение — это не неуверенность, а обычная норма вежливости."
+    },
+    {
+      "title": "Преуменьшение: not + положительное слово",
+      "body": "Вместо отрицательного слова часто отрицают положительное: bad → not ideal, not great; expensive → not exactly cheap; I disagree → I'm not entirely convinced. Помогают слова entirely, quite, exactly, particularly. Собеседник понимает, что за мягкой формулой стоит серьёзная оценка: not ideal нередко значит «плохо».",
+      "examples": [
+        { "en": "The timing is not ideal, to be honest.", "ru": "Честно говоря, время выбрано не лучшим образом." },
+        { "en": "I'm not entirely convinced that this is the right approach.", "ru": "Я не вполне уверен, что это правильный подход." },
+        { "en": "The first results weren't particularly encouraging.", "ru": "Первые результаты были не особенно обнадёживающими." }
+      ],
+      "tip": "Слушая британских коллег, «переводите» обратно: «I have a few minor concerns» может означать серьёзные возражения."
+    },
+    {
+      "title": "Вежливое несогласие",
+      "body": "Сначала признайте мысль собеседника, потом возразите: I see your point, but…; I take your point, but… Выражение With respect или With all due respect предупреждает, что сейчас последует несогласие. Критику удобно подать как вопрос или предложение: Wouldn't it be better to…? Could I suggest…?",
+      "examples": [
+        { "en": "With respect, I think the figures tell a different story.", "ru": "При всём уважении, мне кажется, цифры говорят о другом." },
+        { "en": "I see your point, but have we considered the cost?", "ru": "Я понимаю вашу мысль, но учли ли мы стоимость?" },
+        { "en": "Wouldn't it be better to wait until we have all the data?", "ru": "Не лучше ли подождать, пока у нас будут все данные?" }
+      ],
+      "tip": "«I'm not agree» — грамматическая ошибка: agree — глагол, а не прилагательное. Правильно I don't agree, а дипломатично — I'm not sure I agree."
+    }
+  ],
+  "vocab": [
+    { "en": "with respect", "ru": "при всём уважении", "example": "I think, with respect, that you are missing the point." },
+    { "en": "not entirely", "ru": "не совсем, не вполне", "example": "I'm not entirely happy with the wording." },
+    { "en": "not ideal", "ru": "не лучший вариант", "example": "The location is not ideal, but the price is good." },
+    { "en": "I see your point", "ru": "я понимаю вашу мысль", "example": "I see your point, but the budget is fixed." },
+    { "en": "to be honest", "ru": "честно говоря", "example": "The film was, to be honest, rather dull." },
+    { "en": "a slight misunderstanding", "ru": "небольшое недоразумение", "example": "There seems to have been a slight misunderstanding." },
+    { "en": "I was wondering", "ru": "я хотел спросить", "example": "I was wondering if you could help me." },
+    { "en": "to have reservations", "ru": "иметь сомнения", "example": "I have reservations about the timing." }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        { "en": "with respect", "ru": "при всём уважении" },
+        { "en": "not ideal", "ru": "не лучший вариант" },
+        { "en": "I see your point", "ru": "я понимаю вашу мысль" },
+        { "en": "to be honest", "ru": "честно говоря" },
+        { "en": "to have reservations", "ru": "иметь сомнения" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Коллега предлагает план, который кажется вам неудачным. Какой ответ правильный и дипломатичный?",
+      "options": [
+        "Your plan is bad.",
+        "I'm not agree with this plan.",
+        "I'm not entirely convinced this is the best approach.",
+        "You are wrong about this plan."
+      ],
+      "answer": 2,
+      "explanation": "Not entirely convinced — преуменьшение: вместо «план плохой» говорящий отрицает положительное «убеждён». Прямые оценки звучат резко, а «I'm not agree» ещё и грамматически неверно."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'm ___ that might be a bit of a problem for our team.",
+      "translation": "Боюсь, для нашей команды это может стать небольшой проблемой.",
+      "options": ["afraid", "scared", "fearing", "frightened"],
+      "answer": 0,
+      "explanation": "I'm afraid — вежливая формула перед неприятной новостью, со страхом она не связана. Scared и frightened означают настоящий испуг и в этой роли не используются."
+    },
+    {
+      "type": "translate",
+      "source": "При всём уважении, я не уверен, что согласен.",
+      "answer": "With respect, I'm not sure I agree.",
+      "accept": [
+        "With respect, I am not sure I agree.",
+        "With respect, I'm not sure that I agree.",
+        "With all due respect, I'm not sure I agree.",
+        "With all respect, I'm not sure I agree.",
+        "With respect, I'm not certain I agree."
+      ],
+      "distractors": ["agreed", "by", "no", "disagree"],
+      "explanation": "With respect предупреждает о несогласии, а I'm not sure I agree смягчает его. Agree — глагол, поэтому после I он стоит без am: I agree, а не «I'm agree»."
+    },
+    {
+      "type": "listen",
+      "audio": "I have a few reservations about the timing, but overall it's a strong proposal.",
+      "question": "Что говорящий думает о предложении?",
+      "options": [
+        "Оно слабое, и сроки нереальные",
+        "Он уже забронировал время для обсуждения",
+        "Он полностью согласен со всеми пунктами",
+        "В целом оно хорошее, но сроки вызывают сомнения"
+      ],
+      "answer": 3,
+      "explanation": "Reservations здесь — не «бронь», а «сомнения, оговорки»: to have reservations about something. Говорящий сочетает мягкую критику с общей положительной оценкой."
+    },
+    {
+      "type": "choice",
+      "prompt": "Британский коллега говорит: «The results are not exactly encouraging». Что он имеет в виду?",
+      "options": ["Результаты отличные", "Результаты плохие", "Результаты неточные", "Результаты ещё не готовы"],
+      "answer": 1,
+      "explanation": "Not exactly + положительное слово — типичное преуменьшение: «не то чтобы обнадёживают» означает «плохие». Exactly здесь не про точность, а про смягчение оценки."
+    },
+    {
+      "type": "speak",
+      "text": "I see your point, but the budget is fixed.",
+      "translation": "Я понимаю вашу мысль, но бюджет утверждён."
+    },
+    {
+      "type": "gap",
+      "sentence": "I was ___ if we could move the meeting to Thursday.",
+      "translation": "Я хотел спросить, нельзя ли перенести встречу на четверг.",
+      "options": ["wandering", "wondered", "wondering", "interested"],
+      "answer": 2,
+      "explanation": "I was wondering if… — мягкая форма просьбы: прошедшее длительное время создаёт вежливую дистанцию. Wandering — от wander («бродить»), а «I was interested if» — калька с русского «мне было интересно»."
+    },
+    {
+      "type": "type",
+      "source": "Это не идеально.",
+      "answer": "It's not ideal.",
+      "accept": [
+        "It is not ideal.",
+        "That's not ideal.",
+        "That is not ideal.",
+        "This is not ideal.",
+        "It's not perfect.",
+        "It is not perfect.",
+        "That's not perfect.",
+        "That is not perfect.",
+        "This is not perfect."
+      ],
+      "explanation": "Not ideal — преуменьшение: так вежливо говорят о том, что на самом деле плохо или неудобно. Перед прилагательным без существительного артикль не нужен."
+    },
+    {
+      "type": "listen",
+      "audio": "With respect, I think we may be underestimating the risks.",
+      "question": "Что вы услышали?",
+      "options": [
+        "With respect, I think we may be underestimating the risks.",
+        "With respect, I think we may underestimating the risks.",
+        "With respects, I think we may be underestimating the risks.",
+        "With respect, I think we may be underestimated the risks."
+      ],
+      "answer": 0,
+      "explanation": "Три смягчения подряд: with respect, I think и may. После модального глагола may нужна начальная форма be, а за ней — форма на -ing."
+    },
+    {
+      "type": "translate",
+      "source": "Не лучше ли было бы подождать до понедельника?",
+      "answer": "Wouldn't it be better to wait until Monday?",
+      "accept": [
+        "Would it not be better to wait until Monday?",
+        "Wouldn't it be better to wait till Monday?",
+        "Would it not be better to wait till Monday?",
+        "Wouldn't it be better if we waited until Monday?"
+      ],
+      "distractors": ["good", "waiting", "by", "best"],
+      "explanation": "Отрицательный вопрос с would — мягкий способ предложить другое решение. После it would be better идёт инфинитив с to; «до понедельника» в значении «ждать вплоть до» — until, а не by."
+    },
+    {
+      "type": "gap",
+      "sentence": "I'm not ___ convinced that cutting the budget is the answer.",
+      "translation": "Я не вполне уверен, что сокращение бюджета — это решение.",
+      "options": ["entire", "entirely", "absolute", "complete"],
+      "answer": 1,
+      "explanation": "Перед прилагательным convinced нужно наречие: entirely. Not entirely convinced означает «у меня серьёзные сомнения», но звучит мягче, чем прямое I disagree."
+    },
+    {
+      "type": "dictation",
+      "audio": "The timing is not ideal, to be honest.",
+      "translation": "Честно говоря, время выбрано не лучшим образом."
+    },
+    {
+      "type": "choice",
+      "prompt": "Какая фраза вежливо предупреждает, что сейчас последует возражение?",
+      "options": ["Respectfully yours, …", "In respect of, …", "With regards, …", "With respect, …"],
+      "answer": 3,
+      "explanation": "With respect или with all due respect ставят перед несогласием, особенно в разговоре со старшим по должности. Respectfully yours и regards — формулы для писем, а in respect of значит «в отношении»."
+    }
+  ]
+}
