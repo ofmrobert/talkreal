@@ -493,7 +493,19 @@
     "manage": "Term and renewal",
     "upgradeHint": "More lessons and conversations with the teachers",
     "unlimited": "Study without limits",
-    "more": "More conversations on a paid plan"
+    "more": "More conversations on a paid plan",
+    "promo": {
+      "have": "I have a promo code",
+      "title": "Promo code",
+      "apply": "Apply",
+      "applied": "Promo code {{code}}: {{percent}}% off",
+      "free": "Switch on for free",
+      "unknown": "There is no such promo code. Check for a typo.",
+      "expired": "This promo code has expired.",
+      "used_up": "This promo code has been used the maximum number of times.",
+      "other_plan": "This promo code is for another plan or term. Try switching the payment term.",
+      "already_used": "You have already used this promo code."
+    }
   },
   "billing": {
     "checkingTitle": "Checking the payment…",

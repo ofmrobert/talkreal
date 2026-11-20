@@ -57,6 +57,13 @@
       "when": 1795141355355,
       "tag": "0007_slim_rawhide_kid",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1795143113471,
+      "tag": "0008_ambitious_talon",
+      "breakpoints": true
     }
   ]
 }

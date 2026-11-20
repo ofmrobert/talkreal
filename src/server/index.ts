@@ -4,6 +4,7 @@ import { serveStatic } from '@hono/node-server/serve-static'
 import { dbStatus, safeConnectionString } from './db/client'
 import { startTelegramBot } from './auth/telegram'
 import { env } from './env'
+import { adminRoutes } from './routes/admin'
 import { aiRoutes } from './routes/ai'
 import { authRoutes } from './routes/auth'
 import { billingRoutes } from './routes/billing'
@@ -14,6 +15,7 @@ import { placementRoutes } from './routes/placement'
 import { reminderRoutes } from './routes/reminders'
 import { reviewRoutes } from './routes/review'
 import { testRoutes } from './routes/tests'
+import { trackRoutes } from './routes/track'
 import { startReminders } from './reminders/scheduler'
 import { voiceRoutes } from './routes/voice'
 import { attachVoiceSocket } from './voice/socket'
@@ -72,6 +74,8 @@ app.route('/api/placement', placementRoutes)
 app.route('/api/diag', diagRoutes)
 app.route('/api/voice', voiceRoutes)
 app.route('/api/billing', billingRoutes)
+app.route('/api/admin', adminRoutes)
+app.route('/api/track', trackRoutes)
 app.route('/api/reminders', reminderRoutes)
 app.route('/api', reviewRoutes)
 app.route('/api', aiRoutes)

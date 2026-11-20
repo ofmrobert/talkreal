@@ -12,7 +12,8 @@
           "Адрес электронной почты — если вы входите по коду из письма.",
           "Идентификатор и имя в Telegram — если вы входите через Telegram или подключаете напоминания в Telegram.",
           "Данные об обучении: уровень английского, пройденные уроки, результаты, очки опыта, серия дней, время разговоров с ИИ-преподавателями.",
-          "Технические данные: язык приложения, часовой пояс, адрес для отправки уведомлений на ваше устройство (если вы их включили)."
+          "Технические данные: язык приложения, часовой пояс, адрес для отправки уведомлений на ваше устройство (если вы их включили).",
+          "Статистика посещений: какие экраны приложения открывались, с какого сайта или по какой рекламной ссылке вы пришли, тип устройства (телефон или компьютер). Она привязана к случайному номеру, который хранится в вашем браузере; IP-адрес не сохраняется."
         ]
       },
       {
@@ -77,7 +78,8 @@
           "Your email address, if you log in with an emailed code.",
           "Your Telegram ID and first name, if you log in with Telegram or connect Telegram reminders.",
           "Learning data: your English level, completed lessons, results, XP, streak, and time spent talking to AI teachers.",
-          "Technical data: app language, timezone, and the address used to send notifications to your device (if you switched them on)."
+          "Technical data: app language, timezone, and the address used to send notifications to your device (if you switched them on).",
+          "Visit statistics: which screens of the app were opened, which site or advertising link you came from, and the type of device (phone or computer). They are tied to a random number kept in your browser; your IP address is not stored."
         ]
       },
       {

@@ -3,6 +3,7 @@ import { Hono } from 'hono'
 import { renewSession, requireUser, type AuthEnv } from '../auth/sessions'
 import { planOf } from '../billing/plans'
 import { db } from '../db/client'
+import { env } from '../env'
 import { users } from '../db/schema'
 import { getPii } from '../pii'
 import { localDay, safeTimezone, streakNow } from '../progress/streak'
@@ -23,6 +24,8 @@ meRoutes.get('/', requireUser, async (c) => {
     email: pii.email,
     displayName: pii.displayName,
     level: user.level,
+    /** True for the owners listed in ADMIN_EMAILS: the app then shows the way to the admin panel. */
+    isAdmin: pii.email !== null && env.adminEmails.includes(pii.email.toLowerCase()),
     plan: planOf(user),
     /** When the paid plan runs out; null on the free plan. */
     planUntil: planOf(user) === 'free' ? null : user.planUntil,

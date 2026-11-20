@@ -2,7 +2,7 @@
  * The ONLY module allowed to touch the user_pii table (152-FZ separation).
  * If personal data must later live on separate storage, only this file changes.
  */
-import { eq } from 'drizzle-orm'
+import { eq, ilike, inArray, or } from 'drizzle-orm'
 import { db } from '../db/client'
 import { userPii, users } from '../db/schema'
 
@@ -89,4 +89,24 @@ export async function getPii(userId: string) {
     .where(eq(userPii.userId, userId))
     .limit(1)
   return rows[0] ?? { email: null, displayName: null }
+}
+
+/** For the admin panel: email, name and whether Telegram is connected, for a list of students. */
+export async function getPiiFor(userIds: string[]) {
+  const found = new Map<string, { email: string | null; displayName: string | null; telegram: boolean }>()
+  if (userIds.length === 0) return found
+  const rows = await db.select().from(userPii).where(inArray(userPii.userId, userIds))
+  for (const row of rows) found.set(row.userId, { email: row.email, displayName: row.displayName, telegram: row.telegramId !== null })
+  return found
+}
+
+/** For the admin panel: the students whose email or name contains the text. */
+export async function searchUserIds(text: string, limit = 500): Promise<string[]> {
+  const pattern = `%${text.replace(/[%_\\]/g, '\\$&')}%`
+  const rows = await db
+    .select({ userId: userPii.userId })
+    .from(userPii)
+    .where(or(ilike(userPii.email, pattern), ilike(userPii.displayName, pattern)))
+    .limit(limit)
+  return rows.map((row) => row.userId)
 }

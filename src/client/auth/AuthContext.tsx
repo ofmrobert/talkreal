@@ -8,6 +8,8 @@ export interface User {
   displayName: string | null
   level: string | null
   plan: string
+  /** True for the owner: the profile then shows the way to the admin panel. */
+  isAdmin?: boolean
   /** When the paid plan runs out (ISO date); null on the free plan. */
   planUntil?: string | null
   xp: number

@@ -224,11 +224,71 @@ export const payments = pgTable(
     plan: text('plan').notNull(),
     /** 'month' | 'year' */
     period: text('period').notNull(),
+    /** What was actually charged, after any promo code. */
     amountRub: integer('amount_rub').notNull(),
+    /** The promo code used, and the price before it was applied. */
+    promoCode: text('promo_code'),
+    listRub: integer('list_rub'),
     /** 'pending' | 'paid' | 'canceled' */
     status: text('status').notNull().default('pending'),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
     paidAt: timestamptz('paid_at'),
   },
   (t) => [index('payments_user_idx').on(t.userId, t.createdAt)],
+)
+
+/** Discount codes for paid plans, created in the admin panel. */
+export const promoCodes = pgTable('promo_codes', {
+  /** Always upper case, e.g. "ANNA20". */
+  code: text('code').primaryKey(),
+  /** 1–100. A code of 100 gives the plan for free. */
+  percentOff: integer('percent_off').notNull(),
+  /** Limits the code to one plan ('pro' | 'max') or one term ('month' | 'year'). Empty = any. */
+  plan: text('plan'),
+  period: text('period'),
+  /** How many payments may use the code in total. Empty = no limit. */
+  maxUses: integer('max_uses'),
+  usedCount: integer('used_count').notNull().default(0),
+  validUntil: timestamptz('valid_until'),
+  active: boolean('active').notNull().default(true),
+  /** For the owner only: whose code it is, which campaign. */
+  note: text('note'),
+  createdAt: timestamptz('created_at').notNull().defaultNow(),
+})
+
+/**
+ * One row per screen opened, for the statistics in the admin panel. No IP address is stored.
+ * The visitor id is a random number kept in the browser, so visits before and after login can be joined.
+ */
+export const pageViews = pgTable(
+  'page_views',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    visitorId: text('visitor_id').notNull(),
+    userId: uuid('user_id').references(() => users.id, { onDelete: 'set null' }),
+    path: text('path').notNull(),
+    /** Where the visitor first came from: the other site's address, and the campaign tags of the link. */
+    referrer: text('referrer'),
+    utmSource: text('utm_source'),
+    utmMedium: text('utm_medium'),
+    utmCampaign: text('utm_campaign'),
+    /** 'mobile' | 'desktop' */
+    device: text('device'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('page_views_time_idx').on(t.createdAt), index('page_views_visitor_idx').on(t.visitorId), index('page_views_user_idx').on(t.userId)],
+)
+
+/** What was done in the admin panel, by whom and when. */
+export const adminActions = pgTable(
+  'admin_actions',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    adminId: uuid('admin_id').notNull(),
+    action: text('action').notNull(),
+    target: text('target'),
+    details: jsonb('details'),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [index('admin_actions_time_idx').on(t.createdAt)],
 )

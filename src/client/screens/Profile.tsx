@@ -59,6 +59,12 @@ export default function Profile() {
         </span>
       </Link>
 
+      {user?.isAdmin && (
+        <Link to="/admin" className="flex min-h-12 items-center justify-center rounded-2xl bg-ink px-4 text-base font-extrabold text-white active:translate-y-0.5">
+          Admin panel
+        </Link>
+      )}
+
       <Achievements />
 
       <Reminders />

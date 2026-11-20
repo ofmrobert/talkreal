@@ -5,7 +5,7 @@ import { PLANS, PRICES, yearlyPerMonth, yearlySaving, type PaidPlanId, type Peri
 import { useAuth } from '../auth/AuthContext'
 import { CheckIcon } from '../components/icons'
 import SellerDetails from '../components/SellerDetails'
-import { api } from '../lib/api'
+import { api, ApiError } from '../lib/api'
 
 const ORDER: PlanId[] = ['pro', 'max', 'free']
 const LOOK: Record<PlanId, { card: string; button: string; tick: string }> = {
@@ -33,6 +33,11 @@ export default function Plans() {
   const [canPay, setCanPay] = useState(false)
   const [busy, setBusy] = useState<PaidPlanId | null>(null)
   const [error, setError] = useState(false)
+  /** The promo code the student typed, and the price it gives for each plan it works with. */
+  const [promoOpen, setPromoOpen] = useState(false)
+  const [promoInput, setPromoInput] = useState('')
+  const [promo, setPromo] = useState<{ code: string; percentOff: number; prices: Partial<Record<PaidPlanId, number>> } | null>(null)
+  const [promoError, setPromoError] = useState<string | null>(null)
 
   useEffect(() => {
     api<{ canPay: boolean }>('/billing/plans')
@@ -40,15 +45,47 @@ export default function Plans() {
       .catch(() => setCanPay(false))
   }, [])
 
+  /** Asks the server what the code does for each plan at the chosen term. */
+  async function applyPromo(code: string, term: Period) {
+    if (!user) return navigate('/login')
+    setPromoError(null)
+    type Answer = { ok: boolean; code?: string; percentOff?: number; priceRub?: number; problem?: string }
+    try {
+      const [pro, max] = await Promise.all((['pro', 'max'] as const).map((plan) => api<Answer>('/billing/promo', { code, plan, period: term })))
+      const good = [pro, max].find((answer) => answer.ok)
+      if (!good) {
+        setPromo(null)
+        setPromoError(t(`plans.promo.${pro.problem ?? 'unknown'}`))
+        return
+      }
+      setPromo({
+        code: good.code!,
+        percentOff: good.percentOff!,
+        prices: { ...(pro.ok ? { pro: pro.priceRub } : {}), ...(max.ok ? { max: max.priceRub } : {}) },
+      })
+    } catch {
+      setPromoError(t('plans.error'))
+    }
+  }
+
+  function changePeriod(term: Period) {
+    setPeriod(term)
+    // The code may be for one term only, and the prices differ: ask again.
+    if (promo) void applyPromo(promo.code, term)
+  }
+
   async function buy(plan: PaidPlanId) {
     if (!user) return navigate('/login')
     setBusy(plan)
     setError(false)
     try {
-      const { url } = await api<{ url: string }>('/billing/checkout', { plan, period })
+      const { url } = await api<{ url: string }>('/billing/checkout', { plan, period, ...(promo?.prices[plan] !== undefined ? { promo: promo.code } : {}) })
       window.location.href = url
-    } catch {
-      setError(true)
+    } catch (err) {
+      if (err instanceof ApiError && err.code === 'promo') {
+        setPromo(null)
+        setPromoError(t('plans.promo.unknown'))
+      } else setError(true)
       setBusy(null)
     }
   }
@@ -98,7 +135,7 @@ export default function Plans() {
               type="button"
               role="radio"
               aria-checked={period === p}
-              onClick={() => setPeriod(p)}
+              onClick={() => changePeriod(p)}
               className={`min-h-12 flex-1 rounded-xl text-base font-extrabold transition-colors ${period === p ? 'bg-ink text-white' : 'text-ink/60'}`}
             >
               {t(`plans.${p}`)}
@@ -116,6 +153,9 @@ export default function Plans() {
         {ORDER.map((plan) => {
           const look = LOOK[plan]
           const paid = plan !== 'free'
+          const list = paid ? PRICES[plan][period] : 0
+          const price = paid ? (promo?.prices[plan] ?? list) : 0
+          const discountedPlan = paid && price !== list
           return (
             <section key={plan} className={`flex flex-col gap-3 rounded-3xl p-5 ${look.card}`}>
               <div className="flex items-start justify-between gap-3">
@@ -129,11 +169,13 @@ export default function Plans() {
               {paid ? (
                 <div>
                   <p className="text-3xl font-extrabold">
-                    {rub(period === 'year' ? yearlyPerMonth(plan) : PRICES[plan].month)}
+                    {discountedPlan && <span className="mr-2 text-xl font-bold line-through opacity-50">{rub(period === 'year' ? yearlyPerMonth(plan) : list)}</span>}
+                    {rub(period === 'year' ? (discountedPlan ? Math.round(price / 12) : yearlyPerMonth(plan)) : price)}
                     <span className="text-base font-bold opacity-60"> / {t('plans.perMonth')}</span>
                   </p>
                   <p className="text-sm font-semibold opacity-65">
-                    {period === 'year' ? t('plans.billedYear', { price: rub(PRICES[plan].year) }) : t('plans.billedMonth')}
+                    {period === 'year' ? t('plans.billedYear', { price: rub(price) }) : t('plans.billedMonth')}
+                    {discountedPlan && ` · ${t('plans.promo.applied', { code: promo!.code, percent: promo!.percentOff })}`}
                   </p>
                 </div>
               ) : (
@@ -157,7 +199,7 @@ export default function Plans() {
                     onClick={() => buy(plan)}
                     className={`min-h-14 w-full rounded-2xl text-lg font-extrabold active:translate-y-1 disabled:opacity-60 ${look.button}`}
                   >
-                    {busy === plan ? t('plans.opening') : t('plans.buy', { price: rub(PRICES[plan][period]) })}
+                    {busy === plan ? t('plans.opening') : price === 0 ? t('plans.promo.free') : t('plans.buy', { price: rub(price) })}
                   </button>
                 ) : (
                   <p className="rounded-2xl bg-ink/10 p-3 text-center text-base font-bold opacity-80">{t('plans.soon')}</p>
@@ -165,6 +207,52 @@ export default function Plans() {
             </section>
           )
         })}
+
+        {canPay && (
+          <section className="rounded-3xl bg-white p-4">
+            {promoOpen ? (
+              <form
+                className="flex flex-col gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  if (promoInput.trim()) void applyPromo(promoInput.trim(), period)
+                }}
+              >
+                <label htmlFor="promo" className="text-base font-extrabold">
+                  {t('plans.promo.title')}
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    id="promo"
+                    value={promoInput}
+                    onChange={(e) => setPromoInput(e.target.value.toUpperCase())}
+                    autoCapitalize="characters"
+                    autoComplete="off"
+                    maxLength={24}
+                    className="min-h-12 min-w-0 flex-1 select-text rounded-2xl border-2 border-ink/10 bg-white px-4 text-lg font-bold uppercase outline-none focus:border-coral"
+                  />
+                  <button type="submit" className="min-h-12 shrink-0 rounded-2xl bg-ink px-4 text-base font-extrabold text-white active:translate-y-0.5">
+                    {t('plans.promo.apply')}
+                  </button>
+                </div>
+                {promoError && (
+                  <p role="alert" className="text-sm font-bold text-coral-dark">
+                    {promoError}
+                  </p>
+                )}
+                {promo && (
+                  <p role="status" className="text-sm font-bold text-[#0E6B55]">
+                    {t('plans.promo.applied', { code: promo.code, percent: promo.percentOff })}
+                  </p>
+                )}
+              </form>
+            ) : (
+              <button type="button" onClick={() => setPromoOpen(true)} className="min-h-11 text-base font-extrabold text-coral-dark underline">
+                {t('plans.promo.have')}
+              </button>
+            )}
+          </section>
+        )}
 
         <section className="rounded-3xl bg-white p-4">
           <h2 className="text-lg font-extrabold">{t('plans.howTitle')}</h2>

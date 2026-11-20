@@ -1,11 +1,12 @@
-import { and, desc, eq } from 'drizzle-orm'
+import { and, desc, eq, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
 import { isPaidPlan, isPeriod, PERIOD_DAYS, PLANS, PRICES, type PaidPlanId, type Period } from '../../shared/plans'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { planOf } from '../billing/plans'
+import { checkPromo } from '../billing/promo'
 import { billingMode, createPayment, fetchPayment, type PaymentStatus } from '../billing/yookassa'
 import { db } from '../db/client'
-import { payments, users } from '../db/schema'
+import { payments, promoCodes, users } from '../db/schema'
 import { env } from '../env'
 import { getPii } from '../pii'
 
@@ -50,6 +51,9 @@ async function applyPaid(paymentId: string): Promise<void> {
       .where(and(eq(payments.id, paymentId), eq(payments.status, 'pending')))
       .returning()
     if (!payment || !isPaidPlan(payment.plan) || !isPeriod(payment.period)) return
+    if (payment.promoCode) {
+      await tx.update(promoCodes).set({ usedCount: sql`${promoCodes.usedCount} + 1` }).where(eq(promoCodes.code, payment.promoCode))
+    }
 
     const [user] = await tx.select().from(users).where(eq(users.id, payment.userId)).limit(1)
     if (!user) return
@@ -66,7 +70,7 @@ async function applyPaid(paymentId: string): Promise<void> {
 /** Finds out from the payment service what happened to a payment, and acts on it. */
 async function settle(payment: typeof payments.$inferSelect): Promise<PaymentStatus> {
   if (payment.status !== 'pending') return payment.status as PaymentStatus
-  if (payment.provider === 'mock' || !payment.providerPaymentId) return 'pending'
+  if (payment.provider !== 'yookassa' || !payment.providerPaymentId) return 'pending'
 
   const remote = await fetchPayment(payment.providerPaymentId)
   if (remote.status === 'paid') {
@@ -92,8 +96,24 @@ billingRoutes.post('/checkout', requireUser, async (c) => {
   const userId = c.get('userId')
   const plan: PaidPlanId = body.plan
   const period: Period = body.period
-  const amountRub = PRICES[plan][period]
-  const [payment] = await db.insert(payments).values({ userId, provider: mode, plan, period, amountRub }).returning()
+  const listRub = PRICES[plan][period]
+  let amountRub = listRub
+  let promoCode: string | null = null
+  if (body.promo) {
+    const promo = await checkPromo(body.promo, plan, period, userId)
+    if (!promo.ok) return c.json({ error: 'promo', problem: promo.problem }, 400)
+    amountRub = promo.priceRub
+    promoCode = promo.code
+  }
+
+  // A code that makes the plan free needs no payment page: the plan is simply switched on.
+  if (amountRub === 0) {
+    const [gift] = await db.insert(payments).values({ userId, provider: 'promo', plan, period, amountRub, promoCode, listRub }).returning()
+    await applyPaid(gift.id)
+    return c.json({ url: `/billing/return?payment=${gift.id}`, paymentId: gift.id })
+  }
+
+  const [payment] = await db.insert(payments).values({ userId, provider: mode, plan, period, amountRub, promoCode, listRub }).returning()
 
   // In production the address is fixed; elsewhere it is wherever the app was opened from.
   const origin = env.isProduction ? env.appUrl : new URL(c.req.url).origin
@@ -113,6 +133,14 @@ billingRoutes.post('/checkout', requireUser, async (c) => {
     await db.update(payments).set({ status: 'canceled' }).where(eq(payments.id, payment.id))
     return c.json({ error: 'provider_error' }, 502)
   }
+})
+
+/** Tells the student what a promo code does before they pay. */
+billingRoutes.post('/promo', requireUser, async (c) => {
+  const body = await c.req.json().catch(() => ({}))
+  if (!isPaidPlan(body.plan) || !isPeriod(body.period)) return c.json({ error: 'invalid' }, 400)
+  const promo = await checkPromo(body.code, body.plan, body.period, c.get('userId'))
+  return promo.ok ? c.json(promo) : c.json({ ok: false, problem: promo.problem })
 })
 
 /** The state of one payment. The app asks this when the student comes back from the payment page. */

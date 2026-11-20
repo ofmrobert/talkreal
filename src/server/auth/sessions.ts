@@ -71,6 +71,9 @@ async function currentUserId(c: Context): Promise<string | null> {
   return row?.userId ?? null
 }
 
+/** The logged-in student's id, or null for a visitor. For routes that work with or without an account. */
+export const optionalUserId = (c: Context) => currentUserId(c)
+
 /** For WebSocket connections, which arrive outside the normal request flow. */
 export async function userIdFromCookieHeader(header: string | undefined): Promise<string | null> {
   const token = header

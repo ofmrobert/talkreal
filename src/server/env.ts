@@ -41,6 +41,15 @@ export const env = {
     voiceProvider: process.env.VOICE_PROVIDER ?? 'gemini',
   },
 
+  /**
+   * Emails of the people who may open the admin panel (/admin), separated by commas.
+   * Empty = nobody can. They log in the normal way, with a code sent to that email.
+   */
+  adminEmails: (process.env.ADMIN_EMAILS ?? '')
+    .split(',')
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean),
+
   billing: {
     /** From the ЮKassa dashboard. Both empty = payments are switched off and plans cannot be bought. */
     shopId: process.env.YOOKASSA_SHOP_ID ?? '',

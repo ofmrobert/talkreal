@@ -1,4 +1,5 @@
-import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router'
+import { lazy, Suspense, useEffect } from 'react'
+import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation } from 'react-router'
 import { AuthProvider, useAuth } from './auth/AuthContext'
 import AppLayout from './components/AppLayout'
 import BillingReturn from './screens/BillingReturn'
@@ -18,6 +19,17 @@ import Plans from './screens/Plans'
 import Profile from './screens/Profile'
 import Talk from './screens/Talk'
 import { load } from './lib/storage'
+import { trackPage } from './lib/track'
+
+// The owner's panel is a separate download, so students never load it.
+const Admin = lazy(() => import('./admin/Admin'))
+
+/** Reports every screen that is opened, for the statistics in the admin panel. */
+function PageTracker() {
+  const { pathname } = useLocation()
+  useEffect(() => trackPage(pathname), [pathname])
+  return null
+}
 
 /** New visitors see the introduction first, then log in. */
 function RequireUser() {
@@ -44,7 +56,16 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <PageTracker />
         <Routes>
+          <Route
+            path="/admin/*"
+            element={
+              <Suspense fallback={null}>
+                <Admin />
+              </Suspense>
+            }
+          />
           <Route path="/welcome" element={<Onboarding />} />
           <Route path="/login" element={<Login />} />
           <Route path="/privacy" element={<Privacy />} />
