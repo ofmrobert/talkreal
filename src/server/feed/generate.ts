@@ -123,7 +123,7 @@ export async function fillFeed(): Promise<{ written: number; failed: number }> {
       const [image] = post.picture ? await db.insert(feedImages).values(post.picture).returning({ id: feedImages.id }) : []
       // Today's post goes out at once if its hour has already passed.
       const at = publishTime(day)
-      await db.insert(feedPosts).values({ kind, body: post.body, imageId: image?.id ?? null, publishAt: at.getTime() < Date.now() ? new Date() : at, writtenBy: post.by })
+      await db.insert(feedPosts).values({ kind, body: post.body, imageId: image?.id ?? null, publishAt: at.getTime() < Date.now() ? new Date(Date.now() - 60_000) : at, writtenBy: post.by })
       recent.unshift(post.body.title.en)
       written++
     } catch (err) {
@@ -133,6 +133,15 @@ export async function fillFeed(): Promise<{ written: number; failed: number }> {
   }
   if (written > 0) console.log(`Feed: wrote ${written} post(s)`)
   return { written, failed }
+}
+
+/**
+ * Throws away the posts that have not gone out yet and writes them again: for when the writer
+ * has changed (Claude now works) or the waiting posts are not good enough.
+ */
+export async function rewriteWaiting(): Promise<{ removed: number; written: number; failed: number }> {
+  const removed = await db.delete(feedPosts).where(gte(feedPosts.publishAt, new Date())).returning({ id: feedPosts.id })
+  return { removed: removed.length, ...(await fillFeed()) }
 }
 
 /** Keeps the feed a week ahead: shortly after the server starts, then every few hours. */

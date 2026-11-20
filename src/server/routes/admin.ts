@@ -11,8 +11,8 @@ import { planOf } from '../billing/plans'
 import { isValidCode, normalizeCode } from '../billing/promo'
 import { billingMode } from '../billing/yookassa'
 import { lessonsFor } from '../content/lessons'
-import { fillFeed } from '../feed/generate'
-import { writerName } from '../feed/writer'
+import { fillFeed, rewriteWaiting } from '../feed/generate'
+import { claudeProblem, writerName } from '../feed/writer'
 import { examId, unitsFor } from '../content/units'
 import { db, dbStatus } from '../db/client'
 import {
@@ -406,6 +406,7 @@ adminRoutes.get('/feed', async (c) => {
   `)
   return c.json({
     writer: writerName(),
+    claudeProblem,
     counts,
     posts,
     comments: comments.map((m) => ({ ...m, who: pii.get(m.userId)?.email ?? pii.get(m.userId)?.displayName ?? m.userId.slice(0, 8) })),
@@ -416,6 +417,13 @@ adminRoutes.get('/feed', async (c) => {
 adminRoutes.post('/feed/fill', async (c) => {
   const result = await fillFeed()
   await log(c, 'feed_filled', null, result)
+  return c.json(result)
+})
+
+/** Deletes the posts that have not gone out yet and writes them again. */
+adminRoutes.post('/feed/rewrite', async (c) => {
+  const result = await rewriteWaiting()
+  await log(c, 'feed_rewritten', null, result)
   return c.json(result)
 })
 

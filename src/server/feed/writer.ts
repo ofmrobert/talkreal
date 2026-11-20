@@ -8,8 +8,26 @@ import { env } from '../env'
  * not serve every country directly: set ANTHROPIC_BASE_URL to a relay if needed), Gemini is tried.
  */
 
-// The key and, optionally, ANTHROPIC_BASE_URL are read from the environment by the SDK itself.
-const claude = env.feed.anthropicKey ? new Anthropic({ maxRetries: 1, timeout: 60_000 }) : null
+/**
+ * Where Claude is reached. Anthropic does not serve Russia directly, so if the app already talks
+ * to Google through a relay, Claude goes through the same relay (its /anthropic address).
+ * ANTHROPIC_BASE_URL, if set, wins.
+ */
+function claudeAddress(): string | undefined {
+  if (process.env.ANTHROPIC_BASE_URL) return undefined // the SDK reads it itself
+  const google = env.ai.geminiWsBase.replace(/^ws/, 'http').replace(/[/]+$/, '')
+  return google.includes('googleapis.com') ? undefined : `${google}/anthropic`
+}
+
+const claude = env.feed.anthropicKey ? new Anthropic({ maxRetries: 1, timeout: 60_000, baseURL: claudeAddress() }) : null
+
+/** Why Claude last failed to write a post, for the admin panel. Cleared when it next succeeds. */
+export const claudeProblem: { at: Date | null; status: number | null; reason: string | null; viaRelay: boolean } = {
+  at: null,
+  status: null,
+  reason: null,
+  viaRelay: claudeAddress() !== undefined || Boolean(process.env.ANTHROPIC_BASE_URL),
+}
 
 export function writerName(): 'claude' | 'gemini' | 'mock' | null {
   if (env.ai.voiceProvider === 'mock') return 'mock'
@@ -41,10 +59,18 @@ export async function write<T>(system: string, prompt: string, mock: () => T): P
   if (name === 'mock') return { value: mock(), by: 'mock' }
   if (name === 'claude') {
     try {
-      return { value: await askClaude<T>(system, prompt), by: 'claude' }
+      const value = await askClaude<T>(system, prompt)
+      claudeProblem.at = null
+      claudeProblem.status = null
+      claudeProblem.reason = null
+      return { value, by: 'claude' }
     } catch (err) {
       const reason = err instanceof Anthropic.APIError ? `${err.status ?? 'no answer'} ${err.message}` : err instanceof Error ? err.message : String(err)
       console.error('Claude could not write the post:', reason.slice(0, 300))
+      claudeProblem.at = new Date()
+      claudeProblem.status = err instanceof Anthropic.APIError ? (err.status ?? null) : null
+      // Shown to the owner only; cut short, and it never contains the key.
+      claudeProblem.reason = reason.slice(0, 240)
       if (!textAiAvailable()) throw err
     }
   }
