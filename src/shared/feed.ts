@@ -31,7 +31,14 @@ export interface FeedFace {
 
 export interface FeedPost {
   id: string
-  kind: PostKind
+  /** One of the Talkreal account's kinds, or 'student' for a post a student wrote. */
+  kind: PostKind | 'student'
+  /** Who wrote it. Null for the Talkreal account. */
+  author: FeedFace | null
+  /** The student's own post. */
+  mine: boolean
+  /** A student's post shown to someone on the free plan: who wrote it, but not the words. */
+  locked: boolean
   body: PostBody
   publishedAt: string
   hasImage: boolean
@@ -57,6 +64,9 @@ export interface FeedComment {
 /** How many comments a free student may write per week: a taste of the community. */
 export const FREE_COMMENTS_PER_WEEK = 1
 export const COMMENT_MAX_LENGTH = 300
+/** A student's own post: its length, and how many a day. Writing posts is part of the paid plans. */
+export const POST_MAX_LENGTH = 500
+export const POSTS_PER_DAY = 3
 /** XP for answering a poll. */
 export const POLL_XP = 2
 /** A comment reported by this many students is hidden until the owner looks at it. */

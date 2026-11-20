@@ -15,6 +15,10 @@ interface AdminPost {
   likes: number
   votes: number
   comments: number
+  /** For a student's post: who wrote it, and how many reported it. */
+  authorId: string | null
+  who: string | null
+  reports: number
 }
 
 interface AdminComment {
@@ -113,7 +117,21 @@ export function FeedPage() {
             ))}
           </p>
         )}
-        <p className="mt-1 text-xs text-slate-400">written by {post.writtenBy}</p>
+        {post.authorId ? (
+          <p className="mt-1 text-xs text-slate-500">
+            by{' '}
+            <Link to={`/admin/users/${post.authorId}`} className="font-semibold text-violet-700 hover:underline">
+              {post.who}
+            </Link>
+            {post.reports > 0 && (
+              <span className="ml-2">
+                <Pill tone="amber">{post.reports} report(s)</Pill>
+              </span>
+            )}
+          </p>
+        ) : (
+          <p className="mt-1 text-xs text-slate-400">written by {post.writtenBy}</p>
+        )}
       </Td>
       {!upcoming && (
         <Td right className="whitespace-nowrap">
@@ -124,9 +142,11 @@ export function FeedPage() {
       <Td>{post.status === 'hidden' ? <Pill tone="amber">hidden</Pill> : upcoming ? <Pill>waiting</Pill> : <Pill tone="green">live</Pill>}</Td>
       <Td right>
         <div className="flex flex-wrap justify-end gap-1.5">
-          <button type="button" className={`${ghostButtonClass} !h-8 !px-2`} onClick={() => startEdit(post)}>
-            Edit
-          </button>
+          {!post.authorId && (
+            <button type="button" className={`${ghostButtonClass} !h-8 !px-2`} onClick={() => startEdit(post)}>
+              Edit
+            </button>
+          )}
           {upcoming && (
             <button type="button" className={`${ghostButtonClass} !h-8 !px-2`} disabled={busy !== null} onClick={() => act(`posts/${post.id}`, { action: 'publish_now' }, post.id)}>
               Publish now
@@ -173,6 +193,7 @@ export function FeedPage() {
         <Stat label="Waiting" value={num(waiting.length)} sub="Posts for the coming days" />
         <Stat label="Comments" value={num(data.counts.comments)} sub={`${num(data.counts.writers_7d)} students wrote this week`} />
         <Stat label="Reported" value={num(data.counts.reported)} sub={`${num(data.counts.hidden)} hidden`} />
+        <Stat label="Student posts" value={num(data.counts.student_posts)} sub={`${num(data.counts.reported_posts)} reported`} />
         <Stat label="Likes" value={num(data.counts.likes)} />
         <Stat label="Quiz answers" value={num(data.counts.votes)} />
       </Stats>

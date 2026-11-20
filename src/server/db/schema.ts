@@ -376,10 +376,14 @@ export const feedPosts = pgTable(
     kind: text('kind').notNull(),
     body: jsonb('body').$type<PostBody>().notNull(),
     imageId: uuid('image_id').references(() => feedImages.id, { onDelete: 'set null' }),
+    /** The student who wrote it. Null for the Talkreal account's posts. */
+    authorId: uuid('author_id').references(() => users.id, { onDelete: 'cascade' }),
+    /** How many students reported it (students' posts only). */
+    reports: integer('reports').notNull().default(0),
     /** 'active' | 'hidden' */
     status: text('status').notNull().default('active'),
     publishAt: timestamptz('publish_at').notNull(),
-    /** 'gemini' | 'mock' | 'owner' */
+    /** 'gemini' | 'mock' | 'owner' | 'student' */
     writtenBy: text('written_by').notNull().default('owner'),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
@@ -432,6 +436,20 @@ export const feedComments = pgTable(
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [index('feed_comments_post_idx').on(t.postId, t.createdAt), index('feed_comments_user_idx').on(t.userId, t.createdAt)],
+)
+
+/** Who reported which student post, so one student counts once. */
+export const feedPostReports = pgTable(
+  'feed_post_reports',
+  {
+    postId: uuid('post_id')
+      .notNull()
+      .references(() => feedPosts.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+  },
+  (t) => [primaryKey({ columns: [t.postId, t.userId] })],
 )
 
 /** Who reported which comment, so one student counts once. */

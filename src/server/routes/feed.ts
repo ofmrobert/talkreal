@@ -1,11 +1,11 @@
-import { and, desc, eq, gte, inArray, lt, lte, sql } from 'drizzle-orm'
+import { and, desc, eq, gte, inArray, isNotNull, isNull, lt, lte, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
-import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, REPORTS_TO_HIDE, type FeedComment, type FeedFace, type FeedPost, type PostKind } from '../../shared/feed'
+import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type FeedComment, type FeedFace, type FeedPost, type PostKind } from '../../shared/feed'
 import { askJson, clip, textAiAvailable } from '../ai/text'
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { planOf } from '../billing/plans'
 import { db } from '../db/client'
-import { feedComments, feedImages, feedLikes, feedPosts, feedReports, feedVotes, users } from '../db/schema'
+import { feedComments, feedImages, feedLikes, feedPostReports, feedPosts, feedReports, feedVotes, users } from '../db/schema'
 import { publicFaces } from '../pii'
 import { recordActivity } from '../progress/activity'
 import { localDay, safeTimezone } from '../progress/streak'
@@ -48,13 +48,37 @@ async function freeCommentsLeft(userId: string, paid: boolean): Promise<number |
   return Math.max(0, FREE_COMMENTS_PER_WEEK - (row?.n ?? 0))
 }
 
-/** The feed, newest first. `before` continues from an earlier page. */
+/** How many posts of their own the student may still write today. */
+async function postsLeftToday(userId: string): Promise<number> {
+  const [row] = await db
+    .select({ n: sql<number>`count(*)::int` })
+    .from(feedPosts)
+    .where(and(eq(feedPosts.authorId, userId), gte(feedPosts.createdAt, new Date(Date.now() - 24 * 60 * 60 * 1000))))
+  return Math.max(0, POSTS_PER_DAY - (row?.n ?? 0))
+}
+
+/** One post as the viewer may see it. A free student gets a student's post without its words. */
+function shape(post: typeof feedPosts.$inferSelect, viewer: string, paid: boolean, faces: Map<string, FeedFace>) {
+  const mine = post.authorId === viewer
+  const locked = post.authorId !== null && !paid && !mine
+  return {
+    kind: (post.authorId ? 'student' : post.kind) as PostKind | 'student',
+    author: post.authorId ? (faces.get(post.authorId) ?? null) : null,
+    mine,
+    locked,
+    body: locked ? { ...post.body, text: { ru: '', en: '' } } : post.body,
+  }
+}
+
+/** The feed, newest first. `before` continues from an earlier page; `from` narrows it to the Talkreal account or to students. */
 feedRoutes.get('/', async (c) => {
   const user = await load(c.get('userId'))
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   const before = c.req.query('before')
   const cursor = before && !Number.isNaN(Date.parse(before)) ? lt(feedPosts.publishAt, new Date(before)) : undefined
-  const posts = await db.select().from(feedPosts).where(and(visible, cursor)).orderBy(desc(feedPosts.publishAt)).limit(PAGE)
+  const from = c.req.query('from')
+  const whose = from === 'official' ? isNull(feedPosts.authorId) : from === 'students' ? isNotNull(feedPosts.authorId) : undefined
+  const posts = await db.select().from(feedPosts).where(and(visible, cursor, whose)).orderBy(desc(feedPosts.publishAt)).limit(PAGE)
   const ids = posts.map((p) => p.id)
   const paid = planOf(user) !== 'free'
 
@@ -70,16 +94,21 @@ feedRoutes.get('/', async (c) => {
       }
     : empty
 
-  const faces = await facesFor([...new Set(data.recent.map((r) => r.userId))], user.id)
+  const authors = posts.map((p) => p.authorId).filter((id): id is string => id !== null)
+  const faces = await facesFor([...new Set([...data.recent.map((r) => r.userId), ...authors])], user.id)
   const out: FeedPost[] = posts.map((post) => {
+    const seen = shape(post, user.id, paid, faces)
     const myVote = data.myVotes.find((v) => v.id === post.id)?.choice ?? null
     const options = post.body.options?.length ?? 0
     const commenters = [...new Set(data.recent.filter((r) => r.id === post.id).map((r) => r.userId))].slice(0, 3)
     // The right answer and the explanation stay on the server until the student has answered.
-    const body = myVote === null && post.kind === 'poll' ? { ...post.body, answer: undefined, explanation: undefined } : post.body
+    const body = myVote === null && post.kind === 'poll' ? { ...post.body, answer: undefined, explanation: undefined } : seen.body
     return {
       id: post.id,
-      kind: post.kind as PostKind,
+      kind: seen.kind,
+      author: seen.author,
+      mine: seen.mine,
+      locked: seen.locked,
       body,
       publishedAt: post.publishAt.toISOString(),
       hasImage: post.imageId !== null,
@@ -95,8 +124,9 @@ feedRoutes.get('/', async (c) => {
   return c.json({
     posts: out,
     more: posts.length === PAGE ? posts[posts.length - 1].publishAt.toISOString() : null,
-    /** Reading and writing comments is part of the paid plans. */
+    /** Reading and writing comments, and writing posts, are part of the paid plans. */
     canDiscuss: paid,
+    postsLeft: paid ? await postsLeftToday(user.id) : 0,
     freeCommentsLeft: await freeCommentsLeft(user.id, paid),
     /** People who commented in the last week: the size of the conversation a free student is missing. */
     activeThisWeek: (await db.select({ n: sql<number>`count(distinct ${feedComments.userId})::int` }).from(feedComments).where(and(eq(feedComments.status, 'visible'), gte(feedComments.createdAt, new Date(Date.now() - WEEK_MS)))))[0]?.n ?? 0,
@@ -119,8 +149,12 @@ feedRoutes.post('/:id/like', async (c) => {
   const id = c.req.param('id')
   const userId = c.get('userId')
   if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
-  const [post] = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.id, id), visible)).limit(1)
+  const [post] = await db.select({ id: feedPosts.id, authorId: feedPosts.authorId }).from(feedPosts).where(and(eq(feedPosts.id, id), visible)).limit(1)
   if (!post) return c.json({ error: 'not_found' }, 404)
+  if (post.authorId && post.authorId !== userId) {
+    const liker = await load(userId)
+    if (!liker || planOf(liker) === 'free') return c.json({ error: 'pro' }, 403)
+  }
   const removed = await db.delete(feedLikes).where(and(eq(feedLikes.postId, id), eq(feedLikes.userId, userId))).returning({ id: feedLikes.postId })
   if (removed.length === 0) await db.insert(feedLikes).values({ postId: id, userId }).onConflictDoNothing()
   const [{ n }] = await db.select({ n: sql<number>`count(*)::int` }).from(feedLikes).where(eq(feedLikes.postId, id))
@@ -183,11 +217,11 @@ interface Verdict {
  * Has the AI read a comment before it is posted: is it fit for a learning community, and is
  * its English right? Without an AI the comment is let through; reports and the admin panel remain.
  */
-async function review(text: string): Promise<{ ok: boolean; better: string | null }> {
+async function review(text: string, maxLength = COMMENT_MAX_LENGTH): Promise<{ ok: boolean; better: string | null }> {
   if (!textAiAvailable()) return { ok: true, better: null }
   try {
     const verdict = await askJson<Verdict>({
-      system: `You check one comment before it is posted in the feed of an English-learning app for adults. Comments are written by learners, usually in English, sometimes in Russian.
+      system: `You check one comment or short post before it is posted in the feed of an English-learning app for adults. Comments are written by learners, usually in English, sometimes in Russian.
 Return one JSON object: {"ok": true or false, "better": string or null}.
 - "ok" is false only if the comment contains insults, harassment, hate, sexual content, threats, spam or advertising, links, or personal contact details (phone numbers, emails, messenger names). Disagreement, jokes and mistakes are fine.
 - "better": if the comment is in English and has a real mistake in grammar, word choice or spelling, the same comment rewritten correctly, changing as little as possible. If it is already correct, is not in English, or "ok" is false, null. Ignore missing capital letters and final punctuation.`,
@@ -196,7 +230,7 @@ Return one JSON object: {"ok": true or false, "better": string or null}.
       timeoutMs: 12_000,
       mock: () => ({ ok: !/badword/i.test(text), better: /\bi am agree\b/i.test(text) ? text.replace(/\bi am agree\b/i, 'I agree') : null }),
     })
-    const better = clip(verdict.better, COMMENT_MAX_LENGTH)
+    const better = clip(verdict.better, maxLength)
     return { ok: verdict.ok !== false, better: better && better !== text ? better : null }
   } catch (err) {
     console.error('Comment check failed:', err instanceof Error ? err.message : err)
@@ -215,10 +249,12 @@ feedRoutes.post('/:id/comments', async (c) => {
   if (!user || !isUuid(id)) return c.json({ error: 'not_found' }, 404)
   const text = typeof body.text === 'string' ? body.text.replace(/\s+/g, ' ').trim().slice(0, COMMENT_MAX_LENGTH) : ''
   if (text.length < 2) return c.json({ error: 'invalid' }, 400)
-  const [post] = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.id, id), visible)).limit(1)
+  const [post] = await db.select({ id: feedPosts.id, authorId: feedPosts.authorId }).from(feedPosts).where(and(eq(feedPosts.id, id), visible)).limit(1)
   if (!post) return c.json({ error: 'not_found' }, 404)
 
   const paid = planOf(user) !== 'free'
+  // The free comment of the week is for the Talkreal account's posts; students' posts are the community itself.
+  if (!paid && post.authorId && post.authorId !== user.id) return c.json({ error: 'pro' }, 403)
   if ((await freeCommentsLeft(user.id, paid)) === 0) return c.json({ error: 'pro' }, 403)
   const [today] = await db
     .select({ n: sql<number>`count(*)::int` })
@@ -234,6 +270,55 @@ feedRoutes.post('/:id/comments', async (c) => {
   const faces = await facesFor([user.id], user.id)
   const comment: FeedComment = { id: row.id, text: row.text, createdAt: row.createdAt.toISOString(), face: faces.get(user.id)!, mine: true }
   return c.json({ comment, freeCommentsLeft: await freeCommentsLeft(user.id, paid) })
+})
+
+/**
+ * A student writes a post of their own. Like a comment, it is read by the AI first: unfit ones
+ * are refused, and a mistake in the English comes back as a suggestion unless `confirm` is sent.
+ */
+feedRoutes.post('/posts', async (c) => {
+  const user = await load(c.get('userId'))
+  const body = await c.req.json().catch(() => ({}))
+  if (!user) return c.json({ error: 'unauthorized' }, 401)
+  if (planOf(user) === 'free') return c.json({ error: 'pro' }, 403)
+  const text = typeof body.text === 'string' ? body.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim().slice(0, POST_MAX_LENGTH) : ''
+  if (text.length < 5) return c.json({ error: 'invalid' }, 400)
+  if ((await postsLeftToday(user.id)) === 0) return c.json({ error: 'slow_down' }, 429)
+
+  const verdict = await review(text, POST_MAX_LENGTH)
+  if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
+  if (verdict.better && body.confirm !== true) return c.json({ suggestion: verdict.better })
+
+  const [row] = await db
+    .insert(feedPosts)
+    // Shown a moment in the past, so it is in the feed the instant it is saved.
+    .values({ kind: 'student', body: { emoji: '', title: { ru: '', en: '' }, text: { ru: text, en: text } }, authorId: user.id, publishAt: new Date(Date.now() - 1000), writtenBy: 'student' })
+    .returning()
+  const faces = await facesFor([user.id], user.id)
+  const post: FeedPost = { id: row.id, ...shape(row, user.id, true, faces), publishedAt: row.publishAt.toISOString(), hasImage: false, likes: 0, liked: false, vote: null, votes: null, comments: 0, commenters: [] }
+  return c.json({ post, postsLeft: await postsLeftToday(user.id) })
+})
+
+/** Removes the student's own post, with its likes and comments. */
+feedRoutes.post('/posts/:id/delete', async (c) => {
+  const id = c.req.param('id')
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const removed = await db.delete(feedPosts).where(and(eq(feedPosts.id, id), eq(feedPosts.authorId, c.get('userId')))).returning({ id: feedPosts.id })
+  return removed.length ? c.json({ ok: true }) : c.json({ error: 'not_found' }, 404)
+})
+
+/** Reports a student's post. Each student counts once; enough reports hide the post until the owner looks. */
+feedRoutes.post('/posts/:id/report', async (c) => {
+  const id = c.req.param('id')
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const [post] = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.id, id), isNotNull(feedPosts.authorId))).limit(1)
+  if (!post) return c.json({ error: 'not_found' }, 404)
+  const added = await db.insert(feedPostReports).values({ postId: id, userId: c.get('userId') }).onConflictDoNothing().returning({ id: feedPostReports.postId })
+  if (added.length > 0) {
+    const [{ n }] = await db.select({ n: sql<number>`count(*)::int` }).from(feedPostReports).where(eq(feedPostReports.postId, id))
+    await db.update(feedPosts).set({ reports: n, ...(n >= REPORTS_TO_HIDE ? { status: 'hidden' } : {}) }).where(eq(feedPosts.id, id))
+  }
+  return c.json({ ok: true })
 })
 
 /** Removes the student's own comment. */

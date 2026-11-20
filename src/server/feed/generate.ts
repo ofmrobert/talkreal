@@ -1,4 +1,4 @@
-import { and, desc, gte, lt } from 'drizzle-orm'
+import { and, desc, gte, isNull, lt } from 'drizzle-orm'
 import type { PostBody, PostKind } from '../../shared/feed'
 import { clip } from '../ai/text'
 import { db } from '../db/client'
@@ -108,9 +108,9 @@ export async function fillFeed(): Promise<{ written: number; failed: number }> {
   const existing = await db
     .select({ publishAt: feedPosts.publishAt })
     .from(feedPosts)
-    .where(and(gte(feedPosts.publishAt, new Date(`${today}T00:00:00+03:00`)), lt(feedPosts.publishAt, new Date(`${dayAfter(today, DAYS_AHEAD)}T00:00:00+03:00`))))
+    .where(and(isNull(feedPosts.authorId), gte(feedPosts.publishAt, new Date(`${today}T00:00:00+03:00`)), lt(feedPosts.publishAt, new Date(`${dayAfter(today, DAYS_AHEAD)}T00:00:00+03:00`))))
   const taken = new Set(existing.map((post) => localDay(ZONE, post.publishAt)))
-  const recent = (await db.select({ body: feedPosts.body }).from(feedPosts).orderBy(desc(feedPosts.publishAt)).limit(40)).map((post) => `${post.body.title.en}${post.body.english ? ` (${post.body.english})` : ''}`)
+  const recent = (await db.select({ body: feedPosts.body }).from(feedPosts).where(isNull(feedPosts.authorId)).orderBy(desc(feedPosts.publishAt)).limit(40)).map((post) => `${post.body.title.en}${post.body.english ? ` (${post.body.english})` : ''}`)
 
   let written = 0
   let failed = 0
@@ -140,7 +140,7 @@ export async function fillFeed(): Promise<{ written: number; failed: number }> {
  * has changed or the waiting posts are not good enough.
  */
 export async function rewriteWaiting(): Promise<{ removed: number; written: number; failed: number }> {
-  const removed = await db.delete(feedPosts).where(gte(feedPosts.publishAt, new Date())).returning({ id: feedPosts.id })
+  const removed = await db.delete(feedPosts).where(and(isNull(feedPosts.authorId), gte(feedPosts.publishAt, new Date()))).returning({ id: feedPosts.id })
   return { removed: removed.length, ...(await fillFeed()) }
 }
 

@@ -664,7 +664,8 @@
       "poll": "Quick quiz",
       "fact": "Fun fact",
       "question": "Question of the day",
-      "picture": "Describe the picture"
+      "picture": "Describe the picture",
+      "student": "Student post"
     },
     "like": "Like",
     "talking_one": "{{count}} comment",
@@ -698,7 +699,27 @@
       "empty": "Discuss the posts with other students",
       "text": "With a paid plan you read every answer, write your own, and a teacher corrects your English before it is posted.",
       "button": "Open with Pro"
-    }
+    },
+    "filter": {
+      "all": "All",
+      "official": "Talkreal",
+      "students": "Students"
+    },
+    "compose": {
+      "placeholder": "Write something in English: your day, a question, a thought…",
+      "post": "Post",
+      "hint": "A teacher checks your English before it is posted.",
+      "limit": "You have already written three posts today. Carry on tomorrow.",
+      "lockedTitle": "Write your own posts in English",
+      "lockedText": "With a paid plan you post to the feed and other students answer you."
+    },
+    "lockedPost": {
+      "text": "This post is for students on a paid plan",
+      "see": "Read students’ posts",
+      "someone": "Student"
+    },
+    "noStudents": "Students’ posts will appear here. Write the first one!",
+    "deletePost": "Delete this post?"
   },
   "theme": {
     "title": "Appearance",
