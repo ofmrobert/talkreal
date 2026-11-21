@@ -223,18 +223,21 @@ socialRoutes.get('/messages', async (c) => {
   const ids = threads.map((thread) => thread.id)
   const messages = ids.length ? await db.select().from(dmMessages).where(and(inArray(dmMessages.threadId, ids), eq(dmMessages.status, 'sent'))).orderBy(desc(dmMessages.createdAt)).limit(2000) : []
   const paid = isMember(user)
+  const viewerStaff = user.teacherAt !== null
 
   const previews: ThreadPreview[] = threads
     .map((thread) => {
       const other = thread.userA === user.id ? thread.userB : thread.userA
+      // Started by a teacher or the owner: open, whatever was stored before.
+      const status = (viewerStaff && thread.startedBy === user.id) || (faces.get(other)?.teacher && thread.startedBy === other) ? 'open' : thread.status
       const readAt = thread.userA === user.id ? thread.readAtA : thread.readAtB
       const own = messages.filter((m) => m.threadId === thread.id)
       const last = own[0]
       return {
         id: thread.id,
         other: faces.get(other)!,
-        status: statusOf(thread.status),
-        incoming: thread.status === 'request' && thread.startedBy !== user.id,
+        status: statusOf(status),
+        incoming: status === 'request' && thread.startedBy !== user.id,
         // A message from a teacher or the owner can always be read, on any plan.
         last: last ? { text: paid || faces.get(other)?.teacher ? last.text : '', mine: last.senderId === user.id, at: last.createdAt.toISOString() } : null,
         unread: own.filter((m) => m.senderId !== user.id && (!readAt || m.createdAt > readAt)).length,
@@ -262,6 +265,12 @@ socialRoutes.get('/messages/with/:id', async (c) => {
   if (!other) return c.json({ error: 'not_found' }, 404)
   const thread = await threadBetween(user.id, id)
   const face = (await facesFor([id], user.id)).get(id)!
+  const viewerFace = (await facesFor([user.id], user.id)).get(user.id)
+  // A conversation started by a teacher or the owner needs no accepting. One left as a "request" from before is opened here.
+  if (thread && thread.status !== 'open' && ((viewerFace?.teacher && thread.startedBy === user.id) || (face.teacher && thread.startedBy === id))) {
+    await db.update(dmThreads).set({ status: 'open' }).where(eq(dmThreads.id, thread.id))
+    thread.status = 'open'
+  }
   // A conversation with a teacher or the owner is open to every student: they can read it and answer, whatever their plan or age.
   const withStaff = Boolean(face.teacher) && thread !== null
   const own = await messagingBlock(user)
@@ -284,7 +293,7 @@ socialRoutes.get('/messages/with/:id', async (c) => {
     waiting: thread?.status === 'request' && thread.startedBy === user.id && messages.some((m) => m.mine),
     turnedDown: thread?.status === 'declined' && thread.startedBy === user.id,
     // Blocking does not close a conversation with the owner, from either side.
-    blocked: face.owner || (await facesFor([user.id], user.id)).get(user.id)?.owner ? false : await blockedBetween(user.id, id),
+    blocked: face.owner || viewerFace?.owner ? false : await blockedBetween(user.id, id),
     block,
     messages,
   }
