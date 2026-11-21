@@ -44,7 +44,8 @@
           "Другие ученики видят ваш профиль: имя, фотографию после проверки, уровень, город, текст о себе, цели и интересы. Возраст, email и Telegram не показываются никому. Профиль виден по умолчанию; чтобы сделать страницу закрытой, выключите «Показывать мой профиль» в настройках профиля в любой момент. Тогда другие ученики видят только условное имя «Ученик» с кодом, не могут найти вас в поиске и начать с вами переписку.",
           "Личные сообщения не являются тайной от сервиса. Каждое сообщение перед отправкой автоматически проверяется ИИ (Google Gemini) на оскорбления, спам, ссылки и контактные данные; сообщение, не прошедшее проверку, не доставляется, но сохраняется для модерации.",
           "Модератор Talkreal может прочитать переписку между учениками, чтобы рассмотреть жалобу, предотвратить нарушение правил или выполнить требование закона. Каждый такой просмотр записывается в журнал действий администратора.",
-          "Модератор может скрыть сообщение, пост или комментарий и отключить ученику личные сообщения при нарушении правил.",
+          "Модератор может скрыть сообщение, пост или комментарий, скрыть профиль от других учеников, удалить из профиля имя, фотографию, город или текст о себе, а также отключить ученику посты и комментарии или личные сообщения при нарушении правил.",
+          "В ленте пишут и преподаватели Talkreal — реальные люди, которые сотрудничают с сервисом. Их имя отмечено синей галочкой. Преподаватель видит о вас то же, что и любой другой ученик, и подчиняется тем же правилам: его сообщения проверяются и доступны модератору.",
           "Личные сообщения доступны только с 18 лет. Сообщения хранятся, пока существует ваш аккаунт или аккаунт собеседника, и удаляются вместе с аккаунтом.",
           "Вы можете заблокировать любого ученика и пожаловаться на него: тогда он не сможет вам писать, а вы перестанете видеть посты друг друга."
         ]
@@ -125,7 +126,8 @@
           "Other students see your profile: name, photo once it has been checked, level, city, the text about you, goals and interests. Your age, email and Telegram are never shown to anyone. The profile is visible by default; to make your page private, switch off “Show my profile” in your profile settings at any time. Other students then see only the code name “Student” with a code, cannot find you in search and cannot start a conversation with you.",
           "Private messages are not secret from the service. Before it is sent, every message is checked automatically by AI (Google Gemini) for insults, spam, links and contact details; a message that does not pass is not delivered but is kept for moderation.",
           "A Talkreal moderator may read a conversation between students to deal with a complaint, to prevent a breach of the rules or to comply with the law. Every such viewing is recorded in the administrator action log.",
-          "A moderator may hide a message, post or comment and switch off private messages for a student who breaks the rules.",
+          "A moderator may hide a message, post or comment, hide a profile from other students, remove the name, photo, city or the text about you from a profile, and switch off posts and comments or private messages for a student who breaks the rules.",
+          "Talkreal teachers also write in the feed: real people who work with the service. Their name carries a blue checkmark. A teacher sees about you what any other student sees and follows the same rules: their messages are checked and can be read by a moderator.",
           "Private messages are available only from the age of 18. Messages are kept for as long as your account or the other person’s account exists, and are deleted with the account.",
           "You can block and report any student: they will then be unable to write to you, and you will stop seeing each other’s posts."
         ]
