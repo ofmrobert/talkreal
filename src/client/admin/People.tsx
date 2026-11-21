@@ -362,6 +362,10 @@ export function UserPage() {
                 {num(activity.messagesStopped)} messages stopped by the check · {num(activity.complaints)} complaints ({num(activity.complaintsOpen)} open) · blocked by {num(activity.blockedBy)} students ·{' '}
                 <Link to={`/admin/messages?user=${user.id}`} className="font-semibold text-violet-700 hover:underline">
                   read their conversations
+                </Link>{' '}
+                ·{' '}
+                <Link to={`/messages/${user.id}`} className="font-semibold text-violet-700 hover:underline">
+                  write to this student ✉️
                 </Link>
               </>
             }

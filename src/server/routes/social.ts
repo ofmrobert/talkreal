@@ -146,7 +146,7 @@ socialRoutes.get('/people/:id', async (c) => {
     blocked: Boolean(mine),
     threadId: thread?.id ?? null,
     // A stranger can be written to only if they show their profile; an existing conversation stays open.
-    canMessage: !me && !blocked && (open.has(id) || thread !== null),
+    canMessage: !me && ((!blocked && (open.has(id) || thread !== null)) || viewer.teacherAt !== null),
     me,
   }
   return c.json({ profile })
@@ -211,14 +211,17 @@ socialRoutes.get('/messages', async (c) => {
   const user = await load(c.get('userId'))
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   const blocked = await blockedIds(user.id)
-  const threads = (await db.select().from(dmThreads).where(or(eq(dmThreads.userA, user.id), eq(dmThreads.userB, user.id))).orderBy(desc(dmThreads.lastMessageAt)).limit(100)).filter((thread) => {
+  const mine = await db.select().from(dmThreads).where(or(eq(dmThreads.userA, user.id), eq(dmThreads.userB, user.id))).orderBy(desc(dmThreads.lastMessageAt)).limit(100)
+  const faces = await facesFor(mine.map((thread) => (thread.userA === user.id ? thread.userB : thread.userA)), user.id)
+  const threads = mine.filter((thread) => {
     const other = thread.userA === user.id ? thread.userB : thread.userA
+    // The owner's messages (announcements, moderation) are always shown.
+    if (faces.get(other)?.owner) return true
     // A declined request disappears for the one who declined it; the one who asked still sees that they asked.
     return !blocked.has(other) && !(thread.status === 'declined' && thread.startedBy !== user.id)
   })
   const ids = threads.map((thread) => thread.id)
   const messages = ids.length ? await db.select().from(dmMessages).where(and(inArray(dmMessages.threadId, ids), eq(dmMessages.status, 'sent'))).orderBy(desc(dmMessages.createdAt)).limit(2000) : []
-  const faces = await facesFor(threads.map((thread) => (thread.userA === user.id ? thread.userB : thread.userA)), user.id)
   const paid = isMember(user)
 
   const previews: ThreadPreview[] = threads
@@ -232,7 +235,8 @@ socialRoutes.get('/messages', async (c) => {
         other: faces.get(other)!,
         status: statusOf(thread.status),
         incoming: thread.status === 'request' && thread.startedBy !== user.id,
-        last: last ? { text: paid ? last.text : '', mine: last.senderId === user.id, at: last.createdAt.toISOString() } : null,
+        // A message from a teacher or the owner can always be read, on any plan.
+        last: last ? { text: paid || faces.get(other)?.teacher ? last.text : '', mine: last.senderId === user.id, at: last.createdAt.toISOString() } : null,
         unread: own.filter((m) => m.senderId !== user.id && (!readAt || m.createdAt > readAt)).length,
       }
     })
@@ -257,8 +261,12 @@ socialRoutes.get('/messages/with/:id', async (c) => {
   const [other] = await db.select({ id: users.id }).from(users).where(eq(users.id, id)).limit(1)
   if (!other) return c.json({ error: 'not_found' }, 404)
   const thread = await threadBetween(user.id, id)
-  const block = await messagingBlock(user)
-  const paid = isMember(user)
+  const face = (await facesFor([id], user.id)).get(id)!
+  // A conversation with a teacher or the owner is open to every student: they can read it and answer, whatever their plan or age.
+  const withStaff = Boolean(face.teacher) && thread !== null
+  const own = await messagingBlock(user)
+  const block = withStaff && own !== 'banned' ? null : own
+  const paid = isMember(user) || withStaff
   const rows = thread ? await db.select().from(dmMessages).where(and(eq(dmMessages.threadId, thread.id), inArray(dmMessages.status, ['sent', 'hidden']))).orderBy(desc(dmMessages.createdAt)).limit(200) : []
   // Reading is part of the paid plans: only then is the conversation marked as read.
   if (thread && paid) await db.update(dmThreads).set(thread.userA === user.id ? { readAtA: new Date() } : { readAtB: new Date() }).where(eq(dmThreads.id, thread.id))
@@ -270,12 +278,13 @@ socialRoutes.get('/messages/with/:id', async (c) => {
   })
   const view: ThreadView = {
     id: thread?.id ?? '',
-    other: (await facesFor([id], user.id)).get(id)!,
+    other: face,
     status: thread ? statusOf(thread.status) : 'request',
     incoming: thread?.status === 'request' && thread.startedBy !== user.id,
     waiting: thread?.status === 'request' && thread.startedBy === user.id && messages.some((m) => m.mine),
     turnedDown: thread?.status === 'declined' && thread.startedBy === user.id,
-    blocked: await blockedBetween(user.id, id),
+    // Blocking does not close a conversation with the owner, from either side.
+    blocked: face.owner || (await facesFor([user.id], user.id)).get(user.id)?.owner ? false : await blockedBetween(user.id, id),
     block,
     messages,
   }
@@ -305,16 +314,25 @@ socialRoutes.post('/messages/with/:id', async (c) => {
   const user = await load(c.get('userId'))
   const body = await c.req.json().catch(() => ({}))
   if (!user || !isUuid(id) || id === user.id) return c.json({ error: 'not_found' }, 404)
+  let thread = await threadBetween(user.id, id)
+  const faces = await facesFor([user.id, id], id)
+  /** The sender writes for Talkreal: a teacher or the owner. No request, no limits. */
+  const staff = Boolean(faces.get(user.id)?.teacher)
+  const owner = Boolean(faces.get(user.id)?.owner)
+  /** The student answers a teacher or the owner who wrote to them: allowed on any plan and at any age. */
+  const toStaff = Boolean(faces.get(id)?.teacher) && thread !== null
   const block = await messagingBlock(user)
-  if (block) return c.json({ error: block }, 403)
+  if (block && !(toStaff && block !== 'banned')) return c.json({ error: block }, 403)
   const text = typeof body.text === 'string' ? body.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim().slice(0, MESSAGE_MAX_LENGTH) : ''
   if (text.length < 1) return c.json({ error: 'invalid' }, 400)
   const [other] = await db.select().from(users).where(eq(users.id, id)).limit(1)
   if (!other) return c.json({ error: 'not_found' }, 404)
-  if (await blockedBetween(user.id, id)) return c.json({ error: 'blocked' }, 403)
+  // A student may block a teacher; the owner's moderation messages always arrive.
+  if (!owner && (await blockedBetween(user.id, id))) return c.json({ error: 'blocked' }, 403)
 
-  let thread = await threadBetween(user.id, id)
-  if (!thread) {
+  if (staff) {
+    // Nothing to check: staff may write to anyone, as often as needed.
+  } else if (!thread) {
     // Only students who show their profile can be written to by someone new.
     if (!(await openProfilesOf([id])).has(id)) return c.json({ error: 'closed' }, 403)
     const [started] = await db.select({ n: sql<number>`count(*)::int` }).from(dmThreads).where(and(eq(dmThreads.startedBy, user.id), gte(dmThreads.createdAt, new Date(Date.now() - DAY_MS))))
@@ -325,12 +343,14 @@ socialRoutes.post('/messages/with/:id', async (c) => {
     if ((sent?.n ?? 0) >= 1) return c.json({ error: 'waiting' }, 409)
   }
   const [today] = await db.select({ n: sql<number>`count(*)::int` }).from(dmMessages).where(and(eq(dmMessages.senderId, user.id), gte(dmMessages.createdAt, new Date(Date.now() - DAY_MS))))
-  if ((today?.n ?? 0) >= MESSAGES_PER_DAY) return c.json({ error: 'slow_down' }, 429)
+  if (!staff && (today?.n ?? 0) >= MESSAGES_PER_DAY) return c.json({ error: 'slow_down' }, 429)
 
-  const verdict = await review(text, MESSAGE_MAX_LENGTH)
+  // The owner's announcements may carry links and are not checked; a teacher's message is checked but not corrected.
+  const checked = owner ? { ok: true, better: null } : await review(text, MESSAGE_MAX_LENGTH)
+  const verdict = staff ? { ok: checked.ok, better: null } : checked
   if (!thread) {
     const [a, b] = pairOf(user.id, id)
-    await db.insert(dmThreads).values({ userA: a, userB: b, startedBy: user.id }).onConflictDoNothing()
+    await db.insert(dmThreads).values({ userA: a, userB: b, startedBy: user.id, ...(staff ? { status: 'open' } : {}) }).onConflictDoNothing()
     thread = await threadBetween(user.id, id)
     if (!thread) return c.json({ error: 'server_error' }, 500)
   }
@@ -341,15 +361,16 @@ socialRoutes.post('/messages/with/:id', async (c) => {
 
   const [row] = await db.insert(dmMessages).values({ threadId: thread.id, senderId: user.id, text, better: verdict.better }).returning()
   // Answering a request accepts it; so does writing again to someone you had declined.
-  const answered = thread.startedBy !== user.id && thread.status !== 'open'
+  const answered = (staff || thread.startedBy !== user.id) && thread.status !== 'open'
   await db
     .update(dmThreads)
     .set({ lastMessageAt: row.createdAt, ...(thread.userA === user.id ? { readAtA: row.createdAt } : { readAtB: row.createdAt }), ...(answered ? { status: 'open' } : {}) })
     .where(eq(dmThreads.id, thread.id))
 
-  const name = (await facesFor([user.id], id)).get(user.id)?.name ?? null
-  // The first message is a request; an answer to a request tells the one who asked that it was accepted.
-  if (thread.status === 'request' && thread.startedBy === user.id) notices.request(id, user.id, name)
+  const name = faces.get(user.id)?.name ?? null
+  // The first message is a request; an answer to a request tells the one who asked that it was accepted. Staff simply write.
+  if (staff) notices.message(id, user.id, name)
+  else if (thread.status === 'request' && thread.startedBy === user.id) notices.request(id, user.id, name)
   else if (answered) notices.accepted(id, user.id, name)
   else notices.message(id, user.id, name)
 

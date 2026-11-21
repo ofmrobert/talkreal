@@ -33,6 +33,8 @@ export async function blockedIds(userId: string): Promise<Set<string>> {
 /** Why this student may not write private messages; null if they may. */
 export async function messagingBlock(user: typeof users.$inferSelect): Promise<MessagingBlock> {
   if (user.dmBannedAt) return 'banned'
+  // Teachers and the owner write on behalf of Talkreal: no plan, age question or rules screen for them.
+  if (user.teacherAt) return null
   if (!isMember(user)) return 'pro'
   const age = await ageOf(user.id)
   if (age !== null && age < MESSAGES_MIN_AGE) return 'age'

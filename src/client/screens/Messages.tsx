@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import type { Inbox } from '../../shared/social'
+import Verified from '../components/Verified'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import { BackButton, MessagingRules, useFaceName } from '../components/social/SocialBits'
@@ -78,6 +79,7 @@ export default function Messages() {
           <span className="min-w-0 flex-1 leading-tight">
             <span className="flex items-center gap-2">
               <span className="truncate text-base font-extrabold">{nameOf(thread.other)}</span>
+              {thread.other.teacher && <Verified owner={thread.other.owner} />}
               {thread.incoming && <span className="shrink-0 rounded-full bg-sun px-2 py-0.5 text-[11px] font-extrabold text-coal">{t('social.messages.request')}</span>}
               {thread.status === 'declined' && <span className="shrink-0 rounded-full bg-ink/10 px-2 py-0.5 text-[11px] font-extrabold text-ink/55">{t('social.messages.declined')}</span>}
             </span>

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { MESSAGE_MAX_LENGTH, type DirectMessage, type ThreadView } from '../../shared/social'
+import Verified from '../components/Verified'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import { MessagingRules, SafetyMenu, useFaceName } from '../components/social/SocialBits'
@@ -100,7 +101,10 @@ export default function DirectChat() {
         <button type="button" onClick={() => navigate(`/u/${view.other.userId}`)} className="flex min-w-0 flex-1 items-center gap-2.5 text-left">
           <Avatar userId={view.other.userId} name={view.other.name} photoVersion={view.other.photoVersion} size={44} />
           <span className="min-w-0 leading-tight">
-            <span className="block truncate text-lg font-extrabold">{name}</span>
+            <span className="flex items-center gap-1.5 text-lg font-extrabold">
+              <span className="truncate">{name}</span>
+              {view.other.teacher && <Verified size={18} owner={view.other.owner} />}
+            </span>
             <span className="block truncate text-xs font-bold text-ink/45">{t('social.chat.openProfile')}</span>
           </span>
         </button>

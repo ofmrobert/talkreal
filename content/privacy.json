@@ -46,6 +46,7 @@
           "Модератор Talkreal может прочитать переписку между учениками, чтобы рассмотреть жалобу, предотвратить нарушение правил или выполнить требование закона. Каждый такой просмотр записывается в журнал действий администратора.",
           "Модератор может скрыть сообщение, пост или комментарий, скрыть профиль от других учеников, удалить из профиля имя, фотографию, город или текст о себе, а также отключить ученику посты и комментарии или личные сообщения при нарушении правил.",
           "В ленте пишут и преподаватели Talkreal — реальные люди, которые сотрудничают с сервисом. Их имя отмечено синей галочкой. Преподаватель видит о вас то же, что и любой другой ученик, и подчиняется тем же правилам: его сообщения проверяются и доступны модератору.",
+          "Преподаватели и администрация Talkreal могут написать любому ученику без запроса на переписку — например, с объявлением или по вопросу модерации. Такое сообщение можно прочитать и ответить на него на любом тарифе и в любом возрасте. Преподавателя можно заблокировать; сообщения администрации доставляются всегда.",
           "Личные сообщения доступны только с 18 лет. Сообщения хранятся, пока существует ваш аккаунт или аккаунт собеседника, и удаляются вместе с аккаунтом.",
           "Вы можете заблокировать любого ученика и пожаловаться на него: тогда он не сможет вам писать, а вы перестанете видеть посты друг друга."
         ]
@@ -128,6 +129,7 @@
           "A Talkreal moderator may read a conversation between students to deal with a complaint, to prevent a breach of the rules or to comply with the law. Every such viewing is recorded in the administrator action log.",
           "A moderator may hide a message, post or comment, hide a profile from other students, remove the name, photo, city or the text about you from a profile, and switch off posts and comments or private messages for a student who breaks the rules.",
           "Talkreal teachers also write in the feed: real people who work with the service. Their name carries a blue checkmark. A teacher sees about you what any other student sees and follows the same rules: their messages are checked and can be read by a moderator.",
+          "Talkreal teachers and the administration may write to any student without a request to talk, for example with an announcement or about moderation. Such a message can be read and answered on any plan and at any age. A teacher can be blocked; messages from the administration are always delivered.",
           "Private messages are available only from the age of 18. Messages are kept for as long as your account or the other person’s account exists, and are deleted with the account.",
           "You can block and report any student: they will then be unable to write to you, and you will stop seeing each other’s posts."
         ]
