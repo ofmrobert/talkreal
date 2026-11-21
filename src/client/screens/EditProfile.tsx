@@ -20,11 +20,14 @@ export default function EditProfile() {
   /** A new picture to upload, "remove" to delete the current one, or null to leave it alone. */
   const [photo, setPhoto] = useState<string | 'remove' | null>(null)
   const [busy, setBusy] = useState(false)
+  /** The owner hid this profile: the student cannot make it visible again. */
+  const [locked, setLocked] = useState(false)
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
-    api<{ profile: Profile & { photoVersion: number | null } }>('/profile')
+    api<{ profile: Profile & { photoVersion: number | null; hiddenByModerator?: boolean } }>('/profile')
       .then(({ profile }) => {
+        setLocked(profile.hiddenByModerator === true)
         setDraft(toDraft(profile))
         setPhotoVersion(profile.photoVersion)
       })
@@ -139,13 +142,14 @@ export default function EditProfile() {
         <label className="flex items-start gap-3 rounded-3xl bg-violet-soft p-4">
           <input
             type="checkbox"
-            checked={draft.discoverable}
+            checked={draft.discoverable && !locked}
+            disabled={locked}
             onChange={(e) => setDraft({ ...draft, discoverable: e.target.checked })}
             className="mt-0.5 h-6 w-6 shrink-0 accent-violet"
           />
           <span>
             <span className="block text-base font-extrabold">{t('profile.discoverable')}</span>
-            <span className="block text-sm font-semibold leading-snug text-ink/65">{t('profile.discoverableHint')}</span>
+            <span className="block text-sm font-semibold leading-snug text-ink/65">{t(locked ? 'profile.hiddenByModerator' : 'profile.discoverableHint')}</span>
           </span>
         </label>
 

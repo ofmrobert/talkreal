@@ -118,7 +118,7 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
     } catch (err) {
       const code = err instanceof ApiError ? err.code : 'network'
       if (code === 'pro') navigate('/plans')
-      else setError(t(code === 'rejected' ? 'feed.rejected' : code === 'slow_down' ? 'feed.slowDown' : 'feed.failed'))
+      else setError(t(code === 'rejected' ? 'feed.rejected' : code === 'slow_down' ? 'feed.slowDown' : code === 'banned' ? 'feed.banned' : 'feed.failed'))
     } finally {
       setBusy(false)
     }
@@ -233,7 +233,7 @@ function Composer({ left, onPosted, challengeId }: { left: number; onPosted: (po
       }
     } catch (err) {
       const code = err instanceof ApiError ? err.code : 'network'
-      setError(t(code === 'rejected' ? 'feed.rejected' : code === 'slow_down' ? 'feed.compose.limit' : code === 'closed' ? 'feed.challenge.closed' : code === 'answered' ? 'feed.challenge.answeredAlready' : 'feed.failed'))
+      setError(t(code === 'rejected' ? 'feed.rejected' : code === 'banned' ? 'feed.banned' : code === 'slow_down' ? 'feed.compose.limit' : code === 'closed' ? 'feed.challenge.closed' : code === 'answered' ? 'feed.challenge.answeredAlready' : 'feed.failed'))
     } finally {
       setBusy(false)
     }

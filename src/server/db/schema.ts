@@ -41,6 +41,8 @@ export const users = pgTable('users', {
   dmRulesAt: timestamptz('dm_rules_at'),
   /** Set by the owner: this student may not write private messages. */
   dmBannedAt: timestamptz('dm_banned_at'),
+  /** Set by the owner: this student may not write posts or comments in the feed. */
+  feedBannedAt: timestamptz('feed_banned_at'),
 })
 
 /** Badges a student has earned. The list of possible badges lives in src/shared/achievements.ts. */
@@ -100,6 +102,8 @@ export const userPii = pgTable('user_pii', {
   interests: jsonb('interests').$type<string[]>(),
   /** May other students see this profile? On for new accounts; a student who wants a private page switches it off. */
   discoverable: boolean('discoverable').notNull().default(true),
+  /** Set by the owner: the profile is hidden from other students and the student cannot open it again. */
+  hiddenByAdminAt: timestamptz('hidden_by_admin_at'),
 })
 
 /**

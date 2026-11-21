@@ -123,9 +123,9 @@ export async function searchUserIds(text: string, limit = 500): Promise<string[]
 /* ───────────── The student's own profile: name, photo and what they chose to tell ───────────── */
 
 /** The profile as the app shows it. The age is worked out from the year of birth. */
-export async function getProfile(userId: string): Promise<Profile & { photoVersion: number | null }> {
+export async function getProfile(userId: string): Promise<Profile & { photoVersion: number | null; photoChecked: boolean; hiddenByModerator: boolean }> {
   const [row] = await db.select().from(userPii).where(eq(userPii.userId, userId)).limit(1)
-  const [photo] = await db.select({ updatedAt: userAvatars.updatedAt }).from(userAvatars).where(eq(userAvatars.userId, userId)).limit(1)
+  const [photo] = await db.select({ updatedAt: userAvatars.updatedAt, reviewedAt: userAvatars.reviewedAt }).from(userAvatars).where(eq(userAvatars.userId, userId)).limit(1)
   return {
     ...cleanProfile({
       name: row?.displayName,
@@ -139,10 +139,14 @@ export async function getProfile(userId: string): Promise<Profile & { photoVersi
     }),
     // Changes whenever the photo changes, so the app knows to load the new one.
     photoVersion: photo ? photo.updatedAt.getTime() : null,
+    photoChecked: Boolean(photo?.reviewedAt),
+    // The owner hid this profile; the student cannot switch it back on.
+    hiddenByModerator: Boolean(row?.hiddenByAdminAt),
   }
 }
 
 export async function saveProfile(userId: string, profile: Profile): Promise<void> {
+  const [current] = await db.select({ hiddenByAdminAt: userPii.hiddenByAdminAt }).from(userPii).where(eq(userPii.userId, userId)).limit(1)
   const values = {
     displayName: profile.name,
     bio: profile.bio,
@@ -151,7 +155,8 @@ export async function saveProfile(userId: string, profile: Profile): Promise<voi
     gender: profile.gender,
     goals: profile.goals,
     interests: profile.interests,
-    discoverable: profile.discoverable,
+    // A profile the owner hid stays hidden whatever the student ticks.
+    discoverable: current?.hiddenByAdminAt ? false : profile.discoverable,
   }
   await db
     .insert(userPii)
@@ -221,6 +226,21 @@ export async function countNewPhotos(): Promise<number> {
 export async function approvePhoto(userId: string): Promise<boolean> {
   const rows = await db.update(userAvatars).set({ reviewedAt: new Date() }).where(eq(userAvatars.userId, userId)).returning({ id: userAvatars.userId })
   return rows.length > 0
+}
+
+/** The owner shows or hides a profile. Hiding also locks it: the student cannot make it visible again. */
+export async function setProfileVisibility(userId: string, visible: boolean): Promise<void> {
+  const values = { discoverable: visible, hiddenByAdminAt: visible ? null : new Date() }
+  await db
+    .insert(userPii)
+    .values({ userId, ...values })
+    .onConflictDoUpdate({ target: userPii.userId, set: values })
+}
+
+/** The owner removes one thing a student wrote in their profile. */
+export async function clearProfileField(userId: string, field: 'name' | 'bio' | 'city'): Promise<void> {
+  const set = field === 'name' ? { displayName: null } : field === 'bio' ? { bio: null } : { city: null }
+  await db.update(userPii).set(set).where(eq(userPii.userId, userId))
 }
 
 /** Removes the words a student wrote about themselves. */

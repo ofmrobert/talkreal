@@ -36,7 +36,7 @@ import {
   voiceSessions,
 } from '../db/schema'
 import { env } from '../env'
-import { approvePhoto, clearBio, countNewPhotos, deleteAvatar, getPii, getPiiFor, getProfile, goalCounts, listPhotos, noteTelegramProfile, searchUserIds } from '../pii'
+import { approvePhoto, clearBio, clearProfileField, countNewPhotos, deleteAvatar, getPii, getPiiFor, getProfile, goalCounts, listPhotos, noteTelegramProfile, searchUserIds, setProfileVisibility } from '../pii'
 import { dayBefore, localDay } from '../progress/streak'
 import { voiceProvider } from '../voice/socket'
 
@@ -322,8 +322,19 @@ adminRoutes.get('/users/:id', async (c) => {
       .limit(1),
   ])
 
+  const [activity] = await rows<Record<string, number>>(sql`
+    select (select count(*)::int from feed_posts where author_id = ${id}) as posts,
+           (select count(*)::int from feed_posts where author_id = ${id} and (status = 'hidden' or reports > 0)) as "postsFlagged",
+           (select count(*)::int from feed_comments where user_id = ${id}) as comments,
+           (select count(*)::int from feed_comments where user_id = ${id} and (status = 'hidden' or reports > 0)) as "commentsFlagged",
+           (select count(*)::int from social_reports where about_id = ${id}) as complaints,
+           (select count(*)::int from social_reports where about_id = ${id} and resolved_at is null) as "complaintsOpen",
+           (select count(*)::int from dm_messages where sender_id = ${id} and status = 'rejected') as "messagesStopped",
+           (select count(*)::int from user_blocks where blocked_id = ${id}) as "blockedBy"`)
+
   return c.json({
     profile: await getProfile(id),
+    activity,
     user: {
       id: user.id,
       email: pii.get(id)?.email ?? null,
@@ -348,6 +359,7 @@ adminRoutes.get('/users/:id', async (c) => {
       consentAt: user.consentAt,
       dmBannedAt: user.dmBannedAt,
       dmRulesAt: user.dmRulesAt,
+      feedBannedAt: user.feedBannedAt,
     },
     progress: progress.map((p) => ({ id: p.lessonId, accuracy: p.bestAccuracy, completions: p.completions, last: p.lastCompletedAt })),
     usage: usage.map((u) => ({ day: u.day, lessons: u.lessonsDone, xp: u.xp, voiceMinutes: Math.round(u.voiceSeconds / 60), messages: u.textMessages })),
@@ -375,6 +387,33 @@ adminRoutes.post('/users/:id/plan', async (c) => {
   if (!updated) return c.json({ error: 'not_found' }, 404)
   await log(c, body.plan === 'free' ? 'plan_removed' : 'plan_given', id, body.plan === 'free' ? undefined : { plan: body.plan, days })
   return c.json({ ok: true, plan: body.plan, planUntil })
+})
+
+/** The owner moderates one student's profile: shows or hides it, or removes the name, text, city or photo. */
+adminRoutes.post('/users/:id/profile', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const [user] = await db.select({ id: users.id }).from(users).where(eq(users.id, id)).limit(1)
+  if (!user) return c.json({ error: 'not_found' }, 404)
+  if (body.action === 'show' || body.action === 'hide') await setProfileVisibility(id, body.action === 'show')
+  else if (body.action === 'remove_name' || body.action === 'remove_bio' || body.action === 'remove_city') await clearProfileField(id, body.action.slice(7) as 'name' | 'bio' | 'city')
+  else if (body.action === 'remove_photo') await deleteAvatar(id)
+  else if (body.action === 'approve_photo') await approvePhoto(id)
+  else return c.json({ error: 'invalid' }, 400)
+  await log(c, `profile_${body.action}`, id)
+  return c.json({ ok: true })
+})
+
+/** Stops a student from writing posts and comments in the feed, or lets them again. */
+adminRoutes.post('/users/:id/posting', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const changed = await db.update(users).set({ feedBannedAt: body.banned === true ? new Date() : null }).where(eq(users.id, id)).returning({ id: users.id })
+  if (changed.length === 0) return c.json({ error: 'not_found' }, 404)
+  await log(c, body.banned === true ? 'feed_ban' : 'feed_unban', id)
+  return c.json({ ok: true })
 })
 
 /* ───────────────────────────── Photos ───────────────────────────── */

@@ -301,6 +301,7 @@ feedRoutes.post('/:id/comments', async (c) => {
   if (!user || !isUuid(id)) return c.json({ error: 'not_found' }, 404)
   const text = typeof body.text === 'string' ? body.text.replace(/\s+/g, ' ').trim().slice(0, COMMENT_MAX_LENGTH) : ''
   if (text.length < 2) return c.json({ error: 'invalid' }, 400)
+  if (user.feedBannedAt) return c.json({ error: 'banned' }, 403)
   const [post] = await db.select({ id: feedPosts.id, authorId: feedPosts.authorId }).from(feedPosts).where(and(eq(feedPosts.id, id), visible)).limit(1)
   if (!post) return c.json({ error: 'not_found' }, 404)
 
@@ -334,6 +335,7 @@ feedRoutes.post('/posts', async (c) => {
   const body = await c.req.json().catch(() => ({}))
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   if (planOf(user) === 'free') return c.json({ error: 'pro' }, 403)
+  if (user.feedBannedAt) return c.json({ error: 'banned' }, 403)
   const text = typeof body.text === 'string' ? body.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim().slice(0, POST_MAX_LENGTH) : ''
   if (text.length < 5) return c.json({ error: 'invalid' }, 400)
   // An answer to the weekly challenge: one per student, while the challenge is open. It does not use up the day's posts.

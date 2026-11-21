@@ -142,7 +142,8 @@
     },
     "discoverable": "Show my profile to other students",
     "discoverableHint": "On by default: other students can find you among practice partners, follow you and write to you. Switch it off if you want a private page. Your email and Telegram are never shown.",
-    "privacyNote": "Everything except the name is optional. The AI teachers see your name, goals and interests, so the conversation is about what matters to you."
+    "privacyNote": "Everything except the name is optional. The AI teachers see your name, goals and interests, so the conversation is about what matters to you.",
+    "hiddenByModerator": "A moderator has hidden your profile from other students. If you think this is a mistake, write to support."
   },
   "install": {
     "title": "Install the app on your iPhone",
@@ -758,7 +759,8 @@
       "active_other": "{{count}} students are writing this week",
       "newDot": "Something new"
     },
-    "noFollowing": "Posts by the students you follow will appear here. Find them with the 👥 button at the top."
+    "noFollowing": "Posts by the students you follow will appear here. Find them with the 👥 button at the top.",
+    "banned": "A moderator has switched off posts and comments for you."
   },
   "theme": {
     "title": "Appearance",

@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useState, type FormEvent, type ReactNode } from 'react'
 import { Link, useParams } from 'react-router'
 import { PRICES } from '../../shared/plans'
 import { api, ApiError } from '../lib/api'
@@ -154,8 +154,28 @@ export function UsersPage() {
   )
 }
 
+const smallButton = 'whitespace-nowrap rounded-md border border-slate-200 px-2 py-0.5 text-xs font-bold text-slate-600 hover:bg-slate-50 disabled:opacity-50'
+
+/** One thing the owner can allow or forbid for a student: what it is now, and a button to change it. */
+function Switch(props: { label: string; hint: ReactNode; on: boolean; pill: ReactNode; onLabel: string; offLabel: string; busy: boolean; onChange: (on: boolean) => void }) {
+  return (
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 py-3">
+      <div className="min-w-56 flex-1">
+        <p className="flex flex-wrap items-center gap-2 text-sm font-bold text-slate-900">
+          {props.label} {props.pill}
+        </p>
+        <p className="mt-0.5 text-xs leading-snug text-slate-500">{props.hint}</p>
+      </div>
+      <button type="button" className={`${ghostButtonClass} whitespace-nowrap`} disabled={props.busy} onClick={() => props.onChange(!props.on)}>
+        {props.on ? props.onLabel : props.offLabel}
+      </button>
+    </div>
+  )
+}
+
 interface UserDetail {
-  profile: { name: string | null; bio: string | null; city: string | null; age: number | null; gender: string | null; goals: string[]; interests: string[]; discoverable: boolean; photoVersion: number | null }
+  profile: { name: string | null; bio: string | null; city: string | null; age: number | null; gender: string | null; goals: string[]; interests: string[]; discoverable: boolean; photoVersion: number | null; photoChecked: boolean; hiddenByModerator: boolean }
+  activity: { posts: number; postsFlagged: number; comments: number; commentsFlagged: number; complaints: number; complaintsOpen: number; messagesStopped: number; blockedBy: number }
   user: {
     id: string
     email: string | null
@@ -165,6 +185,7 @@ interface UserDetail {
     telegramUsername: string | null
     dmBannedAt?: string | null
     dmRulesAt?: string | null
+    feedBannedAt?: string | null
     createdAt: string
     locale: string
     timezone: string | null
@@ -214,6 +235,17 @@ export function UserPage() {
     reload()
   }
 
+  async function send(path: string, body: object, question?: string) {
+    if (question && !window.confirm(question)) return
+    setBusy(true)
+    await api(`/admin/users/${id}/${path}`, body).catch(() => window.alert('Could not save. Try again.'))
+    setBusy(false)
+    reload()
+  }
+  const moderate = (action: string, question?: string) => send('profile', { action }, question)
+  const allow = (what: 'posting' | 'messaging', allowed: boolean, question: string) => send(what, { banned: !allowed }, question)
+  const { activity } = data
+
   return (
     <Page
       title={who(user)}
@@ -233,32 +265,102 @@ export function UserPage() {
         <Stat label="Review" value={num(data.review.total)} sub={`${num(data.review.due)} due now`} />
       </Stats>
 
-      <Card title="Profile" hint="What the student chose to tell about themselves.">
+      <Card title="Profile and moderation" hint="What the student chose to tell about themselves, and what you allow them to do. Every change here is written to the admin log.">
         <div className="flex flex-wrap items-start gap-4">
-          {data.profile.photoVersion ? (
-            <img src={`/api/profile/photo/${user.id}?v=${data.profile.photoVersion}`} alt="" className="h-20 w-20 rounded-full object-cover" />
-          ) : (
-            <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-400">no photo</span>
-          )}
-          <dl className="grid min-w-64 flex-1 grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-sm">
+          <div className="flex w-24 flex-col items-center gap-2">
+            {data.profile.photoVersion ? (
+              <a href={`/api/profile/photo/${user.id}?v=${data.profile.photoVersion}`} target="_blank" rel="noreferrer" title="Open the photo at full size">
+                <img src={`/api/profile/photo/${user.id}?v=${data.profile.photoVersion}`} alt="" className="h-20 w-20 rounded-full object-cover" />
+              </a>
+            ) : (
+              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-400">no photo</span>
+            )}
+            {data.profile.photoVersion && (
+              <>
+                {data.profile.photoChecked ? (
+                  <Pill tone="green">checked</Pill>
+                ) : (
+                  <button type="button" className={smallButton} disabled={busy} onClick={() => moderate('approve_photo')}>
+                    Photo is fine
+                  </button>
+                )}
+                <button type="button" className={smallButton} disabled={busy} onClick={() => moderate('remove_photo', 'Remove this photo? The student will see their initial instead and can upload another one.')}>
+                  Remove photo
+                </button>
+              </>
+            )}
+          </div>
+          <dl className="grid min-w-64 flex-1 grid-cols-[auto_1fr] items-center gap-x-4 gap-y-1.5 text-sm">
             {(
               [
-                ['Name', data.profile.name ?? '—'],
-                ['Age', data.profile.age === null ? '—' : String(data.profile.age)],
-                ['Gender', data.profile.gender ?? '—'],
-                ['City', data.profile.city ?? '—'],
-                ['Learning for', data.profile.goals.join(', ') || '—'],
-                ['Interests', data.profile.interests.join(', ') || '—'],
-                ['About', data.profile.bio ?? '—'],
-                ['Visible to other students', data.profile.discoverable ? 'yes' : 'no'],
+                ['Name', data.profile.name, 'remove_name', 'Remove this name? Other students will see "Student" until a new name is entered.'],
+                ['Age', data.profile.age === null ? null : String(data.profile.age), null, ''],
+                ['Gender', data.profile.gender, null, ''],
+                ['City', data.profile.city, 'remove_city', 'Remove the city from this profile?'],
+                ['Learning for', data.profile.goals.join(', ') || null, null, ''],
+                ['Interests', data.profile.interests.join(', ') || null, null, ''],
+                ['About', data.profile.bio, 'remove_bio', 'Remove the text this student wrote about themselves?'],
               ] as const
-            ).map(([label, value]) => (
+            ).map(([label, value, action, question]) => (
               <div key={label} className="contents">
                 <dt className="text-slate-500">{label}</dt>
-                <dd className="font-semibold text-slate-900">{value}</dd>
+                <dd className="flex flex-wrap items-center gap-2 font-semibold text-slate-900">
+                  <span className="break-words">{value ?? '—'}</span>
+                  {action && value && (
+                    <button type="button" className={smallButton} disabled={busy} onClick={() => moderate(action, question)}>
+                      Remove
+                    </button>
+                  )}
+                </dd>
               </div>
             ))}
           </dl>
+        </div>
+
+        <div className="mt-4 divide-y divide-slate-100 border-t border-slate-100">
+          <Switch
+            label="Visible to other students"
+            hint={
+              data.profile.hiddenByModerator
+                ? 'Hidden by you. The student cannot switch it back on: no name, photo or profile is shown to others, and they are not in practice partners.'
+                : data.profile.discoverable
+                  ? 'Others can find this student among practice partners and see the name, photo and profile.'
+                  : 'The student chose a private page. Switching it on here makes the profile visible again.'
+            }
+            on={data.profile.discoverable}
+            pill={data.profile.hiddenByModerator ? <Pill tone="red">hidden by you</Pill> : data.profile.discoverable ? <Pill tone="green">visible</Pill> : <Pill tone="grey">private (their choice)</Pill>}
+            onLabel="Hide the profile"
+            offLabel={data.profile.hiddenByModerator ? 'Allow it again' : 'Make visible'}
+            busy={busy}
+            onChange={(on) => moderate(on ? 'show' : 'hide', on ? 'Make this profile visible to other students?' : 'Hide this profile from other students? The student will not be able to switch it back on.')}
+          />
+          <Switch
+            label="Posts and comments"
+            hint={`${num(activity.posts)} posts (${num(activity.postsFlagged)} reported or hidden) · ${num(activity.comments)} comments (${num(activity.commentsFlagged)} reported or hidden)`}
+            on={!user.feedBannedAt}
+            pill={user.feedBannedAt ? <Pill tone="red">banned {date(user.feedBannedAt)}</Pill> : <Pill tone="green">allowed</Pill>}
+            onLabel="Ban from posting"
+            offLabel="Allow posting again"
+            busy={busy}
+            onChange={(on) => allow('posting', on, on ? 'Let this student write posts and comments again?' : 'Stop this student from writing posts and comments? They can still read the feed.')}
+          />
+          <Switch
+            label="Private messages"
+            hint={
+              <>
+                {num(activity.messagesStopped)} messages stopped by the check · {num(activity.complaints)} complaints ({num(activity.complaintsOpen)} open) · blocked by {num(activity.blockedBy)} students ·{' '}
+                <Link to={`/admin/messages?user=${user.id}`} className="font-semibold text-violet-700 hover:underline">
+                  read their conversations
+                </Link>
+              </>
+            }
+            on={!user.dmBannedAt}
+            pill={user.dmBannedAt ? <Pill tone="red">banned {date(user.dmBannedAt)}</Pill> : user.dmRulesAt ? <Pill tone="green">allowed</Pill> : <Pill tone="grey">has not accepted the rules yet</Pill>}
+            onLabel="Ban from messaging"
+            offLabel="Allow messaging again"
+            busy={busy}
+            onChange={(on) => allow('messaging', on, on ? 'Let this student write private messages again?' : 'Stop this student from writing private messages?')}
+          />
         </div>
       </Card>
 
