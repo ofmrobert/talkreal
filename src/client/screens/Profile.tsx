@@ -5,6 +5,7 @@ import { GOALS, INTERESTS, type Profile as ProfileData } from '../../shared/prof
 import { useAuth } from '../auth/AuthContext'
 import Achievements from '../components/Achievements'
 import Avatar from '../components/Avatar'
+import Verified, { OwnerTag } from '../components/Verified'
 import { BoltIcon, BookIcon, FlameIcon, MicIcon } from '../components/icons'
 import { api } from '../lib/api'
 
@@ -98,6 +99,8 @@ export default function Profile() {
           <div>
             <h1 className="flex flex-wrap items-center gap-2 text-2xl font-extrabold leading-tight">
               {name ?? t('profile.noName')}
+              {user.isAdmin && <Verified size={22} owner />}
+              {user.isAdmin && <OwnerTag />}
               {paid && <span className="rounded-full bg-night px-2.5 py-0.5 text-xs font-extrabold uppercase tracking-wide text-sun">👑 {t(`plans.name.${user.plan}`)}</span>}
             </h1>
             <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-bold text-ink/55">

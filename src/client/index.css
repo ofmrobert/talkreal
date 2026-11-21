@@ -312,3 +312,18 @@ body {
   .avatar-blink, .avatar-talk, .avatar-breathe, .bubble-in, .float-slow, .pop-in, .pulse-soft, .path-ring, .path-hop { animation: none; }
   .confetti { display: none; }
 }
+
+/* The founder's badge: gold with a slow moving shine. */
+.owner-shine {
+  background: linear-gradient(110deg, #f5b301 0%, #ffd866 35%, #fff3c4 50%, #ffd866 65%, #f5b301 100%);
+  background-size: 220% 100%;
+  animation: owner-shine 3.5s linear infinite;
+  box-shadow: 0 0 0 1px rgb(224 162 26 / 0.6), 0 1px 6px rgb(245 179 1 / 0.45);
+}
+@keyframes owner-shine {
+  from { background-position: 120% 0; }
+  to { background-position: -100% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .owner-shine { animation: none; }
+}

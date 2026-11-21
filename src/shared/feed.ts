@@ -29,6 +29,8 @@ export interface FeedFace {
   photoVersion: number | null
   /** A real teacher, verified by Talkreal. Shown with a checkmark. */
   teacher?: boolean
+  /** The founder of Talkreal. Shown with a gold checkmark; always also `teacher`. */
+  owner?: boolean
 }
 
 export interface FeedPost {

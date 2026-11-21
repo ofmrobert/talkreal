@@ -6,7 +6,7 @@ import { INTERESTS } from '../../../shared/profile'
 import { REPORT_REASONS, type Person, type ReportReason } from '../../../shared/social'
 import { api } from '../../lib/api'
 import Avatar from '../Avatar'
-import Verified from '../Verified'
+import Verified, { OwnerTag } from '../Verified'
 
 /** A student's name for others: the one they show, or "Student" and their short code. */
 export function useFaceName() {
@@ -75,10 +75,10 @@ export function PersonCard({ person, onChange }: { person: Person; onChange: (pe
         <div className="min-w-0 flex-1 leading-tight">
           <p className="flex items-center gap-1 text-base font-extrabold">
             <span className="truncate">{nameOf(face)}</span>
-            {face.teacher && <Verified />}
+            {face.teacher && <Verified owner={face.owner} />}
           </p>
           <p className="mt-1 flex flex-wrap items-center gap-1.5 text-xs font-extrabold text-ink/55">
-            {face.teacher && <span className="rounded-full bg-[#3D9BFF] px-2 py-0.5 text-white">{t('feed.teacher')}</span>}
+            {face.owner ? <OwnerTag small /> : face.teacher && <span className="rounded-full bg-[#3D9BFF] px-2 py-0.5 text-white">{t('feed.teacher')}</span>}
             {person.level && <span className="rounded-full bg-coral px-2 py-0.5 text-white">{person.level}</span>}
             {person.streak > 0 && <span>🔥 {person.streak}</span>}
             {person.city && <span className="truncate">📍 {person.city}</span>}

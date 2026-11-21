@@ -17,6 +17,9 @@ meRoutes.get('/', requireUser, async (c) => {
   if (!user) return c.json({ error: 'unauthorized' }, 401)
   const pii = await getPii(userId)
   const profile = await getProfile(userId)
+  const isAdmin = pii.email !== null && env.adminEmails.includes(pii.email.toLowerCase())
+  // The owner has everything a verified teacher has (polls, posts open to everyone), without asking.
+  if (isAdmin && !user.teacherAt) await db.update(users).set({ teacherAt: new Date() }).where(eq(users.id, userId))
   // Opening the app keeps the student logged in. A failure here must not block the app.
   await renewSession(c).catch((err) => console.error('Could not renew the session:', err))
 
@@ -30,7 +33,7 @@ meRoutes.get('/', requireUser, async (c) => {
     profileSet: user.profileSetAt !== null,
     level: user.level,
     /** True for the owners listed in ADMIN_EMAILS: the app then shows the way to the admin panel. */
-    isAdmin: pii.email !== null && env.adminEmails.includes(pii.email.toLowerCase()),
+    isAdmin,
     plan: planOf(user),
     /** When the paid plan runs out; null on the free plan. */
     planUntil: planOf(user) === 'free' ? null : user.planUntil,

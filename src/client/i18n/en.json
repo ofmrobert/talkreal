@@ -775,7 +775,9 @@
       "hintOpinion": "This is an opinion poll now. Tap ✓ next to an option if there is a right answer.",
       "hintQuiz": "This is a quiz: students see the right answer after their own.",
       "why": "Why? A short explanation (optional)"
-    }
+    },
+    "owner": "Founder",
+    "ownerFull": "Founder of Talkreal"
   },
   "theme": {
     "title": "Appearance",

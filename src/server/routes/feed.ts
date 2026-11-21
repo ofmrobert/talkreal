@@ -5,7 +5,8 @@ import { requireUser, type AuthEnv } from '../auth/sessions'
 import { isMember } from '../billing/plans'
 import { db } from '../db/client'
 import { feedComments, feedImages, feedLikes, feedPostReports, feedPosts, feedReports, feedVotes, follows, users } from '../db/schema'
-import { publicFaces } from '../pii'
+import { env } from '../env'
+import { publicFaces, userIdsByEmails } from '../pii'
 import { recordActivity } from '../progress/activity'
 import { notices } from '../reminders/notify'
 import { blockedIds, followedIds, unreadFor } from '../social/dm'
@@ -30,15 +31,23 @@ async function load(userId: string) {
   return user
 }
 
+/** The founder's account(s): the people named in ADMIN_EMAILS. Looked up at most once a minute. */
+let owners: { ids: Set<string>; at: number } | null = null
+async function ownerIds(): Promise<Set<string>> {
+  if (!owners || Date.now() - owners.at > 60_000) owners = { ids: new Set(await userIdsByEmails(env.adminEmails)), at: Date.now() }
+  return owners.ids
+}
+
 /** How someone appears to other students: their name and photo if they allowed it, otherwise "Student" and a short code. */
 export async function facesFor(userIds: string[], viewer: string): Promise<Map<string, FeedFace>> {
   const known = await publicFaces(userIds)
   const teachers = await teachersAmong(userIds)
+  const founders = await ownerIds()
   return new Map(
     userIds.map((id) => {
       const face = known.get(id)
       const own = id === viewer
-      return [id, { userId: id, name: (own ? face?.ownName : face?.name) ?? null, tag: id.replace(/-/g, '').slice(0, 3).toUpperCase(), photoVersion: (own ? face?.ownPhoto : face?.photo) ?? null, ...(teachers.has(id) ? { teacher: true } : {}) }]
+      return [id, { userId: id, name: (own ? face?.ownName : face?.name) ?? null, tag: id.replace(/-/g, '').slice(0, 3).toUpperCase(), photoVersion: (own ? face?.ownPhoto : face?.photo) ?? null, ...(teachers.has(id) || founders.has(id) ? { teacher: true } : {}), ...(founders.has(id) ? { owner: true } : {}) }]
     }),
   )
 }

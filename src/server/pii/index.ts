@@ -66,6 +66,13 @@ export async function createUserWithTelegram(
   }
 }
 
+/** The accounts of the people with these emails (the owners named in ADMIN_EMAILS). */
+export async function userIdsByEmails(emails: string[]): Promise<string[]> {
+  if (emails.length === 0) return []
+  const rows = await db.select({ userId: userPii.userId }).from(userPii).where(inArray(userPii.email, emails.map(normalizeEmail)))
+  return rows.map((row) => row.userId)
+}
+
 /** Where the bot can write to this student, if they have connected Telegram. */
 export async function getTelegramId(userId: string): Promise<string | null> {
   const rows = await db.select({ telegramId: userPii.telegramId }).from(userPii).where(eq(userPii.userId, userId)).limit(1)

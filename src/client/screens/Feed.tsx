@@ -6,7 +6,7 @@ import { useAuth } from '../auth/AuthContext'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import SpeakButton from '../components/lesson/SpeakButton'
-import Verified from '../components/Verified'
+import Verified, { OwnerTag } from '../components/Verified'
 import { api, ApiError } from '../lib/api'
 import { markFeedSeen, useFeedNews } from '../lib/feedNews'
 import { playCorrect, playWrong } from '../lib/sounds'
@@ -150,14 +150,14 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
       {comments?.map((comment) => (
         <div key={comment.id} className="bubble-in flex items-start gap-2">
           <Avatar userId={comment.face.userId} name={comment.face.name} photoVersion={comment.face.photoVersion} size={34} />
-          <div className={`min-w-0 flex-1 rounded-2xl rounded-tl-md px-3 py-2 ${comment.face.teacher ? 'bg-[#3D9BFF]/10 ring-1 ring-inset ring-[#3D9BFF]/30' : 'bg-cream'}`}>
+          <div className={`min-w-0 flex-1 rounded-2xl rounded-tl-md px-3 py-2 ${comment.face.owner ? 'bg-sun/15 ring-1 ring-inset ring-sun-dark/50' : comment.face.teacher ? 'bg-[#3D9BFF]/10 ring-1 ring-inset ring-[#3D9BFF]/30' : 'bg-cream'}`}>
             <p className="flex items-baseline justify-between gap-2 text-xs font-extrabold text-ink/55">
               <span className="flex min-w-0 items-center gap-1">
                 <span className="truncate">{comment.face.name ?? `${t('league.student')} ${comment.face.tag}`}</span>
                 {comment.face.teacher && (
                   <>
-                    <Verified size={14} />
-                    <span className="shrink-0 text-[#1F7AD6]">{t('feed.teacher')}</span>
+                    <Verified size={14} owner={comment.face.owner} />
+                    {comment.face.owner ? <OwnerTag small /> : <span className="shrink-0 text-[#1F7AD6]">{t('feed.teacher')}</span>}
                   </>
                 )}
               </span>
@@ -557,15 +557,16 @@ export function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLef
       {post.author ? (
         <header className="flex items-center gap-2.5">
           <button type="button" onClick={() => navigate(`/u/${post.author!.userId}`)} className="flex min-w-0 flex-1 items-center gap-2.5 text-left">
-            <Avatar userId={post.author.userId} name={post.author.name} photoVersion={post.author.photoVersion} size={44} />
+            <Avatar userId={post.author.userId} name={post.author.name} photoVersion={post.author.photoVersion} size={44} className={post.author.owner ? 'ring-2 ring-sun-dark ring-offset-2 ring-offset-card' : undefined} />
             <span className="min-w-0 flex-1 leading-tight">
               <span className="flex items-center gap-1 text-base font-extrabold">
                 <span className="truncate">{post.author.name ?? `${t('league.student')} ${post.author.tag}`}</span>
-                {post.author.teacher && <Verified />}
+                {post.author.teacher && <Verified owner={post.author.owner} />}
               </span>
-              <span className="block text-xs font-bold text-ink/45">
+              <span className="mt-0.5 flex items-center gap-1.5 text-xs font-bold text-ink/45">
                 {when}
-                {post.author.teacher && <span className="text-[#1F7AD6]"> · {t('feed.teacher')}</span>}
+                {post.author.owner && <OwnerTag small />}
+                {post.author.teacher && !post.author.owner && <span className="text-[#1F7AD6]"> · {t('feed.teacher')}</span>}
               </span>
             </span>
           </button>
