@@ -360,6 +360,7 @@ adminRoutes.get('/users/:id', async (c) => {
       dmBannedAt: user.dmBannedAt,
       dmRulesAt: user.dmRulesAt,
       feedBannedAt: user.feedBannedAt,
+      teacherAt: user.teacherAt,
     },
     progress: progress.map((p) => ({ id: p.lessonId, accuracy: p.bestAccuracy, completions: p.completions, last: p.lastCompletedAt })),
     usage: usage.map((u) => ({ day: u.day, lessons: u.lessonsDone, xp: u.xp, voiceMinutes: Math.round(u.voiceSeconds / 60), messages: u.textMessages })),
@@ -402,6 +403,19 @@ adminRoutes.post('/users/:id/profile', async (c) => {
   else if (body.action === 'approve_photo') await approvePhoto(id)
   else return c.json({ error: 'invalid' }, 400)
   await log(c, `profile_${body.action}`, id)
+  return c.json({ ok: true })
+})
+
+/** Makes someone a verified teacher (a checkmark, polls, posts open to everyone), or takes it away. */
+adminRoutes.post('/users/:id/teacher', async (c) => {
+  const id = c.req.param('id')
+  const body = await c.req.json().catch(() => ({}))
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const changed = await db.update(users).set({ teacherAt: body.on === true ? new Date() : null }).where(eq(users.id, id)).returning({ id: users.id })
+  if (changed.length === 0) return c.json({ error: 'not_found' }, 404)
+  // A teacher is there to be seen: the profile is made visible.
+  if (body.on === true) await setProfileVisibility(id, true)
+  await log(c, body.on === true ? 'teacher_verified' : 'teacher_removed', id)
   return c.json({ ok: true })
 })
 
@@ -471,9 +485,22 @@ adminRoutes.get('/feed', async (c) => {
            (select count(*)::int from feed_likes) as likes,
            (select count(*)::int from feed_votes) as votes
   `)
+  // The verified teachers and how much they do: for deciding who is worth their pay.
+  const teachers = await rows<Record<string, unknown> & { id: string }>(sql`
+    select u.id, u.teacher_at as since, u.last_active_date as "lastActive",
+           (select count(*)::int from feed_posts p where p.author_id = u.id) as posts,
+           (select count(*)::int from feed_posts p where p.author_id = u.id and p.created_at > now() - interval '7 days') as "posts7d",
+           (select count(*)::int from feed_comments m where m.user_id = u.id and m.created_at > now() - interval '7 days') as "comments7d",
+           (select count(*)::int from feed_likes l join feed_posts p on p.id = l.post_id where p.author_id = u.id) as likes,
+           (select count(*)::int from feed_votes v join feed_posts p on p.id = v.post_id where p.author_id = u.id) as votes,
+           (select count(*)::int from feed_comments m join feed_posts p on p.id = m.post_id where p.author_id = u.id and m.user_id <> u.id) as replies,
+           (select count(*)::int from follows f where f.followee_id = u.id) as followers
+    from users u where u.teacher_at is not null order by u.teacher_at`)
+  const teacherPii = await getPiiFor(teachers.map((t) => t.id))
   return c.json({
     writer: writerName(),
     counts,
+    teachers: teachers.map((t) => ({ ...t, who: teacherPii.get(t.id)?.displayName ?? teacherPii.get(t.id)?.email ?? t.id.slice(0, 8) })),
     posts: posts.map((p) => ({ ...p, who: typeof p.authorId === 'string' ? who(p.authorId) : null })),
     comments: comments.map((m) => ({ ...m, who: who(m.userId) })),
   })

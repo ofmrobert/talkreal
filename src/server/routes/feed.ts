@@ -1,10 +1,10 @@
 import { and, desc, eq, gt, gte, inArray, isNotNull, isNull, lt, lte, ne, notInArray, or, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
-import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, type ChallengeState, type FeedComment, type FeedFace, type FeedPost, type FeedSummary, type PostKind } from '../../shared/feed'
+import { COMMENT_MAX_LENGTH, FREE_COMMENTS_PER_WEEK, POLL_EXPLANATION_MAX_LENGTH, POLL_MAX_OPTIONS, POLL_MIN_OPTIONS, POLL_OPTION_MAX_LENGTH, POLL_XP, POST_MAX_LENGTH, POSTS_PER_DAY, REPORTS_TO_HIDE, TEACHER_POSTS_PER_DAY, type ChallengeState, type FeedComment, type FeedFace, type FeedPost, type FeedSummary, type PostKind } from '../../shared/feed'
 import { requireUser, type AuthEnv } from '../auth/sessions'
-import { planOf } from '../billing/plans'
+import { isMember } from '../billing/plans'
 import { db } from '../db/client'
-import { feedComments, feedImages, feedLikes, feedPostReports, feedPosts, feedReports, feedVotes, users } from '../db/schema'
+import { feedComments, feedImages, feedLikes, feedPostReports, feedPosts, feedReports, feedVotes, follows, users } from '../db/schema'
 import { publicFaces } from '../pii'
 import { recordActivity } from '../progress/activity'
 import { notices } from '../reminders/notify'
@@ -15,6 +15,8 @@ import { localDay, safeTimezone } from '../progress/streak'
 const PAGE = 10
 /** A paying student may write this many comments a day: far more than a conversation needs, and a brake on flooding. */
 const COMMENTS_PER_DAY = 30
+/** A teacher answers many students. */
+const TEACHER_COMMENTS_PER_DAY = 300
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000
 
 export const feedRoutes = new Hono<AuthEnv>()
@@ -31,13 +33,26 @@ async function load(userId: string) {
 /** How someone appears to other students: their name and photo if they allowed it, otherwise "Student" and a short code. */
 export async function facesFor(userIds: string[], viewer: string): Promise<Map<string, FeedFace>> {
   const known = await publicFaces(userIds)
+  const teachers = await teachersAmong(userIds)
   return new Map(
     userIds.map((id) => {
       const face = known.get(id)
       const own = id === viewer
-      return [id, { userId: id, name: (own ? face?.ownName : face?.name) ?? null, tag: id.replace(/-/g, '').slice(0, 3).toUpperCase(), photoVersion: (own ? face?.ownPhoto : face?.photo) ?? null }]
+      return [id, { userId: id, name: (own ? face?.ownName : face?.name) ?? null, tag: id.replace(/-/g, '').slice(0, 3).toUpperCase(), photoVersion: (own ? face?.ownPhoto : face?.photo) ?? null, ...(teachers.has(id) ? { teacher: true } : {}) }]
     }),
   )
+}
+
+/** Which of these people are verified teachers. */
+async function teachersAmong(userIds: string[]): Promise<Set<string>> {
+  if (userIds.length === 0) return new Set()
+  const rows = await db.select({ id: users.id }).from(users).where(and(inArray(users.id, userIds), isNotNull(users.teacherAt)))
+  return new Set(rows.map((row) => row.id))
+}
+
+/** Every verified teacher. There are few of them. */
+async function allTeachers(): Promise<string[]> {
+  return (await db.select({ id: users.id }).from(users).where(isNotNull(users.teacherAt))).map((row) => row.id)
 }
 
 /** How many comments a free student has left this week. Null = no limit (a paid plan). */
@@ -51,20 +66,20 @@ async function freeCommentsLeft(userId: string, paid: boolean): Promise<number |
 }
 
 /** How many posts of their own the student may still write today. */
-async function postsLeftToday(userId: string): Promise<number> {
+async function postsLeftToday(userId: string, teacher = false): Promise<number> {
   const [row] = await db
     .select({ n: sql<number>`count(*)::int` })
     .from(feedPosts)
     .where(and(eq(feedPosts.authorId, userId), isNull(feedPosts.challengeId), gte(feedPosts.createdAt, new Date(Date.now() - 24 * 60 * 60 * 1000))))
-  return Math.max(0, POSTS_PER_DAY - (row?.n ?? 0))
+  return Math.max(0, (teacher ? TEACHER_POSTS_PER_DAY : POSTS_PER_DAY) - (row?.n ?? 0))
 }
 
-/** One post as the viewer may see it. A free student gets a student's post without its words. */
+/** One post as the viewer may see it. A free student gets a student's post without its words; a teacher's post is open to everyone. */
 function shape(post: typeof feedPosts.$inferSelect, viewer: string, paid: boolean, faces: Map<string, FeedFace>) {
   const mine = post.authorId === viewer
-  const locked = post.authorId !== null && !paid && !mine
+  const locked = post.authorId !== null && !paid && !mine && !faces.get(post.authorId)?.teacher
   return {
-    kind: (post.authorId ? 'student' : post.kind) as PostKind | 'challenge' | 'student',
+    kind: (post.authorId ? (post.kind === 'poll' ? 'poll' : 'student') : post.kind) as PostKind | 'challenge' | 'student',
     answerTo: post.challengeId,
     prize: post.prize,
     author: post.authorId ? (faces.get(post.authorId) ?? null) : null,
@@ -85,15 +100,19 @@ feedRoutes.get('/', async (c) => {
   const author = c.req.query('author')
   // "following": posts by the people the student follows. An id that cannot exist keeps the list empty when they follow nobody.
   const followed = from === 'following' ? await followedIds(user.id) : []
+  // Teachers write for Talkreal: their posts sit with the official ones, not with the students'.
+  const teachers = from === 'official' || from === 'students' ? await allTeachers() : []
   const whose =
     answersTo && isUuid(answersTo)
       ? eq(feedPosts.challengeId, answersTo)
       : author && isUuid(author)
         ? eq(feedPosts.authorId, author)
         : from === 'official'
-          ? isNull(feedPosts.authorId)
+          ? teachers.length
+            ? or(isNull(feedPosts.authorId), inArray(feedPosts.authorId, teachers))
+            : isNull(feedPosts.authorId)
           : from === 'students'
-            ? isNotNull(feedPosts.authorId)
+            ? and(isNotNull(feedPosts.authorId), teachers.length ? notInArray(feedPosts.authorId, teachers) : undefined)
             : from === 'following'
               ? inArray(feedPosts.authorId, followed.length ? followed : ['00000000-0000-0000-0000-000000000000'])
               : undefined
@@ -102,7 +121,8 @@ feedRoutes.get('/', async (c) => {
   const unblocked = blocked.length ? or(isNull(feedPosts.authorId), notInArray(feedPosts.authorId, blocked)) : undefined
   const posts = await db.select().from(feedPosts).where(and(visible, cursor, whose, unblocked)).orderBy(desc(feedPosts.publishAt)).limit(PAGE)
   const ids = posts.map((p) => p.id)
-  const paid = planOf(user) !== 'free'
+  const paid = isMember(user)
+  const teacher = user.teacherAt !== null
 
   const empty = { likes: [], mine: [], votes: [], myVotes: [], comments: [], recent: [] }
   const data = ids.length
@@ -172,7 +192,9 @@ feedRoutes.get('/', async (c) => {
     more: posts.length === PAGE ? posts[posts.length - 1].publishAt.toISOString() : null,
     /** Reading and writing comments, and writing posts, are part of the paid plans. */
     canDiscuss: paid,
-    postsLeft: paid ? await postsLeftToday(user.id) : 0,
+    /** A verified teacher: may add a poll to a post. */
+    teacher,
+    postsLeft: paid ? await postsLeftToday(user.id, teacher) : 0,
     freeCommentsLeft: await freeCommentsLeft(user.id, paid),
     /** People who commented in the last week: the size of the conversation a free student is missing. */
     activeThisWeek: (await db.select({ n: sql<number>`count(distinct ${feedComments.userId})::int` }).from(feedComments).where(and(eq(feedComments.status, 'visible'), gte(feedComments.createdAt, new Date(Date.now() - WEEK_MS)))))[0]?.n ?? 0,
@@ -232,7 +254,8 @@ feedRoutes.post('/:id/like', async (c) => {
   if (!post) return c.json({ error: 'not_found' }, 404)
   if (post.authorId && post.authorId !== userId) {
     const liker = await load(userId)
-    if (!liker || planOf(liker) === 'free') return c.json({ error: 'pro' }, 403)
+    // Students' posts are the community; a teacher's post is open to everyone.
+    if (!liker || (!isMember(liker) && !(await teachersAmong([post.authorId])).has(post.authorId))) return c.json({ error: 'pro' }, 403)
   }
   const removed = await db.delete(feedLikes).where(and(eq(feedLikes.postId, id), eq(feedLikes.userId, userId))).returning({ id: feedLikes.postId })
   if (removed.length === 0) {
@@ -278,7 +301,7 @@ feedRoutes.get('/:id/comments', async (c) => {
   const id = c.req.param('id')
   const user = await load(c.get('userId'))
   if (!user || !isUuid(id)) return c.json({ error: 'not_found' }, 404)
-  const paid = planOf(user) !== 'free'
+  const paid = isMember(user)
   const rows = await db
     .select()
     .from(feedComments)
@@ -305,19 +328,21 @@ feedRoutes.post('/:id/comments', async (c) => {
   const [post] = await db.select({ id: feedPosts.id, authorId: feedPosts.authorId }).from(feedPosts).where(and(eq(feedPosts.id, id), visible)).limit(1)
   if (!post) return c.json({ error: 'not_found' }, 404)
 
-  const paid = planOf(user) !== 'free'
-  // The free comment of the week is for the Talkreal account's posts; students' posts are the community itself.
-  if (!paid && post.authorId && post.authorId !== user.id) return c.json({ error: 'pro' }, 403)
+  const paid = isMember(user)
+  const teacher = user.teacherAt !== null
+  // The free comment of the week is for the posts of Talkreal and its teachers; students' posts are the community itself.
+  if (!paid && post.authorId && post.authorId !== user.id && !(await teachersAmong([post.authorId])).has(post.authorId)) return c.json({ error: 'pro' }, 403)
   if ((await freeCommentsLeft(user.id, paid)) === 0) return c.json({ error: 'pro' }, 403)
   const [today] = await db
     .select({ n: sql<number>`count(*)::int` })
     .from(feedComments)
     .where(and(eq(feedComments.userId, user.id), gte(feedComments.createdAt, new Date(Date.now() - 24 * 60 * 60 * 1000))))
-  if ((today?.n ?? 0) >= COMMENTS_PER_DAY) return c.json({ error: 'slow_down' }, 429)
+  if ((today?.n ?? 0) >= (teacher ? TEACHER_COMMENTS_PER_DAY : COMMENTS_PER_DAY)) return c.json({ error: 'slow_down' }, 429)
 
   const verdict = await review(text)
   if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
-  if (verdict.better && body.confirm !== true) return c.json({ suggestion: verdict.better })
+  // A teacher's English is not corrected.
+  if (verdict.better && body.confirm !== true && !teacher) return c.json({ suggestion: verdict.better })
 
   const [row] = await db.insert(feedComments).values({ postId: id, userId: user.id, text }).returning()
   if (post.authorId && post.authorId !== user.id) notices.comment(post.authorId, id, (await facesFor([user.id], post.authorId)).get(user.id)?.name ?? null)
@@ -334,8 +359,9 @@ feedRoutes.post('/posts', async (c) => {
   const user = await load(c.get('userId'))
   const body = await c.req.json().catch(() => ({}))
   if (!user) return c.json({ error: 'unauthorized' }, 401)
-  if (planOf(user) === 'free') return c.json({ error: 'pro' }, 403)
+  if (!isMember(user)) return c.json({ error: 'pro' }, 403)
   if (user.feedBannedAt) return c.json({ error: 'banned' }, 403)
+  const teacher = user.teacherAt !== null
   const text = typeof body.text === 'string' ? body.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim().slice(0, POST_MAX_LENGTH) : ''
   if (text.length < 5) return c.json({ error: 'invalid' }, 400)
   // An answer to the weekly challenge: one per student, while the challenge is open. It does not use up the day's posts.
@@ -346,20 +372,39 @@ feedRoutes.post('/posts', async (c) => {
     if (!challenge) return c.json({ error: 'closed' }, 410)
     const [already] = await db.select({ id: feedPosts.id }).from(feedPosts).where(and(eq(feedPosts.challengeId, challengeId), eq(feedPosts.authorId, user.id))).limit(1)
     if (already) return c.json({ error: 'answered' }, 409)
-  } else if ((await postsLeftToday(user.id)) === 0) return c.json({ error: 'slow_down' }, 429)
+  } else if ((await postsLeftToday(user.id, teacher)) === 0) return c.json({ error: 'slow_down' }, 429)
 
-  const verdict = await review(text, POST_MAX_LENGTH)
+  // A poll: only a verified teacher may add one. With `answer` it is a quiz; without, a question of opinion.
+  let poll: { options: string[]; answer?: number; explanation?: { ru: string; en: string } } | null = null
+  if (body.poll !== undefined && body.poll !== null) {
+    if (!teacher || challengeId) return c.json({ error: 'invalid' }, 400)
+    const options: string[] = Array.isArray(body.poll.options) ? body.poll.options.map((o: unknown) => (typeof o === 'string' ? o.replace(/\s+/g, ' ').trim().slice(0, POLL_OPTION_MAX_LENGTH) : '')).filter(Boolean) : []
+    if (options.length < POLL_MIN_OPTIONS || options.length > POLL_MAX_OPTIONS || new Set(options.map((o) => o.toLowerCase())).size !== options.length) return c.json({ error: 'invalid' }, 400)
+    const answer = Number.isInteger(body.poll.answer) && body.poll.answer >= 0 && body.poll.answer < options.length ? (body.poll.answer as number) : undefined
+    const why = typeof body.poll.explanation === 'string' ? body.poll.explanation.replace(/\s+/g, ' ').trim().slice(0, POLL_EXPLANATION_MAX_LENGTH) : ''
+    poll = { options, ...(answer === undefined ? {} : { answer }), ...(why ? { explanation: { ru: why, en: why } } : {}) }
+  }
+
+  const verdict = await review(poll ? `${text}\n${poll.options.join('\n')}${poll.explanation ? `\n${poll.explanation.en}` : ''}`.slice(0, POST_MAX_LENGTH * 2) : text, POST_MAX_LENGTH * (poll ? 2 : 1))
   if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
-  if (verdict.better && body.confirm !== true) return c.json({ suggestion: verdict.better })
+  // A teacher's English is not corrected.
+  if (verdict.better && body.confirm !== true && !teacher) return c.json({ suggestion: verdict.better })
 
   const [row] = await db
     .insert(feedPosts)
     // Shown a moment in the past, so it is in the feed the instant it is saved.
-    .values({ kind: 'student', body: { emoji: '', title: { ru: '', en: '' }, text: { ru: text, en: text } }, authorId: user.id, challengeId, publishAt: new Date(Date.now() - 1000), writtenBy: 'student' })
+    .values({ kind: poll ? 'poll' : 'student', body: { emoji: '', title: { ru: '', en: '' }, text: { ru: text, en: text }, ...(poll ?? {}) }, authorId: user.id, challengeId, publishAt: new Date(Date.now() - 1000), writtenBy: teacher ? 'teacher' : 'student' })
     .returning()
   const faces = await facesFor([user.id], user.id)
-  const post: FeedPost = { id: row.id, ...shape(row, user.id, true, faces), publishedAt: row.publishAt.toISOString(), hasImage: false, likes: 0, liked: false, vote: null, votes: null, comments: 0, commenters: [] }
-  return c.json({ post, postsLeft: await postsLeftToday(user.id) })
+  const seen = shape(row, user.id, true, faces)
+  // As in the feed: the right answer of a poll stays on the server until it is answered.
+  const post: FeedPost = { id: row.id, ...seen, body: poll ? { ...seen.body, answer: undefined, explanation: undefined } : seen.body, publishedAt: row.publishAt.toISOString(), hasImage: false, likes: 0, liked: false, vote: null, votes: null, comments: 0, commenters: [] }
+  // The people who follow a teacher hear about the teacher's new post.
+  if (teacher && !challengeId) {
+    const followers = await db.select({ id: follows.followerId }).from(follows).where(eq(follows.followeeId, user.id)).limit(2000)
+    for (const follower of followers) notices.teacherPost(follower.id, user.id, faces.get(user.id)?.name ?? null, Boolean(poll))
+  }
+  return c.json({ post, postsLeft: await postsLeftToday(user.id, teacher) })
 })
 
 /** Removes the student's own post, with its likes and comments. */

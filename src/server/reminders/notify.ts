@@ -87,6 +87,17 @@ export const notices = {
       '/feed',
       { key: `like:${postId}`, forMs: 12 * HOUR },
     ),
+  teacherPost: (userId: string, teacherId: string, name: string | null, poll: boolean) =>
+    notify(
+      userId,
+      'feed',
+      (lang) =>
+        lang === 'en'
+          ? { title: `${name ?? 'Your teacher'} ${poll ? 'asks a question 🗳' : 'wrote a new post ✍️'}`, body: poll ? 'Answer it and see what the others chose.' : 'Read it and answer in English.' }
+          : { title: `${name ?? 'Преподаватель'}: ${poll ? 'новый вопрос 🗳' : 'новый пост ✍️'}`, body: poll ? 'Ответьте и узнайте, что выбрали другие.' : 'Прочитайте и ответьте по-английски.' },
+      '/feed',
+      { key: `tpost:${teacherId}:${userId}`, forMs: 6 * HOUR },
+    ),
   prize: (userId: string, place: number, xp: number) =>
     notify(
       userId,

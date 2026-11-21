@@ -186,6 +186,7 @@ interface UserDetail {
     dmBannedAt?: string | null
     dmRulesAt?: string | null
     feedBannedAt?: string | null
+    teacherAt?: string | null
     createdAt: string
     locale: string
     timezone: string | null
@@ -318,6 +319,16 @@ export function UserPage() {
         </div>
 
         <div className="mt-4 divide-y divide-slate-100 border-t border-slate-100">
+          <Switch
+            label="Verified teacher"
+            hint="A real teacher who works with you. They get a blue checkmark next to their name, can add polls and quizzes to posts, everyone (free students too) can read and answer their posts, and they can post, comment and message without a paid plan. Their followers are notified of new posts."
+            on={Boolean(user.teacherAt)}
+            pill={user.teacherAt ? <Pill tone="violet">✓ teacher since {date(user.teacherAt)}</Pill> : <Pill tone="grey">student</Pill>}
+            onLabel="Remove teacher status"
+            offLabel="Make a verified teacher"
+            busy={busy}
+            onChange={(on) => send('teacher', { on }, on ? 'Make this person a verified teacher? Their profile becomes visible to everyone and gets a checkmark.' : 'Remove the teacher checkmark from this person? Their old posts stay, as ordinary posts.')}
+          />
           <Switch
             label="Visible to other students"
             hint={

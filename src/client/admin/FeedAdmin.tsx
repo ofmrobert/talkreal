@@ -42,6 +42,7 @@ interface AdminComment {
 interface FeedAdminData {
   writer: string | null
   counts: Record<string, number>
+  teachers: { id: string; who: string; since: string; lastActive: string | null; posts: number; posts7d: number; comments7d: number; likes: number; votes: number; replies: number; followers: number }[]
   posts: AdminPost[]
   comments: AdminComment[]
 }
@@ -217,6 +218,47 @@ export function FeedPage() {
         <Stat label="Quiz answers" value={num(data.counts.votes)} />
       </Stats>
       {note && <p className="text-sm font-semibold text-slate-600">{note}</p>}
+
+      <Card title="Verified teachers" hint="Real teachers with a checkmark, and how much each one does. To add one, open the person in Students and press “Make a verified teacher”.">
+        {data.teachers.length === 0 ? (
+          <p className="text-sm text-slate-400">No teachers yet.</p>
+        ) : (
+          <Table>
+            <thead>
+              <tr>
+                <Th>Teacher</Th>
+                <Th right>Posts this week</Th>
+                <Th right>Comments this week</Th>
+                <Th right>Posts in total</Th>
+                <Th right>Likes received</Th>
+                <Th right>Poll answers</Th>
+                <Th right>Student comments</Th>
+                <Th right>Followers</Th>
+                <Th>Last active</Th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.teachers.map((teacher) => (
+                <tr key={teacher.id}>
+                  <Td>
+                    <Link to={`/admin/users/${teacher.id}`} className="font-semibold text-violet-700 hover:underline">
+                      ✓ {teacher.who}
+                    </Link>
+                  </Td>
+                  <Td right className="font-bold text-slate-900">{num(teacher.posts7d)}</Td>
+                  <Td right className="font-bold text-slate-900">{num(teacher.comments7d)}</Td>
+                  <Td right>{num(teacher.posts)}</Td>
+                  <Td right>{num(teacher.likes)}</Td>
+                  <Td right>{num(teacher.votes)}</Td>
+                  <Td right>{num(teacher.replies)}</Td>
+                  <Td right>{num(teacher.followers)}</Td>
+                  <Td className="whitespace-nowrap">{teacher.lastActive ?? '—'}</Td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        )}
+      </Card>
 
       {editing && (
         <Card title="Edit the post" hint="Both language versions are shown to students, depending on the language of their app.">

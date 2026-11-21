@@ -1,11 +1,12 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
-import { CHALLENGE_PRIZES, COMMENT_MAX_LENGTH, POST_MAX_LENGTH, type FeedComment, type FeedFace, type FeedPost } from '../../shared/feed'
+import { CHALLENGE_PRIZES, COMMENT_MAX_LENGTH, POLL_EXPLANATION_MAX_LENGTH, POLL_MAX_OPTIONS, POLL_MIN_OPTIONS, POLL_OPTION_MAX_LENGTH, POST_MAX_LENGTH, type FeedComment, type FeedFace, type FeedPost } from '../../shared/feed'
 import { useAuth } from '../auth/AuthContext'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import SpeakButton from '../components/lesson/SpeakButton'
+import Verified from '../components/Verified'
 import { api, ApiError } from '../lib/api'
 import { markFeedSeen, useFeedNews } from '../lib/feedNews'
 import { playCorrect, playWrong } from '../lib/sounds'
@@ -14,6 +15,8 @@ interface FeedData {
   posts: FeedPost[]
   more: string | null
   canDiscuss: boolean
+  /** The viewer is a verified teacher. */
+  teacher?: boolean
   freeCommentsLeft: number | null
   activeThisWeek: number
   postsLeft: number
@@ -147,9 +150,17 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
       {comments?.map((comment) => (
         <div key={comment.id} className="bubble-in flex items-start gap-2">
           <Avatar userId={comment.face.userId} name={comment.face.name} photoVersion={comment.face.photoVersion} size={34} />
-          <div className="min-w-0 flex-1 rounded-2xl rounded-tl-md bg-cream px-3 py-2">
+          <div className={`min-w-0 flex-1 rounded-2xl rounded-tl-md px-3 py-2 ${comment.face.teacher ? 'bg-[#3D9BFF]/10 ring-1 ring-inset ring-[#3D9BFF]/30' : 'bg-cream'}`}>
             <p className="flex items-baseline justify-between gap-2 text-xs font-extrabold text-ink/55">
-              <span className="truncate">{comment.face.name ?? `${t('league.student')} ${comment.face.tag}`}</span>
+              <span className="flex min-w-0 items-center gap-1">
+                <span className="truncate">{comment.face.name ?? `${t('league.student')} ${comment.face.tag}`}</span>
+                {comment.face.teacher && (
+                  <>
+                    <Verified size={14} />
+                    <span className="shrink-0 text-[#1F7AD6]">{t('feed.teacher')}</span>
+                  </>
+                )}
+              </span>
               {comment.mine ? (
                 <button type="button" onClick={() => remove(comment.id)} className="shrink-0 font-bold text-ink/40 underline">
                   {t('feed.delete')}
@@ -212,24 +223,36 @@ function Thread({ post, canDiscuss, freeLeft, onCount, onFreeLeft }: ThreadProps
 }
 
 /** Where a paying student writes a post of their own. The AI reads it first, as with comments. */
-function Composer({ left, onPosted, challengeId }: { left: number; onPosted: (post: FeedPost, left: number) => void; challengeId?: string }) {
+function Composer({ left, onPosted, challengeId, teacher }: { left: number; onPosted: (post: FeedPost, left: number) => void; challengeId?: string; teacher?: boolean }) {
   const { t } = useTranslation()
   const { user } = useAuth()
   const [draft, setDraft] = useState('')
   const [suggestion, setSuggestion] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  /** A teacher's poll: the choices, which one is right (none = a question of opinion), and why. */
+  const [polling, setPolling] = useState(false)
+  const [options, setOptions] = useState<string[]>(['', ''])
+  const [answer, setAnswer] = useState<number | null>(null)
+  const [why, setWhy] = useState('')
+  const filled = options.map((o) => o.trim()).filter(Boolean)
+  const pollReady = !polling || (filled.length >= POLL_MIN_OPTIONS && filled.length === options.length && new Set(filled.map((o) => o.toLowerCase())).size === filled.length)
 
   async function send(text: string, confirm: boolean) {
     setBusy(true)
     setError(null)
     try {
-      const result = await api<{ suggestion?: string; post?: FeedPost; postsLeft?: number }>('/feed/posts', { text, confirm, challengeId })
+      const poll = polling ? { options: filled, answer: answer ?? undefined, explanation: answer === null ? undefined : why.trim() || undefined } : undefined
+      const result = await api<{ suggestion?: string; post?: FeedPost; postsLeft?: number }>('/feed/posts', { text, confirm, challengeId, poll })
       if (result.suggestion) setSuggestion(result.suggestion)
       else if (result.post) {
         onPosted(result.post, result.postsLeft ?? 0)
         setDraft('')
         setSuggestion(null)
+        setPolling(false)
+        setOptions(['', ''])
+        setAnswer(null)
+        setWhy('')
       }
     } catch (err) {
       const code = err instanceof ApiError ? err.code : 'network'
@@ -253,11 +276,77 @@ function Composer({ left, onPosted, challengeId }: { left: number; onPosted: (po
           }}
           rows={draft.length > 60 || draft.includes('\n') ? 4 : 2}
           lang="en"
-          placeholder={t(challengeId ? 'feed.challenge.placeholder' : 'feed.compose.placeholder')}
+          placeholder={t(challengeId ? 'feed.challenge.placeholder' : polling ? 'feed.poll.question' : 'feed.compose.placeholder')}
           aria-label={t(challengeId ? 'feed.challenge.placeholder' : 'feed.compose.placeholder')}
           className={`min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral ${challengeId ? 'bg-card' : 'bg-cream'}`}
         />
       </div>
+      {teacher && !challengeId && (
+        <div className="flex flex-col gap-2">
+          <button
+            type="button"
+            onClick={() => setPolling(!polling)}
+            aria-pressed={polling}
+            className={`min-h-10 self-start rounded-full px-3.5 text-sm font-extrabold active:translate-y-0.5 ${polling ? 'bg-[#3D9BFF] text-white' : 'bg-[#3D9BFF]/10 text-[#1F7AD6]'}`}
+          >
+            🗳 {t(polling ? 'feed.poll.remove' : 'feed.poll.add')}
+          </button>
+          {polling && (
+            <div className="flex flex-col gap-2 rounded-2xl bg-cream p-3">
+              {options.map((option, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setAnswer(answer === i ? null : i)}
+                    aria-pressed={answer === i}
+                    aria-label={t('feed.poll.markRight')}
+                    title={t('feed.poll.markRight')}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-base font-extrabold ${answer === i ? 'border-mint bg-mint text-white' : 'border-ink/15 bg-card text-ink/25'}`}
+                  >
+                    ✓
+                  </button>
+                  <input
+                    value={option}
+                    onChange={(e) => setOptions(options.map((o, n) => (n === i ? e.target.value.slice(0, POLL_OPTION_MAX_LENGTH) : o)))}
+                    lang="en"
+                    placeholder={t('feed.poll.option', { n: i + 1 })}
+                    aria-label={t('feed.poll.option', { n: i + 1 })}
+                    className="min-h-11 min-w-0 flex-1 select-text rounded-2xl border-2 border-ink/10 bg-card px-3 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
+                  />
+                  {options.length > POLL_MIN_OPTIONS && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setOptions(options.filter((_, n) => n !== i))
+                        setAnswer(answer === null || answer === i ? null : answer > i ? answer - 1 : answer)
+                      }}
+                      aria-label={t('feed.poll.removeOption')}
+                      className="flex h-10 w-8 shrink-0 items-center justify-center text-lg font-extrabold text-ink/40"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              ))}
+              {options.length < POLL_MAX_OPTIONS && (
+                <button type="button" onClick={() => setOptions([...options, ''])} className="min-h-10 self-start text-sm font-extrabold text-coral-ink underline">
+                  + {t('feed.poll.addOption')}
+                </button>
+              )}
+              <p className="text-xs font-semibold leading-snug text-ink/55">{t(answer === null ? 'feed.poll.hintOpinion' : 'feed.poll.hintQuiz')}</p>
+              {answer !== null && (
+                <input
+                  value={why}
+                  onChange={(e) => setWhy(e.target.value.slice(0, POLL_EXPLANATION_MAX_LENGTH))}
+                  placeholder={t('feed.poll.why')}
+                  aria-label={t('feed.poll.why')}
+                  className="min-h-11 select-text rounded-2xl border-2 border-ink/10 bg-card px-3 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
+                />
+              )}
+            </div>
+          )}
+        </div>
+      )}
       {suggestion ? (
         <div className="bubble-in flex flex-col gap-2 rounded-2xl bg-good-soft p-3">
           <p className="text-sm font-extrabold text-good-ink">{t('feed.suggestTitle')}</p>
@@ -274,13 +363,13 @@ function Composer({ left, onPosted, challengeId }: { left: number; onPosted: (po
       ) : (
         draft.trim().length > 0 && (
           <div className="flex items-center gap-3">
-            <p className="min-w-0 flex-1 text-xs font-semibold leading-snug text-ink/45">{t('feed.compose.hint')}</p>
+            <p className="min-w-0 flex-1 text-xs font-semibold leading-snug text-ink/45">{t(teacher ? 'feed.compose.hintTeacher' : 'feed.compose.hint')}</p>
             <span className="text-xs font-bold tabular-nums text-ink/35">
               {draft.length}/{POST_MAX_LENGTH}
             </span>
             <button
               type="button"
-              disabled={busy || draft.trim().length < 5}
+              disabled={busy || draft.trim().length < 5 || !pollReady}
               onClick={() => send(draft.trim(), false)}
               className="min-h-11 shrink-0 rounded-2xl bg-coral px-4 text-sm font-extrabold text-white shadow-[0_4px_0_0_var(--color-coral-dark)] active:translate-y-1 disabled:opacity-50"
             >
@@ -450,7 +539,8 @@ export function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLef
       tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
     }).catch(() => null)
     if (!result) return
-    if (result.vote === result.answer) playCorrect()
+    // A question of opinion has no wrong answer.
+    if (result.answer === null || result.vote === result.answer) playCorrect()
     else playWrong()
     setGained(result.xp)
     onChange({ ...post, vote: result.vote, votes: result.votes, body: { ...body, answer: result.answer ?? undefined, explanation: result.explanation ?? undefined } })
@@ -458,6 +548,8 @@ export function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLef
   }
 
   const answered = post.vote !== null
+  /** A poll with a right answer; without one it is a question of opinion. */
+  const quiz = body.answer !== undefined && body.answer !== null
   const totalVotes = (post.votes ?? []).reduce((sum, n) => sum + n, 0)
 
   return (
@@ -467,8 +559,14 @@ export function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLef
           <button type="button" onClick={() => navigate(`/u/${post.author!.userId}`)} className="flex min-w-0 flex-1 items-center gap-2.5 text-left">
             <Avatar userId={post.author.userId} name={post.author.name} photoVersion={post.author.photoVersion} size={44} />
             <span className="min-w-0 flex-1 leading-tight">
-              <span className="block truncate text-base font-extrabold">{post.author.name ?? `${t('league.student')} ${post.author.tag}`}</span>
-              <span className="block text-xs font-bold text-ink/45">{when}</span>
+              <span className="flex items-center gap-1 text-base font-extrabold">
+                <span className="truncate">{post.author.name ?? `${t('league.student')} ${post.author.tag}`}</span>
+                {post.author.teacher && <Verified />}
+              </span>
+              <span className="block text-xs font-bold text-ink/45">
+                {when}
+                {post.author.teacher && <span className="text-[#1F7AD6]"> · {t('feed.teacher')}</span>}
+              </span>
             </span>
           </button>
           {post.mine ? (
@@ -537,14 +635,14 @@ export function PostCard({ post, lang, canDiscuss, freeLeft, onChange, onFreeLef
                 disabled={answered}
                 onClick={() => vote(i)}
                 className={`relative min-h-12 overflow-hidden rounded-2xl border-2 px-4 py-2.5 text-left text-base font-bold active:translate-y-0.5 ${
-                  right ? 'border-mint bg-mint/10' : mine ? 'border-bad bg-bad/10 text-bad-ink' : 'border-ink/10 bg-card'
+                  right ? 'border-mint bg-mint/10' : mine ? (quiz ? 'border-bad bg-bad/10 text-bad-ink' : 'border-[#3D9BFF] bg-[#3D9BFF]/10') : 'border-ink/10 bg-card'
                 }`}
               >
-                {answered && <span className={`absolute inset-y-0 left-0 ${right ? 'bg-mint/25' : 'bg-ink/5'}`} style={{ width: `${share}%` }} aria-hidden="true" />}
+                {answered && <span className={`absolute inset-y-0 left-0 ${right ? 'bg-mint/25' : mine && !quiz ? 'bg-[#3D9BFF]/20' : 'bg-ink/5'}`} style={{ width: `${share}%` }} aria-hidden="true" />}
                 <span className="relative flex items-center justify-between gap-3">
                   <span>
                     {right && '✓ '}
-                    {mine && !right && '✕ '}
+                    {mine && !right && (quiz ? '✕ ' : '● ')}
                     {option}
                   </span>
                   {answered && <span className="text-sm font-extrabold tabular-nums text-ink/55">{share}%</span>}
@@ -745,7 +843,7 @@ export default function Feed() {
       </div>
 
       {data.canDiscuss ? (
-        from !== 'official' && <Composer left={data.postsLeft} onPosted={(post, left) => setData({ ...data, posts: [post, ...data.posts], postsLeft: left })} />
+        (from !== 'official' || data.teacher) && <Composer left={data.postsLeft} teacher={data.teacher} onPosted={(post, left) => setData({ ...data, posts: [post, ...data.posts], postsLeft: left })} />
       ) : (
         from === 'students' && (
           <button type="button" onClick={() => navigate('/plans')} className="flex items-center gap-3 rounded-3xl bg-violet-soft p-4 text-left active:translate-y-0.5">

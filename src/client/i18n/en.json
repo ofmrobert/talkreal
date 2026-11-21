@@ -719,7 +719,8 @@
       "hint": "A teacher checks your English before it is posted.",
       "limit": "You have already written three posts today. Carry on tomorrow.",
       "lockedTitle": "Write your own posts in English",
-      "lockedText": "With a paid plan you post to the feed and other students answer you."
+      "lockedText": "With a paid plan you post to the feed and other students answer you.",
+      "hintTeacher": "You are a teacher: every student sees your post, free ones too."
     },
     "lockedPost": {
       "text": "This post is for students on a paid plan",
@@ -760,7 +761,21 @@
       "newDot": "Something new"
     },
     "noFollowing": "Posts by the students you follow will appear here. Find them with the 👥 button at the top.",
-    "banned": "A moderator has switched off posts and comments for you."
+    "banned": "A moderator has switched off posts and comments for you.",
+    "teacher": "Teacher",
+    "verifiedTeacher": "Talkreal teacher",
+    "poll": {
+      "add": "Add a poll",
+      "remove": "Remove the poll",
+      "question": "Ask the students a question…",
+      "option": "Option {{n}}",
+      "addOption": "Add an option",
+      "removeOption": "Remove the option",
+      "markRight": "Mark the right answer",
+      "hintOpinion": "This is an opinion poll now. Tap ✓ next to an option if there is a right answer.",
+      "hintQuiz": "This is a quiz: students see the right answer after their own.",
+      "why": "Why? A short explanation (optional)"
+    }
   },
   "theme": {
     "title": "Appearance",

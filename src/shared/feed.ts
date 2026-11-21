@@ -27,11 +27,13 @@ export interface FeedFace {
   name: string | null
   tag: string
   photoVersion: number | null
+  /** A real teacher, verified by Talkreal. Shown with a checkmark. */
+  teacher?: boolean
 }
 
 export interface FeedPost {
   id: string
-  /** One of the Talkreal account's kinds, 'challenge' for the weekly challenge, or 'student' for a post a student wrote. */
+  /** One of the Talkreal account's kinds, 'challenge' for the weekly challenge, or 'student' for a post a student wrote. A teacher's poll is 'poll' with an author. */
   kind: PostKind | 'challenge' | 'student'
   /** For the weekly challenge post. */
   challenge?: ChallengeState
@@ -98,6 +100,12 @@ export const COMMENT_MAX_LENGTH = 300
 /** A student's own post: its length, and how many a day. Writing posts is part of the paid plans. */
 export const POST_MAX_LENGTH = 500
 export const POSTS_PER_DAY = 3
+/** A verified teacher may write more, and may add a poll: this many choices, each this long. */
+export const TEACHER_POSTS_PER_DAY = 20
+export const POLL_MIN_OPTIONS = 2
+export const POLL_MAX_OPTIONS = 4
+export const POLL_OPTION_MAX_LENGTH = 80
+export const POLL_EXPLANATION_MAX_LENGTH = 300
 /** XP for the three most liked answers to a weekly challenge. */
 export const CHALLENGE_PRIZES = [50, 30, 20]
 /** XP for answering a poll. */

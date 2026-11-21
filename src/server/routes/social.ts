@@ -16,7 +16,7 @@ import {
   type ThreadView,
 } from '../../shared/social'
 import { requireUser, type AuthEnv } from '../auth/sessions'
-import { planOf } from '../billing/plans'
+import { isMember } from '../billing/plans'
 import { db } from '../db/client'
 import { dmMessages, dmThreads, feedPosts, follows, socialReports, userBlocks, users } from '../db/schema'
 import { openProfiles, openProfilesOf, tastesOf, type OpenProfile } from '../pii'
@@ -63,7 +63,8 @@ async function peopleFor(ids: string[], viewer: string, open: Map<string, OpenPr
       const shown = open.get(id)
       return {
         face: faces.get(id)!,
-        level: byId.get(id)!.level,
+        // A teacher is not learning: no level badge on their card.
+        level: faces.get(id)!.teacher ? null : byId.get(id)!.level,
         bio: shown?.bio ?? null,
         city: shown?.city ?? null,
         goals: (shown?.goals ?? []) as GoalId[],
@@ -108,7 +109,8 @@ socialRoutes.get('/people', async (c) => {
   const myLevel = LEVELS.indexOf(user.level ?? '')
   const score = (person: Person) => {
     const gap = myLevel < 0 || !person.level ? 9 : Math.abs(LEVELS.indexOf(person.level) - myLevel)
-    return (gap === 0 ? 4 : gap === 1 ? 2 : 0) + person.common * 2 + (active.has(person.face.userId) ? 3 : 0) + (person.followsYou ? 2 : 0) + (person.bio ? 1 : 0)
+    // Teachers come first: they are the people worth following.
+    return (person.face.teacher ? 100 : 0) + (gap === 0 ? 4 : gap === 1 ? 2 : 0) + person.common * 2 + (active.has(person.face.userId) ? 3 : 0) + (person.followsYou ? 2 : 0) + (person.bio ? 1 : 0)
   }
   // A search shows everyone it finds; the suggestions leave out the people already followed.
   const people = all
@@ -217,7 +219,7 @@ socialRoutes.get('/messages', async (c) => {
   const ids = threads.map((thread) => thread.id)
   const messages = ids.length ? await db.select().from(dmMessages).where(and(inArray(dmMessages.threadId, ids), eq(dmMessages.status, 'sent'))).orderBy(desc(dmMessages.createdAt)).limit(2000) : []
   const faces = await facesFor(threads.map((thread) => (thread.userA === user.id ? thread.userB : thread.userA)), user.id)
-  const paid = planOf(user) !== 'free'
+  const paid = isMember(user)
 
   const previews: ThreadPreview[] = threads
     .map((thread) => {
@@ -256,7 +258,7 @@ socialRoutes.get('/messages/with/:id', async (c) => {
   if (!other) return c.json({ error: 'not_found' }, 404)
   const thread = await threadBetween(user.id, id)
   const block = await messagingBlock(user)
-  const paid = planOf(user) !== 'free'
+  const paid = isMember(user)
   const rows = thread ? await db.select().from(dmMessages).where(and(eq(dmMessages.threadId, thread.id), inArray(dmMessages.status, ['sent', 'hidden']))).orderBy(desc(dmMessages.createdAt)).limit(200) : []
   // Reading is part of the paid plans: only then is the conversation marked as read.
   if (thread && paid) await db.update(dmThreads).set(thread.userA === user.id ? { readAtA: new Date() } : { readAtB: new Date() }).where(eq(dmThreads.id, thread.id))

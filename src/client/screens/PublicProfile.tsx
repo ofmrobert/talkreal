@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import type { FeedPost } from '../../shared/feed'
 import { GOALS, INTERESTS } from '../../shared/profile'
 import type { PublicProfile as ProfileData } from '../../shared/social'
+import Verified from '../components/Verified'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import { BackButton, FollowButton, SafetyMenu, useFaceName } from '../components/social/SocialBits'
@@ -64,8 +65,12 @@ export default function PublicProfile() {
       <section className="flex flex-col items-center gap-3 rounded-3xl bg-card p-5 text-center shadow-[0_5px_0_0_rgb(var(--shade)/0.07)]">
         <Avatar userId={face.userId} name={face.name} photoVersion={face.photoVersion} size={104} />
         <div>
-          <h1 className="text-2xl font-extrabold leading-tight">{nameOf(face)}</h1>
+          <h1 className="flex items-center justify-center gap-1.5 text-2xl font-extrabold leading-tight">
+            {nameOf(face)}
+            {face.teacher && <Verified size={22} />}
+          </h1>
           <p className="mt-1.5 flex flex-wrap items-center justify-center gap-2 text-sm font-extrabold text-ink/55">
+            {face.teacher && <span className="rounded-full bg-[#3D9BFF] px-2.5 py-0.5 text-white">{t('feed.verifiedTeacher')}</span>}
             {profile.level && (
               <span className="rounded-full bg-coral px-2.5 py-0.5 text-white">
                 {profile.level} · {t(`levels.${profile.level}.name`)}

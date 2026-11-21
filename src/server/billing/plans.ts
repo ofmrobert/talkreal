@@ -3,6 +3,11 @@ import { limitsFor as limitsOf, type PlanId } from '../../shared/plans'
 export { PLANS, type PlanId, type PlanLimits } from '../../shared/plans'
 export const limitsFor = limitsOf
 
+/** May this person take part in the community (posts, comments, private messages)? Paying students and verified teachers. */
+export function isMember(user: { plan: string; planUntil: Date | null; teacherAt: Date | null }): boolean {
+  return user.teacherAt !== null || planOf(user) !== 'free'
+}
+
 /** XP a student should aim for each day (shown as the daily goal ring). */
 export const DAILY_XP_GOAL = 30
 

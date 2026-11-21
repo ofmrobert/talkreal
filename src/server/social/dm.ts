@@ -1,6 +1,6 @@
 import { and, eq, or, sql } from 'drizzle-orm'
 import { MESSAGES_MIN_AGE, type MessagingBlock } from '../../shared/social'
-import { planOf } from '../billing/plans'
+import { isMember } from '../billing/plans'
 import { db } from '../db/client'
 import { dmThreads, follows, userBlocks, users } from '../db/schema'
 import { ageOf } from '../pii'
@@ -33,7 +33,7 @@ export async function blockedIds(userId: string): Promise<Set<string>> {
 /** Why this student may not write private messages; null if they may. */
 export async function messagingBlock(user: typeof users.$inferSelect): Promise<MessagingBlock> {
   if (user.dmBannedAt) return 'banned'
-  if (planOf(user) === 'free') return 'pro'
+  if (!isMember(user)) return 'pro'
   const age = await ageOf(user.id)
   if (age !== null && age < MESSAGES_MIN_AGE) return 'age'
   if (!user.dmRulesAt) return 'rules'

@@ -182,7 +182,8 @@ export async function settleChallenges(): Promise<number> {
       const best = await tx
         .select({ id: feedPosts.id, authorId: feedPosts.authorId, likes })
         .from(feedPosts)
-        .where(and(eq(feedPosts.challengeId, challenge.id), eq(feedPosts.status, 'active')))
+        // Teachers may answer as an example, but the prizes are for students.
+        .where(and(eq(feedPosts.challengeId, challenge.id), eq(feedPosts.status, 'active'), sql`${feedPosts.authorId} not in (select id from users where teacher_at is not null)`))
         .orderBy(desc(likes), asc(feedPosts.createdAt))
         .limit(CHALLENGE_PRIZES.length)
       for (const [place, answer] of best.entries()) {

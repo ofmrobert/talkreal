@@ -41,6 +41,8 @@ export const users = pgTable('users', {
   dmRulesAt: timestamptz('dm_rules_at'),
   /** Set by the owner: this student may not write private messages. */
   dmBannedAt: timestamptz('dm_banned_at'),
+  /** Set by the owner: a real, verified teacher. Shown with a checkmark; may write polls; their posts are open to everyone. */
+  teacherAt: timestamptz('teacher_at'),
   /** Set by the owner: this student may not write posts or comments in the feed. */
   feedBannedAt: timestamptz('feed_banned_at'),
 })
