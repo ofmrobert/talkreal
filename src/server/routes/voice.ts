@@ -40,6 +40,8 @@ voiceRoutes.get('/status', async (c) => {
     available: voiceProvider() !== null,
     remainingSeconds: await remainingVoiceSeconds(user.id, planOf(user), today),
     dailySeconds: limits.voiceSecondsPerDay,
+    /** True on a plan whose voice time is a one-time test: when it is used, tomorrow brings no more. */
+    trial: limits.voiceSecondsEver !== undefined,
     chatAvailable: textAiAvailable(),
     /** Text messages left today; null = no limit. */
     messagesLeft,

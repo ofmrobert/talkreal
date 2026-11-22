@@ -14,6 +14,7 @@ interface VoiceStatus {
   available: boolean
   remainingSeconds: number
   dailySeconds: number
+  trial?: boolean
   chatAvailable?: boolean
   messagesLeft?: number | null
 }
@@ -77,7 +78,7 @@ export default function Talk() {
           {available && (
             <p className="flex items-center gap-2 text-base font-bold">
               <MicIcon width={22} height={22} className={outOfTime ? 'text-bad-ink' : 'text-good-ink'} />
-              {outOfTime ? t('talk.noTime') : t('talk.timeLeft', { time: `${minutesLeft}:${String(secondsLeft).padStart(2, '0')}` })}
+              {outOfTime ? t(status?.trial ? 'talk.noTimeTrial' : 'talk.noTime') : t('talk.timeLeft', { time: `${minutesLeft}:${String(secondsLeft).padStart(2, '0')}` })}
             </p>
           )}
           {chatAvailable && messagesLeft !== null && (

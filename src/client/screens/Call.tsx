@@ -168,7 +168,7 @@ export default function Call() {
             ? t('call.muted')
             : t('call.listening')
         : stage === 'ended'
-          ? t(`call.ended.${endReason ?? 'hangup'}`)
+          ? t(endReason === 'limit' && user?.plan === 'free' ? 'call.ended.limitTrial' : `call.ended.${endReason ?? 'hangup'}`)
           : t('call.intro')
 
   return (

@@ -12,6 +12,8 @@ export interface PlanLimits {
   /** AI voice conversation, seconds per day and per month. */
   voiceSecondsPerDay: number
   voiceSecondsPerMonth: number
+  /** If set, the plan has no daily or monthly voice time: only this much, once, as a test. */
+  voiceSecondsEver?: number
   /** AI text chat messages per day. Infinity = no limit. */
   textMessagesPerDay: number
 }
@@ -21,9 +23,10 @@ const MINUTE = 60
 export const PLANS: Record<PlanId, PlanLimits> = {
   free: {
     lessonsPerDay: 5,
-    // A taste of the voice teachers: one short call's worth. Voice is the most expensive thing the app does.
-    voiceSecondsPerDay: 3 * MINUTE,
-    voiceSecondsPerMonth: 5 * MINUTE,
+    // A two-minute test call with a voice teacher, once. Voice is the most expensive thing the app does.
+    voiceSecondsPerDay: 2 * MINUTE,
+    voiceSecondsPerMonth: 2 * MINUTE,
+    voiceSecondsEver: 2 * MINUTE,
     textMessagesPerDay: 10,
   },
   pro: {

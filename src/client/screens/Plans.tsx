@@ -98,7 +98,7 @@ export default function Plans() {
     const minutes = Math.round(limits.voiceSecondsPerMonth / 60)
     return [
       Number.isFinite(limits.lessonsPerDay) ? t('plans.f.lessons', { count: limits.lessonsPerDay }) : t('plans.f.lessonsAll'),
-      t('plans.f.voice', { count: minutes }),
+      limits.voiceSecondsEver !== undefined ? t('plans.f.voiceTrial', { count: Math.round(limits.voiceSecondsEver / 60) }) : t('plans.f.voice', { count: minutes }),
       Number.isFinite(limits.textMessagesPerDay) ? t('plans.f.chat', { count: limits.textMessagesPerDay }) : t('plans.f.chatAll'),
       t('plans.f.reviews'),
       ...(plan === 'free' ? [t('plans.f.course')] : [t('plans.f.everything')]),
