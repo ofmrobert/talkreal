@@ -30,3 +30,37 @@ Return one JSON object: {"ok": true or false, "better": string or null}.
     return { ok: true, better: null }
   }
 }
+
+interface MediaVerdict {
+  ok?: unknown
+  transcript?: unknown
+}
+
+/**
+ * Has the AI listen to a voice message or watch a video note before it is delivered.
+ * It also writes down what it heard: the students practise pronunciation, and seeing what was
+ * understood is the feedback. `checked` is false when the AI could not be asked; the recording
+ * then goes out unchecked, as a text would, and the admin panel marks it.
+ */
+export async function reviewMedia(kind: 'voice' | 'video', mime: string, data: string): Promise<{ ok: boolean; transcript: string | null; checked: boolean }> {
+  if (!textAiAvailable()) return { ok: true, transcript: null, checked: false }
+  try {
+    const verdict = await askJson<MediaVerdict>({
+      system: `You check one ${kind === 'voice' ? 'voice message' : 'short video message'} before it is delivered in an English-learning app for adults. Learners record these to practise speaking, usually in English, sometimes in Russian.
+Return one JSON object: {"ok": true or false, "transcript": string or null}.
+- "ok" is false only if the recording contains insults, harassment, hate, sexual content, threats, spam or advertising, or personal contact details said aloud${kind === 'video' ? ' or shown' : ''} (phone numbers, emails, messenger names, web addresses)${kind === 'video' ? ', or if the video shows nudity, sexual content, violence or anything not fit for a learning community' : ''}. Mistakes, an accent, jokes, background noise and silence are fine.
+- "transcript": the words spoken, exactly as they were said, in the language spoken. Do not correct mistakes. At most 500 characters. null if nobody speaks.`,
+      turns: [{ role: 'student', text: `Check this ${kind === 'voice' ? 'voice message' : 'video message'}.` }],
+      // The AI knows an audio-only MP4 as M4A.
+      media: { mime: mime === 'audio/mp4' ? 'audio/m4a' : mime, data },
+      temperature: 0,
+      timeoutMs: 30_000,
+      // Test mode: a file with the word "badword" in its bytes is refused.
+      mock: () => (Buffer.from(data, 'base64').includes('badword') ? { ok: false, transcript: null } : { ok: true, transcript: 'I think my pronunciation is getting better.' }),
+    })
+    return { ok: verdict.ok !== false, transcript: clip(verdict.transcript, 500) || null, checked: true }
+  } catch (err) {
+    console.error('Recording check failed:', err instanceof Error ? err.message : err)
+    return { ok: true, transcript: null, checked: false }
+  }
+}

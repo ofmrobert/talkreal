@@ -2,14 +2,21 @@ import { and, desc, eq, gte, inArray, or, sql } from 'drizzle-orm'
 import { Hono } from 'hono'
 import type { GoalId, InterestId } from '../../shared/profile'
 import {
+  MEDIA_PER_DAY,
   MESSAGE_MAX_LENGTH,
   MESSAGES_PER_DAY,
   NEW_CHATS_PER_DAY,
   QUOTE_MAX_LENGTH,
   REACTIONS,
   REPORT_REASONS,
+  VIDEO_MAX_BYTES,
+  VIDEO_MAX_SECONDS,
+  VOICE_MAX_BYTES,
+  VOICE_MAX_SECONDS,
+  WAVEFORM_BARS,
   type DirectMessage,
   type Inbox,
+  type MessageKind,
   type MessageQuote,
   type Person,
   type PublicProfile,
@@ -21,11 +28,11 @@ import {
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { isMember } from '../billing/plans'
 import { db } from '../db/client'
-import { dmMessages, dmReactions, dmThreads, feedPosts, follows, socialReports, userBlocks, users } from '../db/schema'
+import { dmMedia, dmMessages, dmReactions, dmThreads, feedPosts, follows, socialReports, userBlocks, users } from '../db/schema'
 import { openProfiles, openProfilesOf, tastesOf, type OpenProfile } from '../pii'
 import { notices } from '../reminders/notify'
-import { blockedBetween, blockedIds, messagingBlock, pairOf, threadBetween, unreadFor } from '../social/dm'
-import { review } from '../social/moderation'
+import { blockedBetween, blockedIds, mediaResponse, messagingBlock, pairOf, threadBetween, unreadFor } from '../social/dm'
+import { review, reviewMedia } from '../social/moderation'
 import { facesFor } from './feed'
 
 /**
@@ -211,7 +218,18 @@ socialRoutes.post('/people/:id/report', async (c) => {
 function quoteOf(replyToId: string | null, found: Map<string, typeof dmMessages.$inferSelect>, viewer: string, readable: boolean): MessageQuote | null {
   if (!replyToId) return null
   const row = found.get(replyToId)
-  return { id: replyToId, text: row && row.status === 'sent' && readable ? row.text.slice(0, QUOTE_MAX_LENGTH) : '', mine: row?.senderId === viewer }
+  return { id: replyToId, text: row && row.status === 'sent' && readable ? row.text.slice(0, QUOTE_MAX_LENGTH) : '', kind: kindOf(row?.kind), mine: row?.senderId === viewer }
+}
+
+const kindOf = (value: string | undefined): MessageKind => (value === 'voice' || value === 'video' ? value : 'text')
+
+/** The kinds of file a recording may be, by how the file starts. Phones record MP4, most other browsers WebM. */
+function sniffMedia(data: Buffer): 'webm' | 'mp4' | 'ogg' | null {
+  if (data.length < 12) return null
+  if (data[0] === 0x1a && data[1] === 0x45 && data[2] === 0xdf && data[3] === 0xa3) return 'webm'
+  if (data.toString('latin1', 4, 8) === 'ftyp') return 'mp4'
+  if (data.toString('latin1', 0, 4) === 'OggS') return 'ogg'
+  return null
 }
 
 const statusOf = (value: string): ThreadStatus => (value === 'open' || value === 'declined' ? value : 'request')
@@ -249,7 +267,7 @@ socialRoutes.get('/messages', async (c) => {
         status: statusOf(status),
         incoming: status === 'request' && thread.startedBy !== user.id,
         // A message from a teacher or the owner can always be read, on any plan.
-        last: last ? { text: paid || faces.get(other)?.teacher ? last.text : '', mine: last.senderId === user.id, at: last.createdAt.toISOString() } : null,
+        last: last ? { text: paid || faces.get(other)?.teacher ? last.text : '', kind: kindOf(last.kind), mine: last.senderId === user.id, at: last.createdAt.toISOString() } : null,
         unread: own.filter((m) => m.senderId !== user.id && (!readAt || m.createdAt > readAt)).length,
       }
     })
@@ -302,6 +320,10 @@ socialRoutes.get('/messages/with/:id', async (c) => {
     return {
       id: row.id,
       text: hidden || !paid ? '' : row.text,
+      kind: kindOf(row.kind),
+      seconds: row.seconds,
+      waveform: row.waveform,
+      transcript: hidden || !paid ? null : row.transcript,
       mine,
       at: row.createdAt.toISOString(),
       better: mine && !hidden ? row.better : null,
@@ -310,6 +332,7 @@ socialRoutes.get('/messages/with/:id', async (c) => {
       reactions: hidden ? [] : reacted.filter((r) => r.messageId === row.id).map((r) => ({ emoji: r.emoji, mine: r.userId === user.id })),
     }
   })
+  const blocked = face.owner || viewerFace?.owner ? false : await blockedBetween(user.id, id)
   const view: ThreadView = {
     id: thread?.id ?? '',
     other: face,
@@ -318,8 +341,10 @@ socialRoutes.get('/messages/with/:id', async (c) => {
     waiting: thread?.status === 'request' && thread.startedBy === user.id && messages.some((m) => m.mine),
     turnedDown: thread?.status === 'declined' && thread.startedBy === user.id,
     // Blocking does not close a conversation with the owner, from either side.
-    blocked: face.owner || viewerFace?.owner ? false : await blockedBetween(user.id, id),
+    blocked,
     block,
+    // Recordings: an adult on a paid plan in a conversation that is going on, or a teacher anywhere.
+    media: own === null && !blocked && (Boolean(viewerFace?.teacher) || thread?.status === 'open'),
     messages,
   }
   return c.json(view)
@@ -413,6 +438,10 @@ socialRoutes.post('/messages/with/:id', async (c) => {
   const message: DirectMessage = {
     id: row.id,
     text: row.text,
+    kind: 'text',
+    seconds: null,
+    waveform: null,
+    transcript: null,
     mine: true,
     at: row.createdAt.toISOString(),
     better: row.better,
@@ -421,6 +450,103 @@ socialRoutes.post('/messages/with/:id', async (c) => {
     reactions: [],
   }
   return c.json({ message, status: answered ? 'open' : statusOf(thread.status) })
+})
+
+/**
+ * Sends a voice message or a video note. The file is the body of the request; its kind, length
+ * and (for voice) loudness picture come in the address. Stricter than text: only an adult on a
+ * paid plan (or a teacher), and only in a conversation that is already going on, so nobody gets
+ * a recording from a stranger. The AI listens or watches first, and writes down what it heard.
+ */
+socialRoutes.post('/messages/with/:id/media', async (c) => {
+  const id = c.req.param('id')
+  const user = await load(c.get('userId'))
+  const kind = c.req.query('kind')
+  if (!user || !isUuid(id) || id === user.id) return c.json({ error: 'not_found' }, 404)
+  if (kind !== 'voice' && kind !== 'video') return c.json({ error: 'invalid' }, 400)
+  const maxBytes = kind === 'voice' ? VOICE_MAX_BYTES : VIDEO_MAX_BYTES
+  if (Number(c.req.header('content-length') ?? 0) > maxBytes) return c.json({ error: 'too_big' }, 413)
+  const seconds = Math.round(Number(c.req.query('seconds')))
+  if (!(seconds >= 1) || seconds > (kind === 'voice' ? VOICE_MAX_SECONDS : VIDEO_MAX_SECONDS) + 2) return c.json({ error: 'invalid' }, 400)
+
+  let thread = await threadBetween(user.id, id)
+  const faces = await facesFor([user.id, id], id)
+  const staff = Boolean(faces.get(user.id)?.teacher)
+  const owner = Boolean(faces.get(user.id)?.owner)
+  const block = await messagingBlock(user)
+  if (block) return c.json({ error: block }, 403)
+  const [other] = await db.select({ id: users.id }).from(users).where(eq(users.id, id)).limit(1)
+  if (!other) return c.json({ error: 'not_found' }, 404)
+  if (!owner && (await blockedBetween(user.id, id))) return c.json({ error: 'blocked' }, 403)
+  if (!staff && thread?.status !== 'open') return c.json({ error: 'not_open' }, 403)
+  if (!staff) {
+    const [today] = await db.select({ n: sql<number>`count(*)::int` }).from(dmMessages).where(and(eq(dmMessages.senderId, user.id), inArray(dmMessages.kind, ['voice', 'video']), gte(dmMessages.createdAt, new Date(Date.now() - DAY_MS))))
+    if ((today?.n ?? 0) >= MEDIA_PER_DAY) return c.json({ error: 'slow_down' }, 429)
+  }
+
+  const data = Buffer.from(await c.req.arrayBuffer())
+  if (data.length > maxBytes) return c.json({ error: 'too_big' }, 413)
+  const container = sniffMedia(data)
+  if (!container || data.length < 200) return c.json({ error: 'invalid' }, 400)
+  const mime = `${kind === 'voice' ? 'audio' : 'video'}/${container}`
+  const wave = c.req.query('wave') ?? ''
+  const waveform = kind === 'voice' && wave.length === WAVEFORM_BARS && /^[0-9]+$/.test(wave) ? wave : null
+  const base64 = data.toString('base64')
+  // The owner's own recordings are not checked, like the owner's texts.
+  const verdict = owner ? { ok: true, transcript: null, checked: false } : await reviewMedia(kind, mime, base64)
+
+  if (!thread) {
+    const [a, b] = pairOf(user.id, id)
+    await db.insert(dmThreads).values({ userA: a, userB: b, startedBy: user.id, status: 'open' }).onConflictDoNothing()
+    thread = await threadBetween(user.id, id)
+    if (!thread) return c.json({ error: 'server_error' }, 500)
+  }
+  const [quoted] = isUuid(c.req.query('replyTo') ?? '') ? await db.select().from(dmMessages).where(and(eq(dmMessages.id, c.req.query('replyTo')!), eq(dmMessages.threadId, thread.id), eq(dmMessages.status, 'sent'))).limit(1) : []
+  const [row] = await db
+    .insert(dmMessages)
+    .values({ threadId: thread.id, senderId: user.id, text: '', kind, seconds, waveform, transcript: verdict.transcript, replyToId: quoted?.id ?? null, status: verdict.ok ? 'sent' : 'rejected' })
+    .returning()
+  // A refused recording is kept too, for the owner to see, and is never delivered.
+  await db.insert(dmMedia).values({ messageId: row.id, mime, data: base64, checkedByAi: verdict.checked })
+  if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
+
+  await db
+    .update(dmThreads)
+    .set({ lastMessageAt: row.createdAt, ...(thread.userA === user.id ? { readAtA: row.createdAt } : { readAtB: row.createdAt }), ...(thread.status !== 'open' ? { status: 'open' } : {}) })
+    .where(eq(dmThreads.id, thread.id))
+  notices.message(id, user.id, faces.get(user.id)?.name ?? null)
+
+  const message: DirectMessage = {
+    id: row.id,
+    text: '',
+    kind,
+    seconds,
+    waveform,
+    transcript: row.transcript,
+    mine: true,
+    at: row.createdAt.toISOString(),
+    better: null,
+    hidden: false,
+    replyTo: quoted ? quoteOf(quoted.id, new Map([[quoted.id, quoted]]), user.id, true) : null,
+    reactions: [],
+  }
+  return c.json({ message, status: 'open' })
+})
+
+/** The recording of a voice or video message, for the two people of the conversation who may read it. */
+socialRoutes.get('/messages/media/:messageId', async (c) => {
+  const messageId = c.req.param('messageId')
+  const user = await load(c.get('userId'))
+  if (!user || !isUuid(messageId)) return c.json({ error: 'not_found' }, 404)
+  const [message] = await db.select().from(dmMessages).where(and(eq(dmMessages.id, messageId), eq(dmMessages.status, 'sent'))).limit(1)
+  const [thread] = message ? await db.select().from(dmThreads).where(eq(dmThreads.id, message.threadId)).limit(1) : []
+  if (!message || !thread || (thread.userA !== user.id && thread.userB !== user.id)) return c.json({ error: 'not_found' }, 404)
+  const other = thread.userA === user.id ? thread.userB : thread.userA
+  // Reading is part of the paid plans, except what a teacher or the owner sent.
+  if (!isMember(user) && !(await facesFor([other], user.id)).get(other)?.teacher) return c.json({ error: 'pro' }, 403)
+  const [media] = await db.select().from(dmMedia).where(eq(dmMedia.messageId, messageId)).limit(1)
+  if (!media) return c.json({ error: 'not_found' }, 404)
+  return mediaResponse(c, media.mime, Buffer.from(media.data, 'base64'), 'private, max-age=3600')
 })
 
 /**
@@ -450,6 +576,8 @@ socialRoutes.post('/messages/react/:messageId', async (c) => {
       .insert(dmReactions)
       .values({ messageId, userId: user.id, emoji })
       .onConflictDoUpdate({ target: [dmReactions.messageId, dmReactions.userId], set: { emoji, createdAt: new Date() } })
+  // The one whose message it is hears about a new reaction; taking one off is silent.
+  if (emoji !== null && message.senderId !== user.id) notices.reaction(other, user.id, faces.get(user.id)?.name ?? null, emoji)
   const now = await db.select().from(dmReactions).where(eq(dmReactions.messageId, messageId))
   return c.json({ reactions: now.map((r) => ({ emoji: r.emoji, mine: r.userId === user.id })) })
 })

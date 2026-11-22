@@ -5,7 +5,10 @@ import { MESSAGE_MAX_LENGTH, type DirectMessage, type ThreadView } from '../../s
 import Verified from '../components/Verified'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
-import MessageBubble, { MessageMenu } from '../components/social/MessageBubble'
+import MessageBubble, { MessageMenu, useMessageLabel } from '../components/social/MessageBubble'
+import { MicIcon, VideoNoteIcon } from '../components/social/MessageMedia'
+import { VideoNoteRecorder, VoiceRecorderBar } from '../components/social/MessageRecorders'
+import type { Recorded } from '../lib/recorder'
 import { MessagingRules, SafetyMenu, useFaceName } from '../components/social/SocialBits'
 import { api, ApiError } from '../lib/api'
 
@@ -25,6 +28,9 @@ export default function DirectChat() {
   /** The message whose menu is open, and where its bubble is on the screen. */
   const [menu, setMenu] = useState<{ message: DirectMessage; rect: DOMRect } | null>(null)
   const [flash, setFlash] = useState<string | null>(null)
+  /** A voice message or a video note is being recorded. */
+  const [recording, setRecording] = useState<'voice' | 'video' | null>(null)
+  const label = useMessageLabel()
   const bottom = useRef<HTMLDivElement>(null)
   const input = useRef<HTMLTextAreaElement>(null)
   /** Reactions on their way to the server: a refresh that lands meanwhile would undo them on screen. */
@@ -84,6 +90,25 @@ export default function DirectChat() {
       load()
     } finally {
       setBusy(false)
+    }
+  }
+
+  /** Sends a recording. Gives back what went wrong, in words, or null when it is sent. */
+  async function sendRecording(kind: 'voice' | 'video', recorded: Recorded): Promise<string | null> {
+    const query = new URLSearchParams({ kind, seconds: String(recorded.seconds), ...(recorded.waveform ? { wave: recorded.waveform } : {}), ...(replyTo ? { replyTo: replyTo.id } : {}) })
+    try {
+      const res = await fetch(`/api/social/messages/with/${id}/media?${query}`, { method: 'POST', headers: { 'Content-Type': recorded.blob.type || 'application/octet-stream' }, body: recorded.blob, credentials: 'same-origin' })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        const code: string = data.error ?? ''
+        return t(code === 'rejected' ? 'social.chat.errors.rejectedMedia' : ['too_big', 'not_open', 'blocked', 'slow_down', 'banned', 'age'].includes(code) ? `social.chat.errors.${code}` : 'feed.failed')
+      }
+      setView((now) => now && { ...now, status: data.status, messages: [...now.messages, data.message] })
+      setReplyTo(null)
+      setRecording(null)
+      return null
+    } catch {
+      return t('feed.failed')
     }
   }
 
@@ -234,13 +259,16 @@ export default function DirectChat() {
               </span>
               <span className="min-w-0 flex-1 leading-tight">
                 <span className="block text-xs font-extrabold text-coral-ink">{replyTo.mine ? t('social.chat.you') : name}</span>
-                <span className="block truncate text-sm font-semibold text-ink/60">{replyTo.text}</span>
+                <span className="block truncate text-sm font-semibold text-ink/60">{label(replyTo)}</span>
               </span>
               <button type="button" onClick={() => setReplyTo(null)} aria-label={t('social.chat.cancelReply')} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-ink/45 active:bg-ink/5">
                 ✕
               </button>
             </div>
           )}
+          {recording === 'voice' ? (
+            <VoiceRecorderBar onSend={(recorded) => sendRecording('voice', recorded)} onClose={() => setRecording(null)} />
+          ) : (
           <div className="flex items-end gap-2">
             <textarea
               ref={input}
@@ -255,15 +283,27 @@ export default function DirectChat() {
               aria-label={t('social.chat.placeholder')}
               className="min-h-12 flex-1 select-text resize-none rounded-2xl border-2 border-ink/10 bg-card px-3 py-2.5 text-base font-semibold outline-none placeholder:text-ink/35 focus:border-coral"
             />
-            <button
-              type="submit"
-              disabled={busy || !draft.trim()}
-              aria-label={t('chat.send')}
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-coral text-xl font-extrabold text-white shadow-[0_4px_0_0_var(--color-coral-dark)] active:translate-y-1 disabled:opacity-50"
-            >
-              ↑
-            </button>
+            {view.media && !draft.trim() ? (
+              <>
+                <button type="button" onClick={() => setRecording('video')} aria-label={t('social.chat.recordVideo')} className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-card text-coral-ink shadow-[0_4px_0_0_rgb(var(--shade)/0.08)] active:translate-y-1">
+                  <VideoNoteIcon size={24} />
+                </button>
+                <button type="button" onClick={() => setRecording('voice')} aria-label={t('social.chat.recordVoice')} className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-coral text-white shadow-[0_4px_0_0_var(--color-coral-dark)] active:translate-y-1">
+                  <MicIcon size={24} />
+                </button>
+              </>
+            ) : (
+              <button
+                type="submit"
+                disabled={busy || !draft.trim()}
+                aria-label={t('chat.send')}
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-coral text-xl font-extrabold text-white shadow-[0_4px_0_0_var(--color-coral-dark)] active:translate-y-1 disabled:opacity-50"
+              >
+                ↑
+              </button>
+            )}
           </div>
+          )}
           <p className="px-1 text-center text-[11px] font-semibold leading-snug text-ink/40">🛡️ {t('social.chat.note')}</p>
         </form>
       )}
@@ -275,12 +315,14 @@ export default function DirectChat() {
           current={view.messages.find((m) => m.id === menu.message.id)?.reactions.find((r) => r.mine)?.emoji ?? null}
           canReact={canReact}
           canReply={canReply}
+          canCopy={menu.message.kind === 'text'}
           onReact={(emoji) => react(view.messages.find((m) => m.id === menu.message.id) ?? menu.message, emoji)}
           onReply={() => reply(menu.message)}
           onCopy={() => void navigator.clipboard?.writeText(menu.message.text).catch(() => {})}
           onClose={() => setMenu(null)}
         />
       )}
+      {recording === 'video' && <VideoNoteRecorder onSend={(recorded) => sendRecording('video', recorded)} onClose={() => setRecording(null)} />}
     </div>
   )
 }

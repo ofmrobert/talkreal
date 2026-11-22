@@ -1,4 +1,5 @@
 import { and, asc, desc, eq, gt, inArray, isNull, lte, or, sql, type SQL } from 'drizzle-orm'
+import { mediaResponse } from '../social/dm'
 import { Hono, type MiddlewareHandler } from 'hono'
 import { ACHIEVEMENTS } from '../../shared/achievements'
 import { LEVELS } from '../../shared/levels'
@@ -18,6 +19,7 @@ import { db, dbStatus } from '../db/client'
 import {
   adminActions,
   dailyUsage,
+  dmMedia,
   dmMessages,
   dmReactions,
   dmThreads,
@@ -877,6 +879,7 @@ adminRoutes.get('/messages/:id', async (c) => {
   const messages = await db.select().from(dmMessages).where(eq(dmMessages.threadId, id)).orderBy(asc(dmMessages.createdAt)).limit(1000)
   const reports = await db.select().from(socialReports).where(eq(socialReports.threadId, id)).orderBy(desc(socialReports.createdAt))
   const reacted = messages.length ? await db.select().from(dmReactions).where(inArray(dmReactions.messageId, messages.map((m) => m.id))) : []
+  const recorded = messages.some((m) => m.kind !== 'text') ? await db.select({ messageId: dmMedia.messageId, checkedByAi: dmMedia.checkedByAi }).from(dmMedia).where(inArray(dmMedia.messageId, messages.filter((m) => m.kind !== 'text').map((m) => m.id))) : []
   const people = await db.select().from(users).where(inArray(users.id, [thread.userA, thread.userB]))
   const names = await namesFor([thread.userA, thread.userB, ...reports.map((r) => r.reporterId)])
   await log(c, 'dm_view', id)
@@ -890,11 +893,25 @@ adminRoutes.get('/messages/:id', async (c) => {
       better: m.better,
       status: m.status,
       createdAt: m.createdAt,
+      kind: m.kind,
+      seconds: m.seconds,
+      transcript: m.transcript,
+      checkedByAi: recorded.find((r) => r.messageId === m.id)?.checkedByAi ?? null,
       replyTo: m.replyToId ? (messages.find((x) => x.id === m.replyToId)?.text.slice(0, 140) ?? '') : null,
       reactions: reacted.filter((r) => r.messageId === m.id).map((r) => ({ emoji: r.emoji, userId: r.userId })),
     })),
     reports: reports.map((r) => ({ id: r.id, reporter: names.get(r.reporterId), aboutId: r.aboutId, reason: r.reason, note: r.note, createdAt: r.createdAt, resolvedAt: r.resolvedAt })),
   })
+})
+
+/** A voice or video message, to listen to or watch. Every look is written to the admin log. */
+adminRoutes.get('/messages/media/:id', async (c) => {
+  const id = c.req.param('id')
+  if (!isUuid(id)) return c.json({ error: 'not_found' }, 404)
+  const [media] = await db.select().from(dmMedia).where(eq(dmMedia.messageId, id)).limit(1)
+  if (!media) return c.json({ error: 'not_found' }, 404)
+  await log(c, 'dm_media_view', id)
+  return mediaResponse(c, media.mime, Buffer.from(media.data, 'base64'), 'private, no-store')
 })
 
 /** Hides a message from both students, or brings it back. */

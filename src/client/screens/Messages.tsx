@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import type { Inbox } from '../../shared/social'
 import Verified from '../components/Verified'
+import { useMessageLabel } from '../components/social/MessageBubble'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
 import { BackButton, MessagingRules, useFaceName } from '../components/social/SocialBits'
@@ -13,6 +14,7 @@ export default function Messages() {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const nameOf = useFaceName()
+  const label = useMessageLabel()
   const [inbox, setInbox] = useState<Inbox | null>(null)
   const [failed, setFailed] = useState(false)
 
@@ -85,7 +87,7 @@ export default function Messages() {
             </span>
             <span className={`mt-1 block truncate text-sm ${thread.unread > 0 ? 'font-extrabold text-ink' : 'font-semibold text-ink/55'}`}>
               {thread.last?.mine && `${t('social.messages.you')}: `}
-              {thread.last?.text || `🔒 ${t('social.messages.hiddenText')}`}
+              {thread.last && thread.last.kind !== 'text' ? label(thread.last) : thread.last?.text || `🔒 ${t('social.messages.hiddenText')}`}
             </span>
           </span>
           <span className="flex shrink-0 flex-col items-end gap-1.5">

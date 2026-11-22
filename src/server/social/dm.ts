@@ -1,3 +1,4 @@
+import type { Context } from 'hono'
 import { and, eq, or, sql } from 'drizzle-orm'
 import { MESSAGES_MIN_AGE, type MessagingBlock } from '../../shared/social'
 import { isMember } from '../billing/plans'
@@ -58,4 +59,18 @@ export async function unreadFor(userId: string): Promise<number> {
 /** Everyone the student follows. */
 export async function followedIds(userId: string): Promise<string[]> {
   return (await db.select({ id: follows.followeeId }).from(follows).where(eq(follows.followerId, userId)).limit(1000)).map((row) => row.id)
+}
+
+/**
+ * Sends a recording to the browser. Phones ask for audio and video in pieces ("Range") and
+ * will not play a file from a server that cannot answer that way.
+ */
+export function mediaResponse(c: Context, mime: string, data: Buffer, cache: string): Response {
+  const headers = { 'Content-Type': mime, 'Cache-Control': cache, 'Accept-Ranges': 'bytes' }
+  const range = /^bytes=(\d*)-(\d*)$/.exec(c.req.header('range') ?? '')
+  if (!range || (range[1] === '' && range[2] === '')) return c.body(new Uint8Array(data), 200, headers)
+  const start = range[1] === '' ? Math.max(0, data.length - Number(range[2])) : Number(range[1])
+  const end = range[1] !== '' && range[2] !== '' ? Math.min(Number(range[2]), data.length - 1) : data.length - 1
+  if (start > end || start >= data.length) return c.body(null, 416, { 'Content-Range': `bytes */${data.length}` })
+  return c.body(new Uint8Array(data.subarray(start, end + 1)), 206, { ...headers, 'Content-Range': `bytes ${start}-${end}/${data.length}` })
 }

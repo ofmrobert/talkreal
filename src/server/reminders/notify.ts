@@ -64,6 +64,14 @@ export const notices = {
       `/messages/${from}`,
       { key: `dm:${from}:${userId}`, forMs: 2 * MINUTE },
     ),
+  reaction: (userId: string, from: string, name: string | null, emoji: string) =>
+    notify(
+      userId,
+      'social',
+      (lang) => (lang === 'en' ? { title: `${name ?? 'Talkreal'}`, body: `${emoji} reacted to your message` } : { title: `${name ?? 'Talkreal'}`, body: `${emoji} — реакция на ваше сообщение` }),
+      `/messages/${from}`,
+      { key: `react:${from}:${userId}`, forMs: 2 * MINUTE },
+    ),
   accepted: (userId: string, from: string, name: string | null) =>
     notify(
       userId,

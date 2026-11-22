@@ -202,7 +202,7 @@ export function MessagesPage() {
 interface ConversationData {
   thread: { id: string; status: string; startedBy: string; createdAt: string }
   people: { id: string; who: string; plan: string; level: string | null; banned: boolean }[]
-  messages: { id: string; senderId: string; text: string; better: string | null; status: string; createdAt: string; replyTo: string | null; reactions: { emoji: string; userId: string }[] }[]
+  messages: { id: string; senderId: string; text: string; better: string | null; status: string; createdAt: string; kind: string; seconds: number | null; transcript: string | null; checkedByAi: boolean | null; replyTo: string | null; reactions: { emoji: string; userId: string }[] }[]
   reports: { id: string; reporter: string; aboutId: string; reason: string; note: string | null; createdAt: string; resolvedAt: string | null }[]
 }
 
@@ -304,6 +304,8 @@ export function ConversationPage() {
                   {dateTime(message.createdAt)}
                   {message.status === 'rejected' && <Pill tone="amber">stopped by the check, not delivered</Pill>}
                   {message.status === 'hidden' && <Pill tone="red">hidden by you</Pill>}
+                  {message.kind !== 'text' && <Pill>{message.kind === 'voice' ? 'voice message' : 'video message'}{message.seconds ? `, ${message.seconds} s` : ''}</Pill>}
+                  {message.checkedByAi === false && <Pill tone="amber">not checked by the AI</Pill>}
                 </span>
                 <p
                   className={`whitespace-pre-line break-words rounded-2xl px-3 py-2 text-sm ${
@@ -311,7 +313,18 @@ export function ConversationPage() {
                   }`}
                 >
                   {message.replyTo !== null && <span className="mb-1 block border-l-2 border-slate-400 pl-2 text-xs text-slate-500">↩ in reply to: {message.replyTo || 'an earlier message'}</span>}
-                  {message.text}
+                  {message.kind === 'text' ? (
+                    message.text
+                  ) : (
+                    <span className="flex flex-col gap-2 no-underline">
+                      {message.kind === 'voice' ? (
+                        <audio controls preload="none" src={`/api/admin/messages/media/${message.id}`} className="h-10 w-72 max-w-full" />
+                      ) : (
+                        <video controls playsInline preload="none" src={`/api/admin/messages/media/${message.id}`} className="h-56 w-56 rounded-full bg-black object-cover" />
+                      )}
+                      <span className="text-xs text-slate-600">{message.transcript ? `The AI heard: “${message.transcript}”` : 'The AI heard no words.'}</span>
+                    </span>
+                  )}
                 </p>
                 {message.reactions.length > 0 && (
                   <span className="text-xs text-slate-500">

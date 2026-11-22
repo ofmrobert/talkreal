@@ -15,6 +15,8 @@ interface Request<T> {
   /** Who the AI is and what it must return. */
   system: string
   turns: Turn[]
+  /** A recording to listen to or watch, added to the last turn. `data` is base64. */
+  media?: { mime: string; data: string }
   /** 0 = always the same careful answer; higher = livelier. */
   temperature?: number
   timeoutMs?: number
@@ -47,7 +49,10 @@ export async function askJson<T>(request: Request<T>): Promise<T> {
     signal: AbortSignal.timeout(request.timeoutMs ?? 20_000),
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: request.system }] },
-      contents: request.turns.map((turn) => ({ role: turn.role === 'teacher' ? 'model' : 'user', parts: [{ text: turn.text }] })),
+      contents: request.turns.map((turn, i) => ({
+        role: turn.role === 'teacher' ? 'model' : 'user',
+        parts: [...(request.media && i === request.turns.length - 1 ? [{ inlineData: { mimeType: request.media.mime, data: request.media.data } }] : []), { text: turn.text }],
+      })),
       generationConfig: { responseMimeType: 'application/json', temperature: request.temperature ?? 0.4 },
     }),
   })

@@ -897,7 +897,10 @@
         "closed": "This student does not accept messages.",
         "slow_down": "Too many messages today. Carry on tomorrow.",
         "banned": "Private messages are switched off for you.",
-        "age": "Private messages are for people aged 18 and over."
+        "age": "Private messages are for people aged 18 and over.",
+        "rejectedMedia": "Not sent: the recording breaks the rules.",
+        "too_big": "The recording is too long.",
+        "not_open": "Voice and video messages can be sent once the other person has answered."
       },
       "reply": "Reply",
       "copy": "Copy",
@@ -905,7 +908,22 @@
       "cancelReply": "Cancel reply",
       "quoteGone": "Message unavailable",
       "react": "React or reply",
-      "reactWith": "React with {{emoji}}"
+      "reactWith": "React with {{emoji}}",
+      "voice": "Voice message",
+      "video": "Video message",
+      "recordVoice": "Record a voice message",
+      "recordVideo": "Record a video message",
+      "stop": "Stop",
+      "delete": "Delete the recording",
+      "play": "Play",
+      "pause": "Pause",
+      "speed": "Speed",
+      "heard": "What the AI heard",
+      "cantPlay": "Cannot be played",
+      "micDenied": "Allow the microphone in your browser settings to record your voice.",
+      "camDenied": "Allow the camera and the microphone in your browser settings.",
+      "cantRecord": "This browser cannot record. Update it or open Talkreal in another one.",
+      "tapToRecord": "Tap to record · up to {{count}} seconds"
     },
     "rules": {
       "title": "Rules for messages",

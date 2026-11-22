@@ -57,13 +57,33 @@ export interface ThreadPreview {
   /** A request from them that the viewer has not answered yet. */
   incoming: boolean
   /** The last message. Its text is empty for a student on the free plan. */
-  last: { text: string; mine: boolean; at: string } | null
+  last: { text: string; kind: MessageKind; mine: boolean; at: string } | null
   unread: number
 }
 
+export type MessageKind = 'text' | 'voice' | 'video'
+/** The longest voice message and video note, in seconds. */
+export const VOICE_MAX_SECONDS = 60
+export const VIDEO_MAX_SECONDS = 30
+/** The biggest recording the server takes. The app records small files; this only stops abuse. */
+export const VOICE_MAX_BYTES = 1_500_000
+export const VIDEO_MAX_BYTES = 5_000_000
+/** Voice and video messages a student may send in a day. */
+export const MEDIA_PER_DAY = 40
+/** How many bars the picture of a voice message has. */
+export const WAVEFORM_BARS = 40
+
 export interface DirectMessage {
   id: string
+  /** Empty for a voice or video message. */
   text: string
+  kind: MessageKind
+  /** Voice and video: the length of the recording. */
+  seconds: number | null
+  /** Voice: WAVEFORM_BARS digits 0-9, the loudness over time. */
+  waveform: string | null
+  /** Voice and video: what the AI heard, if it heard words. */
+  transcript: string | null
   mine: boolean
   at: string
   /** For the sender only: the same message in better English, if it had a mistake. */
@@ -79,6 +99,7 @@ export interface DirectMessage {
 export interface MessageQuote {
   id: string
   text: string
+  kind: MessageKind
   mine: boolean
 }
 
@@ -105,6 +126,8 @@ export interface ThreadView {
   /** The viewer blocked them, or they blocked the viewer. */
   blocked: boolean
   block: MessagingBlock
+  /** The viewer may send voice and video messages here. */
+  media: boolean
   messages: DirectMessage[]
 }
 

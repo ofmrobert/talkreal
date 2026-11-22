@@ -563,10 +563,30 @@ export const dmMessages = pgTable(
     status: text('status').notNull().default('sent'),
     /** The earlier message of the same conversation this one answers, if the sender picked one. */
     replyToId: uuid('reply_to_id'),
+    /** 'text' | 'voice' | 'video'. A voice or video message has no text; its recording is in dm_media. */
+    kind: text('kind').notNull().default('text'),
+    /** How long the recording is. */
+    seconds: integer('seconds'),
+    /** The loudness of a voice message over time, one digit 0-9 per bar, for the picture in the bubble. */
+    waveform: text('waveform'),
+    /** What the AI heard in the recording, word for word. */
+    transcript: text('transcript'),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [index('dm_messages_thread_idx').on(t.threadId, t.createdAt), index('dm_messages_sender_idx').on(t.senderId, t.createdAt)],
 )
+
+/** The recording of a voice or video message. Kept apart so that lists of messages stay light. */
+export const dmMedia = pgTable('dm_media', {
+  messageId: uuid('message_id')
+    .primaryKey()
+    .references(() => dmMessages.id, { onDelete: 'cascade' }),
+  mime: text('mime').notNull(),
+  /** The file itself, base64. */
+  data: text('data').notNull(),
+  /** False if the AI could not be asked: then nobody has checked this recording yet. */
+  checkedByAi: boolean('checked_by_ai').notNull().default(false),
+})
 
 /** An emoji one of the two left on a message. One per person per message; see REACTIONS in src/shared/social.ts. */
 export const dmReactions = pgTable(
