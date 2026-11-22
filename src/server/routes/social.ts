@@ -33,7 +33,6 @@ import { dmMedia, dmMessages, dmReactions, dmThreads, feedPosts, follows, social
 import { openProfiles, openProfilesOf, tastesOf, type OpenProfile } from '../pii'
 import { notices } from '../reminders/notify'
 import { blockedBetween, blockedIds, mediaResponse, messagingBlock, pairOf, threadBetween, unreadFor } from '../social/dm'
-import { review, reviewMedia } from '../social/moderation'
 import { facesFor } from './feed'
 
 /**
@@ -405,23 +404,17 @@ socialRoutes.post('/messages/with/:id', async (c) => {
   const [today] = await db.select({ n: sql<number>`count(*)::int` }).from(dmMessages).where(and(eq(dmMessages.senderId, user.id), gte(dmMessages.createdAt, new Date(Date.now() - DAY_MS))))
   if (!staff && (today?.n ?? 0) >= MESSAGES_PER_DAY) return c.json({ error: 'slow_down' }, 429)
 
-  // The owner's announcements may carry links and are not checked; a teacher's message is checked but not corrected.
-  const checked = owner ? { ok: true, better: null } : await review(text, MESSAGE_MAX_LENGTH)
-  const verdict = staff ? { ok: checked.ok, better: null } : checked
+  // Private messages are not read by the AI: people report what is wrong, and the owner moderates in the admin panel.
   if (!thread) {
     const [a, b] = pairOf(user.id, id)
     await db.insert(dmThreads).values({ userA: a, userB: b, startedBy: user.id, ...(staff ? { status: 'open' } : {}) }).onConflictDoNothing()
     thread = await threadBetween(user.id, id)
     if (!thread) return c.json({ error: 'server_error' }, 500)
   }
-  if (!verdict.ok) {
-    await db.insert(dmMessages).values({ threadId: thread.id, senderId: user.id, text, status: 'rejected' })
-    return c.json({ error: 'rejected' }, 422)
-  }
 
   // The message being answered: one that was delivered in this same conversation, or nothing.
   const [quoted] = typeof body.replyTo === 'string' && isUuid(body.replyTo) ? await db.select().from(dmMessages).where(and(eq(dmMessages.id, body.replyTo), eq(dmMessages.threadId, thread.id), eq(dmMessages.status, 'sent'))).limit(1) : []
-  const [row] = await db.insert(dmMessages).values({ threadId: thread.id, senderId: user.id, text, better: verdict.better, replyToId: quoted?.id ?? null }).returning()
+  const [row] = await db.insert(dmMessages).values({ threadId: thread.id, senderId: user.id, text, replyToId: quoted?.id ?? null }).returning()
   // Answering a request accepts it; so does writing again to someone you had declined.
   const answered = (staff || thread.startedBy !== user.id) && thread.status !== 'open'
   await db
@@ -457,7 +450,7 @@ socialRoutes.post('/messages/with/:id', async (c) => {
  * Sends a voice message or a video note. The file is the body of the request; its kind, length
  * and (for voice) loudness picture come in the address. Stricter than text: only an adult on a
  * paid plan (or a teacher), and only in a conversation that is already going on, so nobody gets
- * a recording from a stranger. The AI listens or watches first, and writes down what it heard.
+ * a recording from a stranger. The AI does not hear or see it; the owner can play every recording in the admin panel.
  */
 socialRoutes.post('/messages/with/:id/media', async (c) => {
   const id = c.req.param('id')
@@ -494,8 +487,6 @@ socialRoutes.post('/messages/with/:id/media', async (c) => {
   const wave = c.req.query('wave') ?? ''
   const waveform = kind === 'voice' && wave.length === WAVEFORM_BARS && /^[0-9]+$/.test(wave) ? wave : null
   const base64 = data.toString('base64')
-  // The owner's own recordings are not checked, like the owner's texts.
-  const verdict = owner ? { ok: true, transcript: null, checked: false } : await reviewMedia(kind, mime, base64)
 
   if (!thread) {
     const [a, b] = pairOf(user.id, id)
@@ -506,11 +497,9 @@ socialRoutes.post('/messages/with/:id/media', async (c) => {
   const [quoted] = isUuid(c.req.query('replyTo') ?? '') ? await db.select().from(dmMessages).where(and(eq(dmMessages.id, c.req.query('replyTo')!), eq(dmMessages.threadId, thread.id), eq(dmMessages.status, 'sent'))).limit(1) : []
   const [row] = await db
     .insert(dmMessages)
-    .values({ threadId: thread.id, senderId: user.id, text: '', kind, seconds, waveform, transcript: verdict.transcript, replyToId: quoted?.id ?? null, status: verdict.ok ? 'sent' : 'rejected' })
+    .values({ threadId: thread.id, senderId: user.id, text: '', kind, seconds, waveform, replyToId: quoted?.id ?? null })
     .returning()
-  // A refused recording is kept too, for the owner to see, and is never delivered.
-  await db.insert(dmMedia).values({ messageId: row.id, mime, data: base64, checkedByAi: verdict.checked })
-  if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
+  await db.insert(dmMedia).values({ messageId: row.id, mime, data: base64, checkedByAi: false })
 
   await db
     .update(dmThreads)

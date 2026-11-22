@@ -305,7 +305,6 @@ export function ConversationPage() {
                   {message.status === 'rejected' && <Pill tone="amber">stopped by the check, not delivered</Pill>}
                   {message.status === 'hidden' && <Pill tone="red">hidden by you</Pill>}
                   {message.kind !== 'text' && <Pill>{message.kind === 'voice' ? 'voice message' : 'video message'}{message.seconds ? `, ${message.seconds} s` : ''}</Pill>}
-                  {message.checkedByAi === false && <Pill tone="amber">not checked by the AI</Pill>}
                 </span>
                 <p
                   className={`whitespace-pre-line break-words rounded-2xl px-3 py-2 text-sm ${
@@ -322,7 +321,7 @@ export function ConversationPage() {
                       ) : (
                         <video controls playsInline preload="none" src={`/api/admin/messages/media/${message.id}`} className="h-56 w-56 rounded-full bg-black object-cover" />
                       )}
-                      <span className="text-xs text-slate-600">{message.transcript ? `The AI heard: “${message.transcript}”` : 'The AI heard no words.'}</span>
+                      {message.transcript && <span className="text-xs text-slate-600">The AI heard: “{message.transcript}”</span>}
                     </span>
                   )}
                 </p>
