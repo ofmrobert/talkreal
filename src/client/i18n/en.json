@@ -896,6 +896,7 @@
         "blocked": "This conversation is not available.",
         "closed": "This student does not accept messages.",
         "slow_down": "Too many messages today. Carry on tomorrow.",
+        "video_limit": "That is all the video messages for today. You can still send a voice message.",
         "banned": "Private messages are switched off for you.",
         "age": "Private messages are for people aged 18 and over.",
         "rejectedMedia": "Not sent: the recording breaks the rules.",

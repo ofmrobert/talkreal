@@ -20,6 +20,7 @@ Return one JSON object: {"ok": true or false, "better": string or null}.
 - "better": if the comment is in English and has a real mistake in grammar, word choice or spelling, the same comment rewritten correctly, changing as little as possible. If it is already correct, is not in English, or "ok" is false, null. Ignore missing capital letters and final punctuation.`,
       turns: [{ role: 'student', text }],
       temperature: 0,
+      light: true,
       timeoutMs: 12_000,
       mock: () => ({ ok: !/badword/i.test(text), better: /\bi am agree\b/i.test(text) ? text.replace(/\bi am agree\b/i, 'I agree') : null }),
     })
@@ -54,6 +55,7 @@ Return one JSON object: {"ok": true or false, "transcript": string or null}.
       // The AI knows an audio-only MP4 as M4A.
       media: { mime: mime === 'audio/mp4' ? 'audio/m4a' : mime, data },
       temperature: 0,
+      light: true,
       timeoutMs: 30_000,
       // Test mode: a file with the word "badword" in its bytes is refused.
       mock: () => (Buffer.from(data, 'base64').includes('badword') ? { ok: false, transcript: null } : { ok: true, transcript: 'I think my pronunciation is getting better.' }),

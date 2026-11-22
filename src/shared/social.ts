@@ -70,6 +70,8 @@ export const VOICE_MAX_BYTES = 1_500_000
 export const VIDEO_MAX_BYTES = 5_000_000
 /** Voice and video messages a student may send in a day. */
 export const MEDIA_PER_DAY = 40
+/** Of those, how many may be video notes: a video costs several times more to check than a voice message. */
+export const VIDEO_PER_DAY = 10
 /** How many bars the picture of a voice message has. */
 export const WAVEFORM_BARS = 40
 

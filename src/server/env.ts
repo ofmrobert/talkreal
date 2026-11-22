@@ -35,6 +35,8 @@ export const env = {
     liveModel: process.env.GEMINI_LIVE_MODEL ?? 'gemini-3.8-live',
     /** The model for written work: call reviews, text chat, checking typed answers. */
     textModel: process.env.GEMINI_TEXT_MODEL ?? 'gemini-3.8-flash',
+    /** The cheap model for yes/no work: checking messages, comments, posts and recordings before they go out. */
+    checkModel: process.env.GEMINI_CHECK_MODEL ?? 'gemini-2.5-flash-lite',
     /** Where the AI is reached. Point this at a relay outside Russia if Google refuses a direct connection. */
     geminiWsBase: process.env.GEMINI_WS_BASE ?? 'wss://generativelanguage.googleapis.com',
     /** "mock" replaces the real AI with a stand-in, for testing without a key. */

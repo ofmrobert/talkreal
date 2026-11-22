@@ -3,6 +3,7 @@ import { Hono } from 'hono'
 import type { GoalId, InterestId } from '../../shared/profile'
 import {
   MEDIA_PER_DAY,
+  VIDEO_PER_DAY,
   MESSAGE_MAX_LENGTH,
   MESSAGES_PER_DAY,
   NEW_CHATS_PER_DAY,
@@ -480,8 +481,9 @@ socialRoutes.post('/messages/with/:id/media', async (c) => {
   if (!owner && (await blockedBetween(user.id, id))) return c.json({ error: 'blocked' }, 403)
   if (!staff && thread?.status !== 'open') return c.json({ error: 'not_open' }, 403)
   if (!staff) {
-    const [today] = await db.select({ n: sql<number>`count(*)::int` }).from(dmMessages).where(and(eq(dmMessages.senderId, user.id), inArray(dmMessages.kind, ['voice', 'video']), gte(dmMessages.createdAt, new Date(Date.now() - DAY_MS))))
+    const [today] = await db.select({ n: sql<number>`count(*)::int`, videos: sql<number>`(count(*) filter (where ${dmMessages.kind} = 'video'))::int` }).from(dmMessages).where(and(eq(dmMessages.senderId, user.id), inArray(dmMessages.kind, ['voice', 'video']), gte(dmMessages.createdAt, new Date(Date.now() - DAY_MS))))
     if ((today?.n ?? 0) >= MEDIA_PER_DAY) return c.json({ error: 'slow_down' }, 429)
+    if (kind === 'video' && (today?.videos ?? 0) >= VIDEO_PER_DAY) return c.json({ error: 'video_limit' }, 429)
   }
 
   const data = Buffer.from(await c.req.arrayBuffer())

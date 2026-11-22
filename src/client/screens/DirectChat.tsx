@@ -101,7 +101,7 @@ export default function DirectChat() {
       const data = await res.json().catch(() => ({}))
       if (!res.ok) {
         const code: string = data.error ?? ''
-        return t(code === 'rejected' ? 'social.chat.errors.rejectedMedia' : ['too_big', 'not_open', 'blocked', 'slow_down', 'banned', 'age'].includes(code) ? `social.chat.errors.${code}` : 'feed.failed')
+        return t(code === 'rejected' ? 'social.chat.errors.rejectedMedia' : ['too_big', 'not_open', 'blocked', 'slow_down', 'video_limit', 'banned', 'age'].includes(code) ? `social.chat.errors.${code}` : 'feed.failed')
       }
       setView((now) => now && { ...now, status: data.status, messages: [...now.messages, data.message] })
       setReplyTo(null)
