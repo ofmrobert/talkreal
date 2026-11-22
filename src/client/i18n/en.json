@@ -898,7 +898,14 @@
         "slow_down": "Too many messages today. Carry on tomorrow.",
         "banned": "Private messages are switched off for you.",
         "age": "Private messages are for people aged 18 and over."
-      }
+      },
+      "reply": "Reply",
+      "copy": "Copy",
+      "you": "You",
+      "cancelReply": "Cancel reply",
+      "quoteGone": "Message unavailable",
+      "react": "React or reply",
+      "reactWith": "React with {{emoji}}"
     },
     "rules": {
       "title": "Rules for messages",

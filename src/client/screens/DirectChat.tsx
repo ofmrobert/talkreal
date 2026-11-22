@@ -5,6 +5,7 @@ import { MESSAGE_MAX_LENGTH, type DirectMessage, type ThreadView } from '../../s
 import Verified from '../components/Verified'
 import Avatar from '../components/Avatar'
 import Chai from '../components/Chai'
+import MessageBubble, { MessageMenu } from '../components/social/MessageBubble'
 import { MessagingRules, SafetyMenu, useFaceName } from '../components/social/SocialBits'
 import { api, ApiError } from '../lib/api'
 
@@ -19,12 +20,22 @@ export default function DirectChat() {
   const [draft, setDraft] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  /** The message being answered, shown above the box to write. */
+  const [replyTo, setReplyTo] = useState<DirectMessage | null>(null)
+  /** The message whose menu is open, and where its bubble is on the screen. */
+  const [menu, setMenu] = useState<{ message: DirectMessage; rect: DOMRect } | null>(null)
+  const [flash, setFlash] = useState<string | null>(null)
   const bottom = useRef<HTMLDivElement>(null)
+  const input = useRef<HTMLTextAreaElement>(null)
+  /** Reactions on their way to the server: a refresh that lands meanwhile would undo them on screen. */
+  const saving = useRef(0)
   const count = view?.messages.length ?? 0
+  /** A reaction under the last message makes it taller: the list follows. */
+  const lastReactions = view?.messages[count - 1]?.reactions.length ?? 0
 
   function load() {
     api<ThreadView>(`/social/messages/with/${id}`)
-      .then(setView)
+      .then((fresh) => saving.current === 0 && setView(fresh))
       .catch(() => setFailed(true))
   }
   useEffect(() => {
@@ -37,7 +48,7 @@ export default function DirectChat() {
   // Keeps the newest message in view when one arrives.
   useEffect(() => {
     bottom.current?.scrollIntoView({ block: 'end' })
-  }, [count])
+  }, [count, lastReactions])
 
   if (!view) {
     return (
@@ -62,9 +73,10 @@ export default function DirectChat() {
     setBusy(true)
     setError(null)
     try {
-      const result = await api<{ message: DirectMessage; status: ThreadView['status'] }>(`/social/messages/with/${id}`, { text })
+      const result = await api<{ message: DirectMessage; status: ThreadView['status'] }>(`/social/messages/with/${id}`, { text, replyTo: replyTo?.id })
       setView({ ...view, status: result.status, incoming: false, waiting: result.status === 'request', messages: [...view.messages, result.message] })
       setDraft('')
+      setReplyTo(null)
     } catch (err) {
       const code = err instanceof ApiError ? err.code : 'network'
       if (code === 'pro') navigate('/plans')
@@ -73,6 +85,32 @@ export default function DirectChat() {
     } finally {
       setBusy(false)
     }
+  }
+
+  /** Puts the emoji on the message, or takes it off if it is already the viewer's. Shown at once, then saved. */
+  function react(message: DirectMessage, emoji: string) {
+    const next = message.reactions.some((r) => r.mine && r.emoji === emoji) ? null : emoji
+    const put = (reactions: DirectMessage['reactions']) => setView((now) => now && { ...now, messages: now.messages.map((m) => (m.id === message.id ? { ...m, reactions } : m)) })
+    put([...message.reactions.filter((r) => !r.mine), ...(next ? [{ emoji: next, mine: true }] : [])])
+    saving.current++
+    api<{ reactions: DirectMessage['reactions'] }>(`/social/messages/react/${message.id}`, { emoji: next })
+      .then((result) => put(result.reactions))
+      .catch(() => put(message.reactions))
+      .finally(() => saving.current--)
+  }
+
+  function reply(message: DirectMessage) {
+    setReplyTo(message)
+    input.current?.focus()
+  }
+
+  /** Scrolls to the message a reply points to and lights it up for a moment. */
+  function jump(messageId: string) {
+    const target = document.getElementById(`m-${messageId}`)
+    if (!target) return
+    target.scrollIntoView({ block: 'center', behavior: 'smooth' })
+    setFlash(messageId)
+    setTimeout(() => setFlash((now) => (now === messageId ? null : now)), 1400)
   }
 
   async function answer(accept: boolean) {
@@ -86,6 +124,9 @@ export default function DirectChat() {
   const name = nameOf(view.other)
   // Why the box to write is not shown, if it is not.
   const closed = view.blocked ? 'blocked' : view.block === 'age' || view.block === 'banned' ? view.block : view.turnedDown ? 'declined' : view.waiting ? 'waiting' : null
+  // Replying needs the box to write; reacting also needs the conversation to be going on.
+  const canReply = view.block === null && !view.incoming && closed === null
+  const canReact = canReply && view.status === 'open'
 
   return (
     <div className="safe-screen mx-auto flex h-full max-w-md flex-col gap-3">
@@ -111,7 +152,7 @@ export default function DirectChat() {
         <SafetyMenu userId={view.other.userId} blocked={view.blocked} onBlocked={load} />
       </header>
 
-      <main className="flex flex-1 flex-col gap-2.5 overflow-y-auto rounded-3xl bg-card/60 p-4" aria-live="polite">
+      <main className="flex flex-1 flex-col gap-2.5 overflow-y-auto overflow-x-hidden rounded-3xl bg-card/60 p-4" aria-live="polite">
         {view.messages.length === 0 && view.block !== 'rules' && (
           <div className="m-auto flex flex-col items-center gap-3 text-center">
             <Avatar userId={view.other.userId} name={view.other.name} photoVersion={view.other.photoVersion} size={88} />
@@ -124,30 +165,33 @@ export default function DirectChat() {
           return (
             <div key={message.id} className="flex flex-col gap-2.5">
               {newDay && <p className="self-center rounded-full bg-card px-3 py-1 text-xs font-extrabold text-ink/45">{day(message.at)}</p>}
-              <div className={`bubble-in flex max-w-[86%] flex-col gap-1 ${message.mine ? 'items-end self-end' : 'items-start self-start'}`}>
-                {message.hidden ? (
+              {message.hidden ? (
+                <div className={`flex max-w-[86%] flex-col gap-1 ${message.mine ? 'items-end self-end' : 'items-start self-start'}`}>
                   <p className="rounded-3xl bg-ink/5 px-4 py-2.5 text-sm font-semibold italic text-ink/45">{t('social.chat.hidden')}</p>
-                ) : view.block === 'pro' && !message.mine ? (
+                  <span className="px-1 text-[11px] font-bold text-ink/35">{time(message.at)}</span>
+                </div>
+              ) : view.block === 'pro' && !message.mine ? (
+                <div className="flex max-w-[86%] flex-col items-start gap-1 self-start">
                   <p className="flex select-none flex-col gap-1.5 rounded-3xl rounded-bl-md bg-card px-4 py-3 blur-[5px]" aria-hidden="true">
                     <span className="h-3 w-40 rounded-full bg-ink/35" />
                     <span className="h-3 w-24 rounded-full bg-ink/25" />
                   </p>
-                ) : (
-                  <p
-                    className={`select-text whitespace-pre-line break-words rounded-3xl px-4 py-2.5 text-base font-semibold leading-snug ${
-                      message.mine ? 'rounded-br-md bg-coral text-white' : 'rounded-bl-md bg-card shadow-[0_3px_0_0_rgb(var(--shade)/0.06)]'
-                    }`}
-                  >
-                    {message.text}
-                  </p>
-                )}
-                {message.better && (
-                  <p className="select-text rounded-2xl bg-good-soft px-3 py-2 text-sm font-semibold leading-snug text-good-ink">
-                    <span className="font-extrabold">✍️ {t('social.chat.better')}</span> {message.better}
-                  </p>
-                )}
-                <span className="px-1 text-[11px] font-bold text-ink/35">{time(message.at)}</span>
-              </div>
+                  <span className="px-1 text-[11px] font-bold text-ink/35">{time(message.at)}</span>
+                </div>
+              ) : (
+                <MessageBubble
+                  message={message}
+                  name={name}
+                  time={time(message.at)}
+                  canReact={canReact}
+                  canReply={canReply}
+                  flash={flash === message.id}
+                  onReact={(emoji) => react(message, emoji)}
+                  onReply={() => reply(message)}
+                  onJump={jump}
+                  onMenu={(rect) => setMenu({ message, rect })}
+                />
+              )}
             </div>
           )
         })}
@@ -183,8 +227,23 @@ export default function DirectChat() {
               {error}
             </p>
           )}
+          {replyTo && (
+            <div className="flex items-center gap-2 rounded-2xl border-l-4 border-coral bg-card py-1.5 pl-3 pr-1.5">
+              <span className="text-lg font-extrabold text-coral-ink" aria-hidden="true">
+                ↩
+              </span>
+              <span className="min-w-0 flex-1 leading-tight">
+                <span className="block text-xs font-extrabold text-coral-ink">{replyTo.mine ? t('social.chat.you') : name}</span>
+                <span className="block truncate text-sm font-semibold text-ink/60">{replyTo.text}</span>
+              </span>
+              <button type="button" onClick={() => setReplyTo(null)} aria-label={t('social.chat.cancelReply')} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-ink/45 active:bg-ink/5">
+                ✕
+              </button>
+            </div>
+          )}
           <div className="flex items-end gap-2">
             <textarea
+              ref={input}
               value={draft}
               onChange={(e) => setDraft(e.target.value.slice(0, MESSAGE_MAX_LENGTH))}
               onKeyDown={(e) => {
@@ -207,6 +266,20 @@ export default function DirectChat() {
           </div>
           <p className="px-1 text-center text-[11px] font-semibold leading-snug text-ink/40">🛡️ {t('social.chat.note')}</p>
         </form>
+      )}
+
+      {menu && (
+        <MessageMenu
+          rect={menu.rect}
+          mine={menu.message.mine}
+          current={view.messages.find((m) => m.id === menu.message.id)?.reactions.find((r) => r.mine)?.emoji ?? null}
+          canReact={canReact}
+          canReply={canReply}
+          onReact={(emoji) => react(view.messages.find((m) => m.id === menu.message.id) ?? menu.message, emoji)}
+          onReply={() => reply(menu.message)}
+          onCopy={() => void navigator.clipboard?.writeText(menu.message.text).catch(() => {})}
+          onClose={() => setMenu(null)}
+        />
       )}
     </div>
   )

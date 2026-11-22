@@ -5,9 +5,12 @@ import {
   MESSAGE_MAX_LENGTH,
   MESSAGES_PER_DAY,
   NEW_CHATS_PER_DAY,
+  QUOTE_MAX_LENGTH,
+  REACTIONS,
   REPORT_REASONS,
   type DirectMessage,
   type Inbox,
+  type MessageQuote,
   type Person,
   type PublicProfile,
   type ReportReason,
@@ -18,7 +21,7 @@ import {
 import { requireUser, type AuthEnv } from '../auth/sessions'
 import { isMember } from '../billing/plans'
 import { db } from '../db/client'
-import { dmMessages, dmThreads, feedPosts, follows, socialReports, userBlocks, users } from '../db/schema'
+import { dmMessages, dmReactions, dmThreads, feedPosts, follows, socialReports, userBlocks, users } from '../db/schema'
 import { openProfiles, openProfilesOf, tastesOf, type OpenProfile } from '../pii'
 import { notices } from '../reminders/notify'
 import { blockedBetween, blockedIds, messagingBlock, pairOf, threadBetween, unreadFor } from '../social/dm'
@@ -204,6 +207,13 @@ socialRoutes.post('/people/:id/report', async (c) => {
 
 /* ───────────── Private messages ───────────── */
 
+/** The message another one answers, as shown inside it. No text if it was hidden or the viewer may not read. */
+function quoteOf(replyToId: string | null, found: Map<string, typeof dmMessages.$inferSelect>, viewer: string, readable: boolean): MessageQuote | null {
+  if (!replyToId) return null
+  const row = found.get(replyToId)
+  return { id: replyToId, text: row && row.status === 'sent' && readable ? row.text.slice(0, QUOTE_MAX_LENGTH) : '', mine: row?.senderId === viewer }
+}
+
 const statusOf = (value: string): ThreadStatus => (value === 'open' || value === 'declined' ? value : 'request')
 
 /** The student's conversations, newest first. A student on the free plan sees who wrote, not what. */
@@ -280,10 +290,25 @@ socialRoutes.get('/messages/with/:id', async (c) => {
   // Reading is part of the paid plans: only then is the conversation marked as read.
   if (thread && paid) await db.update(dmThreads).set(thread.userA === user.id ? { readAtA: new Date() } : { readAtB: new Date() }).where(eq(dmThreads.id, thread.id))
 
+  const found = new Map(rows.map((row) => [row.id, row]))
+  // A message may answer one older than the 200 shown: those are looked up too.
+  const older = [...new Set(rows.map((row) => row.replyToId).filter((x): x is string => x !== null && !found.has(x)))]
+  if (thread && older.length) for (const row of await db.select().from(dmMessages).where(and(inArray(dmMessages.id, older), eq(dmMessages.threadId, thread.id)))) found.set(row.id, row)
+  const reacted = rows.length ? await db.select().from(dmReactions).where(inArray(dmReactions.messageId, rows.map((row) => row.id))) : []
+
   const messages: DirectMessage[] = rows.reverse().map((row) => {
     const mine = row.senderId === user.id
     const hidden = row.status === 'hidden'
-    return { id: row.id, text: hidden || !paid ? '' : row.text, mine, at: row.createdAt.toISOString(), better: mine && !hidden ? row.better : null, hidden }
+    return {
+      id: row.id,
+      text: hidden || !paid ? '' : row.text,
+      mine,
+      at: row.createdAt.toISOString(),
+      better: mine && !hidden ? row.better : null,
+      hidden,
+      replyTo: hidden ? null : quoteOf(row.replyToId, found, user.id, paid),
+      reactions: hidden ? [] : reacted.filter((r) => r.messageId === row.id).map((r) => ({ emoji: r.emoji, mine: r.userId === user.id })),
+    }
   })
   const view: ThreadView = {
     id: thread?.id ?? '',
@@ -368,7 +393,9 @@ socialRoutes.post('/messages/with/:id', async (c) => {
     return c.json({ error: 'rejected' }, 422)
   }
 
-  const [row] = await db.insert(dmMessages).values({ threadId: thread.id, senderId: user.id, text, better: verdict.better }).returning()
+  // The message being answered: one that was delivered in this same conversation, or nothing.
+  const [quoted] = typeof body.replyTo === 'string' && isUuid(body.replyTo) ? await db.select().from(dmMessages).where(and(eq(dmMessages.id, body.replyTo), eq(dmMessages.threadId, thread.id), eq(dmMessages.status, 'sent'))).limit(1) : []
+  const [row] = await db.insert(dmMessages).values({ threadId: thread.id, senderId: user.id, text, better: verdict.better, replyToId: quoted?.id ?? null }).returning()
   // Answering a request accepts it; so does writing again to someone you had declined.
   const answered = (staff || thread.startedBy !== user.id) && thread.status !== 'open'
   await db
@@ -383,8 +410,48 @@ socialRoutes.post('/messages/with/:id', async (c) => {
   else if (answered) notices.accepted(id, user.id, name)
   else notices.message(id, user.id, name)
 
-  const message: DirectMessage = { id: row.id, text: row.text, mine: true, at: row.createdAt.toISOString(), better: row.better, hidden: false }
+  const message: DirectMessage = {
+    id: row.id,
+    text: row.text,
+    mine: true,
+    at: row.createdAt.toISOString(),
+    better: row.better,
+    hidden: false,
+    replyTo: quoted ? quoteOf(quoted.id, new Map([[quoted.id, quoted]]), user.id, true) : null,
+    reactions: [],
+  }
   return c.json({ message, status: answered ? 'open' : statusOf(thread.status) })
+})
+
+/**
+ * Leaves an emoji on a message, changes it, or takes it off (`emoji: null`). One per person per message.
+ * Only in a conversation that is going on, and only by someone who may read it.
+ */
+socialRoutes.post('/messages/react/:messageId', async (c) => {
+  const messageId = c.req.param('messageId')
+  const user = await load(c.get('userId'))
+  const body = await c.req.json().catch(() => ({}))
+  if (!user || !isUuid(messageId)) return c.json({ error: 'not_found' }, 404)
+  const emoji: string | null = body.emoji ?? null
+  if (emoji !== null && !(REACTIONS as readonly string[]).includes(emoji)) return c.json({ error: 'invalid' }, 400)
+  const [message] = await db.select().from(dmMessages).where(and(eq(dmMessages.id, messageId), eq(dmMessages.status, 'sent'))).limit(1)
+  const [thread] = message ? await db.select().from(dmThreads).where(eq(dmThreads.id, message.threadId)).limit(1) : []
+  if (!message || !thread || (thread.userA !== user.id && thread.userB !== user.id)) return c.json({ error: 'not_found' }, 404)
+  const other = thread.userA === user.id ? thread.userB : thread.userA
+  const faces = await facesFor([user.id, other], user.id)
+  const block = await messagingBlock(user)
+  if (block && !(faces.get(other)?.teacher && block !== 'banned')) return c.json({ error: block }, 403)
+  if (thread.status !== 'open') return c.json({ error: 'closed' }, 403)
+  if (!faces.get(other)?.owner && !faces.get(user.id)?.owner && (await blockedBetween(user.id, other))) return c.json({ error: 'blocked' }, 403)
+
+  if (emoji === null) await db.delete(dmReactions).where(and(eq(dmReactions.messageId, messageId), eq(dmReactions.userId, user.id)))
+  else
+    await db
+      .insert(dmReactions)
+      .values({ messageId, userId: user.id, emoji })
+      .onConflictDoUpdate({ target: [dmReactions.messageId, dmReactions.userId], set: { emoji, createdAt: new Date() } })
+  const now = await db.select().from(dmReactions).where(eq(dmReactions.messageId, messageId))
+  return c.json({ reactions: now.map((r) => ({ emoji: r.emoji, mine: r.userId === user.id })) })
 })
 
 /** For the dot on the Feed tab: how many messages are waiting. */

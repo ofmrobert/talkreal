@@ -19,6 +19,7 @@ import {
   adminActions,
   dailyUsage,
   dmMessages,
+  dmReactions,
   dmThreads,
   feedComments,
   feedPosts,
@@ -875,13 +876,23 @@ adminRoutes.get('/messages/:id', async (c) => {
   if (!thread) return c.json({ error: 'not_found' }, 404)
   const messages = await db.select().from(dmMessages).where(eq(dmMessages.threadId, id)).orderBy(asc(dmMessages.createdAt)).limit(1000)
   const reports = await db.select().from(socialReports).where(eq(socialReports.threadId, id)).orderBy(desc(socialReports.createdAt))
+  const reacted = messages.length ? await db.select().from(dmReactions).where(inArray(dmReactions.messageId, messages.map((m) => m.id))) : []
   const people = await db.select().from(users).where(inArray(users.id, [thread.userA, thread.userB]))
   const names = await namesFor([thread.userA, thread.userB, ...reports.map((r) => r.reporterId)])
   await log(c, 'dm_view', id)
   return c.json({
     thread: { id: thread.id, status: thread.status, startedBy: thread.startedBy, createdAt: thread.createdAt },
     people: people.map((u) => ({ id: u.id, who: names.get(u.id), plan: planOf(u), level: u.level, banned: u.dmBannedAt !== null })),
-    messages: messages.map((m) => ({ id: m.id, senderId: m.senderId, text: m.text, better: m.better, status: m.status, createdAt: m.createdAt })),
+    messages: messages.map((m) => ({
+      id: m.id,
+      senderId: m.senderId,
+      text: m.text,
+      better: m.better,
+      status: m.status,
+      createdAt: m.createdAt,
+      replyTo: m.replyToId ? (messages.find((x) => x.id === m.replyToId)?.text.slice(0, 140) ?? '') : null,
+      reactions: reacted.filter((r) => r.messageId === m.id).map((r) => ({ emoji: r.emoji, userId: r.userId })),
+    })),
     reports: reports.map((r) => ({ id: r.id, reporter: names.get(r.reporterId), aboutId: r.aboutId, reason: r.reason, note: r.note, createdAt: r.createdAt, resolvedAt: r.resolvedAt })),
   })
 })

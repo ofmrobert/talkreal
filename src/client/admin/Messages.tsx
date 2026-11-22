@@ -202,7 +202,7 @@ export function MessagesPage() {
 interface ConversationData {
   thread: { id: string; status: string; startedBy: string; createdAt: string }
   people: { id: string; who: string; plan: string; level: string | null; banned: boolean }[]
-  messages: { id: string; senderId: string; text: string; better: string | null; status: string; createdAt: string }[]
+  messages: { id: string; senderId: string; text: string; better: string | null; status: string; createdAt: string; replyTo: string | null; reactions: { emoji: string; userId: string }[] }[]
   reports: { id: string; reporter: string; aboutId: string; reason: string; note: string | null; createdAt: string; resolvedAt: string | null }[]
 }
 
@@ -310,8 +310,14 @@ export function ConversationPage() {
                     message.status === 'rejected' ? 'border border-dashed border-amber-400 bg-amber-50 text-amber-900' : message.status === 'hidden' ? 'bg-slate-200 text-slate-500 line-through' : mine ? 'bg-violet-100 text-slate-900' : 'bg-emerald-100 text-slate-900'
                   }`}
                 >
+                  {message.replyTo !== null && <span className="mb-1 block border-l-2 border-slate-400 pl-2 text-xs text-slate-500">↩ in reply to: {message.replyTo || 'an earlier message'}</span>}
                   {message.text}
                 </p>
+                {message.reactions.length > 0 && (
+                  <span className="text-xs text-slate-500">
+                    {message.reactions.map((r) => `${r.emoji} ${data.people.find((p) => p.id === r.userId)?.who ?? 'deleted account'}`).join(' · ')}
+                  </span>
+                )}
                 {message.status !== 'rejected' && (
                   <button
                     type="button"

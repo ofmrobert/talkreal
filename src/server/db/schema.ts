@@ -561,9 +561,27 @@ export const dmMessages = pgTable(
     better: text('better'),
     /** 'sent' | 'hidden' (removed by a moderator) | 'rejected' (stopped by the check, never delivered) */
     status: text('status').notNull().default('sent'),
+    /** The earlier message of the same conversation this one answers, if the sender picked one. */
+    replyToId: uuid('reply_to_id'),
     createdAt: timestamptz('created_at').notNull().defaultNow(),
   },
   (t) => [index('dm_messages_thread_idx').on(t.threadId, t.createdAt), index('dm_messages_sender_idx').on(t.senderId, t.createdAt)],
+)
+
+/** An emoji one of the two left on a message. One per person per message; see REACTIONS in src/shared/social.ts. */
+export const dmReactions = pgTable(
+  'dm_reactions',
+  {
+    messageId: uuid('message_id')
+      .notNull()
+      .references(() => dmMessages.id, { onDelete: 'cascade' }),
+    userId: uuid('user_id')
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    emoji: text('emoji').notNull(),
+    createdAt: timestamptz('created_at').notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.messageId, t.userId] })],
 )
 
 /** A student's complaint about a conversation or about another student. */

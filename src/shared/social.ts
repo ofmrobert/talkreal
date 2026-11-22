@@ -70,7 +70,22 @@ export interface DirectMessage {
   better: string | null
   /** Removed by a moderator: the text is not sent. */
   hidden: boolean
+  /** The earlier message this one answers. Its text is empty if that message is no longer shown. */
+  replyTo: MessageQuote | null
+  /** At most two: the viewer's and the other person's. */
+  reactions: { emoji: string; mine: boolean }[]
 }
+
+export interface MessageQuote {
+  id: string
+  text: string
+  mine: boolean
+}
+
+/** The emoji a message can be answered with. The first is the "like" a double tap gives. */
+export const REACTIONS = ['❤️', '👍', '😂', '😮', '😢', '🔥'] as const
+/** How much of a message is shown when another message answers it. */
+export const QUOTE_MAX_LENGTH = 140
 
 export interface Inbox {
   threads: ThreadPreview[]

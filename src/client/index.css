@@ -327,3 +327,19 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .owner-shine { animation: none; }
 }
+
+/* Private messages: the bubble a reply points to lights up; the reaction menu pops in. */
+@keyframes msg-flash {
+  0%, 60% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-coral) 55%, transparent); }
+  100% { box-shadow: 0 0 0 4px transparent; }
+}
+.msg-flash { animation: msg-flash 1.3s ease-out; }
+@keyframes menu-pop {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+.menu-pop { animation: menu-pop 0.16s ease-out; }
+.msg-touch { touch-action: pan-y; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+@media (prefers-reduced-motion: reduce) {
+  .msg-flash, .menu-pop { animation: none; }
+}
