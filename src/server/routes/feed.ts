@@ -10,7 +10,6 @@ import { publicFaces, userIdsByEmails } from '../pii'
 import { recordActivity } from '../progress/activity'
 import { notices } from '../reminders/notify'
 import { blockedIds, followedIds, unreadFor } from '../social/dm'
-import { review } from '../social/moderation'
 import { localDay, safeTimezone } from '../progress/streak'
 
 const PAGE = 10
@@ -348,10 +347,6 @@ feedRoutes.post('/:id/comments', async (c) => {
     .where(and(eq(feedComments.userId, user.id), gte(feedComments.createdAt, new Date(Date.now() - 24 * 60 * 60 * 1000))))
   if ((today?.n ?? 0) >= (teacher ? TEACHER_COMMENTS_PER_DAY : COMMENTS_PER_DAY)) return c.json({ error: 'slow_down' }, 429)
 
-  const verdict = await review(text)
-  if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
-  // A teacher's English is not corrected.
-  if (verdict.better && body.confirm !== true && !teacher) return c.json({ suggestion: verdict.better })
 
   const [row] = await db.insert(feedComments).values({ postId: id, userId: user.id, text }).returning()
   if (post.authorId && post.authorId !== user.id) notices.comment(post.authorId, id, (await facesFor([user.id], post.authorId)).get(user.id)?.name ?? null)
@@ -394,10 +389,6 @@ feedRoutes.post('/posts', async (c) => {
     poll = { options, ...(answer === undefined ? {} : { answer }), ...(why ? { explanation: { ru: why, en: why } } : {}) }
   }
 
-  const verdict = await review(poll ? `${text}\n${poll.options.join('\n')}${poll.explanation ? `\n${poll.explanation.en}` : ''}`.slice(0, POST_MAX_LENGTH * 2) : text, POST_MAX_LENGTH * (poll ? 2 : 1))
-  if (!verdict.ok) return c.json({ error: 'rejected' }, 422)
-  // A teacher's English is not corrected.
-  if (verdict.better && body.confirm !== true && !teacher) return c.json({ suggestion: verdict.better })
 
   const [row] = await db
     .insert(feedPosts)

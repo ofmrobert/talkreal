@@ -18,11 +18,6 @@ interface Request<T> {
   /** 0 = always the same careful answer; higher = livelier. */
   temperature?: number
   timeoutMs?: number
-  /**
-   * A simple check that needs no deep thought: asked of the cheap model, without paid "thinking".
-   * If the cheap model refuses the request, the main model is asked instead.
-   */
-  light?: boolean
   /** The answer used in test mode (VOICE_PROVIDER=mock), when no real AI is called. */
   mock: () => T
 }
@@ -46,34 +41,17 @@ export async function askJson<T>(request: Request<T>): Promise<T> {
   if (!env.ai.geminiKey) throw new Error('The text AI is not configured')
 
   const base = env.ai.geminiWsBase.replace(/^ws/, 'http')
-  // A light check tries the cheap model first (it does not think unless asked), then the main model
-  // thinking as little as it can, then the main model as it is: so a check is never lost to a setting Google refuses.
-  const attempts: { model: string; thinking?: 'low' }[] =
-    request.light && env.ai.checkModel && env.ai.checkModel !== env.ai.textModel
-      ? [{ model: env.ai.checkModel }, { model: env.ai.textModel, thinking: 'low' }, { model: env.ai.textModel }]
-      : request.light
-        ? [{ model: env.ai.textModel, thinking: 'low' }, { model: env.ai.textModel }]
-        : [{ model: env.ai.textModel }]
-  let res: Response | null = null
-  for (const [i, attempt] of attempts.entries()) {
-    res = await fetch(`${base}/v1beta/models/${attempt.model}:generateContent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.ai.geminiKey },
-      signal: AbortSignal.timeout(request.timeoutMs ?? 20_000),
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: request.system }] },
-        contents: request.turns.map((turn) => ({
-          role: turn.role === 'teacher' ? 'model' : 'user',
-          parts: [{ text: turn.text }],
-        })),
-        generationConfig: { responseMimeType: 'application/json', temperature: request.temperature ?? 0.4, ...(attempt.thinking ? { thinkingConfig: { thinkingLevel: attempt.thinking } } : {}) },
-      }),
-    })
-    // 400 and 404 mean "not this model" or "not this setting": the next attempt may work. Anything else would fail again.
-    if (res.ok || (res.status !== 400 && res.status !== 404) || i === attempts.length - 1) break
-    console.error(`The text AI (${attempt.model}) answered ${res.status}, trying the next: ${(await res.text()).slice(0, 200)}`)
-  }
-  if (!res || !res.ok) throw new Error(`The text AI answered ${res?.status}: ${(await res?.text())?.slice(0, 200)}`)
+  const res = await fetch(`${base}/v1beta/models/${env.ai.textModel}:generateContent`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.ai.geminiKey },
+    signal: AbortSignal.timeout(request.timeoutMs ?? 20_000),
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: request.system }] },
+      contents: request.turns.map((turn) => ({ role: turn.role === 'teacher' ? 'model' : 'user', parts: [{ text: turn.text }] })),
+      generationConfig: { responseMimeType: 'application/json', temperature: request.temperature ?? 0.4 },
+    }),
+  })
+  if (!res.ok) throw new Error(`The text AI answered ${res.status}: ${(await res.text()).slice(0, 200)}`)
 
   const data = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] }
   const text = (data.candidates?.[0]?.content?.parts ?? []).map((part) => part.text ?? '').join('')
