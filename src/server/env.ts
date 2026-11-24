@@ -51,6 +51,15 @@ export const env = {
     .map((email) => email.replace(/^['"<]+|['">]+$/g, '').trim().toLowerCase())
     .filter((email) => email.includes('@')),
 
+  /**
+   * One login for reviewers (the payment service checking the site): this email logs in with this fixed
+   * 6-digit code, and no email is sent. Both empty = switched off. It is an ordinary student account, never an admin.
+   */
+  review: {
+    email: (process.env.REVIEW_EMAIL ?? '').trim().toLowerCase(),
+    code: (process.env.REVIEW_CODE ?? '').trim(),
+  },
+
   feed: {
     /** Google's image model, for the two picture posts a week. */
     imageModel: process.env.GEMINI_IMAGE_MODEL ?? 'gemini-3.1-flash-image',

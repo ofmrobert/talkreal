@@ -1,3 +1,4 @@
+import { timingSafeEqual } from 'node:crypto'
 import { Hono } from 'hono'
 import { issueCode, verifyCode } from '../auth/codes'
 import { sendLoginCode } from '../auth/email'
@@ -23,6 +24,24 @@ function readEmail(value: unknown): string | null {
 
 const readLang = (value: unknown) => (value === 'en' ? 'en' : 'ru')
 
+/** The reviewers' login (see env.review), only if it is fully set up and is not an admin's email. */
+function isReviewEmail(email: string): boolean {
+  const { email: reviewEmail, code } = env.review
+  return Boolean(reviewEmail) && /^\d{6}$/.test(code) && email === reviewEmail && !env.adminEmails.includes(email)
+}
+
+/** Wrong codes typed for the reviewers' login: a fixed code must not be guessable. Ten tries an hour. */
+let reviewMisses: number[] = []
+function reviewLocked(): boolean {
+  reviewMisses = reviewMisses.filter((at) => Date.now() - at < 60 * 60 * 1000)
+  return reviewMisses.length >= 10
+}
+function reviewCodeMatches(code: string): boolean {
+  const expected = Buffer.from(env.review.code)
+  const given = Buffer.from(code)
+  return expected.length === given.length && timingSafeEqual(expected, given)
+}
+
 export const authRoutes = new Hono()
 
 /** Step 1: the student enters an email and receives a 6-digit code. */
@@ -30,6 +49,8 @@ authRoutes.post('/request-code', async (c) => {
   const body = await c.req.json().catch(() => ({}))
   const email = readEmail(body.email)
   if (!email) return c.json({ error: 'invalid_email' }, 400)
+  // The reviewers already know their code: nothing is sent.
+  if (isReviewEmail(email)) return c.json({ ok: true })
 
   const issued = await issueCode(email)
   if (!issued.ok) return c.json({ error: issued.error, retryAfter: issued.retryAfter }, 429)
@@ -56,8 +77,16 @@ authRoutes.post('/verify', async (c) => {
   // Checked before the code, so a missing tick does not use the code up.
   if (!existing && body.consent !== true) return c.json({ error: 'consent_required' }, 400)
 
-  const result = await verifyCode(email, code)
-  if (result !== 'ok') return c.json({ error: result }, 400)
+  if (isReviewEmail(email)) {
+    if (reviewLocked()) return c.json({ error: 'too_many_attempts' }, 400)
+    if (!reviewCodeMatches(code)) {
+      reviewMisses.push(Date.now())
+      return c.json({ error: 'wrong' }, 400)
+    }
+  } else {
+    const result = await verifyCode(email, code)
+    if (result !== 'ok') return c.json({ error: result }, 400)
+  }
 
   const userId = existing ?? (await createUserWithEmail(email, readLang(body.lang)))
   await startSession(c, userId)
