@@ -1,8 +1,8 @@
 {
   "_readme": "Who sells the paid plans. Fill these in before applying to the payment service: they are shown on the pricing page and in the offer. An empty field is simply not shown.",
-  "name": "",
-  "status": "",
-  "taxId": "",
+  "name": "Евдокимова Жанна Николаевна",
+  "status": "плательщик налога на профессиональный доход (самозанятая)",
+  "taxId": "272396056359",
   "registration": "",
   "address": "",
   "email": "",
